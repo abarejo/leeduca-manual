@@ -1,6 +1,6 @@
 ---
 title: "Conciencia fonológica: contar sílabas"
-subtitle: "Tarea 523 · 4 y 5 años · ficha borrador"
+subtitle: "Tarea 523 · 4 y 5 años"
 ---
 
 ```{r}
@@ -9,7 +9,7 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** ficha borrador (20/10/2026), a petición del grupo. Sigue la estructura de las fichas piloto, en versión corta. Las tablas completas se leen de `datos/agregados/CF523` y se actualizan al regenerar los datos con `scripts/R/ficha_borrador_tarea.R --tarea CF523`.
+**Estado:** ficha piloto, borrador del 20/10/2026, a petición del grupo. Versión corta de la estructura común. Las tablas completas se leen de `datos/agregados/CF523` y se actualizan al regenerar los datos con `scripts/R/ficha_borrador_tarea.R --tarea CF523`.
 :::
 
 **En una frase.** Es la tarea de conciencia fonológica con más niños y cohortes de la plataforma: unos 5.800 niños de seis cohortes. Mide bien lo que pretende: se relaciona sobre todo con otras tareas de conciencia fonológica, no tiene suelo y apenas techo a los 4 años. Pero **sola es una medida débil**: es poco estable de un curso a otro (r ≈ .35) y predice poco la dificultad lectora persistente (AUC ≈ .65). No debe usarse sola para clasificar a un niño. Su lugar natural es dentro de un compuesto de conciencia fonológica.

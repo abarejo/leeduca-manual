@@ -34,8 +34,6 @@ book:
         - fichas/LET.qmd
         - fichas/VEL.qmd
         - fichas/RAN.qmd
-    - part: "Fichas borrador"
-      chapters:
         - fichas/CF523.qmd
         - fichas/TECLE.qmd
     - part: "Preleo"

@@ -21,7 +21,7 @@ Cada ficha tiene tres capas:
 2. **Las tablas completas**, al final de cada ficha. Se leen de los archivos de `datos/agregados/`, que contienen solo resultados agregados (medias, percentiles, correlaciones…), nunca datos de un niño.
 3. **El código**, en el repositorio de GitHub (botón de la barra lateral). Las tablas se calculan con scripts de R a partir de los datos completos, que por privacidad no salen del ordenador del proyecto. El libro se construye a partir de esas tablas, así que cualquiera puede reproducir sus figuras.
 
-Por ahora hay tres **fichas piloto**: conocimiento de letras, velocidad lectora y denominación rápida (RAN). Son las tres tareas con las que se está fijando el diseño de todas las demás. Con ellas se pueden ver la tríada clásica de predictores de la lectura (letras, conciencia fonológica y RAN) y una medida de lectura ya automatizada (la velocidad).
+Por ahora hay cinco **fichas piloto**: conocimiento de letras, velocidad lectora, denominación rápida (RAN), conciencia fonológica (contar sílabas) y TECLE. Son las tareas con las que se está fijando el diseño de todas las demás. Con ellas se ven la tríada clásica de predictores de la lectura (letras, conciencia fonológica y RAN) y dos medidas de lectura ya automatizada (la velocidad y la eficiencia lectora de TECLE). Las dos últimas son versiones cortas.
 
 ## Cómo colaborar
 

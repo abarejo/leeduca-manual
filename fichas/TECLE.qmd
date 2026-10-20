@@ -1,6 +1,6 @@
 ---
 title: "TECLE en la plataforma"
-subtitle: "Tarea 1930 · eficiencia lectora con frases para completar · 7 y 8 años · ficha borrador"
+subtitle: "Tarea 1930 · eficiencia lectora con frases para completar · 7 y 8 años"
 ---
 
 ```{r}
@@ -9,7 +9,7 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** ficha borrador (20/10/2026), a petición del grupo. Las tablas completas se leen de `datos/agregados/TECLE` y se actualizan al regenerar los datos con `scripts/R/ficha_borrador_tarea.R --tarea TECLE`. Los baremos comerciales de TECLE no se reproducen; solo se cita la prueba.
+**Estado:** ficha piloto, borrador del 20/10/2026, a petición del grupo. Las tablas completas se leen de `datos/agregados/TECLE` y se actualizan al regenerar los datos con `scripts/R/ficha_borrador_tarea.R --tarea TECLE`. Los baremos comerciales de TECLE no se reproducen; solo se cita la prueba.
 :::
 
 **En una frase.** Es una medida fiable y muy ligada a la decodificación. Es estable de 7 a 8 años (r ≈ .70) y se relaciona sobre todo con la lectura de palabras y texto (r = .69–.79). Pero **anticipa poco la comprensión**: frente a la baja comprensión un curso después, el AUC es .59. Mide eficiencia lectora, no comprensión.

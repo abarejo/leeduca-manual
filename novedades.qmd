@@ -4,7 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
-| 20/10/2026 | Fichas borrador | Conciencia fonológica (contar sílabas, 523) y TECLE en la plataforma (1930), a petición del grupo. |
+| 20/10/2026 | Fichas piloto | Nuevas fichas: conciencia fonológica (contar sílabas, 523) y TECLE en la plataforma (1930), a petición del grupo. |
 | 20/10/2026 | Riesgo | Nuevo capítulo «Cómo estimamos el riesgo y la dificultad lectora»: cinco niveles de certeza (DL-A a TE), estabilidad entre cursos y lenguaje del informe por edad. |
 | 20/10/2026 | Preleo | Antecedentes del programa y cinco estudios del grupo (evaluación externa de 2014/15, centros de nivel socioeconómico bajo, aulas ordinarias, opiniones docentes y doble déficit). |
 | 20/10/2026 | Preleo | Nueva parte del libro: descripción del programa y efectos (estudio publicado y datos de las fichas). |
