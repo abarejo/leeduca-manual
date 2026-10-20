@@ -2,6 +2,7 @@ project:
   type: book
   resources:
     - apps/
+    - datos/agregados/CATALOGO/
   output-dir: _book
 
 lang: es
@@ -30,6 +31,9 @@ book:
         - decisiones.qmd
         - riesgo.qmd
         - baremos-trimestre.qmd
+    - part: "Catálogo de tareas"
+      chapters:
+        - catalogo.qmd
     - part: "Fichas piloto"
       chapters:
         - fichas/LET.qmd

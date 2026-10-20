@@ -1,0 +1,139 @@
+# Catálogo de tareas {#sec-catalogo}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+dir_cat <- file.path(raiz_libro(), "datos", "agregados", "CATALOGO")
+C <- utils::read.csv(file.path(dir_cat, "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+S <- utils::read.csv(file.path(dir_cat, "Sesiones.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE, colClasses = "character")
+n_eval <- sum(C$estado == "evaluación")
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primera versión (21/10/2026), generada automáticamente desde el diccionario maestro, el catálogo de actividades de la plataforma y los análisis de fiabilidad. Los nombres en inglés y los constructos están revisados a mano; **los párrafos para publicaciones son un borrador automático**: antes de usarlos en un artículo, comprobad las cifras con la ficha de la tarea o con los datos de la sesión que se analice.
+:::
+
+Este catálogo reúne en un solo lugar las `r nrow(C)` tareas de la plataforma de las cohortes 2010–2015 (`r n_eval` de evaluación; el resto, experimentales o en revisión). Para cada tarea se indica qué mide, cómo se aplica, con qué códigos aparece en los datos, en qué sesiones y edades se aplicó, qué medidas registra y qué propiedades psicométricas tiene. Cada una incluye un **párrafo listo para el apartado de instrumentos de un artículo, en español y en inglés**.
+
+**Cómo usarlo.** Busca por nombre, código o constructo, o filtra por dominio. Pulsa sobre una tarea para ver su ficha resumida. Los botones «Copiar» copian el párrafo al portapapeles. La tabla completa se puede descargar: [Catalogo.csv](datos/agregados/CATALOGO/Catalogo.csv) (una fila por tarea) y [Sesiones.csv](datos/agregados/CATALOGO/Sesiones.csv) (una fila por tarea, cohorte y sesión).
+
+**Qué significa cada cosa.**
+
+- **Momento** = edad.trimestre: 5.1 es el primer trimestre de 3.º de Infantil (5 años); 7.1, el primer trimestre de 2.º de Primaria.
+- **Códigos**: el código base de la tarea en la plataforma. Una misma tarea puede tener varios códigos (versiones o formas).
+- **α (2021)**: consistencia interna calculada en 2021 con las respuestas ítem a ítem. En tareas con tiempo limitado sobrestima la fiabilidad.
+- **Estabilidad**: correlación de rangos (ρ) entre dos aplicaciones sucesivas a los mismos niños (mediana de los pares de sesiones con 12 meses o menos de separación). Mezcla error de medida y cambio real, así que es una cota inferior de la fiabilidad.
+
+```{r}
+#| results: asis
+DOM <- c(HFON = "Habilidades fonológicas", LECTURA = "Lectura", L_ORAL = "Lenguaje oral", ESCRITURA = "Escritura", MATE = "Cognición numérica",
+         HVIS = "Habilidades visoatencionales", F_EJEC = "Funciones ejecutivas", INTELIGENCIA = "Razonamiento no verbal", EXPERIMENTO = "Tareas experimentales")
+FICHA <- c(LEC_LETRAS = "fichas/LET.qmd", LEC_VEL_TEXTO = "fichas/VEL.qmd", RAN_NUMEROS = "fichas/RAN.qmd", RAN_COLORES = "fichas/RAN.qmd",
+           RAN_OBJETOS_CONTROL = "fichas/RAN.qmd", CF_CONTAR_SILABAS = "fichas/CF523.qmd", LEC_TECLE = "fichas/TECLE.qmd")
+esc <- function(x) { x <- ifelse(is.na(x), "", as.character(x)); x <- gsub("&", "&amp;", x, fixed = TRUE); x <- gsub("<", "&lt;", x, fixed = TRUE); gsub(">", "&gt;", x, fixed = TRUE) }
+f2 <- function(x) ifelse(is.na(x), "—", sub("^0", "", sprintf("%.2f", x)))
+fila <- function(k, v) if (is.na(v) || v == "" || v == "NA") "" else sprintf("<tr><th>%s</th><td>%s</td></tr>", k, v)
+
+cat('<div class="cat-filtros">',
+    '<input id="cat-q" type="search" placeholder="Buscar por nombre, código o constructo…" aria-label="Buscar en el catálogo">',
+    '<select id="cat-dom" aria-label="Dominio"><option value="">Todos los dominios</option>',
+    paste0(sprintf('<option value="%s">%s</option>', names(DOM), DOM), collapse = ""), '</select>',
+    '<label><input id="cat-exp" type="checkbox"> Incluir experimentales y en revisión</label>',
+    '<span id="cat-n" class="cat-n"></span></div>\n', sep = "")
+
+for (d in names(DOM)) {
+  Cd <- C[C$dominio == d, ]; if (!nrow(Cd)) next
+  cat(sprintf('\n<h2 class="cat-dom-h" data-dom="%s">%s</h2>\n', d, DOM[[d]]))
+  for (i in seq_len(nrow(Cd))) {
+    r <- Cd[i, ]; s <- S[S$tarea_canonica == r$tarea_canonica, ]
+    s <- s[order(as.numeric(s$momento), s$cohorte), ]
+    ses_txt <- paste(sprintf("%s · sesión %s (%s; N = %s)", s$cohorte, s$sesion, s$momento, format(as.numeric(s$N), big.mark = ".")), collapse = "<br>")
+    psico <- paste(c(if (!is.na(r$alfa_2021)) sprintf("α (2021) = %s (N = %s)", f2(r$alfa_2021), format(r$N_alfa, big.mark = ".")),
+                     if (!is.na(r$estabilidad_rho)) sprintf("estabilidad ρ = %s (%s pares de sesiones)", f2(r$estabilidad_rho), r$estabilidad_pares)), collapse = " · ")
+    ficha <- if (r$tarea_canonica %in% names(FICHA)) sprintf(' <a class="cat-ficha" href="%s">Ver la ficha completa →</a>', sub("\\.qmd$", ".html", FICHA[[r$tarea_canonica]])) else ""
+    estado <- if (r$estado != "evaluación") sprintf('<span class="cat-tag">%s</span>', esc(r$estado)) else ""
+    buscar <- tolower(paste(r$tarea, r$name_en, r$codigos, r$constructo, r$tarea_canonica, r$bateria))
+    cat(sprintf('<details class="cat-item" data-dom="%s" data-estado="%s" data-q="%s">', d, esc(r$estado), esc(buscar)),
+        sprintf('<summary><span class="cat-nom">%s</span> <span class="cat-en">%s</span> %s<span class="cat-meta">código %s · %s años</span></summary>',
+                esc(r$tarea), esc(r$name_en), estado, esc(gsub(" ", ", ", r$codigos)), esc({e <- as.numeric(strsplit(as.character(r$edades), ", ")[[1]]); if (length(e) > 1) paste0(min(e), "–", max(e)) else e})),
+        '<div class="cat-body">',
+        if (!is.na(r$aviso) && r$aviso != "") sprintf('<p class="cat-aviso">⚠ %s.</p>', esc(r$aviso)) else "",
+        '<table class="cat-tab">',
+        fila("Constructo", esc(r$constructo)), fila("Batería", esc(r$bateria)), fila("Formato", esc(r$formato)),
+        fila("Consigna (plataforma)", esc(r$descripcion)), fila("Ítems", esc(r$n_items)), fila("Tiempo máximo", if (is.na(r$duracion_s)) NA else paste(r$duracion_s, "s")),
+        fila("Medidas registradas", esc(r$medidas)), fila("Medida principal", esc(r$medida_principal)),
+        fila("Psicometría", psico), fila("Sesiones", ses_txt), '</table>',
+        '<div class="cat-pub"><div class="cat-pub-h">Para publicaciones · español <button class="cat-copy" type="button">Copiar</button></div>',
+        sprintf('<p class="cat-pub-t" lang="es">%s</p></div>', esc(r$texto_es)),
+        '<div class="cat-pub"><div class="cat-pub-h">For publications · English <button class="cat-copy" type="button">Copy</button></div>',
+        sprintf('<p class="cat-pub-t" lang="en">%s</p></div>', esc(r$texto_en)),
+        ficha, '</div></details>\n', sep = "")
+  }
+}
+```
+
+```{=html}
+<style>
+.cat-filtros{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 1.5rem;position:sticky;top:0;background:var(--bs-body-bg,#fff);padding:.5rem 0;z-index:5}
+.cat-filtros input[type=search]{flex:1 1 16rem;padding:.4rem .6rem;border:1px solid #cfd2d6;border-radius:6px}
+.cat-filtros select{padding:.35rem;border:1px solid #cfd2d6;border-radius:6px}
+.cat-filtros label{font-size:.9rem}
+.cat-n{font-size:.85rem;color:#6c757d;margin-left:auto}
+.cat-dom-h{margin-top:1.6rem}
+.cat-item{border:1px solid #e3e3e0;border-radius:8px;margin:.45rem 0;padding:.1rem .8rem;background:rgba(0,143,163,.025)}
+.cat-item[open]{background:transparent}
+.cat-item summary{cursor:pointer;padding:.45rem 0;list-style-position:outside}
+.cat-nom{font-weight:600}
+.cat-en{color:#6c757d;font-style:italic;font-size:.92rem}
+.cat-meta{display:block;font-size:.82rem;color:#6c757d}
+.cat-tag{font-size:.72rem;background:#f3e9d2;color:#7a5a10;border-radius:4px;padding:.05rem .4rem;margin-left:.3rem}
+.cat-body{padding:.2rem 0 .8rem}
+.cat-tab{font-size:.88rem;width:100%;margin-bottom:.8rem}
+.cat-tab th{width:11rem;vertical-align:top;font-weight:600;color:#495057;padding:.2rem .5rem .2rem 0}
+.cat-tab td{padding:.2rem 0}
+.cat-pub{border-left:3px solid #008FA3;padding:.3rem .8rem;margin:.6rem 0;background:rgba(0,143,163,.05)}
+.cat-pub-h{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:#006c7a;display:flex;justify-content:space-between;align-items:center}
+.cat-pub-t{font-size:.9rem;margin:.3rem 0 0}
+.cat-copy{font-size:.75rem;border:1px solid #008FA3;background:transparent;color:#006c7a;border-radius:4px;padding:.1rem .5rem;cursor:pointer;text-transform:none;letter-spacing:0}
+.cat-copy:hover{background:#008FA3;color:#fff}
+.cat-aviso{font-size:.88rem;background:#fdf1ee;border-left:3px solid #D64545;padding:.3rem .6rem}
+.cat-ficha{font-size:.9rem;font-weight:600}
+@media (prefers-color-scheme: dark){.cat-item{border-color:#444}.cat-tab th{color:#ccc}}
+</style>
+<script>
+(function(){
+  const q=document.getElementById('cat-q'), dom=document.getElementById('cat-dom'), exp=document.getElementById('cat-exp'), n=document.getElementById('cat-n');
+  const items=[...document.querySelectorAll('.cat-item')], heads=[...document.querySelectorAll('.cat-dom-h')];
+  function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
+  function filtra(){
+    const t=norm(q.value.trim()), d=dom.value, e=exp.checked; let k=0; const vis={};
+    items.forEach(it=>{
+      const ok=(!t||norm(it.dataset.q).includes(t))&&(!d||it.dataset.dom===d)&&(e||it.dataset.estado==='evaluación');
+      it.style.display=ok?'':'none'; if(ok){k++;vis[it.dataset.dom]=1;}
+    });
+    heads.forEach(h=>h.style.display=vis[h.dataset.dom]?'':'none');
+    n.textContent=k+(k===1?' tarea':' tareas');
+  }
+  [q,dom,exp].forEach(el=>el.addEventListener('input',filtra)); filtra();
+  document.querySelectorAll('.cat-copy').forEach(b=>b.addEventListener('click',()=>{
+    const txt=b.closest('.cat-pub').querySelector('.cat-pub-t').innerText, orig=b.textContent;
+    const ok=()=>{b.textContent=orig==='Copy'?'Copied':'Copiado';setTimeout(()=>b.textContent=orig,1500);};
+    if(navigator.clipboard){navigator.clipboard.writeText(txt).then(ok,()=>{});}
+    else{const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(_){}ta.remove();}
+  }));
+})();
+</script>
+```
+
+## Cómo se genera
+
+El catálogo se construye con `scripts/R/catalogo_tareas.R` a partir de cuatro fuentes:
+
+1. **El diccionario maestro de las cohortes 2010–2015:** tareas, sesiones, medidas y N.
+2. **Una tabla de nombres en español e inglés y constructos,** revisada a mano y editable: `catalogo_tareas_meta_v1.csv`.
+3. **El catálogo de actividades de la plataforma:** batería, formato y consigna.
+4. **Los análisis de consistencia interna de 2021.**
+
+La estabilidad se calcula de nuevo con la tabla larga de puntuaciones. No se publican ítems ni claves de respuesta: solo la descripción general de la consigna.
+
+**Pendiente:** α y ω de las cohortes nuevas con las respuestas ítem a ítem; validez frente a la dificultad lectora persistente para cada tarea; clase A, B o C de cada tarea; y revisar las tareas marcadas como «revisar» o con aviso de estabilidad baja.

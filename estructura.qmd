@@ -148,6 +148,31 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 | Cap. 24 Casos y EEG/fNIRS | Matrices EEG de 2010 y 2013 | Reasignar los grupos EEG con los niveles de certeza; casos anonimizados |
 | Anexos A–B Baremos y cortes | Baremos empíricos por momento y cohorte | Normas continuas que agrupen cohortes |
 
+## Propuestas para un manual innovador (para discutir)
+
+Lo que sigue son propuestas desde la psicometría para que el manual aporte algo que no tienen los manuales de test al uso. Están ordenadas por el valor que añaden en relación con el esfuerzo. Casi todas se pueden hacer con los datos que ya hay.
+
+**Valor clínico**
+
+1. **Probabilidad de dificultad, no solo puntos de corte.** Dar razones de verosimilitud por tramos de puntuación (no un único corte) y la probabilidad posterior según la prevalencia del centro. Así el informe diría, por ejemplo, «con esta puntuación, 3 de cada 10 niños tienen después una dificultad persistente», y lo mismo se ajusta a un colegio con más o menos casos. Se puede acompañar de una pequeña calculadora en el libro.
+2. **Intervalos en cada puntuación.** Percentil con su banda de confianza a partir del error típico condicional (más ancho en los extremos). Evita sobreinterpretar diferencias pequeñas, sobre todo cerca del corte.
+3. **Perfiles y no solo puntuaciones aisladas.** Combinaciones con sentido clínico: doble déficit (conciencia fonológica y denominación rápida), mal decodificador frente a mal comprendedor, lectura lenta pero precisa. Cada perfil con su prevalencia en la muestra y su pronóstico.
+4. **Indicadores de validez de la sesión.** Con los tiempos por ítem se pueden detectar respuestas al azar, abandono o una aplicación anómala (por ejemplo, el ítem 31 de TECLE). Cada puntuación iría con una marca de «sesión fiable» o «revisar».
+
+**Valor pedagógico**
+
+5. **Normas de crecimiento.** Además del percentil de estado, un percentil de progreso: cuánto ha avanzado un niño comparado con los que partían del mismo nivel (regresión cuantílica condicionada a la puntuación anterior). Es lo que necesita un docente para saber si la intervención funciona.
+6. **Cambio mínimo relevante con anclas propias.** Fijar cuánto cambio importa con criterios externos: el juicio del docente, el diagnóstico o el paso de dificultad transitoria a persistente [@anvari2021anclas]. Se combina con el índice de cambio fiable para decidir cuándo un avance es real e importante.
+7. **Informes en lenguaje de aula.** Palabras por minuto, «lee como un niño de…», coste en tiempo de leer un texto del curso. Ya está probado en el prototipo de informe de aula.
+
+**Valor científico**
+
+8. **Fiabilidad adecuada a cada tipo de tarea.** Test-retest y formas paralelas en las tareas de velocidad; α y ω solo donde tiene sentido; teoría de respuesta al ítem en las tareas con respuestas por ítem; y modelos de tiempos de respuesta (que la plataforma registra y casi ningún test aprovecha).
+9. **Una escala común entre cohortes, formatos y versiones.** Equiparar puntuaciones de papel, plataforma y tableta, y entre cohortes, como ya se ha hecho con TECLE. Así se podrían comparar todas las cohortes y estudiar el efecto de la pandemia.
+10. **Equidad y funcionamiento diferencial.** Comprobar que cada tarea mide igual por sexo, nivel socioeconómico, formato y condición Preleo. Revisar también la tasa de falsos positivos por grupo: es parte de la validez de las consecuencias que piden los *Standards*.
+11. **Argumento de validez explícito.** Para cada tarea, qué interpretaciones y usos están respaldados y cuáles no (cribar, seguir, diagnosticar, investigar). Con el semáforo CET-R, el usuario lo vería de un vistazo.
+12. **Transparencia y reutilización.** Código abierto, datos agregados descargables, un catálogo de tareas con textos para artículos en español e inglés (ver el [Catálogo de tareas](catalogo.qmd)), versiones del manual con DOI y un plan de análisis registrado antes de los estudios confirmatorios.
+
 ## Preguntas para el grupo
 
 1. ¿Os parecen bien las **cuatro partes** y el orden de los capítulos? ¿Falta o sobra algo?
@@ -157,3 +182,4 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 5. ¿Dónde va la **batería DIS-ESP** en papel: en el capítulo de la plataforma, como antecedente, o en un capítulo propio?
 6. ¿Las **versiones de otros países y para adultos** (por ejemplo, TECLE con 3 minutos en Colombia) entran en las fichas o en un anexo?
 7. ¿Os sirve la **plantilla de diez apartados**, con «Estudios que abre» y «Pendientes»? ¿Qué cambiaríais?
+8. De las **doce propuestas** anteriores, ¿cuáles os parecen prioritarias para la primera versión del manual?
