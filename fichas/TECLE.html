@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -304,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Estado:</strong> ficha piloto, borrador del 20/10/2026, ampliada con el TECLE en papel de 2020/21 y el análisis de ítems. Las tablas se leen de <code>datos/agregados/TECLE</code> (plataforma) y <code>datos/agregados/TECLE_papel</code> (papel e ítems), y se regeneran con <code>scripts/R/ficha_borrador_tarea.R --tarea TECLE</code> y <code>scripts/R/ficha_TECLE_papel_items.R</code>. Los percentiles en papel no se reproducen aquí: son la base del estudio normativo publicado por el grupo (Carrillo Gállego et al., 2024).</p>
+<p><strong>Estado:</strong> ficha piloto, borrador del 20/10/2026, ampliada con el TECLE en papel de 2020/21 y el análisis de ítems. Las tablas se leen de <code>datos/agregados/TECLE</code> (plataforma) y <code>datos/agregados/TECLE_papel</code> (papel e ítems), y se regeneran con <code>scripts/R/ficha_borrador_tarea.R --tarea TECLE</code> y <code>scripts/R/ficha_TECLE_papel_items.R</code>. Los percentiles en papel no se reproducen aquí: son el baremo del estudio normativo publicado por el grupo <span class="citation" data-cites="carrillo2024tecle">(<a href="../referencias.html#ref-carrillo2024tecle" role="doc-biblioref">Carrillo et&nbsp;al. 2024</a>)</span>.</p>
 </div>
 </div>
 </div>
@@ -360,13 +380,15 @@ ul.task-list li input[type="checkbox"] {
 <p>TECLE es una prueba breve y colectiva de <strong>eficiencia lectora</strong>: en un tiempo fijo, el niño lee frases en silencio y completa cada una eligiendo una palabra. Para acertar tiene que decodificar rápido y entender lo justo para escoger la palabra que encaja. Es el mismo tipo de tarea que las pruebas anglosajonas de lectura silenciosa de frases, como el TOSREC.</p>
 <p>Lo que dice la evidencia:</p>
 <ul>
-<li><strong>Origen y normas del grupo.</strong> El TECLE fue creado por Marín y Carrillo. El grupo publicó después su estudio normativo en papel para toda la Primaria, con datos de Málaga (<a href="https://doi.org/10.24310/mumaedmumaed.161">Carrillo Gállego et al., 2024</a>). Los datos en papel de esta ficha son de esa misma aplicación de 2020/21.</li>
+<li><strong>Origen.</strong> M. S. Carrillo y J. Marín diseñaron el TECLE en 1997, con la colaboración de J. Alegría y A. R. Calvo, como instrumento de investigación. Se inspira en la prueba L3 de Lobrot, pero no es una adaptación: tiene 24 frases más, sobre todo cortas, para que discrimine desde los primeros cursos. Además, en cada ítem dos distractores son pseudopalabras y uno es una palabra, todos muy parecidos a la palabra correcta. Así la prueba depende mucho de la decodificación y sirve para detectar dificultades, incluida la dislexia.</li>
+<li><strong>Normas del grupo.</strong> El estudio normativo en papel se hizo con 6.492 escolares de 2.º a 6.º de 53 centros de Málaga, evaluados en noviembre <span class="citation" data-cites="carrillo2024tecle">(<a href="../referencias.html#ref-carrillo2024tecle" role="doc-biblioref">Carrillo et&nbsp;al. 2024</a>)</span>. Son los mismos datos en papel de esta ficha, y ese manual es la referencia para interpretar las puntuaciones en papel.</li>
+<li><strong>Duración.</strong> En España se aplica en 5 minutos. Con alumnado mayor, y en otros estudios, se ha usado con 3 minutos; esas puntuaciones no son comparables con las de 5.</li>
 <li><strong>Adaptaciones en otros países hispanohablantes.</strong> Hay un manual técnico uruguayo (<a href="https://doi.org/10.22235/cp.v3i2.156">Cuadro et al., 2009</a>) y una adaptación argentina con 693 alumnos de 5.º a 7.º. En esta última, los ítems tuvieron una dificultad adecuada y la puntuación dependió del curso y de las oportunidades educativas, pero no del sexo (<a href="https://doi.org/10.5579/rnl.2011.0040">Ferreres et al., 2011</a>).</li>
 <li><strong>Las pruebas de lectura silenciosa de frases sirven para cribar.</strong> La validez del TOSREC como cribado en modelos de respuesta a la intervención se ha estudiado expresamente (<a href="https://doi.org/10.1177/1534508411395556">Johnson et al., 2011</a>). En secundaria, una prueba colectiva de verificación de frases clasificó casi tan bien como la fluidez oral individual (<a href="https://doi.org/10.1080/10888431003623546">Denton et al., 2011</a>).</li>
 <li><strong>En los primeros cursos mide sobre todo decodificación.</strong> En 1.º, la fluidez silenciosa y la oral son habilidades relacionadas pero distintas (<a href="https://doi.org/10.1080/10888438.2010.493964">Kim, Wagner y Foster, 2011</a>). En malos lectores de 4.º, la decodificación y la fluidez explican solo el 22 % del TOSREC (<a href="https://doi.org/10.1080/10573569.2018.1521758">Kang y Shin, 2019</a>).</li>
 </ul>
 <p>Lo que dicen nuestros datos coincide: a los 7–8 años, TECLE se relaciona mucho con la lectura de palabras y texto y poco con la comprensión; depende algo del nivel socioeconómico del centro y apenas del sexo, como en la adaptación argentina.</p>
-<p>Referencias localizadas con SciSpace (falta comprobar volúmenes y páginas): Carrillo Gállego et al.&nbsp;(2024), UMA Editorial; Cuadro et al.&nbsp;(2009), <em>Ciencias Psicológicas</em>; Denton et al.&nbsp;(2011), <em>Scientific Studies of Reading</em>; Ferreres et al.&nbsp;(2011), <em>Revista Neuropsicología Latinoamericana</em>; Johnson et al.&nbsp;(2011), <em>Assessment for Effective Intervention</em>; Kang y Shin (2019), <em>Reading &amp; Writing Quarterly</em>; Kim, Wagner y Foster (2011), <em>Scientific Studies of Reading</em>. Falta la referencia completa del TECLE original (Marín y Carrillo), que no aparece indexado.</p>
+<p>Referencias localizadas con SciSpace (falta comprobar volúmenes y páginas): Cuadro et al.&nbsp;(2009), <em>Ciencias Psicológicas</em>; Denton et al.&nbsp;(2011), <em>Scientific Studies of Reading</em>; Ferreres et al.&nbsp;(2011), <em>Revista Neuropsicología Latinoamericana</em>; Johnson et al.&nbsp;(2011), <em>Assessment for Effective Intervention</em>; Kang y Shin (2019), <em>Reading &amp; Writing Quarterly</em>; Kim, Wagner y Foster (2011), <em>Scientific Studies of Reading</em>.</p>
 </section>
 <section id="resultados-principales" class="level2">
 <h2 class="anchored" data-anchor-id="resultados-principales">Resultados principales</h2>
@@ -581,7 +603,7 @@ Tabla&nbsp;9.2: Niños con diagnóstico de dislexia en Séneca frente al resto, 
 <li>con los 64 ítems, α = .91–.95, y la división par-impar da más de .95. Están infladas: un niño que no llega a un ítem tiene cero en ese y en todos los siguientes;</li>
 <li>con solo los ítems que alcanza el 90 % del curso, α = .64–.77 y ω = .63–.78. Están rebajadas: son ítems muy fáciles y casi sin varianza.</li>
 </ul>
-<p>La fiabilidad adecuada para TECLE es la <strong>estabilidad entre aplicaciones</strong>: r = .67–.70 de 7 a 8 años en la plataforma, y r = .57 entre la plataforma en noviembre de 2019 y el papel en noviembre de 2020 en los mismos 107 niños (con un año, un cambio de formato y el confinamiento de por medio).</p>
+<p>El manual normativo advierte lo mismo y estima la fiabilidad por test-retest: r = .87–.91 con cuatro semanas de intervalo y .64–.80 con un año <span class="citation" data-cites="carrillo2024tecle">(<a href="../referencias.html#ref-carrillo2024tecle" role="doc-biblioref">Carrillo et&nbsp;al. 2024</a>)</span>. En nuestros datos, la <strong>estabilidad entre aplicaciones</strong> es parecida: r = .67–.70 de 7 a 8 años en la plataforma, y r = .57 entre la plataforma en noviembre de 2019 y el papel en noviembre de 2020 en los mismos 107 niños (con un año, un cambio de formato y el confinamiento de por medio).</p>
 </section>
 <section id="en-la-plataforma-7-y-8-años" class="level3">
 <h3 class="anchored" data-anchor-id="en-la-plataforma-7-y-8-años">En la plataforma (7 y 8 años)</h3>
@@ -707,7 +729,7 @@ Tabla&nbsp;9.3: Baremo de TECLE en la plataforma (aciertos por minuto), muestra 
 <td>E5</td>
 <td><strong>Malos comprendedores</strong></td>
 <td>Teórico</td>
-<td>¿Detecta TECLE a los niños que decodifican bien pero comprenden mal?</td>
+<td>¿Detecta TECLE a los niños que decodifican bien pero comprenden mal? En el metaanálisis de Spencer y Wagner (2018), estos niños tienen un déficit de lenguaje oral (d = −0,78) menor que el de comprensión (d = −2,78) <span class="citation" data-cites="spencer2018scd">(<a href="../referencias.html#ref-spencer2018scd" role="doc-biblioref">Spencer y Wagner 2018</a>)</span>.</td>
 <td>Comprensión EDICOLE en las mismas sesiones; subpruebas SEM, STX y VOC en papel.</td>
 </tr>
 <tr class="even">
@@ -732,7 +754,7 @@ Tabla&nbsp;9.3: Baremo de TECLE en la plataforma (aciertos por minuto), muestra 
 <li><strong>Clave de la plataforma:</strong> errónea en los ítems 15, 19, 36, 37 y 51 (comprobado en la sesión 184 con la opción elegida); ítem 31 por comprobar en pantalla. Hay que recorregir el resto de sesiones antes de usar el baremo de la plataforma para decisiones individuales.</li>
 <li><strong>Uso recomendado:</strong> medida rápida y colectiva de eficiencia lectora, junto a las listas de palabras. <strong>No usar como medida de comprensión.</strong></li>
 <li><strong>Cautelas:</strong> en la cohorte 2010, 7.1 está en la plataforma antigua y 8.1 en la nueva; el baremo de 8.1 tiene solo 166 niños sin Preleo.</li>
-<li><strong>Pendiente de acordar con M. Carrillo:</strong> cómo citar y presentar los datos en papel.</li>
+<li><strong>Pendiente de acordar con M. Carrillo:</strong> cómo presentar los datos en papel junto a su manual normativo.</li>
 <li>Revisar la codificación del sexo en la plataforma (incidencia común a todas las fichas).</li>
 </ul>
 </section>
@@ -6098,6 +6120,14 @@ V2 Medias por grupo <code>datos/agregados/TECLE_papel/V2_Medias_por_grupo.csv</c
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-carrillo2024tecle" class="csl-entry" role="listitem">
+Carrillo, Marisol, Juan Luis Luque, Auxiliadora Sánchez, Amanda Flores, y Almudena Giménez. 2024. <em>Test Colectivo de Eficiencia Lectora (<span>TECLE</span>). Estudio normativo</em>. M<span>á</span>laga: UMA Editorial. <a href="https://doi.org/10.24310/mumaedmumaed.161">https://doi.org/10.24310/mumaedmumaed.161</a>.
+</div>
+<div id="ref-spencer2018scd" class="csl-entry" role="listitem">
+Spencer, Mercedes, y Richard K. Wagner. 2018. <span>«The Comprehension Problems of Children with Poor Reading Comprehension despite Adequate Decoding: A Meta-Analysis»</span>. <em>Review of Educational Research</em> 88 (3): 366-400. <a href="https://doi.org/10.3102/0034654317749187">https://doi.org/10.3102/0034654317749187</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
