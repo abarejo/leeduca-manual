@@ -33,7 +33,7 @@ EXPORTAR <- c(
   GEN_trimestre = "baremo_trimestre_vs_curso_R_v1.xlsx",
   CF523 = "ficha_CF523_R_v1.xlsx",
   TECLE = "ficha_TECLE_R_v1.xlsx",
-  TECLE_papel = "ficha_TECLE_papel_R_v1.xlsx"
+  TECLE_papel = "ficha_TECLE_papel_R_v2.xlsx"
 )
 PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"
 MAX_FILAS <- 2000
