@@ -1,0 +1,64 @@
+# Efectos de Preleo: evidencia y datos de la plataforma
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "preleo.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** borrador. Este capítulo reúne lo publicado y lo que ya muestran las fichas. El análisis específico del efecto de Preleo, con baremos y gráficas por grupo, está en preparación (ver el último apartado).
+:::
+
+## Lo que dice el estudio publicado [E]
+
+@sanchezgomez2025 evaluaron Preleo en la cohorte 2010, aplicado a los 5 años durante el curso 2015/16 (solo conciencia silábica y fonémica). Siguieron trimestralmente con la plataforma, de los 5 a los 7 años, a 380 niños de 20 colegios de Málaga: 191 de 10 colegios con Preleo y 189 de otros 10 sin él.
+
+- **Efectos en todos los indicadores:** conciencia fonológica, lectura de pseudopalabras y palabras, fluidez y comprensión. Los tamaños del efecto son moderados, se mantienen dos años después del programa y siguen siendo significativos tras controlar la inteligencia no verbal.
+- **Menos niños en riesgo:** la proporción de niños con riesgo de dificultad lectora a los 7 años bajó en el grupo Preleo.
+- **Efecto compensador:** el beneficio fue mayor en los niños con más riesgo y en los colegios de nivel socioeconómico bajo. En estos, el riesgo pasó del 26 % sin Preleo al 12 % con Preleo.
+
+**Para leerlo bien.** Los colegios no se asignaron al azar, y los dos grupos ya diferían antes del programa en inteligencia no verbal y en nivel socioeconómico. El estudio lo tiene en cuenta en sus modelos, pero sigue siendo un diseño cuasiexperimental.
+
+## Lo que muestran por ahora las fichas del manual [D]
+
+Las fichas comparan, en cada tarea, momento y cohorte, a todos los niños del grupo Preleo con todos los del grupo de comparación. Usan la asignación oficial del grupo (versión 3) y no aplican ningún ajuste.
+
+```{r}
+#| label: fig-preleo-diferencias
+#| fig-cap: "Diferencia entre el grupo Preleo y el de comparación (d de Cohen, sin ajustar) en las tareas de las fichas piloto. La banda gris marca diferencias pequeñas (|d| < 0,2)."
+#| fig-width: 8
+#| fig-height: 4.2
+fig_preleo_diferencias()
+```
+
+```{r}
+#| label: tbl-preleo
+#| tbl-cap: "Diferencias Preleo − comparación por tarea, momento y cohorte (d sin ajustar)."
+D <- preleo_diferencias()
+tabla(D[, c("tarea", "mom", "cohorte", "n", "d", "p")], c("Tarea", "Momento", "Cohorte", "n", "d", "p"), digitos = 2)
+```
+
+En esta comparación global, casi todas las diferencias son pequeñas (|d| < 0,2), y unas pocas superan ese límite en un sentido o en otro. La más alta (RAN de números a los 4 años, cohorte 2014, d = 0,67) compara con solo 47 niños de pocos colegios, así que no se puede separar el efecto del programa del efecto del colegio. En letras (cohorte 2013), el modelo que tiene en cuenta el nivel socioeconómico deja el efecto de Preleo en torno a cero (b ≈ −0,04 DT).
+
+**Por qué no coincide con el estudio publicado.** Las dos fuentes no son contradictorias, sino distintas, y conviene reconciliarlas antes de sacar conclusiones:
+
+- **Muestra:** el estudio usa 20 colegios seleccionados y emparejados; las fichas, todos los colegios de cada cohorte.
+- **Medidas:** el estudio usa indicadores compuestos (promedios de varias tareas en puntuaciones z); las fichas, cada tarea por separado.
+- **Ajustes:** el estudio controla la inteligencia no verbal, el nivel socioeconómico y el riesgo; las fichas comparan sin ajustar.
+- **Momento del efecto:** el estudio mira el rendimiento anual; las fichas, cada trimestre.
+- **Asignación de la condición:** las fuentes de 2010 y 2011 no coinciden del todo (consulta abierta).
+
+## Análisis en preparación
+
+Para mostrar con rigor los beneficios de Preleo y usarlo para afinar los baremos, el análisis seguirá un diseño cuasiexperimental:
+
+1. **Equivalencia inicial:** comparar los grupos antes o al comienzo del programa (4.1 o 5.1), en las tareas y en nivel socioeconómico.
+2. **Modelo multinivel con el colegio como unidad:** Preleo se asigna por colegio, así que el colegio debe entrar en el modelo.
+3. **Curvas de crecimiento:** comparar la trayectoria de cada grupo de 4 a 8 años, no un solo momento.
+4. **Dosis y respuesta:** relacionar el efecto con la fidelidad de aplicación de cada colegio.
+5. **Resultados que entiende un docente:** el porcentaje de niños por debajo de p16 en cada grupo y la reducción del riesgo, con su intervalo de confianza.
+6. **Moderadores:** nivel socioeconómico y riesgo inicial, para comprobar el efecto compensador descrito en el estudio publicado.
+7. **Reproducir el estudio publicado** con sus 20 colegios y sus indicadores, como punto de partida común.
+
+**Baremos para centros con Preleo.** Cuando el análisis esté hecho, el manual ofrecerá, junto al baremo de referencia, el percentil de cada niño respecto a los centros que aplican Preleo. Así un colegio con el programa podrá compararse con colegios que trabajan igual.

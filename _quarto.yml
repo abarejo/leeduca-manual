@@ -1,5 +1,7 @@
 project:
   type: book
+  resources:
+    - apps/
   output-dir: _book
 
 lang: es
@@ -24,13 +26,19 @@ book:
     - part: "Cómo está hecho el manual"
       chapters:
         - metodo.qmd
+        - decisiones.qmd
         - baremos-trimestre.qmd
     - part: "Fichas piloto"
       chapters:
         - fichas/LET.qmd
         - fichas/VEL.qmd
         - fichas/RAN.qmd
+    - part: "Preleo"
+      chapters:
+        - preleo/programa.qmd
+        - preleo/datos.qmd
   appendices:
+    - informe-aula.qmd
     - consultas.qmd
     - novedades.qmd
     - colaborar.qmd

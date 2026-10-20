@@ -1,0 +1,18 @@
+# Prototipo de informe de aula {.unnumbered}
+
+::: {.callout-warning appearance="minimal"}
+**Alumnos simulados.** El prototipo usa 24 alumnos inventados a partir de las distribuciones de la ficha de velocidad. No contiene datos de ningún niño real.
+:::
+
+Es un ejemplo de cómo podría ver un docente los resultados de velocidad lectora de su clase en la plataforma. Sirve para discutir con el grupo y con los colegios qué información es útil y cómo presentarla.
+
+**[Abrir el prototipo de informe de aula](apps/informe_aula.html){target="_blank"}** (se abre en una pestaña nueva).
+
+Qué muestra:
+
+- **Panorámica de la clase:** cuántos alumnos hay en cada nivel, frente a lo esperado según el baremo.
+- **Avance de cada alumno** entre dos trimestres, con el margen de error: solo se marca «mejora» o «empeora» cuando el cambio supera el umbral de cambio fiable.
+- **Velocidad en palabras por minuto** y **minutos que tardaría en leer 1.000 palabras**, una unidad fácil de entender.
+- **Comparación con lo publicado** para cada curso.
+
+Lo que hay detrás de cada cifra está en la [ficha de velocidad lectora](fichas/VEL.qmd). Las sugerencias sobre el prototipo pueden enviarse por el [formulario](consultas.qmd).

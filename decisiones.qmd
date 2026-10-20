@@ -1,0 +1,40 @@
+# Decisiones metodológicas
+
+Decisiones del grupo que afectan a cómo se calculan e interpretan las puntuaciones del manual. Cada una indica en qué se apoya ([E] evidencia publicada, [D] datos propios, [U] criterio de utilidad) y dónde se desarrolla. Las decisiones pendientes están en [Consultas y sugerencias](consultas.qmd).
+
+## Muestra de referencia y Preleo
+
+| Decisión | Apoyo | Dónde |
+|---|---|---|
+| Los baremos usan como referencia a los niños de centros que no aplicaron Preleo a su cohorte (muestra de referencia normativa). | [U] Que la norma describa el desarrollo sin intervención | [Cómo se construye cada ficha](metodo.qmd) |
+| Un niño cuenta como Preleo solo si su colegio aplicó el programa a su cohorte entre los 4 y los 6 años. Que el colegio aplique Preleo en otros cursos no basta. | [U] | [Preleo en los datos](preleo/datos.qmd) |
+| Se usan todas las cohortes juntas como referencia, salvo que una cohorte se aparte más de 1 DT de las demás en una tarea; entonces usa su propia referencia. | [D] Diferencia mediana entre cohortes equivalentes d = 0,11 | Fichas |
+| Si en un momento no hay al menos 100 niños de la muestra de referencia, se usa a todos los niños y se indica en la tabla. | [U] | Ficha RAN (4.1) |
+
+## Cómo se barema
+
+| Decisión | Apoyo | Dónde |
+|---|---|---|
+| Baremar por curso y trimestre, al menos hasta los 7 años. | [D] Con baremo por curso se marca al 22–24 % del primer trimestre | [Baremo por curso o por trimestre](baremos-trimestre.qmd) |
+| De 4 a 6 años, afinar por edad en meses. | [D] Reclasifica al 2–10 % de los niños en p16 | Ficha de letras |
+| No ajustar el punto de corte de riesgo por nivel socioeconómico del centro (ISE); el percentil por ISE se da solo como contexto. | [D] A igual puntuación, los niños de ISE bajo tienen más riesgo: un corte propio ocultaría riesgo real | Ficha de letras |
+| Dar el percentil con su banda de confianza y no clasificar por una sola tarea. | [D] Error típico de medida | Fichas |
+| Para hablar de mejora o empeoramiento de un niño, usar el índice de cambio fiable, no la diferencia entre dos trimestres. | [E] [D] | Fichas de letras y velocidad |
+
+## Validez y unidades
+
+| Decisión | Apoyo | Dónde |
+|---|---|---|
+| Criterio de dificultad lectora: etiqueta longitudinal de 6 a 11 años (persistente frente a transitoria). | [U] | Fichas |
+| Cuando el criterio contiene la propia medida, el AUC se presenta solo como acuerdo, no como validez predictiva, y se busca otro criterio. | [U] | Ficha de velocidad |
+| Expresar la velocidad lectora en palabras por minuto y en minutos para leer 1.000 palabras. | [U] Unidad comprensible para docentes y comparable con la literatura | Ficha de velocidad |
+| La «lectura para comprender» de EDICOLE es una relectura: no se compara con la lectura silenciosa publicada. | [D] Mismo texto; información del equipo | Ficha de velocidad |
+| Los textos EDICOLE de la plataforma nueva (desde 2018/19) no se usan hasta revisar sus tiempos. | [D] Formas A y B correlacionan .40–.50 frente a .86–.90 | Ficha de velocidad |
+
+## Datos
+
+| Decisión | Apoyo | Dónde |
+|---|---|---|
+| Fechas de nacimiento leídas en todos los formatos (texto, ISO y fecha de Excel). | [D] Un error de lectura perdía el 24–42 % de las fechas en 2010–2014; corregido el 19/10/2026 | Ficha de letras |
+| Todo cálculo se hace con scripts reproducibles; el libro solo publica tablas agregadas. | [U] | [Cómo se mantiene este libro](colaborar.qmd) |
+| Las incidencias de datos (sesiones con valores constantes, códigos mal etiquetados…) se documentan en la ficha y se excluyen con motivo. | [U] | Apartados de depuración |
