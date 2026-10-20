@@ -1,0 +1,2 @@
+"n","pct_ninos_alcanzan_alguno","aciertos_perdidos_esperados_M","aciertos_perdidos_esperados_max","aciertos_M","r_aciertos_con_y_sin_items","nota"
+804,86.816,1.376,1.741,17.413,0.999,"Pérdida esperada = suma, sobre los ítems sospechosos alcanzados, de la proporción de acierto en papel. Afecta al nivel (baremos), casi nada al orden de los niños."

@@ -32,14 +32,17 @@ EXPORTAR <- c(
   VEL_indicadores = "ficha_velocidad_indicadores_R_v1.xlsx",
   GEN_trimestre = "baremo_trimestre_vs_curso_R_v1.xlsx",
   CF523 = "ficha_CF523_R_v1.xlsx",
-  TECLE = "ficha_TECLE_R_v1.xlsx"
+  TECLE = "ficha_TECLE_R_v1.xlsx",
+  TECLE_papel = "ficha_TECLE_papel_R_v1.xlsx"
 )
 PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"
 MAX_FILAS <- 2000
 # DERECHOS: los baremos de pruebas comerciales (PROLEC-R, EDICOLE…) se usaron para
 # comparar en el PC, pero no se publican en el libro; se citan con su referencia.
-OMITIR_HOJAS <- c("1c_PROLEC_R_en_ppm")
-OMITIR_COLUMNAS <- "^(PROLEC|EDICOLE_baremo)"
+# Los percentiles del TECLE en papel 2020/21 son la base del estudio normativo publicado por el grupo
+# (Carrillo Gállego et al., 2024): no se publican aquí sin acuerdo con su autora principal.
+OMITIR_HOJAS <- c("1c_PROLEC_R_en_ppm", "P3_Percentiles_NO_PUBLICAR")
+OMITIR_COLUMNAS <- "^(PROLEC|EDICOLE_baremo|clave)"  # clave = respuestas correctas de TECLE: solo en el PC
 
 slug <- function(x) { x <- iconv(x, "UTF-8", "ASCII//TRANSLIT"); gsub("[^A-Za-z0-9_]+", "_", x) }
 dir.create(destino, recursive = TRUE, showWarnings = FALSE)

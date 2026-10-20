@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 20/10/2026 | TECLE | Ficha ampliada con el TECLE en papel de 2020/21 (6.492 niños de 2.º a 6.º), análisis de ítems en papel y en la plataforma, validez frente a la dislexia diagnosticada y una incidencia: probable clave errónea en los ítems 15 y 19 de la plataforma. |
 | 20/10/2026 | Fichas piloto | Contar sílabas y TECLE: marco teórico con evidencia publicada (búsqueda con SciSpace), estudios que abre y pendientes. |
 | 20/10/2026 | Fichas piloto | Nuevas fichas: conciencia fonológica (contar sílabas, 523) y TECLE en la plataforma (1930), a petición del grupo. |
 | 20/10/2026 | Riesgo | Nuevo capítulo «Cómo estimamos el riesgo y la dificultad lectora»: cinco niveles de certeza (DL-A a TE), estabilidad entre cursos y lenguaje del informe por edad. |
