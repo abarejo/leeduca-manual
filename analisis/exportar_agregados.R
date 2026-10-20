@@ -42,7 +42,7 @@ MAX_FILAS <- 2000
 # Los percentiles del TECLE en papel 2020/21 son la base del estudio normativo publicado por el grupo
 # (Carrillo Gállego et al., 2024): no se publican aquí sin acuerdo con su autora principal.
 OMITIR_HOJAS <- c("1c_PROLEC_R_en_ppm", "P3_Percentiles_NO_PUBLICAR")
-OMITIR_COLUMNAS <- "^(PROLEC|EDICOLE_baremo|clave)"  # clave = respuestas correctas de TECLE: solo en el PC
+OMITIR_COLUMNAS <- "^(PROLEC|EDICOLE_baremo|clave|opcion_modal)"  # clave y opcion_modal = respuestas correctas de TECLE: solo en el PC
 
 slug <- function(x) { x <- iconv(x, "UTF-8", "ASCII//TRANSLIT"); gsub("[^A-Za-z0-9_]+", "_", x) }
 dir.create(destino, recursive = TRUE, showWarnings = FALSE)

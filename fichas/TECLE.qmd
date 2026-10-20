@@ -9,7 +9,7 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"
 P <- leer("TECLE_papel", "P2_Descriptivos_papel")
 E1 <- leer("TECLE_papel", "E1_Dificultad_papel_plataforma")
 V1 <- leer("TECLE_papel", "V1_Dislexia_diagnosticada")
-I5 <- leer("TECLE_papel", "I5_Impacto_clave")
+I7 <- leer("TECLE_papel", "I7_Recorreccion_184")
 r_ <- function(x, d = 2) sub("^0", "", sprintf(paste0("%.", d, "f"), x))  # correlaciones y AUC: .99
 ```
 
@@ -17,7 +17,7 @@ r_ <- function(x, d = 2) sub("^0", "", sprintf(paste0("%.", d, "f"), x))  # corr
 **Estado:** ficha piloto, borrador del 20/10/2026, ampliada con el TECLE en papel de 2020/21 y el análisis de ítems. Las tablas se leen de `datos/agregados/TECLE` (plataforma) y `datos/agregados/TECLE_papel` (papel e ítems), y se regeneran con `scripts/R/ficha_borrador_tarea.R --tarea TECLE` y `scripts/R/ficha_TECLE_papel_items.R`. Los percentiles en papel no se reproducen aquí: son la base del estudio normativo publicado por el grupo (Carrillo Gállego et al., 2024).
 :::
 
-**En una frase.** TECLE mide **eficiencia lectora**: es estable de un curso a otro, distingue muy bien a los niños con dislexia diagnosticada (AUC = `r r_(V1$AUC[V1$curso == "Todos (z por curso)"])`) y sus ítems funcionan igual en papel que en la plataforma (r = `r r_(E1$r_dificultad[2])`). Pero anticipa poco la comprensión, y la versión de la plataforma tiene **dos ítems con la clave probablemente mal grabada**.
+**En una frase.** TECLE mide **eficiencia lectora**: es estable de un curso a otro, distingue muy bien a los niños con dislexia diagnosticada (AUC = `r r_(V1$AUC[V1$curso == "Todos (z por curso)"])`) y sus ítems funcionan igual en papel que en la plataforma (r = `r r_(E1$r_dificultad[2])`). Pero anticipa poco la comprensión, y la versión de la plataforma tiene **cinco ítems con la respuesta correcta mal grabada**.
 
 ## Descripción
 
@@ -86,8 +86,9 @@ Con todos los cursos juntos, el AUC es de `r r_(V1$AUC[V1$curso == "Todos (z por
 ![Dificultad de cada ítem en papel (2.º) y en la plataforma (7 años).](../figuras/Ficha_TECLE_F4_papel_plataforma.png){width=70%}
 
 - Las 22 frases que alcanzan bastantes niños en los dos formatos tienen **la misma dificultad en papel que en la plataforma** (r = `r r_(E1$r_dificultad[2])`). En la plataforma son algo más difíciles (`r num_es(abs(E1$dif_media_p_plataforma_menos_papel[2]) * 100, 0)` puntos de acierto menos), una diferencia pequeña, que puede deberse al formato o a la cohorte (los dos grupos están en 2.º).
-- **Incidencia: ítems 15 y 19.** En papel los acierta el 86–88 % de los que llegan a ellos; en la plataforma, el 5–6 %. Esa diferencia no puede deberse a los niños: casi seguro, la plataforma tiene mal grabada la respuesta correcta.
-- **Qué supone:** el `r num_es(I5$pct_ninos_alcanzan_alguno, 0)` % de los niños llega a alguno de los dos ítems y pierde, de media, `r num_es(I5$aciertos_perdidos_esperados_M, 1)` aciertos. El orden de los niños casi no cambia (r = `r r_(I5$r_aciertos_con_y_sin_items, 3)` entre la puntuación con y sin esos ítems), pero el **baremo de la plataforma queda algo por debajo** de lo que debería.
+- **Incidencia: la clave de la plataforma.** En los ítems 15 y 19, en papel acierta el 86–88 % de los que llegan a ellos y en la plataforma, el 5–6 %. La plataforma guarda además qué opción eligió cada niño, y eso permite comprobarlo: en los ítems **15, 19, 36 y 37**, el 81–90 % de los niños elige la opción correcta del cuadernillo, pero la plataforma da por buena otra. En el **51** pasa lo mismo, aunque solo llegan 9 niños. Son errores de la clave grabada, no de los niños.
+- **Ítem 31, por comprobar.** La clave coincide con la de papel, pero el 77 % de los niños elige otra opción, y en papel casi todos aciertan. Lo más probable es que en la pantalla las opciones aparezcan en otro orden que en el cuadernillo.
+- **Qué supone:** con la clave de papel, los niños de 7 años pasan de `r num_es(I7$aciertos_M[1], 1)` a `r num_es(I7$aciertos_M[2], 1)` aciertos de media. Cambia la puntuación de 8 de cada 10 niños, pero el orden apenas (r = `r r_(I7$r_con_plataforma[2], 3)`), y solo el `r num_es(I7$pct_cambia_de_lado_p25[2], 1)` % cruza el percentil 25. El efecto está en el nivel: **el baremo de la plataforma queda algo por debajo** de lo que debería.
 
 ### Fiabilidad: una prueba de velocidad
 
@@ -104,7 +105,7 @@ La fiabilidad adecuada para TECLE es la **estabilidad entre aplicaciones**: r = 
 
 ```{r}
 #| label: tbl-tecle-baremo
-#| tbl-cap: "Baremo de TECLE en la plataforma (aciertos por minuto), muestra de referencia normativa (centros sin Preleo). Pendiente de corregir los ítems 15 y 19."
+#| tbl-cap: "Baremo de TECLE en la plataforma (aciertos por minuto), muestra de referencia normativa (centros sin Preleo). Pendiente de recorregir con la clave buena (ítems 15, 19, 36, 37 y 51)."
 B <- leer("TECLE", "5_Baremo_SIN")
 tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90")], c("Momento", "N", "Cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 1)
 ```
@@ -123,7 +124,7 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 |----|--------------|----------|--------------------------------|--------------|
 | E1 | **Validez sin circularidad** | Metodológico | Rehacer la etiqueta de dificultad lectora sin TECLE: ¿cuánto predice TECLE a los 7 años la dificultad persistente de los cursos siguientes? | Etiquetas de certeza y su guion. |
 | E2 | **Plataforma y papel en una escala** | Metodológico | Con la dificultad de los ítems casi idéntica, ¿se pueden equiparar las puntuaciones de la plataforma con las normas en papel? | Ítems de los dos formatos; 107 niños con los dos. |
-| E3 | **Corregir la clave** | Técnico | Comprobar la clave de los ítems 15 y 19 en las sesiones 635, 638, 899 y 900, y recalcular el baremo. | Este análisis (sesión 184). |
+| E3 | **Corregir la clave** | Técnico | Corregir la clave en la plataforma, comprobar el orden de las opciones del ítem 31, recorregir las sesiones 635, 638, 899 y 900 con la opción elegida y rehacer el baremo. | Comprobación ítem a ítem de la sesión 184. |
 | E4 | **TECLE y dislexia** | Clínico | ¿Qué punto de corte de TECLE identifica mejor la dislexia por curso? ¿Añade algo a la nota de Lengua? | Diagnósticos de Séneca y notas, papel 2020/21. |
 | E5 | **Malos comprendedores** | Teórico | ¿Detecta TECLE a los niños que decodifican bien pero comprenden mal? | Comprensión EDICOLE en las mismas sesiones; subpruebas SEM, STX y VOC en papel. |
 | E6 | **Tiempos por ítem** | Metodológico | ¿Revelan los tiempos por frase perfiles de lectura distintos con la misma puntuación? | Tiempos por ítem de la plataforma. |
@@ -136,7 +137,7 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 
 ## Pendientes e incidencias
 
-- **Ítems 15 y 19 de la plataforma:** probable clave errónea (sesión 184). Comprobar el resto de sesiones antes de usar el baremo de la plataforma para decisiones individuales.
+- **Clave de la plataforma:** errónea en los ítems 15, 19, 36, 37 y 51 (comprobado en la sesión 184 con la opción elegida); ítem 31 por comprobar en pantalla. Hay que recorregir el resto de sesiones antes de usar el baremo de la plataforma para decisiones individuales.
 - **Uso recomendado:** medida rápida y colectiva de eficiencia lectora, junto a las listas de palabras. **No usar como medida de comprensión.**
 - **Cautelas:** en la cohorte 2010, 7.1 está en la plataforma antigua y 8.1 en la nueva; el baremo de 8.1 tiene solo 166 niños sin Preleo.
 - **Pendiente de acordar con M. Carrillo:** cómo citar y presentar los datos en papel.
