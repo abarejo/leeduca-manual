@@ -1,0 +1,58 @@
+---
+title: "Conciencia fonológica: contar sílabas"
+subtitle: "Tarea 523 · 4 y 5 años · ficha borrador"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** ficha borrador (20/10/2026), a petición del grupo. Sigue la estructura de las fichas piloto, en versión corta. Las tablas completas se leen de `datos/agregados/CF523` y se actualizan al regenerar los datos con `scripts/R/ficha_borrador_tarea.R --tarea CF523`.
+:::
+
+**En una frase.** Es la tarea de conciencia fonológica con más niños y cohortes de la plataforma: unos 5.800 niños de seis cohortes. Mide bien lo que pretende: se relaciona sobre todo con otras tareas de conciencia fonológica, no tiene suelo y apenas techo a los 4 años. Pero **sola es una medida débil**: es poco estable de un curso a otro (r ≈ .35) y predice poco la dificultad lectora persistente (AUC ≈ .65). No debe usarse sola para clasificar a un niño. Su lugar natural es dentro de un compuesto de conciencia fonológica.
+
+## Descripción
+
+El evaluador nombra el dibujo que aparece en la pantalla y el niño dice cuántas sílabas («trocitos») tiene la palabra. El evaluador marca el número con el ratón. Hay 20 ítems.
+
+| Código | Momentos | Cohortes | Medida |
+|---|---|---|---|
+| 523 | 4.1 (sesiones 67, 154, 181, 625, 894) y 5.1 (66, 153, 182, 628) | 2010–2015 | Aciertos (0–20) |
+
+Se pasó en la plataforma antigua (hasta 2017/18) y en la nueva (desde 2018/19), con los mismos resultados en ambas (tabla de descriptivos por cohorte).
+
+## Resultados principales
+
+```{r}
+#| label: tbl-cf523-baremo
+#| tbl-cap: "Baremo de contar sílabas (aciertos), muestra de referencia normativa (centros sin Preleo)."
+B <- leer("CF523", "5_Baremo_SIN")
+tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90")], c("Momento", "N", "Cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 0)
+```
+
+![Baremo de contar sílabas: P10–P90, P25–P75, mediana y p16.](../figuras/Ficha_CF523_F1_baremo.png){width=80%}
+
+- **Distribución.** A los 4 años, mediana de 10 aciertos, casi simétrica, sin suelo (≈ 3 % con 0) ni techo (≈ 3 % con 20). A los 5 años, mediana de 14, con un 12 % de techo: la tarea empieza a quedarse corta para los mejores.
+- **Fiabilidad.** La correlación entre 4.1 y 5.1 en los mismos niños es de .33–.40 en tres cohortes. Es baja para una tarea de 20 ítems: parte se debe al cambio real en un año de desarrollo rápido, pero también indica bastante error. La consistencia interna (α, ω) queda pendiente: la tabla larga no tiene las respuestas ítem a ítem de esta tarea.
+- **Validez concurrente.** Se relaciona más con otras tareas de conciencia fonológica del mismo momento (r = .40–.46) que con vocabulario (.11–.25), letras (.29) o denominación rápida (.08–.16). Es el patrón esperado.
+- **Validez predictiva.** Frente a la dificultad lectora persistente de 6 a 11 años, el AUC es .66 a los 4 años y .64 a los 5. Por debajo de p25 detecta al 40 % de los futuros casos con un 20 % de falsos positivos.
+- **Validez incremental.** Sobre letras y denominación rápida, añade muy poco: +0,005 de AUC a los 4 años y +0,002 a los 5, con validación cruzada.
+- **Variables que la afectan.** La edad relativa pesa a los 4 años (d = 0,44 entre nacidos en el primer y el segundo semestre) y menos a los 5 (d = 0,24). El nivel socioeconómico del centro, poco (d = 0,26 a los 4 años; nulo a los 5). Los colegios explican el 14–19 % de la varianza.
+
+## Para el manual
+
+- **Uso recomendado:** como parte de un compuesto de conciencia fonológica, con su baremo por edad en meses a los 4 años.
+- **No usar sola** para decidir apoyos: con r ≈ .35 entre cursos, el error típico es grande.
+- **Pendiente:**
+  - consistencia interna con los datos ítem a ítem de la plataforma nueva (cohortes 2013–2015);
+  - comparar con emparejar sílaba inicial (525), la otra tarea con muchos niños, y con supresión de sílaba inicial (1551), para elegir la mejor tarea o el mejor compuesto a cada edad.
+
+## Tablas completas
+
+```{r}
+#| results: asis
+tablas_completas("CF523")
+```

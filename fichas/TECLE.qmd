@@ -1,0 +1,60 @@
+---
+title: "TECLE en la plataforma"
+subtitle: "Tarea 1930 · eficiencia lectora con frases para completar · 7 y 8 años · ficha borrador"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** ficha borrador (20/10/2026), a petición del grupo. Las tablas completas se leen de `datos/agregados/TECLE` y se actualizan al regenerar los datos con `scripts/R/ficha_borrador_tarea.R --tarea TECLE`. Los baremos comerciales de TECLE no se reproducen; solo se cita la prueba.
+:::
+
+**En una frase.** Es una medida fiable y muy ligada a la decodificación. Es estable de 7 a 8 años (r ≈ .70) y se relaciona sobre todo con la lectura de palabras y texto (r = .69–.79). Pero **anticipa poco la comprensión**: frente a la baja comprensión un curso después, el AUC es .59. Mide eficiencia lectora, no comprensión.
+
+## Descripción
+
+Versión en la plataforma de la tarea de TECLE (test de eficacia lectora). En la pantalla aparecen frases a las que les falta la última palabra; el niño lee en silencio y elige, entre cuatro palabras, la que completa la frase. La prueba dura 5 minutos (mediana de 294 s). Se registran aciertos, errores y tiempo.
+
+| Código | Momentos | Cohortes | Medida principal |
+|---|---|---|---|
+| 1930 | 7.1 (sesiones 184, 635, 899) y 8.1 (638, 900) | 2010, 2011 y 2012 | Aciertos por minuto (aciertos × 60 / tiempo) |
+
+Se usan aciertos por minuto, y no aciertos, porque el tiempo real varía unos segundos entre niños (272–302 s). Con 5 minutos, 1 acierto por minuto equivale a unos 5 aciertos.
+
+## Resultados principales
+
+```{r}
+#| label: tbl-tecle-baremo
+#| tbl-cap: "Baremo de TECLE en la plataforma (aciertos por minuto), muestra de referencia normativa (centros sin Preleo)."
+B <- leer("TECLE", "5_Baremo_SIN")
+tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90")], c("Momento", "N", "Cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 1)
+```
+
+![Baremo de TECLE: P10–P90, P25–P75, mediana y p16.](../figuras/Ficha_TECLE_F1_baremo.png){width=80%}
+
+- **Distribución.** A los 7 años, mediana de 16 aciertos (3,2 por minuto) y unos 7 errores. A los 8 años, 21 aciertos (4,3 por minuto). Sin suelo ni techo.
+- **Fiabilidad.** La correlación entre 7.1 y 8.1 en los mismos niños es de .67–.70. Es buena para un año de distancia.
+- **Validez concurrente.** Se relaciona sobre todo con palabras, pseudopalabras y velocidad de texto (r = .69 a los 7 años y .79 a los 8). Menos con conciencia fonológica (.38–.45) y poco con comprensión lectora (.17–.29).
+- **Frente a la etiqueta de dificultad persistente**, el AUC es .90–.92. Pero la etiqueta se construye con TECLE, así que es **acuerdo, no validez predictiva**.
+- **Criterio no circular.** Frente a la baja comprensión (≤ p25) un curso después, el AUC es .59 (7 → 8 años, 875 niños). Por debajo de p25 detecta solo a un tercio de los que luego comprenden mal.
+- **Variables que la afectan.** El nivel socioeconómico del centro, moderadamente (d = 0,36 a los 7 años). La edad relativa, poco. Los colegios explican el 6–8 % de la varianza.
+
+## Para el manual
+
+- **Uso recomendado:** como medida rápida y colectiva de eficiencia lectora a los 7–8 años, junto a las listas de palabras.
+- **No usar como medida de comprensión.**
+- **Cautelas:**
+  - en la cohorte 2010, 7.1 está en la plataforma antigua y 8.1 en la nueva;
+  - el baremo de 8.1 tiene solo 166 niños sin Preleo (cohorte 2010);
+  - la sesión de tabletas de 9 años (2021) tiene una versión con otra puntuación y no entra aquí.
+- **Pendiente:** consistencia interna con los datos ítem a ítem; añadir 2012 a 8 años si se completa; comparar con el TECLE original.
+
+## Tablas completas
+
+```{r}
+#| results: asis
+tablas_completas("TECLE")
+```

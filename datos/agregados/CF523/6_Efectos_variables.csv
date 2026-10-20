@@ -1,0 +1,12 @@
+"variable","mom","n","efecto_rho","efecto_d","p","efecto_CCI"
+"ISE del centro (ρ; d alto − bajo)","4.1",2483,0.124,0.256,0,
+"Sexo (niña − niño; codificación en revisión)","4.1",2653,,0.14,0,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","4.1",2670,0.227,0.437,0,
+"Preleo (CON − SIN, sin ajustar), cohorte 2014","4.1",446,,-0.832,0,
+"Colegio (CCI)","4.1",2831,,,,0.185
+"ISE del centro (ρ; d alto − bajo)","5.1",2843,-0.02,-0.004,0.295,
+"Sexo (niña − niño; codificación en revisión)","5.1",2797,,0.054,0.151,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","5.1",2790,0.131,0.242,0,
+"Preleo (CON − SIN, sin ajustar), cohorte 2010","5.1",954,,0.343,0,
+"Preleo (CON − SIN, sin ajustar), cohorte 2013","5.1",776,,-0.182,0.023,
+"Colegio (CCI)","5.1",2955,,,,0.136
