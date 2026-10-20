@@ -44,6 +44,11 @@ book:
         - fichas/RAN.qmd
         - fichas/CF523.qmd
         - fichas/TECLE.qmd
+    - part: "Fichas automáticas (prueba)"
+      chapters:
+        - fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd
+        - fichas/auto/RAN_OBJETOS_CONTROL.qmd
+        - fichas/auto/LEC_PAL_2sil.qmd
     - part: "Preleo"
       chapters:
         - preleo/programa.qmd

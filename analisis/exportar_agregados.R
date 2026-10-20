@@ -68,6 +68,20 @@ for (ficha in names(EXPORTAR)) {
 }
 message(total, " tablas exportadas a ", destino, ". Revisa con `git diff --stat` antes de subir.")
 
+# Fichas automáticas (scripts/R/ficha_generica.R): una carpeta AUTO_<tarea> por cada Excel de DIAGNOSTICO/R/fichas_auto
+fa <- list.files(file.path(diag, "fichas_auto"), pattern = "^ficha_.*_R_v1\\.xlsx$", full.names = TRUE)
+for (f in fa) {
+  ficha <- paste0("AUTO_", sub("^ficha_(.*)_R_v1\\.xlsx$", "\\1", basename(f))); dir.create(file.path(destino, ficha), showWarnings = FALSE)
+  for (h in setdiff(excel_sheets(f), "LEEME")) {
+    t <- read_excel(f, h); t <- t[, !grepl(OMITIR_COLUMNAS, names(t)), drop = FALSE]
+    malas <- grep(PROHIBIDAS, names(t), ignore.case = TRUE, value = TRUE)
+    if (length(malas)) stop("PRIVACIDAD: ", basename(f), " / ", h, " tiene columnas identificativas: ", paste(malas, collapse = ", "))
+    if (nrow(t) > MAX_FILAS) stop("PRIVACIDAD: ", basename(f), " / ", h, " tiene demasiadas filas")
+    write.csv(t, file.path(destino, ficha, paste0(slug(h), ".csv")), row.names = FALSE, fileEncoding = "UTF-8", na = "")
+  }
+  message("OK ", ficha)
+}
+
 # Niveles de certeza (capítulo «Cómo estimamos el riesgo»): solo dos hojas agregadas de certeza_cortes_baremos_v2.xlsx
 # (el archivo tiene también la hoja Etiquetas_NIE, por niño, que NUNCA se exporta)
 fc <- file.path(dirname(diag), "certeza_cortes_baremos_v2.xlsx")

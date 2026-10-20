@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Fichas automáticas | Primeras tres fichas generadas automáticamente por familia (supresión de fonemas, RAN de objetos y palabras bisílabas) con `ficha_generica.R` y la plantilla del libro. |
 | 21/10/2026 | Calidad | Nuevo capítulo «Límites y calidad de los datos»: revisión crítica, clases de calidad A/B/C automáticas en el catálogo y recomendaciones para lo que se mida en adelante. |
 | 21/10/2026 | Redes | Redes de tareas por edad (modelos gráficos gaussianos) en «Cómo se agrupan las tareas». |
 | 21/10/2026 | Agenda | Nueva «Agenda de investigación metodológica» con nueve estudios y revistas posibles. |
