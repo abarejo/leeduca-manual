@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Estructura del manual (propuesta para revisar) – Manual técnico de la plataforma LEEDUCA</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./metodo.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-596bc03469159a14fb0217a02c26beab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./estructura.html">Cómo está hecho el manual</a></li><li class="breadcrumb-item"><a href="./estructura.html"><span class="chapter-title">Estructura del manual (propuesta para revisar)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Manual técnico de la plataforma LEEDUCA</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform" title="Enviar una sugerencia" class="quarto-navigation-tool px-1" aria-label="Enviar una sugerencia"><i class="bi bi-chat-left-text"></i></a>
+    <a href="https://github.com/abarejo/leeduca-manual" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Cómo está hecho el manual</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estructura.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Estructura del manual (propuesta para revisar)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metodo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cómo se construye cada ficha</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./decisiones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisiones metodológicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./riesgo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cómo estimamos el riesgo y la dificultad lectora</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./baremos-trimestre.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Baremo por curso o por trimestre</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Fichas piloto</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/LET.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conocimiento de letras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/VEL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Velocidad lectora en palabras por minuto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/RAN.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida (RAN)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/CF523.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conciencia fonológica: contar sílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/TECLE.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TECLE</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Preleo</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preleo/programa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El programa Preleo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preleo/datos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Efectos de Preleo: evidencia y datos de la plataforma</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe-aula.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prototipo de informe de aula</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./consultas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Consultas y sugerencias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./novedades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Novedades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./colaborar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cómo se mantiene este libro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./referencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#enfoque" id="toc-enfoque" class="nav-link active" data-scroll-target="#enfoque">Enfoque</a></li>
+  <li><a href="#índice-comentado" id="toc-índice-comentado" class="nav-link" data-scroll-target="#índice-comentado">Índice comentado</a>
+  <ul class="collapse">
+  <li><a href="#parte-i.-fundamentos" id="toc-parte-i.-fundamentos" class="nav-link" data-scroll-target="#parte-i.-fundamentos">Parte I. Fundamentos</a></li>
+  <li><a href="#parte-ii.-propiedades-psicométricas" id="toc-parte-ii.-propiedades-psicométricas" class="nav-link" data-scroll-target="#parte-ii.-propiedades-psicométricas">Parte II. Propiedades psicométricas</a></li>
+  <li><a href="#parte-iii.-fichas-de-tareas-por-dominio" id="toc-parte-iii.-fichas-de-tareas-por-dominio" class="nav-link" data-scroll-target="#parte-iii.-fichas-de-tareas-por-dominio">Parte III. Fichas de tareas por dominio</a></li>
+  <li><a href="#parte-iv.-uso-diagnóstico-y-seguimiento" id="toc-parte-iv.-uso-diagnóstico-y-seguimiento" class="nav-link" data-scroll-target="#parte-iv.-uso-diagnóstico-y-seguimiento">Parte IV. Uso diagnóstico y seguimiento</a></li>
+  <li><a href="#anexos" id="toc-anexos" class="nav-link" data-scroll-target="#anexos">Anexos</a></li>
+  </ul></li>
+  <li><a href="#plantilla-de-la-ficha-por-tarea" id="toc-plantilla-de-la-ficha-por-tarea" class="nav-link" data-scroll-target="#plantilla-de-la-ficha-por-tarea">Plantilla de la ficha por tarea</a></li>
+  <li><a href="#estado-y-plan-de-trabajo" id="toc-estado-y-plan-de-trabajo" class="nav-link" data-scroll-target="#estado-y-plan-de-trabajo">Estado y plan de trabajo</a></li>
+  <li><a href="#preguntas-para-el-grupo" id="toc-preguntas-para-el-grupo" class="nav-link" data-scroll-target="#preguntas-para-el-grupo">Preguntas para el grupo</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/estructura.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/estructura.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./estructura.html">Cómo está hecho el manual</a></li><li class="breadcrumb-item"><a href="./estructura.html"><span class="chapter-title">Estructura del manual (propuesta para revisar)</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-estructura" class="quarto-section-identifier"><span class="chapter-title">Estructura del manual (propuesta para revisar)</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Estado:</strong> propuesta del 14/10/2026, actualizada el 20/10/2026 con lo ya escrito en este libro. <strong>Se pide al grupo que la revise</strong>: al final del capítulo están las preguntas abiertas, y cualquier comentario puede llegar por el <a href="https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform">formulario de sugerencias</a> o por las otras vías de <a href="./consultas.html">Consultas y sugerencias</a>.</p>
+</div>
+</div>
+</div>
+<section id="enfoque" class="level2">
+<h2 class="anchored" data-anchor-id="enfoque">Enfoque</h2>
+<p>El manual técnico se organiza en <strong>cuatro partes</strong>:</p>
+<ul>
+<li>fundamentos;</li>
+<li>propiedades psicométricas;</li>
+<li>fichas por tarea;</li>
+<li>uso diagnóstico y monitorización.</li>
+</ul>
+<p>Cada tarea tiene una ficha estandarizada, y hay un capítulo propio sobre los <strong>niveles de certeza</strong> de la dificultad lectora.</p>
+<p><strong>Destinatarios.</strong> Logopedas, orientadores, psicólogos educativos y clínicos, y equipos de investigación. El primer capítulo fija la cualificación necesaria para interpretar las puntuaciones.</p>
+<p><strong>Qué lo distingue de un manual de test convencional:</strong></p>
+<ol type="1">
+<li><strong>Baremos por momento.</strong> Hay datos longitudinales de 4 a 11 años, con tres evaluaciones por curso, así que los baremos son por trimestre y no solo por curso (ver <a href="./baremos-trimestre.html">Baremo por curso o por trimestre</a>).</li>
+<li><strong>Baremos continuos.</strong> Se calculan con normas continuas (cNORM) y toman como referencia los centros sin Preleo, con tablas aparte para los centros con Preleo.</li>
+<li><strong>Fiabilidad ítem a ítem.</strong> ω y teoría de respuesta al ítem (TRI) donde hay respuestas por ítem, error típico condicional y bandas de confianza en cada puntuación.</li>
+<li><strong>Validez predictiva con un criterio de certeza graduada.</strong> La dificultad lectora persistente se define con toda la trayectoria del niño, y se corrige el sesgo de espectro (ver <a href="./riesgo.html">Cómo estimamos el riesgo</a>).</li>
+<li><strong>Indicadores de cambio para el seguimiento.</strong> Índice de cambio fiable, curvas de crecimiento y <strong>cambio mínimo relevante</strong> definido con anclas propias, útiles para la respuesta a la intervención.</li>
+<li><strong>Invarianza.</strong> Por sexo, colegio, formato (plataforma, papel o tableta) y periodo de pandemia (ver, por ejemplo, la equivalencia papel–plataforma en la <a href="./fichas/TECLE.html">ficha de TECLE</a>).</li>
+<li><strong>Evidencia neurofisiológica.</strong> Los datos de EEG y fNIRS se presentan como validez convergente.</li>
+</ol>
+<p><strong>Marco normativo:</strong></p>
+<ul>
+<li><em>Standards for Educational and Psychological Testing</em> <span class="citation" data-cites="aera2014">(<a href="referencias.html#ref-aera2014" role="doc-biblioref">American Educational Research Association, American Psychological Association, y National Council on Measurement in Education 2014</a>)</span>.</li>
+<li>Cuestionario CET-R del Colegio Oficial de la Psicología y modelo de evaluación de tests de la EFPA.</li>
+<li>COSMIN para las propiedades de medida.</li>
+<li>Directrices de la ITC sobre el uso de los tests.</li>
+<li>DSM-5-TR y CIE-11 para la definición clínica de la dislexia (trastorno específico del aprendizaje).</li>
+</ul>
+<p>Falta completar estas referencias con las ediciones exactas.</p>
+</section>
+<section id="índice-comentado" class="level2">
+<h2 class="anchored" data-anchor-id="índice-comentado">Índice comentado</h2>
+<p>El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de la Parte III siguen los dominios del diccionario maestro y solo incluyen las tareas de clase A; las de clase B y C van al anexo D. Donde ya hay algo escrito en este libro, se enlaza.</p>
+<section id="parte-i.-fundamentos" class="level3">
+<h3 class="anchored" data-anchor-id="parte-i.-fundamentos">Parte I. Fundamentos</h3>
+<ol type="1">
+<li><strong>Presentación y uso responsable.</strong> Para qué sirve y para qué no, cualificación del usuario, ética, protección de datos y consentimiento.</li>
+<li><strong>Marco teórico.</strong>
+<ul>
+<li>Aprender a leer en una ortografía transparente: decodificación, fluidez y comprensión (visión simple de la lectura).</li>
+<li>Precursores: conciencia fonológica, conocimiento alfabético, denominación rápida, memoria verbal y lenguaje oral.</li>
+<li>Dislexia y trastorno específico del aprendizaje: DSM-5-TR, CIE-11, respuesta a la intervención y riesgo familiar. Cómo ha cambiado el concepto de dislexia y por qué su prevalencia depende del corte elegido <span class="citation" data-cites="wagner2020prevalence">(<a href="referencias.html#ref-wagner2020prevalence" role="doc-biblioref">Wagner et&nbsp;al. 2020</a>)</span>.</li>
+<li>En español la dislexia se manifiesta sobre todo como lectura lenta y no tanto como errores: implicaciones para la evaluación.</li>
+</ul></li>
+<li><strong>La plataforma LEEDUCA.</strong>
+<ul>
+<li>Arquitectura y tipos de tarea.</li>
+<li>Formatos de respuesta y medidas registradas: aciertos, errores, tiempo total y eficiencia, con respuestas y tiempos ítem a ítem.</li>
+<li>Sesiones y calendario: tres evaluaciones por curso.</li>
+<li>Aplicación colectiva en el aula y versiones en papel y tableta (2020–2022).</li>
+<li>Antecedente en papel: la batería DIS-ESP (11 escalas, 2007–2012).</li>
+</ul></li>
+<li><strong>Estudio normativo.</strong>
+<ul>
+<li>Cohortes 2009–2016 y colegios participantes.</li>
+<li>Número de niños por cohorte y momento.</li>
+<li>Condición Preleo por cohorte y fidelidad de aplicación (ver <a href="./preleo/programa.html">El programa Preleo</a>).</li>
+<li>Limpieza, exclusiones y datos perdidos.</li>
+</ul></li>
+</ol>
+</section>
+<section id="parte-ii.-propiedades-psicométricas" class="level3">
+<h3 class="anchored" data-anchor-id="parte-ii.-propiedades-psicométricas">Parte II. Propiedades psicométricas</h3>
+<ol start="5" type="1">
+<li><strong>Método</strong> (base: <a href="./metodo.html">Cómo se construye cada ficha</a> y <a href="./decisiones.html">Decisiones metodológicas</a>).
+<ul>
+<li>Puntuaciones: aciertos, tiempo y eficiencia; tratamiento de atípicos.</li>
+<li>Fiabilidad: α, ω, test-retest entre trimestres, error típico condicional y TRI. En las pruebas de velocidad, test-retest y no consistencia interna.</li>
+<li>Validez: contenido, estructura interna, invarianza, convergente, predictiva y diagnóstica.</li>
+<li>Baremación continua: percentiles, puntuaciones T y escalares.</li>
+<li><strong>Cuánto cambio importa:</strong> tamaños del efecto de referencia y cambio mínimo relevante con anclas <span class="citation" data-cites="anvari2021anclas">(<a href="referencias.html#ref-anvari2021anclas" role="doc-biblioref">Anvari y Lakens 2021</a>)</span>.</li>
+</ul></li>
+<li><strong>Resultados globales.</strong>
+<ul>
+<li>Tabla resumen de las tareas A.</li>
+<li>Estructura factorial: precursores, decodificación, fluidez y comprensión.</li>
+<li>Invarianza por sexo, formato y pandemia.</li>
+<li>Estabilidad longitudinal de 4 a 11 años.</li>
+</ul></li>
+</ol>
+</section>
+<section id="parte-iii.-fichas-de-tareas-por-dominio" class="level3">
+<h3 class="anchored" data-anchor-id="parte-iii.-fichas-de-tareas-por-dominio">Parte III. Fichas de tareas por dominio</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dominio</th>
+<th>Ficha en este libro</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conciencia fonológica silábica: contar, emparejar y suprimir sílabas</td>
+<td><a href="./fichas/CF523.html">Contar sílabas (523)</a></td>
+</tr>
+<tr class="even">
+<td>Conciencia fonológica fonémica: identificación, segmentación, síntesis y supresión de fonemas</td>
+<td>Pendiente</td>
+</tr>
+<tr class="odd">
+<td>Conocimiento alfabético: letras, vocales y letra inicial</td>
+<td><a href="./fichas/LET.html">Conocimiento de letras</a></td>
+</tr>
+<tr class="even">
+<td>Denominación rápida: colores, objetos, números y sílabas</td>
+<td><a href="./fichas/RAN.html">Denominación rápida (RAN)</a></td>
+</tr>
+<tr class="odd">
+<td>Memoria verbal a corto plazo</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
+<td>Lenguaje oral: pares mínimos, morfosintaxis, vocabulario y comprensión, prosodia</td>
+<td>Pendiente</td>
+</tr>
+<tr class="odd">
+<td>Lectura de sílabas, palabras y pseudopalabras</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
+<td>Fluidez lectora: velocidad de texto y TECLE</td>
+<td><a href="./fichas/VEL.html">Velocidad lectora</a> · <a href="./fichas/TECLE.html">TECLE</a></td>
+</tr>
+<tr class="odd">
+<td>Comprensión lectora</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
+<td>Procesamiento ortográfico: decisión ortográfica, homógrafos y dictado</td>
+<td>Pendiente</td>
+</tr>
+<tr class="odd">
+<td>Habilidades visoatencionales y funciones ejecutivas</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
+<td>Cognición numérica</td>
+<td>Pendiente de decidir si entra aquí o en un manual aparte</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="parte-iv.-uso-diagnóstico-y-seguimiento" class="level3">
+<h3 class="anchored" data-anchor-id="parte-iv.-uso-diagnóstico-y-seguimiento">Parte IV. Uso diagnóstico y seguimiento</h3>
+<ol start="19" type="1">
+<li><strong>Niveles de certeza de la dificultad lectora</strong> (ver <a href="./riesgo.html">Cómo estimamos el riesgo</a>).</li>
+<li><strong>Cribado a los 4–5 años.</strong> Índices compuestos de precursores, puntos de corte, sensibilidad, especificidad y valores predictivos según la prevalencia, y ruta de decisión.</li>
+<li><strong>Identificación (6–7 años) y confirmación (8 años).</strong> Algoritmos, grados de gravedad y perfil de puntos fuertes y débiles.</li>
+<li><strong>Seguimiento del progreso.</strong> Índice de cambio fiable, curvas de crecimiento esperadas, cambio mínimo relevante y señales de baja respuesta a la intervención.</li>
+<li><strong>Preleo.</strong> Baremos diferenciados y cómo interpretar las puntuaciones en centros con programa (ver <a href="./preleo/datos.html">Efectos de Preleo</a>).</li>
+<li><strong>Casos ilustrativos</strong> (anonimizados) y <strong>validación neurofisiológica</strong> (EEG y fNIRS).</li>
+</ol>
+</section>
+<section id="anexos" class="level3">
+<h3 class="anchored" data-anchor-id="anexos">Anexos</h3>
+<ul>
+<li><strong>A.</strong> Tablas de baremos por cohorte, momento y condición.</li>
+<li><strong>B.</strong> Puntos de corte y valores predictivos.</li>
+<li><strong>C.</strong> Ítems y materiales de ejemplo.</li>
+<li><strong>D.</strong> Tareas de clase B y C: descripción y datos disponibles.</li>
+<li><strong>E.</strong> Diccionario de códigos de tarea y de sesión.</li>
+<li><strong>F.</strong> Modelo de informe para centros y familias (ver el <a href="./informe-aula.html">prototipo de informe de aula</a>).</li>
+<li><strong>G.</strong> Fórmulas y código reproducible (R).</li>
+<li><strong>H.</strong> Glosario y referencias.</li>
+</ul>
+</section>
+</section>
+<section id="plantilla-de-la-ficha-por-tarea" class="level2">
+<h2 class="anchored" data-anchor-id="plantilla-de-la-ficha-por-tarea">Plantilla de la ficha por tarea</h2>
+<p>Cada ficha ocupa de 4 a 6 páginas y tiene siempre los mismos diez apartados, para comparar tareas de un vistazo. Se genera desde el diccionario maestro y los guiones de análisis: las cifras no se copian a mano.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Apartado</th>
+<th>Contenido</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Identificación</td>
+<td>Nombre, códigos de tarea y de sesión, dominio, proceso evaluado y clase A/B/C</td>
+<td>Diccionario maestro</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Qué mide y por qué</td>
+<td>Constructo, base teórica y papel en el modelo de riesgo</td>
+<td>Marco teórico</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Material e ítems</td>
+<td>Número de ítems, formato de respuesta, ítems de ejemplo y criterio de dificultad</td>
+<td>Catálogo de tareas</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Aplicación</td>
+<td>Consigna, ensayos de práctica, duración, sesiones y momentos</td>
+<td>Catálogo de sesiones</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Puntuación</td>
+<td>Medidas, medida principal, sentido y tratamiento de atípicos</td>
+<td>Diccionario y guiones</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Muestra</td>
+<td>Niños por cohorte, momento y condición Preleo; sexo</td>
+<td>Guiones</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Fiabilidad</td>
+<td>α y ω por momento, test-retest, error típico condicional, TRI y análisis de ítems</td>
+<td>Datos ítem a ítem</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Validez</td>
+<td>Convergente, predictiva de la lectura posterior, AUC frente a la dificultad persistente e invarianza</td>
+<td>Guiones de validez</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Baremos</td>
+<td>Percentiles y puntuaciones T por momento, banda de confianza y punto de corte recomendado</td>
+<td>Baremos continuos</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Interpretación</td>
+<td>Qué indica una puntuación baja, cautelas y guía de calidad</td>
+<td>Equipo</td>
+</tr>
+</tbody>
+</table>
+<p>En la cabecera, cada ficha llevará un <strong>semáforo de calidad</strong> con la valoración CET-R de fiabilidad, validez y baremos, para que el usuario sepa enseguida para qué decisiones sirve la tarea.</p>
+<p>Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, cada una añade «Estudios que abre» y «Pendientes e incidencias», que no estaban en la plantilla original.</p>
+</section>
+<section id="estado-y-plan-de-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="estado-y-plan-de-trabajo">Estado y plan de trabajo</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Estado (20/10/2026)</th>
+<th>Qué falta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cap. 1–2 Fundamentos y marco teórico</td>
+<td>Partes en el borrador del Manual técnico 8 y en el marco psicométrico</td>
+<td>Actualizar con DSM-5-TR, CIE-11 y la literatura en español; redacción por el equipo</td>
+</tr>
+<tr class="even">
+<td>Cap. 3 Plataforma</td>
+<td>Guía de extracción y catálogos de tareas</td>
+<td>Capturas y descripción del flujo de aplicación; antecedente DIS-ESP</td>
+</tr>
+<tr class="odd">
+<td>Cap. 4 Estudio normativo</td>
+<td>Muestra por tarea, cohorte y momento; condición Preleo revisada</td>
+<td>Tabla de colegios y fidelidad; diagrama de flujo de la muestra</td>
+</tr>
+<tr class="even">
+<td>Cap. 5–6 Psicometría global</td>
+<td>Método y decisiones escritos; α de 2021 en parte de las tareas</td>
+<td>ω y TRI ítem a ítem; análisis factorial e invarianza; apartado «Cuánto cambio importa»</td>
+</tr>
+<tr class="odd">
+<td>Cap. 7–18 Fichas</td>
+<td>Cinco fichas piloto: letras, velocidad, RAN, contar sílabas y TECLE</td>
+<td>Una ficha por tarea A (75 tareas)</td>
+</tr>
+<tr class="even">
+<td>Cap. 19–21 Certeza, cribado e identificación</td>
+<td>Capítulo de riesgo con los cinco niveles; AUC y cortes con validación cruzada</td>
+<td>Acuerdo del equipo sobre los niveles; intervalos por bootstrap</td>
+</tr>
+<tr class="odd">
+<td>Cap. 22 Seguimiento</td>
+<td>Test-retest disponible; cambio fiable en la ficha de letras</td>
+<td>Curvas de crecimiento y cambio mínimo relevante con anclas</td>
+</tr>
+<tr class="even">
+<td>Cap. 23 Preleo</td>
+<td>Parte del libro con el programa y los efectos; auditoría de los datos y plan de análisis cerrado</td>
+<td>Confirmar la exposición de la cohorte 2011 y el modelo multinivel definitivo</td>
+</tr>
+<tr class="odd">
+<td>Cap. 24 Casos y EEG/fNIRS</td>
+<td>Matrices EEG de 2010 y 2013</td>
+<td>Reasignar los grupos EEG con los niveles de certeza; casos anonimizados</td>
+</tr>
+<tr class="even">
+<td>Anexos A–B Baremos y cortes</td>
+<td>Baremos empíricos por momento y cohorte</td>
+<td>Normas continuas que agrupen cohortes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="preguntas-para-el-grupo" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-para-el-grupo">Preguntas para el grupo</h2>
+<ol type="1">
+<li>¿Os parecen bien las <strong>cuatro partes</strong> y el orden de los capítulos? ¿Falta o sobra algo?</li>
+<li>¿Se aceptan los <strong>cinco niveles de certeza</strong> y el umbral p10 para la dificultad grave? Los criterios clínicos más estrictos usan −1,5 DT, que equivale a p7.</li>
+<li>¿La <strong>cognición numérica</strong> entra en este manual o va en uno propio?</li>
+<li>¿El manual se publica en español con un <strong>resumen técnico en inglés</strong>?</li>
+<li>¿Dónde va la <strong>batería DIS-ESP</strong> en papel: en el capítulo de la plataforma, como antecedente, o en un capítulo propio?</li>
+<li>¿Las <strong>versiones de otros países y para adultos</strong> (por ejemplo, TECLE con 3 minutos en Colombia) entran en las fichas o en un anexo?</li>
+<li>¿Os sirve la <strong>plantilla de diez apartados</strong>, con «Estudios que abre» y «Pendientes»? ¿Qué cambiaríais?</li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-aera2014" class="csl-entry" role="listitem">
+American Educational Research Association, American Psychological Association, y National Council on Measurement in Education. 2014. <em>Standards for Educational and Psychological Testing</em>. Washington, DC: American Educational Research Association.
+</div>
+<div id="ref-anvari2021anclas" class="csl-entry" role="listitem">
+Anvari, Farid, y Daniël Lakens. 2021. <span>«Using anchor-based methods to determine the smallest effect size of interest»</span>. <em>Journal of Experimental Social Psychology</em> 96: 104159. <a href="https://doi.org/10.1016/j.jesp.2021.104159">https://doi.org/10.1016/j.jesp.2021.104159</a>.
+</div>
+<div id="ref-wagner2020prevalence" class="csl-entry" role="listitem">
+Wagner, Richard K., Fotena A. Zirps, Ashley A. Edwards, Sarah G. Wood, Rachel E. Joyner, Betsy J. Becker, Guangyun Liu, y Bethany Beal. 2020. <span>«The Prevalence of Dyslexia: A New Approach to its Estimation»</span>. <em>Journal of Learning Disabilities</em> 53 (5): 354-65. <a href="https://doi.org/10.1177/0022219420920377">https://doi.org/10.1177/0022219420920377</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Presentación">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Presentación</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./metodo.html" class="pagination-link" aria-label="Cómo se construye cada ficha">
+        <span class="nav-page-text"><span class="chapter-title">Cómo se construye cada ficha</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/estructura.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/estructura.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
