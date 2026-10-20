@@ -1,0 +1,76 @@
+# Límites y calidad de los datos {#sec-limites}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+Ce <- C[C$estado == "evaluación", ]
+tc <- table(factor(C$clase, levels = c("A", "B", "C")))
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** revisión crítica del 21/10/2026, escrita desde la psicometría para que el grupo la discuta. No es un juicio sobre el trabajo hecho: la plataforma reunió en más de diez años datos que casi ningún grupo tiene. Pero un manual técnico creíble tiene que decir con claridad qué permiten esos datos y qué no.
+:::
+
+## Punto de partida
+
+La plataforma no nació con un plan de medida. Las tareas se fueron creando, cambiando y retirando según las necesidades de cada curso. Se prefirió medir a no medir, y eso tiene un valor enorme: hay seguimiento longitudinal de miles de niños desde los 4 años, tres veces por curso. A cambio, hay problemas que no se pueden arreglar después y otros que sí. Este capítulo los separa y dice qué se ha hecho con cada uno.
+
+## Qué limita los datos y qué se ha hecho
+
+| Problema | Por qué importa | Qué se ha hecho | Qué falta |
+|---|---|---|---|
+| **Baterías distintas por cohorte.** Cada cohorte hizo tareas distintas, en momentos distintos (`r nrow(C)` tareas con `r length(unique(unlist(strsplit(C$codigos, " "))))` códigos). | Las diferencias entre tareas se confunden con las diferencias entre cohortes. | Tipificación dentro de cohorte y sesión; equivalencia entre cohortes antes de agrupar en baremos; análisis por pares. | Equiparación formal entre versiones y cohortes. |
+| **Muchas versiones de la misma tarea.** Cambios de ítems, de tiempo o de formato con el mismo nombre. | Una puntuación no significa lo mismo en dos sesiones. | Diccionario maestro con tarea canónica; avisos en el catálogo cuando la estabilidad es implausible. | Registrar cada versión con su fecha y sus ítems. |
+| **Pocos ítems y efecto techo** en muchos precursores. | Fiabilidad baja en los extremos, justo donde se toman las decisiones. | Fiabilidad por tarea y semáforo de calidad; preferencia por puntuaciones de curso, que promedian trimestres. | Teoría de respuesta al ítem para ver dónde mide bien cada tarea. |
+| **Cómo se registra el tiempo.** Es el momento de la última respuesta, no la duración; hubo tiempos multiplicados por 1.000. | Las medidas de velocidad pueden confundir lentitud con abandono. | Corrección de los tiempos ×1.000; filtros de tiempo plausible; no se prorratea el tiempo. | Registrar inicio, fin y tiempo por ítem en todas las tareas. |
+| **Corrección por el evaluador** (acierto o error con el ratón) en lectura y denominación rápida. | El error del evaluador forma parte de la puntuación, y nunca se ha medido. | — | Doble corrección en una submuestra (grabaciones) para estimar el acuerdo entre evaluadores. |
+| **Claves de respuesta sin verificar.** TECLE tiene cinco ítems con la clave mal grabada. | Errores sistemáticos invisibles en los totales. | Comprobación ítem a ítem con la opción elegida; recorrección. | Una comprobación automática de claves para todas las tareas de elección. |
+| **Matrices manuales** con columnas desplazadas por BUSCARV y sesiones incompletas. | Resultados publicados que pueden no reproducirse. | Tabla larga única; verificación contra los brutos; auditoría de los datos de Preleo. | Que todo análisis nuevo salga de la tabla larga. |
+| **Asignación de Preleo no aleatoria**, por colegio, con fidelidad desigual. | El efecto del programa se confunde con el colegio y el nivel socioeconómico. | Modelos multinivel, líneas base, plan de análisis fijado antes de ver resultados. | Asumir que es un diseño cuasiexperimental y decirlo así. |
+| **Muestra de colegios voluntarios** de Málaga, con pérdidas no aleatorias. | Los baremos describen a esos colegios, no a la población. | Referencia en centros sin Preleo; ISE por colegio. | Ponderación por ISE y, para la versión 1.0, una muestra de contraste planificada. |
+| **Criterio construido con las mismas tareas.** La etiqueta de dificultad persistente usa lectura de palabras, pseudopalabras y velocidad. | La validez de esas tareas frente a la etiqueta es circular. | Se señala en cada ficha; criterios no circulares (comprensión posterior, diagnóstico de Séneca). | Etiqueta alternativa sin cada tarea (dejar una fuera cada vez). |
+
+## Crítica de nuestros propios análisis
+
+También los análisis de este libro tienen límites, y conviene decirlos antes de que lo hagan los revisores:
+
+- **Los puntos de corte se han elegido y evaluado con los mismos datos.** La validación cruzada entre cohortes reduce el sobreajuste, pero hace falta una muestra externa.
+- **La estabilidad no es fiabilidad.** Mezcla error de medida y cambio real; con un año de distancia, es una cota inferior.
+- **Las α de 2021 no tienen documentada la muestra** (cohorte, sesión) ni el tratamiento de los ítems no alcanzados.
+- **La estructura por edad combina cohortes distintas por pares** de tareas. Es exploratoria; el análisis confirmatorio debe hacerse por cohorte, con los mismos niños.
+- **Los textos para publicaciones del catálogo son automáticos.** Sirven de borrador, no de texto final.
+
+## Clases de calidad de cada tarea {#sec-clases}
+
+Para que el manual sea honesto sin descartar datos valiosos, cada tarea recibe una **clase de calidad** con reglas fijas y públicas, calculadas automáticamente en el catálogo:
+
+- **Semáforo de fiabilidad.** **Verde** si α ≥ .80 (solo en tareas sin tiempo limitado) o estabilidad ρ ≥ .60. **Ámbar** si α ≥ .70 o ρ ≥ .40. **Rojo** si hay datos pero no llegan. **Sin datos** si no hay ni α ni estabilidad.
+- **Semáforo de muestra.** **Verde** con al menos 500 niños en una sesión y dos cohortes; **ámbar** con al menos 200; **rojo** con menos.
+- **Semáforo de continuidad.** **Verde** con tres sesiones o más; **ámbar** con dos; **rojo** con una.
+- **Clase A:** fiabilidad y muestra en verde, sin avisos. Entra en el manual con ficha completa y baremo.
+- **Clase B:** fiabilidad al menos en ámbar, o con un aviso pendiente (por ejemplo, una clave por corregir). Ficha con cautelas; baremo provisional.
+- **Clase C:** fiabilidad roja o sin datos, muestra pequeña, o tarea experimental. Va al anexo D, con descripción y datos disponibles, sin baremo.
+
+```{r}
+#| label: tbl-clases
+#| tbl-cap: "Tareas por clase de calidad y familia (todas las tareas del catálogo)."
+T <- as.data.frame.matrix(table(factor(C$familia, levels = LETTERS[1:7]), factor(C$clase, levels = c("A", "B", "C"))))
+T <- data.frame(Familia = c("A · Precisión", "B · Denominación rápida", "C · Fluidez lectora oral", "D · Eficiencia con tiempo limitado",
+                            "E · Decisión con tiempo de respuesta", "F · Amplitud y memoria", "G · Comprensión"), T, check.names = FALSE)
+names(T)[2:4] <- paste("Clase", names(T)[2:4])
+tabla(T)
+```
+
+Hoy hay `r tc[["A"]]` tareas de clase A, `r tc[["B"]]` de clase B y `r tc[["C"]]` de clase C. Que una tarea esté en la clase C no significa que sea mala. Muchas veces significa solo que **no hay datos para saberlo**: por ejemplo, la mayoría de las tareas de denominación rápida no tienen α ni dos aplicaciones seguidas a los mismos niños. La clase cambiará a medida que se calcule la fiabilidad con las respuestas ítem a ítem.
+
+## Recomendaciones para lo que se mida a partir de ahora
+
+1. **Un plan de medida antes de cada curso:** qué constructo, con qué tarea, cuántos ítems, en qué momentos, con qué criterio de validez.
+2. **Versiones cerradas y fechadas:** cualquier cambio de ítems, tiempo o formato crea una versión nueva con su propio código.
+3. **Registrar siempre ítem a ítem**, con la opción elegida y el tiempo de cada respuesta, y el inicio y el fin de la tarea.
+4. **Comprobación automática** de claves, tiempos y rangos al cerrar cada sesión, antes de calcular nada.
+5. **Formas paralelas y retest corto** (2–4 semanas) en una submuestra, para la fiabilidad de las tareas de velocidad.
+6. **Doble corrección** de una submuestra grabada, para el acuerdo entre evaluadores.
+7. **Plan de análisis registrado** antes de los estudios confirmatorios, como ya se ha hecho con Preleo.
+8. **Una sola fuente de verdad:** el diccionario maestro y la tabla larga. Nada de matrices copiadas a mano.

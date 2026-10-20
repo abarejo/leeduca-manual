@@ -31,6 +31,7 @@ book:
         - metodo.qmd
         - decisiones.qmd
         - agrupacion.qmd
+        - limites.qmd
         - riesgo.qmd
         - baremos-trimestre.qmd
     - part: "Catálogo de tareas"
@@ -49,6 +50,7 @@ book:
         - preleo/datos.qmd
   appendices:
     - informe-aula.qmd
+    - agenda.qmd
     - consultas.qmd
     - novedades.qmd
     - colaborar.qmd

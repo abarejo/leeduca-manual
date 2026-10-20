@@ -62,14 +62,15 @@ for (d in names(DOM)) {
     pant <- if (!is.na(r$formato) && r$formato %in% names(PANT)) sprintf('<figure class="cat-pant"><img src="figuras/pantallas/%s" alt="Ejemplo de pantalla del formato «%s»" loading="lazy"><figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption></figure>', PANT[[r$formato]], esc(r$formato)) else ""
     cat(sprintf('<details class="cat-item" data-dom="%s" data-fam="%s" data-estado="%s" data-q="%s">', d, r$familia, esc(r$estado), esc(buscar)),
         sprintf('<summary><span class="cat-nom">%s</span> <span class="cat-en">%s</span> %s<span class="cat-meta">código %s · %s años</span></summary>',
-                esc(r$tarea), esc(r$name_en), paste0(sprintf('<span class="cat-fam">%s</span>', esc(FAM[[r$familia]])), estado), esc(gsub(" ", ", ", r$codigos)), esc({e <- as.numeric(strsplit(as.character(r$edades), ", ")[[1]]); if (length(e) > 1) paste0(min(e), "–", max(e)) else e})),
+                esc(r$tarea), esc(r$name_en), paste0(sprintf('<span class="cat-clase cat-clase-%s" title="Clase de calidad (ver Límites y calidad de los datos)">Clase %s</span>', r$clase, r$clase), sprintf('<span class="cat-fam">%s</span>', esc(FAM[[r$familia]])), estado), esc(gsub(" ", ", ", r$codigos)), esc({e <- as.numeric(strsplit(as.character(r$edades), ", ")[[1]]); if (length(e) > 1) paste0(min(e), "–", max(e)) else e})),
         '<div class="cat-body">',
         if (!is.na(r$aviso) && r$aviso != "") sprintf('<p class="cat-aviso">⚠ %s.</p>', esc(r$aviso)) else "",
         '<table class="cat-tab">',
         fila("Constructo", esc(r$constructo)), fila("Familia de ficha", sprintf('<a href="agrupacion.html#sec-familias">%s</a>', esc(FAM[[r$familia]]))), fila("Batería", esc(r$bateria)), fila("Formato", esc(r$formato)),
         fila("Consigna (plataforma)", esc(r$descripcion)), fila("Ítems", esc(r$n_items)), fila("Tiempo máximo", if (is.na(r$duracion_s)) NA else paste(r$duracion_s, "s")),
         fila("Medidas registradas", esc(r$medidas)), fila("Medida principal", esc(r$medida_principal)),
-        fila("Psicometría", psico), fila("Sesiones", ses_txt), '</table>', pant,
+        fila("Calidad (semáforo)", sprintf('fiabilidad: <b class="sem-%s">%s</b> · muestra: <b class="sem-%s">%s</b> · continuidad: <b class="sem-%s">%s</b> → <a href="limites.html#sec-clases">clase %s</a>',
+          gsub("á", "a", gsub(" ", "", r$sem_fiabilidad)), r$sem_fiabilidad, gsub("á", "a", r$sem_muestra), r$sem_muestra, gsub("á", "a", r$sem_continuidad), r$sem_continuidad, r$clase)), fila("Psicometría", psico), fila("Sesiones", ses_txt), '</table>', pant,
         '<div class="cat-pub"><div class="cat-pub-h">Para publicaciones · español <button class="cat-copy" type="button">Copiar</button></div>',
         sprintf('<p class="cat-pub-t" lang="es">%s</p></div>', esc(r$texto_es)),
         '<div class="cat-pub"><div class="cat-pub-h">For publications · English <button class="cat-copy" type="button">Copy</button></div>',
@@ -93,6 +94,8 @@ for (d in names(DOM)) {
 .cat-nom{font-weight:600}
 .cat-en{color:#6c757d;font-style:italic;font-size:.92rem}
 .cat-meta{display:block;font-size:.82rem;color:#6c757d}
+.cat-clase{font-size:.72rem;border-radius:4px;padding:.05rem .4rem;margin-left:.3rem;font-weight:600}.cat-clase-A{background:rgba(0,143,163,.14);color:#00606d}.cat-clase-B{background:rgba(176,122,16,.15);color:#7a5a10}.cat-clase-C{background:rgba(214,69,69,.12);color:#9c2f2f}
+.sem-verde{color:#00606d}.sem-ambar{color:#7a5a10}.sem-rojo{color:#9c2f2f}.sem-sindatos{color:#6c757d}
 .cat-fam{font-size:.72rem;background:rgba(94,79,162,.10);color:#4b3f86;border-radius:4px;padding:.05rem .4rem;margin-left:.3rem}
 .cat-pant{margin:.4rem 0 .8rem;max-width:360px}.cat-pant img{max-width:100%;border:1px solid #e3e3e0;border-radius:6px}.cat-pant figcaption{font-size:.75rem;color:#6c757d}
 .cat-tag{font-size:.72rem;background:#f3e9d2;color:#7a5a10;border-radius:4px;padding:.05rem .4rem;margin-left:.3rem}

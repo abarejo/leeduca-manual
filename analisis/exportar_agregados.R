@@ -36,7 +36,8 @@ EXPORTAR <- c(
   TECLE_papel = "ficha_TECLE_papel_R_v2.xlsx",
   TECLE_equiv = "ficha_TECLE_equivalencia_R_v1.xlsx",
   CATALOGO = "catalogo_tareas_R_v1.xlsx",
-  ESTRUCTURA = "estructura_bateria_R_v1.xlsx"
+  ESTRUCTURA = "estructura_bateria_R_v1.xlsx",
+  REDES = "red_tareas_v1.xlsx"
 )
 PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"
 MAX_FILAS <- 2000

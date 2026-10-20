@@ -4,6 +4,8 @@
 #| include: false
 source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
 RS <- leer("ESTRUCTURA", "Resumen")
+RR <- leer("REDES", "Resumen")
+RN <- leer("REDES", "Nodos")
 C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
 C <- C[C$estado == "evaluación", ]
 nf <- function(f) sum(C$familia == f)
@@ -114,3 +116,48 @@ tabla(RS[, c("edad", "tareas", "n_mediana_por_par", "factores", "varianza_explic
 3. Las tareas con cargas bajas en todos los factores son candidatas a revisión o a pasar al anexo D: algunas tareas visoatencionales, de percepción del habla y de atención.
 
 **Cautelas.** Es un análisis exploratorio con correlaciones por pares entre cohortes distintas. A los 6 años el ajuste es peor y hay una carga de 1,00 (lectura comprensiva), señal de que esa tarea se solapa casi por completo con otra. Lo que corresponde ahora es un análisis confirmatorio por cohorte, con los mismos niños en todas las tareas, y comprobar la invarianza entre edades y cohortes.
+
+## Redes de tareas
+
+El análisis factorial supone que detrás de las tareas hay unas pocas habilidades latentes. El **análisis de redes** parte de otra idea: las habilidades se apoyan unas en otras y forman un sistema. Lo que se estima es la red de **correlaciones parciales** entre tareas, es decir, cuánto se relacionan dos tareas descontando todas las demás. Técnicamente es un **modelo gráfico gaussiano** regularizado (EBICglasso). Las agrupaciones de la red (comunidades) se pueden comparar con los factores, como en el análisis exploratorio de grafos (EGA).
+
+```{r}
+#| label: tbl-redes
+#| tbl-cap: "Redes de tareas por edad: aristas, comunidades y acuerdo con los factores (índice de Rand ajustado)."
+tabla(RR[, c("edad", "tareas", "aristas", "densidad", "aristas_negativas", "comunidades", "modularidad", "ARI_con_factores")],
+      c("Edad", "Tareas", "Aristas", "Densidad", "Aristas negativas", "Comunidades", "Modularidad", "Acuerdo con los factores (ARI)"), digitos = 2)
+```
+
+::: {.panel-tabset}
+
+## 4 años
+
+![](figuras/Red_tareas_4_anios.png)
+
+## 5 años
+
+![](figuras/Red_tareas_5_anios.png)
+
+## 6 años
+
+![](figuras/Red_tareas_6_anios.png)
+
+## 7 años
+
+![](figuras/Red_tareas_7_anios.png)
+
+## 8 años
+
+![](figuras/Red_tareas_8_anios.png)
+
+:::
+
+**Qué añade la red a los factores:**
+
+- **Las comunidades coinciden en lo esencial con los factores** (ARI de `r num_es(min(RR$ARI_con_factores), 2)` a `r num_es(max(RR$ARI_con_factores), 2)`). Que dos métodos con supuestos distintos lleguen a agrupaciones parecidas da más confianza en ellas.
+- **La red se densifica con la edad.** La densidad pasa de `r num_es(RR$densidad[RR$edad == 4], 2)` a los 4 años a `r num_es(RR$densidad[RR$edad == 8], 2)` a los 8: las habilidades se integran a medida que se aprende a leer. Es lo que predice el modelo de mutualismo del desarrollo cognitivo.
+- **La denominación rápida es una comunidad propia a todas las edades.** A los 4 y 5 años se une al resto de la red por la conciencia fonológica y el lenguaje oral. Desde los 6 años se une casi solo a la lectura, y apenas a la conciencia fonológica. Es lo esperable si la denominación rápida se relaciona sobre todo con la fluidez lectora.
+- **Tareas puente.** Algunas tareas conectan comunidades distintas: a los 5 años, la identificación y la supresión de fonemas; a los 6, el conocimiento de las letras y la supresión de fonemas. Son candidatas naturales para las puntuaciones compuestas y para la intervención.
+- **Aristas negativas fuertes** (por ejemplo, entre las dos lecturas del mismo texto a los 6 años) indican tareas casi redundantes o medidas que se solapan. Es una señal para revisar, no una relación real.
+
+**Cautelas.** Como el análisis factorial, combina cohortes por pares, así que es exploratorio. Falta comprobar la estabilidad de las aristas (bootstrap) con los datos por niño. Ese análisis y los modelos de red longitudinales (cómo cambia la red de un curso al siguiente) son un estudio metodológico propio: ver la [Agenda de investigación](agenda.qmd).

@@ -1,0 +1,87 @@
+# Agenda de investigación metodológica {#sec-agenda}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** propuesta del 21/10/2026 para el grupo. Revisión de tendencias hecha con SciSpace en revistas de metodología, psicometría y lectura. Cada estudio indica qué datos hay ya, qué método usa y a qué revistas podría ir.
+:::
+
+Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poco comunes que interesan a la psicometría actual: **miles de niños seguidos de 4 a 11 años con tres evaluaciones por curso**, **respuestas y tiempos ítem a ítem** en muchas tareas, y **la misma prueba en papel, plataforma y tableta**. Esta agenda reúne los estudios metodológicos que esos rasgos permiten. Son también una oportunidad para el currículo de todo el grupo, y en especial para quien quiera consolidar una línea en psicometría.
+
+## Estudios propuestos
+
+### M1 · Redes del desarrollo lector
+
+- **Pregunta:** ¿Cómo se reorganiza el sistema de habilidades lectoras de 4 a 11 años? ¿Se densifica la red al aprender a leer, como predice el mutualismo?
+- **Datos:** Medidas principales por edad y cohorte; mismos niños en cursos sucesivos.
+- **Método:** Modelos gráficos gaussianos por edad, análisis exploratorio de grafos, estabilidad por bootstrap, redes de panel [@epskamp2018redes; @golino2017ega; @vandermaas2006mutualismo].
+- **Revistas posibles:** *Developmental Science*, *Multivariate Behavioral Research*, *Scientific Studies of Reading*.
+
+### M2 · Velocidad y exactitud ítem a ítem
+
+- **Pregunta:** ¿Qué aporta modelar juntos aciertos y tiempos en pruebas con tiempo limitado como TECLE? ¿Cómo tratar los ítems no alcanzados?
+- **Datos:** Opción elegida y tiempo por ítem (TECLE plataforma, papel y DIS-ESP).
+- **Método:** Modelo jerárquico de velocidad y exactitud; ítems no alcanzados modelados con el tiempo [@vanderlinden2007tiempos; @pohl2019noalcanzados].
+- **Revistas posibles:** *Psychometrika*, *Journal of Educational Measurement*, *British Journal of Mathematical and Statistical Psychology*.
+
+### M3 · Normas continuas con datos longitudinales
+
+- **Pregunta:** ¿Qué método da baremos más precisos cuando hay tres momentos por curso: cNORM, GAMLSS o normas basadas en TRI?
+- **Datos:** Puntuaciones por momento y edad en meses; ítems donde los hay.
+- **Método:** Comparación de métodos de normas continuas, con validación cruzada entre cohortes [@lenhard2018cnorm; @timmerman2021gamlss; @heister2024normas; @urban2024normas].
+- **Revistas posibles:** *Psychological Methods*, *Assessment*.
+
+### M4 · Percentiles de crecimiento
+
+- **Pregunta:** ¿Cuánto progresa un niño frente a los que partían del mismo nivel? ¿Cómo afecta el error de medida de la puntuación anterior?
+- **Datos:** Lectura en cursos sucesivos.
+- **Método:** Regresión cuantílica condicionada y corrección del error de medida [@castellano2013sgp; @shang2015simex].
+- **Revistas posibles:** *Journal of Educational and Behavioral Statistics*, *Educational Measurement: Issues and Practice*.
+
+### M5 · Identificación bayesiana de la dificultad lectora
+
+- **Pregunta:** ¿Mejora la detección combinar varios indicadores con razones de verosimilitud y la prevalencia del centro, en vez de usar un solo corte?
+- **Datos:** Precursores, etiquetas de certeza, ISE del centro.
+- **Método:** Razones de verosimilitud por tramos, regresión logística bayesiana, probabilidad posterior [@wagner2022bayes; @wagner2020prevalence].
+- **Revistas posibles:** *Scientific Studies of Reading*, *Annals of Dyslexia*, *Journal of Learning Disabilities*.
+
+### M6 · Papel, plataforma y pandemia
+
+- **Pregunta:** ¿Son equivalentes las puntuaciones en distintos formatos? ¿Cuánto cambió la lectura con el confinamiento?
+- **Datos:** TECLE en papel 2020/21 y plataforma 2017–2020; mismos niños antes y después.
+- **Método:** Funcionamiento diferencial de los ítems por formato, equiparación, modelos de cohorte.
+- **Revistas posibles:** *Computers in Human Behavior*, *Educational Assessment*, *Reading and Writing*.
+
+### M7 · Cambio mínimo relevante
+
+- **Pregunta:** ¿Qué cambio en lectura es importante para el docente y para el pronóstico?
+- **Datos:** Juicio docente, diagnóstico, trayectorias.
+- **Método:** Métodos con anclas, índice de cambio fiable [@anvari2021anclas].
+- **Revistas posibles:** *Assessment*, *Journal of School Psychology*.
+
+### M8 · Artículo de datos
+
+- **Pregunta:** Descripción pública de la base longitudinal y de su diccionario
+- **Datos:** Diccionario maestro, catálogo, agregados.
+- **Método:** Artículo de datos con datos agregados o anonimizados.
+- **Revistas posibles:** *Scientific Data*, *Journal of Open Psychology Data*, *Data in Brief*.
+
+### M9 · Modelos dinámicos del aprendizaje lector
+
+- **Pregunta:** ¿Reproduce un sistema dinámico de habilidades que se refuerzan entre sí las trayectorias observadas y la aparición de la dificultad persistente?
+- **Datos:** Trayectorias de 4 a 11 años.
+- **Método:** Sistemas dinámicos y simulación ajustados a los datos [@vandermaas2006mutualismo].
+- **Revistas posibles:** *Journal of Mathematical Psychology*, *Psychological Review*, *Developmental Science*.
+
+## Cómo aprovecharlo
+
+- **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.
+- **M3, M4 y M7 alimentan directamente el manual**: baremos, seguimiento y cambio relevante. Conviene que vayan en paralelo a las fichas.
+- **M5 y M6 combinan psicometría y lectura**, y pueden salir pronto con los análisis que ya están hechos.
+- **M8 es rápido y suma a todo el grupo**: un artículo de datos se cita cada vez que alguien usa la base.
+- **Orden recomendado:** M8 y M6 primero (casi todo hecho); después M1 y M2 (el núcleo metodológico); M3, M4 y M7 con las fichas; M5 y M9 como proyectos más largos.
+
+## Literatura reciente que conviene conocer
+
+- **Redes y lectura.** Ya hay análisis de redes en dislexia con muestras clínicas [@verwimp2021red] y en primero de Primaria [@wei2024red]. Ninguno tiene un seguimiento de 4 a 11 años con más de 40 tareas: es la aportación diferencial de LEEDUCA.
+- **Normas continuas.** La tendencia es pasar de cNORM a GAMLSS y, cuando hay ítems, a normas basadas en TRI, que dan además intervalos de credibilidad para cada puntuación [@heister2024normas].
+- **Tiempos de respuesta.** El modelo jerárquico de velocidad y exactitud y sus extensiones permiten acortar pruebas sin perder fiabilidad y detectar respuestas anómalas [@vanderlinden2007tiempos; @pohl2019noalcanzados].
+- **Identificación.** La identificación de la dislexia se está moviendo de los cortes únicos a modelos probabilísticos con varios indicadores [@wagner2022bayes].
