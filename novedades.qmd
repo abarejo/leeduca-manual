@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 20/10/2026 | TECLE | La plataforma en la escala del papel (aciertos − errores/3) y apartado «Otras versiones» en construcción (3 minutos en Colombia, adultos, DIS-ESP en papel). |
 | 20/10/2026 | TECLE | Comprobada la clave de la plataforma con la opción que eligió cada niño: errónea en los ítems 15, 19, 36, 37 y 51; ítem 31 por comprobar. Recorrección de la sesión 184. |
 | 20/10/2026 | TECLE | Ficha ampliada con el TECLE en papel de 2020/21 (6.492 niños de 2.º a 6.º), análisis de ítems en papel y en la plataforma, validez frente a la dislexia diagnosticada y una incidencia: probable clave errónea en los ítems 15 y 19 de la plataforma. |
 | 20/10/2026 | Fichas piloto | Contar sílabas y TECLE: marco teórico con evidencia publicada (búsqueda con SciSpace), estudios que abre y pendientes. |

@@ -10,6 +10,8 @@ P <- leer("TECLE_papel", "P2_Descriptivos_papel")
 E1 <- leer("TECLE_papel", "E1_Dificultad_papel_plataforma")
 V1 <- leer("TECLE_papel", "V1_Dislexia_diagnosticada")
 I7 <- leer("TECLE_papel", "I7_Recorreccion_184")
+Q3 <- leer("TECLE_equiv", "Q3_Comparacion_papel")
+Q4 <- leer("TECLE_equiv", "Q4_Correlaciones")
 r_ <- function(x, d = 2) sub("^0", "", sprintf(paste0("%.", d, "f"), x))  # correlaciones y AUC: .99
 ```
 
@@ -92,6 +94,25 @@ Con todos los cursos juntos, el AUC es de `r r_(V1$AUC[V1$curso == "Todos (z por
 - **Ítem 31, por comprobar.** La clave coincide con la de papel, pero el 77 % de los niños elige otra opción, y en papel casi todos aciertan. Lo más probable es que en la pantalla las opciones aparezcan en otro orden que en el cuadernillo.
 - **Qué supone:** con la clave de papel, los niños de 7 años pasan de `r num_es(I7$aciertos_M[1], 1)` a `r num_es(I7$aciertos_M[2], 1)` aciertos de media. Cambia la puntuación de 8 de cada 10 niños, pero el orden apenas (r = `r r_(I7$r_con_plataforma[2], 3)`), y solo el `r num_es(I7$pct_cambia_de_lado_p25[2], 1)` % cruza el percentil 25. El efecto está en el nivel: **el baremo de la plataforma queda algo por debajo** de lo que debería.
 
+### La plataforma en la escala del papel
+
+La plataforma registra aciertos, errores y tiempo, así que su puntuación se puede expresar igual que en papel: **aciertos − errores/3**. Así el lector compara directamente con el manual normativo. No hace falta ajustar por el tiempo: la prueba dura siempre 5 minutos, y el tiempo que guarda la plataforma es el de la última respuesta.
+
+![TECLE en la plataforma y en papel, en la misma escala y en el mismo curso y mes.](../figuras/Ficha_TECLE_F6_plataforma_en_escala_papel.png){width=90%}
+
+```{r}
+#| label: tbl-tecle-equiv
+#| tbl-cap: "TECLE de la plataforma (aciertos − errores/3) frente al papel 2020/21 del mismo curso, en noviembre."
+Q <- Q3; Q$sesiones <- as.character(Q$sesiones)
+tabla(Q[, c("momento", "sesiones", "puntuacion", "curso_papel", "n_plataforma", "M_plataforma", "M_papel", "d", "pct_bajo_p25_papel")],
+      c("Momento", "Sesión", "Puntuación", "Papel", "n", "Media plataforma", "Media papel", "d", "% bajo el p25 del papel"), digitos = 1)
+```
+
+- **Mide lo mismo que los aciertos por minuto.** La correlación entre las dos puntuaciones es de `r r_(min(Q4$r_ppm_punt))`–`r r_(max(Q4$r_ppm_punt))` en todas las sesiones. Pasar a la escala del papel no cambia el orden de los niños; solo facilita la comparación.
+- **Los niveles son parecidos.** Las diferencias con el papel del mismo curso van de d = `r num_es(min(Q3$d), 2)` a `r num_es(max(Q3$d), 2)`, y entre el 20 % y el 39 % de los niños de la plataforma queda por debajo del p25 del papel (25 % si fueran iguales).
+- **Pero no se pueden separar las causas.** Formato, cohorte y momento van juntos: el papel es de noviembre de 2020, tras el confinamiento, y la plataforma de 2017–2020. Además, las sesiones de la plataforma nueva aún no están recorregidas con la clave buena, que suma algo más de un acierto de media.
+- **Propuesta:** dar en la ficha las dos puntuaciones, aciertos por minuto y aciertos − errores/3, y construir el baremo de la plataforma en la escala del papel cuando estén recorregidas todas las sesiones.
+
 ### Fiabilidad: una prueba de velocidad
 
 ![Dificultad de cada ítem (proporción de acierto entre quienes llegan a él), por curso y formato.](../figuras/Ficha_TECLE_F3_items.png)
@@ -119,6 +140,24 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 - **Frente a la etiqueta de dificultad persistente**, el AUC es .90–.92. Pero la etiqueta se construye con TECLE, así que es **acuerdo, no validez predictiva**.
 - **Criterio no circular.** Frente a la baja comprensión (≤ p25) un curso después, el AUC es .59 (7 → 8 años, 875 niños).
 - **Variables que la afectan.** El nivel socioeconómico del centro, moderadamente (d = 0,36 a los 7 años). Los colegios explican el 6–8 % de la varianza.
+
+## Otras versiones (en construcción)
+
+::: {.callout-warning appearance="minimal"}
+**En construcción.** Estos apartados se completarán cuando se procesen los datos.
+:::
+
+### Versión de 3 minutos (Colombia)
+
+Aplicada en Colombia con 3 minutos en lugar de 5, igual que otras tareas de la batería DIS-ESP. Los datos están en `CUC\INVESTIGACIÓN\SIMON BOLIVAR`. Habrá que describir la muestra y la adaptación léxica, y comparar con las normas uruguaya y argentina. Las puntuaciones de 3 minutos no se pueden comparar directamente con las de 5.
+
+### Versión para adultos
+
+Aplicada a jóvenes y adultos, también con 3 minutos, como en otros estudios con alumnado de secundaria y universitario. Datos en la misma carpeta, pendientes de procesar.
+
+### TECLE en la batería DIS-ESP en papel (2007–2012)
+
+Forma parte de las 11 escalas de DIS-ESP aplicadas en papel antes de pasar a la plataforma. Hay aciertos, errores y tiempo de 1.340 niños de 1.º a 6.º, con y sin dislexia. Irá en el apartado del manual dedicado a DIS-ESP.
 
 ## Estudios que abre
 
