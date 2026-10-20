@@ -14,6 +14,11 @@ book:
   repo-actions: [edit, issue, source]
   search: true
   page-navigation: true
+  sidebar:
+    tools:
+      - icon: chat-left-text
+        href: https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform
+        text: "Enviar una sugerencia"
   chapters:
     - index.qmd
     - part: "Cómo está hecho el manual"

@@ -2,7 +2,7 @@
 
 ¿Has visto un error, tienes una duda o propones un cambio? Hay tres maneras de hacerlo llegar, de más fácil a más directa:
 
-1. **Formulario** (no necesita ninguna cuenta): *enlace pendiente de crear*.
+1. **[Formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform)** (no necesita ninguna cuenta ni identificarse; tarda un minuto).
 2. **Correo** al coordinador del manual: Pedro Javier López Pérez, `pjlopez@uma.es`. Indica la ficha y el apartado.
 3. **Desde GitHub**, si tienes cuenta: botón «Report an issue» o «Edit this page» en la barra lateral de cada capítulo. La propuesta queda registrada y se revisa antes de publicarse.
 

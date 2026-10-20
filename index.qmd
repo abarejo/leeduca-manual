@@ -25,7 +25,7 @@ Por ahora hay tres **fichas piloto**: conocimiento de letras, velocidad lectora 
 
 ## Cómo colaborar
 
-Si tienes una duda, has visto un error o propones un cambio, mira [Consultas pendientes](consultas.qmd). No hace falta saber programar ni tener cuenta en ningún servicio.
+Si tienes una duda, has visto un error o propones un cambio, escríbelo en el **[formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform)**. No hace falta tener cuenta en ningún servicio ni identificarse. Las dudas que el grupo tiene abiertas están en [Consultas y sugerencias](consultas.qmd).
 
 ## Privacidad
 
