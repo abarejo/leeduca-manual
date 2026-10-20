@@ -37,6 +37,21 @@ La conciencia fonológica sigue una progresión de unidades grandes a pequeñas:
 
 Los materiales incluyen un dossier de actividades para 4 y 5 años y una programación por edad y por bloque.
 
+## Antecedentes y estudios publicados
+
+Preleo nace de la fase de prevención del Proyecto LEEDUCA, que se aplica en colegios públicos de la provincia de Málaga desde 2013 [@sanchezgomez_cuadernos]. En sus primeras versiones, el trabajo de conciencia fonológica se apoyaba en MACOFON, un programa elaborado por maestros y logopedas, y se organizaba en 69 semanas de entrenamiento. Su base teórica es el modelo simple de lectura: decodificación y comprensión, apoyadas en la conciencia fonológica y en el lenguaje oral (vocabulario, morfosintaxis y comprensión).
+
+Hay que entenderlo en su contexto. En una encuesta a 840 maestros de Infantil y 876 de Primaria de toda España, la mayoría prefería los métodos globales, atribuía la conciencia fonológica a la madurez y la motivación, y mostraba un conocimiento limitado de cómo se aprende a leer [@gimenez2023opiniones]. Preleo pretende llevar la enseñanza basada en la evidencia al aula ordinaria y dar al docente una herramienta sistemática.
+
+Estudios del grupo sobre sus efectos:
+
+- **Evaluación externa (curso 2014/15).** La Agencia Andaluza de Evaluación Educativa comparó 8 centros LEEDUCA con 8 centros de control de tamaño e índice socioeconómico parecidos. En 1.º de Primaria encontró más alumnado con lectura expresiva y mejor comprensión en los centros LEEDUCA [@sanchezgomez_cuadernos].
+- **Centros de nivel socioeconómico muy bajo.** En dos centros con Preleo durante 76 semanas (3, 4 y 5 años) frente a dos de control, con 56 y 63 niños, hubo mejoras en letras a los 5 años, en la ruta fonológica y luego en la visual en 1.º (d ≈ 0,44–0,58), y en velocidad y entonación del texto en 2.º (d ≈ 0,56–0,62). No hubo efecto en comprensión [@sanchezgomez2022proteger].
+- **Aulas ordinarias (22 colegios, de 4 a 7 años).** Mejor conciencia fonológica en el grupo con Preleo y efectos en la lectura uno y dos años después del programa [@sanchezgomez2023cf].
+- **Cohorte 2010 (20 colegios, de 5 a 7 años).** Ver [Preleo en los datos](datos.qmd) [@sanchezgomez2025].
+
+Con datos de la plataforma, el grupo también ha estudiado perfiles de riesgo antes de leer. Con conciencia fonológica, denominación rápida, letras y memoria verbal a los 5 años (795 niños), solo el perfil de bajo rendimiento global corresponde a un doble déficit, y el 92,5 % de esos niños leía mal en 2.º [@flores2026dobledeficit].
+
 ## Versiones aplicadas
 
 El contenido de Preleo ha cambiado con los años. Esto importa al comparar cohortes:

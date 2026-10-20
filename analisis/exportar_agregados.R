@@ -58,3 +58,14 @@ for (ficha in names(EXPORTAR)) {
   message("OK ", ficha, " <- ", EXPORTAR[[ficha]])
 }
 message(total, " tablas exportadas a ", destino, ". Revisa con `git diff --stat` antes de subir.")
+
+# Niveles de certeza (capítulo «Cómo estimamos el riesgo»): solo dos hojas agregadas de certeza_cortes_baremos_v2.xlsx
+# (el archivo tiene también la hoja Etiquetas_NIE, por niño, que NUNCA se exporta)
+fc <- file.path(dirname(diag), "certeza_cortes_baremos_v2.xlsx")
+if (file.exists(fc)) {
+  dir.create(file.path(destino, "RIESGO"), showWarnings = FALSE)
+  write.csv(read_excel(fc, "Etiquetas_resumen"), file.path(destino, "RIESGO", "etiquetas_por_cohorte.csv"), row.names = FALSE, fileEncoding = "UTF-8", na = "")
+  est <- read_excel(fc, "Estabilidad_entre_cursos"); est <- est[est$cohorte == "TODAS", ]
+  write.csv(est, file.path(destino, "RIESGO", "estabilidad_todas.csv"), row.names = FALSE, fileEncoding = "UTF-8", na = "")
+  message("OK RIESGO <- certeza_cortes_baremos_v2.xlsx (2 hojas agregadas)")
+}

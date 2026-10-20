@@ -27,6 +27,7 @@ book:
       chapters:
         - metodo.qmd
         - decisiones.qmd
+        - riesgo.qmd
         - baremos-trimestre.qmd
     - part: "Fichas piloto"
       chapters:
