@@ -1,0 +1,24 @@
+/*-- scss:defaults --*/
+$primary: #007F91;
+$body-color: #22223B;
+$body-bg: #FFFFFF;
+$link-color: #007F91;
+$font-family-sans-serif: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+$headings-font-family: "Literata", Georgia, serif;
+$headings-font-weight: 650;
+$code-color: #5E4FA2;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,650&display=swap');
+body { font-size: 1.02rem; line-height: 1.6; }
+h1.title { letter-spacing: -0.01em; }
+table { font-variant-numeric: tabular-nums; font-size: .92rem; }
+.table > :not(caption) > * > * { padding: .35rem .5rem; }
+details { margin: .4rem 0; border: 1px solid #E6E3DC; border-radius: 8px; padding: .4rem .8rem; }
+details summary { cursor: pointer; font-weight: 700; }
+details summary code { font-weight: 400; font-size: .78rem; color: #8D8F99; }
+.sidebar-title { font-family: "Literata", Georgia, serif; }
+
+/* tablas anchas: se desplazan dentro de su caja, sin invadir el índice lateral */
+main.content table { display: block; max-width: 100%; overflow-x: auto; }
+details { overflow-x: auto; }

@@ -1,0 +1,6 @@
+"modelo","n_obs","n_ninos","colegios","R2_fijos","AIC","CCI_colegio","b_CON","b_ISE_punto","b_nino","p_ISE","b_edad_rel_mes"
+"factor(mom)",9408,3581,83,0.001,24691.758,0.178,,,,,
+"factor(mom) + CON",9408,3581,83,0.001,24691.615,0.179,-0.036,,,,
+"factor(mom) + CON + ISEc",9408,3581,83,0.019,24682.404,0.158,-0.036,0.064,,0.001,
+"factor(mom) + CON + ISEc + sexo",9408,3581,83,0.019,24684.281,0.158,-0.036,0.065,0.006,0.001,
+"factor(mom) + CON + ISEc + sexo + edad_rel",9408,3581,83,0.031,24537.515,0.161,-0.037,0.067,0.006,0,0.031

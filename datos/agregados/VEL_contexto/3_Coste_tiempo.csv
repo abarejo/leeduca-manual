@@ -1,0 +1,81 @@
+"medida","momento","N","percentil","ppm","min_por_1000_palabras","multiplicador_vs_adulto"
+"Texto en voz alta","6.2",186,"P10",16.9,59.2,10.8
+"Texto en voz alta","6.2",186,"P25",25.7,38.9,7.1
+"Texto en voz alta","6.2",186,"P50",38.6,25.9,4.7
+"Texto en voz alta","6.2",186,"P75",58.2,17.2,3.1
+"Texto en voz alta","6.2",186,"P90",79,12.7,2.3
+"Texto en voz alta","6.3",572,"P10",12.9,77.5,14.2
+"Texto en voz alta","6.3",572,"P25",31.8,31.4,5.8
+"Texto en voz alta","6.3",572,"P50",50.2,19.9,3.6
+"Texto en voz alta","6.3",572,"P75",68.1,14.7,2.7
+"Texto en voz alta","6.3",572,"P90",86.3,11.6,2.1
+"Texto en voz alta","7.1",488,"P10",33.7,29.7,5.4
+"Texto en voz alta","7.1",488,"P25",50.5,19.8,3.6
+"Texto en voz alta","7.1",488,"P50",69.1,14.5,2.6
+"Texto en voz alta","7.1",488,"P75",90.3,11.1,2
+"Texto en voz alta","7.1",488,"P90",108.9,9.2,1.7
+"Texto en voz alta","7.2",465,"P10",38.5,26,4.8
+"Texto en voz alta","7.2",465,"P25",56.9,17.6,3.2
+"Texto en voz alta","7.2",465,"P50",77.3,12.9,2.4
+"Texto en voz alta","7.2",465,"P75",96.3,10.4,1.9
+"Texto en voz alta","7.2",465,"P90",114.7,8.7,1.6
+"Texto en voz alta","7.3",156,"P10",50.4,19.8,3.6
+"Texto en voz alta","7.3",156,"P25",72.9,13.7,2.5
+"Texto en voz alta","7.3",156,"P50",98.1,10.2,1.9
+"Texto en voz alta","7.3",156,"P75",116.1,8.6,1.6
+"Texto en voz alta","7.3",156,"P90",134.1,7.5,1.4
+"Texto en voz alta","8.1",165,"P10",54.2,18.5,3.4
+"Texto en voz alta","8.1",165,"P25",74.2,13.5,2.5
+"Texto en voz alta","8.1",165,"P50",98.5,10.2,1.9
+"Texto en voz alta","8.1",165,"P75",113.1,8.8,1.6
+"Texto en voz alta","8.1",165,"P90",129.3,7.7,1.4
+"Texto en voz alta","8.2",140,"P10",67.3,14.9,2.7
+"Texto en voz alta","8.2",140,"P25",86.3,11.6,2.1
+"Texto en voz alta","8.2",140,"P50",105.7,9.5,1.7
+"Texto en voz alta","8.2",140,"P75",122.4,8.2,1.5
+"Texto en voz alta","8.2",140,"P90",139.6,7.2,1.3
+"Texto en voz alta","9.2",383,"P10",71,14.1,2.6
+"Texto en voz alta","9.2",383,"P25",86.8,11.5,2.1
+"Texto en voz alta","9.2",383,"P50",108.1,9.3,1.7
+"Texto en voz alta","9.2",383,"P75",131.3,7.6,1.4
+"Texto en voz alta","9.2",383,"P90",153.6,6.5,1.2
+"Lectura para comprender","6.2",152,"P10",21.1,47.4,11.3
+"Lectura para comprender","6.2",152,"P25",33.4,29.9,7.1
+"Lectura para comprender","6.2",152,"P50",49.8,20.1,4.8
+"Lectura para comprender","6.2",152,"P75",73.3,13.6,3.2
+"Lectura para comprender","6.2",152,"P90",115,8.7,2.1
+"Lectura para comprender","6.3",247,"P10",35.6,28.1,6.7
+"Lectura para comprender","6.3",247,"P25",49.5,20.2,4.8
+"Lectura para comprender","6.3",247,"P50",68.9,14.5,3.5
+"Lectura para comprender","6.3",247,"P75",93.6,10.7,2.5
+"Lectura para comprender","6.3",247,"P90",115.5,8.7,2.1
+"Lectura para comprender","7.1",466,"P10",47.2,21.2,5
+"Lectura para comprender","7.1",466,"P25",67.5,14.8,3.5
+"Lectura para comprender","7.1",466,"P50",87,11.5,2.7
+"Lectura para comprender","7.1",466,"P75",106.6,9.4,2.2
+"Lectura para comprender","7.1",466,"P90",132.9,7.5,1.8
+"Lectura para comprender","7.2",464,"P10",55.2,18.1,4.3
+"Lectura para comprender","7.2",464,"P25",72.4,13.8,3.3
+"Lectura para comprender","7.2",464,"P50",93.4,10.7,2.5
+"Lectura para comprender","7.2",464,"P75",113.1,8.8,2.1
+"Lectura para comprender","7.2",464,"P90",130.7,7.7,1.8
+"Lectura para comprender","7.3",153,"P10",64.1,15.6,3.7
+"Lectura para comprender","7.3",153,"P25",87.4,11.4,2.7
+"Lectura para comprender","7.3",153,"P50",112.3,8.9,2.1
+"Lectura para comprender","7.3",153,"P75",126.8,7.9,1.9
+"Lectura para comprender","7.3",153,"P90",139.8,7.2,1.7
+"Lectura para comprender","8.1",164,"P10",75.4,13.3,3.2
+"Lectura para comprender","8.1",164,"P25",90.3,11.1,2.6
+"Lectura para comprender","8.1",164,"P50",110.3,9.1,2.2
+"Lectura para comprender","8.1",164,"P75",130.4,7.7,1.8
+"Lectura para comprender","8.1",164,"P90",144.2,6.9,1.7
+"Lectura para comprender","8.2",140,"P10",87.7,11.4,2.7
+"Lectura para comprender","8.2",140,"P25",105.4,9.5,2.3
+"Lectura para comprender","8.2",140,"P50",120.1,8.3,2
+"Lectura para comprender","8.2",140,"P75",135,7.4,1.8
+"Lectura para comprender","8.2",140,"P90",144.9,6.9,1.6
+"Lectura para comprender","9.2",375,"P10",85,11.8,2.8
+"Lectura para comprender","9.2",375,"P25",111.4,9,2.1
+"Lectura para comprender","9.2",375,"P50",139.5,7.2,1.7
+"Lectura para comprender","9.2",375,"P75",175,5.7,1.4
+"Lectura para comprender","9.2",375,"P90",209.3,4.8,1.1

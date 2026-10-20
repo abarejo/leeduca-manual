@@ -1,0 +1,17 @@
+# salidas del libro (las genera GitHub Actions)
+/_book/
+/.quarto/
+*_files/
+# NUNCA subir datos individuales
+*.rds
+*.RData
+*.sav
+**/datos/brutos/
+**/datos/individuales/
+*NIE*
+# sistema
+.Rhistory
+.Rproj.user/
+.DS_Store
+Thumbs.db
+~$*

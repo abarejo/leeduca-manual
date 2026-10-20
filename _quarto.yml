@@ -1,0 +1,52 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: es
+
+book:
+  title: "Manual técnico de la plataforma LEEDUCA"
+  subtitle: "Evaluación y seguimiento del aprendizaje de la lectoescritura de 4 a 11 años"
+  author: "Grupo de investigación LEEDUCA · Universidad de Málaga"
+  date: today
+  date-format: "D [de] MMMM [de] YYYY"
+  repo-url: https://github.com/abarejo/leeduca-manual
+  repo-actions: [edit, issue, source]
+  search: true
+  page-navigation: true
+  chapters:
+    - index.qmd
+    - part: "Cómo está hecho el manual"
+      chapters:
+        - metodo.qmd
+        - baremos-trimestre.qmd
+    - part: "Fichas piloto"
+      chapters:
+        - fichas/LET.qmd
+        - fichas/VEL.qmd
+        - fichas/RAN.qmd
+  appendices:
+    - consultas.qmd
+    - novedades.qmd
+    - colaborar.qmd
+    - referencias.qmd
+
+bibliography: referencias.bib
+
+format:
+  html:
+    theme:
+      light: [cosmo, estilo.scss]
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    fig-align: center
+    code-tools: false
+    df-print: kable
+    lightbox: true
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto

@@ -1,0 +1,16 @@
+# Novedades {.unnumbered}
+
+Una línea por cambio, de lo más reciente a lo más antiguo. El historial completo de cada archivo está en el repositorio.
+
+| Fecha | Pieza | Cambio |
+|---|---|---|
+| 20/10/2026 | Libro | Primera versión del libro web con las tres fichas piloto. |
+| 19/10/2026 | Velocidad | La «lectura para comprender» es una relectura del mismo texto con instrucción de ir despacio. Ya no se compara con la lectura silenciosa publicada. |
+| 19/10/2026 | Velocidad | Nuevos apartados de muestra e indicadores clásicos. Validez sin circularidad: «no lee ninguna palabra» a los 5 años detecta 3 de cada 4 niños con dificultad posterior. |
+| 19/10/2026 | RAN | Ficha completa. El RAN de números predice mejor que el de colores en los mismos niños. |
+| 19/10/2026 | Baremos | Baremar por curso en vez de por trimestre marca al 22–24 % de los niños del primer trimestre entre los 5 y los 7 años. |
+| 19/10/2026 | Datos | Corregido un error de lectura de las fechas de nacimiento (24–42 % perdidas en 2010–2014). Ficha de letras rehecha. |
+| 19/10/2026 | Reproducibilidad | Todos los análisis de las fichas tienen su script en R. |
+| 17/10/2026 | Letras | Baremo por edad en meses e ISE; formato de baremos para el servidor. |
+| 16/10/2026 | Letras | Primera ficha piloto. |
+| 14/10/2026 | Manual | Propuesta de estructura e índice; muestra de referencia con todas las cohortes. |

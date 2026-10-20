@@ -1,0 +1,32 @@
+---
+title: "Nombre de la tarea"
+subtitle: "CÓDIGO · formas"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** borrador.
+:::
+
+**Resumen.** Dos o tres frases con lo esencial: qué predice, con qué fiabilidad y qué decisión práctica permite.
+
+## 1. Descripción de la tarea
+## 1 bis. Marco teórico
+## 2. Muestra
+## 3. Descriptivos
+## 4. Fiabilidad
+## 5. Validez
+## 6. Baremos y variables que influyen
+## 7. Estudios que abre
+## 8. Pendientes e incidencias
+
+## Tablas completas {.unnumbered}
+
+```{r}
+#| results: asis
+# tablas_completas("CODIGO")
+```

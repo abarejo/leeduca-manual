@@ -1,0 +1,42 @@
+"variable","cod","forma","mom","cohorte","n","efecto_d","p","efecto_rho","colegios","efecto_CCI"
+"Preleo (CON − SIN)","535","May (28)","5.3","2010",859,0.113,0.131,,,
+"Preleo (CON − SIN)","67","May+min (52)","6.1","2010",921,0.006,0.935,,,
+"Preleo (CON − SIN)","67","May+min (52)","5.1","2013",775,-0.025,0.735,,,
+"Preleo (CON − SIN)","67","May+min (52)","5.2","2013",668,-0.098,0.218,,,
+"Preleo (CON − SIN)","67","May+min (52)","5.3","2013",675,-0.117,0.131,,,
+"Preleo (CON − SIN)","67","May+min (52)","6.1","2013",573,-0.221,0.015,,,
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","535","May (28)","4.2","todas",908,0.27,0.617,-0.017,,
+"Sexo (niña − niño)","535","May (28)","4.2","todas",895,0.066,0.325,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","535","May (28)","4.2","todas",918,0.189,0.001,0.106,,
+"Colegio (CCI)","535","May (28)","4.2","todas",944,,,,26,0.316
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","535","May (28)","4.3","todas",1735,0.453,0,0.159,,
+"Sexo (niña − niño)","535","May (28)","4.3","todas",1690,0.052,0.285,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","535","May (28)","4.3","todas",1712,0.244,0,0.136,,
+"Colegio (CCI)","535","May (28)","4.3","todas",1764,,,,57,0.254
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","535","May (28)","5.1","todas",323,0.48,0.006,0.152,,
+"Sexo (niña − niño)","535","May (28)","5.1","todas",319,-0.129,0.254,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","535","May (28)","5.1","todas",335,0.016,0.51,0.036,,
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","67","May+min (52)","5.1","todas",711,0.623,0,0.167,,
+"Sexo (niña − niño)","67","May+min (52)","5.1","todas",704,0.064,0.393,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","67","May+min (52)","5.1","todas",707,0.152,0.002,0.114,,
+"Colegio (CCI)","67","May+min (52)","5.1","todas",775,,,,33,0.292
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","535","May (28)","5.2","todas",301,-0.107,0.109,-0.093,,
+"Sexo (niña − niño)","535","May (28)","5.2","todas",325,0.07,0.528,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","535","May (28)","5.2","todas",321,0.427,0,0.204,,
+"Colegio (CCI)","535","May (28)","5.2","todas",327,,,,16,0.13
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","67","May+min (52)","5.2","todas",1002,0.701,0,0.167,,
+"Sexo (niña − niño)","67","May+min (52)","5.2","todas",992,-0.074,0.244,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","67","May+min (52)","5.2","todas",1019,0.116,0.001,0.1,,
+"Colegio (CCI)","67","May+min (52)","5.2","todas",1047,,,,36,0.299
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","535","May (28)","5.3","todas",1175,0.351,0,0.149,,
+"Sexo (niña − niño)","535","May (28)","5.3","todas",1160,0.002,0.972,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","535","May (28)","5.3","todas",1155,0.227,0,0.118,,
+"Colegio (CCI)","535","May (28)","5.3","todas",1201,,,,50,0.156
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","67","May+min (52)","5.3","todas",1559,0.397,0,0.109,,
+"Sexo (niña − niño)","67","May+min (52)","5.3","todas",1553,-0.012,0.812,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","67","May+min (52)","5.3","todas",1551,0.23,0,0.144,,
+"Colegio (CCI)","67","May+min (52)","5.3","todas",1559,,,,66,0.272
+"ISE del centro (ρ; d alto 7–10 − bajo 1–3)","67","May+min (52)","6.1","todas",2263,0.384,0,0.157,,
+"Sexo (niña − niño)","67","May+min (52)","6.1","todas",2269,-0.022,0.607,,,
+"Edad relativa (ρ con edad en meses; d nacidos ene–jun − jul–dic)","67","May+min (52)","6.1","todas",2265,0.186,0,0.078,,
+"Colegio (CCI)","67","May+min (52)","6.1","todas",2276,,,,70,0.219

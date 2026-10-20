@@ -1,0 +1,79 @@
+"mom","var1","var2","n","rho"
+"10.2","Texto en voz alta","Lectura para comprender",392,0.609
+"10.2","Texto en voz alta","comprension",425,-0.03
+"10.2","Lectura para comprender","comprension",396,0.048
+"11.2","Texto en voz alta","Lectura para comprender",373,0.52
+"11.2","Texto en voz alta","comprension",414,0.063
+"11.2","Lectura para comprender","comprension",381,0.046
+"5.2","Palabras aisladas","Pseudopalabras",288,0.921
+"5.3","Palabras aisladas","Pseudopalabras",286,0.953
+"5.3","Palabras aisladas","Texto continuo (60 s)",1218,0.885
+"6.1","Palabras aisladas","Pseudopalabras",1979,0.919
+"6.2","Palabras aisladas","Pseudopalabras",1723,0.931
+"6.2","Palabras aisladas","Texto en voz alta",706,0.878
+"6.2","Palabras aisladas","Lectura para comprender",670,0.76
+"6.2","Palabras aisladas","Texto continuo (60 s)",1190,0.917
+"6.2","Palabras aisladas","comprension",708,0.298
+"6.2","Pseudopalabras","Texto continuo (60 s)",1190,0.875
+"6.2","Texto en voz alta","Lectura para comprender",885,0.816
+"6.2","Texto en voz alta","comprension",945,0.25
+"6.2","Lectura para comprender","comprension",889,0.217
+"6.3","Palabras aisladas","Pseudopalabras",1906,0.872
+"6.3","Palabras aisladas","Texto en voz alta",1880,0.837
+"6.3","Palabras aisladas","Lectura para comprender",1519,0.771
+"6.3","Palabras aisladas","comprension",1559,0.254
+"6.3","Pseudopalabras","Texto en voz alta",1878,0.765
+"6.3","Pseudopalabras","Lectura para comprender",1516,0.671
+"6.3","Pseudopalabras","comprension",1556,0.223
+"6.3","Texto en voz alta","Lectura para comprender",1524,0.864
+"6.3","Texto en voz alta","comprension",1554,0.293
+"6.3","Lectura para comprender","comprension",1522,0.23
+"7.1","Palabras aisladas","Pseudopalabras",1512,0.791
+"7.1","Palabras aisladas","Texto en voz alta",1316,0.833
+"7.1","Palabras aisladas","Lectura para comprender",1306,0.758
+"7.1","Palabras aisladas","comprension",1323,0.236
+"7.1","Pseudopalabras","Texto en voz alta",1337,0.747
+"7.1","Pseudopalabras","Lectura para comprender",1327,0.664
+"7.1","Pseudopalabras","comprension",1343,0.215
+"7.1","Texto en voz alta","Lectura para comprender",1535,0.799
+"7.1","Texto en voz alta","comprension",1583,0.209
+"7.1","Lectura para comprender","comprension",1553,0.208
+"7.2","Palabras aisladas","Pseudopalabras",788,0.777
+"7.2","Palabras aisladas","Texto en voz alta",792,0.798
+"7.2","Palabras aisladas","Lectura para comprender",785,0.725
+"7.2","Palabras aisladas","comprension",794,0.107
+"7.2","Pseudopalabras","Texto en voz alta",798,0.717
+"7.2","Pseudopalabras","Lectura para comprender",791,0.663
+"7.2","Pseudopalabras","comprension",800,0.095
+"7.2","Texto en voz alta","Lectura para comprender",1565,0.865
+"7.2","Texto en voz alta","comprension",1577,0.166
+"7.2","Lectura para comprender","comprension",1566,0.161
+"7.3","Palabras aisladas","Pseudopalabras",419,0.742
+"7.3","Palabras aisladas","Texto en voz alta",385,0.753
+"7.3","Palabras aisladas","Lectura para comprender",381,0.755
+"7.3","Palabras aisladas","comprension",380,0.224
+"7.3","Pseudopalabras","Texto en voz alta",392,0.736
+"7.3","Pseudopalabras","Lectura para comprender",388,0.701
+"7.3","Pseudopalabras","comprension",387,0.201
+"7.3","Texto en voz alta","Lectura para comprender",390,0.915
+"7.3","Texto en voz alta","comprension",389,0.292
+"7.3","Lectura para comprender","comprension",389,0.274
+"8.1","Palabras aisladas","Pseudopalabras",532,0.766
+"8.1","Palabras aisladas","Texto en voz alta",532,0.786
+"8.1","Palabras aisladas","Lectura para comprender",530,0.735
+"8.1","Palabras aisladas","comprension",535,0.146
+"8.1","Pseudopalabras","Texto en voz alta",537,0.718
+"8.1","Pseudopalabras","Lectura para comprender",535,0.683
+"8.1","Pseudopalabras","comprension",540,0.167
+"8.1","Texto en voz alta","Lectura para comprender",538,0.855
+"8.1","Texto en voz alta","comprension",540,0.137
+"8.1","Lectura para comprender","comprension",538,0.115
+"8.2","Texto en voz alta","Lectura para comprender",917,0.654
+"8.2","Texto en voz alta","comprension",918,-0.304
+"8.2","Lectura para comprender","comprension",953,-0.081
+"8.3","Palabras aisladas","Pseudopalabras",469,0.673
+"8.3","Palabras aisladas","Texto continuo (60 s)",472,0.69
+"8.3","Pseudopalabras","Texto continuo (60 s)",471,0.745
+"9.2","Texto en voz alta","Lectura para comprender",368,0.588
+"9.2","Texto en voz alta","comprension",383,-0.019
+"9.2","Lectura para comprender","comprension",375,0.022

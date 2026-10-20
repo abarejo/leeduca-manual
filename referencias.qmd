@@ -1,0 +1,6 @@
+# Referencias {.unnumbered}
+
+Las referencias de cada ficha aparecen al final de su marco teórico. Aquí se recogen las de los capítulos generales.
+
+::: {#refs}
+:::

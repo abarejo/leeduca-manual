@@ -1,0 +1,6 @@
+"variable","grupo","n","casos","prevalencia","AUC","n_total","casos_total","chi2_intercepto","p_intercepto","chi2_pendiente","p_pendiente"
+"Sexo","niña",829,120,0.145,0.794,1758,250,0.972,0.324,1.871,0.171
+"Sexo","niño",929,130,0.14,0.838,1758,250,0.972,0.324,1.871,0.171
+"ISE del centro","alto (7–10)",732,83,0.113,0.853,1757,250,12.176,0.002,3.739,0.154
+"ISE del centro","bajo (1–3)",479,98,0.205,0.788,1757,250,12.176,0.002,3.739,0.154
+"ISE del centro","medio (4–6)",546,69,0.126,0.8,1757,250,12.176,0.002,3.739,0.154

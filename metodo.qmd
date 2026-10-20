@@ -1,0 +1,45 @@
+# Cómo se construye cada ficha
+
+Las fichas siguen los *Standards for Educational and Psychological Testing* [@aera2014] y el enfoque de validez basado en argumentos [@kane2013]: cada uso que se propone para una puntuación (detectar riesgo, seguir el progreso, comparar con un baremo) debe estar respaldado por una evidencia concreta.
+
+## Apartados de una ficha
+
+| Apartado | Qué contiene |
+|---|---|
+| Descripción | Qué hace el niño, ítems, formas, códigos de tarea y sesiones, medida principal |
+| Marco teórico | Qué mide la tarea y qué dice la literatura sobre su valor |
+| Muestra | N por medida, momento y cohorte; condición Preleo; colegios; plataforma; depuración |
+| Descriptivos | Media, DT, percentiles, asimetría, efectos suelo y techo |
+| Fiabilidad | Test-retest y acuerdo entre trimestres (Bland-Altman), formas alternativas, consistencia interna (α/ω) cuando hay respuestas ítem a ítem, cambio fiable |
+| Validez | Concurrente, discriminante, predictiva (AUC frente a la dificultad lectora posterior) e incremental |
+| Baremos | Percentiles por momento con la muestra de referencia; precisión del percentil |
+| Variables que influyen | Edad relativa, nivel socioeconómico del centro (ISE), sexo, Preleo, colegio; predicción diferencial |
+| Estudios que abre | Preguntas metodológicas, teóricas y aplicadas que permite responder la tarea |
+| Pendientes e incidencias | Errores de datos encontrados y lo que falta |
+
+## Qué respalda cada propuesta
+
+Cuando una ficha propone un uso o una decisión, indica en qué se apoya:
+
+- **[E] Evidencia publicada:** estudios revisados que respaldan la medida o el criterio.
+- **[D] Datos propios:** análisis de los datos de LEEDUCA que se muestran en la ficha.
+- **[U] Criterio de utilidad:** propuesta del grupo por su valor clínico, educativo o de investigación, todavía sin evidencia directa.
+
+## Muestra de referencia y Preleo
+
+Preleo es un programa de prevención que algunos colegios aplicaron en infantil. Para que los baremos describan el desarrollo sin intervención, la referencia principal es la **muestra de referencia normativa**: los niños de centros que no aplicaron Preleo a su cohorte. En los análisis del efecto del programa se habla de **grupo Preleo** frente a **grupo de comparación**. No se usa «grupo control» porque los colegios no se asignaron al azar. En las tablas aparecen los códigos internos SIN y CON.
+
+## Las innovaciones
+
+Además de los indicadores clásicos, las fichas incluyen análisis pensados para el uso real de la plataforma:
+
+- **Acuerdo entre trimestres y cambio fiable:** cuánto tiene que cambiar un niño para afirmar que ha mejorado de verdad.
+- **Precisión del percentil:** la banda en la que está, con un 90 % de confianza, el percentil de un niño.
+- **Edad en meses:** si conviene baremar por edad exacta y no solo por curso y trimestre (ver [Baremo por curso o por trimestre](baremos-trimestre.qmd)).
+- **Validez sin circularidad:** cuando el criterio de dificultad lectora contiene la propia medida, se busca otro criterio.
+- **Predicción diferencial:** si un mismo punto de corte vale igual para niños y niñas o para centros de distinto nivel socioeconómico.
+- **Unidades comprensibles:** por ejemplo, palabras por minuto y minutos que tarda un niño en leer 1.000 palabras.
+
+## Reproducibilidad
+
+El cálculo se hace en dos capas. En el ordenador del proyecto, los scripts de R leen los datos completos y producen tablas agregadas. El script `analisis/exportar_agregados.R` pasa esas tablas al libro y comprueba que ninguna identifica a un niño, un profesor o un colegio. El libro se construye solo con esas tablas.

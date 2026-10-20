@@ -1,0 +1,36 @@
+# Presentación {.unnumbered}
+
+::: {.callout-warning}
+## Borrador de trabajo (versión 0.1)
+Este libro es el espacio de trabajo del grupo LEEDUCA para preparar el manual técnico de la plataforma. Su contenido está en revisión y puede cambiar. No lo cites todavía como versión definitiva.
+:::
+
+La plataforma LEEDUCA/PRELEO evalúa por internet, tres veces por curso, a niños de 4 a 11 años de colegios de Málaga: conocimiento de letras, conciencia fonológica, denominación rápida, lectura de palabras y textos, comprensión, lenguaje oral, matemáticas y funciones ejecutivas. Desde 2014 se han reunido datos de varias cohortes, nombradas por su año de nacimiento (2010, 2011, 2012…).
+
+Este manual describe cada tarea de la plataforma con la misma estructura: qué mide y cómo se aplica, con qué muestra se ha estudiado, qué fiabilidad y validez tiene, cómo se interpreta su puntuación (baremos) y qué variables la afectan. Está pensado para tres lectores:
+
+- **Docentes y orientadores**, que usan los informes de la plataforma y necesitan saber cuánto pueden fiarse de una puntuación.
+- **Clínicos**, que comparan LEEDUCA con otras pruebas y necesitan baremos y puntos de corte bien justificados.
+- **Investigadores y revisores**, que quieren comprobar cada cifra.
+
+## Cómo leer este libro
+
+Cada ficha tiene tres capas:
+
+1. **El texto**, con los resultados y lo que significan.
+2. **Las tablas completas**, al final de cada ficha. Se leen de los archivos de `datos/agregados/`, que contienen solo resultados agregados (medias, percentiles, correlaciones…), nunca datos de un niño.
+3. **El código**, en el repositorio de GitHub (botón de la barra lateral). Las tablas se calculan con scripts de R a partir de los datos completos, que por privacidad no salen del ordenador del proyecto. El libro se construye a partir de esas tablas, así que cualquiera puede reproducir sus figuras.
+
+Por ahora hay tres **fichas piloto**: conocimiento de letras, velocidad lectora y denominación rápida (RAN). Son las tres tareas con las que se está fijando el diseño de todas las demás. Con ellas se pueden ver la tríada clásica de predictores de la lectura (letras, conciencia fonológica y RAN) y una medida de lectura ya automatizada (la velocidad).
+
+## Cómo colaborar
+
+Si tienes una duda, has visto un error o propones un cambio, mira [Consultas pendientes](consultas.qmd). No hace falta saber programar ni tener cuenta en ningún servicio.
+
+## Privacidad
+
+En este libro solo hay datos agregados. Los nombres y números de identificación de los alumnos, los nombres de los profesores y los datos individuales se quedan en la carpeta del proyecto, en la Universidad de Málaga. Los profesores aparecen siempre seudonimizados. Los baremos de pruebas comerciales que se usan para comparar (PROLEC-R, EDICOLE) no se reproducen; solo se citan.
+
+## Cómo citar este borrador
+
+Grupo LEEDUCA (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.1). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/

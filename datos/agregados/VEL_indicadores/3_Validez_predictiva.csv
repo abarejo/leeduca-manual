@@ -1,0 +1,41 @@
+"medida","mom","criterio","cohortes","n","casos","AUC","IC_inf","IC_sup","corte","sens_p16","esp_p16","sens_p25","esp_p25"
+"Palabras aisladas","5.2","3a etiqueta DL-A/B (cursos 6–11): no circular, la medida es anterior","2012, 2013",514,70,0.82,0.783,0.855,"0 ppm (suelo: no hay p16)",0.857,0.732,,
+"Palabras aisladas","5.3","3a etiqueta DL-A/B (cursos 6–11): no circular, la medida es anterior","2011, 2012, 2013",989,138,0.851,0.825,0.875,"0 ppm (suelo: no hay p16)",0.739,0.819,,
+"Pseudopalabras","5.2","3a etiqueta DL-A/B (cursos 6–11): no circular, la medida es anterior","2012",196,31,0.813,0.763,0.859,"0 ppm (suelo: no hay p16)",0.871,0.691,,
+"Pseudopalabras","5.3","3a etiqueta DL-A/B (cursos 6–11): no circular, la medida es anterior","2012",197,25,0.834,0.775,0.883,"0 ppm (suelo: no hay p16)",0.72,0.785,,
+"Texto continuo (60 s)","5.3","3a etiqueta DL-A/B (cursos 6–11): no circular, la medida es anterior","2011, 2013",683,78,0.797,0.759,0.83,"0 ppm (suelo: no hay p16)",0.782,0.722,,
+"Palabras aisladas","6.1","3b baja comprensión (≤ p25) en 7.1/7.2/7.3: no circular","2010",762,137,0.622,0.567,0.672,"p16 / p25 SIN",0.255,0.88,0.416,0.77
+"Palabras aisladas","6.2","3b baja comprensión (≤ p25) en 7.2/7.3: no circular","2010",746,134,0.594,0.537,0.649,"p16 / p25 SIN",0.269,0.868,0.381,0.786
+"Palabras aisladas","6.3","3b baja comprensión (≤ p25) en 7.3: no circular","2010",367,70,0.617,0.542,0.69,"p16 / p25 SIN",0.371,0.825,0.429,0.677
+"Pseudopalabras","6.1","3b baja comprensión (≤ p25) en 7.1/7.2/7.3: no circular","2010",766,137,0.614,0.562,0.665,"p16 / p25 SIN",0.255,0.882,0.387,0.773
+"Pseudopalabras","6.2","3b baja comprensión (≤ p25) en 7.2/7.3: no circular","2010",744,132,0.586,0.522,0.645,"p16 / p25 SIN",0.28,0.869,0.409,0.775
+"Pseudopalabras","6.3","3b baja comprensión (≤ p25) en 7.3: no circular","2010",367,70,0.638,0.556,0.709,"p16 / p25 SIN",0.329,0.842,0.471,0.734
+"Texto en voz alta","6.3","3b baja comprensión (≤ p25) en 7.3: no circular","2010",364,68,0.608,0.526,0.685,"p16 / p25 SIN",0.368,0.818,0.456,0.743
+"Lectura para comprender","6.3","3b baja comprensión (≤ p25) en 7.3: no circular","2010",359,66,0.57,0.49,0.657,"p16 / p25 SIN",0.318,0.881,0.394,0.775
+"Texto continuo (60 s)","6.2","3b baja comprensión (≤ p25) en 7.2/7.3: no circular","2010",732,126,0.558,0.499,0.612,"p16 / p25 SIN",0.254,0.847,0.365,0.723
+"Palabras aisladas","6.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012",1554,239,0.892,0.872,0.91,"p16 / p25 SIN",0.54,0.928,0.787,0.841
+"Palabras aisladas","6.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012, 2013",1856,272,0.922,0.908,0.937,"p16 / p25 SIN",0.684,0.931,0.857,0.831
+"Palabras aisladas","6.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012",1544,232,0.946,0.932,0.959,"p16 / p25 SIN",0.81,0.923,0.927,0.8
+"Palabras aisladas","7.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012",1504,249,0.944,0.928,0.957,"p16 / p25 SIN",0.771,0.936,0.92,0.847
+"Palabras aisladas","7.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",784,114,0.939,0.916,0.959,"p16 / p25 SIN",0.711,0.946,0.877,0.867
+"Palabras aisladas","7.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",416,71,0.944,0.915,0.968,"p16 / p25 SIN",0.803,0.919,0.915,0.849
+"Palabras aisladas","8.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",522,104,0.933,0.905,0.956,"p16 / p25 SIN",0.587,0.971,0.827,0.892
+"Palabras aisladas","8.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",464,89,0.912,0.877,0.941,"p16 / p25 SIN",0.697,0.928,0.831,0.835
+"Pseudopalabras","6.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012",1552,233,0.886,0.866,0.905,"p16 / p25 SIN",0.528,0.92,0.764,0.851
+"Pseudopalabras","6.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2012, 2013",1354,190,0.91,0.891,0.928,"p16 / p25 SIN",0.642,0.923,0.789,0.838
+"Pseudopalabras","6.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012",1540,230,0.931,0.914,0.947,"p16 / p25 SIN",0.761,0.898,0.904,0.815
+"Pseudopalabras","7.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011, 2012",1525,244,0.91,0.891,0.928,"p16 / p25 SIN",0.68,0.922,0.803,0.846
+"Pseudopalabras","7.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",790,116,0.888,0.857,0.915,"p16 / p25 SIN",0.543,0.93,0.741,0.843
+"Pseudopalabras","7.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",423,73,0.906,0.867,0.937,"p16 / p25 SIN",0.671,0.903,0.822,0.809
+"Pseudopalabras","8.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",528,106,0.899,0.868,0.927,"p16 / p25 SIN",0.604,0.936,0.802,0.815
+"Pseudopalabras","8.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",462,89,0.882,0.833,0.922,"p16 / p25 SIN",0.719,0.861,0.82,0.759
+"Texto en voz alta","6.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011",1279,173,0.933,0.913,0.951,"p16 / p25 SIN",0.757,0.927,0.861,0.849
+"Texto en voz alta","7.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",787,110,0.94,0.923,0.957,"p16 / p25 SIN",0.773,0.942,0.9,0.866
+"Texto en voz alta","7.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",800,116,0.948,0.925,0.966,"p16 / p25 SIN",0.681,0.959,0.836,0.911
+"Texto en voz alta","7.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",391,66,0.944,0.908,0.97,"p16 / p25 SIN",0.697,0.963,0.909,0.868
+"Lectura para comprender","6.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2011",1249,149,0.854,0.806,0.897,"p16 / p25 SIN",0.638,0.915,0.765,0.844
+"Lectura para comprender","7.1","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",783,108,0.951,0.933,0.968,"p16 / p25 SIN",0.676,0.959,0.852,0.88
+"Lectura para comprender","7.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",793,112,0.923,0.898,0.947,"p16 / p25 SIN",0.58,0.953,0.839,0.859
+"Lectura para comprender","7.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",387,66,0.943,0.914,0.966,"p16 / p25 SIN",0.682,0.953,0.879,0.869
+"Texto continuo (60 s)","6.2","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010, 2012",1012,132,0.92,0.899,0.939,"p16 / p25 SIN",0.705,0.912,0.902,0.81
+"Texto continuo (60 s)","8.3","3c etiqueta DL-A/B: CIRCULAR (la etiqueta usa estas medidas)","2010",475,88,0.947,0.923,0.97,"p16 / p25 SIN",0.67,0.972,0.909,0.86

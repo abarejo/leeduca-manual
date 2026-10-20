@@ -1,0 +1,11 @@
+"medida","variable","grupo","n","pct_baja_comprension","z_medio","pct_baja_comp_con_z_medio","AUC","n_total","casos_total","chi2_intercepto","p_intercepto","chi2_pendiente","p_pendiente"
+"Texto en voz alta","sexo","niña",159,26.415,-0.055,22.857,0.625,364,68,10.948,0.001,0.881,0.348
+"Texto en voz alta","sexo","niño",205,12.683,-0.014,9.639,0.589,364,68,10.948,0.001,0.881,0.348
+"Texto en voz alta","ISE_3","alto (7–10)",129,13.953,0.19,13.208,0.553,364,68,2.148,0.342,1.232,0.54
+"Texto en voz alta","ISE_3","bajo (1–3)",128,24.219,-0.33,17.647,0.652,364,68,2.148,0.342,1.232,0.54
+"Texto en voz alta","ISE_3","medio (4–6)",107,17.757,0.058,16.327,0.55,364,68,2.148,0.342,1.232,0.54
+"Palabras aisladas","sexo","niña",353,23.513,0.019,22.222,0.638,787,141,13.04,0,0.317,0.574
+"Palabras aisladas","sexo","niño",434,13.364,0.077,11.679,0.607,787,141,13.04,0,0.317,0.574
+"Palabras aisladas","ISE_3","alto (7–10)",335,14.627,0.2,14.815,0.553,787,141,2.529,0.282,11.388,0.003
+"Palabras aisladas","ISE_3","bajo (1–3)",234,22.222,-0.187,16.901,0.743,787,141,2.529,0.282,11.388,0.003
+"Palabras aisladas","ISE_3","medio (4–6)",218,18.349,0.078,18.667,0.547,787,141,2.529,0.282,11.388,0.003

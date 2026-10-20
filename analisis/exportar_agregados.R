@@ -1,0 +1,60 @@
+# =============================================================================
+# exportar_agregados.R — pasa las tablas AGREGADAS de los análisis al libro
+# -----------------------------------------------------------------------------
+# Se ejecuta en el PC del proyecto, después de los scripts de análisis
+# (04_DICCIONARIO_PROCESADO_2026/scripts/R/ejecutar_todo.R).
+# Lee los Excel de resultados (DIAGNOSTICO/R/*_R_v*.xlsx) y escribe cada hoja
+# como CSV en datos/agregados/<ficha>/<hoja>.csv dentro de este repositorio.
+#
+# PRIVACIDAD: el libro es público o puede llegar a serlo. Este script
+#   · solo exporta los Excel de la lista EXPORTAR (nunca los .rds ni el de ISE/sexo);
+#   · se detiene si una hoja tiene columnas que identifiquen a un niño, un
+#     profesor o un colegio con nombre (sujeto, NIE, nombre, fecha_nto, colegio…)
+#     o si tiene más de 2.000 filas (una tabla agregada nunca las tiene);
+#   · no publica baremos de pruebas comerciales (OMITIR_HOJAS, OMITIR_COLUMNAS).
+#
+# Uso (desde la carpeta del repositorio):
+#   Rscript analisis/exportar_agregados.R --diag "C:/.../04_DICCIONARIO_PROCESADO_2026/DIAGNOSTICO/R"
+# =============================================================================
+suppressPackageStartupMessages({ library(readxl) })
+a <- commandArgs(trailingOnly = TRUE)
+diag <- if (length(i <- which(a == "--diag"))) a[i + 1] else
+  "C:/Users/Usuario/Documents/DRIVE/LEEDUCA/PLATAFORMA/04_DICCIONARIO_PROCESADO_2026/DIAGNOSTICO/R"
+destino <- "datos/agregados"
+
+# ficha del libro  <-  Excel de resultados
+EXPORTAR <- c(
+  RAN = "ficha_RAN_R_v1.xlsx",
+  LET = "ficha_LET_R_v1.xlsx",
+  LET_rigor = "rigor_LET_R_v1.xlsx",
+  VEL = "velocidad_lectora_R_v1.xlsx",
+  VEL_contexto = "velocidad_contexto_R_v1.xlsx",
+  VEL_indicadores = "ficha_velocidad_indicadores_R_v1.xlsx",
+  GEN_trimestre = "baremo_trimestre_vs_curso_R_v1.xlsx"
+)
+PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"
+MAX_FILAS <- 2000
+# DERECHOS: los baremos de pruebas comerciales (PROLEC-R, EDICOLE…) se usaron para
+# comparar en el PC, pero no se publican en el libro; se citan con su referencia.
+OMITIR_HOJAS <- c("1c_PROLEC_R_en_ppm")
+OMITIR_COLUMNAS <- "^(PROLEC|EDICOLE_baremo)"
+
+slug <- function(x) { x <- iconv(x, "UTF-8", "ASCII//TRANSLIT"); gsub("[^A-Za-z0-9_]+", "_", x) }
+dir.create(destino, recursive = TRUE, showWarnings = FALSE)
+total <- 0
+for (ficha in names(EXPORTAR)) {
+  f <- file.path(diag, EXPORTAR[[ficha]])
+  if (!file.exists(f)) { message("· falta ", EXPORTAR[[ficha]], " (se omite)"); next }
+  dir.create(file.path(destino, ficha), showWarnings = FALSE)
+  for (h in setdiff(excel_sheets(f), c("LEEME", OMITIR_HOJAS))) {
+    t <- read_excel(f, h)
+    t <- t[, !grepl(OMITIR_COLUMNAS, names(t)), drop = FALSE]
+    malas <- grep(PROHIBIDAS, names(t), ignore.case = TRUE, value = TRUE)
+    if (length(malas)) stop("PRIVACIDAD: ", EXPORTAR[[ficha]], " / ", h, " tiene columnas identificativas: ", paste(malas, collapse = ", "))
+    if (nrow(t) > MAX_FILAS) stop("PRIVACIDAD: ", EXPORTAR[[ficha]], " / ", h, " tiene ", nrow(t), " filas; no parece una tabla agregada")
+    write.csv(t, file.path(destino, ficha, paste0(slug(h), ".csv")), row.names = FALSE, fileEncoding = "UTF-8", na = "")
+    total <- total + 1
+  }
+  message("OK ", ficha, " <- ", EXPORTAR[[ficha]])
+}
+message(total, " tablas exportadas a ", destino, ". Revisa con `git diff --stat` antes de subir.")

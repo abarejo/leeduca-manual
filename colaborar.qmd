@@ -1,0 +1,32 @@
+# Cómo se mantiene este libro {.unnumbered}
+
+## Para el grupo
+
+- **Leer y comentar:** basta con abrir la web. Las sugerencias llegan por las vías de [Consultas](consultas.qmd).
+- **Proponer un cambio de texto:** botón «Edit this page» (necesita cuenta de GitHub). El cambio queda como propuesta hasta que el coordinador lo acepta.
+- **Estados de una ficha:** borrador → en revisión del grupo → validada. Una ficha pasa a validada cuando el grupo la ha revisado y no quedan consultas abiertas sobre ella.
+
+## Para quien actualiza
+
+```
+leeduca-manual/
+├── _quarto.yml            índice del libro y formato
+├── index.qmd, metodo.qmd  capítulos generales
+├── fichas/                una ficha por tarea (.qmd: texto + código R)
+├── datos/agregados/       tablas agregadas en CSV (sin datos individuales)
+├── figuras/               figuras generadas por los scripts de análisis
+├── R/                     funciones del libro (tablas, tema de las figuras)
+├── analisis/              script que exporta las tablas agregadas desde el PC
+└── .github/workflows/     publicación automática en GitHub Pages
+```
+
+**Actualizar datos** (en el PC del proyecto):
+
+1. Ejecutar los análisis: `Rscript scripts/R/ejecutar_todo.R` en `04_DICCIONARIO_PROCESADO_2026`.
+2. Pasar las tablas al libro: `Rscript analisis/exportar_agregados.R --diag "<ruta a DIAGNOSTICO/R>"`. El script se detiene si una tabla parece contener datos individuales.
+3. Copiar a `figuras/` las figuras nuevas.
+4. Subir los cambios. La web se regenera sola en unos minutos.
+
+**Añadir una ficha:** copiar `fichas/_plantilla.qmd`, cambiarle el nombre y añadirla a `_quarto.yml`.
+
+**Versiones:** cada versión estable se marca en GitHub (v0.1, v0.2…) y se describe en [Novedades](novedades.qmd).

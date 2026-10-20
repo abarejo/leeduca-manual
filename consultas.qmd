@@ -1,0 +1,24 @@
+# Consultas y sugerencias {.unnumbered}
+
+¿Has visto un error, tienes una duda o propones un cambio? Hay tres maneras de hacerlo llegar, de más fácil a más directa:
+
+1. **Formulario** (no necesita ninguna cuenta): *enlace pendiente de crear*.
+2. **Correo** al coordinador del manual: Pedro Javier López Pérez, `pjlopez@uma.es`. Indica la ficha y el apartado.
+3. **Desde GitHub**, si tienes cuenta: botón «Report an issue» o «Edit this page» en la barra lateral de cada capítulo. La propuesta queda registrada y se revisa antes de publicarse.
+
+## Consultas abiertas
+
+Dudas que condicionan el manual y que el grupo tiene que resolver. Cuando se decide algo, pasa a [Novedades](novedades.qmd).
+
+| Consulta | Quién puede responder | Afecta a |
+|---|---|---|
+| Codificación del sexo: en la lista maestra H = niño y M = niña; en la base de 4 años V = niño y H/M = niña. En velocidad, las niñas salen algo más lentas y, a igual velocidad, con más baja comprensión, al contrario que en la literatura. ¿Qué fuente y codificación se usó en cada cohorte? | Todo el grupo | Todas las fichas |
+| Preleo en la cohorte 2011: con la asignación oficial, de 4 a 8 años todos los niños recibieron Preleo. Otra marca anterior distingue niños con y sin Preleo dentro de un mismo colegio. ¿Qué distingue esa marca: aulas o niños con refuerzo? | Auxiliadora Sánchez | Efecto de Preleo |
+| Preleo en la cohorte 2010: el seguimiento de colegios marca toda la cohorte como Preleo; la tesis de A. Sánchez clasifica 19 colegios con Preleo y 11 sin él. ¿Vale la clasificación de la tesis? | Auxiliadora Sánchez | Muestra de referencia |
+| Segunda lectura de EDICOLE: es el mismo texto con instrucción de leer despacio para contestar. ¿Se lee en silencio? ¿El niño ve las preguntas antes? ¿Cuándo se para el tiempo? | Equipo técnico | Velocidad |
+| Tiempos de EDICOLE en la plataforma nueva (desde 2018/19): las formas A y B solo correlacionan .40–.50. ¿Cambió cómo se registra el tiempo? | Equipo técnico | Velocidad |
+| Texto en voz alta: el porcentaje de niños sin errores cambia mucho entre momentos seguidos (0 %, 62 %, 2 %). ¿Se alterna la forma o cambió el criterio de línea correcta? | Juan Luis Luque | Velocidad |
+| RAN: ¿qué registraron las sesiones 153 y 154 (valores constantes) y las versiones en lámina 2093 y 2094? | Equipo técnico | RAN |
+| Baremos en el servidor: ¿cómo se guardan? ¿Tiene el servidor la fecha de nacimiento y el colegio? ¿Puede ejecutar R o Python? | Equipo técnico | Todos los baremos |
+| Nombres de los grupos: «muestra de referencia normativa» en baremos; «grupo Preleo» frente a «grupo de comparación» en efectos. ¿De acuerdo? | Todo el grupo | Todas las fichas |
+| Baremar por curso y trimestre hasta los 7 años. ¿De acuerdo? | Juan Luis Luque | Todos los baremos |

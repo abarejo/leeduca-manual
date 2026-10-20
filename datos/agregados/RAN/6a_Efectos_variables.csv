@@ -1,0 +1,30 @@
+"variable","variante","mom","n","efecto_rho","efecto_d","p","efecto_CCI"
+"ISE del centro (ρ; d alto − bajo)","Colores","4.1",1263,0.088,0.243,0.002,
+"Sexo (niña − niño)","Colores","4.1",1167,,0.027,0.643,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","Colores","4.1",1188,0.216,0.419,0,
+"Preleo (CON − SIN), cohorte 2014","Colores","4.1",441,,0.214,0.248,
+"Colegio (CCI)","Colores","4.1",1341,,,,0.138
+"ISE del centro (ρ; d alto − bajo)","Números","4.1",1256,0.075,0.247,0.008,
+"Sexo (niña − niño)","Números","4.1",1163,,0.008,0.887,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","Números","4.1",1182,0.223,0.408,0,
+"Preleo (CON − SIN), cohorte 2014","Números","4.1",436,,0.667,0.001,
+"Colegio (CCI)","Números","4.1",1334,,,,0.092
+"ISE del centro (ρ; d alto − bajo)","Colores","4.3",267,-0.138,-0.237,0.024,
+"Sexo (niña − niño)","Colores","4.3",382,,0,0.998,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","Colores","4.3",378,0.163,0.348,0.002,
+"Colegio (CCI)","Colores","4.3",382,,,,0.093
+"ISE del centro (ρ; d alto − bajo)","Colores","5.1",929,0.033,0.194,0.312,
+"Sexo (niña − niño)","Colores","5.1",847,,-0.096,0.161,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","Colores","5.1",847,0.155,0.295,0,
+"Preleo (CON − SIN), cohorte 2010","Colores","5.1",927,,0.033,0.652,
+"Colegio (CCI)","Colores","5.1",929,,,,0.081
+"ISE del centro (ρ; d alto − bajo)","Números","5.1",934,0.049,0.272,0.136,
+"Sexo (niña − niño)","Números","5.1",851,,-0.003,0.968,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","Números","5.1",850,0.174,0.28,0,
+"Preleo (CON − SIN), cohorte 2010","Números","5.1",932,,0.048,0.525,
+"Colegio (CCI)","Números","5.1",934,,,,0.113
+"ISE del centro (ρ; d alto − bajo)","Objetos","6.1",906,0.061,0.133,0.068,
+"Sexo (niña − niño)","Objetos","6.1",904,,-0.009,0.895,
+"Edad relativa (ρ con edad en meses; d ene–jun − jul–dic)","Objetos","6.1",903,0.041,0.037,0.216,
+"Preleo (CON − SIN), cohorte 2010","Objetos","6.1",905,,0.055,0.456,
+"Colegio (CCI)","Objetos","6.1",906,,,,0.055
