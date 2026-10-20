@@ -11,6 +11,11 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
 
 Una sola puntuación baja en un trimestre no basta para hablar de dificultad lectora. Un niño puede tener un mal día, estar recién llegado o avanzar a otro ritmo, y alcanzar después a sus compañeros. Por eso el manual distingue entre **riesgo**, que se estima antes de leer, y **dificultad**, que solo se confirma cuando la lectura sigue baja durante varios cursos.
 
+Dos ideas de la literatura sostienen este planteamiento:
+
+- **La dislexia no tiene una prevalencia única.** La lectura se distribuye de forma continua, así que la prevalencia depende del corte de gravedad que se elija. Además, entre los malos lectores hay más niños cuya lectura es coherente con el resto de su rendimiento que niños con dislexia [@wagner2020prevalence]. Por eso se usan varios niveles de certeza y no un único corte.
+- **El cribado funciona mejor si se repite.** En Educación Infantil, una batería breve de letras, conciencia fonológica y denominación rápida anticipa bien la lectura de final de 1.º. Si además se sigue el progreso en letras durante el curso, la predicción mejora [@catts2015rti]. Es la lógica de evaluar tres veces por curso.
+
 ## La lectura de cada curso
 
 Desde los 6 años, la lectura de cada curso combina dos componentes:

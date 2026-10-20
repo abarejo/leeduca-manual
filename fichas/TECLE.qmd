@@ -14,7 +14,7 @@ r_ <- function(x, d = 2) sub("^0", "", sprintf(paste0("%.", d, "f"), x))  # corr
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** ficha piloto, borrador del 20/10/2026, ampliada con el TECLE en papel de 2020/21 y el análisis de ítems. Las tablas se leen de `datos/agregados/TECLE` (plataforma) y `datos/agregados/TECLE_papel` (papel e ítems), y se regeneran con `scripts/R/ficha_borrador_tarea.R --tarea TECLE` y `scripts/R/ficha_TECLE_papel_items.R`. Los percentiles en papel no se reproducen aquí: son la base del estudio normativo publicado por el grupo (Carrillo Gállego et al., 2024).
+**Estado:** ficha piloto, borrador del 20/10/2026, ampliada con el TECLE en papel de 2020/21 y el análisis de ítems. Las tablas se leen de `datos/agregados/TECLE` (plataforma) y `datos/agregados/TECLE_papel` (papel e ítems), y se regeneran con `scripts/R/ficha_borrador_tarea.R --tarea TECLE` y `scripts/R/ficha_TECLE_papel_items.R`. Los percentiles en papel no se reproducen aquí: son el baremo del estudio normativo publicado por el grupo [@carrillo2024tecle].
 :::
 
 **En una frase.** TECLE mide **eficiencia lectora**: es estable de un curso a otro, distingue muy bien a los niños con dislexia diagnosticada (AUC = `r r_(V1$AUC[V1$curso == "Todos (z por curso)"])`) y sus ítems funcionan igual en papel que en la plataforma (r = `r r_(E1$r_dificultad[2])`). Pero anticipa poco la comprensión, y la versión de la plataforma tiene **cinco ítems con la respuesta correcta mal grabada**.
@@ -39,14 +39,16 @@ TECLE es una prueba breve y colectiva de **eficiencia lectora**: en un tiempo fi
 
 Lo que dice la evidencia:
 
-- **Origen y normas del grupo.** El TECLE fue creado por Marín y Carrillo. El grupo publicó después su estudio normativo en papel para toda la Primaria, con datos de Málaga ([Carrillo Gállego et al., 2024](https://doi.org/10.24310/mumaedmumaed.161)). Los datos en papel de esta ficha son de esa misma aplicación de 2020/21.
+- **Origen.** M. S. Carrillo y J. Marín diseñaron el TECLE en 1997, con la colaboración de J. Alegría y A. R. Calvo, como instrumento de investigación. Se inspira en la prueba L3 de Lobrot, pero no es una adaptación: tiene 24 frases más, sobre todo cortas, para que discrimine desde los primeros cursos. Además, en cada ítem dos distractores son pseudopalabras y uno es una palabra, todos muy parecidos a la palabra correcta. Así la prueba depende mucho de la decodificación y sirve para detectar dificultades, incluida la dislexia.
+- **Normas del grupo.** El estudio normativo en papel se hizo con 6.492 escolares de 2.º a 6.º de 53 centros de Málaga, evaluados en noviembre [@carrillo2024tecle]. Son los mismos datos en papel de esta ficha, y ese manual es la referencia para interpretar las puntuaciones en papel.
+- **Duración.** En España se aplica en 5 minutos. Con alumnado mayor, y en otros estudios, se ha usado con 3 minutos; esas puntuaciones no son comparables con las de 5.
 - **Adaptaciones en otros países hispanohablantes.** Hay un manual técnico uruguayo ([Cuadro et al., 2009](https://doi.org/10.22235/cp.v3i2.156)) y una adaptación argentina con 693 alumnos de 5.º a 7.º. En esta última, los ítems tuvieron una dificultad adecuada y la puntuación dependió del curso y de las oportunidades educativas, pero no del sexo ([Ferreres et al., 2011](https://doi.org/10.5579/rnl.2011.0040)).
 - **Las pruebas de lectura silenciosa de frases sirven para cribar.** La validez del TOSREC como cribado en modelos de respuesta a la intervención se ha estudiado expresamente ([Johnson et al., 2011](https://doi.org/10.1177/1534508411395556)). En secundaria, una prueba colectiva de verificación de frases clasificó casi tan bien como la fluidez oral individual ([Denton et al., 2011](https://doi.org/10.1080/10888431003623546)).
 - **En los primeros cursos mide sobre todo decodificación.** En 1.º, la fluidez silenciosa y la oral son habilidades relacionadas pero distintas ([Kim, Wagner y Foster, 2011](https://doi.org/10.1080/10888438.2010.493964)). En malos lectores de 4.º, la decodificación y la fluidez explican solo el 22 % del TOSREC ([Kang y Shin, 2019](https://doi.org/10.1080/10573569.2018.1521758)).
 
 Lo que dicen nuestros datos coincide: a los 7–8 años, TECLE se relaciona mucho con la lectura de palabras y texto y poco con la comprensión; depende algo del nivel socioeconómico del centro y apenas del sexo, como en la adaptación argentina.
 
-Referencias localizadas con SciSpace (falta comprobar volúmenes y páginas): Carrillo Gállego et al. (2024), UMA Editorial; Cuadro et al. (2009), *Ciencias Psicológicas*; Denton et al. (2011), *Scientific Studies of Reading*; Ferreres et al. (2011), *Revista Neuropsicología Latinoamericana*; Johnson et al. (2011), *Assessment for Effective Intervention*; Kang y Shin (2019), *Reading & Writing Quarterly*; Kim, Wagner y Foster (2011), *Scientific Studies of Reading*. Falta la referencia completa del TECLE original (Marín y Carrillo), que no aparece indexado.
+Referencias localizadas con SciSpace (falta comprobar volúmenes y páginas): Cuadro et al. (2009), *Ciencias Psicológicas*; Denton et al. (2011), *Scientific Studies of Reading*; Ferreres et al. (2011), *Revista Neuropsicología Latinoamericana*; Johnson et al. (2011), *Assessment for Effective Intervention*; Kang y Shin (2019), *Reading & Writing Quarterly*; Kim, Wagner y Foster (2011), *Scientific Studies of Reading*.
 
 ## Resultados principales
 
@@ -99,7 +101,7 @@ Casi todas las frases son fáciles para quien llega a ellas: lo difícil es lleg
 - con los 64 ítems, α = .91–.95, y la división par-impar da más de .95. Están infladas: un niño que no llega a un ítem tiene cero en ese y en todos los siguientes;
 - con solo los ítems que alcanza el 90 % del curso, α = .64–.77 y ω = .63–.78. Están rebajadas: son ítems muy fáciles y casi sin varianza.
 
-La fiabilidad adecuada para TECLE es la **estabilidad entre aplicaciones**: r = .67–.70 de 7 a 8 años en la plataforma, y r = .57 entre la plataforma en noviembre de 2019 y el papel en noviembre de 2020 en los mismos 107 niños (con un año, un cambio de formato y el confinamiento de por medio).
+El manual normativo advierte lo mismo y estima la fiabilidad por test-retest: r = .87–.91 con cuatro semanas de intervalo y .64–.80 con un año [@carrillo2024tecle]. En nuestros datos, la **estabilidad entre aplicaciones** es parecida: r = .67–.70 de 7 a 8 años en la plataforma, y r = .57 entre la plataforma en noviembre de 2019 y el papel en noviembre de 2020 en los mismos 107 niños (con un año, un cambio de formato y el confinamiento de por medio).
 
 ### En la plataforma (7 y 8 años)
 
@@ -126,7 +128,7 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 | E2 | **Plataforma y papel en una escala** | Metodológico | Con la dificultad de los ítems casi idéntica, ¿se pueden equiparar las puntuaciones de la plataforma con las normas en papel? | Ítems de los dos formatos; 107 niños con los dos. |
 | E3 | **Corregir la clave** | Técnico | Corregir la clave en la plataforma, comprobar el orden de las opciones del ítem 31, recorregir las sesiones 635, 638, 899 y 900 con la opción elegida y rehacer el baremo. | Comprobación ítem a ítem de la sesión 184. |
 | E4 | **TECLE y dislexia** | Clínico | ¿Qué punto de corte de TECLE identifica mejor la dislexia por curso? ¿Añade algo a la nota de Lengua? | Diagnósticos de Séneca y notas, papel 2020/21. |
-| E5 | **Malos comprendedores** | Teórico | ¿Detecta TECLE a los niños que decodifican bien pero comprenden mal? | Comprensión EDICOLE en las mismas sesiones; subpruebas SEM, STX y VOC en papel. |
+| E5 | **Malos comprendedores** | Teórico | ¿Detecta TECLE a los niños que decodifican bien pero comprenden mal? En el metaanálisis de Spencer y Wagner (2018), estos niños tienen un déficit de lenguaje oral (d = −0,78) menor que el de comprensión (d = −2,78) [@spencer2018scd]. | Comprensión EDICOLE en las mismas sesiones; subpruebas SEM, STX y VOC en papel. |
 | E6 | **Tiempos por ítem** | Metodológico | ¿Revelan los tiempos por frase perfiles de lectura distintos con la misma puntuación? | Tiempos por ítem de la plataforma. |
 
 **Utilidad de cada resultado.**
@@ -140,7 +142,7 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 - **Clave de la plataforma:** errónea en los ítems 15, 19, 36, 37 y 51 (comprobado en la sesión 184 con la opción elegida); ítem 31 por comprobar en pantalla. Hay que recorregir el resto de sesiones antes de usar el baremo de la plataforma para decisiones individuales.
 - **Uso recomendado:** medida rápida y colectiva de eficiencia lectora, junto a las listas de palabras. **No usar como medida de comprensión.**
 - **Cautelas:** en la cohorte 2010, 7.1 está en la plataforma antigua y 8.1 en la nueva; el baremo de 8.1 tiene solo 166 niños sin Preleo.
-- **Pendiente de acordar con M. Carrillo:** cómo citar y presentar los datos en papel.
+- **Pendiente de acordar con M. Carrillo:** cómo presentar los datos en papel junto a su manual normativo.
 - Revisar la codificación del sexo en la plataforma (incidencia común a todas las fichas).
 
 ## Tablas completas
