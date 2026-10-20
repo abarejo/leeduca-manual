@@ -23,6 +23,8 @@ Cada ficha tiene tres capas:
 
 Por ahora hay cinco **fichas piloto**: conocimiento de letras, velocidad lectora, denominación rápida (RAN), conciencia fonológica (contar sílabas) y TECLE. Son las tareas con las que se está fijando el diseño de todas las demás. Con ellas se ven la tríada clásica de predictores de la lectura (letras, conciencia fonológica y RAN) y dos medidas de lectura ya automatizada (la velocidad y la eficiencia lectora de TECLE). Las dos últimas son versiones cortas.
 
+El plan completo del manual, con sus cuatro partes y su índice, está en **[Estructura del manual](estructura.qmd)**. Es una propuesta abierta a la revisión del grupo.
+
 ## Cómo colaborar
 
 Si tienes una duda, has visto un error o propones un cambio, escríbelo en el **[formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform)**. No hace falta tener cuenta en ningún servicio ni identificarse. Las dudas que el grupo tiene abiertas están en [Consultas y sugerencias](consultas.qmd).

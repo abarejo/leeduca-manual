@@ -1,0 +1,159 @@
+# Estructura del manual (propuesta para revisar) {#sec-estructura}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** propuesta del 14/10/2026, actualizada el 20/10/2026 con lo ya escrito en este libro. **Se pide al grupo que la revise**: al final del capítulo están las preguntas abiertas, y cualquier comentario puede llegar por el [formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform) o por las otras vías de [Consultas y sugerencias](consultas.qmd).
+:::
+
+## Enfoque
+
+El manual técnico se organiza en **cuatro partes**:
+
+- fundamentos;
+- propiedades psicométricas;
+- fichas por tarea;
+- uso diagnóstico y monitorización.
+
+Cada tarea tiene una ficha estandarizada, y hay un capítulo propio sobre los **niveles de certeza** de la dificultad lectora.
+
+**Destinatarios.** Logopedas, orientadores, psicólogos educativos y clínicos, y equipos de investigación. El primer capítulo fija la cualificación necesaria para interpretar las puntuaciones.
+
+**Qué lo distingue de un manual de test convencional:**
+
+1. **Baremos por momento.** Hay datos longitudinales de 4 a 11 años, con tres evaluaciones por curso, así que los baremos son por trimestre y no solo por curso (ver [Baremo por curso o por trimestre](baremos-trimestre.qmd)).
+2. **Baremos continuos.** Se calculan con normas continuas (cNORM) y toman como referencia los centros sin Preleo, con tablas aparte para los centros con Preleo.
+3. **Fiabilidad ítem a ítem.** ω y teoría de respuesta al ítem (TRI) donde hay respuestas por ítem, error típico condicional y bandas de confianza en cada puntuación.
+4. **Validez predictiva con un criterio de certeza graduada.** La dificultad lectora persistente se define con toda la trayectoria del niño, y se corrige el sesgo de espectro (ver [Cómo estimamos el riesgo](riesgo.qmd)).
+5. **Indicadores de cambio para el seguimiento.** Índice de cambio fiable, curvas de crecimiento y **cambio mínimo relevante** definido con anclas propias, útiles para la respuesta a la intervención.
+6. **Invarianza.** Por sexo, colegio, formato (plataforma, papel o tableta) y periodo de pandemia (ver, por ejemplo, la equivalencia papel–plataforma en la [ficha de TECLE](fichas/TECLE.qmd)).
+7. **Evidencia neurofisiológica.** Los datos de EEG y fNIRS se presentan como validez convergente.
+
+**Marco normativo:**
+
+- *Standards for Educational and Psychological Testing* [@aera2014].
+- Cuestionario CET-R del Colegio Oficial de la Psicología y modelo de evaluación de tests de la EFPA.
+- COSMIN para las propiedades de medida.
+- Directrices de la ITC sobre el uso de los tests.
+- DSM-5-TR y CIE-11 para la definición clínica de la dislexia (trastorno específico del aprendizaje).
+
+Falta completar estas referencias con las ediciones exactas.
+
+## Índice comentado
+
+El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de la Parte III siguen los dominios del diccionario maestro y solo incluyen las tareas de clase A; las de clase B y C van al anexo D. Donde ya hay algo escrito en este libro, se enlaza.
+
+### Parte I. Fundamentos
+
+1. **Presentación y uso responsable.** Para qué sirve y para qué no, cualificación del usuario, ética, protección de datos y consentimiento.
+2. **Marco teórico.**
+   - Aprender a leer en una ortografía transparente: decodificación, fluidez y comprensión (visión simple de la lectura).
+   - Precursores: conciencia fonológica, conocimiento alfabético, denominación rápida, memoria verbal y lenguaje oral.
+   - Dislexia y trastorno específico del aprendizaje: DSM-5-TR, CIE-11, respuesta a la intervención y riesgo familiar. Cómo ha cambiado el concepto de dislexia y por qué su prevalencia depende del corte elegido [@wagner2020prevalence].
+   - En español la dislexia se manifiesta sobre todo como lectura lenta y no tanto como errores: implicaciones para la evaluación.
+3. **La plataforma LEEDUCA.**
+   - Arquitectura y tipos de tarea.
+   - Formatos de respuesta y medidas registradas: aciertos, errores, tiempo total y eficiencia, con respuestas y tiempos ítem a ítem.
+   - Sesiones y calendario: tres evaluaciones por curso.
+   - Aplicación colectiva en el aula y versiones en papel y tableta (2020–2022).
+   - Antecedente en papel: la batería DIS-ESP (11 escalas, 2007–2012).
+4. **Estudio normativo.**
+   - Cohortes 2009–2016 y colegios participantes.
+   - Número de niños por cohorte y momento.
+   - Condición Preleo por cohorte y fidelidad de aplicación (ver [El programa Preleo](preleo/programa.qmd)).
+   - Limpieza, exclusiones y datos perdidos.
+
+### Parte II. Propiedades psicométricas
+
+5. **Método** (base: [Cómo se construye cada ficha](metodo.qmd) y [Decisiones metodológicas](decisiones.qmd)).
+   - Puntuaciones: aciertos, tiempo y eficiencia; tratamiento de atípicos.
+   - Fiabilidad: α, ω, test-retest entre trimestres, error típico condicional y TRI. En las pruebas de velocidad, test-retest y no consistencia interna.
+   - Validez: contenido, estructura interna, invarianza, convergente, predictiva y diagnóstica.
+   - Baremación continua: percentiles, puntuaciones T y escalares.
+   - **Cuánto cambio importa:** tamaños del efecto de referencia y cambio mínimo relevante con anclas [@anvari2021anclas].
+6. **Resultados globales.**
+   - Tabla resumen de las tareas A.
+   - Estructura factorial: precursores, decodificación, fluidez y comprensión.
+   - Invarianza por sexo, formato y pandemia.
+   - Estabilidad longitudinal de 4 a 11 años.
+
+### Parte III. Fichas de tareas por dominio
+
+| Dominio | Ficha en este libro |
+|---|---|
+| Conciencia fonológica silábica: contar, emparejar y suprimir sílabas | [Contar sílabas (523)](fichas/CF523.qmd) |
+| Conciencia fonológica fonémica: identificación, segmentación, síntesis y supresión de fonemas | Pendiente |
+| Conocimiento alfabético: letras, vocales y letra inicial | [Conocimiento de letras](fichas/LET.qmd) |
+| Denominación rápida: colores, objetos, números y sílabas | [Denominación rápida (RAN)](fichas/RAN.qmd) |
+| Memoria verbal a corto plazo | Pendiente |
+| Lenguaje oral: pares mínimos, morfosintaxis, vocabulario y comprensión, prosodia | Pendiente |
+| Lectura de sílabas, palabras y pseudopalabras | Pendiente |
+| Fluidez lectora: velocidad de texto y TECLE | [Velocidad lectora](fichas/VEL.qmd) · [TECLE](fichas/TECLE.qmd) |
+| Comprensión lectora | Pendiente |
+| Procesamiento ortográfico: decisión ortográfica, homógrafos y dictado | Pendiente |
+| Habilidades visoatencionales y funciones ejecutivas | Pendiente |
+| Cognición numérica | Pendiente de decidir si entra aquí o en un manual aparte |
+
+### Parte IV. Uso diagnóstico y seguimiento
+
+19. **Niveles de certeza de la dificultad lectora** (ver [Cómo estimamos el riesgo](riesgo.qmd)).
+20. **Cribado a los 4–5 años.** Índices compuestos de precursores, puntos de corte, sensibilidad, especificidad y valores predictivos según la prevalencia, y ruta de decisión.
+21. **Identificación (6–7 años) y confirmación (8 años).** Algoritmos, grados de gravedad y perfil de puntos fuertes y débiles.
+22. **Seguimiento del progreso.** Índice de cambio fiable, curvas de crecimiento esperadas, cambio mínimo relevante y señales de baja respuesta a la intervención.
+23. **Preleo.** Baremos diferenciados y cómo interpretar las puntuaciones en centros con programa (ver [Efectos de Preleo](preleo/datos.qmd)).
+24. **Casos ilustrativos** (anonimizados) y **validación neurofisiológica** (EEG y fNIRS).
+
+### Anexos
+
+- **A.** Tablas de baremos por cohorte, momento y condición.
+- **B.** Puntos de corte y valores predictivos.
+- **C.** Ítems y materiales de ejemplo.
+- **D.** Tareas de clase B y C: descripción y datos disponibles.
+- **E.** Diccionario de códigos de tarea y de sesión.
+- **F.** Modelo de informe para centros y familias (ver el [prototipo de informe de aula](informe-aula.qmd)).
+- **G.** Fórmulas y código reproducible (R).
+- **H.** Glosario y referencias.
+
+## Plantilla de la ficha por tarea
+
+Cada ficha ocupa de 4 a 6 páginas y tiene siempre los mismos diez apartados, para comparar tareas de un vistazo. Se genera desde el diccionario maestro y los guiones de análisis: las cifras no se copian a mano.
+
+| # | Apartado | Contenido | Fuente |
+|---|---|---|---|
+| 1 | Identificación | Nombre, códigos de tarea y de sesión, dominio, proceso evaluado y clase A/B/C | Diccionario maestro |
+| 2 | Qué mide y por qué | Constructo, base teórica y papel en el modelo de riesgo | Marco teórico |
+| 3 | Material e ítems | Número de ítems, formato de respuesta, ítems de ejemplo y criterio de dificultad | Catálogo de tareas |
+| 4 | Aplicación | Consigna, ensayos de práctica, duración, sesiones y momentos | Catálogo de sesiones |
+| 5 | Puntuación | Medidas, medida principal, sentido y tratamiento de atípicos | Diccionario y guiones |
+| 6 | Muestra | Niños por cohorte, momento y condición Preleo; sexo | Guiones |
+| 7 | Fiabilidad | α y ω por momento, test-retest, error típico condicional, TRI y análisis de ítems | Datos ítem a ítem |
+| 8 | Validez | Convergente, predictiva de la lectura posterior, AUC frente a la dificultad persistente e invarianza | Guiones de validez |
+| 9 | Baremos | Percentiles y puntuaciones T por momento, banda de confianza y punto de corte recomendado | Baremos continuos |
+| 10 | Interpretación | Qué indica una puntuación baja, cautelas y guía de calidad | Equipo |
+
+En la cabecera, cada ficha llevará un **semáforo de calidad** con la valoración CET-R de fiabilidad, validez y baremos, para que el usuario sepa enseguida para qué decisiones sirve la tarea.
+
+Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, cada una añade «Estudios que abre» y «Pendientes e incidencias», que no estaban en la plantilla original.
+
+## Estado y plan de trabajo
+
+| Bloque | Estado (20/10/2026) | Qué falta |
+|---|---|---|
+| Cap. 1–2 Fundamentos y marco teórico | Partes en el borrador del Manual técnico 8 y en el marco psicométrico | Actualizar con DSM-5-TR, CIE-11 y la literatura en español; redacción por el equipo |
+| Cap. 3 Plataforma | Guía de extracción y catálogos de tareas | Capturas y descripción del flujo de aplicación; antecedente DIS-ESP |
+| Cap. 4 Estudio normativo | Muestra por tarea, cohorte y momento; condición Preleo revisada | Tabla de colegios y fidelidad; diagrama de flujo de la muestra |
+| Cap. 5–6 Psicometría global | Método y decisiones escritos; α de 2021 en parte de las tareas | ω y TRI ítem a ítem; análisis factorial e invarianza; apartado «Cuánto cambio importa» |
+| Cap. 7–18 Fichas | Cinco fichas piloto: letras, velocidad, RAN, contar sílabas y TECLE | Una ficha por tarea A (75 tareas) |
+| Cap. 19–21 Certeza, cribado e identificación | Capítulo de riesgo con los cinco niveles; AUC y cortes con validación cruzada | Acuerdo del equipo sobre los niveles; intervalos por bootstrap |
+| Cap. 22 Seguimiento | Test-retest disponible; cambio fiable en la ficha de letras | Curvas de crecimiento y cambio mínimo relevante con anclas |
+| Cap. 23 Preleo | Parte del libro con el programa y los efectos; auditoría de los datos y plan de análisis cerrado | Confirmar la exposición de la cohorte 2011 y el modelo multinivel definitivo |
+| Cap. 24 Casos y EEG/fNIRS | Matrices EEG de 2010 y 2013 | Reasignar los grupos EEG con los niveles de certeza; casos anonimizados |
+| Anexos A–B Baremos y cortes | Baremos empíricos por momento y cohorte | Normas continuas que agrupen cohortes |
+
+## Preguntas para el grupo
+
+1. ¿Os parecen bien las **cuatro partes** y el orden de los capítulos? ¿Falta o sobra algo?
+2. ¿Se aceptan los **cinco niveles de certeza** y el umbral p10 para la dificultad grave? Los criterios clínicos más estrictos usan −1,5 DT, que equivale a p7.
+3. ¿La **cognición numérica** entra en este manual o va en uno propio?
+4. ¿El manual se publica en español con un **resumen técnico en inglés**?
+5. ¿Dónde va la **batería DIS-ESP** en papel: en el capítulo de la plataforma, como antecedente, o en un capítulo propio?
+6. ¿Las **versiones de otros países y para adultos** (por ejemplo, TECLE con 3 minutos en Colombia) entran en las fichas o en un anexo?
+7. ¿Os sirve la **plantilla de diez apartados**, con «Estudios que abre» y «Pendientes»? ¿Qué cambiaríais?

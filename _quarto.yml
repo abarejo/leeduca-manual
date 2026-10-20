@@ -25,6 +25,7 @@ book:
     - index.qmd
     - part: "Cómo está hecho el manual"
       chapters:
+        - estructura.qmd
         - metodo.qmd
         - decisiones.qmd
         - riesgo.qmd
