@@ -3,6 +3,7 @@ project:
   resources:
     - apps/
     - datos/agregados/CATALOGO/
+    - figuras/pantallas/
   output-dir: _book
 
 lang: es
@@ -29,6 +30,7 @@ book:
         - estructura.qmd
         - metodo.qmd
         - decisiones.qmd
+        - agrupacion.qmd
         - riesgo.qmd
         - baremos-trimestre.qmd
     - part: "Catálogo de tareas"

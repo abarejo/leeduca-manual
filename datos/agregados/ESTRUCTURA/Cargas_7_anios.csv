@@ -1,0 +1,27 @@
+"edad","tarea_canonica","tarea","dominio","F1","F2","F3","F4","F5","F6","factor_principal","carga_max","comunalidad"
+7,"LEC_PSEUDO_3sil","Lectura de pseudopalabras trisílabas","Lectura",0.98,0.03,-0.08,0,0,-0.07,"F1",0.98,0.85
+7,"LEC_PSEUDO_4sil","Lectura de pseudopalabras cuatrisílabas","Lectura",0.89,-0.03,0.02,-0.06,-0.01,-0.05,"F1",0.89,0.71
+7,"LEC_PSEUDO_2sil","Lectura de pseudopalabras bisílabas","Lectura",0.79,0.06,0,0.07,0.02,0.03,"F1",0.79,0.76
+7,"LEC_SILABAS_COMPLEJA","Lectura de sílabas complejas","Lectura",0.67,0.08,0.01,0.07,0.01,0.1,"F1",0.67,0.64
+7,"LEC_PAL_3sil","Lectura de palabras trisílabas","Lectura",0.59,-0.01,0.25,0.08,0.1,0.14,"F1",0.59,0.85
+7,"LEC_PAL_2sil","Lectura de palabras bisílabas","Lectura",0.56,-0.03,0.18,0.08,0.11,0.19,"F1",0.56,0.77
+7,"LEC_PAL_4sil","Lectura de palabras cuatrisílabas","Lectura",0.49,-0.04,0.31,0.08,0.09,0.21,"F1",0.49,0.84
+7,"LEC_TECLE","TECLE (eficiencia lectora)","Lectura",0.32,0.18,0.22,0.09,0.11,0.19,"F1",0.32,0.64
+7,"CF_SUPRESION_FONEMAS_TP","Supresión de fonemas (todas las posiciones)","Habilidades fonológicas",0,0.69,0.1,0.01,0.07,0.08,"F2",0.69,0.63
+7,"CF_SUPRESION_SILABAS_TP","Supresión de sílabas (todas las posiciones)","Habilidades fonológicas",0.08,0.69,0.05,0.01,0.04,-0.19,"F2",0.69,0.57
+7,"HFON_MEMVERB_MEMORIA_VERBAL","Memoria verbal","Habilidades fonológicas",0.01,0.56,-0.18,0.03,0.07,0.24,"F2",0.56,0.42
+7,"L_ORAL_PROSODIA_ACENTO_DE_PALABRAS","Acento de palabras","Lenguaje oral",-0.02,0.27,0.23,0.09,-0.03,-0.22,"F2",0.27,0.17
+7,"LEC_DECISION_ORTOGRAFICA","Decisión ortográfica","Lectura",0.06,0.23,0.54,0.07,0.1,-0.03,"F3",0.54,0.61
+7,"LEC_LECT_COMPRENSIVA","Lectura comprensiva (segunda lectura)","Lectura",0.27,0.11,0.42,0.14,0.1,0.14,"F3",0.42,0.75
+7,"LEC_VEL_TEXTO","Velocidad lectora en texto","Lectura",0.31,0.09,0.41,0.16,0.1,0.18,"F3",0.41,0.85
+7,"RAN_OBJETOS_REPETIDOS_LARGOS","Denominación rápida de objetos repetidos (largos)","Habilidades fonológicas",0.05,0.04,-0.06,0.68,-0.04,0,"F4",0.68,0.47
+7,"RAN_OBJETOS_VARIADOS_LARGOS","Denominación rápida de objetos variados (largos)","Habilidades fonológicas",-0.08,-0.06,0.05,0.68,0.04,-0.03,"F4",0.68,0.42
+7,"RAN_OBJETOS_VARIADOS_CORTOS","Denominación rápida de objetos variados (cortos)","Habilidades fonológicas",-0.03,-0.08,-0.11,0.44,0.04,-0.12,"F4",0.44,0.16
+7,"RAN_OBJETOS_REPETIDOS_CORTOS","Denominación rápida de objetos repetidos (cortos)","Habilidades fonológicas",0.05,0.06,-0.14,0.37,-0.02,0.02,"F4",0.37,0.14
+7,"MATE_ARITM_SUMA_RESTA_2_DIGITOS","Sumas y restas de dos dígitos","Cognición numérica",0,0.01,-0.05,-0.02,0.8,-0.03,"F5",0.8,0.6
+7,"LEC_COMPR_TEXTO","Comprensión de textos","Lectura",-0.11,0.11,-0.01,0.12,0.45,-0.05,"F5",0.45,0.27
+7,"HVIS_CAP_VAten_NUMEROS_5","Amplitud visoatencional: números","Visoatencional",-0.05,0.06,0.23,-0.06,0.26,-0.11,"F5",0.26,0.14
+7,"F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA","Atención sostenida","Funciones ejecutivas",0.02,-0.16,-0.2,-0.02,0.22,0.17,"F5",0.22,0.08
+7,"L_ORAL_PERCEP_PARES_MINIMOS","Pares mínimos (percepción)","Lenguaje oral",-0.01,0.16,0.01,0.02,0.2,0.08,"F5",0.2,0.13
+7,"F_EJEC_INH_INHIBICION","Inhibición","Funciones ejecutivas",0.23,-0.19,-0.01,-0.11,0.05,-0.25,"F6",0.25,0.1
+7,"HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5","Memoria verbal (1–5 sílabas CVC)","Habilidades fonológicas",0.05,0.17,-0.17,0.02,-0.12,0.22,"F6",0.22,0.07

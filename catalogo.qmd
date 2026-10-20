@@ -15,7 +15,7 @@ n_eval <- sum(C$estado == "evaluación")
 
 Este catálogo reúne en un solo lugar las `r nrow(C)` tareas de la plataforma de las cohortes 2010–2015 (`r n_eval` de evaluación; el resto, experimentales o en revisión). Para cada tarea se indica qué mide, cómo se aplica, con qué códigos aparece en los datos, en qué sesiones y edades se aplicó, qué medidas registra y qué propiedades psicométricas tiene. Cada una incluye un **párrafo listo para el apartado de instrumentos de un artículo, en español y en inglés**.
 
-**Cómo usarlo.** Busca por nombre, código o constructo, o filtra por dominio. Pulsa sobre una tarea para ver su ficha resumida. Los botones «Copiar» copian el párrafo al portapapeles. La tabla completa se puede descargar: [Catalogo.csv](datos/agregados/CATALOGO/Catalogo.csv) (una fila por tarea) y [Sesiones.csv](datos/agregados/CATALOGO/Sesiones.csv) (una fila por tarea, cohorte y sesión).
+**Cómo usarlo.** Busca por nombre, código o constructo, o filtra por dominio o por [familia de ficha](agrupacion.qmd#sec-familias) (el modelo de medida que comparten las tareas). Pulsa sobre una tarea para ver su ficha resumida. Los botones «Copiar» copian el párrafo al portapapeles. La tabla completa se puede descargar: [Catalogo.csv](datos/agregados/CATALOGO/Catalogo.csv) (una fila por tarea) y [Sesiones.csv](datos/agregados/CATALOGO/Sesiones.csv) (una fila por tarea, cohorte y sesión).
 
 **Qué significa cada cosa.**
 
@@ -28,6 +28,10 @@ Este catálogo reúne en un solo lugar las `r nrow(C)` tareas de la plataforma d
 #| results: asis
 DOM <- c(HFON = "Habilidades fonológicas", LECTURA = "Lectura", L_ORAL = "Lenguaje oral", ESCRITURA = "Escritura", MATE = "Cognición numérica",
          HVIS = "Habilidades visoatencionales", F_EJEC = "Funciones ejecutivas", INTELIGENCIA = "Razonamiento no verbal", EXPERIMENTO = "Tareas experimentales")
+FAM <- c(A = "A · Precisión", B = "B · Denominación rápida", C = "C · Fluidez lectora oral", D = "D · Eficiencia con tiempo limitado",
+         E = "E · Decisión con tiempo de respuesta", F = "F · Amplitud y memoria", G = "G · Comprensión")
+PANT <- c("imágenes en pantalla" = "formato_imagenes.png", "lectura en voz alta de una lista" = "formato_lista.png",
+          "denominación rápida de una serie" = "formato_ran.png", "elección entre opciones" = "formato_decision.png")
 FICHA <- c(LEC_LETRAS = "fichas/LET.qmd", LEC_VEL_TEXTO = "fichas/VEL.qmd", RAN_NUMEROS = "fichas/RAN.qmd", RAN_COLORES = "fichas/RAN.qmd",
            RAN_OBJETOS_CONTROL = "fichas/RAN.qmd", CF_CONTAR_SILABAS = "fichas/CF523.qmd", LEC_TECLE = "fichas/TECLE.qmd")
 esc <- function(x) { x <- ifelse(is.na(x), "", as.character(x)); x <- gsub("&", "&amp;", x, fixed = TRUE); x <- gsub("<", "&lt;", x, fixed = TRUE); gsub(">", "&gt;", x, fixed = TRUE) }
@@ -38,6 +42,8 @@ cat('<div class="cat-filtros">',
     '<input id="cat-q" type="search" placeholder="Buscar por nombre, código o constructo…" aria-label="Buscar en el catálogo">',
     '<select id="cat-dom" aria-label="Dominio"><option value="">Todos los dominios</option>',
     paste0(sprintf('<option value="%s">%s</option>', names(DOM), DOM), collapse = ""), '</select>',
+    '<select id="cat-fam" aria-label="Familia"><option value="">Todas las familias</option>',
+    paste0(sprintf('<option value="%s">%s</option>', names(FAM), FAM), collapse = ""), '</select>',
     '<label><input id="cat-exp" type="checkbox"> Incluir experimentales y en revisión</label>',
     '<span id="cat-n" class="cat-n"></span></div>\n', sep = "")
 
@@ -53,16 +59,17 @@ for (d in names(DOM)) {
     ficha <- if (r$tarea_canonica %in% names(FICHA)) sprintf(' <a class="cat-ficha" href="%s">Ver la ficha completa →</a>', sub("\\.qmd$", ".html", FICHA[[r$tarea_canonica]])) else ""
     estado <- if (r$estado != "evaluación") sprintf('<span class="cat-tag">%s</span>', esc(r$estado)) else ""
     buscar <- tolower(paste(r$tarea, r$name_en, r$codigos, r$constructo, r$tarea_canonica, r$bateria))
-    cat(sprintf('<details class="cat-item" data-dom="%s" data-estado="%s" data-q="%s">', d, esc(r$estado), esc(buscar)),
+    pant <- if (!is.na(r$formato) && r$formato %in% names(PANT)) sprintf('<figure class="cat-pant"><img src="figuras/pantallas/%s" alt="Ejemplo de pantalla del formato «%s»" loading="lazy"><figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption></figure>', PANT[[r$formato]], esc(r$formato)) else ""
+    cat(sprintf('<details class="cat-item" data-dom="%s" data-fam="%s" data-estado="%s" data-q="%s">', d, r$familia, esc(r$estado), esc(buscar)),
         sprintf('<summary><span class="cat-nom">%s</span> <span class="cat-en">%s</span> %s<span class="cat-meta">código %s · %s años</span></summary>',
-                esc(r$tarea), esc(r$name_en), estado, esc(gsub(" ", ", ", r$codigos)), esc({e <- as.numeric(strsplit(as.character(r$edades), ", ")[[1]]); if (length(e) > 1) paste0(min(e), "–", max(e)) else e})),
+                esc(r$tarea), esc(r$name_en), paste0(sprintf('<span class="cat-fam">%s</span>', esc(FAM[[r$familia]])), estado), esc(gsub(" ", ", ", r$codigos)), esc({e <- as.numeric(strsplit(as.character(r$edades), ", ")[[1]]); if (length(e) > 1) paste0(min(e), "–", max(e)) else e})),
         '<div class="cat-body">',
         if (!is.na(r$aviso) && r$aviso != "") sprintf('<p class="cat-aviso">⚠ %s.</p>', esc(r$aviso)) else "",
         '<table class="cat-tab">',
-        fila("Constructo", esc(r$constructo)), fila("Batería", esc(r$bateria)), fila("Formato", esc(r$formato)),
+        fila("Constructo", esc(r$constructo)), fila("Familia de ficha", sprintf('<a href="agrupacion.html#sec-familias">%s</a>', esc(FAM[[r$familia]]))), fila("Batería", esc(r$bateria)), fila("Formato", esc(r$formato)),
         fila("Consigna (plataforma)", esc(r$descripcion)), fila("Ítems", esc(r$n_items)), fila("Tiempo máximo", if (is.na(r$duracion_s)) NA else paste(r$duracion_s, "s")),
         fila("Medidas registradas", esc(r$medidas)), fila("Medida principal", esc(r$medida_principal)),
-        fila("Psicometría", psico), fila("Sesiones", ses_txt), '</table>',
+        fila("Psicometría", psico), fila("Sesiones", ses_txt), '</table>', pant,
         '<div class="cat-pub"><div class="cat-pub-h">Para publicaciones · español <button class="cat-copy" type="button">Copiar</button></div>',
         sprintf('<p class="cat-pub-t" lang="es">%s</p></div>', esc(r$texto_es)),
         '<div class="cat-pub"><div class="cat-pub-h">For publications · English <button class="cat-copy" type="button">Copy</button></div>',
@@ -74,7 +81,7 @@ for (d in names(DOM)) {
 
 ```{=html}
 <style>
-.cat-filtros{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 1.5rem;position:sticky;top:0;background:var(--bs-body-bg,#fff);padding:.5rem 0;z-index:5}
+.cat-filtros{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 1.5rem;padding:.5rem 0}
 .cat-filtros input[type=search]{flex:1 1 16rem;padding:.4rem .6rem;border:1px solid #cfd2d6;border-radius:6px}
 .cat-filtros select{padding:.35rem;border:1px solid #cfd2d6;border-radius:6px}
 .cat-filtros label{font-size:.9rem}
@@ -86,6 +93,8 @@ for (d in names(DOM)) {
 .cat-nom{font-weight:600}
 .cat-en{color:#6c757d;font-style:italic;font-size:.92rem}
 .cat-meta{display:block;font-size:.82rem;color:#6c757d}
+.cat-fam{font-size:.72rem;background:rgba(94,79,162,.10);color:#4b3f86;border-radius:4px;padding:.05rem .4rem;margin-left:.3rem}
+.cat-pant{margin:.4rem 0 .8rem;max-width:360px}.cat-pant img{max-width:100%;border:1px solid #e3e3e0;border-radius:6px}.cat-pant figcaption{font-size:.75rem;color:#6c757d}
 .cat-tag{font-size:.72rem;background:#f3e9d2;color:#7a5a10;border-radius:4px;padding:.05rem .4rem;margin-left:.3rem}
 .cat-body{padding:.2rem 0 .8rem}
 .cat-tab{font-size:.88rem;width:100%;margin-bottom:.8rem}
@@ -102,19 +111,19 @@ for (d in names(DOM)) {
 </style>
 <script>
 (function(){
-  const q=document.getElementById('cat-q'), dom=document.getElementById('cat-dom'), exp=document.getElementById('cat-exp'), n=document.getElementById('cat-n');
+  const q=document.getElementById('cat-q'), dom=document.getElementById('cat-dom'), fam=document.getElementById('cat-fam'), exp=document.getElementById('cat-exp'), n=document.getElementById('cat-n');
   const items=[...document.querySelectorAll('.cat-item')], heads=[...document.querySelectorAll('.cat-dom-h')];
   function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
   function filtra(){
-    const t=norm(q.value.trim()), d=dom.value, e=exp.checked; let k=0; const vis={};
+    const t=norm(q.value.trim()), d=dom.value, f=fam.value, e=exp.checked; let k=0; const vis={};
     items.forEach(it=>{
-      const ok=(!t||norm(it.dataset.q).includes(t))&&(!d||it.dataset.dom===d)&&(e||it.dataset.estado==='evaluación');
+      const ok=(!t||norm(it.dataset.q).includes(t))&&(!d||it.dataset.dom===d)&&(!f||it.dataset.fam===f)&&(e||it.dataset.estado==='evaluación');
       it.style.display=ok?'':'none'; if(ok){k++;vis[it.dataset.dom]=1;}
     });
     heads.forEach(h=>h.style.display=vis[h.dataset.dom]?'':'none');
     n.textContent=k+(k===1?' tarea':' tareas');
   }
-  [q,dom,exp].forEach(el=>el.addEventListener('input',filtra)); filtra();
+  [q,dom,fam,exp].forEach(el=>el.addEventListener('input',filtra)); filtra();
   document.querySelectorAll('.cat-copy').forEach(b=>b.addEventListener('click',()=>{
     const txt=b.closest('.cat-pub').querySelector('.cat-pub-t').innerText, orig=b.textContent;
     const ok=()=>{b.textContent=orig==='Copy'?'Copied':'Copiado';setTimeout(()=>b.textContent=orig,1500);};

@@ -1,0 +1,42 @@
+"edad","tarea_canonica","tarea","dominio","F1","F2","F3","F4","F5","F6","factor_principal","carga_max","comunalidad"
+6,"LEC_SILABAS_COMPLEJA","Lectura de sílabas complejas","Lectura",0.86,0.04,0.07,-0.04,-0.05,0.01,"F1",0.86,0.81
+6,"LEC_PSEUDO_3sil","Lectura de pseudopalabras trisílabas","Lectura",0.81,-0.09,0.03,0.01,-0.02,0.05,"F1",0.81,0.64
+6,"LEC_SILABAS_MEDIA","Lectura de sílabas de complejidad media","Lectura",0.8,0,0.07,-0.05,-0.36,-0.02,"F1",0.8,0.71
+6,"LEC_PAL_3sil","Lectura de palabras trisílabas","Lectura",0.79,-0.01,-0.02,-0.12,0.27,-0.07,"F1",0.79,0.65
+6,"LEC_PSEUDO_2sil","Lectura de pseudopalabras bisílabas","Lectura",0.76,0.07,0.08,0.07,0.15,0.03,"F1",0.76,0.83
+6,"LEC_PAL_2sil","Lectura de palabras bisílabas","Lectura",0.74,0.09,0.01,0.16,0.09,0.08,"F1",0.74,0.86
+6,"LEC_SILABAS_SIMPLE","Lectura de sílabas simples","Lectura",0.67,0.22,0.09,0,-0.04,0.09,"F1",0.67,0.79
+6,"LEC_PAL_1sil","Lectura de palabras monosílabas","Lectura",0.63,0.14,0.06,0.16,0.12,0.08,"F1",0.63,0.79
+6,"LEC_VEL_TEXTO","Velocidad lectora en texto","Lectura",0.63,0.04,0.01,0.17,0.18,0.1,"F1",0.63,0.67
+6,"LEC_PSEUDO_1sil","Lectura de pseudopalabras monosílabas","Lectura",0.53,0.18,-0.12,0.22,-0.03,-0.06,"F1",0.53,0.48
+6,"LEC_DECISION_ORTOGRAFICA","Decisión ortográfica","Lectura",0.35,-0.03,0.01,0.23,-0.11,0.22,"F1",0.35,0.35
+6,"LEC_LETRAS","Conocimiento de letras","Lectura",0.33,0.32,0.24,0,0.03,0.08,"F1",0.33,0.57
+6,"CF_SINTESIS_FONEMICA","Síntesis fonémica","Habilidades fonológicas",0,0.79,0.01,0.05,-0.08,-0.01,"F2",0.79,0.68
+6,"CF_IDENTIFICACION_FONEMA_FINAL","Identificación del fonema final","Habilidades fonológicas",-0.01,0.72,0.04,0.04,0.1,0.03,"F2",0.72,0.6
+6,"CF_IDENTIFICACION_FONEMA_INICIAL","Identificación del fonema inicial","Habilidades fonológicas",0.11,0.69,-0.06,-0.02,-0.09,0.05,"F2",0.69,0.56
+6,"LECTURA_RF_ESCRIBIR_LETRA_INICIAL","Identificar la letra inicial","Lectura",0.1,0.53,0.11,-0.05,0.02,0.1,"F2",0.53,0.45
+6,"CF_SEGMENTACION_FONEMICA","Segmentación fonémica","Habilidades fonológicas",0.09,0.45,0.02,0.16,0.03,0.18,"F2",0.45,0.52
+6,"CF_SUPRESION_SILABA_JA_TODAS_POSIC","Supresión de la sílaba «ja»","Habilidades fonológicas",0.12,0.4,0.06,0.05,0.05,0.19,"F2",0.4,0.41
+6,"L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL","Morfología de número (pseudopalabras)","Lenguaje oral",-0.14,0.36,0.22,0.11,0.18,-0.05,"F2",0.36,0.23
+6,"L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL","Morfología de género (pseudopalabras)","Lenguaje oral",-0.12,0.35,0.21,0.03,0.14,0.07,"F2",0.35,0.23
+6,"HFON_MEMVERB_MEMORIA_VERBAL","Memoria verbal","Habilidades fonológicas",0.05,0.29,0.09,0.18,0.04,-0.06,"F2",0.29,0.22
+6,"RAN_OBJETOS_SILABA","Denominación rápida de objetos (misma sílaba)","Habilidades fonológicas",-0.01,-0.02,0.86,-0.02,-0.05,0.01,"F3",0.86,0.72
+6,"RAN_OBJETOS_CONTROL","Denominación rápida de objetos (control)","Habilidades fonológicas",0.03,-0.06,0.78,0.02,0.1,0.02,"F3",0.78,0.59
+6,"RAN_OBJETOS_FONEMA","Denominación rápida de objetos (mismo fonema)","Habilidades fonológicas",0.05,0.09,0.74,0.02,-0.1,-0.04,"F3",0.74,0.67
+6,"L_ORAL_SEM_COMPRENSION_NCP","Comprensión oral (sin pistas)","Lenguaje oral",-0.16,0.11,0.2,0.11,0.08,0.15,"F3",0.2,0.12
+6,"L_ORAL_SEM_VOCABULARIO_OPCIONES","Vocabulario: elección entre opciones","Lenguaje oral",-0.07,0.08,0.2,0,0.06,0.13,"F3",0.2,0.09
+6,"L_ORAL_MF_STX_ORDENAR_FRASES","Ordenar frases","Lenguaje oral",-0.03,0.16,0.11,0.48,-0.05,-0.06,"F4",0.48,0.37
+6,"CF_SUPRESION_FONEMAS_TP","Supresión de fonemas (todas las posiciones)","Habilidades fonológicas",0.13,0.33,0.01,0.46,-0.14,-0.04,"F4",0.46,0.61
+6,"L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL","Morfología verbal de tiempo","Lenguaje oral",0.04,0.02,0.08,0.41,-0.07,0,"F4",0.41,0.23
+6,"HVIS_OR_ESP_BUSQUEDA_SERIAL","Búsqueda serial","Visoatencional",0.08,-0.09,0.04,0.36,-0.07,0.11,"F4",0.36,0.17
+6,"MATE_ARITMETIC_SUMA_1_DIGITO","Sumas de un dígito","Cognición numérica",0.24,0.04,0.08,0.29,0,0.14,"F4",0.29,0.33
+6,"L_ORAL_FON_PC_DISCRIMINA","Percepción del habla: discriminación","Lenguaje oral",-0.07,-0.01,0.03,0.28,-0.03,0.1,"F4",0.28,0.09
+6,"LEC_COMPR_TEXTO","Comprensión de textos","Lectura",0.07,0.05,0.17,0.2,0.09,0.11,"F4",0.2,0.19
+6,"MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS","Comparación de magnitudes simbólicas","Cognición numérica",0.04,-0.08,0.01,0.19,-0.02,0.14,"F4",0.19,0.06
+6,"L_ORAL_FON_PC_IDENTIFICA","Percepción del habla: identificación","Lenguaje oral",0.06,0.03,-0.05,-0.12,-0.01,0,"F4",0.12,0.01
+6,"LEC_LECT_COMPRENSIVA","Lectura comprensiva (segunda lectura)","Lectura",0.06,-0.01,-0.04,-0.03,1,0,"F5",1,1.02
+6,"HVIS_CAP_VAten_LETRAS_4","Amplitud visoatencional: letras 4","Visoatencional",0.03,0.08,-0.02,-0.09,0.06,0.47,"F6",0.47,0.25
+6,"HVIS_CAP_VAten_SIMBOLOS_4","Amplitud visoatencional: símbolos 4","Visoatencional",-0.07,0.05,0.02,-0.11,-0.06,0.45,"F6",0.45,0.19
+6,"HVIS_CAP_VAten_SIMBOLOS_3","Amplitud visoatencional: símbolos 3","Visoatencional",-0.06,0.04,-0.04,-0.11,-0.08,0.4,"F6",0.4,0.15
+6,"HVIS_CAP_VAten_LETRAS_3","Amplitud visoatencional: letras 3","Visoatencional",0.06,0.05,-0.01,0.02,-0.16,0.35,"F6",0.35,0.18
+6,"HVIS_CAP_VAten_NUMEROS_5","Amplitud visoatencional: números","Visoatencional",0.05,-0.11,0.07,0.28,0.04,0.3,"F6",0.3,0.22

@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Agrupación | Nuevo capítulo «Cómo se agrupan las tareas»: siete familias de ficha (modelos de medida) y análisis factorial exploratorio por edad. El catálogo muestra la familia de cada tarea y ejemplos de pantalla. |
 | 21/10/2026 | Catálogo | Nuevo catálogo de 118 tareas con buscador: códigos, sesiones, medidas, α de 2021, estabilidad y párrafo para publicaciones en español e inglés. |
 | 21/10/2026 | Estructura | Doce propuestas para un manual innovador (valor clínico, pedagógico y científico), para discutir en el grupo. |
 | 20/10/2026 | Libro | Nuevo capítulo «Estructura del manual (propuesta para revisar)»: cuatro partes, índice comentado, plantilla de ficha, estado del trabajo y preguntas para el grupo. |
