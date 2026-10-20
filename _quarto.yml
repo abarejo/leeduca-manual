@@ -44,6 +44,9 @@ format:
     code-tools: false
     df-print: kable
     lightbox: true
+    # borrador: que los buscadores no indexen la web (quitar al publicar la versión 1.0)
+    include-in-header:
+      text: '<meta name="robots" content="noindex, nofollow">'
 
 execute:
   echo: false
