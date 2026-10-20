@@ -15,7 +15,7 @@ fig_ran_validez <- function() {
   fa$variante <- factor(fa$variante, names(COLV))
   ggplot(fa, aes(x, AUC, colour = variante)) +
     geom_hline(yintercept = .5, colour = PAL[["gris"]], linetype = "dotted") +
-    geom_pointrange(aes(ymin = IC_inf, ymax = IC_sup), position = position_dodge(.55), size = .4, na.rm = TRUE) +
+    geom_pointrange(data = fa[fa$variante != "Compuesto RAN de L2", ], aes(ymin = IC_inf, ymax = IC_sup), position = position_dodge(.55), size = .4, na.rm = TRUE) +
     geom_point(data = fa[fa$variante == "Compuesto RAN de L2", ], position = position_dodge(.55), shape = 4, size = 3, stroke = 1.2) +
     scale_colour_manual(values = COLV, drop = TRUE) + coord_cartesian(ylim = c(.45, .85)) +
     labs(x = "Momento (cohortes)", y = "AUC (IC 95 %)") + tema_leeduca()
