@@ -84,6 +84,40 @@ Con los precursores de 5 años (conciencia fonológica, letras y denominación r
 
 A los 4 años los precursores sirven para **vigilar**, no para **cribar**. A los 5 años ya permiten priorizar apoyos, siempre como riesgo y no como diagnóstico. Los detalles están en las fichas de cada tarea y en el artículo de predicción en preparación.
 
+## El cribado universal: qué dice la evidencia y dónde encaja la plataforma {#sec-cribado}
+
+### Cuántos niños: la prevalencia depende del criterio
+
+Las cifras de dislexia en español varían mucho, y la razón principal es el criterio que se usa para identificarla:
+
+| Fuente | Población | Criterio | Prevalencia |
+|---|---|---|---|
+| Metaanálisis en español [@cubilla2024prevalencia] | 16 estudios | Variable | 7,5 % (5,2–10,9), con gran heterogeneidad |
+| Metaanálisis mundial [@yang2022prevalence] | Primaria | Variable | 7,1 %; similar en ortografías transparentes y opacas |
+| Uruguay [@cuadro2017prevalencia] | 1.408 escolares | Varios procedimientos sobre la misma muestra | 2,2–5,3 % según el procedimiento |
+| Murcia [@carrillo2011prevalencia] | Muestra representativa | Detección secuenciada: cribado colectivo y confirmación individual | Cifra pendiente de extraer del artículo |
+| Andalucía [@villegas2023andalucia] | 944.118 escolares | Diagnóstico administrativo | 1,24 %; diagnóstico hacia los 10 años |
+| Málaga, LEEDUCA [@loredo2025prevalencia] | 691, 5.º–6.º | −1 DT en decisión léxica y fluidez | 8,5 % de riesgo |
+| Canarias [@garcia2013comprension] | 2.º EP a 4.º ESO | Comprensión de textos | 20,2 % con problemas de comprensión; 6,7 % malos comprendedores |
+
+Tres lecturas para el manual:
+
+- **No hay una prevalencia «verdadera» única.** La lectura se distribuye de forma continua, así que la cifra depende del corte [@wagner2020prevalence]. Por eso la plataforma no da una prevalencia, sino niveles de certeza con su porcentaje en cada cohorte.
+- **La escuela identifica tarde y poco.** El 1,24 % de Andalucía, diagnosticado hacia los 10 años, frente a un 5–8 % esperable, indica infradiagnóstico. Detectar en Infantil y en 1.º es justo lo que la plataforma puede aportar.
+- **La comprensión es otro problema.** Una parte importante de los malos comprendedores no tiene dificultad de decodificación. Es el motivo de añadir la comprensión como dimensión aparte (ver «Pendiente»).
+
+### Qué precisión cabe esperar de un cribado
+
+- **En español hay cribados con buena precisión en Infantil.** Un conjunto de medidas basadas en el currículo en 3.º de Infantil alcanzó un AUC de .83 en otoño y de .94–.97 en invierno y primavera. La conciencia fonémica y el conocimiento de las correspondencias letra-sonido fueron las mejores medidas aisladas [@gutierrez2020cbm]. Lexiland, un cribado en tableta para niños de 5 años, detectó al 90 % de los que tendrían dificultades a final de 1.º, con una especificidad del 76 % [@zugarramurdi2022lexiland]. En catalán, Prelectocat ofrece puntos de corte a los 5 años [@lopezsala2025prelectocat].
+- **La sensibilidad suele quedarse corta.** Un metaanálisis de 30 estudios con cribados adaptativos por ordenador encuentra una especificidad de .83 y una sensibilidad de .77, por debajo del .80 que se recomienda para un cribado universal [@shen2026cat]. Los cortes calculados con datos locales mejoran la sensibilidad a costa de la especificidad.
+- **Repetir o añadir una segunda fase reduce los falsos positivos.** Añadir un seguimiento corto del progreso o una evaluación dinámica redujo los falsos positivos en 1.º [@compton2010gated]. Una segunda fase solo con los niños que no superan la primera aumenta la especificidad, pero puede bajar la sensibilidad [@klingbeil2017multivariate]. Funciona mejor si la segunda medida aporta información distinta de la primera: dos medidas muy correlacionadas apenas reducen los falsos positivos [@vannorman2019gated].
+
+### Dónde encaja la plataforma
+
+- **Precisión comparable.** El modelo de 5 años (AUC .82, validado dejando cada cohorte fuera) está en el rango de los cribados publicados en español.
+- **El seguimiento ya está hecho.** Tres evaluaciones por curso equivalen a la segunda fase o al seguimiento del progreso que la literatura recomienda. Ningún cribado publicado en español tiene ese seguimiento a esta escala.
+- **Estudio propuesto.** Simular con los datos de la plataforma un cribado en dos fases: una primera con letras y conciencia fonológica, y una segunda con la tarea menos correlacionada (por ejemplo, el RAN o la evolución entre trimestres). Calcular la sensibilidad y la especificidad frente a la dificultad persistente y frente a Woodcock-Muñoz.
+
 ## Por qué esta variable es útil en otros análisis
 
 El nivel de certeza resume toda la trayectoria lectora de un niño en una sola variable, construida con reglas fijas y con la misma referencia para todas las cohortes. Por eso sirve también como resultado en otros estudios; por ejemplo, para comparar la proporción de dificultad persistente entre centros con y sin un programa, o para describir a qué grupo de severidad llegan los niños con un perfil de riesgo determinado.

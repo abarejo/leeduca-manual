@@ -50,6 +50,8 @@ Lo que dice la evidencia:
 
 Lo que dicen nuestros datos coincide: a los 7–8 años, TECLE se relaciona mucho con la lectura de palabras y texto y poco con la comprensión; depende algo del nivel socioeconómico del centro y apenas del sexo, como en la adaptación argentina.
 
+**Qué mide TECLE dentro de la concepción simple de la lectura.** Es una tarea de comprensión de frases con tiempo, así que su puntuación es una **eficiencia**: frases comprendidas por unidad de tiempo. Cuando la comprensión se mide como tasa, y no solo como aciertos, depende más del reconocimiento de palabras [@ronberg2016rate]. Por eso en los primeros cursos TECLE se comporta sobre todo como una medida de decodificación, y su relación con el lenguaje debería crecer con la edad, como predice la concepción simple [@hoover1990simple; @sanchezvincitore2022svr]. En nuestros datos en papel, la relación con la nota de Lengua baja de .53 en 2.º a .36 en 6.º. Encaja con que, en los cursos altos, la comprensión de textos dependa cada vez más del lenguaje, algo que una prueba de frases sencillas no recoge. TECLE sirve para cribar la eficiencia lectora en toda la Primaria, pero no sustituye a una medida de comprensión de textos.
+
 Referencias localizadas con SciSpace (falta comprobar volúmenes y páginas): Cuadro et al. (2009), *Ciencias Psicológicas*; Denton et al. (2011), *Scientific Studies of Reading*; Ferreres et al. (2011), *Revista Neuropsicología Latinoamericana*; Johnson et al. (2011), *Assessment for Effective Intervention*; Kang y Shin (2019), *Reading & Writing Quarterly*; Kim, Wagner y Foster (2011), *Scientific Studies of Reading*.
 
 ## Resultados principales

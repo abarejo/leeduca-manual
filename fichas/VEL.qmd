@@ -22,6 +22,25 @@ Tres advertencias antes de usarlo:
 
 Es un borrador para probar la estructura de ficha con tareas muy usadas. Script: `scripts/velocidad_lectora.py`; salida: `velocidad_lectora_v1.xlsx`.
 
+## 0. Marco teórico: de la velocidad a la comprensión
+
+**Qué es la fluidez.** Leer con fluidez es leer con exactitud, a buen ritmo y con la entonación que pide el sentido del texto. La velocidad es solo una de sus partes. En la concepción simple de la lectura, la fluidez es el puente entre la decodificación y la comprensión: si reconocer las palabras cuesta poco, quedan recursos para entender [@hoover1990simple].
+
+**Qué dice la evidencia en español:**
+
+- **La fluidez es uno de los componentes más relacionados con la comprensión.** En un metaanálisis de 33 estudios con niños monolingües hispanohablantes, las relaciones más fuertes con la comprensión fueron las de la fluidez y la conciencia fonológica [@baker2022components].
+- **El peso de la velocidad baja con los cursos.** En niños españoles, la automatización en la lectura de palabras explica la comprensión sobre todo en 2.º; en 4.º gana peso la entonación [@calet2015fluency]. En 2.º y 3.º de niños chilenos, el vocabulario y la comprensión oral pesaron más que la velocidad [@quezada2024chile]. Es el patrón de la concepción simple en una ortografía transparente: la decodificación se domina pronto y después manda el lenguaje [@sanchezvincitore2022svr; @lervag2018comprehension].
+- **La prosodia mantiene su relación con la comprensión.** Un metaanálisis en hispanohablantes la estima en r = .46, igual en Primaria y en Secundaria [@roldan2022prosodia]. En 4.º de Primaria, la prosodia del texto, y no la velocidad, añadió explicación de la comprensión por encima de la decodificación y el lenguaje [@veenendaal2015prosody].
+- **La fluidez se puede mejorar.** En hispanohablantes de 3.º de Infantil a 6.º de Primaria, las intervenciones sobre velocidad o fluidez tienen un efecto medio de 0,47 [@ripoll2024intervenciones].
+
+**Por qué importan las dos lecturas de EDICOLE.** Los niños ajustan su forma de leer al objetivo. Ante un texto con sentido adoptan una lectura fluida difícil de modificar; con palabras aisladas, en cambio, siguen mejor las instrucciones de ir más despacio o más deprisa [@bowey1984strategy]. Leer en silencio acelera la elaboración del texto. Eso perjudica la comprensión si el niño regula solo su lectura, pero el efecto desaparece si se asegura que elabora el texto [@carretti2012silente]. Además, la comprensión medida como **aciertos por minuto** se relaciona más con la lectura de palabras que la comprensión medida solo en aciertos [@ronberg2016rate].
+
+**Qué implica para la plataforma:**
+
+- **La relación débil entre velocidad y comprensión de EDICOLE (ρ = .1–.3) no es un fallo de la tarea.** Es lo esperable cuando la decodificación ya está dominada y el texto es corto.
+- **La segunda lectura permite medir la comprensión como eficiencia** (aciertos por minuto de lectura) y comprobar si el niño ajusta su ritmo al objetivo. Es la idea del experimento E8 de § 4 sexies.
+- **La plataforma no mide la prosodia,** que es el componente que más se mantiene unido a la comprensión. Grabar la lectura del texto (al menos en una submuestra) permitiría puntuarla.
+
 ## 1. Medidas y cálculo de ppm
 
 El número de palabras de cada texto se ha tomado del material de la actividad en el catálogo web.
