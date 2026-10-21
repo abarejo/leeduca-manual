@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c478032727aa88b4f05177f2cb6a89fb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d8ad974ac8d1b8906243f0682441e0e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -540,7 +560,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#medidas-y-cálculo-de-ppm" id="toc-medidas-y-cálculo-de-ppm" class="nav-link active" data-scroll-target="#medidas-y-cálculo-de-ppm">1. Medidas y cálculo de ppm</a></li>
+  <li><a href="#marco-teórico-de-la-velocidad-a-la-comprensión" id="toc-marco-teórico-de-la-velocidad-a-la-comprensión" class="nav-link active" data-scroll-target="#marco-teórico-de-la-velocidad-a-la-comprensión">0. Marco teórico: de la velocidad a la comprensión</a></li>
+  <li><a href="#medidas-y-cálculo-de-ppm" id="toc-medidas-y-cálculo-de-ppm" class="nav-link" data-scroll-target="#medidas-y-cálculo-de-ppm">1. Medidas y cálculo de ppm</a></li>
   <li><a href="#bis.-muestra" id="toc-bis.-muestra" class="nav-link" data-scroll-target="#bis.-muestra">1 bis. Muestra</a></li>
   <li><a href="#crecimiento-y-baremo-en-palabras-por-minuto" id="toc-crecimiento-y-baremo-en-palabras-por-minuto" class="nav-link" data-scroll-target="#crecimiento-y-baremo-en-palabras-por-minuto">2. Crecimiento y baremo en palabras por minuto</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">3. Fiabilidad</a></li>
@@ -606,6 +627,24 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Lectura y comprensión.</strong> La velocidad y la comprensión de EDICOLE apenas se relacionan (ρ = .1–.3).</li>
 </ul>
 <p>Es un borrador para probar la estructura de ficha con tareas muy usadas. Script: <code>scripts/velocidad_lectora.py</code>; salida: <code>velocidad_lectora_v1.xlsx</code>.</p>
+<section id="marco-teórico-de-la-velocidad-a-la-comprensión" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico-de-la-velocidad-a-la-comprensión">0. Marco teórico: de la velocidad a la comprensión</h2>
+<p><strong>Qué es la fluidez.</strong> Leer con fluidez es leer con exactitud, a buen ritmo y con la entonación que pide el sentido del texto. La velocidad es solo una de sus partes. En la concepción simple de la lectura, la fluidez es el puente entre la decodificación y la comprensión: si reconocer las palabras cuesta poco, quedan recursos para entender <span class="citation" data-cites="hoover1990simple">(<a href="../referencias.html#ref-hoover1990simple" role="doc-biblioref">Hoover y Gough 1990</a>)</span>.</p>
+<p><strong>Qué dice la evidencia en español:</strong></p>
+<ul>
+<li><strong>La fluidez es uno de los componentes más relacionados con la comprensión.</strong> En un metaanálisis de 33 estudios con niños monolingües hispanohablantes, las relaciones más fuertes con la comprensión fueron las de la fluidez y la conciencia fonológica <span class="citation" data-cites="baker2022components">(<a href="../referencias.html#ref-baker2022components" role="doc-biblioref">Baker et&nbsp;al. 2022</a>)</span>.</li>
+<li><strong>El peso de la velocidad baja con los cursos.</strong> En niños españoles, la automatización en la lectura de palabras explica la comprensión sobre todo en 2.º; en 4.º gana peso la entonación <span class="citation" data-cites="calet2015fluency">(<a href="../referencias.html#ref-calet2015fluency" role="doc-biblioref">Calet, Gutiérrez-Palma, y Defior 2015</a>)</span>. En 2.º y 3.º de niños chilenos, el vocabulario y la comprensión oral pesaron más que la velocidad <span class="citation" data-cites="quezada2024chile">(<a href="../referencias.html#ref-quezada2024chile" role="doc-biblioref">Quezada et&nbsp;al. 2024</a>)</span>. Es el patrón de la concepción simple en una ortografía transparente: la decodificación se domina pronto y después manda el lenguaje <span class="citation" data-cites="sanchezvincitore2022svr lervag2018comprehension">(<a href="../referencias.html#ref-sanchezvincitore2022svr" role="doc-biblioref">Sánchez-Vincitore et&nbsp;al. 2022</a>; <a href="../referencias.html#ref-lervag2018comprehension" role="doc-biblioref">Lervåg, Hulme, y Melby-Lervåg 2018</a>)</span>.</li>
+<li><strong>La prosodia mantiene su relación con la comprensión.</strong> Un metaanálisis en hispanohablantes la estima en r = .46, igual en Primaria y en Secundaria <span class="citation" data-cites="roldan2022prosodia">(<a href="../referencias.html#ref-roldan2022prosodia" role="doc-biblioref">Roldán et&nbsp;al. 2022</a>)</span>. En 4.º de Primaria, la prosodia del texto, y no la velocidad, añadió explicación de la comprensión por encima de la decodificación y el lenguaje <span class="citation" data-cites="veenendaal2015prosody">(<a href="../referencias.html#ref-veenendaal2015prosody" role="doc-biblioref">Veenendaal, Groen, y Verhoeven 2015</a>)</span>.</li>
+<li><strong>La fluidez se puede mejorar.</strong> En hispanohablantes de 3.º de Infantil a 6.º de Primaria, las intervenciones sobre velocidad o fluidez tienen un efecto medio de 0,47 <span class="citation" data-cites="ripoll2024intervenciones">(<a href="../referencias.html#ref-ripoll2024intervenciones" role="doc-biblioref">Ripoll Salceda y Zevallos Polo 2024</a>)</span>.</li>
+</ul>
+<p><strong>Por qué importan las dos lecturas de EDICOLE.</strong> Los niños ajustan su forma de leer al objetivo. Ante un texto con sentido adoptan una lectura fluida difícil de modificar; con palabras aisladas, en cambio, siguen mejor las instrucciones de ir más despacio o más deprisa <span class="citation" data-cites="bowey1984strategy">(<a href="../referencias.html#ref-bowey1984strategy" role="doc-biblioref">Bowey 1984</a>)</span>. Leer en silencio acelera la elaboración del texto. Eso perjudica la comprensión si el niño regula solo su lectura, pero el efecto desaparece si se asegura que elabora el texto <span class="citation" data-cites="carretti2012silente">(<a href="../referencias.html#ref-carretti2012silente" role="doc-biblioref">Carretti et&nbsp;al. 2012</a>)</span>. Además, la comprensión medida como <strong>aciertos por minuto</strong> se relaciona más con la lectura de palabras que la comprensión medida solo en aciertos <span class="citation" data-cites="ronberg2016rate">(<a href="../referencias.html#ref-ronberg2016rate" role="doc-biblioref">Rønberg y Petersen 2016</a>)</span>.</p>
+<p><strong>Qué implica para la plataforma:</strong></p>
+<ul>
+<li><strong>La relación débil entre velocidad y comprensión de EDICOLE (ρ = .1–.3) no es un fallo de la tarea.</strong> Es lo esperable cuando la decodificación ya está dominada y el texto es corto.</li>
+<li><strong>La segunda lectura permite medir la comprensión como eficiencia</strong> (aciertos por minuto de lectura) y comprobar si el niño ajusta su ritmo al objetivo. Es la idea del experimento E8 de § 4 sexies.</li>
+<li><strong>La plataforma no mide la prosodia,</strong> que es el componente que más se mantiene unido a la comprensión. Grabar la lectura del texto (al menos en una submuestra) permitiría puntuarla.</li>
+</ul>
+</section>
 <section id="medidas-y-cálculo-de-ppm" class="level2">
 <h2 class="anchored" data-anchor-id="medidas-y-cálculo-de-ppm">1. Medidas y cálculo de ppm</h2>
 <p>El número de palabras de cada texto se ha tomado del material de la actividad en el catálogo web.</p>
@@ -10778,6 +10817,44 @@ Figura&nbsp;14.7: Validez predictiva con criterios que no contienen la medida.
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-baker2022components" class="csl-entry" role="listitem">
+Baker, Doris Luft, Patricia Crespo Alberto, Manuel Monzalve Macaya, Isabel García, y Mónica Gutiérrez-Ortega. 2022. <span>«Relation between the essential components of reading and reading comprehension in monolingual <span>Spanish</span>-speaking children: a meta-analysis»</span>. <em>Educational Psychology Review</em> 34. <a href="https://doi.org/10.1007/s10648-022-09694-1">https://doi.org/10.1007/s10648-022-09694-1</a>.
+</div>
+<div id="ref-bowey1984strategy" class="csl-entry" role="listitem">
+Bowey, Judith A. 1984. <span>«The interaction of strategy and context in children’s oral reading performance»</span>. <em>Journal of Psycholinguistic Research</em> 13. <a href="https://doi.org/10.1007/BF01067695">https://doi.org/10.1007/BF01067695</a>.
+</div>
+<div id="ref-calet2015fluency" class="csl-entry" role="listitem">
+Calet, Nuria, Nicolás Gutiérrez-Palma, y Sylvia Defior. 2015. <span>«A cross-sectional study of fluency and reading comprehension in <span>Spanish</span> primary school children»</span>. <em>Journal of Research in Reading</em> 38. <a href="https://doi.org/10.1111/1467-9817.12019">https://doi.org/10.1111/1467-9817.12019</a>.
+</div>
+<div id="ref-carretti2012silente" class="csl-entry" role="listitem">
+Carretti, Barbara, Cristiana Bosio, Rossana De Beni, y Cesare Cornoldi. 2012. <span>«Comprensión lectora a partir de lectura oral y silente: un análisis de los tiempos y la adecuación»</span>. <em>Revista Neuropsicología Latinoamericana</em> 4. <a href="https://doi.org/10.5579/rnl.2012.0100">https://doi.org/10.5579/rnl.2012.0100</a>.
+</div>
+<div id="ref-hoover1990simple" class="csl-entry" role="listitem">
+Hoover, Wesley A., y Philip B. Gough. 1990. <span>«The simple view of reading»</span>. <em>Reading and Writing</em> 2 (2): 127-60. <a href="https://doi.org/10.1007/BF00401799">https://doi.org/10.1007/BF00401799</a>.
+</div>
+<div id="ref-lervag2018comprehension" class="csl-entry" role="listitem">
+Lervåg, Arne, Charles Hulme, y Monica Melby-Lervåg. 2018. <span>«Unpicking the developmental relationship between oral language skills and reading comprehension: it’s simple, but complex»</span>. <em>Child Development</em> 89 (5): 1821-38. <a href="https://doi.org/10.1111/cdev.12861">https://doi.org/10.1111/cdev.12861</a>.
+</div>
+<div id="ref-quezada2024chile" class="csl-entry" role="listitem">
+Quezada, Camilo, Sergio Felipe Urbina Reyes, María Prado-Nóvoa, y Carmen Julia Coloma. 2024. <span>«Incidencia de habilidades lingüísticas y lectoras en la lectura comprensiva de escolares chilenos de segundo y tercero básico»</span>. <em>Revista Signos</em>. <a href="https://doi.org/10.4151/s0718-09342024011601039">https://doi.org/10.4151/s0718-09342024011601039</a>.
+</div>
+<div id="ref-ripoll2024intervenciones" class="csl-entry" role="listitem">
+Ripoll Salceda, Juan Cruz, y Diana Sofía Zevallos Polo. 2024. <span>«Intervenciones para la mejora de la velocidad y fluidez lectora en hispanohablantes de Educación Infantil y Primaria: un metaanálisis»</span>. <em>Revista de Investigación en Logopedia</em> 14. <a href="https://doi.org/10.5209/rlog.90521">https://doi.org/10.5209/rlog.90521</a>.
+</div>
+<div id="ref-roldan2022prosodia" class="csl-entry" role="listitem">
+Roldán, Luis Ángel, Jesica Formoso, Verónica Zabaleta, y Juan Pablo Barreyro. 2022. <span>«Las relaciones entre prosodia y comprensión lectora en alumnos hispanohablantes: revisión sistemática y metaanálisis»</span>. <em>Interdisciplinaria</em> 39. <a href="https://doi.org/10.16888/interd.2022.39.3.7">https://doi.org/10.16888/interd.2022.39.3.7</a>.
+</div>
+<div id="ref-ronberg2016rate" class="csl-entry" role="listitem">
+Rønberg, Louise, y Dorthe Klint Petersen. 2016. <span>«It matters whether reading comprehension is conceptualised as rate or accuracy»</span>. <em>Journal of Research in Reading</em> 39. <a href="https://doi.org/10.1111/1467-9817.12047">https://doi.org/10.1111/1467-9817.12047</a>.
+</div>
+<div id="ref-sanchezvincitore2022svr" class="csl-entry" role="listitem">
+Sánchez-Vincitore, Laura V., Cledenin Veras, Aída Mencía-Ripley, Carlos Ruiz-Matuk, y Daniel Cubilla-Bonnetier. 2022. <span>«Reading comprehension precursors: evidence of the simple view of reading in a transparent orthography»</span>. <em>Frontiers in Education</em> 7: 914414. <a href="https://doi.org/10.3389/feduc.2022.914414">https://doi.org/10.3389/feduc.2022.914414</a>.
+</div>
+<div id="ref-veenendaal2015prosody" class="csl-entry" role="listitem">
+Veenendaal, Nathalie J., Margriet A. Groen, y Ludo Verhoeven. 2015. <span>«What oral text reading fluency can reveal about reading comprehension»</span>. <em>Journal of Research in Reading</em> 38. <a href="https://doi.org/10.1111/1467-9817.12024">https://doi.org/10.1111/1467-9817.12024</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
