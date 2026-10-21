@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (E · Decisión con tiempo de respuesta; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_DECISION_ORTOGRAFICA</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (E · Decisión con tiempo de respuesta; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_DECISION_ORTOGRAFICA</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -629,6 +650,13 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Elegir, entre dos formas que suenan igual, la palabra bien escrita (por ejemplo, <em>vaca</em> frente a <em>baca</em>) mide el <strong>conocimiento ortográfico</strong>: las representaciones de palabras concretas en el léxico mental. Es lo que permite reconocer una palabra de un vistazo, sin convertirla letra a letra.</p>
+<p><strong>Cómo se forma.</strong> Según la hipótesis del autoaprendizaje, cada vez que el niño decodifica con éxito una palabra nueva guarda algo de su forma escrita. La decodificación fonológica funciona como un «maestro interno» <span class="citation" data-cites="jorm1983recoding">(<a href="../../referencias.html#ref-jorm1983recoding" role="doc-biblioref">Jorm y Share 1983</a>)</span>. Los modelos computacionales muestran que este mecanismo basta para aprender miles de palabras y que los déficits fonológicos de partida bastan para producir dislexia <span class="citation" data-cites="ziegler2014selfteaching">(<a href="../../referencias.html#ref-ziegler2014selfteaching" role="doc-biblioref">Ziegler, Perry, y Zorzi 2014</a>)</span>. Una revisión sistemática de 62 experimentos confirma el papel de la recodificación fonológica en todos los sistemas de escritura <span class="citation" data-cites="li2022selfteaching">(<a href="../../referencias.html#ref-li2022selfteaching" role="doc-biblioref">Li y Wang 2023</a>)</span>. En español también funciona, salvo con las grafías poco frecuentes de un sonido, que necesitan más exposición <span class="citation" data-cites="ferroni2014recodificacion">(<a href="../../referencias.html#ref-ferroni2014recodificacion" role="doc-biblioref">Ferroni y Diuk 2014</a>)</span>.</p>
+<p><strong>Qué mide la tarea.</strong> La elección ortográfica recoge a la vez el conocimiento de palabras concretas y un conocimiento ortográfico más general. Elegir bien no depende solo de saber leer la palabra <span class="citation" data-cites="compton2020choice">(<a href="../../referencias.html#ref-compton2020choice" role="doc-biblioref">Compton et&nbsp;al. 2020</a>)</span>. En español, el léxico ortográfico aporta a la competencia lectora más allá de la decodificación, y se afina con los años de práctica <span class="citation" data-cites="cuadro2014lexico">(<a href="../../referencias.html#ref-cuadro2014lexico" role="doc-biblioref">Cuadro y Costa 2014</a>)</span>.</p>
+<p><strong>Lo que muestran nuestros datos.</strong> α de 2021 = .80 y estabilidad entre trimestres ρ = .52, más baja que en la lectura en voz alta. Aun así, es una de las tareas que mejor predicen la baja fluidez lectora años después (AUC mediano .76, máximo .80). Es lo esperable si mide cuántas palabras ha consolidado el niño, que es justamente lo que falla en la dislexia en una ortografía transparente.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -872,6 +900,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .66–.80 (4 momentos; 231–486 niños).</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -2021,6 +2050,26 @@ Tablas completas <code>datos/agregados/AUTO_LEC_DECISION_ORTOGRAFICA/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-compton2020choice" class="csl-entry" role="listitem">
+Compton, Donald L., Jennifer K. Gilbert, Devin M. Kearns, y Richard K. Olson. 2020. <span>«Using an item-specific predictor to test the dimensionality of the orthographic choice task»</span>. <em>Annals of Dyslexia</em> 70. <a href="https://doi.org/10.1007/s11881-020-00202-0">https://doi.org/10.1007/s11881-020-00202-0</a>.
+</div>
+<div id="ref-cuadro2014lexico" class="csl-entry" role="listitem">
+Cuadro, Ariel, y Daniel Costa. 2014. <span>«Orthographic lexicon and reading skills in young <span>Spanish</span> speaking readers»</span>. <em>Estudios de Psicología</em> 35. <a href="https://doi.org/10.1080/02109395.2014.965457">https://doi.org/10.1080/02109395.2014.965457</a>.
+</div>
+<div id="ref-ferroni2014recodificacion" class="csl-entry" role="listitem">
+Ferroni, Marina, y Beatriz Diuk. 2014. <span>«Recodificación fonológica y formación de representaciones ortográficas en español»</span>. <em>Psykhe</em> 23. <a href="https://doi.org/10.7764/psykhe.23.2.599">https://doi.org/10.7764/psykhe.23.2.599</a>.
+</div>
+<div id="ref-jorm1983recoding" class="csl-entry" role="listitem">
+Jorm, Anthony F., y David L. Share. 1983. <span>«Phonological recoding and reading acquisition»</span>. <em>Applied Psycholinguistics</em> 4 (2): 103-47. <a href="https://doi.org/10.1017/S0142716400004380">https://doi.org/10.1017/S0142716400004380</a>.
+</div>
+<div id="ref-li2022selfteaching" class="csl-entry" role="listitem">
+Li, Yixun, y Min Wang. 2023. <span>«A systematic review of orthographic learning via self-teaching»</span>. <em>Educational Psychologist</em> 58 (1): 35-56. <a href="https://doi.org/10.1080/00461520.2022.2137673">https://doi.org/10.1080/00461520.2022.2137673</a>.
+</div>
+<div id="ref-ziegler2014selfteaching" class="csl-entry" role="listitem">
+Ziegler, Johannes C., Conrad Perry, y Marco Zorzi. 2014. <span>«Modelling reading development through phonological decoding and self-teaching: implications for dyslexia»</span>. <em>Philosophical Transactions of the Royal Society B</em> 369 (1634): 20120397. <a href="https://doi.org/10.1098/rstb.2012.0397">https://doi.org/10.1098/rstb.2012.0397</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

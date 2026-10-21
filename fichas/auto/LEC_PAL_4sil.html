@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_PAL_4sil</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_PAL_4sil</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -629,6 +650,18 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Leer en voz alta sílabas, palabras y pseudopalabras mide el <strong>reconocimiento de palabras escritas</strong>: convertir letras en sonidos y acceder a la palabra. Es el componente de decodificación de la concepción simple de la lectura <span class="citation" data-cites="hoover1990simple">(<a href="../../referencias.html#ref-hoover1990simple" role="doc-biblioref">Hoover y Gough 1990</a>)</span> y el núcleo de la dislexia según la definición de la IDA (<a href="../../definicion.html" class="quarto-xref"><span>Qué medimos a la luz de la nueva definición de la dislexia</span></a>).</p>
+<p><strong>Qué distingue a cada lista.</strong> Los modelos de doble ruta separan dos procedimientos. La <strong>ruta subléxica</strong> convierte grafemas en fonemas y es la única que sirve para las pseudopalabras. La <strong>ruta léxica</strong> reconoce la palabra entera y se nota en que las palabras se leen más deprisa que las pseudopalabras (efecto de lexicalidad) y las frecuentes, más que las raras. En español, los niños usan las dos desde 2.º de Primaria <span class="citation" data-cites="avdyli2014lexical davies2013lexical">(<a href="../../referencias.html#ref-avdyli2014lexical" role="doc-biblioref">Avdyli, Castejón, y Cuetos 2014</a>; <a href="../../referencias.html#ref-davies2013lexical" role="doc-biblioref">Davies et&nbsp;al. 2013</a>)</span>. Por eso la plataforma tiene las dos listas: las pseudopalabras miden la decodificación pura, y la diferencia con las palabras estima cuánto léxico ortográfico ha formado el niño. La longitud (de una a cuatro sílabas) hace visible la lectura serial: cuanto más depende el niño de la conversión letra a letra, más le cuesta cada sílaba añadida.</p>
+<p><strong>En una ortografía transparente, lo que discrimina es la velocidad.</strong> En español, casi todos los niños leen con precisión a mitad de 1.º. Los niños con dislexia aciertan, pero leen más despacio, y su lectura se parece a la de lectores más pequeños de su mismo nivel: es un desarrollo retrasado más que desviado <span class="citation" data-cites="davies2007spanish">(<a href="../../referencias.html#ref-davies2007spanish" role="doc-biblioref">Davies, Cuetos, y Glez-Seijas 2007</a>)</span>. Un metaanálisis de 79 estudios europeos concluye que la velocidad lectora distingue a los lectores con dislexia en todas las ortografías y edades, mientras que la precisión depende de la edad y de la transparencia <span class="citation" data-cites="carioti2021depth">(<a href="../../referencias.html#ref-carioti2021depth" role="doc-biblioref">Carioti et&nbsp;al. 2021</a>)</span>. En alemán, el 70 % de los lectores lentos de 1.º seguía siéndolo en 2.º de ESO <span class="citation" data-cites="landerl2008fluency">(<a href="../../referencias.html#ref-landerl2008fluency" role="doc-biblioref">Landerl y Wimmer 2008</a>)</span>. Por eso la puntuación de estas fichas son los <strong>aciertos por minuto</strong>, no los aciertos.</p>
+<p><strong>Lo que muestran nuestros datos.</strong> Son las tareas más fiables y con más validez de la plataforma:</p>
+<ul>
+<li><strong>Fiabilidad.</strong> Estabilidad entre trimestres de ρ = .65 a .81, y α de 2021 entre .73 y .97.</li>
+<li><strong>Validez externa.</strong> Predicen la baja fluidez lectora de Woodcock-Muñoz años después con un AUC mediano de .72 a .77 (<a href="../../criterio-woodcock.html">capítulo</a>). Las listas más largas (palabras de tres y cuatro sílabas) son las que mejor predicen.</li>
+<li><strong>Retraso o alteración.</strong> Comparar pseudopalabras con palabras, entre niños del mismo nivel lector, separa el retraso de la alteración (<a href="../../baremo-nivel-lector.html">Baremos por nivel lector</a>).</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -987,6 +1020,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .74–.80 (5 momentos; 241–592 niños).</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -2491,6 +2525,26 @@ Tablas completas <code>datos/agregados/AUTO_LEC_PAL_4sil/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-avdyli2014lexical" class="csl-entry" role="listitem">
+Avdyli, Rrezarta, Luis Castejón, y Fernando Cuetos. 2014. <span>«Lexical effects in word naming in <span>Spanish</span> children»</span>. <em>The Spanish Journal of Psychology</em> 17. <a href="https://doi.org/10.1017/sjp.2014.24">https://doi.org/10.1017/sjp.2014.24</a>.
+</div>
+<div id="ref-carioti2021depth" class="csl-entry" role="listitem">
+Carioti, Desiré, Marta Franca Masia, Simona Travellini, y Manuela Berlingeri. 2021. <span>«Orthographic depth and developmental dyslexia: a meta-analytic study»</span>. <em>Annals of Dyslexia</em> 71 (3): 399-438. <a href="https://doi.org/10.1007/s11881-021-00226-0">https://doi.org/10.1007/s11881-021-00226-0</a>.
+</div>
+<div id="ref-davies2007spanish" class="csl-entry" role="listitem">
+Davies, Robert, Fernando Cuetos, y Rosa Mary Glez-Seijas. 2007. <span>«Reading development and dyslexia in a transparent orthography: a survey of <span>Spanish</span> children»</span>. <em>Annals of Dyslexia</em> 57 (2): 179-98. <a href="https://doi.org/10.1007/s11881-007-0010-1">https://doi.org/10.1007/s11881-007-0010-1</a>.
+</div>
+<div id="ref-davies2013lexical" class="csl-entry" role="listitem">
+Davies, Robert, Javier Rodríguez-Ferreiro, Paz Suárez, y Fernando Cuetos. 2013. <span>«Lexical and sub-lexical effects on accuracy, reaction time and response duration: impaired and typical word and pseudoword reading in a transparent orthography»</span>. <em>Reading and Writing</em> 26 (5): 721-38. <a href="https://doi.org/10.1007/s11145-012-9388-1">https://doi.org/10.1007/s11145-012-9388-1</a>.
+</div>
+<div id="ref-hoover1990simple" class="csl-entry" role="listitem">
+Hoover, Wesley A., y Philip B. Gough. 1990. <span>«The simple view of reading»</span>. <em>Reading and Writing</em> 2 (2): 127-60. <a href="https://doi.org/10.1007/BF00401799">https://doi.org/10.1007/BF00401799</a>.
+</div>
+<div id="ref-landerl2008fluency" class="csl-entry" role="listitem">
+Landerl, Karin, y Heinz Wimmer. 2008. <span>«Development of word reading fluency and spelling in a consistent orthography: an 8-year follow-up»</span>. <em>Journal of Educational Psychology</em> 100 (1): 150-61. <a href="https://doi.org/10.1037/0022-0663.100.1.150">https://doi.org/10.1037/0022-0663.100.1.150</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

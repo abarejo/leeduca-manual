@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_ET_VERB_ARABIGOS</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_ET_VERB_ARABIGOS</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -629,6 +650,17 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Contar hacia delante y hacia atrás, y leer números arábigos, miden el <strong>conocimiento simbólico del número</strong>: la secuencia verbal de numerales y su correspondencia con las cifras. Son conocimientos aprendidos, distintos del sentido numérico aproximado (comparar cantidades), y forman la base de la aritmética escolar.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>El conteo de Infantil predice las matemáticas de los primeros cursos.</strong> El dominio de los principios de conteo a los 5 años predice el riesgo de dificultades matemáticas en 1.º <span class="citation" data-cites="stock2009markers">(<a href="../../referencias.html#ref-stock2009markers" role="doc-biblioref">Stock, Desoete, y Roeyers 2009</a>)</span>. En niños españoles, la secuencia numérica verbal (conteo procedimental) fue la tarea de Infantil con más peso en el rendimiento matemático de 2.º <span class="citation" data-cites="mercader2017basicas">(<a href="../../referencias.html#ref-mercader2017basicas" role="doc-biblioref">Mercader Ruiz, Presentación Herrero, y Siegenthaler Hierro 2017</a>)</span>.</li>
+<li><strong>Conocer los números arábigos es uno de los dos pilares de la aritmética inicial.</strong> En 569 niños, solo el conocimiento de los números y la discriminación de cantidades predijeron de forma única el progreso aritmético del primer curso <span class="citation" data-cites="malone2020number">(<a href="../../referencias.html#ref-malone2020number" role="doc-biblioref">Malone, Burgoyne, y Hulme 2020</a>)</span>. Los niños con dificultades matemáticas ya muestran déficits simbólicos en Infantil, y esos déficits persisten <span class="citation" data-cites="desoete2012comparison">(<a href="../../referencias.html#ref-desoete2012comparison" role="doc-biblioref">Desoete et&nbsp;al. 2012</a>)</span>.</li>
+<li><strong>Contar hacia atrás es más exigente</strong> que hacia delante. Pide recuperar la secuencia en orden inverso y mantenerla en la memoria de trabajo, y por eso discrimina mejor a los 5 años.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong> Las cuatro tareas tienen una consistencia interna alta (α = .84–.95), pero se aplicaron en una o dos sesiones y no hay estabilidad entre trimestres. Predicen poco la fluidez lectora posterior (AUC .53–.59), lo que apoya su validez discriminante. Frente a la baja aritmética de 10–11 años, contar hacia atrás en la segunda decena es la más específica: AUC .67 frente a .51 para la lectura (<a href="../../cognicion-numerica.html#sec-mate-criterio">Cognición numérica</a>).</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -812,6 +844,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .53–.65 (2 momentos; 219–414 niños). Frente a la baja aritmética de 10–11 años (<a href="../../cognicion-numerica.html#sec-mate-criterio">criterio provisional</a>), AUC .58–.64.</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -1647,6 +1680,20 @@ Tablas completas <code>datos/agregados/AUTO_MATE_ET_VERB_ARABIGOS/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-desoete2012comparison" class="csl-entry" role="listitem">
+Desoete, Annemie, Anneliesje Ceulemans, Frauke De Weerdt, y Stefanie Pieters. 2012. <span>«Can we predict mathematical learning disabilities from symbolic and non-symbolic comparison tasks in kindergarten? Findings from a longitudinal study»</span>. <em>British Journal of Educational Psychology</em> 82 (1): 64-81. <a href="https://doi.org/10.1348/2044-8279.002002">https://doi.org/10.1348/2044-8279.002002</a>.
+</div>
+<div id="ref-malone2020number" class="csl-entry" role="listitem">
+Malone, Stephanie A., Kelly Burgoyne, y Charles Hulme. 2020. <span>«Number knowledge and the approximate number system are two critical foundations for early arithmetic development»</span>. <em>Journal of Educational Psychology</em> 112. <a href="https://doi.org/10.1037/edu0000426">https://doi.org/10.1037/edu0000426</a>.
+</div>
+<div id="ref-mercader2017basicas" class="csl-entry" role="listitem">
+Mercader Ruiz, Jessica, María Jesús Presentación Herrero, y Rebeca Siegenthaler Hierro. 2017. <span>«Influencia de las habilidades matemáticas básicas en el rendimiento posterior»</span>. <em>International Journal of Developmental and Educational Psychology (INFAD)</em> 3. <a href="https://doi.org/10.17060/ijodaep.2017.n1.v3.993">https://doi.org/10.17060/ijodaep.2017.n1.v3.993</a>.
+</div>
+<div id="ref-stock2009markers" class="csl-entry" role="listitem">
+Stock, Pieter, Annemie Desoete, y Herbert Roeyers. 2009. <span>«Predicting arithmetic abilities: the role of preparatory arithmetic markers and intelligence»</span>. <em>Journal of Psychoeducational Assessment</em> 27 (3): 237-51. <a href="https://doi.org/10.1177/0734282908330587">https://doi.org/10.1177/0734282908330587</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

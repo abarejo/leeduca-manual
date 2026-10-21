@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_LECT_COMPRENSIVA</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_LECT_COMPRENSIVA</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -623,6 +644,17 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>La lectura de un texto continuo mide la <strong>fluidez lectora</strong>: leer con exactitud, a buen ritmo y con la entonación que exige el sentido. Integra el reconocimiento de palabras con los procesos de comprensión de frases, por eso es el puente entre la decodificación y la comprensión en la concepción simple de la lectura <span class="citation" data-cites="hoover1990simple">(<a href="../../referencias.html#ref-hoover1990simple" role="doc-biblioref">Hoover y Gough 1990</a>)</span>. La plataforma mide dos lecturas del mismo cuento: la primera, de velocidad, y una segunda orientada a comprender.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>Velocidad y comprensión van juntas en español.</strong> En una ortografía transparente, la decodificación se domina pronto y su peso en la comprensión baja con los cursos, mientras que el del lenguaje oral sube <span class="citation" data-cites="sanchezvincitore2022svr lervag2018comprehension">(<a href="../../referencias.html#ref-sanchezvincitore2022svr" role="doc-biblioref">Sánchez-Vincitore et&nbsp;al. 2022</a>; <a href="../../referencias.html#ref-lervag2018comprehension" role="doc-biblioref">Lervåg, Hulme, y Melby-Lervåg 2018</a>)</span>. La velocidad en texto es la medida de decodificación que más tiempo sigue relacionada con la comprensión.</li>
+<li><strong>Es la medida más estable de la habilidad lectora</strong> en ortografías consistentes. En alemán, la lentitud en 1.º anticipaba la lentitud años después <span class="citation" data-cites="landerl2008fluency">(<a href="../../referencias.html#ref-landerl2008fluency" role="doc-biblioref">Landerl y Wimmer 2008</a>)</span>.</li>
+<li><strong>Hay referencias en español.</strong> El metaanálisis de <span class="citation" data-cites="ripoll2020velocidad">Ripoll Salceda, Tapia Montesinos, y Aguado Alonso (<a href="../../referencias.html#ref-ripoll2020velocidad" role="doc-biblioref">2020</a>)</span> resume las velocidades por curso en hispanohablantes. El curso explica en torno al 70 % de las diferencias entre estudios, y la velocidad cambia según el trimestre en los primeros cursos.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong> La estabilidad entre trimestres es de ρ = .63 a .65. El α de 2021 de la velocidad en texto es bajo (.40), pero no es un buen indicador para una tarea de tiempo. Predice la baja fluidez de Woodcock-Muñoz con un AUC mediano de .74 a .75, y hasta .84–.87 en los mejores momentos. La comparación con la literatura y el baremo en palabras por minuto están en la <a href="../../fichas/VEL.html">ficha de velocidad lectora</a>.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1360,6 +1392,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .54–.87 (7 momentos; 122–591 niños).</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -4028,6 +4061,23 @@ Tablas completas <code>datos/agregados/AUTO_LEC_LECT_COMPRENSIVA/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hoover1990simple" class="csl-entry" role="listitem">
+Hoover, Wesley A., y Philip B. Gough. 1990. <span>«The simple view of reading»</span>. <em>Reading and Writing</em> 2 (2): 127-60. <a href="https://doi.org/10.1007/BF00401799">https://doi.org/10.1007/BF00401799</a>.
+</div>
+<div id="ref-landerl2008fluency" class="csl-entry" role="listitem">
+Landerl, Karin, y Heinz Wimmer. 2008. <span>«Development of word reading fluency and spelling in a consistent orthography: an 8-year follow-up»</span>. <em>Journal of Educational Psychology</em> 100 (1): 150-61. <a href="https://doi.org/10.1037/0022-0663.100.1.150">https://doi.org/10.1037/0022-0663.100.1.150</a>.
+</div>
+<div id="ref-lervag2018comprehension" class="csl-entry" role="listitem">
+Lervåg, Arne, Charles Hulme, y Monica Melby-Lervåg. 2018. <span>«Unpicking the developmental relationship between oral language skills and reading comprehension: it’s simple, but complex»</span>. <em>Child Development</em> 89 (5): 1821-38. <a href="https://doi.org/10.1111/cdev.12861">https://doi.org/10.1111/cdev.12861</a>.
+</div>
+<div id="ref-ripoll2020velocidad" class="csl-entry" role="listitem">
+Ripoll Salceda, Juan Cruz, Milagros M. Tapia Montesinos, y Gerardo Aguado Alonso. 2020. <span>«Velocidad lectora en alumnado hispanohablante: un metaanálisis»</span>. <em>Revista de Psicodidáctica</em> 25 (2): 100-108. <a href="https://doi.org/10.1016/j.psicod.2020.01.002">https://doi.org/10.1016/j.psicod.2020.01.002</a>.
+</div>
+<div id="ref-sanchezvincitore2022svr" class="csl-entry" role="listitem">
+Sánchez-Vincitore, Laura V., Cledenin Veras, Aída Mencía-Ripley, Carlos Ruiz-Matuk, y Daniel Cubilla-Bonnetier. 2022. <span>«Reading comprehension precursors: evidence of the simple view of reading in a transparent orthography»</span>. <em>Frontiers in Education</em> 7: 914414. <a href="https://doi.org/10.3389/feduc.2022.914414">https://doi.org/10.3389/feduc.2022.914414</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_LETRAS</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_LETRAS</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -623,6 +644,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>El conocimiento de letras es la capacidad de reconocer cada grafema y asociarlo a su nombre o a su sonido. Es la puerta del <strong>principio alfabético</strong>. La plataforma lo mide de dos formas: nombrar letras y elegir la letra con la que empieza el nombre de un dibujo, que exige además aislar el primer sonido.</p>
+<p><strong>Qué dice la evidencia.</strong> Con la conciencia fonológica y la denominación rápida forma los tres grandes predictores de la lectura. Su peso es parecido en inglés, español y checo <span class="citation" data-cites="caravolas2013growth">(<a href="../../referencias.html#ref-caravolas2013growth" role="doc-biblioref">Caravolas et&nbsp;al. 2013</a>)</span>. En español, el conocimiento de letras es el mejor predictor de la lectura de sílabas simples; la conciencia fonológica pesa más en las sílabas complejas <span class="citation" data-cites="martinez2020silabica">(<a href="../../referencias.html#ref-martinez2020silabica" role="doc-biblioref">Martínez y Goikoetxea 2020</a>)</span>. La revisión completa de la evidencia está en la <a href="../../fichas/LET.html">ficha piloto de conocimiento de letras</a>.</p>
+<p><strong>Lo que muestran nuestros datos.</strong> Las dos tareas tienen una consistencia interna muy alta (α = .90 y .97). El nombrado de letras es estable entre trimestres (ρ = .73) y predice la baja fluidez de Woodcock-Muñoz años después con un AUC mediano de .71. Al ser una habilidad con techo, discrimina sobre todo a los 4 y 5 años.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1216,6 +1243,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .62–.76 (6 momentos; 118–726 niños).</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -3282,6 +3310,14 @@ Tablas completas <code>datos/agregados/AUTO_LEC_LETRAS/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-caravolas2013growth" class="csl-entry" role="listitem">
+Caravolas, Markéta, Arne Lervåg, Sylvia Defior, Gabriela Seidlová Málková, y Charles Hulme. 2013. <span>«Different patterns, but equivalent predictors, of growth in reading in consistent and inconsistent orthographies»</span>. <em>Psychological Science</em> 24 (8): 1398-1407. <a href="https://doi.org/10.1177/0956797612473122">https://doi.org/10.1177/0956797612473122</a>.
+</div>
+<div id="ref-martinez2020silabica" class="csl-entry" role="listitem">
+Martínez, Naroa, y Edurne Goikoetxea. 2020. <span>«Los predictores de la lectura y escritura de palabras varían en función de la estructura silábica en español»</span>. <em>Psicología Educativa</em> 26.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

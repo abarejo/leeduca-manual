@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea CF_CONTAR_SILABAS</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea CF_CONTAR_SILABAS</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -629,6 +650,31 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>La conciencia fonológica es la capacidad de reflexionar sobre los sonidos del habla y manipularlos. Las tareas de la plataforma recorren un continuo de dificultad:</p>
+<ul>
+<li>por la <strong>unidad</strong>: sílaba o fonema;</li>
+<li>por la <strong>operación</strong>: contar, identificar, segmentar o suprimir;</li>
+<li>por la <strong>posición</strong>: inicial, final o cualquiera.</li>
+</ul>
+<p>La versión «todas las posiciones» mezcla ítems y es la más exigente.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>El fonema y la manipulación son lo que más distingue a la dislexia.</strong> En 2.252 niños de seis lenguas europeas, la supresión de fonemas y el RAN fueron los predictores concurrentes más fuertes de la dislexia <span class="citation" data-cites="landerl2013predictors">(<a href="../../referencias.html#ref-landerl2013predictors" role="doc-biblioref">Landerl et&nbsp;al. 2013</a>)</span>. En ortografías consistentes, los niños con dislexia rinden por debajo incluso de lectores más pequeños de su mismo nivel en las tareas de manipular fonemas, pero no en las de sílabas <span class="citation" data-cites="parrila2020rlmatch">(<a href="../../referencias.html#ref-parrila2020rlmatch" role="doc-biblioref">Parrila et&nbsp;al. 2020</a>)</span>.</li>
+<li><strong>En español, la conciencia fonológica se desarrolla por etapas</strong>, de la sílaba al fonema. La conciencia fonémica se apoya en el aprendizaje de la lectura y a la vez lo impulsa: la relación es recíproca <span class="citation" data-cites="denton2000pa">(<a href="../../referencias.html#ref-denton2000pa" role="doc-biblioref">Denton et&nbsp;al. 2000</a>)</span>. La conciencia fonológica predice sobre todo la lectura de sílabas complejas <span class="citation" data-cites="martinez2020silabica">(<a href="../../referencias.html#ref-martinez2020silabica" role="doc-biblioref">Martínez y Goikoetxea 2020</a>)</span>.</li>
+<li><strong>Su valor predictivo es universal, pero cambia con la edad.</strong> La conciencia fonémica, las letras y el RAN predicen el crecimiento lector igual en español, checo e inglés <span class="citation" data-cites="caravolas2013growth">(<a href="../../referencias.html#ref-caravolas2013growth" role="doc-biblioref">Caravolas et&nbsp;al. 2013</a>)</span>. En cambio, su relación con la fluidez es más compleja y depende de la tarea y de la edad, mientras que el RAN predice la fluidez en todas las lenguas <span class="citation" data-cites="landerl2019pa">(<a href="../../referencias.html#ref-landerl2019pa" role="doc-biblioref">Landerl et&nbsp;al. 2019</a>)</span>. Es lo esperable según <span class="citation" data-cites="catts2026definicion">Catts, Haynes, y Joshi (<a href="../../referencias.html#ref-catts2026definicion" role="doc-biblioref">2026</a>)</span>: los precursores sirven para el pronóstico temprano y pierden peso cuando ya hay lectura que medir.</li>
+</ul>
+<p>Las fichas piloto desarrollan este marco con más detalle: <a href="../../fichas/CF523.html">contar sílabas</a> y <a href="../../fichas/RAN.html">denominación rápida</a>.</p>
+<p><strong>Lo que muestran nuestros datos.</strong> El patrón coincide con la literatura:</p>
+<ul>
+<li><strong>Lo que más predice.</strong> Las tareas de supresión en todas las posiciones son las que mejor predicen la baja fluidez de Woodcock-Muñoz (AUC mediano .72–.73, hasta .81).</li>
+<li><strong>En un punto intermedio.</strong> Las demás tareas de supresión e identificación (.63–.68).</li>
+<li><strong>Lo que menos predice.</strong> Segmentar fonemas y contar sílabas (.60–.62).</li>
+<li><strong>Consistencia y estabilidad.</strong> La consistencia interna es buena (α = .82–.94), pero la estabilidad entre trimestres es baja (ρ = .27–.41). Muchas se aplicaron en solo una o dos sesiones y los niños cambian deprisa en estas edades. Para un diagnóstico individual conviene confirmar el resultado en dos momentos.</li>
+<li><strong>También en matemáticas.</strong> La conciencia fonológica de 5 y 6 años predice además la aritmética del curso siguiente <span class="citation" data-cites="luque2026fonologia">(<a href="../../referencias.html#ref-luque2026fonologia" role="doc-biblioref">Luque et&nbsp;al. 2026</a>)</span>.</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -890,6 +936,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .60–.61 (2 momentos; 472–767 niños).</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -1942,6 +1989,32 @@ Tablas completas <code>datos/agregados/AUTO_CF_CONTAR_SILABAS/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-caravolas2013growth" class="csl-entry" role="listitem">
+Caravolas, Markéta, Arne Lervåg, Sylvia Defior, Gabriela Seidlová Málková, y Charles Hulme. 2013. <span>«Different patterns, but equivalent predictors, of growth in reading in consistent and inconsistent orthographies»</span>. <em>Psychological Science</em> 24 (8): 1398-1407. <a href="https://doi.org/10.1177/0956797612473122">https://doi.org/10.1177/0956797612473122</a>.
+</div>
+<div id="ref-catts2026definicion" class="csl-entry" role="listitem">
+Catts, Hugh W., Charles W. Haynes, y R. Malatesha Joshi. 2026. <span>«Defining dyslexia: 2025 revision»</span>. <em>Annals of Dyslexia</em>. <a href="https://doi.org/10.1007/s11881-026-00363-4">https://doi.org/10.1007/s11881-026-00363-4</a>.
+</div>
+<div id="ref-denton2000pa" class="csl-entry" role="listitem">
+Denton, Carolyn A., Jan E. Hasbrouck, Laurie R. Weaver, y Cynthia A. Riccio. 2000. <span>«What do we know about phonological awareness in <span>Spanish</span>?»</span> <em>Reading Psychology</em> 21 (4): 335-52. <a href="https://doi.org/10.1080/027027100750061958">https://doi.org/10.1080/027027100750061958</a>.
+</div>
+<div id="ref-landerl2019pa" class="csl-entry" role="listitem">
+Landerl, Karin, H. Harald Freudenthaler, Moritz Heene, Peter F. de Jong, Alain Desrochers, George Manolitsis, Rauno Parrila, y George K. Georgiou. 2019. <span>«Phonological awareness and rapid automatized naming as longitudinal predictors of reading in five alphabetic orthographies with varying degrees of consistency»</span>. <em>Scientific Studies of Reading</em> 23 (3): 220-34. <a href="https://doi.org/10.1080/10888438.2018.1510936">https://doi.org/10.1080/10888438.2018.1510936</a>.
+</div>
+<div id="ref-landerl2013predictors" class="csl-entry" role="listitem">
+Landerl, Karin, Franck Ramus, Kristina Moll, et&nbsp;al. 2013. <span>«Predictors of developmental dyslexia in <span>European</span> orthographies with varying complexity»</span>. <em>Journal of Child Psychology and Psychiatry</em> 54 (6): 686-94. <a href="https://doi.org/10.1111/jcpp.12029">https://doi.org/10.1111/jcpp.12029</a>.
+</div>
+<div id="ref-luque2026fonologia" class="csl-entry" role="listitem">
+Luque, Juan L., Mariana Loredo, Jorge Munilla, Javier López, y Almudena Giménez. 2026. <span>«Phonological skills and mathematical development: a longitudinal study from preschool to late primary school»</span>.
+</div>
+<div id="ref-martinez2020silabica" class="csl-entry" role="listitem">
+Martínez, Naroa, y Edurne Goikoetxea. 2020. <span>«Los predictores de la lectura y escritura de palabras varían en función de la estructura silábica en español»</span>. <em>Psicología Educativa</em> 26.
+</div>
+<div id="ref-parrila2020rlmatch" class="csl-entry" role="listitem">
+Parrila, Rauno, Dean Dudley, Shuang Song, y George K. Georgiou. 2020. <span>«A meta-analysis of reading-level match dyslexia studies in consistent alphabetic orthographies»</span>. <em>Annals of Dyslexia</em> 70 (1): 1-26. <a href="https://doi.org/10.1007/s11881-019-00187-5">https://doi.org/10.1007/s11881-019-00187-5</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

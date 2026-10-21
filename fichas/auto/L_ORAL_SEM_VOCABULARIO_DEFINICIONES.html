@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -541,6 +561,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -580,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_SEM_VOCABULARIO_DEFINICIONES</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad A). Generada el 21/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_SEM_VOCABULARIO_DEFINICIONES</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -629,6 +650,17 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>El vocabulario es el conocimiento del significado de las palabras. La plataforma lo mide de dos formas: <strong>oral</strong>, cuando el niño explica qué significa una palabra que oye, y <strong>a través de la lectura</strong>, cuando elige, entre tres palabras escritas, la de significado parecido. En la concepción simple de la lectura, el vocabulario forma parte de la comprensión del lenguaje, el componente que no depende de leer <span class="citation" data-cites="hoover1990simple">(<a href="../../referencias.html#ref-hoover1990simple" role="doc-biblioref">Hoover y Gough 1990</a>)</span>.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>El lenguaje oral de Infantil predice la comprensión lectora años después.</strong> La comprensión a los 8 años y medio se explica por la lectura de palabras a los 5 y por el lenguaje a los 3 y medio, tanto en niños con riesgo de dislexia como en los demás <span class="citation" data-cites="hulme2015foundations">(<a href="../../referencias.html#ref-hulme2015foundations" role="doc-biblioref">Hulme et&nbsp;al. 2015</a>)</span>. Lo predice el lenguaje en sentido amplio (vocabulario, gramática, inferencias) más que el vocabulario solo <span class="citation" data-cites="lervag2018comprehension">(<a href="../../referencias.html#ref-lervag2018comprehension" role="doc-biblioref">Lervåg, Hulme, y Melby-Lervåg 2018</a>)</span>.</li>
+<li><strong>El vocabulario escrito no es solo lenguaje.</strong> Las tareas de vocabulario recogen también varianza de la decodificación, porque el significado, la forma escrita y la fonología de cada palabra están conectados <span class="citation" data-cites="protopapas2013vocabulary">(<a href="../../referencias.html#ref-protopapas2013vocabulary" role="doc-biblioref">Protopapas et&nbsp;al. 2013</a>)</span>.</li>
+<li><strong>La relación es recíproca.</strong> Leer más amplía el vocabulario, y un vocabulario mayor facilita leer palabras nuevas <span class="citation" data-cites="killingly2024reciprocal">(<a href="../../referencias.html#ref-killingly2024reciprocal" role="doc-biblioref">Killingly et&nbsp;al. 2024</a>)</span>. En los primeros cursos pesa más el código (letras y conciencia fonológica); después, la lectura de palabras y la comprensión se separan <span class="citation" data-cites="storch2002oral">(<a href="../../referencias.html#ref-storch2002oral" role="doc-biblioref">Storch y Whitehurst 2002</a>)</span>.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong> El vocabulario a través de la lectura predice la baja fluidez lectora de Woodcock-Muñoz casi como las tareas de lectura (AUC mediano .75), pero es poco estable entre trimestres (ρ = .43). El vocabulario oral de 4 y 5 años tiene buena consistencia interna (α = .82) y predice menos (AUC mediano .63, máximo .71). Es lo esperado: su papel principal es la comprensión, no la fluidez. Además, es uno de los mejores predictores de la aritmética de 10–11 años (<a href="../../cognicion-numerica.html#sec-mate-criterio">Cognición numérica</a>).</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -792,6 +824,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Validez: AUC con intervalo de confianza del 95 %.</figcaption>
 </figure>
 </div>
+<p><strong>Frente a un criterio externo, años después.</strong> Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 (<a href="../../criterio-woodcock.html">capítulo</a>), AUC .53–.71 (3 momentos; 122–221 niños).</p>
 </section>
 <section id="baremo-provisional" class="level2">
 <h2 class="anchored" data-anchor-id="baremo-provisional">Baremo provisional</h2>
@@ -1687,6 +1720,26 @@ Tablas completas <code>datos/agregados/AUTO_L_ORAL_SEM_VOCABULARIO_DEFINICIONES/
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hoover1990simple" class="csl-entry" role="listitem">
+Hoover, Wesley A., y Philip B. Gough. 1990. <span>«The simple view of reading»</span>. <em>Reading and Writing</em> 2 (2): 127-60. <a href="https://doi.org/10.1007/BF00401799">https://doi.org/10.1007/BF00401799</a>.
+</div>
+<div id="ref-hulme2015foundations" class="csl-entry" role="listitem">
+Hulme, Charles, Hannah M. Nash, Debbie Gooch, Arne Lervåg, y Margaret J. Snowling. 2015. <span>«The foundations of literacy development in children at familial risk of dyslexia»</span>. <em>Psychological Science</em> 26 (12): 1877-86. <a href="https://doi.org/10.1177/0956797615603702">https://doi.org/10.1177/0956797615603702</a>.
+</div>
+<div id="ref-killingly2024reciprocal" class="csl-entry" role="listitem">
+Killingly, Callula, Linda J. Graham, Haley Tancredi, y Pamela Snow. 2024. <span>«Reciprocal relationships among reading and vocabulary over time: a longitudinal study from grade 1 to 5»</span>. <em>Reading and Writing</em>. <a href="https://doi.org/10.1007/s11145-024-10522-x">https://doi.org/10.1007/s11145-024-10522-x</a>.
+</div>
+<div id="ref-lervag2018comprehension" class="csl-entry" role="listitem">
+Lervåg, Arne, Charles Hulme, y Monica Melby-Lervåg. 2018. <span>«Unpicking the developmental relationship between oral language skills and reading comprehension: it’s simple, but complex»</span>. <em>Child Development</em> 89 (5): 1821-38. <a href="https://doi.org/10.1111/cdev.12861">https://doi.org/10.1111/cdev.12861</a>.
+</div>
+<div id="ref-protopapas2013vocabulary" class="csl-entry" role="listitem">
+Protopapas, Athanassios, Angeliki Mouzaki, Georgios D. Sideridis, Areti Kotsolakou, y Panagiotis G. Simos. 2013. <span>«The role of vocabulary in the context of the simple view of reading»</span>. <em>Reading &amp; Writing Quarterly</em> 29 (2): 168-202. <a href="https://doi.org/10.1080/10573569.2013.758569">https://doi.org/10.1080/10573569.2013.758569</a>.
+</div>
+<div id="ref-storch2002oral" class="csl-entry" role="listitem">
+Storch, Stacey A., y Grover J. Whitehurst. 2002. <span>«Oral language and code-related precursors to reading: evidence from a longitudinal structural model»</span>. <em>Developmental Psychology</em> 38 (6): 934-47. <a href="https://doi.org/10.1037/0012-1649.38.6.934">https://doi.org/10.1037/0012-1649.38.6.934</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
