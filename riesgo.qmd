@@ -95,7 +95,8 @@ Las cifras de dislexia en español varían mucho, y la razón principal es el cr
 | Metaanálisis en español [@cubilla2024prevalencia] | 16 estudios | Variable | 7,5 % (5,2–10,9), con gran heterogeneidad |
 | Metaanálisis mundial [@yang2022prevalence] | Primaria | Variable | 7,1 %; similar en ortografías transparentes y opacas |
 | Uruguay [@cuadro2017prevalencia] | 1.408 escolares | Varios procedimientos sobre la misma muestra | 2,2–5,3 % según el procedimiento |
-| Murcia [@carrillo2011prevalencia] | Muestra representativa | Detección secuenciada: cribado colectivo y confirmación individual | Cifra pendiente de extraer del artículo |
+| Molina de Segura, Murcia [@carrillo2011prevalencia] | 1.894 escolares de 2.º, 4.º y 6.º (todos los centros del municipio) | Dos fases: TECLE colectivo (−1,5 DT) y confirmación con palabras, pseudopalabras y ortografía | 11,8 % (2.º: 15,2 %; 4.º: 9,3 %; 6.º: 10,9 %) |
+| Canarias [@jimenez2009prevalencia] | Primaria | Selección por el profesorado y confirmación con PROLEC (25 % inferior) | 8,6 % (3,2 % solo lectura; 5,4 % lectura y escritura) |
 | Andalucía [@villegas2023andalucia] | 944.118 escolares | Diagnóstico administrativo | 1,24 %; diagnóstico hacia los 10 años |
 | Málaga, LEEDUCA [@loredo2025prevalencia] | 691, 5.º–6.º | −1 DT en decisión léxica y fluidez | 8,5 % de riesgo |
 | Canarias [@garcia2013comprension] | 2.º EP a 4.º ESO | Comprensión de textos | 20,2 % con problemas de comprensión; 6,7 % malos comprendedores |
@@ -103,8 +104,24 @@ Las cifras de dislexia en español varían mucho, y la razón principal es el cr
 Tres lecturas para el manual:
 
 - **No hay una prevalencia «verdadera» única.** La lectura se distribuye de forma continua, así que la cifra depende del corte [@wagner2020prevalence]. Por eso la plataforma no da una prevalencia, sino niveles de certeza con su porcentaje en cada cohorte.
+- **Con criterios psicométricos, la cifra en Primaria ronda el 9–12 %.** Así sale con una primera fase colectiva y una confirmación individual [@carrillo2011prevalencia; @jimenez2009prevalencia].
 - **La escuela identifica tarde y poco.** El 1,24 % de Andalucía, diagnosticado hacia los 10 años, frente a un 5–8 % esperable, indica infradiagnóstico. Detectar en Infantil y en 1.º es justo lo que la plataforma puede aportar.
 - **La comprensión es otro problema.** Una parte importante de los malos comprendedores no tiene dificultad de decodificación. Es el motivo de añadir la comprensión como dimensión aparte (ver «Pendiente»).
+
+### El precedente: el cribado en dos fases de DIS-ESP
+
+El estudio de Molina de Segura [@carrillo2011prevalencia] es el antecedente directo de la plataforma. M. S. Carrillo y J. Alegría, autores de la batería DIS-ESP, aplicaron a toda la Primaria de un municipio un **procedimiento secuenciado**:
+
+1. **Primera fase.** TECLE colectivo en el aula. El corte (media − 1,5 DT de los normolectores) equivale a unos dos cursos de retraso. Señaló al 12,5 % del alumnado, frente al 6,7 % que se esperaría si la lectura se distribuyera de forma normal. Esto indica que la distribución tiene una cola inferior más gruesa, donde se concentran los lectores con dislexia.
+2. **Segunda fase.** Lectura de palabras y pseudopalabras y pruebas ortográficas (dictado de palabras con grafías inconsistentes y decisión ortográfica) para buscar la causa próxima. El 96 % de los niños señalados tenía un déficit en el mecanismo fonológico, en el ortográfico o en los dos. El 77 % tenía ambos.
+
+Tres resultados de aquel estudio reaparecen en los datos de la plataforma:
+
+- **El retraso en 2.º es en parte transitorio.** En 2.º, el 18 % de los lectores retrasados solo tenía un problema ortográfico (en 6.º, el 5 %), y una cuarta parte leía bien las pseudopalabras. Los autores esperaban que muchos se recuperaran con más práctica. Es lo que la plataforma recoge con el nivel TR (dificultad transitoria) frente a DL-A y DL-B.
+- **Hacia el 10 % mantiene la dificultad** en 4.º y 6.º, muchos sin alcanzar siquiera el nivel lector de 2.º.
+- **Las cifras dependen del procedimiento.** Con el mismo enfoque, en Canarias se obtuvo un 8,6 % [@jimenez2009prevalencia], pero la primera selección la hizo el profesorado (27,9 % de la muestra) y el corte fue el 25 % inferior del PROLEC.
+
+La plataforma convierte ese procedimiento en algo continuo: la primera fase se repite tres veces por curso desde los 4 años, y la segunda (palabras, pseudopalabras, decisión ortográfica) ya está en la misma batería.
 
 ### Qué precisión cabe esperar de un cribado
 

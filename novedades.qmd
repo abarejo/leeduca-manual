@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Origen DIS-ESP | Nuevo apartado «De dónde viene» en la presentación (batería DIS-ESP de M. S. Carrillo y J. Alegría). En el capítulo de riesgo, el cribado en dos fases de Molina de Segura como precedente directo de la plataforma, con su prevalencia (11,8 %) y la de Canarias (8,6 %). TECLE añade su validez como primera fase de cribado. |
 | 21/10/2026 | Fluidez y cribado | Marco teórico de velocidad, fluidez y comprensión en la ficha de velocidad, y relación de TECLE con la concepción simple de la lectura. Nuevo apartado «El cribado universal» en el capítulo de riesgo: prevalencia en español según el criterio, precisión esperable de un cribado y cribado en dos fases. Inhibición queda pospuesta. |
 | 21/10/2026 | Marcos teóricos | Las 31 fichas automáticas de lectura, conciencia fonológica, vocabulario y cognición numérica tienen marco teórico, común por constructo (`fichas/marcos/`), con referencias localizadas con SciSpace. Cada ficha añade su validez frente a la fluidez lectora de Woodcock-Muñoz y, en matemáticas, frente a la aritmética de 10–11 años. |
 | 21/10/2026 | Menú y fichas | Las fichas se agrupan por dominio (lectura, procesamiento fonológico, cognición numérica, lenguaje oral y funciones ejecutivas) y el menú lateral se abre plegado. Nueva «Guía de las fichas» con todas a la vista. |
