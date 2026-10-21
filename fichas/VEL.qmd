@@ -243,6 +243,36 @@ Todos los momentos, con P10, P90 y curtosis, en la hoja `2_Descriptivos_SIN`. «
 - **Sin efecto techo en la velocidad**, pero sí en la exactitud desde los 7 años: el 89–94 % lee bien las 12 palabras. A partir de ahí, la lista discrimina solo por el tiempo. Es el argumento para expresar el resultado en ppm y no en aciertos.
 - **El texto en voz alta cambia de un momento a otro en exactitud** (0 % sin errores a 6.3, 62 % a 7.1, 2 % a 7.3). Lo más probable es que se alterne la forma A o B, o el criterio de línea correcta. Está pendiente de comprobar (incidencia).
 
+### Rango de puntuaciones
+
+```{r}
+#| include: false
+DV <- leer("VEL_indicadores", "2_Descriptivos_SIN")
+DV <- DV[DV$medida %in% c("Palabras aisladas", "Pseudopalabras", "Texto en voz alta", "Lectura para comprender"), ]
+nx <- sum(extremo(DV), na.rm = TRUE)
+```
+
+Para ver el **espectro de respuestas** se dan dos rangos por momento (grupo SIN, ppm). El **rango habitual** va del percentil 1 al 99: recoge al 98 % de los niños y casi no le afectan los errores de registro. El **rango observado** (mínimo–máximo) se da tras la limpieza, pero un solo valor lo puede mover mucho, así que conviene leerlo junto al aviso.
+
+En la velocidad lectora el rango tiene una lectura propia. **Por abajo** es 0 ppm en casi todos los momentos hasta los 7 años: hay niños que aún no leen ninguna palabra. **Por arriba** no hay techo de la prueba, porque la ppm depende del tiempo. El límite lo pone la velocidad de articulación (el techo estimado es de unas 200 ppm en voz alta; § 4 ter).
+
+```{r}
+#| label: tbl-vel-rango
+#| tbl-cap: "Rango de puntuaciones en ppm (grupo SIN). Aviso: el máximo o el mínimo se aleja más de 2 DT del P99 o del P1."
+tabla_rango(DV, grupo = "medida")
+```
+
+```{r}
+#| label: fig-vel-rango
+#| fig-cap: "Espectro de puntuaciones de velocidad lectora por momento (grupo SIN)."
+#| fig-height: 6.5
+fig_rango(DV, grupo = "medida", unidad = "Palabras correctas por minuto")
+```
+
+Hay `r nx` momentos con un valor extremo. El caso más claro es el de palabras aisladas a 6.2: el máximo es de 217 ppm, más del triple del P99 (65 ppm). Ningún niño de 6 años lee así doce palabras: es casi seguro un error de tiempo que el filtro actual (más de 250 ppm) deja pasar. **Propuesta:** fijar límites de plausibilidad por edad, por ejemplo el P99 del momento más 3 DT, y revisar esos casos en los brutos antes de dar el rango como dato de la prueba (incidencia nueva).
+
+El rango por cohorte (ficha automática de palabras bisílabas, hoja `2b_Descriptivos_por_cohorte`) muestra **otro problema, este sistemático**. Las sesiones del curso 2021/22 (948, 949 y 950) dan valores muy por debajo de lo esperado para la edad. A los 9 años (cohorte 2012), la media es de 20 ppm, cuando a los 8 años era de 65 ppm. Con la cohorte 2014 a los 7 años y la 2015 a los 6 años pasa lo mismo, aunque menos marcado. Una caída de tres desviaciones típicas no es creíble como efecto de la pandemia. Antes de interpretarla hay que descartar un cambio en el registro del tiempo o en la versión de la tarea en esas sesiones (incidencia nueva, pendiente de consultar con el ingeniero). En las tablas completas, el rango de todas las medidas está en la hoja `2_Descriptivos_SIN`.
+
 ### Fiabilidad
 
 Está en el § 3: test-retest entre trimestres con Bland-Altman y umbral de cambio fiable, y formas A y B de EDICOLE. Falta la consistencia interna: las listas tienen respuestas y tiempos ítem a ítem en la plataforma nueva (\_res, \_di), así que se pueden calcular α y ω (E5).

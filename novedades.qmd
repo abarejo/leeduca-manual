@@ -4,6 +4,8 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Definición | Nuevo capítulo «Qué medimos a la luz de la nueva definición de la dislexia» (IDA 2025 y consenso Delphi): qué cubre la plataforma, qué falta (escritura de palabras, lenguaje oral, bienestar) y qué dicen nuestros datos. |
+| 21/10/2026 | Rango de puntuaciones | Rango habitual (P1–P99) y mínimo–máximo en la ficha de velocidad y en las fichas automáticas, con figura del espectro de respuestas y aviso de valores extremos. Detecta dos incidencias: tiempos imposibles (hasta 217 ppm a los 6 años) y valores muy bajos en las sesiones de 2021/22. |
 | 21/10/2026 | Fichas automáticas | Primeras tres fichas generadas automáticamente por familia (supresión de fonemas, RAN de objetos y palabras bisílabas) con `ficha_generica.R` y la plantilla del libro. |
 | 21/10/2026 | Calidad | Nuevo capítulo «Límites y calidad de los datos»: revisión crítica, clases de calidad A/B/C automáticas en el catálogo y recomendaciones para lo que se mida en adelante. |
 | 21/10/2026 | Redes | Redes de tareas por edad (modelos gráficos gaussianos) en «Cómo se agrupan las tareas». |

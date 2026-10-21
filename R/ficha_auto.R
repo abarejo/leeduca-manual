@@ -39,6 +39,15 @@ ficha_auto <- function(TAREA) {
   if (nrow(DS)) { print(tabla(DS[, c("mom", "N", "cohortes", "M", "DT", "Md", "asimetria", "pct_suelo", "pct_techo")],
                               c("Momento", "N", "Cohortes", "Media", "DT", "Mediana", "Asimetría", "% suelo", "% techo"), digitos = 2)); cat("\n\n") }
   avisos <- character()
+  if (nrow(DS) && "minimo" %in% names(DS)) {
+    pos <- if (fam %in% c("A", "F", "G") && !is.na(ct$n_items)) paste0("0–", ct$n_items) else NULL
+    uni <- c(A = "aciertos", B = "segundos", C = "ítems correctos por minuto", D = "aciertos − errores/3", E = "aciertos", F = "aciertos", G = "aciertos")[[fam]]
+    out("**Rango de puntuaciones** (grupo SIN, en ", uni, "). El rango habitual va del P1 al P99 (el 98 % de los niños). El mínimo–máximo es el observado tras la limpieza",
+        if (!is.null(pos)) paste0("; el rango posible es ", pos, " aciertos") else "", ".")
+    print(tabla_rango(DS, posible = if (!is.null(pos)) rep(pos, sum(is.finite(DS$minimo))) else NULL)); cat("\n\n")
+    if (any(extremo(DS) %in% TRUE)) avisos <- c(avisos, sprintf("Valor extremo en %s: el máximo o el mínimo se aleja más de 2 DT del P99 o del P1. Revisar en los brutos (posible error de tiempo o de registro).",
+                                                    paste(DS$mom[extremo(DS) %in% TRUE], collapse = ", ")))
+  }
   if (nrow(DS) && any(DS$pct_techo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto techo en %s (más del 15 %% de los niños con la puntuación máxima).", paste(DS$mom[DS$pct_techo > 15 & !is.na(DS$pct_techo)], collapse = ", ")))
   if (nrow(DS) && any(DS$pct_suelo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto suelo en %s (más del 15 %% con cero aciertos).", paste(DS$mom[DS$pct_suelo > 15 & !is.na(DS$pct_suelo)], collapse = ", ")))
   if (length(unique(unlist(strsplit(ct$codigos, " ")))) > 1) avisos <- c(avisos, "La tarea tiene varios códigos (versiones o formas): comprobar que los momentos son comparables antes de unir baremos.")

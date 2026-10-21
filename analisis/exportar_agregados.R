@@ -29,7 +29,7 @@ EXPORTAR <- c(
   LET_rigor = "rigor_LET_R_v1.xlsx",
   VEL = "velocidad_lectora_R_v1.xlsx",
   VEL_contexto = "velocidad_contexto_R_v1.xlsx",
-  VEL_indicadores = "ficha_velocidad_indicadores_R_v1.xlsx",
+  VEL_indicadores = "ficha_velocidad_indicadores_R_v2.xlsx",
   GEN_trimestre = "baremo_trimestre_vs_curso_R_v1.xlsx",
   CF523 = "ficha_CF523_R_v1.xlsx",
   TECLE = "ficha_TECLE_R_v1.xlsx",
@@ -69,9 +69,12 @@ for (ficha in names(EXPORTAR)) {
 message(total, " tablas exportadas a ", destino, ". Revisa con `git diff --stat` antes de subir.")
 
 # Fichas automáticas (scripts/R/ficha_generica.R): una carpeta AUTO_<tarea> por cada Excel de DIAGNOSTICO/R/fichas_auto
-fa <- list.files(file.path(diag, "fichas_auto"), pattern = "^ficha_.*_R_v1\\.xlsx$", full.names = TRUE)
+# (si una tarea tiene varias versiones, _R_v1, _R_v2…, se exporta solo la más reciente)
+fa <- list.files(file.path(diag, "fichas_auto"), pattern = "^ficha_.*_R_v[0-9]+\\.xlsx$", full.names = TRUE)
+ver <- as.integer(sub(".*_R_v([0-9]+)\\.xlsx$", "\\1", basename(fa))); tar <- sub("^ficha_(.*)_R_v[0-9]+\\.xlsx$", "\\1", basename(fa))
+fa <- fa[order(tar, -ver)][!duplicated(tar[order(tar, -ver)])]
 for (f in fa) {
-  ficha <- paste0("AUTO_", sub("^ficha_(.*)_R_v1\\.xlsx$", "\\1", basename(f))); dir.create(file.path(destino, ficha), showWarnings = FALSE)
+  ficha <- paste0("AUTO_", sub("^ficha_(.*)_R_v[0-9]+\\.xlsx$", "\\1", basename(f))); dir.create(file.path(destino, ficha), showWarnings = FALSE)
   for (h in setdiff(excel_sheets(f), "LEEME")) {
     t <- read_excel(f, h); t <- t[, !grepl(OMITIR_COLUMNAS, names(t)), drop = FALSE]
     malas <- grep(PROHIBIDAS, names(t), ignore.case = TRUE, value = TRUE)

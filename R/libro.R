@@ -56,3 +56,36 @@ tema_leeduca <- function(base = 11) {
           plot.title.position = "plot", strip.text = element_text(face = "bold", hjust = 0, colour = PAL[["tinta"]]),
           legend.position = "bottom", legend.title = element_blank())
 }
+
+# ---------------------------------------------------------------------------
+# Rango de puntuaciones (21/10/2026). Los descriptivos de las fichas traen minimo, P1, P99 y maximo.
+#   · «Rango habitual» = P1–P99: el 98 % central, poco sensible a errores de registro.
+#   · «Mín.–máx.» = rango observado tras la limpieza.
+#   · Aviso de valor extremo: el máximo (o el mínimo) se aleja del P99 (o del P1) más de 2 DT. Suele ser un error
+#     de tiempo o de registro y conviene revisarlo antes de dar el rango como dato de la prueba.
+nf <- function(x, d) ifelse(abs(x - round(x)) < 1e-9, num_es(x, 0), num_es(x, d))
+rango_txt <- function(a, b, d = 1) ifelse(is.na(a) | is.na(b), "—", ifelse(abs(a - b) < 1e-9, nf(a, d), paste0(nf(a, d), "–", nf(b, d))))
+extremo <- function(D) with(D, (maximo - P99) > 2 * DT | (P1 - minimo) > 2 * DT)
+tabla_rango <- function(D, grupo = NULL, d = 1, posible = NULL) {
+  D <- as.data.frame(D); D <- D[is.finite(D$minimo), ]
+  out <- data.frame(D[, c(grupo, "mom", "N")], habitual = rango_txt(D$P1, D$P99, d), observado = rango_txt(D$minimo, D$maximo, d), check.names = FALSE)
+  if (!is.null(posible)) out$posible <- posible
+  out$aviso <- ifelse(extremo(D) %in% TRUE, "valor extremo: revisar", "")
+  nm <- c(if (!is.null(grupo)) c(medida = "Medida")[grupo] %||% grupo, "Momento", "N", "Rango habitual (P1–P99)", "Mín.–máx.", if (!is.null(posible)) "Rango posible", "Aviso")
+  tabla(out, unname(nm), digitos = d)
+}
+`%||%` <- function(a, b) if (is.null(a) || all(is.na(a))) b else a
+fig_rango <- function(D, grupo = NULL, unidad = "Puntuación") {
+  D <- as.data.frame(D); D <- D[is.finite(D$minimo), ]; D$mom <- factor(D$mom, unique(D$mom[order(as.numeric(D$mom))]))
+  D$ext <- extremo(D) %in% TRUE
+  p <- ggplot(D, aes(mom)) +
+    geom_linerange(aes(ymin = minimo, ymax = maximo), colour = PAL[["gris"]], linewidth = .5) +
+    geom_linerange(aes(ymin = P1, ymax = P99), colour = PAL[["mar"]], linewidth = 3.2, alpha = .45) +
+    geom_point(aes(y = Md), colour = PAL[["tinta"]], size = 2) +
+    geom_point(data = D[D$ext, ], aes(y = maximo), shape = 4, colour = PAL[["coral"]], size = 2.6, stroke = 1.1) +
+    labs(x = "Momento (edad.trimestre)", y = unidad,
+         caption = "Banda: rango habitual (P1–P99). Línea fina: mínimo–máximo. Punto: mediana. Aspa roja: valor extremo que conviene revisar.") +
+    tema_leeduca() + theme(plot.caption = element_text(colour = PAL[["gris"]], hjust = 0, size = 8))
+  if (!is.null(grupo)) p <- p + facet_wrap(stats::as.formula(paste("~", grupo)), scales = "free", ncol = 2)
+  p
+}

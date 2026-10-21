@@ -28,6 +28,7 @@ book:
     - part: "Cómo está hecho el manual"
       chapters:
         - estructura.qmd
+        - definicion.qmd
         - metodo.qmd
         - decisiones.qmd
         - agrupacion.qmd
