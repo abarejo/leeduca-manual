@@ -71,6 +71,13 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Sistemas dinámicos y simulación ajustados a los datos [@vandermaas2006mutualismo].
 - **Revistas posibles:** *Journal of Mathematical Psychology*, *Psychological Review*, *Developmental Science*.
 
+### M10 · Subtipos de exactitud y de velocidad en español
+
+- **Pregunta:** ¿Lleva el RAN bajo en Infantil a una lectura lenta pero exacta, y la conciencia fonológica baja a una lectura lenta e inexacta, como en hebreo y árabe?
+- **Datos:** RAN y conciencia fonológica a los 4–5 años; aciertos y tiempo de palabras y pseudopalabras de 6 a 8 años.
+- **Método:** Perfiles latentes de exactitud y velocidad; regresión multinomial con los precursores; replicación entre cohortes. Es la doble disociación que recogen @catts2026definicion.
+- **Revistas posibles:** *Scientific Studies of Reading*, *Annals of Dyslexia*, *Reading and Writing*.
+
 ## Cómo aprovecharlo
 
 - **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.

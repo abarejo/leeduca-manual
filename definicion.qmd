@@ -8,12 +8,12 @@ n_dom <- function(d, cl = c("A", "B", "C")) sum(C$dominio == d & C$clase %in% cl
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador del 21/10/2026 para discutir en el grupo. Parte del documento de trabajo de J. L. Luque sobre la nueva definición de la IDA y la estrategia proactiva. Las citas textuales de la definición hay que comprobarlas con la versión oficial antes de publicar.
+**Estado:** borrador del 21/10/2026 para discutir en el grupo. Parte del documento de trabajo de J. L. Luque sobre la nueva definición de la IDA y la estrategia proactiva. La definición y su justificación siguen el artículo de presentación de la IDA [@catts2026definicion].
 :::
 
 ## La definición de 2025
 
-En octubre de 2025 la International Dyslexia Association (IDA) adoptó una nueva definición de la dislexia [@ida2025definicion]. Es la primera revisión importante desde la definición de 2002 [@lyon2003definicion]. Casi a la vez, un estudio Delphi con expertos del Reino Unido propuso una definición de consenso muy parecida [@carroll2025delphi]. Los fundamentos y las implicaciones de la definición de la IDA se explican en @catts2026definicion.
+En octubre de 2025 la International Dyslexia Association (IDA) adoptó una nueva definición de la dislexia [@ida2025definicion]. Es la primera revisión importante desde la definición de 2002 [@lyon2003definicion]. La aprobó la junta directiva de la IDA tras un proceso de casi dos años: un comité de dirección de 18 personas, uno asesor de 74, un número monográfico de *Annals of Dyslexia* y más de 3.000 comentarios públicos. @catts2026definicion explican su justificación, componente a componente, y dan pautas para aplicarla. Casi a la vez, un panel internacional de expertos llegó por el método Delphi a otra definición de consenso [@carroll2025delphi].
 
 La definición tiene seis bloques:
 
@@ -24,7 +24,9 @@ La definición tiene seis bloques:
 5. **Consecuencias secundarias.** Comprensión lectora, menos experiencia lectora y, con ello, menos crecimiento del lenguaje, del conocimiento y de la expresión escrita. También pueden verse afectados el bienestar psicológico y el empleo.
 6. **Prevención.** La identificación y la enseñanza específica importan a cualquier edad, pero el apoyo **antes y durante los primeros años de escolarización** es especialmente eficaz.
 
-Frente a la de 2002, desaparece la idea de lo «inesperado en relación con otras capacidades cognitivas», que llevaba a la discrepancia con el CI. Entran el continuo, la comparación con los iguales que reciben la misma enseñanza y el valor de lo temprano. El documento de trabajo del grupo lee estos cambios como **el paso de una lógica reactiva («esperar al fracaso») a una proactiva**: prevenir, cribar a todos, identificar pronto y seguir a cada niño en el tiempo.
+Frente a la de 2002, desaparece la idea de lo «inesperado en relación con otras capacidades cognitivas», que llevaba a la discrepancia con el CI. Entran el continuo, la comparación con los iguales que reciben la misma enseñanza y el valor de lo temprano. También desaparece el «origen neurobiológico» como causa única, que pasa a ser una de varias influencias que interactúan.
+
+**IDA y Delphi: convergencia en lo esencial, con matices.** El estudio Delphi valoró 55 afirmaciones con un umbral de acuerdo del 80 %. Hubo consenso en 42, que se resumieron en nueve afirmaciones centrales [@carroll2025delphi]. Las dos definiciones coinciden en lo esencial: dificultad en la lectura y la escritura exactas y fluidas de palabras, presente en todo el rango de capacidad intelectual, y causas múltiples con un papel central del procesamiento fonológico. Difieren en el alcance. El Delphi incluye la memoria de trabajo, la velocidad de procesamiento, el procesamiento ortográfico y las comorbilidades. La IDA se centra en el lenguaje (fonología, morfología, lenguaje oral temprano) y da más peso a la respuesta a la enseñanza, a la ortografía de la lengua y a la identificación temprana. Según @catts2026definicion, son diferencias de énfasis y de finalidad, no desacuerdos sobre la naturaleza de la dislexia. El documento de trabajo del grupo lee estos cambios como **el paso de una lógica reactiva («esperar al fracaso») a una proactiva**: prevenir, cribar a todos, identificar pronto y seguir a cada niño en el tiempo.
 
 ## Qué hace la plataforma con cada afirmación
 
@@ -36,7 +38,7 @@ La plataforma LEEDUCA es, en la práctica, una forma de llevar a cabo esa lógic
 | … **y/o en la escritura (ortografía)** | Solo hay una tarea de dictado de letras (clase C) y la decisión ortográfica, que es una tarea de lectura. | **No se mide la escritura de palabras.** Es el hueco más importante frente a la nueva definición: hace falta un dictado de palabras y pseudopalabras con baremo. |
 | **Exactitud, velocidad o ambas**, según la ortografía | En español la exactitud llega pronto al techo (89–94 % lee bien las 12 palabras a los 7–8 años) y la diferencia está en la velocidad. Por eso el manual expresa la lectura en palabras correctas por minuto ([ficha de velocidad](fichas/VEL.qmd)). | Separar en el informe los perfiles «lento pero exacto» y «lento e inexacto». |
 | **Continuo de gravedad** | Percentiles en lugar de categorías, cinco niveles de certeza y márgenes de error en cada puntuación. | Dar en el informe la probabilidad de dificultad persistente, no solo el nivel [@wagner2022bayes]. |
-| **Persiste pese a una enseñanza eficaz para los iguales** | La dificultad persistente exige estar bajo el corte en al menos dos cursos. La referencia son niños de la misma edad y trimestre. | La plataforma no sabe si la enseñanza fue eficaz. **Propuesta:** dar también la posición del niño dentro de su aula y la del aula frente a la referencia. Si toda el aula está baja, el problema es probablemente de enseñanza, no del niño. |
+| **Persiste pese a una enseñanza eficaz para los iguales** | La dificultad persistente exige estar bajo el corte en al menos dos cursos. La referencia son niños de la misma edad y trimestre. | La plataforma no sabe si la enseñanza fue eficaz. **Propuesta:** dar también la posición del niño dentro de su aula y la del aula frente a la referencia. Si toda el aula está baja, el problema es probablemente de enseñanza, no del niño. Es la alternativa que proponen @catts2026definicion cuando la enseñanza de un centro es deficiente: comparar con los compañeros que reciben la misma enseñanza. |
 | **Causas** genéticas, neurobiológicas y ambientales | ISE del centro, riesgo familiar (cohorte 2010) y datos de EEG y fNIRS en submuestras. | Riesgo familiar en todas las cohortes. |
 | Dificultades **fonológicas y morfológicas**, frecuentes pero **no universales** | `r n_dom("HFON")` tareas de habilidades fonológicas (`r n_dom("HFON", "A")` de clase A). Morfología, solo oral y con muestras pequeñas (clases B y C). Ninguna tarea basta sola para identificar: los precursores se usan para vigilar el riesgo, no como diagnóstico. | Morfología escrita (derivación, flexión) a partir de 8 años. |
 | El **lenguaje oral temprano** anticipa las dificultades | `r n_dom("L_ORAL")` tareas de lenguaje oral, pero solo `r n_dom("L_ORAL", "A")` de clase A. En nuestros datos el lenguaje oral apenas añade a letras, conciencia fonológica y RAN para predecir la dificultad lectora. | Una medida de vocabulario y comprensión oral de calidad a los 4–5 años. El poco valor añadido puede deberse a la medida, no al constructo. |
@@ -54,14 +56,23 @@ Varias afirmaciones de la definición se pueden contrastar con los datos de la p
 - **Los precursores sirven para vigilar a los 4 años y para cribar a los 5.** A los 4 años el AUC frente a la dificultad persistente es de .73; a los 5, de .82; con la lectura de 1.º, de .83–.85.
 - **Un instrumento modesto puede bastar.** A final de Infantil, el conocimiento de letras solo (AUC .82) predice prácticamente igual que la combinación de conciencia fonológica, letras y RAN (.82 con validación entre cohortes). Una lista breve de palabras con el corte «no lee ninguna» identifica al 74 % de los futuros casos y no da la alarma en el 82 % de los niños que no tendrán dificultad.
 - **La ortografía transparente desplaza el problema a la velocidad**, como dice la definición. Desde los 7 años la lista de palabras ya no discrimina por la exactitud, solo por el tiempo.
+- **Efecto suelo al empezar.** Al principio del aprendizaje se acumulan niños en el extremo inferior de la distribución [@catts2026definicion]. En nuestros datos, entre el 29 y el 44 % de los niños de 5 años no lee ninguna palabra o pseudopalabra. Por eso a esa edad el corte útil es «no lee ninguna», no un percentil.
+- **Los precursores pierden peso cuando el niño ya lee.** Para @catts2026definicion, los correlatos cognitivos sirven para el pronóstico, no para el diagnóstico, y explican menos varianza única a medida que la lectura se desarrolla. En nuestros datos, a los 5 años solo la lectura temprana añade algo a letras, conciencia fonológica y RAN. El lenguaje oral, el número, la memoria y las funciones ejecutivas no añaden casi nada.
+- **El ISE no debe excluir ni cambiar el corte.** La definición insiste en que un riesgo ambiental no descarta la dislexia. Nuestros datos muestran que, con la misma puntuación en letras, los niños de centros con ISE bajo tienen más riesgo. Aun así, el manual propone no ajustar el corte por ISE: el percentil por ISE se da solo como contexto, para no dejar sin apoyo a quien lo necesita.
+
+Sobre el corte, la definición no fija ninguno: deja la decisión a los profesionales. Unos autores hablan de uno de cada cinco niños y otros, de un 5–10 % [@catts2026definicion]. En nuestras cohortes, la dificultad persistente afecta al 15 % (4 % en el nivel más estricto, DL-A, y 11 % en DL-B). Los cinco niveles de certeza permiten elegir el corte según el uso que se le vaya a dar.
 
 ## Cambios que proponemos para el manual
 
-1. **Marco teórico (capítulo 2 del índice).** Partir de la definición de 2025 y del consenso Delphi, con las diferencias entre ambos: comorbilidad y morfología.
+1. **Marco teórico (capítulo 2 del índice).** Partir de la definición de 2025 [@catts2026definicion] y del consenso Delphi, con sus diferencias de alcance.
 2. **Lenguaje.** Hablar de «riesgo» de 4 a 5 años, de «dificultad provisional» a los 6 y de «dificultad persistente» desde los 7–8, como ya hace el capítulo de riesgo. Reservar «dislexia» para el diagnóstico, que no hace la plataforma.
 3. **Comparación con los iguales.** Añadir al informe de aula la posición dentro del aula y la del aula frente a la referencia.
 4. **Nuevas tareas para la versión 1.0:** dictado de palabras y pseudopalabras, lenguaje oral de calidad a los 4–5 años, morfología escrita y una medida breve de bienestar lector.
 5. **Probabilidad en lugar de etiqueta.** Dar la probabilidad de dificultad persistente con su intervalo, en coherencia con el continuo.
+
+## Un estudio que abre la definición
+
+@catts2026definicion recogen que, en ortografías transparentes como el hebreo o el árabe, hay dos subtipos de dislexia. Los niños con mala denominación rápida en Infantil se convierten en lectores lentos pero exactos. Los que tienen dificultades fonológicas y morfológicas acaban siendo lentos e inexactos. LEEDUCA tiene RAN y conciencia fonológica a los 4–5 años, y exactitud y velocidad por separado de los 6 a los 8, en miles de niños. Puede comprobar por primera vez en español si se cumple esa doble disociación (estudio M10 de la [agenda](agenda.qmd)).
 
 ## Para el documento de trabajo del grupo
 
