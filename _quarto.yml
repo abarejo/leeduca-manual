@@ -55,6 +55,7 @@ book:
         - fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.qmd
         - fichas/auto/CF_SEGMENTACION_FONEMICA.qmd
         - fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_FINAL.qmd
         - fichas/auto/CF_SUPRESION_SILABA_INICIAL.qmd
         - fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.qmd
         - fichas/auto/CF_SUPRESION_SILABAS_TP.qmd
@@ -87,16 +88,16 @@ book:
       chapters:
         - fichas/auto/LEC_DECISION_ORTOGRAFICA.qmd
         - fichas/auto/F_EJEC_INH_INHIBICION.qmd
-    - part: "Fichas F · Amplitud y memoria"
+    - part: "Investigar con la plataforma"
       chapters:
-        - fichas/auto/F_EJEC_MEM_OP_MEMORIA_CONCEPTOS.qmd
+        - investigacion.qmd
+        - agenda.qmd
     - part: "Preleo"
       chapters:
         - preleo/programa.qmd
         - preleo/datos.qmd
   appendices:
     - informe-aula.qmd
-    - agenda.qmd
     - consultas.qmd
     - novedades.qmd
     - colaborar.qmd

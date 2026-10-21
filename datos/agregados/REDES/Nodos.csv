@@ -1,31 +1,30 @@
 "edad","n","tarea_canonica","tarea","dominio","comunidad","factor_EFA","fuerza","fuerza_puente"
-4,1,"CF_CONTAR_SILABAS","Contar sílabas","Habilidades fonológicas",1,"F3",0.876,0.417
-4,2,"CF_EMPAREJA_SILABA_FINAL","Emparejar sílaba final","Habilidades fonológicas",1,"F2",0.375,0
-4,3,"CF_EMPAREJA_SILABA_INICIAL","Emparejar sílaba inicial","Habilidades fonológicas",1,"F2",0.696,0.22
-4,4,"HFON_MEMVERB_MEMORIA_VERBAL","Memoria verbal","Habilidades fonológicas",1,"F4",0.143,0.041
-4,5,"CF_SUPRESION_SILABA_INICIAL","Supresión de la sílaba inicial","Habilidades fonológicas",1,"F2",0.604,0.008
-4,6,"RAN_COLORES","Denominación rápida de colores","Denominación rápida",3,"F6",0.188,0.059
-4,7,"RAN_OBJETOS_CONTROL","Denominación rápida de objetos (control)","Denominación rápida",3,"F1",0.737,0.145
-4,8,"RAN_OBJETOS_SILABA","Denominación rápida de objetos (misma sílaba)","Denominación rápida",3,"F1",0.812,0.061
-4,9,"RAN_OBJETOS_FONEMA","Denominación rápida de objetos (mismo fonema)","Denominación rápida",3,"F1",1.05,0.166
-4,10,"L_ORAL_SEM_COMPRENSION_CP","Comprensión oral (con pistas)","Lenguaje oral",2,"F3",0.553,0.255
-4,11,"L_ORAL_FON_FLUIDEZ_SEMANTICA","Fluidez semántica","Lenguaje oral",3,"F1",0.378,0.165
-4,12,"L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL","Morfología de género (palabras)","Lenguaje oral",2,"F3",0.438,0.181
-4,13,"L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL","Morfología de número (palabras)","Lenguaje oral",2,"F3",0.1,0.058
-4,14,"L_ORAL_FON_PARES_MINIMOS","Pares mínimos","Lenguaje oral",2,"F3",0.198,0.076
-4,15,"L_ORAL_FON_PC_DISCRIMINA","Percepción del habla: discriminación","Lenguaje oral",6,"F2",0,0
-4,16,"L_ORAL_FON_PC_DISCRIMINA_II","Percepción del habla: discriminación II","Lenguaje oral",1,"F4",0.034,0
+4,1,"CF_CONTAR_SILABAS","Contar sílabas","Habilidades fonológicas",1,"F3",0.844,0.42
+4,2,"CF_EMPAREJA_SILABA_FINAL","Emparejar sílaba final","Habilidades fonológicas",3,"F2",0.352,0
+4,3,"CF_EMPAREJA_SILABA_INICIAL","Emparejar sílaba inicial","Habilidades fonológicas",3,"F2",0.701,0.369
+4,4,"HFON_MEMVERB_MEMORIA_VERBAL","Memoria verbal","Habilidades fonológicas",1,"F4",0.118,0.05
+4,5,"CF_SUPRESION_SILABA_INICIAL","Supresión de la sílaba inicial","Habilidades fonológicas",3,"F2",0.514,0.113
+4,6,"RAN_COLORES","Denominación rápida de colores","Denominación rápida",2,"F1",0.189,0.06
+4,7,"RAN_OBJETOS_CONTROL","Denominación rápida de objetos (control)","Denominación rápida",2,"F1",0.738,0.146
+4,8,"RAN_OBJETOS_SILABA","Denominación rápida de objetos (misma sílaba)","Denominación rápida",2,"F1",0.812,0.061
+4,9,"RAN_OBJETOS_FONEMA","Denominación rápida de objetos (mismo fonema)","Denominación rápida",2,"F1",1.052,0.168
+4,10,"L_ORAL_SEM_COMPRENSION_CP","Comprensión oral (con pistas)","Lenguaje oral",1,"F3",0.482,0.103
+4,11,"L_ORAL_FON_FLUIDEZ_SEMANTICA","Fluidez semántica","Lenguaje oral",2,"F1",0.379,0.166
+4,12,"L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL","Morfología de género (palabras)","Lenguaje oral",1,"F3",0.422,0.05
+4,13,"L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL","Morfología de número (palabras)","Lenguaje oral",1,"F2",0.1,0.033
+4,14,"L_ORAL_FON_PARES_MINIMOS","Pares mínimos","Lenguaje oral",1,"F3",0.199,0
+4,15,"L_ORAL_FON_PC_DISCRIMINA","Percepción del habla: discriminación","Lenguaje oral",6,"F6",0,0
+4,16,"L_ORAL_FON_PC_DISCRIMINA_II","Percepción del habla: discriminación II","Lenguaje oral",7,"F6",0,0
 4,17,"L_ORAL_FON_PC_IDENTIFICA","Percepción del habla: identificación","Lenguaje oral",5,"F4",0.279,0
 4,18,"L_ORAL_FON_PC_IDENTIFICA_II","Percepción del habla: identificación II","Lenguaje oral",5,"F4",0.279,0
-4,19,"L_ORAL_SEM_VOCABULARIO_OPCIONES","Vocabulario: elección entre opciones","Lenguaje oral",2,"F3",0.08,0.061
-4,20,"MATE_SEN_NUM_MAGNITUDES_NO_SIMB","Comparación de magnitudes no simbólicas","Cognición numérica",2,"F3",0.396,0.173
-4,21,"MATE_ET_VERB_ARABIGOS","Lectura de números arábigos","Cognición numérica",1,"F2",0.516,0.154
+4,19,"L_ORAL_SEM_VOCABULARIO_OPCIONES","Vocabulario: elección entre opciones","Lenguaje oral",1,"F3",0.08,0.029
+4,20,"MATE_SEN_NUM_MAGNITUDES_NO_SIMB","Comparación de magnitudes no simbólicas","Cognición numérica",1,"F3",0.372,0.102
+4,21,"MATE_ET_VERB_ARABIGOS","Lectura de números arábigos","Cognición numérica",3,"F2",0.45,0.263
 4,22,"HVIS_CAP_VAten_LETRAS_1","Amplitud visoatencional: letras 1","Visoatencional",4,"F5",0.195,0
 4,23,"HVIS_CAP_VAten_LETRAS_2","Amplitud visoatencional: letras 2","Visoatencional",4,"F5",0.063,0
-4,24,"HVIS_CAP_VAten_NUMEROS_5","Amplitud visoatencional: números","Visoatencional",7,"F5",0,0
+4,24,"HVIS_CAP_VAten_NUMEROS_5","Amplitud visoatencional: números","Visoatencional",8,"F5",0,0
 4,25,"HVIS_CAP_VAten_SIMBOLOS_1","Amplitud visoatencional: símbolos 1","Visoatencional",4,"F5",0.113,0
 4,26,"HVIS_CAP_VAten_SIMBOLOS_2","Amplitud visoatencional: símbolos 2","Visoatencional",4,"F5",0.019,0
-4,27,"F_EJEC_MEM_OP_MEMORIA_CONCEPTOS","Memoria de conceptos","Funciones ejecutivas",1,"F2",0.603,0.165
 5,1,"CF_CONTAR_SILABAS","Contar sílabas","Habilidades fonológicas",1,"F5",0.837,0.288
 5,2,"CF_EMPAREJA_SILABA_INICIAL","Emparejar sílaba inicial","Habilidades fonológicas",1,"F6",1.005,0.454
 5,3,"CF_IDENTIFICACION_FONEMA_INICIAL","Identificación del fonema inicial","Habilidades fonológicas",3,"F2",1.103,0.586

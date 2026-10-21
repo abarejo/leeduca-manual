@@ -4,6 +4,8 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Investigación | Nueva parte «Investigar con la plataforma»: niveles de acceso a los datos, paquete de investigación, lista de comprobación para describir tareas, cómo citar el manual y tareas de 3 años sin datos en la tabla larga. La agenda metodológica pasa a esta parte. |
+| 21/10/2026 | Diccionario | El código 1834 es supresión de la sílaba final, no «memoria de conceptos» (detectado al revisar las fichas de una tesis). El catálogo avisa cuando la puntuación máxima observada supera el número de ítems. |
 | 21/10/2026 | Fichas automáticas | Las 32 tareas de clase A ya tienen ficha automática, agrupadas por familia, con una página de resumen (fiabilidad, validez y avisos de cada una). Generadas en el PC del proyecto. Sale del libro la ficha de prueba del RAN de objetos, que no es de clase A. |
 | 21/10/2026 | Definición | El capítulo de la definición incorpora el artículo de presentación de la IDA (Catts, Haynes y Joshi, 2026): comparación con el Delphi, efecto suelo, valor pronóstico de los precursores, ISE y corte. Nuevo estudio M10 en la agenda: subtipos de exactitud y de velocidad en español. |
 | 21/10/2026 | Definición | Nuevo capítulo «Qué medimos a la luz de la nueva definición de la dislexia» (IDA 2025 y consenso Delphi): qué cubre la plataforma, qué falta (escritura de palabras, lenguaje oral, bienestar) y qué dicen nuestros datos. |

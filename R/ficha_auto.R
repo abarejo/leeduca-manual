@@ -90,6 +90,8 @@ ficha_auto <- function(TAREA) {
   # ---- pendientes ----
   out("## Pendientes e incidencias")
   if (!is.na(ct$aviso) && ct$aviso != "") avisos <- c(avisos, ct$aviso)
+  if ("nota_puntuacion" %in% names(ct) && !is.na(ct$nota_puntuacion) && ct$nota_puntuacion != "") avisos <- c(avisos, ct$nota_puntuacion)
+  if ("correccion" %in% names(ct) && !is.na(ct$correccion) && ct$correccion != "") avisos <- c(avisos, paste0("**Corrección del diccionario.** ", ct$correccion))
   if (circ) avisos <- c(avisos, "La etiqueta de dificultad persistente usa esta tarea: la validez frente a ella es circular.")
   avisos <- c(avisos, "Escribir el marco teórico y la interpretación; revisar con el equipo.")
   cat(paste0("- ", avisos, collapse = "\n"), "\n\n")

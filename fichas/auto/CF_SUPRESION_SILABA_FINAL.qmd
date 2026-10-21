@@ -1,6 +1,6 @@
 ---
-title: "Memoria de conceptos"
-subtitle: "Ficha automática · F_EJEC_MEM_OP_MEMORIA_CONCEPTOS"
+title: "Supresión de la sílaba final"
+subtitle: "Ficha automática · CF_SUPRESION_SILABA_FINAL"
 ---
 
 ```{r}
@@ -11,5 +11,5 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "fi
 
 ```{r}
 #| results: asis
-ficha_auto("F_EJEC_MEM_OP_MEMORIA_CONCEPTOS")
+ficha_auto("CF_SUPRESION_SILABA_FINAL")
 ```
