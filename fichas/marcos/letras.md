@@ -1,0 +1,5 @@
+El conocimiento de letras es la capacidad de reconocer cada grafema y asociarlo a su nombre o a su sonido. Es la puerta del **principio alfabético**. La plataforma lo mide de dos formas: nombrar letras y elegir la letra con la que empieza el nombre de un dibujo, que exige además aislar el primer sonido.
+
+**Qué dice la evidencia.** Con la conciencia fonológica y la denominación rápida forma los tres grandes predictores de la lectura. Su peso es parecido en inglés, español y checo [@caravolas2013growth]. En español, el conocimiento de letras es el mejor predictor de la lectura de sílabas simples; la conciencia fonológica pesa más en las sílabas complejas [@martinez2020silabica]. La revisión completa de la evidencia está en la [ficha piloto de conocimiento de letras](../LET.qmd).
+
+**Lo que muestran nuestros datos.** Las dos tareas tienen una consistencia interna muy alta (α = .90 y .97). El nombrado de letras es estable entre trimestres (ρ = .73) y predice la baja fluidez de Woodcock-Muñoz años después con un AUC mediano de .71. Al ser una habilidad con techo, discrimina sobre todo a los 4 y 5 años.

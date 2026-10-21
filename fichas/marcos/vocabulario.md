@@ -1,0 +1,9 @@
+El vocabulario es el conocimiento del significado de las palabras. La plataforma lo mide de dos formas: **oral**, cuando el niño explica qué significa una palabra que oye, y **a través de la lectura**, cuando elige, entre tres palabras escritas, la de significado parecido. En la concepción simple de la lectura, el vocabulario forma parte de la comprensión del lenguaje, el componente que no depende de leer [@hoover1990simple].
+
+**Qué dice la evidencia:**
+
+- **El lenguaje oral de Infantil predice la comprensión lectora años después.** La comprensión a los 8 años y medio se explica por la lectura de palabras a los 5 y por el lenguaje a los 3 y medio, tanto en niños con riesgo de dislexia como en los demás [@hulme2015foundations]. Lo predice el lenguaje en sentido amplio (vocabulario, gramática, inferencias) más que el vocabulario solo [@lervag2018comprehension].
+- **El vocabulario escrito no es solo lenguaje.** Las tareas de vocabulario recogen también varianza de la decodificación, porque el significado, la forma escrita y la fonología de cada palabra están conectados [@protopapas2013vocabulary].
+- **La relación es recíproca.** Leer más amplía el vocabulario, y un vocabulario mayor facilita leer palabras nuevas [@killingly2024reciprocal]. En los primeros cursos pesa más el código (letras y conciencia fonológica); después, la lectura de palabras y la comprensión se separan [@storch2002oral].
+
+**Lo que muestran nuestros datos.** El vocabulario a través de la lectura predice la baja fluidez lectora de Woodcock-Muñoz casi como las tareas de lectura (AUC mediano .75), pero es poco estable entre trimestres (ρ = .43). El vocabulario oral de 4 y 5 años tiene buena consistencia interna (α = .82) y predice menos (AUC mediano .63, máximo .71). Es lo esperado: su papel principal es la comprensión, no la fluidez. Además, es uno de los mejores predictores de la aritmética de 10–11 años ([Cognición numérica](../../cognicion-numerica.qmd#sec-mate-criterio)).

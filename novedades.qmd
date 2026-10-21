@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Marcos teóricos | Las 31 fichas automáticas de lectura, conciencia fonológica, vocabulario y cognición numérica tienen marco teórico, común por constructo (`fichas/marcos/`), con referencias localizadas con SciSpace. Cada ficha añade su validez frente a la fluidez lectora de Woodcock-Muñoz y, en matemáticas, frente a la aritmética de 10–11 años. |
 | 21/10/2026 | Menú y fichas | Las fichas se agrupan por dominio (lectura, procesamiento fonológico, cognición numérica, lenguaje oral y funciones ejecutivas) y el menú lateral se abre plegado. Nueva «Guía de las fichas» con todas a la vista. |
 | 21/10/2026 | Cognición numérica | El capítulo abre las fichas de matemáticas. Nuevo criterio provisional (aritmética de 10–11 años) y validez discriminante frente a la fluidez lectora. Citas actualizadas: Loredo et al. (2025, *Frontiers in Psychology*) y Luque et al. (en preparación). |
 | 21/10/2026 | Validez | Nuevo capítulo «Validez frente a un criterio externo»: la fluidez lectora de Woodcock-Muñoz (2021/22, 6–11 años) valida la etiqueta de dificultad persistente y ordena la validez predictiva de todas las tareas. |

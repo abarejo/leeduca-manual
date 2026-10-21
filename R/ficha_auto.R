@@ -7,6 +7,21 @@ FAM_NOM <- c(A = "A · Precisión", B = "B · Denominación rápida", C = "C · 
 PANT <- c("imágenes en pantalla" = "formato_imagenes.png", "lectura en voz alta de una lista" = "formato_lista.png",
           "denominación rápida de una serie" = "formato_ran.png", "elección entre opciones" = "formato_decision.png")
 r2 <- function(x) sub("^(-?)0", "\\1", sprintf("%.2f", x))
+# marco teórico escrito a mano, compartido por las tareas de un mismo constructo (fichas/marcos/<id>.md)
+MARCO_DE <- c(setNames(rep("decodificacion", 9), c("LEC_PAL_1sil", "LEC_PAL_2sil", "LEC_PAL_3sil", "LEC_PAL_4sil", "LEC_PSEUDO_2sil", "LEC_PSEUDO_3sil",
+                                                     "LEC_PSEUDO_4sil", "LEC_SILABAS_SIMPLE", "LEC_SILABAS_COMPLEJA")),
+              LEC_VEL_TEXTO = "texto", LEC_LECT_COMPRENSIVA = "texto", LEC_DECISION_ORTOGRAFICA = "ortografico",
+              LECTURA_DECODIFIC_VOCABULARIO = "vocabulario", L_ORAL_SEM_VOCABULARIO_DEFINICIONES = "vocabulario",
+              LEC_LETRAS = "letras", LECTURA_RF_ESCRIBIR_LETRA_INICIAL = "letras",
+              setNames(rep("conciencia_fonologica", 11), c("CF_CONTAR_SILABAS", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_IDENTIFICACION_FONEMA_FINAL",
+                "CF_SEGMENTACION_FONEMICA", "CF_SUPRESION_SILABA_INICIAL", "CF_SUPRESION_SILABA_FINAL", "CF_SUPRESION_SILABAS_TP",
+                "CF_SUPRESION_SILABA_JA_TODAS_POSIC", "CF_SUPRESION_FONEMA_INICIAL", "CF_SUPRESION_FONEMA_FINAL", "CF_SUPRESION_FONEMAS_TP")),
+              setNames(rep("numerico", 4), c("MATE_CONTAR_H_DELANTE_2A_DECENA", "MATE_CONTAR_H_ATRAS_1O_DECENA", "MATE_CONTAR_H_ATRAS_2A_DECENA", "MATE_ET_VERB_ARABIGOS")))
+# criterios externos (capítulos «Validez frente a un criterio externo» y «Cognición numérica»)
+criterio_ext <- function(ficha, TAREA, col = "AUC") {
+  f <- file.path(raiz_libro(), "datos", "agregados", ficha, "2a_Validez_tarea_momento.csv"); if (!file.exists(f)) return(data.frame())
+  V <- leer(ficha, "2a_Validez_tarea_momento"); if ("tipo" %in% names(V)) V <- V[V$tipo == "predictiva", ]
+  V <- V[V$tarea_canonica == TAREA, ]; if (nrow(V)) V$auc <- V[[col]]; V }
 rango <- function(v, f = r2) { v <- v[is.finite(v)]; if (!length(v)) return("—"); if (length(v) == 1 || diff(range(v)) < .005) f(v[1]) else paste0(f(min(v)), "–", f(max(v))) }
 
 ficha_auto <- function(TAREA) {
@@ -20,7 +35,7 @@ ficha_auto <- function(TAREA) {
   out <- function(...) cat(..., "\n\n", sep = "")
 
   out('::: {.callout-note appearance="minimal"}\n**Ficha automática** (', FAM_NOM[[fam]], '; clase de calidad ', ct$clase, '). Generada el ', format(Sys.Date(), "%d/%m/%Y"),
-      ' con `scripts/R/ficha_generica.R --tarea ', TAREA, '`. Las cifras salen de los datos; **falta el marco teórico, la interpretación y la revisión del equipo**.\n:::')
+      ' con `scripts/R/ficha_generica.R --tarea ', TAREA, '`. Las cifras salen de los datos; ', if (!is.na(MARCO_DE[TAREA])) "el marco teórico es común a las tareas del mismo constructo. **Falta la interpretación y la revisión del equipo.**" else "**falta el marco teórico, la interpretación y la revisión del equipo**.", '\n:::')
   # ---- en una frase ----
   est <- if (nrow(ES)) median(ES$rho) else NA
   auc_txt <- if (nrow(VE)) paste0("AUC ", rango(VE$AUC), if (circ) " frente a la dificultad persistente (circular: la etiqueta usa esta tarea)" else " frente a la dificultad lectora persistente") else NULL
@@ -32,6 +47,9 @@ ficha_auto <- function(TAREA) {
   pant <- if (!is.na(ct$formato) && ct$formato %in% names(PANT)) sprintf('\n\n![Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).](../../figuras/pantallas/%s){width=45%%}', PANT[[ct$formato]]) else ""
   out("| | |\n|---|---|\n| Códigos | ", ct$codigos, " |\n| Batería | ", ifelse(is.na(ct$bateria) | ct$bateria == "", "—", ct$bateria), " |\n| Formato | ", ifelse(is.na(ct$formato), "—", ct$formato),
       " |\n| Ítems | ", ifelse(is.na(ct$n_items), "—", ct$n_items), " |\n| Familia de ficha | ", FAM_NOM[[fam]], " |\n| Puntuación | ", FI$puntuacion, " |\n| Consigna (plataforma) | ", ifelse(is.na(ct$descripcion), "—", ct$descripcion), " |", pant)
+  # ---- marco teórico ----
+  fm <- if (!is.na(MARCO_DE[TAREA])) file.path(rl, "fichas", "marcos", paste0(MARCO_DE[[TAREA]], ".md")) else ""
+  if (nzchar(fm) && file.exists(fm)) { out("## Marco teórico"); out(paste(readLines(fm, encoding = "UTF-8", warn = FALSE), collapse = "\n")) }
   # ---- muestra y descriptivos ----
   out("## Muestra y descriptivos")
   print(tabla(MU[, c("mom", "cohorte", "sesion", "curso_escolar", "N", "SIN", "CON", "colegios")], c("Momento", "Cohorte", "Sesión", "Curso escolar", "N", "Sin Preleo", "Con Preleo", "Colegios"), digitos = 0))
@@ -71,6 +89,12 @@ ficha_auto <- function(TAREA) {
     out("**Frente a la dificultad lectora y la comprensión.** ", if (nrow(VE)) paste0("Frente a la dificultad persistente, AUC ", rango(VE$AUC), if (circ) " (circular: solo acuerdo)" else "", ". ") else "",
         if (nrow(BC)) paste0("Frente a la baja comprensión uno o dos cursos después (criterio no circular), AUC ", rango(BC$AUC), ".") else "")
     f2 <- file.path(rl, "figuras", paste0("Ficha_auto_", TAREA, "_F2_validez.png")); if (file.exists(f2)) out("![Validez: AUC con intervalo de confianza del 95 %.](../../figuras/Ficha_auto_", TAREA, "_F2_validez.png){width=85%}") }
+  WC <- criterio_ext("WOODCOCK", TAREA); MC <- if (startsWith(TAREA, "MATE_")) criterio_ext("MATE_CRITERIO", TAREA, "AUC_mate") else data.frame()
+  if (nrow(WC) || nrow(MC)) {
+    out("**Frente a un criterio externo, años después.** ",
+        if (nrow(WC)) paste0("Frente a la baja fluidez lectora de Woodcock-Muñoz en 2021/22 ([capítulo](../../criterio-woodcock.qmd)), AUC ", rango(WC$auc),
+                             " (", nrow(WC), if (nrow(WC) == 1) " momento" else " momentos", "; ", num_es(min(WC$n), 0), "–", num_es(max(WC$n), 0), " niños). ") else "",
+        if (nrow(MC)) paste0("Frente a la baja aritmética de 10–11 años ([criterio provisional](../../cognicion-numerica.qmd#sec-mate-criterio)), AUC ", rango(MC$auc), ".") else "") }
   # ---- baremo ----
   out("## Baremo provisional")
   if (nrow(BA)) {
