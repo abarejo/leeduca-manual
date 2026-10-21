@@ -1,0 +1,15 @@
+---
+title: "Contar hacia atrás (2.ª decena)"
+subtitle: "Ficha automática · MATE_CONTAR_H_ATRAS_2A_DECENA"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("MATE_CONTAR_H_ATRAS_2A_DECENA")
+```

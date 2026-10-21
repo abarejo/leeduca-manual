@@ -12,7 +12,8 @@ raiz_libro <- function() {
 leer <- function(ficha, hoja) {
   f <- file.path(raiz_libro(), "datos", "agregados", ficha, paste0(hoja, ".csv"))
   if (!file.exists(f)) stop("No existe la tabla ", ficha, "/", hoja, ". Ejecuta analisis/exportar_agregados.R")
-  t <- utils::read.csv(f, check.names = FALSE, encoding = "UTF-8", stringsAsFactors = FALSE)
+  t <- tryCatch(utils::read.csv(f, check.names = FALSE, encoding = "UTF-8", stringsAsFactors = FALSE), error = function(e) data.frame())
+  if (ncol(t) <= 1 && nrow(t) == 0) return(data.frame())   # hoja vacía (sin filas ni columnas útiles)
   # identificadores (momento, cohorte, código, sesión…) se muestran tal cual, sin formato numérico
   ids <- grepl("^(mom|momento|desde|hasta|cohortes?|sesion(es)?|cod|codigo|curso|trim|trimestres?|forma|edad)$", names(t), ignore.case = TRUE)
   t[ids] <- lapply(t[ids], function(x) if (is.numeric(x)) format(x, trim = TRUE, drop0trailing = TRUE) else x)
@@ -37,7 +38,7 @@ tabla <- function(df, nombres = NULL, digitos = 2, pie = NULL) {
 tablas_completas <- function(ficha) {
   dir <- file.path(raiz_libro(), "datos", "agregados", ficha)
   for (f in sort(list.files(dir, pattern = "\\.csv$"))) {
-    h <- sub("\\.csv$", "", f)
+    h <- sub("\\.csv$", "", f); if (!nrow(leer(ficha, h))) next
     cat("\n\n<details><summary>", gsub("_", " ", h), " <code>datos/agregados/", ficha, "/", f, "</code></summary>\n\n", sep = "")
     print(tabla(leer(ficha, h)))
     cat("\n\n</details>\n")

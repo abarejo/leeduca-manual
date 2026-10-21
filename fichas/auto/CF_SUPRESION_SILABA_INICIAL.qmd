@@ -1,0 +1,15 @@
+---
+title: "Supresión de la sílaba inicial"
+subtitle: "Ficha automática · CF_SUPRESION_SILABA_INICIAL"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("CF_SUPRESION_SILABA_INICIAL")
+```

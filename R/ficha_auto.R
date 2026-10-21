@@ -25,7 +25,7 @@ ficha_auto <- function(TAREA) {
   est <- if (nrow(ES)) median(ES$rho) else NA
   auc_txt <- if (nrow(VE)) paste0("AUC ", rango(VE$AUC), if (circ) " frente a la dificultad persistente (circular: la etiqueta usa esta tarea)" else " frente a la dificultad lectora persistente") else NULL
   ed <- as.numeric(strsplit(as.character(ct$edades), ", ")[[1]]); ed_txt <- if (length(ed) > 1) paste0("de ", min(ed), " a ", max(ed), " años") else paste0("a los ", ed, " años")
-  out("**En una frase.** Mide ", ct$constructo, " ", ed_txt, " (", sum(MU$N), " aplicaciones en ", length(unique(MU$cohorte)), " cohortes). ",
+  out("**En una frase.** Mide ", ct$constructo, " ", ed_txt, " (", num_es(sum(MU$N), 0), " aplicaciones en ", length(unique(MU$cohorte)), " cohortes). ",
       if (is.finite(est)) paste0("Estabilidad entre momentos ρ = ", r2(est), ". ") else "", if (!is.null(auc_txt)) paste0(auc_txt, ".") else "")
   # ---- descripción ----
   out("## Descripción")

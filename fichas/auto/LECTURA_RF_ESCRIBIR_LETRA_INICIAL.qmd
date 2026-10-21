@@ -1,0 +1,15 @@
+---
+title: "Identificar la letra inicial"
+subtitle: "Ficha automática · LECTURA_RF_ESCRIBIR_LETRA_INICIAL"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("LECTURA_RF_ESCRIBIR_LETRA_INICIAL")
+```

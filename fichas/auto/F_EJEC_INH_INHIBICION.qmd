@@ -1,0 +1,15 @@
+---
+title: "Inhibición"
+subtitle: "Ficha automática · F_EJEC_INH_INHIBICION"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("F_EJEC_INH_INHIBICION")
+```

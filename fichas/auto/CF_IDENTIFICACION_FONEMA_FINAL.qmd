@@ -1,0 +1,15 @@
+---
+title: "Identificación del fonema final"
+subtitle: "Ficha automática · CF_IDENTIFICACION_FONEMA_FINAL"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("CF_IDENTIFICACION_FONEMA_FINAL")
+```

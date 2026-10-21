@@ -45,11 +45,51 @@ book:
         - fichas/RAN.qmd
         - fichas/CF523.qmd
         - fichas/TECLE.qmd
-    - part: "Fichas automáticas (prueba)"
+    - part: "Fichas automáticas"
       chapters:
+        - fichas/auto/index.qmd
+    - part: "Fichas A · Precisión"
+      chapters:
+        - fichas/auto/CF_CONTAR_SILABAS.qmd
+        - fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.qmd
+        - fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.qmd
+        - fichas/auto/CF_SEGMENTACION_FONEMICA.qmd
         - fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd
-        - fichas/auto/RAN_OBJETOS_CONTROL.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_INICIAL.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.qmd
+        - fichas/auto/CF_SUPRESION_SILABAS_TP.qmd
+        - fichas/auto/CF_SUPRESION_FONEMA_FINAL.qmd
+        - fichas/auto/CF_SUPRESION_FONEMA_INICIAL.qmd
+        - fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.qmd
+        - fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.qmd
+        - fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.qmd
+        - fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.qmd
+        - fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.qmd
+        - fichas/auto/MATE_ET_VERB_ARABIGOS.qmd
+    - part: "Fichas C · Fluidez lectora oral"
+      chapters:
+        - fichas/auto/LEC_LETRAS.qmd
+        - fichas/auto/LEC_LECT_COMPRENSIVA.qmd
         - fichas/auto/LEC_PAL_2sil.qmd
+        - fichas/auto/LEC_PAL_4sil.qmd
+        - fichas/auto/LEC_PAL_1sil.qmd
+        - fichas/auto/LEC_PAL_3sil.qmd
+        - fichas/auto/LEC_PSEUDO_2sil.qmd
+        - fichas/auto/LEC_PSEUDO_4sil.qmd
+        - fichas/auto/LEC_PSEUDO_3sil.qmd
+        - fichas/auto/LEC_SILABAS_COMPLEJA.qmd
+        - fichas/auto/LEC_SILABAS_SIMPLE.qmd
+        - fichas/auto/LEC_VEL_TEXTO.qmd
+    - part: "Fichas D · Eficiencia con tiempo limitado"
+      chapters:
+        - fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.qmd
+    - part: "Fichas E · Decisión con tiempo de respuesta"
+      chapters:
+        - fichas/auto/LEC_DECISION_ORTOGRAFICA.qmd
+        - fichas/auto/F_EJEC_INH_INHIBICION.qmd
+    - part: "Fichas F · Amplitud y memoria"
+      chapters:
+        - fichas/auto/F_EJEC_MEM_OP_MEMORIA_CONCEPTOS.qmd
     - part: "Preleo"
       chapters:
         - preleo/programa.qmd

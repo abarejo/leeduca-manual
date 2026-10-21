@@ -1,0 +1,15 @@
+---
+title: "Lectura de pseudopalabras trisílabas"
+subtitle: "Ficha automática · LEC_PSEUDO_3sil"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("LEC_PSEUDO_3sil")
+```
