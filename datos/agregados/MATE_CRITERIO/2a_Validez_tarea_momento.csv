@@ -1,0 +1,258 @@
+"tarea_canonica","mom","n","casos","rho","AUC_mate","IC_inf","IC_sup","AUC_compuesto","AUC_lectura","tarea","dominio","familia","clase","edad_pred","dif"
+"LEC_COMPR_TEXTO","7.3",105,10,0.232,0.779,0.579,0.908,0.714,0.789,"Comprensión de textos","LECTURA","G","C",7,-0.009
+"CF_SUPRESION_SILABAS_TP","8.2",188,23,0.281,0.728,0.617,0.827,0.552,0.752,"Supresión de sílabas (todas las posiciones)","HFON","A","A",8,-0.024
+"MATE_ARITMETIC_SUMA_1_DIGITO","6.2",233,31,0.332,0.712,0.627,0.793,0.624,0.735,"Sumas de un dígito","MATE","A","B",6,-0.023
+"L_ORAL_SEM_VOCABULARIO_DEFINICIONES","5.2",171,19,0.21,0.7,0.571,0.81,0.555,0.675,"Vocabulario: definiciones","L_ORAL","A","A",5,0.025
+"LEC_SILABAS_COMPLEJA","7.1",228,25,0.277,0.694,0.569,0.799,0.621,0.723,"Lectura de sílabas complejas","LECTURA","C","A",7,-0.029
+"CF_SUPRESION_FONEMAS_TP","8.2",187,23,0.302,0.688,0.574,0.805,0.556,0.817,"Supresión de fonemas (todas las posiciones)","HFON","A","A",8,-0.129
+"MATE_ARITMETIC_SUMA_1_DIGITO","6.3",201,24,0.33,0.687,0.584,0.787,0.706,0.747,"Sumas de un dígito","MATE","A","B",6,-0.06
+"LECTURA_DECODIFIC_SEMANTICA","9.2",360,47,0.272,0.685,0.602,0.767,0.612,0.834,"TECLE-SEM (papel)","LECTURA","D","C",9,-0.148
+"LEC_SILABAS_SIMPLE","6.3",200,24,0.272,0.681,0.567,0.788,0.549,0.703,"Lectura de sílabas simples","LECTURA","C","A",6,-0.022
+"LEC_PAL_3sil","6.2",218,24,0.329,0.68,0.562,0.782,0.611,0.756,"Lectura de palabras trisílabas","LECTURA","C","A",6,-0.076
+"LEC_PSEUDO_3sil","6.2",218,24,0.323,0.68,0.569,0.773,0.654,0.828,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",6,-0.148
+"RAN_OBJETOS_FONEMA","6.2",233,31,0.209,0.674,0.558,0.777,0.672,0.72,"Denominación rápida de objetos (mismo fonema)","HFON","B","B",6,-0.046
+"LECTURA_DECODIFIC_VOCABULARIO","9.2",359,47,0.164,0.673,0.595,0.745,0.676,0.8,"Vocabulario lector","LECTURA","D","A",9,-0.128
+"MATE_CONTAR_H_ATRAS_2A_DECENA","5.3",221,26,0.267,0.671,0.579,0.76,0.683,0.514,"Contar hacia atrás (2.ª decena)","MATE","A","A",5,0.156
+"CF_SINTESIS_FONEMICA","6.1",227,29,0.22,0.669,0.563,0.772,0.654,0.691,"Síntesis fonémica","HFON","A","B",6,-0.022
+"MATE_ARITM_SUMA_RESTA_2_DIGITOS","8.1",256,28,0.167,0.669,0.562,0.773,0.61,0.695,"Sumas y restas de dos dígitos","MATE","A","B",8,-0.026
+"LEC_PAL_3sil","8.1",418,45,0.337,0.666,0.584,0.749,0.593,0.801,"Lectura de palabras trisílabas","LECTURA","C","A",8,-0.134
+"L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL","6.2",232,31,0.09,0.666,0.547,0.755,0.623,0.481,"Morfología verbal de tiempo","L_ORAL","A","C",6,0.185
+"LEC_DECISION_ORTOGRAFICA","7.2",232,26,0.327,0.661,0.524,0.79,0.549,0.721,"Decisión ortográfica","LECTURA","E","A",7,-0.061
+"RAN_COLORES","4.1",221,27,0.15,0.661,0.537,0.779,0.583,0.646,"Denominación rápida de colores","HFON","B","B",4,0.015
+"LEC_PAL_4sil","7.3",353,39,0.305,0.657,0.567,0.738,0.593,0.792,"Lectura de palabras cuatrisílabas","LECTURA","C","A",7,-0.135
+"LEC_TECLE","9.2",360,47,0.284,0.657,0.58,0.729,0.597,0.828,"TECLE (eficiencia lectora)","LECTURA","D","B",9,-0.171
+"LECTURA_DECODIFIC_SINTAXIS","9.2",358,47,0.224,0.655,0.569,0.732,0.662,0.805,"TECLE-STX (papel)","LECTURA","D","C",9,-0.15
+"LEC_PSEUDO_2sil","6.1",442,52,0.268,0.655,0.572,0.724,0.68,0.744,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",6,-0.088
+"L_ORAL_MF_STX_RECEPCION_GRAMATICAL","5.2",172,19,0.121,0.653,0.496,0.789,0.7,0.432,"Recepción gramatical","L_ORAL","A","C",5,0.221
+"LEC_SILABAS_COMPLEJA","6.2",223,24,0.292,0.652,0.544,0.756,0.605,0.801,"Lectura de sílabas complejas","LECTURA","C","A",6,-0.148
+"LEC_SILABAS_SIMPLE","6.2",223,24,0.233,0.651,0.532,0.762,0.532,0.742,"Lectura de sílabas simples","LECTURA","C","A",6,-0.091
+"LEC_LECT_COMPRENSIVA","8.1",193,21,0.332,0.649,0.508,0.803,0.627,0.738,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",8,-0.089
+"LEC_PAL_2sil","8.3",204,24,0.265,0.648,0.519,0.763,0.654,0.736,"Lectura de palabras bisílabas","LECTURA","C","A",8,-0.088
+"LEC_VEL_TEXTO","8.1",193,21,0.355,0.648,0.499,0.76,0.666,0.765,"Velocidad lectora en texto","LECTURA","C","A",8,-0.117
+"LEC_DECISION_ORTOGRAFICA","8.1",193,21,0.35,0.647,0.518,0.762,0.612,0.736,"Decisión ortográfica","LECTURA","E","A",8,-0.089
+"LEC_LETRAS","5.3",408,45,0.222,0.647,0.587,0.724,0.597,0.703,"Conocimiento de letras","LECTURA","C","A",5,-0.056
+"CF_SEGMENTACION_FONEMICA","6.2",231,31,0.179,0.643,0.534,0.756,0.629,0.673,"Segmentación fonémica","HFON","A","A",6,-0.03
+"LEC_PAL_4sil","8.1",415,44,0.331,0.642,0.559,0.717,0.585,0.791,"Lectura de palabras cuatrisílabas","LECTURA","C","A",8,-0.149
+"LEC_VEL_TEXTO","7.3",344,37,0.262,0.642,0.546,0.73,0.567,0.824,"Velocidad lectora en texto","LECTURA","C","A",7,-0.182
+"CF_SUPRESION_SILABA_JA_TODAS_POSIC","6.1",441,50,0.153,0.641,0.567,0.729,0.576,0.622,"Supresión de la sílaba «ja»","HFON","A","A",6,0.019
+"LEC_PAL_1sil","6.1",441,52,0.251,0.641,0.565,0.712,0.677,0.725,"Lectura de palabras monosílabas","LECTURA","C","A",6,-0.084
+"LEC_PAL_1sil","6.2",232,31,0.289,0.641,0.517,0.73,0.701,0.727,"Lectura de palabras monosílabas","LECTURA","C","A",6,-0.086
+"LEC_PAL_1sil","5.3",212,23,0.299,0.641,0.52,0.737,0.573,0.741,"Lectura de palabras monosílabas","LECTURA","C","A",5,-0.1
+"LEC_VEL_TEXTO","5.3",207,23,0.232,0.641,0.502,0.747,0.564,0.719,"Velocidad lectora en texto","LECTURA","C","A",5,-0.079
+"MATE_ET_VERB_ARABIGOS","4.3",191,22,0.157,0.641,0.522,0.757,0.557,0.639,"Lectura de números arábigos","MATE","A","A",4,0.002
+"RAN_OBJETOS_REPETIDOS_LARGOS","8.3",204,24,0.137,0.641,0.508,0.763,0.676,0.628,"Denominación rápida de objetos repetidos (largos)","HFON","B","C",8,0.013
+"LEC_TECLE","8.1",419,45,0.295,0.64,0.549,0.726,0.584,0.786,"TECLE (eficiencia lectora)","LECTURA","D","B",8,-0.146
+"F_EJEC_INH_INHIBICION","7.3",113,11,0.118,0.639,0.504,0.771,0.542,0.557,"Inhibición","F_EJEC","E","A",7,0.082
+"LEC_LECT_COMPRENSIVA","7.3",105,10,0.345,0.639,0.474,0.783,0.456,0.842,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",7,-0.203
+"LEC_LECT_COMPRENSIVA","6.2",217,23,0.281,0.639,0.52,0.754,0.577,0.789,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",6,-0.15
+"LEC_SILABAS_SIMPLE","6.1",443,52,0.23,0.639,0.562,0.721,0.672,0.702,"Lectura de sílabas simples","LECTURA","C","A",6,-0.063
+"CF_IDENTIFICACION_FONEMA_INICIAL","6.1",228,29,0.165,0.638,0.548,0.737,0.603,0.519,"Identificación del fonema inicial","HFON","A","A",6,0.119
+"LEC_SILABAS_COMPLEJA","7.3",354,39,0.241,0.638,0.553,0.737,0.605,0.711,"Lectura de sílabas complejas","LECTURA","C","A",7,-0.072
+"LEC_SILABAS_SIMPLE","5.3",217,24,0.244,0.636,0.525,0.743,0.544,0.71,"Lectura de sílabas simples","LECTURA","C","A",5,-0.074
+"LECTURA_RF_ESCRIBIR_LETRA_INICIAL","5.3",218,26,0.173,0.635,0.515,0.733,0.57,0.738,"Identificar la letra inicial","LECTURA","A","A",5,-0.103
+"LEC_LECT_COMPRENSIVA","7.1",437,53,0.301,0.635,0.563,0.697,0.617,0.74,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",7,-0.105
+"LEC_LECT_COMPRENSIVA","8.2",462,53,0.23,0.634,0.549,0.711,0.6,0.756,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",8,-0.122
+"LEC_PAL_2sil","6.1",442,51,0.263,0.634,0.554,0.722,0.665,0.736,"Lectura de palabras bisílabas","LECTURA","C","A",6,-0.102
+"LEC_PSEUDO_2sil","6.2",451,55,0.298,0.634,0.556,0.706,0.655,0.741,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",6,-0.107
+"CF_IDENTIFICACION_FONEMA_INICIAL","5.2",403,45,0.144,0.632,0.536,0.717,0.593,0.609,"Identificación del fonema inicial","HFON","A","A",5,0.023
+"LEC_LETRAS","6.1",443,52,0.148,0.631,0.552,0.715,0.636,0.753,"Conocimiento de letras","LECTURA","C","A",6,-0.122
+"LEC_PAL_2sil","6.2",454,55,0.304,0.631,0.555,0.714,0.638,0.752,"Lectura de palabras bisílabas","LECTURA","C","A",6,-0.122
+"RAN_OBJETOS_REPETIDOS_CORTOS","8.1",226,24,0.042,0.629,0.505,0.747,0.512,0.53,"Denominación rápida de objetos repetidos (cortos)","HFON","B","C",8,0.099
+"CF_SUPRESION_FONEMAS_TP","6.2",232,31,0.189,0.628,0.516,0.74,0.639,0.679,"Supresión de fonemas (todas las posiciones)","HFON","A","A",6,-0.051
+"HVIS_CAP_VAten_LETRAS_3","5.1",230,27,0.1,0.628,0.531,0.725,0.585,0.507,"Amplitud visoatencional: letras 3","HVIS","F","C",5,0.121
+"LEC_PAL_3sil","8.2",275,30,0.253,0.628,0.522,0.721,0.627,0.787,"Lectura de palabras trisílabas","LECTURA","C","A",8,-0.16
+"LEC_PSEUDO_1sil","6.2",232,31,0.296,0.628,0.509,0.733,0.717,0.721,"Lectura de pseudopalabras monosílabas","LECTURA","C","B",6,-0.093
+"LEC_PAL_3sil","7.3",113,11,0.301,0.627,0.468,0.778,0.61,0.795,"Lectura de palabras trisílabas","LECTURA","C","A",7,-0.168
+"RAN_NUMEROS","4.1",220,27,0.157,0.627,0.517,0.736,0.601,0.665,"Denominación rápida de números","HFON","B","C",4,-0.038
+"LEC_VEL_TEXTO","6.2",449,54,0.286,0.626,0.547,0.707,0.635,0.747,"Velocidad lectora en texto","LECTURA","C","A",6,-0.121
+"CF_SUPRESION_SILABAS_TP","8.1",231,24,0.158,0.624,0.512,0.743,0.552,0.615,"Supresión de sílabas (todas las posiciones)","HFON","A","A",8,0.009
+"LEC_PSEUDO_3sil","7.3",353,39,0.267,0.624,0.538,0.711,0.577,0.731,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",7,-0.107
+"LEC_PAL_2sil","5.3",210,23,0.266,0.623,0.499,0.753,0.544,0.774,"Lectura de palabras bisílabas","LECTURA","C","A",5,-0.151
+"CF_SUPRESION_SILABAS_TP","7.1",210,29,0.221,0.622,0.517,0.732,0.558,0.772,"Supresión de sílabas (todas las posiciones)","HFON","A","A",7,-0.15
+"RAN_OBJETOS_SILABA","6.2",233,31,0.069,0.622,0.515,0.735,0.589,0.708,"Denominación rápida de objetos (misma sílaba)","HFON","B","B",6,-0.087
+"LECTURA_RF_ESCRIBIR_LETRA_INICIAL","6.1",442,52,0.092,0.621,0.536,0.695,0.606,0.641,"Identificar la letra inicial","LECTURA","A","A",6,-0.02
+"LEC_PAL_2sil","7.3",114,11,0.272,0.621,0.393,0.817,0.535,0.76,"Lectura de palabras bisílabas","LECTURA","C","A",7,-0.138
+"MATE_CONTAR_H_DELANTE_2A_DECENA","5.3",219,26,0.115,0.619,0.523,0.719,0.587,0.567,"Contar hacia delante (2.ª decena)","MATE","A","A",5,0.052
+"LEC_PSEUDO_2sil","8.1",193,21,0.339,0.618,0.464,0.75,0.59,0.736,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",8,-0.118
+"RAN_OBJETOS_FONEMA","5.2",233,28,0.099,0.618,0.509,0.71,0.593,0.649,"Denominación rápida de objetos (mismo fonema)","HFON","B","B",5,-0.031
+"LECTURA_DECODIFIC_SEMANTICA","10.2",344,45,0.189,0.617,0.522,0.695,0.664,0.815,"TECLE-SEM (papel)","LECTURA","D","C",10,-0.199
+"LEC_SILABAS_COMPLEJA","6.3",434,55,0.248,0.617,0.535,0.697,0.639,0.759,"Lectura de sílabas complejas","LECTURA","C","A",6,-0.142
+"RAN_OBJETOS_VARIADOS_LARGOS","8.2",275,30,0.026,0.617,0.505,0.725,0.575,0.585,"Denominación rápida de objetos variados (largos)","HFON","B","C",8,0.031
+"RAN_OBJETOS_VARIADOS_CORTOS","8.3",204,24,0.068,0.615,0.496,0.732,0.636,0.664,"Denominación rápida de objetos variados (cortos)","HFON","B","C",8,-0.049
+"LEC_PAL_2sil","6.3",434,54,0.122,0.614,0.541,0.683,0.564,0.559,"Lectura de palabras bisílabas","LECTURA","C","A",6,0.056
+"LEC_PAL_4sil","8.3",204,24,0.313,0.613,0.491,0.726,0.594,0.755,"Lectura de palabras cuatrisílabas","LECTURA","C","A",8,-0.142
+"LEC_PSEUDO_3sil","8.2",275,30,0.184,0.613,0.533,0.702,0.548,0.776,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",8,-0.163
+"LEC_PSEUDO_4sil","7.3",353,39,0.224,0.613,0.517,0.725,0.581,0.764,"Lectura de pseudopalabras cuatrisílabas","LECTURA","C","A",7,-0.15
+"L_ORAL_SEM_VOCABULARIO_DEFINICIONES","4.2",186,22,0.082,0.613,0.473,0.745,0.592,0.428,"Vocabulario: definiciones","L_ORAL","A","A",4,0.185
+"LEC_PSEUDO_2sil","7.3",114,11,0.187,0.611,0.397,0.833,0.597,0.768,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",7,-0.158
+"RAN_OBJETOS_SILABA","6.1",228,29,0.047,0.611,0.489,0.719,0.609,0.621,"Denominación rápida de objetos (misma sílaba)","HFON","B","B",6,-0.01
+"LECTURA_DECODIFIC_SINTAXIS","10.2",342,45,0.178,0.61,0.505,0.704,0.674,0.829,"TECLE-STX (papel)","LECTURA","D","C",10,-0.218
+"CF_IDENTIFICACION_FONEMA_FINAL","6.1",440,52,0.118,0.609,0.52,0.691,0.567,0.636,"Identificación del fonema final","HFON","A","A",6,-0.027
+"LEC_LECT_COMPRENSIVA","7.2",451,54,0.235,0.609,0.532,0.694,0.579,0.743,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",7,-0.134
+"LEC_PAL_3sil","6.3",434,54,0.215,0.608,0.519,0.68,0.629,0.716,"Lectura de palabras trisílabas","LECTURA","C","A",6,-0.109
+"LEC_PAL_3sil","7.1",438,54,0.278,0.607,0.534,0.686,0.58,0.673,"Lectura de palabras trisílabas","LECTURA","C","A",7,-0.066
+"LEC_PSEUDO_3sil","8.1",418,45,0.265,0.607,0.524,0.706,0.54,0.713,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",8,-0.105
+"MATE_SEN_NUM_MAGNITUDES_NO_SIMB","4.3",191,22,0.138,0.607,0.47,0.734,0.583,0.572,"Comparación de magnitudes no simbólicas","MATE","E","C",4,0.034
+"LEC_PAL_2sil","7.1",438,54,0.268,0.606,0.529,0.674,0.568,0.711,"Lectura de palabras bisílabas","LECTURA","C","A",7,-0.104
+"RAN_OBJETOS_FONEMA","5.3",188,19,-0.03,0.606,0.475,0.722,0.624,0.609,"Denominación rápida de objetos (mismo fonema)","HFON","B","B",5,-0.003
+"LEC_COMPR_TEXTO","7.1",436,53,0.137,0.604,0.525,0.678,0.581,0.68,"Comprensión de textos","LECTURA","G","C",7,-0.075
+"LEC_DECISION_ORTOGRAFICA","6.3",432,54,0.207,0.604,0.528,0.669,0.605,0.654,"Decisión ortográfica","LECTURA","E","A",6,-0.05
+"LEC_PAL_4sil","7.2",452,55,0.294,0.604,0.53,0.68,0.585,0.717,"Lectura de palabras cuatrisílabas","LECTURA","C","A",7,-0.114
+"LEC_PSEUDO_2sil","8.3",204,24,0.344,0.604,0.455,0.722,0.602,0.679,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",8,-0.075
+"RAN_OBJETOS_FONEMA","6.1",228,29,0.082,0.604,0.495,0.715,0.633,0.64,"Denominación rápida de objetos (mismo fonema)","HFON","B","B",6,-0.036
+"CF_CONTAR_SILABAS","5.1",449,53,0.042,0.603,0.521,0.69,0.534,0.559,"Contar sílabas","HFON","A","A",5,0.044
+"CF_EMPAREJA_SILABA_INICIAL","4.1",221,27,0.153,0.603,0.478,0.722,0.569,0.597,"Emparejar sílaba inicial","HFON","A","C",4,0.007
+"RAN_OBJETOS_FONEMA","5.1",232,28,0.059,0.603,0.507,0.707,0.586,0.55,"Denominación rápida de objetos (mismo fonema)","HFON","B","B",5,0.054
+"EXPERIMENTO_RECUERDO E INTERFERENCIA_FONEMAS","6.3",234,31,0.076,0.602,0.488,0.71,0.557,0.528,"Recuerdo e interferencia (fonemas)","EXPERIMENTO","A","C",6,0.074
+"ESCRITURA_ESCRITURA_DICTADO_LETRA","6.2",223,24,0.162,0.601,0.486,0.691,0.544,0.742,"Dictado de letras","ESCRITURA","A","C",6,-0.141
+"LECTURA_DECODIFIC_VOCABULARIO","10.2",343,45,0.098,0.601,0.517,0.701,0.61,0.767,"Vocabulario lector","LECTURA","D","A",10,-0.166
+"LEC_TECLE","10.2",344,45,0.194,0.601,0.512,0.682,0.658,0.813,"TECLE (eficiencia lectora)","LECTURA","D","B",10,-0.212
+"MATE_ARIT_CONTEO_1_10","4.2",185,21,0.072,0.601,0.44,0.736,0.56,0.498,"Conteo del 1 al 10","MATE","A","C",4,0.103
+"LEC_TECLE","7.1",440,54,0.257,0.6,0.526,0.683,0.587,0.749,"TECLE (eficiencia lectora)","LECTURA","D","B",7,-0.15
+"LEC_VEL_TEXTO","7.1",437,53,0.283,0.599,0.53,0.668,0.59,0.707,"Velocidad lectora en texto","LECTURA","C","A",7,-0.108
+"RAN_OBJETOS_CONTROL","6.2",233,31,0.083,0.599,0.491,0.702,0.515,0.597,"Denominación rápida de objetos (control)","HFON","B","C",6,0.002
+"LEC_VEL_TEXTO","8.3",204,24,0.294,0.597,0.482,0.729,0.558,0.8,"Velocidad lectora en texto","LECTURA","C","A",8,-0.203
+"RAN_SILABAS_CONT_AZAR","4.1",221,27,0.081,0.596,0.461,0.718,0.563,0.392,"Denominación de sílabas (continua, al azar)","HFON","B","C",4,0.204
+"CF_SUPRESION_FONEMA_INICIAL","5.3",219,26,0.27,0.595,0.473,0.712,0.59,0.699,"Supresión del fonema inicial","HFON","A","A",5,-0.104
+"MATE_SEN_NUM_MAGNITUDES_NO_SIMB","5.3",187,19,0.11,0.595,0.432,0.743,0.687,0.714,"Comparación de magnitudes no simbólicas","MATE","E","C",5,-0.118
+"RAN_OBJETOS_VARIADOS_CORTOS","8.2",275,30,0.167,0.595,0.504,0.682,0.556,0.632,"Denominación rápida de objetos variados (cortos)","HFON","B","C",8,-0.037
+"RAN_OBJETOS_SILABA","5.1",232,28,0.065,0.593,0.485,0.719,0.576,0.592,"Denominación rápida de objetos (misma sílaba)","HFON","B","B",5,0
+"LEC_COMPR_TEXTO","6.2",217,23,0.139,0.592,0.489,0.703,0.548,0.657,"Comprensión de textos","LECTURA","G","C",6,-0.065
+"LEC_PSEUDO_4sil","8.2",275,30,0.196,0.592,0.502,0.681,0.545,0.783,"Lectura de pseudopalabras cuatrisílabas","LECTURA","C","A",8,-0.19
+"RAN_OBJETOS_CONTROL","5.2",230,27,0.091,0.591,0.482,0.696,0.575,0.68,"Denominación rápida de objetos (control)","HFON","B","C",5,-0.09
+"LEC_PSEUDO_2sil","7.1",437,53,0.251,0.59,0.517,0.673,0.571,0.707,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",7,-0.117
+"CF_SEGMENTACION_FONEMICA","5.3",219,26,0.204,0.589,0.482,0.686,0.56,0.637,"Segmentación fonémica","HFON","A","A",5,-0.048
+"CF_SEGMENTACION_FONEMICA","6.1",441,52,0.11,0.588,0.521,0.669,0.539,0.585,"Segmentación fonémica","HFON","A","A",6,0.003
+"ESCRITURA_ESCRITURA_DICTADO_LETRA","5.3",187,19,0.107,0.587,0.438,0.735,0.624,0.621,"Dictado de letras","ESCRITURA","A","C",5,-0.034
+"LEC_PSEUDO_3sil","6.3",433,54,0.243,0.587,0.506,0.69,0.607,0.778,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",6,-0.19
+"CF_SUPRESION_FONEMAS_TP","8.1",231,24,0.183,0.586,0.462,0.703,0.53,0.746,"Supresión de fonemas (todas las posiciones)","HFON","A","A",8,-0.16
+"LEC_PAL_3sil","7.2",452,55,0.282,0.586,0.511,0.66,0.561,0.75,"Lectura de palabras trisílabas","LECTURA","C","A",7,-0.164
+"MATE_ARITM_SUMA_RESTA_2_DIGITOS","7.3",113,11,0.041,0.586,0.366,0.793,0.543,0.773,"Sumas y restas de dos dígitos","MATE","A","B",7,-0.187
+"LEC_SILABAS_MEDIA","6.3",234,31,0.137,0.585,0.48,0.701,0.695,0.751,"Lectura de sílabas de complejidad media","LECTURA","C","C",6,-0.166
+"CF_SUPRESION_FONEMAS_TP","7.1",207,28,0.212,0.584,0.474,0.704,0.59,0.689,"Supresión de fonemas (todas las posiciones)","HFON","A","A",7,-0.104
+"RAN_OBJETOS_REPETIDOS_LARGOS","8.1",226,24,0.039,0.583,0.45,0.706,0.525,0.503,"Denominación rápida de objetos repetidos (largos)","HFON","B","C",8,0.08
+"LEC_PAL_3sil","8.3",204,24,0.264,0.582,0.455,0.719,0.588,0.751,"Lectura de palabras trisílabas","LECTURA","C","A",8,-0.17
+"L_ORAL_MF_STX_ORDENAR_FRASES","6.2",232,31,0.04,0.582,0.472,0.683,0.573,0.665,"Ordenar frases","L_ORAL","A","B",6,-0.083
+"L_ORAL_SEM_VOCABULARIO_OPCIONES","6.1",440,52,0.083,0.582,0.501,0.676,0.566,0.533,"Vocabulario: elección entre opciones","L_ORAL","A","B",6,0.05
+"HVIS_CAP_VAten_LETRAS_3","6.1",227,29,0.043,0.58,0.467,0.68,0.647,0.507,"Amplitud visoatencional: letras 3","HVIS","F","C",6,0.073
+"LEC_PAL_2sil","8.1",193,21,0.318,0.58,0.427,0.714,0.59,0.769,"Lectura de palabras bisílabas","LECTURA","C","A",8,-0.189
+"MATE_ET_VERB_ARABIGOS","5.3",187,19,0.164,0.579,0.473,0.684,0.586,0.469,"Lectura de números arábigos","MATE","A","A",5,0.11
+"CF_SUPRESION_FONEMA_FINAL","5.2",232,27,0.144,0.577,0.452,0.705,0.635,0.675,"Supresión del fonema final","HFON","A","A",5,-0.098
+"HVIS_OR_ESP_BUSQUEDA_SERIAL","6.2",233,31,0.212,0.577,0.483,0.668,0.575,0.66,"Búsqueda serial","HVIS","E","B",6,-0.083
+"LEC_PSEUDO_2sil","6.3",434,54,0.149,0.577,0.473,0.647,0.585,0.693,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",6,-0.116
+"RAN_OBJETOS_VARIADOS_LARGOS","7.1",193,27,0.041,0.577,0.461,0.687,0.622,0.695,"Denominación rápida de objetos variados (largos)","HFON","B","C",7,-0.118
+"CF_EMPAREJA_SILABA_FINAL","5.1",217,25,0.132,0.576,0.484,0.691,0.615,0.529,"Emparejar sílaba final","HFON","A","C",5,0.047
+"RAN_COLORES","5.1",217,25,0.135,0.576,0.442,0.689,0.696,0.568,"Denominación rápida de colores","HFON","B","B",5,0.008
+"LEC_PAL_4sil","8.2",275,30,0.152,0.575,0.479,0.665,0.579,0.743,"Lectura de palabras cuatrisílabas","LECTURA","C","A",8,-0.168
+"L_ORAL_MF_STX_RECEPCION_GRAMATICAL","4.2",185,22,0.036,0.575,0.478,0.701,0.544,0.601,"Recepción gramatical","L_ORAL","A","C",4,-0.026
+"LEC_LETRAS","4.3",191,22,0.123,0.573,0.46,0.689,0.603,0.689,"Conocimiento de letras","LECTURA","C","A",4,-0.116
+"CF_EMPAREJA_SILABA_INICIAL","5.1",448,53,0.09,0.571,0.496,0.654,0.582,0.572,"Emparejar sílaba inicial","HFON","A","C",5,-0.001
+"CF_SUPRESION_SILABA_INICIAL","4.2",187,22,0.17,0.568,0.458,0.676,0.602,0.544,"Supresión de la sílaba inicial","HFON","A","A",4,0.025
+"LEC_PSEUDO_3sil","7.1",437,53,0.265,0.568,0.481,0.659,0.567,0.689,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",7,-0.121
+"RAN_OBJETOS_REPETIDOS_LARGOS","7.1",190,25,0.057,0.567,0.4,0.71,0.542,0.641,"Denominación rápida de objetos repetidos (largos)","HFON","B","C",7,-0.075
+"RAN_OBJETOS_CONTROL","6.1",442,52,0.05,0.566,0.492,0.651,0.536,0.666,"Denominación rápida de objetos (control)","HFON","B","C",6,-0.101
+"HVIS_CAP_VAten_NUMEROS_5","5.2",231,27,-0.016,0.565,0.451,0.655,0.613,0.511,"Amplitud visoatencional: números","HVIS","F","B",5,0.053
+"RAN_SILABAS_EXP_AZAR","4.1",122,18,-0.008,0.565,0.411,0.706,0.533,0.406,"Denominación de sílabas (expuesta, al azar)","HFON","B","C",4,0.159
+"RAN_SILABAS_CONT_AZAR","5.1",216,25,0.043,0.564,0.46,0.669,0.623,0.599,"Denominación de sílabas (continua, al azar)","HFON","B","C",5,-0.035
+"RAN_OBJETOS_SILABA","5.2",231,28,0.039,0.563,0.443,0.655,0.582,0.729,"Denominación rápida de objetos (misma sílaba)","HFON","B","B",5,-0.166
+"MATE_SEN_NUM_MAGNITUDES_NO_SIMB","5.1",232,28,0.055,0.56,0.463,0.671,0.59,0.613,"Comparación de magnitudes no simbólicas","MATE","E","C",5,-0.052
+"HVIS_CAP_VAten_LETRAS_2","5.1",230,27,0.038,0.559,0.432,0.68,0.564,0.556,"Amplitud visoatencional: letras 2","HVIS","F","C",5,0.002
+"MATE_ARIT_CONTEO_1_10","5.1",231,28,-0.058,0.559,0.457,0.685,0.546,0.582,"Conteo del 1 al 10","MATE","A","C",5,-0.023
+"CF_SUPRESION_SILABA_INICIAL","5.1",231,28,0.118,0.558,0.449,0.665,0.583,0.662,"Supresión de la sílaba inicial","HFON","A","A",5,-0.104
+"HVIS_CAP_VAten_NUMEROS_5","6.1",212,22,0.198,0.558,0.438,0.679,0.596,0.667,"Amplitud visoatencional: números","HVIS","F","B",6,-0.108
+"LEC_SILABAS_COMPLEJA","7.2",452,55,0.223,0.556,0.477,0.627,0.529,0.733,"Lectura de sílabas complejas","LECTURA","C","A",7,-0.177
+"RAN_SILABAS_CONT_OR","5.1",215,25,-0.076,0.555,0.442,0.672,0.62,0.592,"Denominación de sílabas (continua, ordenada)","HFON","B","C",5,-0.037
+"L_ORAL_FON_DIADO","4.2",190,22,0.089,0.554,0.443,0.672,0.521,0.515,"Díadas fonológicas","L_ORAL","A","C",4,0.039
+"LEC_COMPR_TEXTO","8.2",462,53,0.049,0.553,0.47,0.639,0.537,0.564,"Comprensión de textos","LECTURA","G","C",8,-0.011
+"LEC_VEL_TEXTO","7.2",451,54,0.23,0.553,0.478,0.636,0.571,0.767,"Velocidad lectora en texto","LECTURA","C","A",7,-0.213
+"CF_SUPRESION_FONEMA_FINAL","5.3",188,19,0.13,0.551,0.422,0.67,0.675,0.63,"Supresión del fonema final","HFON","A","A",5,-0.079
+"INTELIGENCIA_RAVEN_AB","5.1",446,52,0.079,0.551,0.473,0.629,0.535,0.624,"Matrices de Raven (serie AB)","INTELIGENCIA","A","C",5,-0.073
+"RAN_SILABAS_EXP_OR","5.1",216,25,0.053,0.551,0.438,0.662,0.607,0.553,"Denominación de sílabas (expuesta, ordenada)","HFON","B","C",5,-0.001
+"LEC_VEL_TEXTO","8.2",462,53,0.127,0.548,0.475,0.627,0.577,0.658,"Velocidad lectora en texto","LECTURA","C","A",8,-0.11
+"RAN_NUMEROS","5.1",217,25,0.127,0.548,0.431,0.673,0.655,0.58,"Denominación rápida de números","HFON","B","C",5,-0.032
+"LEC_DECISION_ORTOGRAFICA","7.1",209,28,0.196,0.545,0.45,0.637,0.531,0.79,"Decisión ortográfica","LECTURA","E","A",7,-0.245
+"LEC_PAL_2sil","7.2",220,29,0.275,0.545,0.426,0.651,0.561,0.742,"Lectura de palabras bisílabas","LECTURA","C","A",7,-0.197
+"LEC_LECT_COMPRENSIVA","6.3",433,54,0.019,0.543,0.461,0.63,0.473,0.537,"Lectura comprensiva (segunda lectura)","LECTURA","C","A",6,0.006
+"F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA","7.3",112,11,0.043,0.542,0.308,0.759,0.657,0.546,"Atención sostenida","F_EJEC","E","B",7,-0.004
+"LEC_VEL_TEXTO","6.1",423,50,0.253,0.542,0.46,0.624,0.601,0.689,"Velocidad lectora en texto","LECTURA","C","A",6,-0.147
+"LEC_PSEUDO_3sil","7.2",452,55,0.227,0.541,0.452,0.61,0.57,0.704,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",7,-0.163
+"L_ORAL_FON_FLUIDEZ_FONOLOGICA","5.3",193,24,0.139,0.541,0.408,0.677,0.518,0.666,"Fluidez fonológica","L_ORAL","A","C",5,-0.125
+"CF_SUPRESION_FONEMA_INICIAL","5.2",172,19,0.119,0.539,0.395,0.667,0.597,0.485,"Supresión del fonema inicial","HFON","A","A",5,0.054
+"L_ORAL_SEM_COMPRENSION_CP","5.2",232,28,0.014,0.539,0.425,0.65,0.546,0.582,"Comprensión oral (con pistas)","L_ORAL","G","C",5,-0.043
+"LEC_PSEUDO_4sil","8.1",193,21,0.27,0.537,0.405,0.666,0.571,0.726,"Lectura de pseudopalabras cuatrisílabas","LECTURA","C","A",8,-0.189
+"L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL","6.1",439,51,0,0.537,0.457,0.624,0.559,0.598,"Morfología de género (pseudopalabras)","L_ORAL","A","C",6,-0.061
+"L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL","6.1",439,51,-0.054,0.536,0.453,0.619,0.537,0.587,"Morfología de número (pseudopalabras)","L_ORAL","A","C",6,-0.051
+"MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS","5.2",234,28,0.041,0.536,0.439,0.635,0.578,0.615,"Comparación de magnitudes simbólicas","MATE","E","C",5,-0.079
+"L_ORAL_FON_PC_IDENTIFICA","5.2",232,28,0.045,0.535,0.425,0.646,0.476,0.673,"Percepción del habla: identificación","L_ORAL","A","C",5,-0.138
+"MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS","6.2",233,31,0.085,0.535,0.438,0.626,0.578,0.538,"Comparación de magnitudes simbólicas","MATE","E","C",6,-0.003
+"RAN_SILABAS_EXP_OR","4.1",220,27,-0.044,0.534,0.425,0.664,0.54,0.488,"Denominación de sílabas (expuesta, ordenada)","HFON","B","C",4,0.046
+"INTELIGENCIA_RAVEN_B","5.1",449,53,0.075,0.532,0.453,0.622,0.618,0.567,"Matrices de Raven (serie B)","INTELIGENCIA","A","C",5,-0.034
+"L_ORAL_FON_PC_DISCRIMINA","5.2",232,28,0.003,0.532,0.427,0.643,0.543,0.493,"Percepción del habla: discriminación","L_ORAL","A","C",5,0.038
+"RAN_OBJETOS_CONTROL","5.1",232,28,0.04,0.532,0.409,0.648,0.507,0.622,"Denominación rápida de objetos (control)","HFON","B","C",5,-0.09
+"CF_SUPRESION_SILABA_INICIAL_Y_FINAL","5.2",172,19,0.113,0.531,0.391,0.663,0.578,0.551,"Supresión de la sílaba inicial y final","HFON","A","C",5,-0.019
+"LEC_COMPR_TEXTO","7.2",451,54,-0.016,0.53,0.441,0.609,0.557,0.568,"Comprensión de textos","LECTURA","G","C",7,-0.038
+"HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA","8.1",231,24,0.037,0.527,0.423,0.627,0.573,0.66,"Memoria verbal a corto plazo (completa)","HFON","F","C",8,-0.133
+"LEC_VEL_TEXTO","6.3",431,53,0.046,0.526,0.44,0.608,0.504,0.565,"Velocidad lectora en texto","LECTURA","C","A",6,-0.039
+"HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA","8.2",187,23,-0.004,0.524,0.382,0.683,0.548,0.641,"Memoria verbal a corto plazo (completa)","HFON","F","C",8,-0.117
+"L_ORAL_FON_DIADO","5.2",175,19,0.134,0.524,0.376,0.661,0.596,0.6,"Díadas fonológicas","L_ORAL","A","C",5,-0.076
+"LEC_COMPR_TEXTO","8.1",193,21,0.109,0.523,0.401,0.642,0.569,0.585,"Comprensión de textos","LECTURA","G","C",8,-0.062
+"LEC_PSEUDO_4sil","7.2",452,55,0.155,0.523,0.445,0.612,0.563,0.713,"Lectura de pseudopalabras cuatrisílabas","LECTURA","C","A",7,-0.191
+"LEC_PSEUDO_3sil","8.3",204,24,0.29,0.52,0.376,0.666,0.603,0.705,"Lectura de pseudopalabras trisílabas","LECTURA","C","A",8,-0.184
+"HFON_MEMVERB_MEMORIA_VERBAL","6.1",443,52,0.083,0.518,0.441,0.598,0.523,0.578,"Memoria verbal","HFON","F","B",6,-0.06
+"HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5","7.2",221,30,0.093,0.518,0.452,0.576,0.543,0.494,"Memoria verbal (1–5 sílabas CVC)","HFON","F","C",7,0.024
+"CF_SUPRESION_SILABA_FINAL","4.3",190,22,0.023,0.516,0.373,0.647,0.536,0.534,"Supresión de la sílaba final","HFON","A","A",4,-0.018
+"EXPERIMENTO_RECONOCIMIENTO_FONEMA_EXPERIMENTAL","6.3",229,31,0.044,0.516,0.465,0.588,0.525,0.512,"Reconocimiento de fonemas (experimental)","EXPERIMENTO","A","C",6,0.004
+"RAN_OBJETOS_VARIADOS_LARGOS","8.3",204,24,0.043,0.516,0.389,0.645,0.592,0.638,"Denominación rápida de objetos variados (largos)","HFON","B","C",8,-0.123
+"RAN_SILABAS_CONT_OR","4.1",220,27,-0.072,0.516,0.386,0.628,0.506,0.364,"Denominación de sílabas (continua, ordenada)","HFON","B","C",4,0.151
+"EXPERIMENTO_RECUERDO E INTERFERENCIA_SILABA","6.3",234,31,0.051,0.515,0.413,0.614,0.54,0.47,"Recuerdo e interferencia (sílabas)","EXPERIMENTO","A","C",6,0.044
+"CF_CONTAR_SILABAS","4.1",221,27,0.042,0.513,0.413,0.608,0.553,0.62,"Contar sílabas","HFON","A","A",4,-0.107
+"MATE_CONTAR_H_ATRAS_1O_DECENA","5.3",220,26,0.048,0.513,0.439,0.606,0.524,0.49,"Contar hacia atrás (1.ª decena)","MATE","A","A",5,0.024
+"RAN_SILABAS_EXP_AZAR","5.1",118,14,0.043,0.513,0.332,0.667,0.547,0.518,"Denominación de sílabas (expuesta, al azar)","HFON","B","C",5,-0.005
+"LEC_PSEUDO_4sil","8.3",204,24,0.232,0.512,0.382,0.669,0.62,0.744,"Lectura de pseudopalabras cuatrisílabas","LECTURA","C","A",8,-0.232
+"L_ORAL_FON_PARES_MINIMOS","5.2",232,28,0.022,0.511,0.405,0.623,0.499,0.683,"Pares mínimos","L_ORAL","A","C",5,-0.172
+"RAN_OBJETOS_REPETIDOS_CORTOS","7.2",204,28,-0.048,0.51,0.407,0.628,0.597,0.517,"Denominación rápida de objetos repetidos (cortos)","HFON","B","C",7,-0.006
+"L_ORAL_MF_STX_ORDENAR_FRASES","5.2",232,28,0.107,0.507,0.394,0.63,0.512,0.613,"Ordenar frases","L_ORAL","A","B",5,-0.105
+"HVIS_CAP_VAten_SIMBOLOS_4","6.1",227,29,0.079,0.506,0.385,0.619,0.582,0.514,"Amplitud visoatencional: símbolos 4","HVIS","F","C",6,-0.008
+"LEC_COMPR_TEXTO","6.3",431,54,0.092,0.505,0.411,0.592,0.578,0.635,"Comprensión de textos","LECTURA","G","C",6,-0.13
+"L_ORAL_SEM_COMPRENSION_NCP","6.1",442,52,-0.001,0.504,0.432,0.586,0.497,0.527,"Comprensión oral (sin pistas)","L_ORAL","G","C",6,-0.023
+"EXPERIMENTO_RECUERDO E INTERFERENCIA_SILABA","5.3",220,26,-0.014,0.496,0.383,0.606,0.397,0.389,"Recuerdo e interferencia (sílabas)","EXPERIMENTO","A","C",5,0.108
+"MATE_CONTAR_H_DELANTE_1O_DECENA","5.3",219,26,0.015,0.494,0.465,0.533,0.509,0.5,"Contar hacia delante (1.ª decena)","MATE","A","B",5,-0.007
+"HVIS_CAP_VAten_SIMBOLOS_2","5.1",230,26,0.002,0.493,0.389,0.615,0.479,0.517,"Amplitud visoatencional: símbolos 2","HVIS","F","C",5,-0.024
+"EXPERIMENTO_RECONOCIMIENTO_FONEMA_CONTROL","6.3",233,31,0.006,0.491,0.454,0.545,0.519,0.532,"Reconocimiento de fonemas (control)","EXPERIMENTO","A","C",6,-0.041
+"EXPERIMENTO_RECONOCIMIENTO_SILABA_EXPERIMENTAL","6.3",232,31,-0.012,0.489,0.446,0.547,0.519,0.529,"Reconocimiento de sílabas (experimental)","EXPERIMENTO","A","C",6,-0.04
+"HVIS_CAP_VAten_NUMEROS_5","6.2",232,31,0.063,0.489,0.379,0.598,0.541,0.609,"Amplitud visoatencional: números","HVIS","F","B",6,-0.121
+"L_ORAL_PERCEP_PARES_MINIMOS","7.2",219,29,0.136,0.489,0.385,0.603,0.522,0.659,"Pares mínimos (percepción)","L_ORAL","A","C",7,-0.17
+"INTELIGENCIA_RAVEN_A","5.1",447,53,0.074,0.488,0.393,0.587,0.552,0.547,"Matrices de Raven (serie A)","INTELIGENCIA","A","C",5,-0.06
+"EXPERIMENTO_RECONOCIMIENTO_SILABA_CONTROL","6.3",231,31,-0.007,0.487,0.441,0.546,0.514,0.525,"Reconocimiento de sílabas (control)","EXPERIMENTO","A","C",6,-0.038
+"L_ORAL_FON_PC_DISCRIMINA","6.2",232,31,0.052,0.487,0.394,0.569,0.527,0.607,"Percepción del habla: discriminación","L_ORAL","A","C",6,-0.12
+"HFON_MEMVERB_MEMORIA_VERBAL","7.1",208,28,0.095,0.484,0.35,0.618,0.581,0.601,"Memoria verbal","HFON","F","B",7,-0.117
+"LEC_PSEUDO_1sil","6.3",234,31,-0.149,0.484,0.38,0.6,0.391,0.345,"Lectura de pseudopalabras monosílabas","LECTURA","C","B",6,0.139
+"HVIS_CAP_VAten_LETRAS_4","6.1",427,49,0.031,0.481,0.401,0.556,0.572,0.553,"Amplitud visoatencional: letras 4","HVIS","F","C",6,-0.072
+"L_ORAL_PROSODIA_ACENTO_DE_PALABRAS","7.2",220,29,0.059,0.48,0.383,0.59,0.573,0.606,"Acento de palabras","L_ORAL","A","B",7,-0.127
+"EXPERIMENTO_RECONOCIMIENTO_FONEMA_CONTROL","5.3",219,26,-0.012,0.478,0.422,0.552,0.472,0.47,"Reconocimiento de fonemas (control)","EXPERIMENTO","A","C",5,0.008
+"L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL","5.1",232,28,0.002,0.477,0.386,0.606,0.569,0.519,"Morfología de género (palabras)","L_ORAL","A","C",5,-0.042
+"L_ORAL_SEM_VOCABULARIO_OPCIONES","5.1",231,28,-0.082,0.477,0.385,0.586,0.5,0.529,"Vocabulario: elección entre opciones","L_ORAL","A","B",5,-0.053
+"L_ORAL_FON_PC_IDENTIFICA","6.2",232,31,0.011,0.474,0.378,0.589,0.439,0.496,"Percepción del habla: identificación","L_ORAL","A","C",6,-0.022
+"CF_EMPAREJA_SILABA_FINAL","4.2",188,21,0.039,0.473,0.344,0.585,0.539,0.55,"Emparejar sílaba final","HFON","A","C",4,-0.077
+"EXPERIMENTO_RECUERDO E INTERFERENCIA_FONEMAS","5.3",220,26,-0.036,0.473,0.313,0.614,0.404,0.469,"Recuerdo e interferencia (fonemas)","EXPERIMENTO","A","C",5,0.004
+"LEC_PAL_1sil","6.3",234,31,-0.192,0.472,0.354,0.575,0.39,0.273,"Lectura de palabras monosílabas","LECTURA","C","A",6,0.198
+"F_EJEC_INH_INHIBICION","6.2",220,23,-0.017,0.471,0.347,0.588,0.459,0.301,"Inhibición","F_EJEC","E","A",6,0.17
+"HVIS_CAP_VAten_NUMEROS_5","7.3",110,12,0.059,0.469,0.292,0.647,0.476,0.614,"Amplitud visoatencional: números","HVIS","F","B",7,-0.145
+"HFON_MEMVERB_MEMORIA_VERBAL","5.1",448,53,0.016,0.468,0.391,0.558,0.442,0.555,"Memoria verbal","HFON","F","B",5,-0.087
+"LEC_PSEUDO_2sil","7.2",220,29,0.21,0.468,0.358,0.58,0.53,0.751,"Lectura de pseudopalabras bisílabas","LECTURA","C","A",7,-0.283
+"HVIS_CAP_VAten_SIMBOLOS_3","5.1",230,27,0.048,0.467,0.351,0.606,0.493,0.556,"Amplitud visoatencional: símbolos 3","HVIS","F","C",5,-0.089
+"HFON_MEMVERB_MEMORIA_VERBAL","4.1",220,27,0.049,0.465,0.369,0.574,0.409,0.509,"Memoria verbal","HFON","F","B",4,-0.043
+"EXPERIMENTO_RECONOCIMIENTO_FONEMA_EXPERIMENTAL","5.3",220,26,-0.034,0.464,0.419,0.512,0.446,0.458,"Reconocimiento de fonemas (experimental)","EXPERIMENTO","A","C",5,0.006
+"F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA","8.3",204,24,-0.001,0.464,0.357,0.569,0.534,0.504,"Atención sostenida","F_EJEC","E","B",8,-0.039
+"F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA","6.2",219,23,-0.095,0.463,0.313,0.606,0.555,0.494,"Atención sostenida","F_EJEC","E","B",6,-0.032
+"HVIS_CAP_VAten_SIMBOLOS_3","6.1",227,29,0.104,0.461,0.352,0.578,0.572,0.608,"Amplitud visoatencional: símbolos 3","HVIS","F","C",6,-0.147
+"L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL","5.1",231,28,0.01,0.459,0.359,0.581,0.401,0.478,"Morfología de número (palabras)","L_ORAL","A","B",5,-0.019
+"F_EJEC_INH_INHIBICION","4.3",191,22,-0.097,0.458,0.306,0.605,0.421,0.618,"Inhibición","F_EJEC","E","A",4,-0.16
+"EXPERIMENTO_RECONOCIMIENTO_SILABA_EXPERIMENTAL","5.3",220,26,0.007,0.451,0.418,0.491,0.452,0.487,"Reconocimiento de sílabas (experimental)","EXPERIMENTO","A","C",5,-0.036
+"HVIS_OR_ESP_BUSQUEDA_SERIAL","5.2",233,28,-0.083,0.445,0.336,0.556,0.398,0.555,"Búsqueda serial","HVIS","E","B",5,-0.11
+"EXPERIMENTO_RECONOCIMIENTO_SILABA_CONTROL","5.3",220,26,-0.077,0.441,0.403,0.493,0.443,0.455,"Reconocimiento de sílabas (control)","EXPERIMENTO","A","C",5,-0.014
+"RAN_OBJETOS_VARIADOS_CORTOS","7.2",208,28,-0.079,0.44,0.331,0.562,0.531,0.458,"Denominación rápida de objetos variados (cortos)","HFON","B","C",7,-0.018
+"L_ORAL_PROSODIA_ACENTO_DE_PALABRAS","6.2",222,24,-0.025,0.439,0.307,0.575,0.419,0.512,"Acento de palabras","L_ORAL","A","B",6,-0.074
+"F_EJEC_INH_INHIBICION","5.3",187,19,-0.074,0.436,0.313,0.552,0.565,0.463,"Inhibición","F_EJEC","E","A",5,-0.028
+"MATE_ARIT_CONTEO_1_10","5.2",171,19,0.07,0.428,0.262,0.58,0.552,0.464,"Conteo del 1 al 10","MATE","A","C",5,-0.037
+"F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA","5.3",188,19,-0.013,0.42,0.302,0.545,0.372,0.4,"Atención sostenida","F_EJEC","E","B",5,0.02

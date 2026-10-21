@@ -22,3 +22,11 @@ details summary code { font-weight: 400; font-size: .78rem; color: #8D8F99; }
 /* tablas anchas: se desplazan dentro de su caja, sin invadir el índice lateral */
 main.content table { display: block; max-width: 100%; overflow-x: auto; }
 details { overflow-x: auto; }
+
+/* guía de las fichas: directorio por dominio */
+.fichas-dir { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.2rem 0 2rem; }
+.fichas-grupo { border: 1px solid #E6E3DC; border-radius: 10px; padding: .7rem 1rem .4rem; background: #FBFAF7; }
+.fichas-grupo h3 { font-size: 1.05rem; margin: .1rem 0 .5rem; border: none; }
+.fichas-grupo ul { padding-left: 1.1rem; margin-bottom: .4rem; font-size: .93rem; }
+.fichas-grupo li { margin-bottom: .15rem; }
+.fd-meta { color: #8D8F99; font-size: .8rem; white-space: nowrap; }

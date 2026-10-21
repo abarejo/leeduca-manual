@@ -39,6 +39,7 @@ EXPORTAR <- c(
   ESTRUCTURA = "estructura_bateria_R_v1.xlsx",
   NIVEL_LECTOR = "baremo_nivel_lector_R_v1.xlsx",
   WOODCOCK = "criterio_woodcock_R_v1.xlsx",
+  MATE_CRITERIO = "criterio_matematicas_R_v1.xlsx",
   REDES = "red_tareas_v1.xlsx"
 )
 PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"

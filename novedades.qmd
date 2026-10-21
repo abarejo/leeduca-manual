@@ -4,6 +4,8 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Menú y fichas | Las fichas se agrupan por dominio (lectura, procesamiento fonológico, cognición numérica, lenguaje oral y funciones ejecutivas) y el menú lateral se abre plegado. Nueva «Guía de las fichas» con todas a la vista. |
+| 21/10/2026 | Cognición numérica | El capítulo abre las fichas de matemáticas. Nuevo criterio provisional (aritmética de 10–11 años) y validez discriminante frente a la fluidez lectora. Citas actualizadas: Loredo et al. (2025, *Frontiers in Psychology*) y Luque et al. (en preparación). |
 | 21/10/2026 | Validez | Nuevo capítulo «Validez frente a un criterio externo»: la fluidez lectora de Woodcock-Muñoz (2021/22, 6–11 años) valida la etiqueta de dificultad persistente y ordena la validez predictiva de todas las tareas. |
 | 21/10/2026 | Diccionario | Los códigos 10680–10686, 10757 y 10758 (2021/22) son decisión léxica colectiva en tableta, no lectura de listas en voz alta. Corregido; explica los valores «anómalos» de 2021/22. |
 | 21/10/2026 | Matemáticas | Nuevo capítulo «Cognición numérica» (borrador): inventario de tareas, resultados de las dos líneas de trabajo del grupo y lo que falta para las fichas. |
