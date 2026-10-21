@@ -33,6 +33,10 @@ Si tienes una duda, has visto un error o propones un cambio, escríbelo en el **
 
 En este libro solo hay datos agregados. Los nombres y números de identificación de los alumnos, los nombres de los profesores y los datos individuales se quedan en la carpeta del proyecto, en la Universidad de Málaga. Los profesores aparecen siempre seudonimizados. Los baremos de pruebas comerciales que se usan para comparar (PROLEC-R, EDICOLE) no se reproducen; solo se citan.
 
+## Autoría
+
+El manual es obra del grupo de investigación LEEDUCA. La autoría está por cerrar; por ahora incluye a Juan Luis Luque Vilaseca, Auxiliadora Sánchez Gómez, Almudena Giménez, María Rodríguez y Pedro Javier López Pérez, y a las demás personas que el grupo acuerde. El orden se decidirá antes de la versión 1.0. La plataforma la construyeron Juan Luis Luque y Auxiliadora Sánchez con la ayuda de todo el grupo.
+
 ## Cómo citar este borrador
 
 Grupo LEEDUCA (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.1). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/

@@ -8,7 +8,7 @@ np <- sum(!is.na(C$nota_puntuacion) & C$nota_puntuacion != "")
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** propuesta del 21/10/2026 para discutir en el grupo. Recoge lo que pidió un compañero recién incorporado (qué necesita para hacer un estudio con estos datos) y lo aprendido al revisar las fichas de tareas de una tesis doctoral.
+**Estado:** propuesta del 21/10/2026 para discutir en el grupo. Recoge lo que pidió un compañero recién incorporado (qué necesita para hacer un estudio con estos datos) y lo aprendido al revisar las fichas de tareas de la tesis doctoral de María Rodríguez.
 :::
 
 Este capítulo es para quien quiera **hacer un estudio, una tesis o un TFM con los datos de la plataforma**. Dice qué hay, cómo se pide, cómo describir las tareas y cómo citar el manual.
@@ -38,7 +38,7 @@ Así cada estudio sabe con qué versión de los datos trabajó. Si se corrige un
 
 ## Cómo describir una tarea en una tesis o un artículo
 
-Lista de comprobación, a partir de la revisión de las fichas de una tesis:
+Lista de comprobación, a partir de la revisión de las fichas de la tesis de María Rodríguez:
 
 - [ ] **Código de la tarea y versión.** Hay tareas con varias versiones y el mismo nombre (por ejemplo, contar sílabas con 9, 12 o 20 ítems). El código permite localizarla en el [catálogo](catalogo.qmd).
 - [ ] **Sesión, edad y momento** (trimestre), y la cohorte y el curso escolar.
@@ -56,22 +56,22 @@ El catálogo ofrece para cada tarea un párrafo en español y en inglés que cum
 
 El libro se actualiza a menudo. **Propuesta:** publicar en Zenodo una versión fija con DOI cada vez que alguien lo cite en una tesis o un artículo. Así el tribunal o el revisor ven exactamente lo que se citó.
 
-## Un caso: la revisión de las fichas de una tesis
+## Un caso: la tesis de María Rodríguez
 
-Una doctoranda del grupo, a punto de depositar la tesis, pidió revisar la descripción de las 13 tareas de la plataforma que usó con niños de 3 y 4 años. La revisión fue útil en los dos sentidos:
+María Rodríguez, doctoranda del grupo LEEDUCA, a punto de depositar su tesis, pidió revisar la descripción de las 13 tareas de la plataforma que usó con niños de 3 y 4 años. La revisión fue útil en los dos sentidos:
 
 - **Para la tesis:**
   - la fiabilidad y el número de ítems del anexo venían de la tabla de alfas de 2021, calculada con otras cohortes;
   - en cuatro tareas, el anexo describía una versión distinta de la que se aplicó;
   - varias tareas puntúan también el ítem de ejemplo.
-- **Para el manual:**
-  - el código 1834 estaba en el diccionario como «memoria de conceptos», por una etiqueta de las matrices antiguas. La consigna de la plataforma, el Organizador 9.1 y la ficha de la tesis coinciden: es **supresión de la sílaba final**. Se ha corregido en `correcciones_tarea_canonica_v1.csv`, que los guiones aplican al leer los datos, sin tocar los archivos originales;
+- **Para el manual** (gracias a María Rodríguez, primera aportación externa al manual):
+  - el código 1834 estaba en el diccionario como «memoria de conceptos», por una etiqueta de las matrices antiguas. La consigna de la plataforma, el Organizador 9.1 y la ficha de la tesis de María Rodríguez coinciden: es **supresión de la sílaba final**. Se ha corregido en `correcciones_tarea_canonica_v1.csv`, que los guiones aplican al leer los datos, sin tocar los archivos originales;
   - el catálogo comprueba ahora si la puntuación máxima observada supera el número de ítems;
   - han aparecido dos tareas distintas unidas bajo el mismo nombre: morfología de número receptiva (2092) y de producción (222). Hay que separarlas.
 
 ## Tareas documentadas sin datos en la tabla larga
 
-La tabla larga empieza a los 4 años. Estas tareas se aplicaron a los 3 años, en sesiones posteriores, y están documentadas en las fichas de la tesis. Entrarán en el catálogo con datos cuando se integren esas sesiones.
+La tabla larga empieza a los 4 años. Estas tareas se aplicaron a los 3 años, en sesiones posteriores, y están documentadas en las fichas de tareas de María Rodríguez, que son la fuente de esta tabla. Entrarán en el catálogo con datos cuando se integren esas sesiones.
 
 | Código | Tarea | Edad | Ítems | Qué pide |
 |---|---|---|---|---|
@@ -82,7 +82,7 @@ La tabla larga empieza a los 4 años. Estas tareas se aplicaron a los 3 años, e
 | — | Repetición de pseudopalabras | 3 | 9 | Repetir pseudopalabras de una a tres sílabas |
 | — | Categorización | 3 | 3 | Señalar las imágenes de dos categorías semánticas en cada ítem |
 
-Faltan el código de las dos últimas y la cohorte y las sesiones de todas. Están preguntados a la autora de la tesis.
+Faltan el código de las dos últimas y la cohorte y las sesiones de todas. Están preguntados a María Rodríguez.
 
 ## Qué estudios se pueden hacer
 
