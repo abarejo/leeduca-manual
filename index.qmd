@@ -35,7 +35,7 @@ En este libro solo hay datos agregados. Los nombres y números de identificació
 
 ## Autoría
 
-El manual es obra del grupo de investigación LEEDUCA. La autoría está por cerrar; por ahora incluye a Juan Luis Luque Vilaseca, Auxiliadora Sánchez Gómez, Almudena Giménez, María Rodríguez y Pedro Javier López Pérez, y a las demás personas que el grupo acuerde. El orden se decidirá antes de la versión 1.0. La plataforma la construyeron Juan Luis Luque y Auxiliadora Sánchez con la ayuda de todo el grupo.
+Autoría provisional: Juan Luis Luque Vilaseca, Auxiliadora Sánchez Gómez, Ricardo Cruz Arándiga y Almudena Giménez (grupo de investigación LEEDUCA, Universidad de Málaga). La autoría definitiva se acordará antes de la versión 1.0.
 
 ## Cómo citar este borrador
 
