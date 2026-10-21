@@ -1,12 +1,4 @@
 "variable","mom","n","efecto","p"
-"ISE del centro (ρ)","10.2",432,-0.044,0.361
-"Sexo (d niña − niño; codificación en revisión)","10.2",432,-0.188,0.046
-"Edad relativa (ρ con la edad en meses)","10.2",430,0.029,0.556
-"Colegio (CCI)","10.2",432,0.05,
-"ISE del centro (ρ)","11.2",424,-0.059,0.222
-"Sexo (d niña − niño; codificación en revisión)","11.2",423,-0.254,0.01
-"Edad relativa (ρ con la edad en meses)","11.2",401,0.017,0.741
-"Colegio (CCI)","11.2",424,0.016,
 "ISE del centro (ρ)","7.2",1477,0.145,0
 "Sexo (d niña − niño; codificación en revisión)","7.2",1538,-0.096,0.059
 "Edad relativa (ρ con la edad en meses)","7.2",1535,0.02,0.444
@@ -27,7 +19,3 @@
 "Sexo (d niña − niño; codificación en revisión)","8.3",465,-0.036,0.695
 "Edad relativa (ρ con la edad en meses)","8.3",464,-0.021,0.652
 "Colegio (CCI)","8.3",472,0.129,
-"ISE del centro (ρ)","9.2",171,0.285,0
-"Sexo (d niña − niño; codificación en revisión)","9.2",387,0.022,0.827
-"Edad relativa (ρ con la edad en meses)","9.2",387,-0.118,0.02
-"Colegio (CCI)","9.2",390,0.057,

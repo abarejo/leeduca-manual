@@ -1,9 +1,9 @@
 "desde","criterio","n","casos","AUC","IC_inf","IC_sup"
-"6.1","Baja comprensión (≤ p25) a los 7 años",195,81,0.632,0.551,0.708
-"6.2","Baja comprensión (≤ p25) a los 7 años",715,217,0.618,0.573,0.662
-"6.2","Baja comprensión (≤ p25) a los 8 años",553,148,0.606,0.552,0.663
-"6.3","Baja comprensión (≤ p25) a los 7 años",1477,399,0.612,0.58,0.644
-"6.3","Baja comprensión (≤ p25) a los 8 años",820,222,0.594,0.548,0.637
-"7.1","Baja comprensión (≤ p25) a los 8 años",371,113,0.573,0.511,0.637
-"7.2","Baja comprensión (≤ p25) a los 8 años",898,244,0.577,0.537,0.622
-"7.3","Baja comprensión (≤ p25) a los 8 años",638,173,0.576,0.525,0.622
+"6.1","Baja comprensión (≤ p25) a los 7 años",195,81,0.632,0.554,0.706
+"6.2","Baja comprensión (≤ p25) a los 7 años",715,217,0.618,0.569,0.661
+"6.2","Baja comprensión (≤ p25) a los 8 años",553,148,0.606,0.554,0.66
+"6.3","Baja comprensión (≤ p25) a los 7 años",1477,399,0.612,0.582,0.646
+"6.3","Baja comprensión (≤ p25) a los 8 años",820,222,0.594,0.55,0.644
+"7.1","Baja comprensión (≤ p25) a los 8 años",371,113,0.573,0.512,0.631
+"7.2","Baja comprensión (≤ p25) a los 8 años",898,244,0.577,0.531,0.621
+"7.3","Baja comprensión (≤ p25) a los 8 años",638,173,0.576,0.53,0.623

@@ -13,19 +13,18 @@
 "6.1","Morfosintaxis oral",1669,0.282,0.275
 "6.1","Denominación rápida (RAN)",1677,0.223,0.348
 "6.1","Vocabulario y comprensión oral",1677,0.165,0.169
-"6.2","Lectura de palabras y texto",2002,0.836,0.856
-"6.2","Conciencia fonológica",1146,0.399,0.42
+"6.2","Lectura de palabras y texto",1759,0.887,0.88
+"6.2","Conciencia fonológica",905,0.602,0.545
 "6.2","Morfosintaxis oral",1443,0.306,0.339
 "6.2","Memoria verbal",536,0.237,0.336
 "6.2","Denominación rápida (RAN)",1444,0.215,0.325
-"6.2","Comprensión lectora",227,-0.061,0.021
 "6.3","Lectura de palabras y texto",1907,0.671,0.481
 "6.3","Comprensión lectora",1555,0.343,0.232
-"7.1","Lectura de palabras y texto",1792,0.8,0.788
-"7.1","Conciencia fonológica",1225,0.351,0.342
+"7.1","Lectura de palabras y texto",1555,0.848,0.833
+"7.1","Conciencia fonológica",988,0.43,0.413
 "7.1","Denominación rápida (RAN)",739,0.345,0.36
 "7.1","Memoria verbal",780,0.276,0.277
-"7.1","Comprensión lectora",1579,0.224,0.197
+"7.1","Comprensión lectora",1343,0.255,0.21
 "7.2","Lectura de palabras y texto",800,0.858,0.844
 "7.2","Comprensión lectora",800,0.158,0.095
 "7.2","Denominación rápida (RAN)",782,0.079,0.087
@@ -36,9 +35,3 @@
 "8.1","Comprensión lectora",540,0.222,0.169
 "8.3","Lectura de palabras y texto",472,0.814,0.843
 "8.3","Denominación rápida (RAN)",472,0.327,0.393
-"9.2","Lectura de palabras y texto",392,0.629,0.64
-"9.2","Comprensión lectora",386,0.191,0.179
-"10.2","Lectura de palabras y texto",461,0.616,0.662
-"10.2","Comprensión lectora",424,0.099,0.096
-"11.2","Lectura de palabras y texto",461,0.697,0.709
-"11.2","Comprensión lectora",417,0.043,0.072

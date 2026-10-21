@@ -4,6 +4,9 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Validez | Nuevo capítulo «Validez frente a un criterio externo»: la fluidez lectora de Woodcock-Muñoz (2021/22, 6–11 años) valida la etiqueta de dificultad persistente y ordena la validez predictiva de todas las tareas. |
+| 21/10/2026 | Diccionario | Los códigos 10680–10686, 10757 y 10758 (2021/22) son decisión léxica colectiva en tableta, no lectura de listas en voz alta. Corregido; explica los valores «anómalos» de 2021/22. |
+| 21/10/2026 | Matemáticas | Nuevo capítulo «Cognición numérica» (borrador): inventario de tareas, resultados de las dos líneas de trabajo del grupo y lo que falta para las fichas. |
 | 21/10/2026 | Baremos | Nuevo capítulo «Baremos por nivel lector»: nivel lector equivalente de cinco tareas de lectura, baremo de pseudopalabras y palabras condicionado al nivel lector, retraso frente a alteración y su validez frente a la comprensión posterior. Pensado para el criterio de nivel lector del cuadro de síntesis DIS-ESP. |
 | 21/10/2026 | Presentación | Nuevo apartado «Autoría» (provisional: J. L. Luque Vilaseca, A. Sánchez Gómez, R. Cruz Arándiga y A. Giménez). La parte de investigación reconoce por su nombre la aportación de María Rodríguez. |
 | 21/10/2026 | Investigación | Nueva parte «Investigar con la plataforma»: niveles de acceso a los datos, paquete de investigación, lista de comprobación para describir tareas, cómo citar el manual y tareas de 3 años sin datos en la tabla larga. La agenda metodológica pasa a esta parte. |

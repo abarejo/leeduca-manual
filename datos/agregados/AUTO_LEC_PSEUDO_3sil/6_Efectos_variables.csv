@@ -1,24 +1,16 @@
 "variable","mom","n","efecto","p"
-"ISE del centro (ρ)","10.2",461,-0.047,0.31
-"Sexo (d niña − niño; codificación en revisión)","10.2",461,-0.158,0.089
-"Edad relativa (ρ con la edad en meses)","10.2",459,-0.016,0.736
-"Colegio (CCI)","10.2",461,0.012,
-"ISE del centro (ρ)","11.2",455,-0.018,0.7
-"Sexo (d niña − niño; codificación en revisión)","11.2",452,-0.064,0.497
-"Edad relativa (ρ con la edad en meses)","11.2",431,0.03,0.531
-"Colegio (CCI)","11.2",455,0,
 "ISE del centro (ρ)","6.2",685,0.003,0.935
-"Sexo (d niña − niño; codificación en revisión)","6.2",929,-0.02,0.76
-"Edad relativa (ρ con la edad en meses)","6.2",953,0.077,0.018
-"Colegio (CCI)","6.2",958,0.02,
+"Sexo (d niña − niño; codificación en revisión)","6.2",722,-0.039,0.588
+"Edad relativa (ρ con la edad en meses)","6.2",720,0.1,0.007
+"Colegio (CCI)","6.2",723,0.044,
 "ISE del centro (ρ)","6.3",1904,0.102,0
 "Sexo (d niña − niño; codificación en revisión)","6.3",1898,-0.033,0.471
 "Edad relativa (ρ con la edad en meses)","6.3",1890,0.051,0.027
 "Colegio (CCI)","6.3",1906,0.081,
 "ISE del centro (ρ)","7.1",1518,0.084,0.001
-"Sexo (d niña − niño; codificación en revisión)","7.1",1798,-0.103,0.028
-"Edad relativa (ρ con la edad en meses)","7.1",1794,0.045,0.057
-"Colegio (CCI)","7.1",1804,0.065,
+"Sexo (d niña − niño; codificación en revisión)","7.1",1559,-0.112,0.026
+"Edad relativa (ρ con la edad en meses)","7.1",1555,0.033,0.188
+"Colegio (CCI)","7.1",1563,0.063,
 "ISE del centro (ρ)","7.2",1494,0.116,0
 "Sexo (d niña − niño; codificación en revisión)","7.2",1556,-0.12,0.017
 "Edad relativa (ρ con la edad en meses)","7.2",1553,0.024,0.338
@@ -39,7 +31,3 @@
 "Sexo (d niña − niño; codificación en revisión)","8.3",465,0.02,0.826
 "Edad relativa (ρ con la edad en meses)","8.3",464,-0.029,0.535
 "Colegio (CCI)","8.3",472,0.053,
-"ISE del centro (ρ)","9.2",170,0.206,0.007
-"Sexo (d niña − niño; codificación en revisión)","9.2",384,-0.059,0.569
-"Edad relativa (ρ con la edad en meses)","9.2",384,-0.007,0.884
-"Colegio (CCI)","9.2",388,0.054,

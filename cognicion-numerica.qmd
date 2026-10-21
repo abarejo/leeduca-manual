@@ -1,0 +1,67 @@
+# Cognición numérica {#sec-matematicas}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+M <- C[C$dominio == "MATE", ]
+PRO <- c(ARITMETICA = "Aritmética", CONTAR = "Secuencia numérica", ET_VERB = "Código verbal y arábigo", SEN_NUM = "Sentido numérico (magnitudes)")
+V <- tryCatch(leer("WOODCOCK", "2a_Validez_tarea_momento"), error = function(e) data.frame())
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primer borrador del 21/10/2026. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo reúne lo que hay y lo que falta. Se apoya en dos líneas de trabajo con datos de la plataforma: el artículo de A. Giménez sobre procesamiento fonológico y aritmética (en preparación) y la tesis de M. Loredo sobre la comorbilidad entre dislexia y discalculia [@loredo2025prevalencia].
+:::
+
+## Qué mide la plataforma
+
+La plataforma tiene `r nrow(M)` tareas de cognición numérica, de 4 a 11 años, agrupadas en cuatro procesos:
+
+- **Secuencia numérica**: contar hacia delante y hacia atrás.
+- **Código verbal y arábigo**: leer números.
+- **Sentido numérico**: comparar magnitudes, con puntos o con cifras.
+- **Aritmética**: sumas y restas, de un dígito a tres.
+
+```{r}
+#| label: tbl-mate-inventario
+#| tbl-cap: "Tareas de cognición numérica de la plataforma. Clase de calidad según las reglas del capítulo «Límites y calidad de los datos»."
+M <- M[order(match(M$proceso, names(PRO)), M$edades), ]
+T <- data.frame(Proceso = unname(PRO[M$proceso]), Tarea = M$tarea, Códigos = M$codigos, Edades = M$edades, Ítems = M$n_items,
+                `α 2021` = M$alfa_2021, `N máx. por sesión` = M$N_max_sesion, Clase = M$clase, check.names = FALSE)
+tabla(T, digitos = 2)
+```
+
+Hoy solo `r sum(M$clase == "A")` tareas son de clase A: contar hacia delante y hacia atrás y leer números arábigos, todas de 4 a 5 años. Tienen ya [ficha automática](fichas/auto/index.qmd). Las demás no llegan a la clase A por una de tres razones:
+
+- **Se aplicaron en una o dos sesiones**, así que no hay estabilidad entre momentos.
+- **No tienen α**, porque faltan las respuestas ítem a ítem en el análisis de 2021. La plataforma nueva sí las guarda.
+- **Mezclan versiones.** La comparación de magnitudes simbólicas reúne tres versiones con contenido y número de ítems distintos: la de 1.º de Primaria (2006), la de 2021/22 a los 10–11 años, con 62 ítems de una a tres cifras (10747), y la de 2021/22 a los 6–9 años (10750). Hay que separarlas antes de baremarlas. Lo mismo ocurre con el código 10759, que el diccionario asigna a dos tareas.
+
+## Lo que ya se sabe con estos datos
+
+**Procesamiento fonológico y aritmética** (Giménez et al., en preparación). Con 539 niños seguidos de 5 a 7 años, y parte de ellos a los 11:
+
+- la conciencia fonológica de 5, 6 y 7 años se relaciona con la aritmética de los primeros cursos, pero su peso disminuye a los 11 años;
+- la denominación rápida (RAN) de 5 y 6 años mantiene la relación con las matemáticas hasta los 11;
+- la memoria verbal es el predictor más débil;
+- las medidas de exactitud son más estables que las de tiempo.
+
+**Riesgo de dislexia, de discalculia y su comorbilidad** [@loredo2025prevalencia]. Con 691 alumnos de 5.º y 6.º evaluados en 2021/22, en tableta:
+
+- el riesgo de discalculia se define como estar a −1 DT o por debajo en comparación de magnitudes simbólicas y en aritmética;
+- el riesgo de dislexia, a −1 DT o por debajo en decisión léxica y en fluidez lectora de Woodcock-Muñoz;
+- la prevalencia es del 8,5 % para la dislexia, del 4,2 % para la discalculia y del 2,0 % para ambas;
+- la comorbilidad supera lo esperado por azar y es asimétrica: la mitad de los niños con riesgo de discalculia tiene también dificultades lectoras.
+
+**Relación con la lectura posterior.** Algunas tareas numéricas anticipan la fluidez lectora años después tanto como las fonológicas. Por ejemplo, las sumas de un dígito a los 6 años o la comparación de magnitudes no simbólicas a los 5 ([Validez frente a un criterio externo](criterio-woodcock.qmd)).
+
+## Qué falta para que entren en el manual con ficha completa
+
+1. **Separar las versiones** de magnitudes simbólicas y de los códigos con dos tareas (10759).
+2. **Calcular α u ω** con las respuestas ítem a ítem de la plataforma nueva (2018 en adelante), en especial para las tareas de 2021/22.
+3. **Un criterio de validez para matemáticas.** Para la lectura tenemos el Woodcock-Muñoz; para las matemáticas no hay una prueba externa equivalente. Hay tres opciones:
+    - la nota de Matemáticas del centro, si está en los datos;
+    - una etiqueta de dificultad matemática persistente, construida igual que la de lectura;
+    - la aritmética de 10–11 años como criterio de las tareas de Infantil.
+4. **Fichas por familia.** Las tareas de contar y leer números son de precisión (familia A). La comparación de magnitudes es de decisión con tiempo (familia E). Las sumas y restas con tiempo limitado son de eficiencia y necesitan su propia puntuación (aciertos en 1 minuto).
+5. **Coordinar con la batería BERDE** (evaluación rápida de discalculia), para que las tareas de la plataforma y las de BERDE compartan nombres y criterios.
