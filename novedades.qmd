@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 21/10/2026 | Baremos | Nuevo capítulo «Baremos por nivel lector»: nivel lector equivalente de cinco tareas de lectura, baremo de pseudopalabras y palabras condicionado al nivel lector, retraso frente a alteración y su validez frente a la comprensión posterior. Pensado para el criterio de nivel lector del cuadro de síntesis DIS-ESP. |
 | 21/10/2026 | Presentación | Nuevo apartado «Autoría» (provisional: J. L. Luque Vilaseca, A. Sánchez Gómez, R. Cruz Arándiga y A. Giménez). La parte de investigación reconoce por su nombre la aportación de María Rodríguez. |
 | 21/10/2026 | Investigación | Nueva parte «Investigar con la plataforma»: niveles de acceso a los datos, paquete de investigación, lista de comprobación para describir tareas, cómo citar el manual y tareas de 3 años sin datos en la tabla larga. La agenda metodológica pasa a esta parte. |
 | 21/10/2026 | Diccionario | El código 1834 es supresión de la sílaba final, no «memoria de conceptos» (detectado al revisar las fichas de una tesis). El catálogo avisa cuando la puntuación máxima observada supera el número de ítems. |

@@ -35,6 +35,7 @@ book:
         - limites.qmd
         - riesgo.qmd
         - baremos-trimestre.qmd
+        - baremo-nivel-lector.qmd
     - part: "Catálogo de tareas"
       chapters:
         - catalogo.qmd

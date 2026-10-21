@@ -37,6 +37,7 @@ EXPORTAR <- c(
   TECLE_equiv = "ficha_TECLE_equivalencia_R_v1.xlsx",
   CATALOGO = "catalogo_tareas_R_v1.xlsx",
   ESTRUCTURA = "estructura_bateria_R_v1.xlsx",
+  NIVEL_LECTOR = "baremo_nivel_lector_R_v1.xlsx",
   REDES = "red_tareas_v1.xlsx"
 )
 PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"
@@ -73,6 +74,9 @@ message(total, " tablas exportadas a ", destino, ". Revisa con `git diff --stat`
 fa <- list.files(file.path(diag, "fichas_auto"), pattern = "^ficha_.*_R_v[0-9]+\\.xlsx$", full.names = TRUE)
 ver <- as.integer(sub(".*_R_v([0-9]+)\\.xlsx$", "\\1", basename(fa))); tar <- sub("^ficha_(.*)_R_v[0-9]+\\.xlsx$", "\\1", basename(fa))
 fa <- fa[order(tar, -ver)][!duplicated(tar[order(tar, -ver)])]
+# solo las tareas que siguen en el catálogo (una ficha de una tarea renombrada, como 1834 «memoria de conceptos», queda obsoleta)
+cat_tc <- tryCatch(read.csv(file.path(destino, "CATALOGO", "Catalogo.csv"), encoding = "UTF-8")$tarea_canonica, error = function(e) NULL)
+if (!is.null(cat_tc)) fa <- fa[sub("^ficha_(.*)_R_v[0-9]+\\.xlsx$", "\\1", basename(fa)) %in% cat_tc]
 for (f in fa) {
   ficha <- paste0("AUTO_", sub("^ficha_(.*)_R_v[0-9]+\\.xlsx$", "\\1", basename(f))); dir.create(file.path(destino, ficha), showWarnings = FALSE)
   for (h in setdiff(excel_sheets(f), "LEEME")) {

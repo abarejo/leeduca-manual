@@ -1,0 +1,6 @@
+"tarea_canonica","tarea","registros","validos","extremos_quitados","sesiones_excluidas"
+"LEC_PAL_2sil","Palabras bisílabas",13288,13224,2,"948, 949, 950"
+"LEC_PSEUDO_2sil","Pseudopalabras bisílabas",11073,11042,6,"948, 949, 950"
+"LEC_PAL_3sil","Palabras trisílabas",8698,8653,0,"948, 949, 950"
+"LEC_PSEUDO_3sil","Pseudopalabras trisílabas",8685,8648,6,"948, 949, 950"
+"LEC_SILABAS_SIMPLE","Sílabas simples",8943,8924,4,"948, 949, 950"
