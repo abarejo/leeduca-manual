@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Si usas este manual, cítalo así. Autoría pendiente de acordar en el grupo LEEDUCA."
+title: "Manual técnico de la plataforma LEEDUCA (versión de consulta)"
+type: report
+version: "0.9"
+license: CC-BY-4.0
+url: "https://abarejo.github.io/leeduca-manual/"
+repository-code: "https://github.com/abarejo/leeduca-manual"
+authors:
+  - name: "Grupo de investigación LEEDUCA, Universidad de Málaga"
+# doi: se añade tras el depósito en Zenodo

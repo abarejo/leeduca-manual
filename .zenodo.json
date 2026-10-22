@@ -1,0 +1,18 @@
+{
+  "title": "Manual técnico de la plataforma LEEDUCA: evaluación y seguimiento del aprendizaje de la lectoescritura de 4 a 11 años (versión de consulta)",
+  "upload_type": "publication",
+  "publication_type": "technicalnote",
+  "description": "Versión de consulta del manual técnico de la plataforma LEEDUCA/PRELEO (Universidad de Málaga). Describe las tareas de la plataforma (qué miden, muestra, fiabilidad, validez y baremos provisionales), los criterios de riesgo y dificultad lectora, la validez frente a criterios externos y la parte de investigación. Incluye solo datos agregados; los datos individuales no salen del proyecto. Borrador en revisión: no es la versión definitiva.",
+  "creators": [
+    {"name": "PENDIENTE DE ACORDAR CON J. L. LUQUE", "affiliation": "Grupo LEEDUCA, Universidad de Málaga"}
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "language": "spa",
+  "version": "0.9",
+  "keywords": ["dislexia", "lectura", "evaluación digital", "cribado universal", "baremos", "fiabilidad", "validez", "Preleo", "LEEDUCA"],
+  "related_identifiers": [
+    {"identifier": "https://abarejo.github.io/leeduca-manual/", "relation": "isSupplementTo", "resource_type": "publication-other"}
+  ],
+  "notes": "Versión de consulta depositada para su cita en la tesis de M. Rodríguez y en la solicitud de proyecto al ministerio. El libro web sigue actualizándose."
+}
