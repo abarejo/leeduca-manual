@@ -4,15 +4,52 @@
   "publication_type": "technicalnote",
   "description": "Versión de consulta del manual técnico de la plataforma LEEDUCA/PRELEO (Universidad de Málaga). Describe las tareas de la plataforma (qué miden, muestra, fiabilidad, validez y baremos provisionales), los criterios de riesgo y dificultad lectora, la validez frente a criterios externos y la parte de investigación. Incluye solo datos agregados; los datos individuales no salen del proyecto. Borrador en revisión: no es la versión definitiva.",
   "creators": [
-    {"name": "PENDIENTE DE ACORDAR CON J. L. LUQUE", "affiliation": "Grupo LEEDUCA, Universidad de Málaga"}
+    {
+      "name": "Luque Vilaseca, Juan Luis",
+      "affiliation": "Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga"
+    },
+    {
+      "name": "Sánchez Gómez, Auxiliadora",
+      "affiliation": "Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga"
+    },
+    {
+      "name": "Carrillo Gallego, Marisol",
+      "affiliation": "Departamento de Psicología Evolutiva y de la Educación, Universidad de Murcia"
+    },
+    {
+      "name": "Giménez de la Peña, Almudena",
+      "affiliation": "Departamento de Psicología Básica, Universidad de Málaga"
+    },
+    {
+      "name": "Flores Marín, Amanda",
+      "affiliation": "Departamento de Psicología Básica, Universidad de Málaga"
+    },
+    {
+      "name": "López-Pérez, Pedro Javier",
+      "affiliation": "Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga"
+    }
   ],
   "license": "CC-BY-4.0",
   "access_right": "open",
   "language": "spa",
   "version": "0.9",
-  "keywords": ["dislexia", "lectura", "evaluación digital", "cribado universal", "baremos", "fiabilidad", "validez", "Preleo", "LEEDUCA"],
-  "related_identifiers": [
-    {"identifier": "https://abarejo.github.io/leeduca-manual/", "relation": "isSupplementTo", "resource_type": "publication-other"}
+  "keywords": [
+    "dislexia",
+    "lectura",
+    "evaluación digital",
+    "cribado universal",
+    "baremos",
+    "fiabilidad",
+    "validez",
+    "Preleo",
+    "LEEDUCA"
   ],
-  "notes": "Versión de consulta depositada para su cita en la tesis de M. Rodríguez y en la solicitud de proyecto al ministerio. El libro web sigue actualizándose."
+  "related_identifiers": [
+    {
+      "identifier": "https://abarejo.github.io/leeduca-manual/",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-other"
+    }
+  ],
+  "notes": "Versión de consulta depositada para su cita en la tesis de M. Rodríguez y en la solicitud de proyecto al ministerio. El libro web sigue actualizándose. Orden de autoría provisional (22/10/2026), pendiente de confirmar con J. L. Luque. Añadir ORCID de cada autor antes del depósito."
 }

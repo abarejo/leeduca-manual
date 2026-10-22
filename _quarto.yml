@@ -11,7 +11,19 @@ lang: es
 book:
   title: "Manual técnico de la plataforma LEEDUCA"
   subtitle: "Evaluación y seguimiento del aprendizaje de la lectoescritura de 4 a 11 años"
-  author: "Grupo de investigación LEEDUCA · Universidad de Málaga"
+  author:
+    - name: "Juan Luis Luque Vilaseca"
+      affiliation: "Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga"
+    - name: "Auxiliadora Sánchez Gómez"
+      affiliation: "Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga"
+    - name: "Marisol Carrillo Gallego"
+      affiliation: "Departamento de Psicología Evolutiva y de la Educación, Universidad de Murcia"
+    - name: "Almudena Giménez de la Peña"
+      affiliation: "Departamento de Psicología Básica, Universidad de Málaga"
+    - name: "Amanda Flores Marín"
+      affiliation: "Departamento de Psicología Básica, Universidad de Málaga"
+    - name: "Pedro Javier López-Pérez"
+      affiliation: "Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga"
   date: today
   date-format: "D [de] MMMM [de] YYYY"
   repo-url: https://github.com/abarejo/leeduca-manual
