@@ -45,7 +45,7 @@ ficha_auto <- function(TAREA) {
   # ---- descripción ----
   out("## Descripción")
   PL <- plataforma_actividades(); PL <- if (nrow(PL)) PL[PL$tarea_canonica == TAREA, ] else PL
-  items_txt <- if (nrow(PL)) paste0(paste0(PL$n_items, " (", PL$codigo, ")", collapse = "; "), " según la plataforma") else ifelse(is.na(ct$n_items), "—", ct$n_items)
+  items_txt <- if (nrow(PL)) paste0(paste0(ifelse(is.na(PL$n_items) | PL$n_items == "", "—", PL$n_items), " (", PL$codigo, ")", collapse = "; "), " según la plataforma") else ifelse(is.na(ct$n_items), "—", ct$n_items)
   pant <- if (!is.na(ct$formato) && ct$formato %in% names(PANT)) sprintf('\n\n![Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).](../../figuras/pantallas/%s){width=45%%}', PANT[[ct$formato]]) else ""
   out("| | |\n|---|---|\n| Códigos | ", ct$codigos, " |\n| Batería | ", ifelse(is.na(ct$bateria) | ct$bateria == "", "—", ct$bateria), " |\n| Formato | ", ifelse(is.na(ct$formato), "—", ct$formato),
       " |\n| Ítems | ", items_txt, " |\n| Familia de ficha | ", FAM_NOM[[fam]], " |\n| Puntuación | ", FI$puntuacion, " |\n| Consigna (plataforma) | ", ifelse(is.na(ct$descripcion), "—", ct$descripcion), " |", pant)

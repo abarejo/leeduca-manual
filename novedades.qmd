@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 23/10/2026 | Plataforma | 26 actividades más leídas en la plataforma (clase A y cribado): palabras y pseudopalabras de 1–4 sílabas, sílabas complejas, decisión ortográfica, supresión, identificación y segmentación de fonemas, supresión de sílabas, conteo, vocabulario, velocidad y comprensión de texto. Las fichas automáticas muestran su configuración. Diferencias con las instrucciones: 1552 (11 dibujos, no 10), 1896 (11 sílabas, no 10), 1884 (4 opciones, no 5) y 2264 (orden fijo, no al azar). |
 | 23/10/2026 | Propuesta de batería | Nuevo apartado en «Fichas de tareas»: propuesta de tareas por curso y trimestre (3 años a 3.º de Primaria) con su fundamento teórico y la evidencia del manual, para discutir en el grupo. |
 | 23/10/2026 | Tareas por edad | Nueva página de consulta: tareas disponibles a cada edad (3–11 años) y núcleo mínimo propuesto por edad, con la duración real de cada tarea en la plataforma. |
 | 23/10/2026 | Citas | Se retiran las citas de trabajos del grupo aún no publicados (cognición numérica y rima); se incorporarán cuando se publiquen. |
