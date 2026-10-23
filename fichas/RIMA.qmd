@@ -1,0 +1,125 @@
+---
+title: "Juicio de rima"
+subtitle: "Ficha · CF_RIMA_JUICIO · código 11795 · 3 a 5 años"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+R1 <- leer("RIMA_3A", "R1"); R2 <- leer("RIMA_3A", "R2"); R3w <- leer("RIMA_3A", "R3w"); R4 <- leer("RIMA_3A", "R4")
+ord <- function(m) factor(m, unique(m[order(as.numeric(m))]))
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** borrador (23/10/2026). Datos del servidor de octubre de 2023 a junio de 2026, con `scripts/R/ficha_rima_3anios.R`. Falta la validez frente a la lectura posterior, que llegará cuando estas cohortes estén en Primaria. Es la tarea que estudia el artículo de A. Sánchez Gómez y colaboradores (en preparación), con otra muestra y otro modelo (ver «Diferencias con el artículo»).
+:::
+
+**En una frase.** El niño escucha dos palabras y dice si «se parecen al final». A los 3 años la mayoría no distingue los pares que riman de los que no; la discriminación mejora poco a lo largo de 4 años y da un salto a los 5, pero al final de Infantil menos de la mitad domina la tarea (9 o 10 aciertos).
+
+## Descripción
+
+El evaluador lee en voz alta un par de palabras y el niño decide si se parecen al final. Antes se da un ejemplo oral (*ventana–campana*), alargando el segmento que se repite. Son diez pares en orden fijo: seis riman y cuatro no. Los que no riman representan tres tipos de distractor.
+
+| Tipo de par | Ítems | Ejemplo |
+|---|---|---|
+| Rima llana | 4 | *fresa–mesa* |
+| Rima aguda | 2 | — |
+| No rima, sin relación | 1 | *pelo–cama* |
+| No rima, relación semántica | 2 | — |
+| No rima, semejanza fonológica parcial (comparte vocal tónica y consonante siguiente) | 1 | — |
+
+: Composición de la tarea. La lista completa de pares no se publica. {.striped}
+
+### Cómo está programada en la plataforma {.unnumbered}
+
+```{r}
+#| results: asis
+plataforma_tabla(codigos = 11795)
+```
+
+**Cómo se puntúa.** La plataforma solo guarda acierto o fallo en cada par. Como el orden y la clave son fijos, se reconstruye la respuesta: un acierto en un par que rima es un «sí»; un fallo en un par que no rima, también. Con eso se separan dos cosas que el número de aciertos mezcla:
+
+- **la discriminación (d′):** cuánto más dice «sí» ante las rimas que ante los pares que no riman, y
+- **el criterio (c):** la tendencia a decir «sí» en general. Los niños pequeños tienden a responder que sí a casi todo [@fritzley2003yes]; los valores negativos de c indican esa tendencia.
+
+Se usa la corrección log-lineal de @hautus1995corrections para los casos extremos [@macmillan2005detection]. Cuando el evaluador ve que el niño no entiende la tarea marca todos los pares como error: esas aplicaciones (0/10) se cuentan aparte como «no realiza la tarea» y no entran en las medias, la fiabilidad ni los percentiles. **Dominio** = 9 o 10 aciertos, que por azar solo se alcanzan con probabilidad .011.
+
+## Marco teórico
+
+En inglés, la sensibilidad a la rima se considera la primera puerta de la conciencia fonológica: aparece pronto y predice la lectura [@bradley1983categorizing], y los modelos del desarrollo la sitúan antes del fonema, después de la palabra y la sílaba [@anthony2003phonological]. Pero esa prominencia depende de la lengua [@ziegler2005grain]. En inglés, juzgar una rima suele ser comparar el final de una sílaba (*cat–hat*). En español la rima va desde la vocal tónica hasta el final, y como la mayoría de las palabras son llanas abarca más de una sílaba (*fresa–mesa*: -esa). El niño tiene que localizar el acento y comparar toda esa secuencia, no reconocer una unidad compacta. Además, los prelectores juzgan por la semejanza global y les cuesta rechazar pares que se parecen sin rimar [@carroll2001global], como dos palabras que comparten la vocal tónica y la consonante siguiente pero no la vocal final.
+
+La predicción, por tanto, es que en español la rima no es una habilidad temprana y sencilla, sino más tardía que la conciencia silábica. Los datos de la plataforma la apoyan.
+
+## Resultados por momento
+
+```{r}
+T1 <- R1[, c("momento", "N", "centros", "pct_no_realiza", "M", "DT", "d", "c", "pct_si_rima", "pct_si_norima", "pct_dominio", "alfa_sin0", "alfa_todos")]
+T1$d <- paste0(num_es(R1$d), " [", num_es(R1$d_ic_inf), "; ", num_es(R1$d_ic_sup), "]")
+tabla(T1, c("Momento", "N", "Centros", "No realiza (%)", "Media (sin 0/10)", "DT", "d′ [IC 95 %]", "c", "«Sí» ante rima (%)", "«Sí» ante no rima (%)", "Dominio ≥ 9 (%)", "α sin 0/10", "α con 0/10"), digitos = 2,
+      pie = "Primera aplicación de cada niño en cada curso y trimestre; momento = edad.trimestre (1 = sep–dic, 2 = ene–mar, 3 = abr–ago). Dominio sobre todos los niños, incluidos los que no realizan la tarea.")
+```
+
+```{r}
+#| fig-cap: "Discriminación de la rima (d′, media con IC 95 %) y porcentaje de niños que dominan la tarea (9–10 aciertos) en cada momento."
+#| fig-height: 3.4
+D <- R1; D$mom <- ord(D$momento)
+G <- rbind(data.frame(mom = D$mom, panel = "A. Discriminación (d′)", y = D$d, lo = D$d_ic_inf, hi = D$d_ic_sup, lab = NA),
+           data.frame(mom = D$mom, panel = "B. Dominio (% con 9–10 aciertos)", y = D$pct_dominio, lo = NA, hi = NA, lab = paste0(round(D$pct_dominio), " %")))
+ggplot(G, aes(mom, y, group = 1)) +
+  geom_line(colour = PAL[["gris"]], linewidth = .4) +
+  geom_linerange(aes(ymin = lo, ymax = hi), colour = PAL[["mar"]], linewidth = .8, na.rm = TRUE) +
+  geom_point(colour = PAL[["mar"]], size = 2.2) +
+  geom_text(aes(label = lab), vjust = -1, size = 3, colour = PAL[["tinta"]], na.rm = TRUE) +
+  facet_wrap(~ panel, scales = "free_y") + expand_limits(y = 0) +
+  scale_y_continuous(expand = expansion(mult = c(0, .15))) +
+  labs(x = "Momento (edad.trimestre)", y = NULL) + tema_leeduca()
+```
+
+El momento 3.1 (septiembre a diciembre de 3 años) solo existe para las cohortes más recientes y tiene menos niños y centros; su valor, más alto que el de 3.2, no debe leerse como un descenso. Tres cosas destacan:
+
+- **A los 3 años la discriminación es muy baja.** En febrero (3.2) los niños dicen «sí» al 68 % de las rimas y al 52 % de los pares que no riman, y el 14 % no realiza la tarea.
+- **La trayectoria no es lineal.** d′ sube de 3.2 a 3.3, se queda estancada durante todo el curso de 4 años (alrededor de 0,8) y da un salto entre 4.3 y 5.1 (hasta 1,3), donde vuelve a estancarse.
+- **No hay techo a los 5 años.** Al final de Infantil domina la tarea el 42 % de los niños.
+
+## Ítems
+
+```{r}
+tabla(R3w, c("Ítem", "Tipo", names(R3w)[-(1:2)]), digitos = 0,
+      pie = "Porcentaje de acierto de cada par, sin los niños que no realizan la tarea. En los pares que riman el acierto incluye la tendencia a decir «sí».")
+```
+
+El par sin relación es el más fácil de rechazar y llega al 80 % a los 5 años. Los dos pares semánticos y, sobre todo, el de semejanza fonológica siguen cerca del azar durante los 4 años y no pasan del 64–74 % a los 5. Entre las rimas, una de las agudas es la más difícil en todos los momentos.
+
+## Fiabilidad
+
+- **Consistencia interna:** α = `r num_es(min(R1$alfa_sin0))`–`r num_es(max(R1$alfa_sin0))` sin las aplicaciones 0/10. Con ellas sube (hasta `r num_es(max(R1$alfa_todos))` a los 3 años), porque un bloque de ceros siempre infla α: **para publicar, dar la cifra sin los 0/10** o las dos.
+- **Estabilidad entre momentos consecutivos** (mismos niños):
+
+```{r}
+tabla(R4, c("De", "A", "N", "ρ aciertos", "ρ d′"), digitos = 2)
+```
+
+La estabilidad es baja (ρ ≈ .15–.40). Con diez ítems y una habilidad que está apareciendo, la puntuación de un niño en un momento dice poco de la siguiente. **Uso recomendado:** describir grupos y vigilar el progreso con varias medidas; no tomar decisiones individuales con una sola aplicación antes de los 5 años.
+
+## Baremo provisional
+
+```{r}
+tabla(R2, c("Momento", "N", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 1,
+      pie = "Aciertos (0–10) de los niños que realizan la tarea; el porcentaje que no la realiza va en la tabla de resultados. Todas las regiones con la tarea en castellano; sin separar por Preleo.")
+```
+
+Con P50 de 6–8 y P90 en el techo (10) desde los 3 años, el baremo discrimina sobre todo por abajo. El percentil 16 queda en 3–5 aciertos, cerca de lo que daría responder al azar (5).
+
+## Diferencias con el artículo
+
+El artículo de Sánchez Gómez y colaboradores sigue a **una sola cohorte** (nacidos en 2020; 934 niños de 36 centros, de febrero de 2024 a mayo de 2026) y estima d′ con un modelo mixto probit. Esta ficha usa **todas las aplicaciones de 2023–2026** (varias cohortes, `r num_es(sum(R1$N), 0)` aplicaciones) y d′ individual con la corrección de Hautus. Por eso las cifras no coinciden: aquí d′ en 3.2 es `r num_es(R1$d[R1$momento == "3.2"])` y en el artículo es −0,07, y el dominio a los 5 años es menor. Las conclusiones van en la misma dirección. Dos avisos que afectan al artículo:
+
+- su α = .81 parece incluir las aplicaciones 0/10; sin ellas, α ≈ .65–.79;
+- la tarea muestra el par escrito en pantalla aunque las instrucciones digan que el niño no necesita verla. En niños que ya leen, mejor que no la vean.
+
+## Pendientes e incidencias
+
+- Validez concurrente frente a la conciencia silábica (contar y suprimir sílabas) y validez predictiva frente a la lectura de 6 años, cuando estas cohortes lleguen a Primaria.
+- Baremo por cohorte y comprobar que Cantabria y los centros sin identificar no cambian los resultados (invarianza).
+- Si conviene sustituir la puntuación de aciertos por d′ en los informes del servidor.
+- Separar los 0/10 que son «no realiza la tarea» de los 0/10 reales, si la plataforma permite registrarlo aparte.

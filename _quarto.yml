@@ -79,6 +79,8 @@ book:
     - part: "Fichas · Procesamiento fonológico"
       chapters:
         - fichas/RAN.qmd
+        - fichas/RIMA.qmd
+        - fichas/TRES_ANIOS.qmd
         - fichas/CF523.qmd
         - fichas/auto/CF_CONTAR_SILABAS.qmd
         - fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.qmd

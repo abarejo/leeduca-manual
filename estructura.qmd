@@ -81,7 +81,7 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
 |---|---|
 | Conciencia fonológica silábica: contar, emparejar y suprimir sílabas | [Contar sílabas (523) ★](fichas/CF523.qmd) · [Contar sílabas](fichas/auto/CF_CONTAR_SILABAS.qmd) · [Supresión de la sílaba inicial](fichas/auto/CF_SUPRESION_SILABA_INICIAL.qmd) · [Supresión de la sílaba final](fichas/auto/CF_SUPRESION_SILABA_FINAL.qmd) · [Supresión de sílabas (todas las posiciones)](fichas/auto/CF_SUPRESION_SILABAS_TP.qmd) · [Supresión de la sílaba «ja»](fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.qmd) |
 | Conciencia fonológica fonémica: identificación, segmentación y supresión de fonemas | [Fonema inicial](fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.qmd) · [Fonema final](fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.qmd) · [Segmentación fonémica](fichas/auto/CF_SEGMENTACION_FONEMICA.qmd) · [Supresión del fonema inicial](fichas/auto/CF_SUPRESION_FONEMA_INICIAL.qmd) · [Supresión del fonema final](fichas/auto/CF_SUPRESION_FONEMA_FINAL.qmd) · [Supresión de fonemas (todas las posiciones)](fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd) |
-| Rima | Pendiente: tarea de juicio de rima de 10 ítems (11795), aplicada de 3 a 5 años en 2024–2026 |
+| Rima y batería de 3 años | [Juicio de rima](fichas/RIMA.qmd) · [Batería de 3 años](fichas/TRES_ANIOS.qmd) |
 | Conocimiento alfabético: letras, vocales y letra inicial | [Conocimiento de letras ★](fichas/LET.qmd) · [Conocimiento de letras (automática)](fichas/auto/LEC_LETRAS.qmd) · [Identificar la letra inicial](fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.qmd) |
 | Denominación rápida: colores, objetos, números y sílabas | [Denominación rápida (RAN) ★](fichas/RAN.qmd) |
 | Memoria verbal a corto plazo | Pendiente |
