@@ -1372,7 +1372,18 @@
     "href": "fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.html#descripción",
     "title": "Identificar la letra inicial",
     "section": "",
-    "text": "Códigos\n1884 4047\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n24\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe presentan uno por uno los 20 dibujos que forman la prueba (y 4 de ejemplo). La tarea consiste en identificar el fonema inicial del nombre y elegir entre 4 opciones la letra que lo representa.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1884 4047\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n20 (1884) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe presentan uno por uno los 20 dibujos que forman la prueba (y 4 de ejemplo). La tarea consiste en identificar el fonema inicial del nombre y elegir entre 4 opciones la letra que lo representa.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Identificar la letra inicial</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.html#cómo-está-programada-en-la-plataforma",
+    "title": "Identificar la letra inicial",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1884\nEscribir Letra Inicial\nUn dibujo por pantalla\n20\n4\n—\n—\nfijo\nAciertos\n—\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1884. 4 de práctica + 20 de prueba; las instrucciones hablan de 5 opciones, pero la pantalla muestra 4.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Identificar la letra inicial</span>"
@@ -1603,7 +1614,18 @@
     "href": "fichas/auto/LEC_SILABAS_COMPLEJA.html#descripción",
     "title": "Lectura de sílabas complejas",
     "section": "",
-    "text": "Códigos\n2264 90\n\n\nBatería\nLEEDUCA\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n30\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nSI EL NIÑO O LA , Y En la pantalla irán apareciendo sílabas una a una en un orden al azar. Cada vez que el niño responda deberás marcar ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).",
+    "text": "Códigos\n2264 90\n\n\nBatería\nLEEDUCA\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n18 (2264) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nSI EL NIÑO O LA , Y En la pantalla irán apareciendo sílabas una a una en un orden al azar. Cada vez que el niño responda deberás marcar ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lectura de sílabas complejas</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_SILABAS_COMPLEJA.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_SILABAS_COMPLEJA.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de sílabas complejas",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n2264\nSílabas complejas II\nÍtems en pantalla, lectura en voz alta\n18\n0\n—\n60 s\nfijo\nEficiencia\n6.1, 6.2, 6.3, 7.1, 7.2, 7.3\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n2264. Desordenar = No, aunque las instrucciones dicen orden al azar. 60 s.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lectura de sílabas complejas</span>"
@@ -1713,7 +1735,18 @@
     "href": "fichas/auto/LEC_PAL_1sil.html#descripción",
     "title": "Lectura de palabras monosílabas",
     "section": "",
-    "text": "Códigos\n69\n\n\nBatería\nLEEDUCA\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n12\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn la pantalla irán apareciendo palabras monosílabas una a una en un orden al azar. Cada vez que el niño responda, se marcará ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).",
+    "text": "Códigos\n69\n\n\nBatería\nLEEDUCA\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n12 (69) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn la pantalla irán apareciendo palabras monosílabas una a una en un orden al azar. Cada vez que el niño responda, se marcará ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Lectura de palabras monosílabas</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_PAL_1sil.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_PAL_1sil.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de palabras monosílabas",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n69\nPalabras monosílabas\nÍtems en pantalla, lectura en voz alta\n12\n0\n—\n60 s (5 s por palabra)\naleatorio\nEficiencia\n5.1, 5.2, 5.3, 6.1, 6.2, 6.3\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n69. Discreto, 60 s en total y 5 s por palabra.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Lectura de palabras monosílabas</span>"
@@ -1944,7 +1977,18 @@
     "href": "fichas/auto/LEC_PAL_3sil.html#descripción",
     "title": "Lectura de palabras trisílabas",
     "section": "",
-    "text": "Códigos\n1932 75\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n12\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn esta prueba tienes que marcar los aciertos con la zona izquierda del ratón y los errores con la zona derecha. Cuando el alumno se demore más de 5 segundos en leer el estímulo, marca ese ítem como error y pasa a la siguiente palabra.",
+    "text": "Códigos\n1932 75\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n12 (1932) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn esta prueba tienes que marcar los aciertos con la zona izquierda del ratón y los errores con la zona derecha. Cuando el alumno se demore más de 5 segundos en leer el estímulo, marca ese ítem como error y pasa a la siguiente palabra.",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lectura de palabras trisílabas</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_PAL_3sil.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_PAL_3sil.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de palabras trisílabas",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1932\nPalabras trisílabas\nLista de ítems en pantalla\n12\n0\n—\n—\naleatorio\nEficiencia\n6.1, 6.2, 6.3, 7.1, 7.2, 7.3, 8.1, 8.2, 8.3\n\n\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lectura de palabras trisílabas</span>"
@@ -2054,7 +2098,18 @@
     "href": "fichas/auto/LEC_PAL_4sil.html#descripción",
     "title": "Lectura de palabras cuatrisílabas",
     "section": "",
-    "text": "Códigos\n1933\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta de una lista\n\n\nÍtems\n12\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn la pantalla, aparecerá una lista de 12 palabras cuatrisílabas que el niño/a deberá leer ordenadamente de arriba abajo. Cada vez que el niño la niña lea una palabra, el evaluador o evaluadora marcará ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1933\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta de una lista\n\n\nÍtems\n12 (1933) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn la pantalla, aparecerá una lista de 12 palabras cuatrisílabas que el niño/a deberá leer ordenadamente de arriba abajo. Cada vez que el niño la niña lea una palabra, el evaluador o evaluadora marcará ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Lectura de palabras cuatrisílabas</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_PAL_4sil.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_PAL_4sil.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de palabras cuatrisílabas",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1933\nPalabras cuatrisílabas\nLista de ítems en pantalla\n12\n0\n—\n—\naleatorio\nEficiencia\n6.1, 6.2, 6.3, 7.1, 7.2, 7.3, 8.1, 8.2, 8.3\n\n\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Lectura de palabras cuatrisílabas</span>"
@@ -2285,7 +2340,18 @@
     "href": "fichas/auto/LEC_PSEUDO_3sil.html#descripción",
     "title": "Lectura de pseudopalabras trisílabas",
     "section": "",
-    "text": "Códigos\n1935 76\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n12\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn esta prueba tienes que marcar los aciertos con la zona izquierda del ratón y los errores con la zona derecha. Cuando el alumno se demore más de 5 segundos en leer el estímulo, marca ese ítem como error y pasa al siguiente estímulo.",
+    "text": "Códigos\n1935 76\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n12 (1935) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn esta prueba tienes que marcar los aciertos con la zona izquierda del ratón y los errores con la zona derecha. Cuando el alumno se demore más de 5 segundos en leer el estímulo, marca ese ítem como error y pasa al siguiente estímulo.",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lectura de pseudopalabras trisílabas</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_PSEUDO_3sil.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_PSEUDO_3sil.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de pseudopalabras trisílabas",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1935\nPseudopalabras trisílabas\nLista de ítems en pantalla\n12\n0\n—\n—\naleatorio\nEficiencia\n6.1, 6.2, 6.3, 7.1, 7.2, 7.3, 8.1, 8.2, 8.3\n\n\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lectura de pseudopalabras trisílabas</span>"
@@ -2395,7 +2461,18 @@
     "href": "fichas/auto/LEC_PSEUDO_4sil.html#descripción",
     "title": "Lectura de pseudopalabras cuatrisílabas",
     "section": "",
-    "text": "Códigos\n1936\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta de una lista\n\n\nÍtems\n12\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn la pantalla, aparecerá una lista de 12 pseudopalabras cuatrisílabas que el niño/a deberá leer ordenadamente de arriba abajo. Cada vez que el niño la niña lea una pseudopalabra, el evaluador o evaluadora marcará ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1936\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura en voz alta de una lista\n\n\nÍtems\n12 (1936) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEn la pantalla, aparecerá una lista de 12 pseudopalabras cuatrisílabas que el niño/a deberá leer ordenadamente de arriba abajo. Cada vez que el niño la niña lea una pseudopalabra, el evaluador o evaluadora marcará ACIERTO (botón izquierdo del ratón) o ERROR (botón derecho del ratón).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lectura de pseudopalabras cuatrisílabas</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_PSEUDO_4sil.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_PSEUDO_4sil.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de pseudopalabras cuatrisílabas",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1936\nPseudopalabras cuatrisílabas\nLista de ítems en pantalla\n12\n0\n—\n—\naleatorio\nEficiencia\n7.1, 7.2, 7.3, 8.1, 8.2, 8.3\n\n\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lectura de pseudopalabras cuatrisílabas</span>"
@@ -2505,7 +2582,18 @@
     "href": "fichas/auto/LEC_VEL_TEXTO.html#descripción",
     "title": "Velocidad lectora en texto",
     "section": "",
-    "text": "Códigos\n100 10737 10740 1090 2034 2035 3979 4099\n\n\nBatería\nEDICOLE y LEEDUCA\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n60\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEl alumno o la alumna tendrá que leer un cuento que irá apareciendo en la pantalla poco a poco. Al darle a COMENZAR aparecerá el primer fragmento.",
+    "text": "Códigos\n100 10737 10740 1090 2034 2035 3979 4099\n\n\nBatería\nEDICOLE y LEEDUCA\n\n\nFormato\nlectura en voz alta\n\n\nÍtems\n11 (2034) según la plataforma\n\n\nFamilia de ficha\nC · Fluidez lectora oral\n\n\nPuntuación\nAciertos por minuto\n\n\nConsigna (plataforma)\nEl alumno o la alumna tendrá que leer un cuento que irá apareciendo en la pantalla poco a poco. Al darle a COMENZAR aparecerá el primer fragmento.",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Velocidad lectora en texto</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_VEL_TEXTO.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_VEL_TEXTO.html#cómo-está-programada-en-la-plataforma",
+    "title": "Velocidad lectora en texto",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n2034\n(A) Velocidad Texto\nÍtems en pantalla, lectura en voz alta\n11\n0\n—\n—\nfijo\nEficiencia\n6.2, 6.3, 7.1, 7.2, 7.3, 8.1, 8.2\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n2034. Texto A de EDICOLE (11 fragmentos que aparecen poco a poco). Prueba EDICOLE: uso interno.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>29</span>  <span class='chapter-title'>Velocidad lectora en texto</span>"
@@ -2725,7 +2813,18 @@
     "href": "fichas/auto/LEC_DECISION_ORTOGRAFICA.html#descripción",
     "title": "Decisión ortográfica",
     "section": "",
-    "text": "Códigos\n1937 2039\n\n\nBatería\nDIS-ESP\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n26\n\n\nFamilia de ficha\nE · Decisión con tiempo de respuesta\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES Explica a tu alumna o alumno que van a aparecer parejas de palabras donde una está bien escrita y la otra está mal escrita. Su tarea consistirá en elegir la que está bien escrita.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1937 2039\n\n\nBatería\nDIS-ESP\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n26 (1937) según la plataforma\n\n\nFamilia de ficha\nE · Decisión con tiempo de respuesta\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES Explica a tu alumna o alumno que van a aparecer parejas de palabras donde una está bien escrita y la otra está mal escrita. Su tarea consistirá en elegir la que está bien escrita.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Decisión ortográfica</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LEC_DECISION_ORTOGRAFICA.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LEC_DECISION_ORTOGRAFICA.html#cómo-está-programada-en-la-plataforma",
+    "title": "Decisión ortográfica",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1937\nDecisión ortográfica\nOpciones en pantalla; el niño elige\n26\n2\n—\n180 s\nfijo\nAciertos\n6.1, 6.2, 6.3, 7.1, 7.2, 7.3, 8.1, 8.2, 8.3\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1937. 2 ejemplos (hueso/ueso, votella/botella) + 26 ítems; límite de 180 s.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>31</span>  <span class='chapter-title'>Decisión ortográfica</span>"
@@ -2835,7 +2934,18 @@
     "href": "fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.html#descripción",
     "title": "Vocabulario lector",
     "section": "",
-    "text": "Códigos\n1950 VOC\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura silenciosa y elección entre opciones\n\n\nÍtems\n—\n\n\nFamilia de ficha\nD · Eficiencia con tiempo limitado\n\n\nPuntuación\nAciertos − errores/3\n\n\nConsigna (plataforma)\nVamos a hacer una tarea en la que tenéis que buscar palabras que tengan un significado parecido. Veréis una palabra escrita en negrita arriba y, debajo de ella, otras tres palabras.",
+    "text": "Códigos\n1950 VOC\n\n\nBatería\nDIS-ESP\n\n\nFormato\nlectura silenciosa y elección entre opciones\n\n\nÍtems\n— (1950) según la plataforma\n\n\nFamilia de ficha\nD · Eficiencia con tiempo limitado\n\n\nPuntuación\nAciertos − errores/3\n\n\nConsigna (plataforma)\nVamos a hacer una tarea en la que tenéis que buscar palabras que tengan un significado parecido. Veréis una palabra escrita en negrita arriba y, debajo de ella, otras tres palabras.",
+    "crumbs": [
+      "Fichas · Lectura",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Vocabulario lector</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.html#cómo-está-programada-en-la-plataforma",
+    "title": "Vocabulario lector",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1950\nCribado Vocabulario\nColectiva: frases o palabras con opciones\n\n0\n—\n300 s\nfijo\nAciertos\n7.2, 8.2, 9.1, 10.1\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1950. Vocabulario lector colectivo (sinónimos entre tres opciones), 300 s. Revisar el número de ítems.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lectura",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Vocabulario lector</span>"
@@ -3407,7 +3517,18 @@
     "href": "fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.html#descripción",
     "title": "Identificación del fonema inicial",
     "section": "",
-    "text": "Códigos\n1675 1896\n\n\nBatería\nLEEDUCA\n\n\nFormato\nelección entre opciones\n\n\nÍtems\n11\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe presentan uno por uno los 20 dibujos que forman la prueba (y 4 de ejemplo). La tarea consiste en identificar y pronunciar el fonema inicial del nombre de cada dibujo.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1675 1896\n\n\nBatería\nLEEDUCA\n\n\nFormato\nelección entre opciones\n\n\nÍtems\n11 (1896) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe presentan uno por uno los 20 dibujos que forman la prueba (y 4 de ejemplo). La tarea consiste en identificar y pronunciar el fonema inicial del nombre de cada dibujo.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Identificación del fonema inicial</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.html#cómo-está-programada-en-la-plataforma",
+    "title": "Identificación del fonema inicial",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1896\nIdentificar fonemas\nUn estímulo por pantalla; el evaluador marca acierto o error\n11\n0\n—\n—\nfijo\nAciertos\n5.1, 6\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1896. 11 sílabas CVC/CCVC; las instrucciones hablan de 10.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>38</span>  <span class='chapter-title'>Identificación del fonema inicial</span>"
@@ -3638,7 +3759,18 @@
     "href": "fichas/auto/CF_SEGMENTACION_FONEMICA.html#descripción",
     "title": "Segmentación fonémica",
     "section": "",
-    "text": "Códigos\n1890 2017\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nEsta tarea consiste en decir el número de fonemas de las palabras correspondientes a dibujos fácilmente reconocibles que se presentan en la pantalla. Los nombres tienen entre 3 y 5 fonemas.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1890 2017\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10 (1890) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nEsta tarea consiste en decir el número de fonemas de las palabras correspondientes a dibujos fácilmente reconocibles que se presentan en la pantalla. Los nombres tienen entre 3 y 5 fonemas.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Segmentación fonémica</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SEGMENTACION_FONEMICA.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SEGMENTACION_FONEMICA.html#cómo-está-programada-en-la-plataforma",
+    "title": "Segmentación fonémica",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1890\nSegmentar en fonemas\nUn dibujo por pantalla\n10\n4\n—\n—\nfijo\nAciertos\n5, 5.3, 6, 6.1, 6.2, 7.2\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1890. 4 de entrenamiento + 10 de prueba (3–5 fonemas).\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>40</span>  <span class='chapter-title'>Segmentación fonémica</span>"
@@ -3869,7 +4001,18 @@
     "href": "fichas/auto/CF_SUPRESION_SILABA_FINAL.html#descripción",
     "title": "Supresión de la sílaba final",
     "section": "",
-    "text": "Códigos\n1834\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe presentan uno por uno los 10 dibujos que forman la prueba. La tarea consiste en suprimir la sílaba final del nombre y decir el resto de la palabra.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1834\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10 (1834) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe presentan uno por uno los 10 dibujos que forman la prueba. La tarea consiste en suprimir la sílaba final del nombre y decir el resto de la palabra.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Supresión de la sílaba final</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SUPRESION_SILABA_FINAL.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SUPRESION_SILABA_FINAL.html#cómo-está-programada-en-la-plataforma",
+    "title": "Supresión de la sílaba final",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1834\nSupresión sílaba final\nUn dibujo por pantalla\n10\n1\n—\n—\nfijo\nAciertos\n4, 4.3, 5\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1834. 1 de entrenamiento + 10 de prueba.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>42</span>  <span class='chapter-title'>Supresión de la sílaba final</span>"
@@ -3979,7 +4122,18 @@
     "href": "fichas/auto/CF_SUPRESION_SILABAS_TP.html#descripción",
     "title": "Supresión de sílabas (todas las posiciones)",
     "section": "",
-    "text": "Códigos\n1941\n\n\nBatería\nDIS-ESP\n\n\nFormato\nestímulos auditivos\n\n\nÍtems\n14\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: El niño/a debe estar colocado de forma que no vea la pantalla. ““Vamos a realizar un juego con palabras inventadas.",
+    "text": "Códigos\n1941\n\n\nBatería\nDIS-ESP\n\n\nFormato\nestímulos auditivos\n\n\nÍtems\n14 (1941) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: El niño/a debe estar colocado de forma que no vea la pantalla. ““Vamos a realizar un juego con palabras inventadas.",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Supresión de sílabas (todas las posiciones)</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SUPRESION_SILABAS_TP.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SUPRESION_SILABAS_TP.html#cómo-está-programada-en-la-plataforma",
+    "title": "Supresión de sílabas (todas las posiciones)",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1941\nSupresión de sílabas\nEstímulos pregrabados con cascos\n14\n0\n—\n—\nfijo\nAciertos\n7, 8\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1941. Pseudopalabras pregrabadas (el niño no ve la pantalla, con cascos); 3 ejemplos orales previos.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>43</span>  <span class='chapter-title'>Supresión de sílabas (todas las posiciones)</span>"
@@ -4089,7 +4243,18 @@
     "href": "fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.html#descripción",
     "title": "Supresión de la sílaba «ja»",
     "section": "",
-    "text": "Códigos\n1886\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n12\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nLa tarea consiste en decir qué queda si a la palabra nombrada por el evaluador o evaluadora se le quita la sílaba ““JA”“. En la pantalla aparecerán uno a uno los 3 estímulos de ensayo más los 9 dibujos de los que consta la prueba.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1886\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n9 (1886) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nLa tarea consiste en decir qué queda si a la palabra nombrada por el evaluador o evaluadora se le quita la sílaba ““JA”“. En la pantalla aparecerán uno a uno los 3 estímulos de ensayo más los 9 dibujos de los que consta la prueba.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Supresión de la sílaba «ja»</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.html#cómo-está-programada-en-la-plataforma",
+    "title": "Supresión de la sílaba «ja»",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1886\nOmitir sílabas\nUn dibujo por pantalla\n9\n3\n—\n—\nfijo\nAciertos\n6\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1886. 3 de entrenamiento + 9 de prueba.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Supresión de la sílaba «ja»</span>"
@@ -4199,7 +4364,18 @@
     "href": "fichas/auto/CF_SUPRESION_FONEMA_INICIAL.html#descripción",
     "title": "Supresión del fonema inicial",
     "section": "",
-    "text": "Códigos\n1552\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nLa tarea consiste en decir qué palabra queda si a la palabra nombrada por el evaluador o evaluadora se le quita el sonido (fonema) inicial. En la pantalla aparecerán uno a uno los 10 dibujos de los que consta la prueba.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1552\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10 (1552) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nLa tarea consiste en decir qué palabra queda si a la palabra nombrada por el evaluador o evaluadora se le quita el sonido (fonema) inicial. En la pantalla aparecerán uno a uno los 10 dibujos de los que consta la prueba.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Supresión del fonema inicial</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SUPRESION_FONEMA_INICIAL.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SUPRESION_FONEMA_INICIAL.html#cómo-está-programada-en-la-plataforma",
+    "title": "Supresión del fonema inicial",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1552\nOmitir fonemas\nUn dibujo por pantalla\n10\n1\n—\n—\nfijo\nAciertos\n5, 5.2, 5.3\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1552. Las instrucciones anuncian 10 dibujos y la actividad tiene 11: el primero es probablemente de práctica. La lámina se corta en pantallas estrechas.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>45</span>  <span class='chapter-title'>Supresión del fonema inicial</span>"
@@ -4309,7 +4485,18 @@
     "href": "fichas/auto/CF_SUPRESION_FONEMA_FINAL.html#descripción",
     "title": "Supresión del fonema final",
     "section": "",
-    "text": "Códigos\n1839\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nLa tarea consiste en decir qué palabra queda si a la palabra nombrada por el evaluador o evaluadora se le quita el sonido (fonema) final. En la pantalla aparecerán uno a uno los 10 dibujos de los que consta la prueba.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1839\n\n\nBatería\nLEEDUCA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n10 (1839) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nLa tarea consiste en decir qué palabra queda si a la palabra nombrada por el evaluador o evaluadora se le quita el sonido (fonema) final. En la pantalla aparecerán uno a uno los 10 dibujos de los que consta la prueba.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Supresión del fonema final</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SUPRESION_FONEMA_FINAL.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SUPRESION_FONEMA_FINAL.html#cómo-está-programada-en-la-plataforma",
+    "title": "Supresión del fonema final",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1839\nOmitir fonemas\nUn dibujo por pantalla\n10\n0\n—\n—\nfijo\nAciertos\n5, 5.2, 5.3\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1839. 10 dibujos.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Supresión del fonema final</span>"
@@ -4419,7 +4606,18 @@
     "href": "fichas/auto/CF_SUPRESION_FONEMAS_TP.html#descripción",
     "title": "Supresión de fonemas (todas las posiciones)",
     "section": "",
-    "text": "Códigos\n1940 2009\n\n\nBatería\nLEEDUCA y DIS-ESP\n\n\nFormato\nelección entre opciones\n\n\nÍtems\n12\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES En esta actividad el alumno/a no puede ver la pantalla del ordenador y se le irán diciendo, uno por uno, los 12 ítems (pseudopalabras de una sílaba) de que consta la prueba. La tarea consiste en suprimir un fonema determinado, que puede aparecer en posición inicial o final, de cada ítem y decir la sílaba resultante.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1940 2009\n\n\nBatería\nLEEDUCA y DIS-ESP\n\n\nFormato\nelección entre opciones\n\n\nÍtems\n— (1940) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES En esta actividad el alumno/a no puede ver la pantalla del ordenador y se le irán diciendo, uno por uno, los 12 ítems (pseudopalabras de una sílaba) de que consta la prueba. La tarea consiste en suprimir un fonema determinado, que puede aparecer en posición inicial o final, de cada ítem y decir la sílaba resultante.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Procesamiento fonológico",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Supresión de fonemas (todas las posiciones)</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/CF_SUPRESION_FONEMAS_TP.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/CF_SUPRESION_FONEMAS_TP.html#cómo-está-programada-en-la-plataforma",
+    "title": "Supresión de fonemas (todas las posiciones)",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1940\nSupresión de fonemas\nEstímulos pregrabados con cascos\n\n0\n—\n—\nfijo\nAciertos\n7, 8\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1940. Pseudopalabras pregrabadas; el niño no ve la pantalla. Revisar el número de ítems.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Procesamiento fonológico",
       "<span class='chapter-number'>47</span>  <span class='chapter-title'>Supresión de fonemas (todas las posiciones)</span>"
@@ -4584,7 +4782,18 @@
     "href": "fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.html#descripción",
     "title": "Contar hacia delante (2.ª decena)",
     "section": "",
-    "text": "Códigos\n2030\n\n\nBatería\nLEEDUCA\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n6\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: ““Me ha dicho tu seño que sabes contar hasta 20 genial, ¿me lo enseñas?”“. Esperar respuesta.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n2030\n\n\nBatería\nLEEDUCA\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n2 (2030) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: ““Me ha dicho tu seño que sabes contar hasta 20 genial, ¿me lo enseñas?”“. Esperar respuesta.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Cognición numérica",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Contar hacia delante (2.ª decena)</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.html#cómo-está-programada-en-la-plataforma",
+    "title": "Contar hacia delante (2.ª decena)",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n2030\nContar - Hacia Delante - 2ª Decena\nEvaluador marca cada paso\n2\n0\n—\n—\nfijo\nAciertos\n5\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n2030. Dos series de conteo (desde 14 y 17); la puntuación es el número de pasos correctos.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Cognición numérica",
       "<span class='chapter-number'>49</span>  <span class='chapter-title'>Contar hacia delante (2.ª decena)</span>"
@@ -4694,7 +4903,18 @@
     "href": "fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.html#descripción",
     "title": "Contar hacia atrás (1.ª decena)",
     "section": "",
-    "text": "Códigos\n2031\n\n\nBatería\nLEEDUCA\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n6\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: ““¿Has visto alguna vez cuando despegan los cohetes para ir a la luna? Para que el cohete despegue, los astronautas cuentan hacia atrás, ¿tú sabes cómo es? Dicen: 10,9,8. (dejar que ellos sigan).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n2031\n\n\nBatería\nLEEDUCA\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n2 (2031) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: ““¿Has visto alguna vez cuando despegan los cohetes para ir a la luna? Para que el cohete despegue, los astronautas cuentan hacia atrás, ¿tú sabes cómo es? Dicen: 10,9,8. (dejar que ellos sigan).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Cognición numérica",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Contar hacia atrás (1.ª decena)</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.html#cómo-está-programada-en-la-plataforma",
+    "title": "Contar hacia atrás (1.ª decena)",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n2031\nContar - Hacia Atrás - 1ª Decena\nEvaluador marca cada paso\n2\n0\n—\n—\nfijo\nAciertos\n5\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n2031. Dos series hacia atrás (desde 7 y 4).\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Cognición numérica",
       "<span class='chapter-number'>50</span>  <span class='chapter-title'>Contar hacia atrás (1.ª decena)</span>"
@@ -4804,7 +5024,18 @@
     "href": "fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.html#descripción",
     "title": "Contar hacia atrás (2.ª decena)",
     "section": "",
-    "text": "Códigos\n2032\n\n\nBatería\nLEEDUCA\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n6\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: ““¿Has visto alguna vez cuando despegan los cohetes para ir a la luna? Para que el cohete despegue, los astronautas cuentan hacia atrás, ¿tú sabes cómo es? Dicen: 10,9,8. (dejar que ellos sigan).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n2032\n\n\nBatería\nLEEDUCA\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n2 (2032) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nINSTRUCCIONES: ““¿Has visto alguna vez cuando despegan los cohetes para ir a la luna? Para que el cohete despegue, los astronautas cuentan hacia atrás, ¿tú sabes cómo es? Dicen: 10,9,8. (dejar que ellos sigan).\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Cognición numérica",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Contar hacia atrás (2.ª decena)</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.html#cómo-está-programada-en-la-plataforma",
+    "title": "Contar hacia atrás (2.ª decena)",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n2032\nContar - Hacia Atrás - 2ª Decena\nEvaluador marca cada paso\n2\n0\n—\n—\nfijo\nAciertos\n5\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n2032. Dos series hacia atrás (desde 16 y 13).\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Cognición numérica",
       "<span class='chapter-number'>51</span>  <span class='chapter-title'>Contar hacia atrás (2.ª decena)</span>"
@@ -4914,7 +5145,18 @@
     "href": "fichas/auto/MATE_ET_VERB_ARABIGOS.html#descripción",
     "title": "Lectura de números arábigos",
     "section": "",
-    "text": "Códigos\n1676\n\n\nBatería\nORZA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n11\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nAhora vamos a ver números y tienes que decirme qué número es. Es posible que algunos no los sepas, si no lo sabes, me lo dices, pero si crees que lo sabes intenta decírrmelo.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1676\n\n\nBatería\nORZA\n\n\nFormato\nimágenes en pantalla\n\n\nÍtems\n11 (1676) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nAhora vamos a ver números y tienes que decirme qué número es. Es posible que algunos no los sepas, si no lo sabes, me lo dices, pero si crees que lo sabes intenta decírrmelo.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Cognición numérica",
+      "<span class='chapter-number'>52</span>  <span class='chapter-title'>Lectura de números arábigos</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/MATE_ET_VERB_ARABIGOS.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/MATE_ET_VERB_ARABIGOS.html#cómo-está-programada-en-la-plataforma",
+    "title": "Lectura de números arábigos",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1676\nArábigos\nUn dibujo por pantalla\n11\n0\n—\n—\nfijo\nAciertos\n4, 5\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1676. Números del 0 al 10 en orden fijo; el evaluador marca sí/no (proyecto ORZA).\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Cognición numérica",
       "<span class='chapter-number'>52</span>  <span class='chapter-title'>Lectura de números arábigos</span>"
@@ -5024,7 +5266,18 @@
     "href": "fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.html#descripción",
     "title": "Vocabulario: definiciones",
     "section": "",
-    "text": "Códigos\n1705\n\n\nBatería\nBUIZA\n\n\nFormato\nelección entre opciones\n\n\nÍtems\n20\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe pide a la alumna o al alumno que explique el significado de cada una de las palabras que irán apareciendo en la pantalla. El evaluador leerá la palabra en voz alta y clara, repitiéndola si es necesario.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1705\n\n\nBatería\nBUIZA\n\n\nFormato\nelección entre opciones\n\n\nÍtems\n20 (1705) según la plataforma\n\n\nFamilia de ficha\nA · Precisión\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nSe pide a la alumna o al alumno que explique el significado de cada una de las palabras que irán apareciendo en la pantalla. El evaluador leerá la palabra en voz alta y clara, repitiéndola si es necesario.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Lenguaje oral y funciones ejecutivas",
+      "<span class='chapter-number'>53</span>  <span class='chapter-title'>Vocabulario: definiciones</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.html#cómo-está-programada-en-la-plataforma",
+    "title": "Vocabulario: definiciones",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1705\nVocabulario\nUn estímulo por pantalla; el evaluador marca acierto o error\n20\n0\n—\n—\nfijo\nAciertos\n4, 4.3, 5, 5.1, 5.2, 5.3\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1705. Definiciones de 20 palabras con ejemplos de respuesta válida para el evaluador (proyecto BUIZA): comprobar la autoría antes de publicar ítems.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lenguaje oral y funciones ejecutivas",
       "<span class='chapter-number'>53</span>  <span class='chapter-title'>Vocabulario: definiciones</span>"
@@ -5134,7 +5387,18 @@
     "href": "fichas/auto/F_EJEC_INH_INHIBICION.html#descripción",
     "title": "Inhibición",
     "section": "",
-    "text": "Códigos\n1863\n\n\nBatería\nUNED\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n121\n\n\nFamilia de ficha\nE · Decisión con tiempo de respuesta\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nEn esta actividad el/la participante tiene que señalar el número de veces que se presenta repetido el número que aparece en color negro. En la pantalla aparece un número en negro repetido.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "text": "Códigos\n1863\n\n\nBatería\nUNED\n\n\nFormato\ndenominación rápida de una serie\n\n\nÍtems\n— (1863) según la plataforma\n\n\nFamilia de ficha\nE · Decisión con tiempo de respuesta\n\n\nPuntuación\nAciertos\n\n\nConsigna (plataforma)\nEn esta actividad el/la participante tiene que señalar el número de veces que se presenta repetido el número que aparece en color negro. En la pantalla aparece un número en negro repetido.\n\n\n\n\n\n\nEjemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).",
+    "crumbs": [
+      "Fichas · Lenguaje oral y funciones ejecutivas",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Inhibición</span>"
+    ]
+  },
+  {
+    "objectID": "fichas/auto/F_EJEC_INH_INHIBICION.html#cómo-está-programada-en-la-plataforma",
+    "href": "fichas/auto/F_EJEC_INH_INHIBICION.html#cómo-está-programada-en-la-plataforma",
+    "title": "Inhibición",
+    "section": "Cómo está programada en la plataforma",
+    "text": "Cómo está programada en la plataforma\nLa plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el 23/10/2026 (sin modificarla).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nNombre en la plataforma\nPresentación\nÍtems de prueba\nÍtems de práctica\nEjemplos de ítems\nLímite de tiempo\nOrden\nPuntuación\nEdad.trimestre (etiqueta 3)\n\n\n\n\n1863\nInhibición\nEvaluador marca cada paso\n\n4\n—\n—\nfijo\nEficiencia\n4, 5, 6, 7, 8, 9\n\n\n\nDiferencias con el diccionario o las instrucciones:\n\n1863. Tarea CANUM (UNED), 4 de práctica: no es una tarea de inhibición clásica. Pospuesta.\n\nEdad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.",
     "crumbs": [
       "Fichas · Lenguaje oral y funciones ejecutivas",
       "<span class='chapter-number'>54</span>  <span class='chapter-title'>Inhibición</span>"
@@ -5486,7 +5750,7 @@
     "href": "novedades.html",
     "title": "Novedades",
     "section": "",
-    "text": "Una línea por cambio, de lo más reciente a lo más antiguo. El historial completo de cada archivo está en el repositorio.\n\n\n\n\n\n\n\n\nFecha\nPieza\nCambio\n\n\n\n\n23/10/2026\nPropuesta de batería\nNuevo apartado en «Fichas de tareas»: propuesta de tareas por curso y trimestre (3 años a 3.º de Primaria) con su fundamento teórico y la evidencia del manual, para discutir en el grupo.\n\n\n23/10/2026\nTareas por edad\nNueva página de consulta: tareas disponibles a cada edad (3–11 años) y núcleo mínimo propuesto por edad, con la duración real de cada tarea en la plataforma.\n\n\n23/10/2026\nCitas\nSe retiran las citas de trabajos del grupo aún no publicados (cognición numérica y rima); se incorporarán cuando se publiquen.\n\n\n23/10/2026\nRima y 3 años\nNuevas fichas «Juicio de rima» (11795, 3–5 años, 2023–2026: discriminación con detección de señal, ítems, fiabilidad, estabilidad y percentiles provisionales) y «Batería de 3 años» (inventario y descriptivos de las tareas aplicadas a los 3 años).\n\n\n23/10/2026\nPlataforma\nLas fichas muestran cómo está programada cada tarea en la plataforma, que pasa a ser la referencia: ítems de prueba y de práctica, presentación, límite de tiempo, orden y puntuación, leídos de la propia actividad (11 actividades). Corrige el número de ítems de letras (535: 28; 67: 52), sílabas simples (18), supresión de la sílaba inicial (9 + 1 de práctica) y RAN, y aclara que el RAN de colores 2093 es una lámina que se puntúa por tiempo.\n\n\n23/10/2026\nEstructura\nLa tabla de la Parte III enlaza todas las fichas existentes (piloto y automáticas) por dominio y añade la rima como dominio pendiente.\n\n\n23/10/2026\nAutoría\nOrden provisional: J. L. Luque Vilaseca, A. Sánchez Gómez, M. Carrillo Gallego, A. Giménez de la Peña, A. Flores Marín y P. J. López-Pérez.\n\n\n21/10/2026\nOrigen DIS-ESP\nNuevo apartado «De dónde viene» en la presentación (batería DIS-ESP de M. S. Carrillo y J. Alegría). En el capítulo de riesgo, el cribado en dos fases de Molina de Segura como precedente directo de la plataforma, con su prevalencia (11,8 %) y la de Canarias (8,6 %). TECLE añade su validez como primera fase de cribado.\n\n\n21/10/2026\nFluidez y cribado\nMarco teórico de velocidad, fluidez y comprensión en la ficha de velocidad, y relación de TECLE con la concepción simple de la lectura. Nuevo apartado «El cribado universal» en el capítulo de riesgo: prevalencia en español según el criterio, precisión esperable de un cribado y cribado en dos fases. Inhibición queda pospuesta.\n\n\n21/10/2026\nMarcos teóricos\nLas 31 fichas automáticas de lectura, conciencia fonológica, vocabulario y cognición numérica tienen marco teórico, común por constructo (fichas/marcos/), con referencias localizadas con SciSpace. Cada ficha añade su validez frente a la fluidez lectora de Woodcock-Muñoz y, en matemáticas, frente a la aritmética de 10–11 años.\n\n\n21/10/2026\nMenú y fichas\nLas fichas se agrupan por dominio (lectura, procesamiento fonológico, cognición numérica, lenguaje oral y funciones ejecutivas) y el menú lateral se abre plegado. Nueva «Guía de las fichas» con todas a la vista.\n\n\n21/10/2026\nCognición numérica\nEl capítulo abre las fichas de matemáticas. Nuevo criterio provisional (aritmética de 10–11 años) y validez discriminante frente a la fluidez lectora. Cita de Loredo et al. (2025, Frontiers in Psychology).\n\n\n21/10/2026\nValidez\nNuevo capítulo «Validez frente a un criterio externo»: la fluidez lectora de Woodcock-Muñoz (2021/22, 6–11 años) valida la etiqueta de dificultad persistente y ordena la validez predictiva de todas las tareas.\n\n\n21/10/2026\nDiccionario\nLos códigos 10680–10686, 10757 y 10758 (2021/22) son decisión léxica colectiva en tableta, no lectura de listas en voz alta. Corregido; explica los valores «anómalos» de 2021/22.\n\n\n21/10/2026\nMatemáticas\nNuevo capítulo «Cognición numérica» (borrador): inventario de tareas, resultados de las dos líneas de trabajo del grupo y lo que falta para las fichas.\n\n\n21/10/2026\nBaremos\nNuevo capítulo «Baremos por nivel lector»: nivel lector equivalente de cinco tareas de lectura, baremo de pseudopalabras y palabras condicionado al nivel lector, retraso frente a alteración y su validez frente a la comprensión posterior. Pensado para el criterio de nivel lector del cuadro de síntesis DIS-ESP.\n\n\n21/10/2026\nPresentación\nNuevo apartado «Autoría» (provisional: J. L. Luque Vilaseca, A. Sánchez Gómez, R. Cruz Arándiga y A. Giménez). La parte de investigación reconoce por su nombre la aportación de María Rodríguez.\n\n\n21/10/2026\nInvestigación\nNueva parte «Investigar con la plataforma»: niveles de acceso a los datos, paquete de investigación, lista de comprobación para describir tareas, cómo citar el manual y tareas de 3 años sin datos en la tabla larga. La agenda metodológica pasa a esta parte.\n\n\n21/10/2026\nDiccionario\nEl código 1834 es supresión de la sílaba final, no «memoria de conceptos» (detectado al revisar las fichas de una tesis). El catálogo avisa cuando la puntuación máxima observada supera el número de ítems.\n\n\n21/10/2026\nFichas automáticas\nLas 32 tareas de clase A ya tienen ficha automática, agrupadas por familia, con una página de resumen (fiabilidad, validez y avisos de cada una). Generadas en el PC del proyecto. Sale del libro la ficha de prueba del RAN de objetos, que no es de clase A.\n\n\n21/10/2026\nDefinición\nEl capítulo de la definición incorpora el artículo de presentación de la IDA (Catts, Haynes y Joshi, 2026): comparación con el Delphi, efecto suelo, valor pronóstico de los precursores, ISE y corte. Nuevo estudio M10 en la agenda: subtipos de exactitud y de velocidad en español.\n\n\n21/10/2026\nDefinición\nNuevo capítulo «Qué medimos a la luz de la nueva definición de la dislexia» (IDA 2025 y consenso Delphi): qué cubre la plataforma, qué falta (escritura de palabras, lenguaje oral, bienestar) y qué dicen nuestros datos.\n\n\n21/10/2026\nRango de puntuaciones\nRango habitual (P1–P99) y mínimo–máximo en la ficha de velocidad y en las fichas automáticas, con figura del espectro de respuestas y aviso de valores extremos. Detecta dos incidencias: tiempos imposibles (hasta 217 ppm a los 6 años) y valores muy bajos en las sesiones de 2021/22.\n\n\n21/10/2026\nFichas automáticas\nPrimeras tres fichas generadas automáticamente por familia (supresión de fonemas, RAN de objetos y palabras bisílabas) con ficha_generica.R y la plantilla del libro.\n\n\n21/10/2026\nCalidad\nNuevo capítulo «Límites y calidad de los datos»: revisión crítica, clases de calidad A/B/C automáticas en el catálogo y recomendaciones para lo que se mida en adelante.\n\n\n21/10/2026\nRedes\nRedes de tareas por edad (modelos gráficos gaussianos) en «Cómo se agrupan las tareas».\n\n\n21/10/2026\nAgenda\nNueva «Agenda de investigación metodológica» con nueve estudios y revistas posibles.\n\n\n21/10/2026\nAgrupación\nNuevo capítulo «Cómo se agrupan las tareas»: siete familias de ficha (modelos de medida) y análisis factorial exploratorio por edad. El catálogo muestra la familia de cada tarea y ejemplos de pantalla.\n\n\n21/10/2026\nCatálogo\nNuevo catálogo de 118 tareas con buscador: códigos, sesiones, medidas, α de 2021, estabilidad y párrafo para publicaciones en español e inglés.\n\n\n21/10/2026\nEstructura\nDoce propuestas para un manual innovador (valor clínico, pedagógico y científico), para discutir en el grupo.\n\n\n20/10/2026\nLibro\nNuevo capítulo «Estructura del manual (propuesta para revisar)»: cuatro partes, índice comentado, plantilla de ficha, estado del trabajo y preguntas para el grupo.\n\n\n20/10/2026\nTECLE\nLa plataforma en la escala del papel (aciertos − errores/3) y apartado «Otras versiones» en construcción (3 minutos en Colombia, adultos, DIS-ESP en papel).\n\n\n20/10/2026\nTECLE\nComprobada la clave de la plataforma con la opción que eligió cada niño: errónea en los ítems 15, 19, 36, 37 y 51; ítem 31 por comprobar. Recorrección de la sesión 184.\n\n\n20/10/2026\nTECLE\nFicha ampliada con el TECLE en papel de 2020/21 (6.492 niños de 2.º a 6.º), análisis de ítems en papel y en la plataforma, validez frente a la dislexia diagnosticada y una incidencia: probable clave errónea en los ítems 15 y 19 de la plataforma.\n\n\n20/10/2026\nFichas piloto\nContar sílabas y TECLE: marco teórico con evidencia publicada (búsqueda con SciSpace), estudios que abre y pendientes.\n\n\n20/10/2026\nFichas piloto\nNuevas fichas: conciencia fonológica (contar sílabas, 523) y TECLE en la plataforma (1930), a petición del grupo.\n\n\n20/10/2026\nRiesgo\nNuevo capítulo «Cómo estimamos el riesgo y la dificultad lectora»: cinco niveles de certeza (DL-A a TE), estabilidad entre cursos y lenguaje del informe por edad.\n\n\n20/10/2026\nPreleo\nAntecedentes del programa y cinco estudios del grupo (evaluación externa de 2014/15, centros de nivel socioeconómico bajo, aulas ordinarias, opiniones docentes y doble déficit).\n\n\n20/10/2026\nPreleo\nNueva parte del libro: descripción del programa y efectos (estudio publicado y datos de las fichas).\n\n\n20/10/2026\nLibro\nCapítulo de decisiones metodológicas y prototipo del informe de aula (alumnos simulados).\n\n\n20/10/2026\nLibro\nPrimera versión del libro web con las tres fichas piloto.\n\n\n19/10/2026\nVelocidad\nLa «lectura para comprender» es una relectura del mismo texto con instrucción de ir despacio. Ya no se compara con la lectura silenciosa publicada.\n\n\n19/10/2026\nVelocidad\nNuevos apartados de muestra e indicadores clásicos. Validez sin circularidad: «no lee ninguna palabra» a los 5 años detecta 3 de cada 4 niños con dificultad posterior.\n\n\n19/10/2026\nRAN\nFicha completa. El RAN de números predice mejor que el de colores en los mismos niños.\n\n\n19/10/2026\nBaremos\nBaremar por curso en vez de por trimestre marca al 22–24 % de los niños del primer trimestre entre los 5 y los 7 años.\n\n\n19/10/2026\nDatos\nCorregido un error de lectura de las fechas de nacimiento (24–42 % perdidas en 2010–2014). Ficha de letras rehecha.\n\n\n19/10/2026\nReproducibilidad\nTodos los análisis de las fichas tienen su script en R.\n\n\n17/10/2026\nLetras\nBaremo por edad en meses e ISE; formato de baremos para el servidor.\n\n\n16/10/2026\nLetras\nPrimera ficha piloto.\n\n\n14/10/2026\nManual\nPropuesta de estructura e índice; muestra de referencia con todas las cohortes.",
+    "text": "Una línea por cambio, de lo más reciente a lo más antiguo. El historial completo de cada archivo está en el repositorio.\n\n\n\n\n\n\n\n\nFecha\nPieza\nCambio\n\n\n\n\n23/10/2026\nPlataforma\n26 actividades más leídas en la plataforma (clase A y cribado): palabras y pseudopalabras de 1–4 sílabas, sílabas complejas, decisión ortográfica, supresión, identificación y segmentación de fonemas, supresión de sílabas, conteo, vocabulario, velocidad y comprensión de texto. Las fichas automáticas muestran su configuración. Diferencias con las instrucciones: 1552 (11 dibujos, no 10), 1896 (11 sílabas, no 10), 1884 (4 opciones, no 5) y 2264 (orden fijo, no al azar).\n\n\n23/10/2026\nPropuesta de batería\nNuevo apartado en «Fichas de tareas»: propuesta de tareas por curso y trimestre (3 años a 3.º de Primaria) con su fundamento teórico y la evidencia del manual, para discutir en el grupo.\n\n\n23/10/2026\nTareas por edad\nNueva página de consulta: tareas disponibles a cada edad (3–11 años) y núcleo mínimo propuesto por edad, con la duración real de cada tarea en la plataforma.\n\n\n23/10/2026\nCitas\nSe retiran las citas de trabajos del grupo aún no publicados (cognición numérica y rima); se incorporarán cuando se publiquen.\n\n\n23/10/2026\nRima y 3 años\nNuevas fichas «Juicio de rima» (11795, 3–5 años, 2023–2026: discriminación con detección de señal, ítems, fiabilidad, estabilidad y percentiles provisionales) y «Batería de 3 años» (inventario y descriptivos de las tareas aplicadas a los 3 años).\n\n\n23/10/2026\nPlataforma\nLas fichas muestran cómo está programada cada tarea en la plataforma, que pasa a ser la referencia: ítems de prueba y de práctica, presentación, límite de tiempo, orden y puntuación, leídos de la propia actividad (11 actividades). Corrige el número de ítems de letras (535: 28; 67: 52), sílabas simples (18), supresión de la sílaba inicial (9 + 1 de práctica) y RAN, y aclara que el RAN de colores 2093 es una lámina que se puntúa por tiempo.\n\n\n23/10/2026\nEstructura\nLa tabla de la Parte III enlaza todas las fichas existentes (piloto y automáticas) por dominio y añade la rima como dominio pendiente.\n\n\n23/10/2026\nAutoría\nOrden provisional: J. L. Luque Vilaseca, A. Sánchez Gómez, M. Carrillo Gallego, A. Giménez de la Peña, A. Flores Marín y P. J. López-Pérez.\n\n\n21/10/2026\nOrigen DIS-ESP\nNuevo apartado «De dónde viene» en la presentación (batería DIS-ESP de M. S. Carrillo y J. Alegría). En el capítulo de riesgo, el cribado en dos fases de Molina de Segura como precedente directo de la plataforma, con su prevalencia (11,8 %) y la de Canarias (8,6 %). TECLE añade su validez como primera fase de cribado.\n\n\n21/10/2026\nFluidez y cribado\nMarco teórico de velocidad, fluidez y comprensión en la ficha de velocidad, y relación de TECLE con la concepción simple de la lectura. Nuevo apartado «El cribado universal» en el capítulo de riesgo: prevalencia en español según el criterio, precisión esperable de un cribado y cribado en dos fases. Inhibición queda pospuesta.\n\n\n21/10/2026\nMarcos teóricos\nLas 31 fichas automáticas de lectura, conciencia fonológica, vocabulario y cognición numérica tienen marco teórico, común por constructo (fichas/marcos/), con referencias localizadas con SciSpace. Cada ficha añade su validez frente a la fluidez lectora de Woodcock-Muñoz y, en matemáticas, frente a la aritmética de 10–11 años.\n\n\n21/10/2026\nMenú y fichas\nLas fichas se agrupan por dominio (lectura, procesamiento fonológico, cognición numérica, lenguaje oral y funciones ejecutivas) y el menú lateral se abre plegado. Nueva «Guía de las fichas» con todas a la vista.\n\n\n21/10/2026\nCognición numérica\nEl capítulo abre las fichas de matemáticas. Nuevo criterio provisional (aritmética de 10–11 años) y validez discriminante frente a la fluidez lectora. Cita de Loredo et al. (2025, Frontiers in Psychology).\n\n\n21/10/2026\nValidez\nNuevo capítulo «Validez frente a un criterio externo»: la fluidez lectora de Woodcock-Muñoz (2021/22, 6–11 años) valida la etiqueta de dificultad persistente y ordena la validez predictiva de todas las tareas.\n\n\n21/10/2026\nDiccionario\nLos códigos 10680–10686, 10757 y 10758 (2021/22) son decisión léxica colectiva en tableta, no lectura de listas en voz alta. Corregido; explica los valores «anómalos» de 2021/22.\n\n\n21/10/2026\nMatemáticas\nNuevo capítulo «Cognición numérica» (borrador): inventario de tareas, resultados de las dos líneas de trabajo del grupo y lo que falta para las fichas.\n\n\n21/10/2026\nBaremos\nNuevo capítulo «Baremos por nivel lector»: nivel lector equivalente de cinco tareas de lectura, baremo de pseudopalabras y palabras condicionado al nivel lector, retraso frente a alteración y su validez frente a la comprensión posterior. Pensado para el criterio de nivel lector del cuadro de síntesis DIS-ESP.\n\n\n21/10/2026\nPresentación\nNuevo apartado «Autoría» (provisional: J. L. Luque Vilaseca, A. Sánchez Gómez, R. Cruz Arándiga y A. Giménez). La parte de investigación reconoce por su nombre la aportación de María Rodríguez.\n\n\n21/10/2026\nInvestigación\nNueva parte «Investigar con la plataforma»: niveles de acceso a los datos, paquete de investigación, lista de comprobación para describir tareas, cómo citar el manual y tareas de 3 años sin datos en la tabla larga. La agenda metodológica pasa a esta parte.\n\n\n21/10/2026\nDiccionario\nEl código 1834 es supresión de la sílaba final, no «memoria de conceptos» (detectado al revisar las fichas de una tesis). El catálogo avisa cuando la puntuación máxima observada supera el número de ítems.\n\n\n21/10/2026\nFichas automáticas\nLas 32 tareas de clase A ya tienen ficha automática, agrupadas por familia, con una página de resumen (fiabilidad, validez y avisos de cada una). Generadas en el PC del proyecto. Sale del libro la ficha de prueba del RAN de objetos, que no es de clase A.\n\n\n21/10/2026\nDefinición\nEl capítulo de la definición incorpora el artículo de presentación de la IDA (Catts, Haynes y Joshi, 2026): comparación con el Delphi, efecto suelo, valor pronóstico de los precursores, ISE y corte. Nuevo estudio M10 en la agenda: subtipos de exactitud y de velocidad en español.\n\n\n21/10/2026\nDefinición\nNuevo capítulo «Qué medimos a la luz de la nueva definición de la dislexia» (IDA 2025 y consenso Delphi): qué cubre la plataforma, qué falta (escritura de palabras, lenguaje oral, bienestar) y qué dicen nuestros datos.\n\n\n21/10/2026\nRango de puntuaciones\nRango habitual (P1–P99) y mínimo–máximo en la ficha de velocidad y en las fichas automáticas, con figura del espectro de respuestas y aviso de valores extremos. Detecta dos incidencias: tiempos imposibles (hasta 217 ppm a los 6 años) y valores muy bajos en las sesiones de 2021/22.\n\n\n21/10/2026\nFichas automáticas\nPrimeras tres fichas generadas automáticamente por familia (supresión de fonemas, RAN de objetos y palabras bisílabas) con ficha_generica.R y la plantilla del libro.\n\n\n21/10/2026\nCalidad\nNuevo capítulo «Límites y calidad de los datos»: revisión crítica, clases de calidad A/B/C automáticas en el catálogo y recomendaciones para lo que se mida en adelante.\n\n\n21/10/2026\nRedes\nRedes de tareas por edad (modelos gráficos gaussianos) en «Cómo se agrupan las tareas».\n\n\n21/10/2026\nAgenda\nNueva «Agenda de investigación metodológica» con nueve estudios y revistas posibles.\n\n\n21/10/2026\nAgrupación\nNuevo capítulo «Cómo se agrupan las tareas»: siete familias de ficha (modelos de medida) y análisis factorial exploratorio por edad. El catálogo muestra la familia de cada tarea y ejemplos de pantalla.\n\n\n21/10/2026\nCatálogo\nNuevo catálogo de 118 tareas con buscador: códigos, sesiones, medidas, α de 2021, estabilidad y párrafo para publicaciones en español e inglés.\n\n\n21/10/2026\nEstructura\nDoce propuestas para un manual innovador (valor clínico, pedagógico y científico), para discutir en el grupo.\n\n\n20/10/2026\nLibro\nNuevo capítulo «Estructura del manual (propuesta para revisar)»: cuatro partes, índice comentado, plantilla de ficha, estado del trabajo y preguntas para el grupo.\n\n\n20/10/2026\nTECLE\nLa plataforma en la escala del papel (aciertos − errores/3) y apartado «Otras versiones» en construcción (3 minutos en Colombia, adultos, DIS-ESP en papel).\n\n\n20/10/2026\nTECLE\nComprobada la clave de la plataforma con la opción que eligió cada niño: errónea en los ítems 15, 19, 36, 37 y 51; ítem 31 por comprobar. Recorrección de la sesión 184.\n\n\n20/10/2026\nTECLE\nFicha ampliada con el TECLE en papel de 2020/21 (6.492 niños de 2.º a 6.º), análisis de ítems en papel y en la plataforma, validez frente a la dislexia diagnosticada y una incidencia: probable clave errónea en los ítems 15 y 19 de la plataforma.\n\n\n20/10/2026\nFichas piloto\nContar sílabas y TECLE: marco teórico con evidencia publicada (búsqueda con SciSpace), estudios que abre y pendientes.\n\n\n20/10/2026\nFichas piloto\nNuevas fichas: conciencia fonológica (contar sílabas, 523) y TECLE en la plataforma (1930), a petición del grupo.\n\n\n20/10/2026\nRiesgo\nNuevo capítulo «Cómo estimamos el riesgo y la dificultad lectora»: cinco niveles de certeza (DL-A a TE), estabilidad entre cursos y lenguaje del informe por edad.\n\n\n20/10/2026\nPreleo\nAntecedentes del programa y cinco estudios del grupo (evaluación externa de 2014/15, centros de nivel socioeconómico bajo, aulas ordinarias, opiniones docentes y doble déficit).\n\n\n20/10/2026\nPreleo\nNueva parte del libro: descripción del programa y efectos (estudio publicado y datos de las fichas).\n\n\n20/10/2026\nLibro\nCapítulo de decisiones metodológicas y prototipo del informe de aula (alumnos simulados).\n\n\n20/10/2026\nLibro\nPrimera versión del libro web con las tres fichas piloto.\n\n\n19/10/2026\nVelocidad\nLa «lectura para comprender» es una relectura del mismo texto con instrucción de ir despacio. Ya no se compara con la lectura silenciosa publicada.\n\n\n19/10/2026\nVelocidad\nNuevos apartados de muestra e indicadores clásicos. Validez sin circularidad: «no lee ninguna palabra» a los 5 años detecta 3 de cada 4 niños con dificultad posterior.\n\n\n19/10/2026\nRAN\nFicha completa. El RAN de números predice mejor que el de colores en los mismos niños.\n\n\n19/10/2026\nBaremos\nBaremar por curso en vez de por trimestre marca al 22–24 % de los niños del primer trimestre entre los 5 y los 7 años.\n\n\n19/10/2026\nDatos\nCorregido un error de lectura de las fechas de nacimiento (24–42 % perdidas en 2010–2014). Ficha de letras rehecha.\n\n\n19/10/2026\nReproducibilidad\nTodos los análisis de las fichas tienen su script en R.\n\n\n17/10/2026\nLetras\nBaremo por edad en meses e ISE; formato de baremos para el servidor.\n\n\n16/10/2026\nLetras\nPrimera ficha piloto.\n\n\n14/10/2026\nManual\nPropuesta de estructura e índice; muestra de referencia con todas las cohortes.",
     "crumbs": [
       "Apéndices",
       "Novedades"
