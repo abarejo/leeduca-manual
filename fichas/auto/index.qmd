@@ -25,7 +25,7 @@ nota <- function(r) paste(c(if (is.finite(r$rho) && r$rho < .30) "estabilidad ba
 R$avisos <- vapply(seq_len(nrow(R)), function(i) nota(R[i, ]), "")
 ```
 
-Cada tarea de la plataforma con datos suficientes tiene una ficha. En el menú lateral están agrupadas por **dominio**; aquí, todas a la vista. Hay dos tipos:
+Cada tarea de la plataforma con datos suficientes tiene una ficha. En el menú lateral están agrupadas por **dominio**; aquí, todas a la vista. Para buscarlas por edad, ver [Tareas por edad](../por_edad.qmd). Hay dos tipos:
 
 - **Fichas piloto** (★): escritas a mano, con marco teórico, análisis propios y revisión del grupo. Son el modelo para las demás.
 - **Fichas automáticas**: generadas con el mismo guion para las `r nrow(R)` tareas de **clase A** del catálogo ([reglas](../../limites.qmd#sec-clases)). Las cifras salen de los datos; les falta el marco teórico y la revisión del equipo.

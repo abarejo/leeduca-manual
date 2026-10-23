@@ -23,7 +23,7 @@ eds <- lapply(strsplit(as.character(C$edades), ",\\s*"), as.integer)
 cods3 <- unique(B$Prueba[B$N >= 100])
 tiene3 <- vapply(seq_len(nrow(C)), function(i) any(cods3 %in% strsplit(as.character(C$codigos[i]), " ")[[1]]), TRUE)
 for (e in EDADES) M[[as.character(e)]] <- vapply(seq_len(nrow(C)), function(i) if (e %in% eds[[i]] || (e == 3 && tiene3[i])) c(A = "●", B = "◐", C = "○")[[C$clase[i]]] else "", "")
-M <- M[order(M$dominio, -rowSums(M[, as.character(EDADES)] != ""), M$tarea), ]
+M <- M[order(M$dominio, -rowSums(M[, as.character(EDADES)] != ""), M$tarea), ]; rownames(M) <- NULL
 NUEVAS <- data.frame(dominio = c("Procesamiento fonológico", "Lenguaje oral", "Lenguaje oral", "Lenguaje oral", "Procesamiento fonológico"),
                      tarea = c("[Juicio de rima (11795)](RIMA.qmd)", "Comprensión de conceptos (11794)", "Categorización (12332, 12510)",
                                "Repetición de pseudopalabras (11256, 12509)", "Segmentar en sílabas (12166)"),

@@ -93,6 +93,8 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
 | Habilidades visoatencionales y funciones ejecutivas | [Inhibición](fichas/auto/F_EJEC_INH_INHIBICION.qmd) (pospuesta: revisar la medida) |
 | Cognición numérica | [Cognición numérica](cognicion-numerica.qmd) · [Lectura de números arábigos](fichas/auto/MATE_ET_VERB_ARABIGOS.qmd) · [Contar hacia delante (2.ª decena)](fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.qmd) · [Contar hacia atrás (1.ª decena)](fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.qmd) · [Contar hacia atrás (2.ª decena)](fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.qmd) |
 
+Las mismas fichas, ordenadas por edad y con un núcleo mínimo propuesto para cada una, están en [Tareas por edad](fichas/por_edad.qmd).
+
 ★ Ficha piloto, escrita a mano. El resto son fichas automáticas; la [Guía de las fichas](fichas/auto/index.qmd) explica cómo leerlas.
 
 ### Parte IV. Uso diagnóstico y seguimiento
