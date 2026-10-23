@@ -39,8 +39,17 @@ En este libro solo hay datos agregados. Los nombres y números de identificació
 
 ## Autoría
 
-Autoría provisional: Juan Luis Luque Vilaseca, Auxiliadora Sánchez Gómez, Ricardo Cruz Arándiga y Almudena Giménez (grupo de investigación LEEDUCA, Universidad de Málaga). La autoría definitiva se acordará antes de la versión 1.0.
+Orden de autoría provisional, pendiente de confirmar:
+
+1. Juan Luis Luque Vilaseca (Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga).
+2. Auxiliadora Sánchez Gómez (Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga).
+3. Marisol Carrillo Gallego (Departamento de Psicología Evolutiva y de la Educación, Universidad de Murcia).
+4. Almudena Giménez de la Peña (Departamento de Psicología Básica, Universidad de Málaga).
+5. Amanda Flores Marín (Departamento de Psicología Básica, Universidad de Málaga).
+6. Pedro Javier López-Pérez (Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga).
+
+La autoría definitiva se acordará antes de depositar la versión de consulta.
 
 ## Cómo citar este borrador
 
-Grupo LEEDUCA (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.1). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/
+Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A. y López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.9). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/

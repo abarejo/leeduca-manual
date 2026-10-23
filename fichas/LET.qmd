@@ -40,6 +40,13 @@ El niño nombra letras que aparecen en pantalla una a una y en orden aleatorio. 
 - 1887, «¿Cómo lee las letras?»: es una anotación de si el niño dice el nombre o el sonido, no una puntuación;
 - 5431, «RAN letras lámina» (2014, 5.2): es una tarea RAN.
 
+### Cómo está programada en la plataforma {.unnumbered}
+
+```{r}
+#| results: asis
+plataforma_tabla(codigos = c(535, 67))
+```
+
 ## 1 bis. Marco teórico: qué mide el conocimiento de letras y por qué importa
 
 El conocimiento de letras es la capacidad de reconocer cada grafema y decir su nombre o su sonido. Es el primer contacto del niño con el principio alfabético, la idea de que las letras representan sonidos del habla. Sin esa conexión no puede haber decodificación. Junto con la conciencia fonológica y la velocidad de denominación (RAN), forma los tres grandes predictores de la lectura y de la dislexia en las lenguas alfabéticas. Los tres mantienen su valor predictivo en lenguas con ortografías muy distintas (Ozernov-Palchik et al., 2017; Caravolas et al., 2012).

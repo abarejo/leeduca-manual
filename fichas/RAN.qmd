@@ -35,9 +35,16 @@ El niño nombra en voz alta, lo más rápido que puede, estímulos muy conocidos
 
 **No forman parte de esta ficha:**
 
-- Las versiones en lámina de colores y objetos de las sesiones 181, 186, 187, 894 y 906 (códigos 2093 y 2094): solo registran 0–2 aciertos, con otro formato de puntuación.
+- Las versiones en lámina de colores y objetos de las sesiones 181, 186, 187, 894 y 906 (códigos 2093 y 2094). Como comprobamos en la plataforma (22/10/2026), la 2093 es una lámina de 5 × 5 círculos que el evaluador cierra con un solo clic al terminar: **la única medida válida es el tiempo total**, y los «aciertos» (0–2) no informan. En 2023–2026 se aplicó a unos 960 niños de 4 años, así que se baremará por tiempo en una ficha propia.
 - Las versiones de las sesiones 153 y 154 (códigos 528, 529, 530 y 532 en la cohorte 2012): tienen el mismo valor para todos los niños, un error de exportación ya conocido.
 - El RAN de letras en lámina (5431), que estaba mal etiquetado como conocimiento de letras.
+
+### Cómo está programada en la plataforma {.unnumbered}
+
+```{r}
+#| results: asis
+plataforma_tabla(codigos = c(1054, 2093, 1922))
+```
 
 ## 1 bis. Marco teórico
 

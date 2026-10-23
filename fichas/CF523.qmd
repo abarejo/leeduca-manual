@@ -24,6 +24,13 @@ El evaluador nombra el dibujo que aparece en la pantalla y el niño dice cuánta
 
 Se pasó en la plataforma antigua (hasta 2017/18) y en la nueva (desde 2018/19), con los mismos resultados en ambas (tabla de descriptivos por cohorte).
 
+### Cómo está programada en la plataforma {.unnumbered}
+
+```{r}
+#| results: asis
+plataforma_tabla(codigos = c(523))
+```
+
 ## Marco teórico y evidencia
 
 La conciencia fonológica es la capacidad de reflexionar sobre los sonidos del habla y manipularlos: palabras, sílabas, rimas y fonemas. Con el conocimiento de letras y la denominación rápida forma la tríada clásica de predictores de la lectura. Contar sílabas es una de las tareas más sencillas del continuo: pide segmentar una palabra oída en sílabas, sin quitar ni cambiar nada.

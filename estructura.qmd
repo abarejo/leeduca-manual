@@ -77,20 +77,23 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
 
 ### Parte III. Fichas de tareas por dominio
 
-| Dominio | Ficha en este libro |
+| Dominio | Fichas en este libro |
 |---|---|
-| Conciencia fonológica silábica: contar, emparejar y suprimir sílabas | [Contar sílabas (523)](fichas/CF523.qmd) |
-| Conciencia fonológica fonémica: identificación, segmentación, síntesis y supresión de fonemas | Pendiente |
-| Conocimiento alfabético: letras, vocales y letra inicial | [Conocimiento de letras](fichas/LET.qmd) |
-| Denominación rápida: colores, objetos, números y sílabas | [Denominación rápida (RAN)](fichas/RAN.qmd) |
+| Conciencia fonológica silábica: contar, emparejar y suprimir sílabas | [Contar sílabas (523) ★](fichas/CF523.qmd) · [Contar sílabas](fichas/auto/CF_CONTAR_SILABAS.qmd) · [Supresión de la sílaba inicial](fichas/auto/CF_SUPRESION_SILABA_INICIAL.qmd) · [Supresión de la sílaba final](fichas/auto/CF_SUPRESION_SILABA_FINAL.qmd) · [Supresión de sílabas (todas las posiciones)](fichas/auto/CF_SUPRESION_SILABAS_TP.qmd) · [Supresión de la sílaba «ja»](fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.qmd) |
+| Conciencia fonológica fonémica: identificación, segmentación y supresión de fonemas | [Fonema inicial](fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.qmd) · [Fonema final](fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.qmd) · [Segmentación fonémica](fichas/auto/CF_SEGMENTACION_FONEMICA.qmd) · [Supresión del fonema inicial](fichas/auto/CF_SUPRESION_FONEMA_INICIAL.qmd) · [Supresión del fonema final](fichas/auto/CF_SUPRESION_FONEMA_FINAL.qmd) · [Supresión de fonemas (todas las posiciones)](fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd) |
+| Rima | Pendiente: tarea de juicio de rima de 10 ítems (11795), aplicada de 3 a 5 años en 2024–2026 |
+| Conocimiento alfabético: letras, vocales y letra inicial | [Conocimiento de letras ★](fichas/LET.qmd) · [Conocimiento de letras (automática)](fichas/auto/LEC_LETRAS.qmd) · [Identificar la letra inicial](fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.qmd) |
+| Denominación rápida: colores, objetos, números y sílabas | [Denominación rápida (RAN) ★](fichas/RAN.qmd) |
 | Memoria verbal a corto plazo | Pendiente |
-| Lenguaje oral: pares mínimos, morfosintaxis, vocabulario y comprensión, prosodia | Pendiente |
-| Lectura de sílabas, palabras y pseudopalabras | Pendiente |
-| Fluidez lectora: velocidad de texto y TECLE | [Velocidad lectora](fichas/VEL.qmd) · [TECLE](fichas/TECLE.qmd) |
-| Comprensión lectora | Pendiente |
-| Procesamiento ortográfico: decisión ortográfica, homógrafos y dictado | Pendiente |
-| Habilidades visoatencionales y funciones ejecutivas | Pendiente |
-| Cognición numérica | Pendiente de decidir si entra aquí o en un manual aparte |
+| Lenguaje oral: pares mínimos, morfosintaxis, vocabulario y comprensión, prosodia | [Vocabulario: definiciones](fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.qmd) · resto pendiente |
+| Lectura de sílabas, palabras y pseudopalabras | [Sílabas simples](fichas/auto/LEC_SILABAS_SIMPLE.qmd) · [Sílabas complejas](fichas/auto/LEC_SILABAS_COMPLEJA.qmd) · [Palabras monosílabas](fichas/auto/LEC_PAL_1sil.qmd) · [Palabras bisílabas](fichas/auto/LEC_PAL_2sil.qmd) · [Palabras trisílabas](fichas/auto/LEC_PAL_3sil.qmd) · [Palabras cuatrisílabas](fichas/auto/LEC_PAL_4sil.qmd) · [Pseudopalabras bisílabas](fichas/auto/LEC_PSEUDO_2sil.qmd) · [Pseudopalabras trisílabas](fichas/auto/LEC_PSEUDO_3sil.qmd) · [Pseudopalabras cuatrisílabas](fichas/auto/LEC_PSEUDO_4sil.qmd) · [Vocabulario lector](fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.qmd) |
+| Fluidez lectora: velocidad de texto y TECLE | [Velocidad lectora ★](fichas/VEL.qmd) · [TECLE](fichas/TECLE.qmd) · [Velocidad lectora en texto (automática)](fichas/auto/LEC_VEL_TEXTO.qmd) |
+| Comprensión lectora | [Lectura comprensiva (segunda lectura)](fichas/auto/LEC_LECT_COMPRENSIVA.qmd) |
+| Procesamiento ortográfico: decisión ortográfica, homógrafos y dictado | [Decisión ortográfica](fichas/auto/LEC_DECISION_ORTOGRAFICA.qmd) · resto pendiente |
+| Habilidades visoatencionales y funciones ejecutivas | [Inhibición](fichas/auto/F_EJEC_INH_INHIBICION.qmd) (pospuesta: revisar la medida) |
+| Cognición numérica | [Cognición numérica](cognicion-numerica.qmd) · [Lectura de números arábigos](fichas/auto/MATE_ET_VERB_ARABIGOS.qmd) · [Contar hacia delante (2.ª decena)](fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.qmd) · [Contar hacia atrás (1.ª decena)](fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.qmd) · [Contar hacia atrás (2.ª decena)](fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.qmd) |
+
+★ Ficha piloto, escrita a mano. El resto son fichas automáticas; la [Guía de las fichas](fichas/auto/index.qmd) explica cómo leerlas.
 
 ### Parte IV. Uso diagnóstico y seguimiento
 

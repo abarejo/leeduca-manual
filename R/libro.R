@@ -90,3 +90,28 @@ fig_rango <- function(D, grupo = NULL, unidad = "Puntuación") {
   if (!is.null(grupo)) p <- p + facet_wrap(stats::as.formula(paste("~", grupo)), scales = "free", ncol = 2)
   p
 }
+
+# ---- configuración real de las actividades en la plataforma (skill leeduca-ficha-actividad) ----
+# Tabla agregada en datos/agregados/PLATAFORMA/actividades_plataforma.csv: una fila por código, leída de la propia
+# actividad (editar_actividad.php) sin modificarla. Sin listas completas de ítems ni claves: solo 1–2 ejemplos.
+plataforma_actividades <- function() {
+  f <- file.path(raiz_libro(), "datos", "agregados", "PLATAFORMA", "actividades_plataforma.csv")
+  if (!file.exists(f)) return(data.frame())
+  utils::read.csv(f, encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE, colClasses = "character")
+}
+plataforma_tabla <- function(codigos = NULL, tarea = NULL) {
+  P <- plataforma_actividades(); if (!nrow(P)) return(invisible(FALSE))
+  if (!is.null(tarea)) P <- P[P$tarea_canonica %in% tarea, ]
+  if (!is.null(codigos)) P <- P[P$codigo %in% as.character(codigos), ]
+  if (!nrow(P)) return(invisible(FALSE))
+  cat("La plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el ",
+      P$extraido[1], " (sin modificarla).\n\n", sep = "")
+  rownames(P) <- NULL; T <- P[, c("codigo", "nombre_corto", "presentacion", "n_items", "items_practica", "ejemplos", "tiempo", "orden", "puntuacion", "momentos_etiqueta")]
+  print(tabla(T, c("Código", "Nombre en la plataforma", "Presentación", "Ítems de prueba", "Ítems de práctica", "Ejemplos de ítems", "Límite de tiempo",
+                   "Orden", "Puntuación", "Edad.trimestre (etiqueta 3)"), digitos = 0))
+  cat("\n\n")
+  inc <- P[nzchar(P$incidencia), ]
+  if (nrow(inc)) { cat("**Diferencias con el diccionario o las instrucciones:**\n\n"); cat(paste0("- **", inc$codigo, ".** ", inc$incidencia, collapse = "\n"), "\n\n") }
+  cat("*Edad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.*\n\n")
+  invisible(TRUE)
+}

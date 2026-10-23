@@ -44,9 +44,13 @@ ficha_auto <- function(TAREA) {
       if (is.finite(est)) paste0("Estabilidad entre momentos ρ = ", r2(est), ". ") else "", if (!is.null(auc_txt)) paste0(auc_txt, ".") else "")
   # ---- descripción ----
   out("## Descripción")
+  PL <- plataforma_actividades(); PL <- if (nrow(PL)) PL[PL$tarea_canonica == TAREA, ] else PL
+  items_txt <- if (nrow(PL)) paste0(paste0(PL$n_items, " (", PL$codigo, ")", collapse = "; "), " según la plataforma") else ifelse(is.na(ct$n_items), "—", ct$n_items)
   pant <- if (!is.na(ct$formato) && ct$formato %in% names(PANT)) sprintf('\n\n![Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).](../../figuras/pantallas/%s){width=45%%}', PANT[[ct$formato]]) else ""
   out("| | |\n|---|---|\n| Códigos | ", ct$codigos, " |\n| Batería | ", ifelse(is.na(ct$bateria) | ct$bateria == "", "—", ct$bateria), " |\n| Formato | ", ifelse(is.na(ct$formato), "—", ct$formato),
-      " |\n| Ítems | ", ifelse(is.na(ct$n_items), "—", ct$n_items), " |\n| Familia de ficha | ", FAM_NOM[[fam]], " |\n| Puntuación | ", FI$puntuacion, " |\n| Consigna (plataforma) | ", ifelse(is.na(ct$descripcion), "—", ct$descripcion), " |", pant)
+      " |\n| Ítems | ", items_txt, " |\n| Familia de ficha | ", FAM_NOM[[fam]], " |\n| Puntuación | ", FI$puntuacion, " |\n| Consigna (plataforma) | ", ifelse(is.na(ct$descripcion), "—", ct$descripcion), " |", pant)
+  # ---- configuración en la plataforma ----
+  if (nrow(plataforma_actividades()) && any(plataforma_actividades()$tarea_canonica == TAREA)) { out("## Cómo está programada en la plataforma"); plataforma_tabla(tarea = TAREA) }
   # ---- marco teórico ----
   fm <- if (!is.na(MARCO_DE[TAREA])) file.path(rl, "fichas", "marcos", paste0(MARCO_DE[[TAREA]], ".md")) else ""
   if (nzchar(fm) && file.exists(fm)) { out("## Marco teórico"); out(paste(readLines(fm, encoding = "UTF-8", warn = FALSE), collapse = "\n")) }
