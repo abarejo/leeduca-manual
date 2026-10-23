@@ -4,7 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
-| 23/10/2026 | Tareas por edad | Nueva página con las tareas disponibles a cada edad (3–11 años) y una propuesta de núcleo mínimo por edad con su duración real en la plataforma. Se retiran las citas de trabajos del grupo aún no publicados. |
+| 23/10/2026 | Citas | Se retiran las citas de trabajos del grupo aún no publicados (cognición numérica y rima); se incorporarán cuando se publiquen. |
 | 23/10/2026 | Rima y 3 años | Nuevas fichas «Juicio de rima» (11795, 3–5 años, 2023–2026: discriminación con detección de señal, ítems, fiabilidad, estabilidad y percentiles provisionales) y «Batería de 3 años» (inventario y descriptivos de las tareas aplicadas a los 3 años). |
 | 23/10/2026 | Plataforma | Las fichas muestran cómo está programada cada tarea en la plataforma, que pasa a ser la referencia: ítems de prueba y de práctica, presentación, límite de tiempo, orden y puntuación, leídos de la propia actividad (11 actividades). Corrige el número de ítems de letras (535: 28; 67: 52), sílabas simples (18), supresión de la sílaba inicial (9 + 1 de práctica) y RAN, y aclara que el RAN de colores 2093 es una lámina que se puntúa por tiempo. |
 | 23/10/2026 | Estructura | La tabla de la Parte III enlaza todas las fichas existentes (piloto y automáticas) por dominio y añade la rima como dominio pendiente. |
