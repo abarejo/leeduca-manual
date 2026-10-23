@@ -1,0 +1,112 @@
+---
+title: "Propuesta de tareas por curso y trimestre"
+---
+
+::: {.callout-note appearance="minimal"}
+**Estado:** propuesta para el grupo (23/10/2026), no una decisión. Reúne lo que las fichas de este manual dicen de cada tarea y lo ordena en una batería por curso y trimestre, con su fundamento teórico. Las preguntas abiertas están al final.
+:::
+
+## En pocas palabras
+
+Una evaluación más corta y más estable, de 8 a 12 minutos por niño y trimestre, construida alrededor de pocas tareas que ya han demostrado que predicen la dificultad lectora. Las mismas tareas se aplican en los tres trimestres de cada curso, y cada trimestre tiene una función: cribar (1.º), seguir el progreso (2.º) y cerrar el curso con la evaluación completa que alimenta los baremos (3.º). Salen las tareas que no funcionan o que repiten a otras, y entran dos que faltan: el dictado y la comprensión oral.
+
+## Qué hay que medir y por qué
+
+**La lectura tiene dos componentes.** Según la concepción simple de la lectura, comprender lo que se lee es el producto de reconocer las palabras escritas y de comprender el lenguaje oral [@hoover1990simple]. Ninguno de los dos basta por separado, y en los primeros cursos el peso está en el reconocimiento. Más adelante pasa a la comprensión, que se apoya en el vocabulario y la gramática [@storch2002oral; @lervag2018comprehension]. Una batería de 3 a 8 años tiene que seguir los dos caminos.
+
+**En español los precursores del reconocimiento de palabras son pocos y conocidos.** En las ortografías transparentes, el conocimiento de las letras, la conciencia fonológica y la denominación rápida predicen el aprendizaje lector igual que en inglés, aunque la lectura se automatiza antes [@caravolas2013growth; @landerl2013predictors; @landerl2019pa]:
+
+- **Letras.** El conocimiento del nombre y el sonido de las letras es el mejor predictor individual en Infantil, porque es a la vez conocimiento alfabético, exposición a lo escrito y vía de entrada a los fonemas [@foulin2005letter].
+- **Conciencia fonológica.** Sostiene la decodificación. Pasa de la sílaba al fonema, y en español la sílaba es la unidad temprana y saliente. La rima, en cambio, llega tarde (ver [Juicio de rima](RIMA.qmd)).
+- **Denominación rápida (RAN).** Predice sobre todo la fluidez, y su relación con la lectura es en parte independiente de la conciencia fonológica [@norton2012ran]. En español es especialmente relevante, porque la dislexia se manifiesta más como lentitud que como errores [@landerl2008fluency].
+
+**Una vez que el niño lee, lo mejor es medir la lectura.** La lectura de palabras y pseudopalabras es el mecanismo de autoaprendizaje con el que el niño amplía su léxico ortográfico [@ziegler2014selfteaching]. Es además la medida más estable de la plataforma. Desde ese momento los precursores aportan poco.
+
+**El lenguaje oral tiene un valor propio.** No mejora la predicción de la dislexia sobre letras, conciencia fonológica y RAN, pero es la base de la comprensión lectora y la vía para detectar el trastorno del desarrollo del lenguaje [@bishop2017catalise; @hulme2015foundations]. La repetición de pseudopalabras es uno de los marcadores más sólidos de ese trastorno [@graf2007nonword].
+
+**La nueva definición de dislexia amplía lo que hay que medir.** Incluye la escritura de palabras, la persistencia de la dificultad pese a una enseñanza eficaz y las consecuencias en el bienestar [@ida2025definicion; @carroll2025delphi; @catts2026definicion]. Hoy la plataforma no mide la escritura ni el bienestar (ver [la nueva definición](../definicion.qmd)).
+
+**Evaluar a todos varias veces al año es parte del modelo de respuesta a la intervención.** El cribado universal identifica a quién vigilar, y las medidas repetidas muestran quién no progresa con la enseñanza ordinaria [@catts2015rti]. Un cribado en dos fases (una prueba breve para todos y otra más completa para quien queda bajo) reduce los falsos positivos [@compton2010gated] y es el modelo de DIS-ESP con el que nació la plataforma [@carrillo2011prevalencia].
+
+## Lo que dicen nuestros datos
+
+| Tipo de tarea | Evidencia del manual | Consecuencia |
+|---|---|---|
+| Conocimiento de letras | AUC .82 a 5.3 frente a la dificultad persistente. A los 5 años pesa más que la conciencia fonológica (OR por DT 0,37 frente a 0,56). | Núcleo de 4 y 5 años. Una sola forma por curso. |
+| Conciencia fonológica | AUC .60–.67 por tarea. Estabilidad entre momentos baja (ρ mediana .40) y techo en varias tareas. Contar sílabas apenas añade a letras y RAN. | Dos tareas por curso, de dificultad creciente: sílaba a los 4 y fonema a los 5–6. |
+| Denominación rápida | Números predice mejor que colores (AUC .76 frente a .70 a 4.1) y añade sobre los demás precursores a los 4 años, no a los 5. Las láminas solo valen por el tiempo. | RAN números a los 4 y 5 años. Las demás variantes, fuera de la evaluación ordinaria. |
+| Precursores combinados | AUC .73 a los 4 años y .80–.82 a los 5. Lenguaje oral, número, memoria, razonamiento y funciones ejecutivas no añaden (ΔAUC ≤ .004); leer sílabas a los 5 años sí (+.024). | A los 4 años, vigilar; a los 5, cribar con letras, fonema y primeras lecturas. |
+| Lectura de listas | La medida más estable (ρ mediana .66). AUC .85 en 6.1; listas a los 5 años, AUC .80–.85. | Núcleo de 1.º y 2.º, siempre con las mismas listas. |
+| Fluidez y comprensión de texto | La velocidad de 6 años predice poco la comprensión posterior (AUC .56–.64). | Medir las dos con el mismo texto. |
+| TECLE | Estable (r ≈ .70); AUC .86 frente al diagnóstico en papel. Clave con 5 ítems mal grabados. | Desde 2.º, colectivo, con la clave corregida. |
+| Lenguaje oral a los 3 años | Comprensión de conceptos: α ≈ .80 y sin suelo ni techo. Sin validez predictiva todavía. | Núcleo de 3 años. |
+| Rima | Habilidad tardía; estabilidad entre trimestres ρ ≈ .15–.40; sin techo a los 5 años. | Una vez al año, para describir grupos. |
+| Funciones ejecutivas | La inhibición predice al revés en dos cohortes y la plataforma no controla bien los tiempos. | Fuera hasta revisarla. |
+
+: Evidencia de las fichas y consecuencia para la batería. Detalle en cada ficha y en [Tareas por edad](por_edad.qmd). {.striped}
+
+## Principios de diseño
+
+1. **Núcleo fijo por curso.** Las mismas tareas, con la misma forma, en los tres trimestres. Así se mide el crecimiento y se pueden dar baremos por trimestre, imprescindibles en Infantil: dentro de un mismo curso se avanza d = 0,7–0,9.
+2. **Cada trimestre con una función.** 1.º = cribado y línea base; 2.º = control breve del progreso; 3.º = evaluación completa para el informe y los baremos.
+3. **Pocas tareas, bien elegidas.** Las que predicen y son fiables, sin versiones redundantes. Una tarea que no cambia ninguna decisión sobre el niño no debería ocupar su tiempo.
+4. **Duración fija cuando se mide fluidez.** Las tareas de 60 s (letras, sílabas) dan una medida de velocidad comparable entre niños y entre trimestres.
+5. **Enlace con los baremos existentes.** Las tareas del núcleo coinciden con las de las cohortes 2010–2015, cuyos baremos siguen valiendo en Málaga a los 4–5 años.
+6. **Una forma por tarea y curso.** Las formas que cambian (letras 535 y 67; segmentar y contar sílabas) no son intercambiables: se comparan por su percentil, no por la puntuación directa.
+
+## Propuesta por curso y trimestre
+
+Entre paréntesis, el código de la tarea y su duración mediana en la plataforma (2023–2026). En **negrita**, el núcleo que se repite en los tres trimestres del curso.
+
+| Curso | 1.er trimestre (oct–dic) | 2.º trimestre (ene–mar) | 3.er trimestre (abr–jun) | Duración |
+|---|---|---|---|---|
+| **3 años** | Sin evaluación: periodo de adaptación | **Comprensión de conceptos** (11794, 2,3 min); **vocabulario** (124, 1,9); **repetición de pseudopalabras** (11256, 0,4); **segmentar en sílabas** (12166, 0,9) | El mismo núcleo + rima (11795, 1,0) | 6–7 min |
+| **4 años** | **Letras mayúsculas** (535, 1,3); **RAN números** (1054, ~1); **contar sílabas** (523, 2,6); **memoria verbal** (2095, 1,4); vocabulario (124, 1,9) | **Núcleo** + supresión de la sílaba inicial (1551, 2,6) | **Núcleo** + supresión de la sílaba final (1834, 2,1) y recepción gramatical (1542, 3,8) | 8–13 min |
+| **5 años** | **Letras** (67, 1,0); **RAN números** (1053, ~1); **fonema inicial** (1896, 1,3); supresión de la sílaba inicial (1551, 2,6); vocabulario: definiciones (1705, 3,5) | **Núcleo** + sílabas simples (2263, 1,0) | **Núcleo** + sílabas simples, supresión del fonema inicial (1552, ~1,5), palabras y pseudopalabras bisílabas (1931, 1934) si ya lee y comprensión oral (91, ~2) | 6–11 min; **cribado de final de Infantil en el 3.er trimestre** |
+| **1.º (6 años)** | Letras (67, 1,0); **sílabas simples** (2263, 1,0); **palabras y pseudopalabras bisílabas** (1931, 1934, 1,2); segmentación fonémica (1890, ~2); comprensión oral (91, ~2) | **Sílabas simples**; **palabras y pseudopalabras bi- y trisílabas** (1931–1935, 2,0); texto y comprensión (2034 + 2041, 3,0) | **Núcleo** + texto y comprensión, decisión ortográfica (1937, 2,6) y dictado (nuevo, ~3) | 7–13 min |
+| **2.º (7 años)** | **Palabras y pseudopalabras bi-, tri- y cuatrisílabas** (1931–1936, 2,5); **texto y comprensión** (2034 + 2041, 3,0); supresión de fonemas (1940, ~2) | **Núcleo** + dictado (~3) | **Núcleo** + TECLE (1930, 5,0, colectivo), decisión ortográfica (1937, 2,5) y dictado | 8–16 min |
+| **3.º en adelante** | TECLE colectivo (cribado) | Texto y comprensión | TECLE colectivo; texto y comprensión; decisión ortográfica u homógrafos; dictado | Individual solo por debajo del P16 en TECLE: listas de palabras y pseudopalabras |
+
+: Propuesta de tareas por curso y trimestre. {.striped}
+
+**Por qué este reparto:**
+
+- **3 años: lenguaje oral y una tarea silábica.** Ninguna tarea de 3 años tiene aún validez frente a la lectura, y a esta edad lo que puede detectarse con más seguridad es un retraso del lenguaje. La repetición de pseudopalabras y la comprensión de conceptos cubren ese objetivo.
+- **4 años: vigilar.** Los precursores predicen con AUC .73: sirven para seguir a los niños, no para clasificarlos. Repetir letras y RAN en los tres trimestres permite ver el ritmo de aprendizaje, que es en sí mismo un indicador de riesgo.
+- **5 años: cribar.** El 3.er trimestre reúne los mejores predictores (letras, fonema, primeras lecturas). Es el momento natural del cribado de final de Infantil.
+- **1.º y 2.º: medir la lectura.** Las listas son la medida más fiable y estable. Se añaden texto con comprensión, porque fluidez y comprensión se separan pronto, y dictado, porque la escritura forma parte de la definición de dislexia.
+- **3.º en adelante: cribado en dos fases.** TECLE colectivo para todos y evaluación individual solo para quien queda bajo, como en DIS-ESP.
+
+## Qué sale, qué entra y qué hay que arreglar
+
+**Sale de la evaluación ordinaria** (puede seguir en estudios concretos):
+
+- **Inhibición y atención sostenida.** La medida no es válida tal como está programada.
+- **Las variantes de RAN de objetos, sílabas y láminas**, salvo RAN números. Si se quiere un RAN no alfanumérico, uno solo y puntuado por tiempo.
+- **La doble forma de letras en un mismo curso.** Una forma por curso.
+- **Contar sílabas desde los 5 años** (techo) y **la rima en todos los trimestres** (basta una vez al año).
+- **Razonamiento y número como predictores de la lectura.** Si el grupo quiere cribar las matemáticas, mejor un bloque propio con su criterio ([Cognición numérica](../cognicion-numerica.qmd)).
+
+**Entra:**
+
+- **Dictado de palabras y pseudopalabras** desde 1.º, en el 2.º y 3.er trimestre. Es lo que más falta frente a la nueva definición.
+- **Comprensión oral de un relato breve** a los 5 y 6 años, con el mismo formato que la comprensión lectora, para comparar las dos y aplicar la concepción simple de la lectura a cada niño.
+- **Una o dos preguntas sobre la actitud hacia la lectura** desde 1.º (motivación y bienestar).
+- **Repetición de pseudopalabras a los 4 y 5 años**, con una puntuación que no dependa de la regla de interrupción.
+
+**Hay que arreglar antes de aplicar:**
+
+- La clave de TECLE (ítems 15, 19, 36, 37 y 51).
+- Supresión de la sílaba inicial (1551): las instrucciones anuncian 10 ítems y la actividad tiene 9.
+- Rima: que el par no aparezca escrito en pantalla.
+- Comprensión de conceptos: la lámina se corta en pantallas estrechas.
+- Que todas las tareas guarden acierto o error por ítem y la hora de inicio y fin, y que la plataforma pueda registrar «no realiza la tarea» sin marcar todos los ítems como error.
+
+## Preguntas para el grupo
+
+- ¿Se evalúa a los 3 años en el 1.er trimestre o se respeta el periodo de adaptación?
+- ¿El 2.º trimestre es para todos o solo para quien quedó en riesgo en el 1.º?
+- ¿Quién desarrolla el dictado y la comprensión oral nuevos, y con qué ítems?
+- ¿Matemáticas en la evaluación ordinaria o como bloque aparte?
+- ¿TECLE colectivo en el aula (tableta o papel) desde 2.º?
+- Al cambiar la batería, ¿qué tareas se mantienen sin tocar para enlazar con los baremos de 2010–2015? Propuesta: letras, RAN números, listas de lectura y texto.

@@ -48,7 +48,7 @@ tabla(NUEVAS, c("Dominio", "Tarea", "Edades"), digitos = 0)
 
 ## Núcleo mínimo por edad (propuesta)
 
-Para cada edad, las tareas que mejor combinan **validez** (predicen la dificultad lectora o la fluidez posterior), **fiabilidad** y **brevedad**, según las fichas de este manual. Es una propuesta para el equipo, no una batería cerrada. Duración = mediana del tiempo de la tarea en la plataforma (2023–2026), sin contar instrucciones ni cambios de tarea.
+Para cada edad, las tareas que mejor combinan **validez** (predicen la dificultad lectora o la fluidez posterior), **fiabilidad** y **brevedad**, según las fichas de este manual. Es una propuesta para el equipo, no una batería cerrada; la versión por curso y trimestre, con su fundamento, está en [Propuesta de tareas por curso y trimestre](propuesta_bateria.qmd). Duración = mediana del tiempo de la tarea en la plataforma (2023–2026), sin contar instrucciones ni cambios de tarea.
 
 | Edad | Tarea (código) | Duración | Por qué |
 |---|---|---|---|

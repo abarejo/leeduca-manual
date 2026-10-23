@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 23/10/2026 | Propuesta de batería | Nuevo apartado en «Fichas de tareas»: propuesta de tareas por curso y trimestre (3 años a 3.º de Primaria) con su fundamento teórico y la evidencia del manual, para discutir en el grupo. |
 | 23/10/2026 | Tareas por edad | Nueva página de consulta: tareas disponibles a cada edad (3–11 años) y núcleo mínimo propuesto por edad, con la duración real de cada tarea en la plataforma. |
 | 23/10/2026 | Citas | Se retiran las citas de trabajos del grupo aún no publicados (cognición numérica y rima); se incorporarán cuando se publiquen. |
 | 23/10/2026 | Rima y 3 años | Nuevas fichas «Juicio de rima» (11795, 3–5 años, 2023–2026: discriminación con detección de señal, ítems, fiabilidad, estabilidad y percentiles provisionales) y «Batería de 3 años» (inventario y descriptivos de las tareas aplicadas a los 3 años). |
