@@ -17,7 +17,7 @@ p_rdc <- sum(K1$N_con_magnitudes * K1$pct_riesgo_discalculia) / sum(K1$N_con_mag
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador del 21/10/2026. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo abre sus fichas: reúne lo que hay, la validez frente a un criterio posterior y lo que falta. Se apoya en dos trabajos con datos de la plataforma: el estudio longitudinal sobre habilidades fonológicas y matemáticas [@luque2026fonologia] y el artículo sobre la comorbilidad entre dislexia y discalculia [@loredo2025prevalencia]. Guion del criterio: `scripts/R/criterio_matematicas.R`.
+**Estado:** borrador del 21/10/2026. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo abre sus fichas: reúne lo que hay, la validez frente a un criterio posterior y lo que falta. Se apoya en el artículo publicado sobre la comorbilidad entre dislexia y discalculia con datos de la plataforma [@loredo2025prevalencia]. Guion del criterio: `scripts/R/criterio_matematicas.R`.
 :::
 
 ## Qué mide la plataforma
@@ -46,14 +46,7 @@ Hoy solo `r sum(M$clase == "A")` tareas son de clase A: contar hacia delante y h
 
 ## Lo que ya se sabe con estos datos
 
-**Habilidades fonológicas y desarrollo matemático** [@luque2026fonologia]. Con 708 niños seguidos de los 5 a los 7 años, y una parte hasta los 11:
-
-- **La conciencia fonológica precede a las matemáticas, y no al revés.** En un modelo de paneles cruzados, la conciencia fonológica de 5 años predice la aritmética de 6 (β = .31) y la de 6 predice la de 7 (β = .21), por encima de la estabilidad de las propias matemáticas. Las matemáticas no predicen la conciencia fonológica del año siguiente.
-- **El efecto es en cadena.** La conciencia fonológica de 5 años no predice directamente la aritmética de 7: actúa a través de la aritmética de 6. Cada año, la fonología ayuda a construir las matemáticas de ese año, y estas sostienen las del siguiente.
-- **La denominación rápida (RAN) es el predictor más constante**, sobre todo de la comparación de magnitudes (β = .41 a los 5 años), y mantiene su peso hasta los 11.
-- **La memoria verbal es el predictor más débil** y su papel parece indirecto.
-- **Las medidas de exactitud son más estables que las de tiempo.**
-- **Las «sumas y restas» de 7 y de 11 años no miden lo mismo**: no correlacionan (r = .002; N = 73). A los 11 años, la magnitud simbólica es más estable que la aritmética.
+**Habilidades fonológicas y desarrollo matemático.** El grupo tiene en curso un estudio longitudinal sobre la relación entre la conciencia fonológica, la denominación rápida y las matemáticas de 5 a 7 años. Sus resultados se incorporarán aquí cuando estén publicados.
 
 **Riesgo de dislexia, de discalculia y su comorbilidad** [@loredo2025prevalencia]. Con 691 alumnos de 5.º y 6.º evaluados en 2021/22, en tableta:
 
@@ -87,7 +80,7 @@ tabla(T, c("Dominio", "Tareas", "Tarea × momento", "AUC frente a baja aritméti
 **Por qué el criterio es débil.** Hay tres razones, y las tres apuntan al criterio más que a las tareas:
 
 - es una sola tarea, de tiempo limitado y aplicada en tableta de forma colectiva, sin fiabilidad conocida en esa aplicación;
-- según @luque2026fonologia, la aritmética de 11 años mide algo distinto de la de los primeros cursos, así que es un criterio lejano para las tareas de Infantil;
+- la aritmética de 11 años está muy lejos de las tareas de Infantil: entre medias cambia lo que se exige (cálculo mental, procedimientos escritos), así que es un criterio lejano;
 - sumar y restar con tiempo exige también velocidad de procesamiento y lectura de números, que comparte con la lectura.
 
 Probar un criterio compuesto (aritmética + magnitudes simbólicas) no cambió los resultados.
@@ -105,7 +98,7 @@ tabla(T, c("Tarea", "Dominio", "Clase", "Momentos", "AUC mediano (aritmética)",
 1. **Separar las versiones** de magnitudes simbólicas y de los códigos con dos tareas (10759).
 2. **Calcular α u ω** con las respuestas ítem a ítem de la plataforma nueva (2018 en adelante), en especial para las tareas de 2021/22.
 3. **Mejorar el criterio de validez.** La aritmética de 10–11 años queda como criterio provisional. Para tener uno mejor hay dos vías:
-    - un criterio más cercano, la aritmética y las magnitudes de 6–7 años, que según @luque2026fonologia sí recogen el efecto de las tareas de Infantil;
+    - un criterio más cercano: la aritmética y las magnitudes de 6–7 años;
     - una prueba externa de matemáticas en una submuestra, por ejemplo la batería BERDE cuando esté digitalizada.
 4. **Fichas por familia.** Las tareas de contar y leer números son de precisión (familia A). La comparación de magnitudes es de decisión con tiempo (familia E). Las sumas y restas con tiempo limitado son de eficiencia y necesitan su propia puntuación (aciertos en 1 minuto).
 5. **Coordinar con la batería BERDE** (evaluación rápida de discalculia), para que las tareas de la plataforma y las de BERDE compartan nombres y criterios.

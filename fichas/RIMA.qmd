@@ -11,7 +11,7 @@ ord <- function(m) factor(m, unique(m[order(as.numeric(m))]))
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador (23/10/2026). Datos del servidor de octubre de 2023 a junio de 2026, con `scripts/R/ficha_rima_3anios.R`. Falta la validez frente a la lectura posterior, que llegará cuando estas cohortes estén en Primaria. Es la tarea que estudia el artículo de A. Sánchez Gómez y colaboradores (en preparación), con otra muestra y otro modelo (ver «Diferencias con el artículo»).
+**Estado:** borrador (23/10/2026). Datos del servidor de octubre de 2023 a junio de 2026, con `scripts/R/ficha_rima_3anios.R`. Falta la validez frente a la lectura posterior, que llegará cuando estas cohortes estén en Primaria.
 :::
 
 **En una frase.** El niño escucha dos palabras y dice si «se parecen al final». A los 3 años la mayoría no distingue los pares que riman de los que no; la discriminación mejora poco a lo largo de 4 años y da un salto a los 5, pero al final de Infantil menos de la mitad domina la tarea (9 o 10 aciertos).
@@ -110,12 +110,9 @@ tabla(R2, c("Momento", "N", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), dig
 
 Con P50 de 6–8 y P90 en el techo (10) desde los 3 años, el baremo discrimina sobre todo por abajo. El percentil 16 queda en 3–5 aciertos, cerca de lo que daría responder al azar (5).
 
-## Diferencias con el artículo
+## Cómo se aplica
 
-El artículo de Sánchez Gómez y colaboradores sigue a **una sola cohorte** (nacidos en 2020; 934 niños de 36 centros, de febrero de 2024 a mayo de 2026) y estima d′ con un modelo mixto probit. Esta ficha usa **todas las aplicaciones de 2023–2026** (varias cohortes, `r num_es(sum(R1$N), 0)` aplicaciones) y d′ individual con la corrección de Hautus. Por eso las cifras no coinciden: aquí d′ en 3.2 es `r num_es(R1$d[R1$momento == "3.2"])` y en el artículo es −0,07, y el dominio a los 5 años es menor. Las conclusiones van en la misma dirección. Dos avisos que afectan al artículo:
-
-- su α = .81 parece incluir las aplicaciones 0/10; sin ellas, α ≈ .65–.79;
-- la tarea muestra el par escrito en pantalla aunque las instrucciones digan que el niño no necesita verla. En niños que ya leen, mejor que no la vean.
+La tarea muestra el par escrito en pantalla, aunque las instrucciones digan que el niño no necesita verla. En niños que ya leen conviene que no la vean, para que juzguen por el sonido y no por la escritura.
 
 ## Pendientes e incidencias
 

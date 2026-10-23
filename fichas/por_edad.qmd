@@ -1,0 +1,89 @@
+---
+title: "Tareas por edad"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+rl <- raiz_libro()
+C <- utils::read.csv(file.path(rl, "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+C <- C[C$estado == "evaluación", ]
+B <- leer("RIMA_3A", "B")
+# tareas con ficha
+auto <- sub("\\.qmd$", "", list.files(file.path(rl, "fichas", "auto"), "\\.qmd$")); auto <- setdiff(auto, "index")
+PIL <- c(LEC_LETRAS = "LET.qmd", RAN_NUMEROS = "RAN.qmd", RAN_COLORES = "RAN.qmd", RAN_OBJETOS_CONTROL = "RAN.qmd", CF_CONTAR_SILABAS = "CF523.qmd",
+         LEC_VEL_TEXTO = "VEL.qmd", LEC_TECLE = "TECLE.qmd")
+enlace <- function(t, nombre) ifelse(t %in% names(PIL), sprintf("[%s](%s)", nombre, PIL[t]), ifelse(t %in% auto, sprintf("[%s](auto/%s.qmd)", nombre, t), nombre))
+DOM <- c(LECTURA = "Lectura", HFON = "Procesamiento fonológico", RAN = "Procesamiento fonológico", HVIS = "Visoatencional", L_ORAL = "Lenguaje oral",
+         MATE = "Cognición numérica", F_EJEC = "Funciones ejecutivas", INTELIGENCIA = "Razonamiento", ESCRITURA = "Escritura")
+EDADES <- 3:11
+M <- data.frame(dominio = DOM[C$dominio], tarea = enlace(C$tarea_canonica, C$tarea), clase = C$clase, stringsAsFactors = FALSE)
+eds <- lapply(strsplit(as.character(C$edades), ",\\s*"), as.integer)
+# 3 años desde los datos del servidor 2023–2026 (≥ 100 niños)
+cods3 <- unique(B$Prueba[B$N >= 100])
+tiene3 <- vapply(seq_len(nrow(C)), function(i) any(cods3 %in% strsplit(as.character(C$codigos[i]), " ")[[1]]), TRUE)
+for (e in EDADES) M[[as.character(e)]] <- vapply(seq_len(nrow(C)), function(i) if (e %in% eds[[i]] || (e == 3 && tiene3[i])) c(A = "●", B = "◐", C = "○")[[C$clase[i]]] else "", "")
+M <- M[order(M$dominio, -rowSums(M[, as.character(EDADES)] != ""), M$tarea), ]
+NUEVAS <- data.frame(dominio = c("Procesamiento fonológico", "Lenguaje oral", "Lenguaje oral", "Lenguaje oral", "Procesamiento fonológico"),
+                     tarea = c("[Juicio de rima (11795)](RIMA.qmd)", "Comprensión de conceptos (11794)", "Categorización (12332, 12510)",
+                               "Repetición de pseudopalabras (11256, 12509)", "Segmentar en sílabas (12166)"),
+                     edades = c("3–5", "3–4", "3", "3", "3–4"))
+```
+
+Las fichas están agrupadas por dominio, pero muchas veces la pregunta es otra: **qué se puede evaluar a una edad concreta**. Esta página ordena las tareas por edad y propone un núcleo mínimo para cada una, con su duración real en la plataforma.
+
+## Qué tareas hay a cada edad
+
+● clase A (ficha completa) · ◐ clase B · ○ clase C ([qué significa cada clase](../limites.qmd#sec-clases)). Edades en las que la tarea se aplicó en las cohortes 2010–2015; la columna de 3 años añade las tareas aplicadas a 100 niños o más en 2023–2026.
+
+```{r}
+tabla(M[, c("dominio", "tarea", as.character(EDADES))], c("Dominio", "Tarea", paste(EDADES, "a")), digitos = 0)
+```
+
+**Tareas nuevas de 2023–2026** (todavía no están en el catálogo de las cohortes 2010–2015; ver [Batería de 3 años](TRES_ANIOS.qmd)):
+
+```{r}
+tabla(NUEVAS, c("Dominio", "Tarea", "Edades"), digitos = 0)
+```
+
+## Núcleo mínimo por edad (propuesta)
+
+Para cada edad, las tareas que mejor combinan **validez** (predicen la dificultad lectora o la fluidez posterior), **fiabilidad** y **brevedad**, según las fichas de este manual. Es una propuesta para el equipo, no una batería cerrada. Duración = mediana del tiempo de la tarea en la plataforma (2023–2026), sin contar instrucciones ni cambios de tarea.
+
+| Edad | Tarea (código) | Duración | Por qué |
+|---|---|---|---|
+| **3 años** | Comprensión de conceptos (11794) | 2,3 min | 21 ítems, α ≈ .80, sin suelo ni techo |
+| | Vocabulario: elección entre opciones (124) | 1,9 min | Lenguaje oral; se continúa a los 4 y 5 años |
+| | Memoria verbal (2095) | 1,4 min | Misma tarea de 3 a 6 años: permite seguir el cambio |
+| | Segmentar en sílabas (12166) | 0,9 min | Precursor silábico; enlaza con contar sílabas a los 4 |
+| | Juicio de rima (11795) | 1,0 min | Solo para describir grupos: estabilidad baja |
+| | *Total aproximado* | *≈ 8 min* | Sin validez predictiva todavía a esta edad |
+| **4 años** | Contar sílabas (523) | 2,6 min | Precursor silábico de clase A |
+| | Supresión de la sílaba inicial (1551) | 2,6 min | Conciencia silábica; AUC .60–.67 |
+| | Conocimiento de letras, mayúsculas (535) | 1,3 min | El mejor predictor individual en Infantil |
+| | RAN números (1054) | ≈ 1 min | Predice mejor que colores (AUC .76 a 4.1) |
+| | Vocabulario (124) y memoria verbal (2095) | 3,3 min | Lenguaje oral y memoria fonológica |
+| | *Total aproximado* | *≈ 11 min* | A los 4 años sirve para **vigilar**, no para cribar (AUC compuesto .73) |
+| **5 años** | Conocimiento de letras (67) | 1,0 min | AUC .82 a 5.3 frente a la dificultad persistente |
+| | Identificación del fonema inicial (1896) | 1,3 min | Conciencia fonémica emergente |
+| | Supresión de la sílaba final (1834) | 2,1 min | Conciencia silábica, clase A |
+| | RAN números (1053) | ≈ 1 min | Velocidad de acceso léxico |
+| | Lectura de sílabas simples (2263) | 1,0 min | La lectura temprana añade sobre los precursores |
+| | Memoria verbal (2095) | 1,4 min | Continuidad con 3 y 4 años |
+| | *Total aproximado* | *≈ 8 min* | Precursores a los 5 años: AUC ≈ .80 |
+| **6 años** | Conocimiento de letras (67) | 1,0 min | Todavía discrimina en 6.1 |
+| | Palabras y pseudopalabras bisílabas (1931, 1934) | 1,2 min | Decodificación; AUC .85 en 6.1 |
+| | Velocidad lectora en texto y comprensión (2034, 2041) | 3,0 min | Fluidez y comprensión del mismo texto |
+| | Decisión ortográfica (1937) | 2,6 min | Procesamiento ortográfico |
+| | *Total aproximado* | *≈ 8 min* | |
+| **7 años** | Palabras y pseudopalabras bi- y trisílabas (1931, 1932, 1934, 1935) | 2,0 min | Decodificación, la medida más estable (ρ ≈ .66) |
+| | Velocidad lectora en texto y comprensión (2034, 2041) | 3,0 min | Fluidez y comprensión |
+| | TECLE (1930) | 5,0 min | Eficiencia lectora; base del cribado en dos fases |
+| | Decisión ortográfica (1937) | 2,5 min | Procesamiento ortográfico |
+| | *Total aproximado* | *≈ 12 min* | |
+
+: Núcleo mínimo propuesto por edad. {.striped}
+
+**Para seguir a los mismos niños de 3 a 7 años** conviene mantener una tarea de cada constructo con la misma forma en todas las edades en que se pueda: memoria verbal (2095) de 3 a 6 años, contar o segmentar sílabas de 3 a 5, letras de 4 a 6 y RAN números de 4 a 5. Las tareas que cambian de forma (letras 535 y 67, segmentar y contar sílabas) no son intercambiables: hay que compararlas a través de su percentil, no de la puntuación directa.
+
+**Tareas con tiempo límite.** RAN, letras (67), sílabas simples y TECLE se hacen contra reloj. Si la evaluación se combina con medidas fisiológicas o de estrés, conviene registrar el inicio y el fin de cada tarea, porque las tareas cronometradas activan más.

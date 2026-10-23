@@ -20,4 +20,3 @@ Las fichas piloto desarrollan este marco con más detalle: [contar sílabas](../
 - **En un punto intermedio.** Las demás tareas de supresión e identificación (.63–.68).
 - **Lo que menos predice.** Segmentar fonemas y contar sílabas (.60–.62).
 - **Consistencia y estabilidad.** La consistencia interna es buena (α = .82–.94), pero la estabilidad entre trimestres es baja (ρ = .27–.41). Muchas se aplicaron en solo una o dos sesiones y los niños cambian deprisa en estas edades. Para un diagnóstico individual conviene confirmar el resultado en dos momentos.
-- **También en matemáticas.** La conciencia fonológica de 5 y 6 años predice además la aritmética del curso siguiente [@luque2026fonologia].
