@@ -36,7 +36,7 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Regresión cuantílica condicionada y corrección del error de medida [@castellano2013sgp; @shang2015simex].
 - **Revistas posibles:** *Journal of Educational and Behavioral Statistics*, *Educational Measurement: Issues and Practice*.
 
-### M5 · Identificación bayesiana de la dificultad lectora
+### [M5 · Identificación bayesiana de la dificultad lectora](desarrollos/M5.qmd){.enlace-discreto}
 
 - **Pregunta:** ¿Mejora la detección combinar varios indicadores con razones de verosimilitud y la prevalencia del centro, en vez de usar un solo corte?
 - **Datos:** Precursores, etiquetas de certeza, ISE del centro.

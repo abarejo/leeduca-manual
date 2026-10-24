@@ -121,6 +121,7 @@ book:
     - colaborar.qmd
     - referencias.qmd
     # páginas de desarrollo de la Agenda: se generan pero no se ven en el índice (ver estilo.scss y colaborar.qmd)
+    - desarrollos/M5.qmd
     - desarrollos/M10.qmd
 
 bibliography: referencias.bib

@@ -1,0 +1,115 @@
+---
+search: false
+---
+
+# M5 · Identificación bayesiana de la dificultad lectora — análisis exploratorio {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 24/10/2026*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Pregunta
+
+¿Mejora la detección si combinamos varios indicadores con razones de verosimilitud y con la prevalencia del centro, en vez de usar un solo corte [@wagner2020prevalence; @wagner2022bayes]? La idea de fondo es dar a cada niño una **probabilidad de dificultad persistente con su intervalo**, en lugar de una etiqueta de «riesgo sí o no».
+
+## Diseño
+
+| Elemento | Decisión |
+|---|---|
+| Criterio | Dificultad persistente: DL-A + DL-B, con la etiqueta de certeza v2 ([Cómo estimamos el riesgo](../riesgo.qmd)) |
+| Predictores | Conciencia fonológica, letras y RAN a los 5 años. Es la media de los trimestres, en percentil de la referencia SIN. Se exigen al menos 2 de los 3 |
+| Muestra | 1.853 niños de las cohortes 2010–2013, de 57 colegios; 273 con dificultad persistente (14,7 %) |
+| Validación | Se deja fuera una cohorte cada vez: se entrena con tres y se prueba con la cuarta |
+| Centro | Prevalencia histórica del colegio (de las otras cohortes), encogida hacia la que corresponde a su ISE. Si el colegio no tiene historia, se usa la del ISE |
+
+**Modelos que se comparan:**
+
+- **A.** Un solo corte: compuesto de precursores ≤ P25. También se prueba solo CF ≤ P25.
+- **B.** Razones de verosimilitud por tramos, multiplicadas («Bayes por tramos»).
+- **C.** Regresión logística bayesiana con los tres indicadores, con priors poco informativos y muestreo MCMC (R-hat ≤ 1,01).
+- **D.** C con la prevalencia del centro como probabilidad previa.
+- **E.** C con el ISE como covariable.
+
+## Razones de verosimilitud por tramos
+
+La razón de verosimilitud (LR) dice cuánto cambia la probabilidad de dificultad al saber en qué tramo está el niño. Por encima de 1, la sube; por debajo, la baja.
+
+![LR de cada indicador a los 5 años, con su intervalo de credibilidad del 95 %.](../figuras/desarrollos/M5_LR_tramos_v1.png){width=100%}
+
+| Tramo | Conciencia fonológica | Letras | RAN |
+|---|---|---|---|
+| ≤ P5 | 5,3 (2,3–12,5) | **8,9** (5,3–15,4) | 1,8 (0,7–4,2) |
+| P5–10 | 2,8 (1,5–5,1) | 4,9 (3,0–7,6) | 2,2 (1,0–4,3) |
+| P10–25 | 2,9 (2,3–3,6) | 2,4 (2,0–3,0) | 1,9 (1,4–2,5) |
+| P25–50 | 1,7 (1,5–2,0) | 1,0 (0,8–1,3) | 1,0 (0,9–1,2) |
+| > P50 | **0,29** (0,22–0,37) | **0,23** (0,16–0,30) | 0,79 (0,68–0,90) |
+
+- **Las letras son el indicador más informativo en los dos extremos.** Un niño por debajo de P5 en letras pasa de una probabilidad del 15 % a una del 61 %.
+- **La conciencia fonológica sigue siendo informativa entre P25 y P50.** Ahí las letras ya no discriminan.
+- **Estar por encima de la mediana en CF o en letras divide el riesgo entre 3 o 4.** Tranquiliza más de lo que alarma un resultado bajo.
+- **El RAN apenas aporta a los 5 años** (LR ≈ 2 en los tramos bajos). En el modelo conjunto su OR es 0,99, lo que coincide con lo que ya se vio en [Cómo estimamos el riesgo](../riesgo.qmd).
+
+## ¿Qué método detecta mejor?
+
+Comparación fuera de cohorte (N = 1.853). Para que sea justa, todos los métodos señalan al mismo 20 % de niños que señala el corte único.
+
+| Método | AUC | Calibración (pendiente) | Sensibilidad | VPP |
+|---|---|---|---|---|
+| A. Corte único, compuesto ≤ P25 | — | — | 0,53 | 0,39 |
+| A2. Corte único, solo CF ≤ P25 | — | — | 0,40 | 0,34 |
+| B. Bayes por tramos | 0,80 | **0,61** | 0,50 | 0,36 |
+| **C. Logística bayesiana** | **0,82** | **0,97** | **0,56** | **0,41** |
+| D. C + prevalencia del centro | 0,81 | 0,86 | 0,54 | 0,39 |
+| E. C + ISE | 0,82 | 0,96 | 0,56 | 0,41 |
+
+- **El modelo bayesiano conjunto (C) es el mejor y está bien calibrado.** Si dice 30 %, cerca del 30 % de esos niños acaban con dificultad persistente. Con el mismo número de niños señalados, su sensibilidad es del 56 %: 3 puntos más que el corte del compuesto (53 %) y 16 más que el corte de CF sola (40 %).
+- **Multiplicar las LR (B) sobreestima el riesgo.** La CF y las letras están correlacionadas, así que multiplicarlas cuenta dos veces la misma información (pendiente 0,61). Por eso hay que combinar los indicadores en un modelo, no en serie.
+- **La prevalencia del centro no mejora la predicción fuera de cohorte (D), y el ISE apenas aporta (E).** La prevalencia sí cambia con el nivel socioeconómico: 21 % en los colegios de ISE bajo (1–3), 13 % en el medio y 12 % en el alto. Pero los precursores del niño ya recogen buena parte de esa diferencia, y añadir el centro la cuenta dos veces. La prevalencia histórica de cada colegio, además, es ruidosa.
+
+## La misma puntuación no significa lo mismo en todos los centros
+
+Lo más útil para el informe es traducir el perfil del niño a una **probabilidad con su intervalo**. Esa probabilidad cambia mucho con la prevalencia del contexto.
+
+![Probabilidad posterior de dificultad persistente según el percentil a los 5 años, en tres centros de distinta prevalencia. Las bandas son intervalos de credibilidad del 95 %.](../figuras/desarrollos/M5_posterior_centro_v1.png){width=85%}
+
+| Perfil a los 5 años | Centro con 7 % | Centro con 15 % | Centro con 25 % |
+|---|---|---|---|
+| Todo en P50 | 5 % (4–5) | 10 % (9–12) | 18 % (15–20) |
+| RAN en P10, resto en P50 | 5 % (3–6) | 10 % (8–13) | 17 % (13–22) |
+| CF en P10, resto en P50 | 10 % (8–14) | 21 % (17–27) | 34 % (27–42) |
+| Letras en P10, resto en P50 | 17 % (13–20) | 32 % (26–38) | 47 % (40–53) |
+| CF y letras en P25 | 14 % (12–16) | 27 % (24–31) | 42 % (38–46) |
+| CF y letras en P10 | 32 % (27–38) | 53 % (47–59) | 68 % (62–73) |
+| Todo en P10 | 32 % (25–39) | 52 % (44–60) | 67 % (60–74) |
+
+- Un niño con todo en P10 tiene un 32 % de probabilidad en un centro de prevalencia baja y un 67 % en uno de prevalencia alta. El corte único les da la misma etiqueta.
+- Los dos resultados no se contradicen. La prevalencia del centro no mejora el **orden** de los niños (la AUC), pero sí cambia la **probabilidad absoluta** que se comunica a la familia y al colegio. La pregunta abierta es qué prevalencia usar como referencia: la del colegio, la de su ISE o la general.
+
+## Lectura provisional
+
+1. **Sí compensa pasar del corte a la probabilidad.** El modelo conjunto ordena mejor y, sobre todo, da una probabilidad calibrada con su intervalo. Es lo que piden la definición de 2025 y @wagner2022bayes.
+2. **Las letras y la CF bastan a los 5 años.** El RAN no aporta en este momento.
+3. **Las LR no se deben multiplicar** cuando los indicadores están correlacionados.
+4. **El contexto importa para comunicar, no tanto para ordenar.** Antes de usar la prevalencia del centro hay que estimarla con un modelo multinivel, condicionado a los precursores, para no contar dos veces la misma información.
+
+## Cautelas
+
+- La etiqueta de certeza se construye con la lectura de 6 a 11 años, con la referencia SIN y la asignación Preleo v3. Con la v4 provisional el acuerdo de etiquetas es κ = .95.
+- 2012 y 2013 tienen pocos casos (39 y 48).
+- El ISE es del colegio, no de la familia.
+- Los perfiles de la tabla son combinaciones teóricas: la de RAN en P10 con el resto en P50 es poco frecuente.
+
+## Próximos pasos
+
+1. **Modelo multinivel bayesiano** con efecto aleatorio de colegio, para estimar la prevalencia de cada centro sin contarla dos veces.
+2. **Añadir la lectura de 6.1**, para actualizar la probabilidad del niño con la evaluación siguiente: la probabilidad posterior de los 5 años pasa a ser la previa de los 6.
+3. **Fijar el umbral de actuación con curvas de decisión**, por ejemplo intervenir si la probabilidad es ≥ 20 %.
+4. **Prototipo de informe**, con la probabilidad y su intervalo en lugar del nivel.
+
+::: {.callout-note appearance="minimal"}
+**Reproducibilidad.** Guion `04_DICCIONARIO_PROCESADO_2026/scripts/m5_bayes_v1.py`. Usa `certeza_cortes_baremos_v2.xlsx`, `ise_sexo_nacimiento_v1.xlsx` y la tabla larga v2 (solo para el colegio). Salida completa en `DIAGNOSTICO/M5_bayes_resultados_v1.xlsx`.
+:::
