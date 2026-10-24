@@ -1,0 +1,100 @@
+---
+search: false
+---
+
+# M10 · Subtipos de exactitud y de velocidad — análisis exploratorio {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 24/10/2026*
+
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Pregunta
+
+¿Lleva el RAN bajo en Infantil a una lectura lenta pero exacta, y la conciencia fonológica baja a una lectura lenta e inexacta, como en hebreo y árabe [@catts2026definicion]? Se añade la morfología (género y número), porque en árabe el subgrupo con déficit fonológico y morfológico es el que lee lento e inexacto.
+
+## Decisiones tomadas
+
+| Tema | Decisión |
+|---|---|
+| Muestra principal | Cohorte 2010, con la condición Preleo de la tesis de Auxi (versión estable) como covariable |
+| Referencia para los cortes | Todos los SIN fiables de cualquier cohorte: SIN en las dos versiones de la asignación. En la práctica, 2010 SIN + 2012 (N = 429) |
+| Cortes | P10 primero y P25 después. P25 deja menos niños en riesgo sin atender |
+| Réplicas | 2011 (sensibilidad: condición Preleo dudosa), 2012 y las tres cohortes juntas |
+| Cohortes que no sirven | 2013, 2014 y 2015: en sus listas el tiempo está fijado (~43 s) y no se separa exactitud de velocidad |
+
+## Medidas
+
+- **Lectura a 7.1** (2º de primaria, 1er trimestre). Son las mismas cuatro listas en 2010, 2011 y 2012: palabras y pseudopalabras de 2 y 3 sílabas, de 12 ítems cada una.
+  - **Exactitud** = aciertos (0–48).
+  - **Velocidad** = tiempo total.
+  - Réplica en los mismos niños a 7.2.
+- **RAN**: colores y números en Infantil (2010 a 5.1; 2011 a 4.1; 2012 a 4.3). Sensibilidad con RAN de objetos.
+- **Conciencia fonológica**: compuesto de 4–6 tareas de 5.1–5.2 (α = .76–.84).
+- **Morfología**: género y número (α = .25–.55). En 2010 está medida a 6.1, no en Infantil.
+
+## Cortes en la referencia SIN (7.1)
+
+| Corte | Exactitud baja | Velocidad baja |
+|---|---|---|
+| P10 | ≤ 37 / 48 aciertos | ≥ 161 s en las cuatro listas |
+| P25 | ≤ 42 / 48 aciertos | ≥ 123 s en las cuatro listas |
+
+Solo el 20 % de la referencia está en el techo (48/48), así que a esta edad la exactitud aún discrimina.
+
+## Perfiles en 2010
+
+| Corte | Preleo | N | Típico | Solo lento | Solo inexacto | Mixto |
+|---|---|---|---|---|---|---|
+| P10 | CON | 506 | 83 % | 4 % | 8 % | 5 % |
+| P10 | SIN | 241 | 83 % | 4 % | 6 % | 7 % |
+| P25 | CON | 506 | 59 % | 10 % | 17 % | 14 % |
+| P25 | SIN | 241 | 59 % | 8 % | 18 % | 15 % |
+
+Con P25 se señalan unos 25 puntos más de niños. Las proporciones son iguales con y sin Preleo.
+
+## ¿Hay doble disociación?
+
+### Por perfiles (regresión multinomial, 2010, P10)
+
+Las cifras son OR por cada desviación típica peor en el precursor, frente al grupo típico. Los errores típicos se ajustan por colegio.
+
+| Precursor | Solo lento (n = 23) | Solo inexacto (n = 36) | Mixto (n = 21) |
+|---|---|---|---|
+| RAN | 1,36 (0,89–2,10) | 1,14 (0,82–1,59) | **1,66** (1,16–2,39) |
+| Conciencia fonológica | 1,15 (0,78–1,70) | 1,35 (0,95–1,93) | **2,82** (1,40–5,69) |
+| Morfología | 1,18 (0,74–1,88) | **1,62** (1,13–2,33) | **1,58** (1,11–2,24) |
+
+La doble disociación por perfiles **no se confirma en 2010**: las diferencias entre "solo lento" y "solo inexacto" no son significativas, y los grupos son pequeños. Solo aparece en 2011 (CF: p = .001; RAN: p = .06), la cohorte con la condición Preleo dudosa.
+
+### Como continuo (exactitud y velocidad en el mismo modelo)
+
+![Peso de cada precursor en la exactitud y en la velocidad a 7.1. "p dif" contrasta si el peso es distinto en las dos medidas.](../figuras/desarrollos/M10_continuo_v1.png){width=100%}
+
+- **RAN → velocidad.** Pesa más en la velocidad que en la exactitud. Se replica con el RAN de objetos (p = .008) y con las tres cohortes (p = .026).
+- **Morfología → exactitud.** Predice la exactitud y no la velocidad (tres cohortes: p = .020). Se mantiene controlando la recepción gramatical.
+- **Conciencia fonológica → ambas** por igual.
+- **Preleo** no tiene efecto en ninguna de las dos.
+
+**Lectura provisional:** la disociación es parcial. El RAN bajo lleva a una lectura lenta pero exacta, como en árabe [@catts2026definicion]. En cambio, el componente de inexactitud lo aporta la morfología, no la conciencia fonológica.
+
+## Cautelas
+
+- La medida de morfología es poco fiable (α .25–.55), y en 2010 es de 1º de primaria, no de Infantil.
+- En 2012 el RAN es una sola lámina. Los precursores se midieron a los 5 años en 2010 y a los 4 en 2011 y 2012.
+- Los perfiles latentes (LPA) dan 5–6 clases con grupos residuales del 1–5 %. Parecen un artefacto del techo y de los errores extremos, así que quedan como análisis secundario.
+
+## Próximos pasos
+
+1. Modelo de ecuaciones estructurales con variables latentes, para corregir la baja fiabilidad de la morfología.
+2. Control por CI (Raven).
+3. Réplica a 8.x y con el criterio de dificultad persistente.
+4. Decidir con el grupo si 2011 entra como réplica.
+
+::: {.callout-note appearance="minimal"}
+**Reproducibilidad.** Guion `04_DICCIONARIO_PROCESADO_2026/scripts/m10_subtipos_v1.py`, que trabaja sobre la tabla larga v2 y la asignación Preleo v4 provisional (columnas v3 y v4). Salida completa en `DIAGNOSTICO/M10_subtipos_resultados_v1.xlsx`. La estimación previa por simulación está en `scripts/M10_simulacion_estimacion.py`.
+:::

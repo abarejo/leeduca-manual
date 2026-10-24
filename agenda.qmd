@@ -71,7 +71,7 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Sistemas dinámicos y simulación ajustados a los datos [@vandermaas2006mutualismo].
 - **Revistas posibles:** *Journal of Mathematical Psychology*, *Psychological Review*, *Developmental Science*.
 
-### M10 · Subtipos de exactitud y de velocidad en español
+### [M10 · Subtipos de exactitud y de velocidad en español](desarrollos/M10.qmd){.enlace-discreto}
 
 - **Pregunta:** ¿Lleva el RAN bajo en Infantil a una lectura lenta pero exacta, y la conciencia fonológica baja a una lectura lenta e inexacta, como en hebreo y árabe?
 - **Datos:** RAN y conciencia fonológica a los 4–5 años; aciertos y tiempo de palabras y pseudopalabras de 6 a 8 años.

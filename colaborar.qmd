@@ -4,6 +4,7 @@
 
 - **Leer y comentar:** basta con abrir la web. Las sugerencias llegan por las vías de [Consultas](consultas.qmd).
 - **Proponer un cambio de texto:** botón «Edit this page» (necesita cuenta de GitHub). El cambio queda como propuesta hasta que el coordinador lo acepta.
+- **Análisis en desarrollo de la Agenda:** cuando se prueba un análisis de un estudio de la [Agenda](agenda.qmd), su título enlaza a una página de desarrollo con los resultados provisionales. El enlace es discreto: el título no cambia de color, solo se subraya al pasar el ratón (↗). Estas páginas no están en el índice, contienen solo datos agregados y no se citan ni se difunden fuera del grupo.
 - **Estados de una ficha:** borrador → en revisión del grupo → validada. Una ficha pasa a validada cuando el grupo la ha revisado y no quedan consultas abiertas sobre ella.
 
 ## Para quien actualiza
@@ -26,6 +27,8 @@ leeduca-manual/
 2. Pasar las tablas al libro: `Rscript analisis/exportar_agregados.R --diag "<ruta a DIAGNOSTICO/R>"`. El script se detiene si una tabla parece contener datos individuales.
 3. Copiar a `figuras/` las figuras nuevas.
 4. Subir los cambios. La web se regenera sola en unos minutos.
+
+**Añadir un desarrollo de la Agenda:** crear `desarrollos/<código>.qmd` (por ejemplo `desarrollos/M10.qmd`), poner sus figuras en `figuras/desarrollos/` y enlazar el título del estudio en `agenda.qmd` así: `### [Título](desarrollos/<código>.qmd){.enlace-discreto}`. Se añade al final de `appendices` en `_quarto.yml`; `estilo.scss` la oculta del índice lateral y de la navegación, y `search: false` la saca del buscador.
 
 **Añadir una ficha:** copiar `fichas/_plantilla.qmd`, cambiarle el nombre y añadirla a `_quarto.yml`.
 

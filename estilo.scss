@@ -30,3 +30,13 @@ details { overflow-x: auto; }
 .fichas-grupo ul { padding-left: 1.1rem; margin-bottom: .4rem; font-size: .93rem; }
 .fichas-grupo li { margin-bottom: .15rem; }
 .fd-meta { color: #8D8F99; font-size: .8rem; white-space: nowrap; }
+
+/* enlace discreto de la Agenda a las páginas de desarrollo (desarrollos/): no cambia el título; se ve al pasar el ratón */
+a.enlace-discreto, a.enlace-discreto:visited { color: inherit; text-decoration: none; }
+a.enlace-discreto::after { content: " ↗"; font-size: .7em; opacity: 0; transition: opacity .15s; }
+a.enlace-discreto:hover { text-decoration: underline dotted; text-underline-offset: 4px; }
+a.enlace-discreto:hover::after, a.enlace-discreto:focus-visible::after { opacity: .6; }
+
+/* páginas de desarrollo (desarrollos/): fuera del índice lateral y de la navegación anterior/siguiente */
+.sidebar-item:has(a[href*="desarrollos/"]) { display: none; }
+.nav-page-next:has(a[href*="desarrollos/"]), .nav-page-previous:has(a[href*="desarrollos/"]) { visibility: hidden; }
