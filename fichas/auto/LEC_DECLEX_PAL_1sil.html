@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_DECLEX_PAL_1sil</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (C · Fluidez lectora oral; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea LEC_DECLEX_PAL_1sil</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1012,6 +1033,24 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>En la decisión léxica el niño ve una cadena de letras y decide si es una palabra («¿Esto es una palabra?», SÍ/NO). Mide el <strong>reconocimiento visual de palabras</strong>: el acceso rápido y seguro al léxico ortográfico. En 2021/22 se aplicó de forma colectiva, en tableta, en subpruebas de 45 estímulos de una a cuatro sílabas. Unas tienen sesgo a palabras (36 palabras y 9 pseudopalabras) y otras, a pseudopalabras (la proporción inversa). La puntuación es la eficiencia: aciertos por unidad de tiempo.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>Los niños deciden buscando en su léxico, no leyendo para sí.</strong> Lectores principiantes y avanzados muestran efectos de longitud, pero sus efectos de vecindad ortográfica se parecen a los de los adultos y no cambian al impedirles articular. Basan la decisión en una búsqueda léxica <span class="citation" data-cites="vandenboer2012lexical">(<a href="../../referencias.html#ref-vandenboer2012lexical" role="doc-biblioref">Boer, Jong, y Haentjens-van Meeteren 2012</a>)</span>.</li>
+<li><strong>En español, el léxico ortográfico pesa más allá de la decodificación.</strong> En 1.070 escolares de 2.º a 6.º, el procesamiento ortográfico léxico contribuyó a la competencia lectora y se afinó con los años de práctica <span class="citation" data-cites="cuadro2014lexico">(<a href="../../referencias.html#ref-cuadro2014lexico" role="doc-biblioref">Cuadro y Costa 2014</a>)</span>.</li>
+<li><strong>La proporción de palabras y pseudopalabras mueve el criterio de respuesta.</strong> Los participantes adoptan un criterio único que depende del conjunto de estímulos, no de cada ensayo <span class="citation" data-cites="paul1992criterio">(<a href="../../referencias.html#ref-paul1992criterio" role="doc-biblioref">Paul, Kellas, y Juola 1992</a>)</span>. Esa proporción cambia a la vez la precisión y los tiempos <span class="citation" data-cites="ratcliff2004diffusion">(<a href="../../referencias.html#ref-ratcliff2004diffusion" role="doc-biblioref">Ratcliff, Gomez, y McKoon 2004</a>)</span>. Con un 80 % de palabras, un niño que responde siempre «SÍ» acierta el 80 %: conviene separar sensibilidad y sesgo.</li>
+<li><strong>El cribado colectivo en tableta es viable.</strong> Una aplicación de tableta aplicada a 616 niños de 5 años predijo las dificultades lectoras de 1.º con una sensibilidad del 90 % <span class="citation" data-cites="zugarramurdi2022lexiland">(<a href="../../referencias.html#ref-zugarramurdi2022lexiland" role="doc-biblioref">Zugarramurdi et&nbsp;al. 2022</a>)</span>.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong> Hay una aplicación por niño y curso: no hay estabilidad ni α.</p>
+<ul>
+<li><strong>Validez.</strong> Es la familia con mejor validez concurrente de la plataforma. Frente a la dificultad persistente, AUC de .75 a .87 entre los 9 y los 11 años. Frente a la baja fluidez de Woodcock-Muñoz del mismo curso, AUC de .66 a .81 (ρ = .30–.58).</li>
+<li><strong>Sesgo y longitud.</strong> Las versiones con sesgo a palabras y a pseudopalabras rinden casi igual. Las monosílabas, aplicadas solo a los 6–7 años, son las más débiles (AUC .56–.74).</li>
+<li><strong>Homógrafos.</strong> AUC .84–.85 frente a la dificultad persistente y ρ = .59–.69 con Woodcock-Muñoz, la relación más alta del grupo. Por la consigna, parece medir eficiencia de lectura silenciosa de oraciones más que comprensión de homógrafos.</li>
+<li><strong>Precaución.</strong> A los 6–7 años la eficiencia es muy asimétrica (valores extremos de hasta 172), y a los 11 años el grupo de referencia es pequeño (80–102 niños).</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1756,6 +1795,23 @@ Tablas completas <code>datos/agregados/AUTO_LEC_DECLEX_PAL_1sil/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-vandenboer2012lexical" class="csl-entry" role="listitem">
+Boer, Madelon van den, Peter F. de Jong, y Marleen M. Haentjens-van Meeteren. 2012. <span>«Lexical decision in children: Sublexical processing or lexical search?»</span> <em>Quarterly Journal of Experimental Psychology</em>. <a href="https://doi.org/10.1080/17470218.2011.652136">https://doi.org/10.1080/17470218.2011.652136</a>.
+</div>
+<div id="ref-cuadro2014lexico" class="csl-entry" role="listitem">
+Cuadro, Ariel, y Daniel Costa. 2014. <span>«Orthographic lexicon and reading skills in young <span>Spanish</span> speaking readers»</span>. <em>Estudios de Psicología</em> 35. <a href="https://doi.org/10.1080/02109395.2014.965457">https://doi.org/10.1080/02109395.2014.965457</a>.
+</div>
+<div id="ref-paul1992criterio" class="csl-entry" role="listitem">
+Paul, Stephen T., George Kellas, y James F. Juola. 1992. <span>«Priming effects on lexical access and decision processes: A signal-detection analysis»</span>. <em>Psychological Research</em>. <a href="https://doi.org/10.1007/BF00922100">https://doi.org/10.1007/BF00922100</a>.
+</div>
+<div id="ref-ratcliff2004diffusion" class="csl-entry" role="listitem">
+Ratcliff, Roger, Pablo Gomez, y Gail McKoon. 2004. <span>«A diffusion model account of the lexical decision task»</span>. <em>Psychological Review</em>. <a href="https://doi.org/10.1037/0033-295X.111.1.159">https://doi.org/10.1037/0033-295X.111.1.159</a>.
+</div>
+<div id="ref-zugarramurdi2022lexiland" class="csl-entry" role="listitem">
+Zugarramurdi, Camila, Lucía Fernández, Marie Lallier, Manuel Carreiras, y Juan C. Valle-Lisboa. 2022. <span>«Lexiland: a tablet-based universal screener for reading difficulties in the school context»</span>. <em>Journal of Educational Computing Research</em> 60. <a href="https://doi.org/10.1177/07356331221074300">https://doi.org/10.1177/07356331221074300</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

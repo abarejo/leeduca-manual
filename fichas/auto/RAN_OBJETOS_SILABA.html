@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (B · Denominación rápida; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea RAN_OBJETOS_SILABA</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (B · Denominación rápida; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea RAN_OBJETOS_SILABA</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1012,6 +1033,29 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>La denominación rápida de dibujos mide lo deprisa que el niño recupera y dice en serie nombres muy conocidos, uno de los mejores predictores de la fluidez lectora. Las variantes cambian:</p>
+<ul>
+<li>la <strong>semejanza fonológica</strong> de los nombres: misma sílaba inicial, mismo fonema inicial o nombres sin relación (control);</li>
+<li>la <strong>longitud</strong> de los nombres: cortos o largos;</li>
+<li>la <strong>repetición</strong>: cinco dibujos repetidos o dibujos variados, en lámina o uno a uno.</li>
+</ul>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>El RAN predice la lectura, también con dibujos y antes de leer.</strong> Un metaanálisis de 137 estudios (28.826 participantes) halla una relación moderada a fuerte (r = .43). El tipo de estímulo es uno de los moderadores que más pesan <span class="citation" data-cites="araujo2014ran">(<a href="../../referencias.html#ref-araujo2014ran" role="doc-biblioref">Araújo et&nbsp;al. 2014</a>)</span>. En un estudio longitudinal de tres años, el RAN no alfanumérico medido antes de la enseñanza lectora predijo el crecimiento de la fluidez, sin efecto inverso de la lectura sobre el RAN <span class="citation" data-cites="lervag2009ran">(<a href="../../referencias.html#ref-lervag2009ran" role="doc-biblioref">Lervåg y Hulme 2009</a>)</span>.</li>
+<li><strong>En español, dibujos y alfanuméricos forman factores distintos.</strong> En 874 niños españoles de 2.º a 6.º, las tareas de RAN se agrupan en un factor alfanumérico y otro no alfanumérico, estables entre cursos <span class="citation" data-cites="rodriguez2015ran">(<a href="../../referencias.html#ref-rodriguez2015ran" role="doc-biblioref">Rodríguez et&nbsp;al. 2015</a>)</span>.</li>
+<li><strong>La semejanza fonológica añade una carga que afecta más a la dislexia, pero con letras.</strong> Los lectores con dislexia se ven más perjudicados que los demás cuando letras contiguas se parecen en su sonido <span class="citation" data-cites="jones2013ran">(<a href="../../referencias.html#ref-jones2013ran" role="doc-biblioref">Jones, Ashby, y Branigan 2013</a>)</span>. No hemos encontrado estudios que manipulen así los nombres de dibujos: esta variante es propia de la plataforma y su interpretación es, por ahora, una hipótesis.</li>
+<li><strong>El formato importa.</strong> En 1.º de primaria, el RAN en serie se relaciona más con la lectura que el discreto (un estímulo cada vez) <span class="citation" data-cites="dejong2011discrete">(<a href="../../referencias.html#ref-dejong2011discrete" role="doc-biblioref">Jong 2011</a>)</span>.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong> Son tareas de clase B y C, con pocas sesiones por variante:</p>
+<ul>
+<li><strong>Estabilidad.</strong> ρ = .33 (control), .42 (misma sílaba) y .41 (mismo fonema) entre trimestres de 4 a 6 años; .45 en las versiones largas de 7 a 8 años.</li>
+<li><strong>Validez.</strong> Frente a la dificultad persistente, AUC de .55 a .72 de 4 a 6 años y de .57 a .74 a los 7–8 años. Frente a la baja comprensión posterior, solo .52 a .63. Frente a Woodcock-Muñoz, AUC máximo de .70.</li>
+<li><strong>Semejanza fonológica.</strong> La versión de mismo fonema llega a .72 a los 6 años, frente a .65–.67 del control, pero los intervalos se solapan: no hay ventaja clara de manipular la fonología.</li>
+<li><strong>Precaución.</strong> Los tiempos medios cambian mucho entre sesiones del mismo curso (en control, 25,5 s a 4.1 y 44,5 s a 4.2). Hay que baremar por sesión y revisar la versión aplicada.</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -2861,6 +2905,23 @@ Tablas completas <code>datos/agregados/AUTO_RAN_OBJETOS_SILABA/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-araujo2014ran" class="csl-entry" role="listitem">
+Araújo, Susana, Alexandra Reis, Karl Magnus Petersson, y Luís Faísca. 2014. <span>«Rapid automatized naming and reading performance: A meta-analysis»</span>. <em>Journal of Educational Psychology</em>. <a href="https://doi.org/10.1037/edu0000006">https://doi.org/10.1037/edu0000006</a>.
+</div>
+<div id="ref-jones2013ran" class="csl-entry" role="listitem">
+Jones, Manon W., Jane Ashby, y Holly P. Branigan. 2013. <span>«Dyslexia and fluency: Parafoveal and foveal influences on rapid automatized naming»</span>. <em>Journal of Experimental Psychology: Human Perception and Performance</em>. <a href="https://doi.org/10.1037/a0029710">https://doi.org/10.1037/a0029710</a>.
+</div>
+<div id="ref-dejong2011discrete" class="csl-entry" role="listitem">
+Jong, Peter F. de. 2011. <span>«What discrete and serial rapid automatized naming can reveal about reading»</span>. <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1080/10888438.2010.485624">https://doi.org/10.1080/10888438.2010.485624</a>.
+</div>
+<div id="ref-lervag2009ran" class="csl-entry" role="listitem">
+Lervåg, Arne, y Charles Hulme. 2009. <span>«Rapid automatized naming (<span>RAN</span>) taps a mechanism that places constraints on the development of early reading fluency»</span>. <em>Psychological Science</em>. <a href="https://doi.org/10.1111/j.1467-9280.2009.02405.x">https://doi.org/10.1111/j.1467-9280.2009.02405.x</a>.
+</div>
+<div id="ref-rodriguez2015ran" class="csl-entry" role="listitem">
+Rodríguez, Cristina, Madelon van den Boer, Juan E. Jiménez, y Peter F. de Jong. 2015. <span>«Developmental changes in the relations between <span>RAN</span>, phonological awareness, and reading in <span>Spanish</span> children»</span>. <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1080/10888438.2015.1025271">https://doi.org/10.1080/10888438.2015.1025271</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -915,6 +935,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
   <li><a href="#cómo-está-programada-en-la-plataforma" id="toc-cómo-está-programada-en-la-plataforma" class="nav-link" data-scroll-target="#cómo-está-programada-en-la-plataforma">Cómo está programada en la plataforma</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -954,7 +975,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_ARITMETIC_SUMA_2_DIGITOS</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_ARITMETIC_SUMA_2_DIGITOS</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1074,6 +1095,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Estas tareas miden la <strong>fluidez aritmética</strong>: resolver sumas y restas sencillas con rapidez, sobre todo recuperando hechos aritméticos de la memoria. Hay dos formatos. En los de <strong>producción</strong> (6–8 años), el niño dice el resultado en voz alta y el evaluador lo anota. En los de <strong>verificación</strong> (códigos 107xx, curso 2021/22), el niño ve la operación con un resultado y decide si es correcto; son autoaplicados y tienen tiempo límite (60 o 120 s).</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>Producir y verificar no son exactamente lo mismo.</strong> Los errores de producción y de verificación se ceban por separado: la verificación se apoya más en la familiaridad del resultado presentado <span class="citation" data-cites="campbell1996retrieval">(<a href="../../referencias.html#ref-campbell1996retrieval" role="doc-biblioref">Campbell y Tarling 1996</a>)</span>. Las puntuaciones de los dos formatos no son intercambiables.</li>
+<li><strong>La fluidez aritmética y la lectora comparten predictores.</strong> En 200 niños finlandeses seguidos de los 5 a los 10 años, el conteo y el RAN predijeron tanto el cálculo como la fluidez lectora <span class="citation" data-cites="koponen2013counting">(<a href="../../referencias.html#ref-koponen2013counting" role="doc-biblioref">Koponen et&nbsp;al. 2013</a>)</span>. Un factor común de RAN y conteo verbal fue el mejor predictor de lo que comparten las dos fluideces <span class="citation" data-cites="koponen2020serial">(<a href="../../referencias.html#ref-koponen2020serial" role="doc-biblioref">Koponen et&nbsp;al. 2020</a>)</span>.</li>
+<li><strong>La conciencia fonológica se asocia con la recuperación de hechos, no con el cálculo por procedimientos.</strong> En 63 niños con dificultades de aprendizaje, la conciencia fonémica se relacionó con los problemas que se resuelven de memoria y no con los que exigen contar <span class="citation" data-cites="matejko2022phonological">(<a href="../../referencias.html#ref-matejko2022phonological" role="doc-biblioref">Matejko et&nbsp;al. 2022</a>)</span>.</li>
+<li><strong>Las dificultades son persistentes y se anticipan en Infantil.</strong> En 2.518 niños finlandeses seguidos de 1.º a 9.º, el 12 % tuvo dificultades persistentes en fluidez aritmética; el conteo, los conceptos numéricos y el RAN de Infantil distinguieron este perfil <span class="citation" data-cites="psyridou2023profiles">(<a href="../../referencias.html#ref-psyridou2023profiles" role="doc-biblioref">Psyridou et&nbsp;al. 2023</a>)</span>.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong></p>
+<ul>
+<li><strong>Producción.</strong> Las sumas de un dígito y las sumas y restas de dos dígitos tienen una consistencia aceptable (α = .72–.76). Predicen la baja aritmética de 10–11 años (AUC .59–.71) y, en la misma medida, la baja fluidez de Woodcock-Muñoz (AUC .67–.74). La versión de dos dígitos tiene techo a los 7 años (23–33 % de máximos) y su pantalla muestra un resultado, aunque las instrucciones piden resolver: hay que confirmar qué formato se aplicó.</li>
+<li><strong>Verificación.</strong> Aún no tenemos α para estas versiones. Su relación con la baja fluidez lectora concurrente es moderada (AUC .58–.69). La tarea de 10–11 años (código 10748) es el propio criterio de baja aritmética (<a href="../../cognicion-numerica.html#sec-mate-criterio">Cognición numérica</a>) y no se puede validar frente a él.</li>
+<li><strong>Comorbilidad.</strong> De 799 niños de 10–11 años, 19 tienen baja aritmética y baja lectura a la vez, frente a 12,3 esperados por azar. Junto con lo anterior, apoya una fluidez de recuperación compartida.</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1684,6 +1722,23 @@ Tablas completas <code>datos/agregados/AUTO_MATE_ARITMETIC_SUMA_2_DIGITOS/</code
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-campbell1996retrieval" class="csl-entry" role="listitem">
+Campbell, Jamie I. D., y Derek P. M. Tarling. 1996. <span>«Retrieval processes in arithmetic production and verification»</span>. <em>Memory &amp; Cognition</em>. <a href="https://doi.org/10.3758/BF03200878">https://doi.org/10.3758/BF03200878</a>.
+</div>
+<div id="ref-koponen2020serial" class="csl-entry" role="listitem">
+Koponen, Tuire, Kenneth Eklund, Riikka Heikkilä, Jonna Salminen, Lynn S. Fuchs, Douglas Fuchs, y Mikko Aro. 2020. <span>«Cognitive correlates of the covariance in reading and arithmetic fluency: importance of serial retrieval fluency»</span>. <em>Child Development</em>. <a href="https://doi.org/10.1111/cdev.13287">https://doi.org/10.1111/cdev.13287</a>.
+</div>
+<div id="ref-koponen2013counting" class="csl-entry" role="listitem">
+Koponen, Tuire, Paula Salmi, Kenneth Eklund, y Tuija Aro. 2013. <span>«Counting and <span>RAN</span>: predictors of arithmetic calculation and reading fluency»</span>. <em>Journal of Educational Psychology</em>. <a href="https://doi.org/10.1037/a0029285">https://doi.org/10.1037/a0029285</a>.
+</div>
+<div id="ref-matejko2022phonological" class="csl-entry" role="listitem">
+Matejko, Anna A., Melanie Lozano, Nicole Schlosberg, Cameron C. McKay, Lucy Core, Cambria Revsine, Shelby N. Davis, y Guinevere F. Eden. 2022. <span>«The relationship between phonological processing and arithmetic in children with learning disabilities»</span>. <em>Developmental Science</em>. <a href="https://doi.org/10.1111/desc.13294">https://doi.org/10.1111/desc.13294</a>.
+</div>
+<div id="ref-psyridou2023profiles" class="csl-entry" role="listitem">
+Psyridou, Maria, Minna Torppa, Asko Tolvanen, Anna-Maija Poikkeus, Marja-Kristiina Lerkkanen, y Tuire Koponen. 2023. <span>«Developmental profiles of arithmetic fluency skills from grades 1 to 9 and their early identification»</span>. <em>Developmental Psychology</em>. <a href="https://doi.org/10.1037/dev0001622">https://doi.org/10.1037/dev0001622</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

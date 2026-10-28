@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (F · Amplitud y memoria; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (F · Amplitud y memoria; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1006,6 +1027,23 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Repetir secuencias de sílabas sin sentido, de una a cinco sílabas, mide la <strong>memoria fonológica a corto plazo</strong>: mantener en orden una serie de sonidos que no se apoyan en el significado. Se relaciona con la lectura porque decodificar exige retener los sonidos de las letras mientras se ensamblan. Las versiones usan sílabas CV o CVC.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>Aporta poco más allá de la conciencia fonémica.</strong> Un metaanálisis concluye que la conciencia fonémica es el predictor único más fuerte de la lectura. Los estudios longitudinales y experimentales apoyan su papel causal, pero no el de la memoria verbal a corto plazo <span class="citation" data-cites="melbylervag2012stm">(<a href="../../referencias.html#ref-melbylervag2012stm" role="doc-biblioref">Melby-Lervåg 2012</a>)</span>. En un estudio de Infantil a 3.º, la memoria verbal no predijo la lectura una vez controladas la conciencia fonológica y el RAN <span class="citation" data-cites="parrila2004predictors">(<a href="../../referencias.html#ref-parrila2004predictors" role="doc-biblioref">Parrila, Kirby, y McQuarrie 2004</a>)</span>.</li>
+<li><strong>El orden serial sí parece contar al principio.</strong> En 780 niños seguidos de los 4 a los 9 años, la memoria del orden serial predijo la lectura de palabras de los 4 a los 6 años, y la lectura no influyó en ella. La repetición de pseudopalabras y la lectura se influyeron en ambas direcciones <span class="citation" data-cites="cunningham2021memory">(<a href="../../referencias.html#ref-cunningham2021memory" role="doc-biblioref">Cunningham et&nbsp;al. 2021</a>)</span>.</li>
+<li><strong>En la dislexia el déficit existe, pero depende del lenguaje oral.</strong> Los niños con dislexia repiten peor las pseudopalabras que los de su edad y que lectores más pequeños de su mismo nivel. La gravedad varía mucho entre estudios y la explica sobre todo el nivel de lenguaje oral, es decir, la coexistencia con el trastorno del lenguaje <span class="citation" data-cites="melbylervag2012nonword">(<a href="../../referencias.html#ref-melbylervag2012nonword" role="doc-biblioref">Melby-Lervåg y Lervåg 2012</a>)</span>.</li>
+</ul>
+<p>No hemos encontrado estudios longitudinales en español con esta tarea.</p>
+<p><strong>Lo que muestran nuestros datos.</strong></p>
+<ul>
+<li><strong>Versión principal (15 ítems, 4 a 7 años).</strong> α de 2021 = .76 y estabilidad entre cursos ρ = .36 (rango .23–.44, a unos 12 meses). Su validez crece con la edad: AUC frente a la dificultad persistente de .58 a los 4 años, .61 a los 5 y .66–.72 a los 6–7. Frente a la baja comprensión posterior, .58–.65. El efecto techo es moderado (4–12 %).</li>
+<li><strong>Versión completa de 8 años.</strong> AUC de .63 frente a la dificultad persistente y de .62–.66 frente a Woodcock-Muñoz.</li>
+<li><strong>Versión CVC de 1–5 sílabas (7 años).</strong> El máximo observado es 3, el 86 % de los niños está en el techo y el AUC es .50. Parece un fallo de registro o de puntuación, no un resultado sobre el constructo: no debe usarse hasta revisarla.</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1815,6 +1853,20 @@ Tablas completas <code>datos/agregados/AUTO_HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PL
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-cunningham2021memory" class="csl-entry" role="listitem">
+Cunningham, Anna, Adrian Burgess, Caroline Witton, Joel B. Talcott, y Laura R. Shapiro. 2021. <span>«Dynamic relationships between phonological memory and reading: A five year longitudinal study from age 4 to 9»</span>. <em>Developmental Science</em>. <a href="https://doi.org/10.1111/desc.12986">https://doi.org/10.1111/desc.12986</a>.
+</div>
+<div id="ref-melbylervag2012stm" class="csl-entry" role="listitem">
+Melby-Lervåg, Monica. 2012. <span>«The relative predictive contribution and causal role of phoneme awareness, rhyme awareness and verbal short-term memory in reading skills: A review»</span>. <em>Scandinavian Journal of Educational Research</em>. <a href="https://doi.org/10.1080/00313831.2011.621215">https://doi.org/10.1080/00313831.2011.621215</a>.
+</div>
+<div id="ref-melbylervag2012nonword" class="csl-entry" role="listitem">
+Melby-Lervåg, Monica, y Arne Lervåg. 2012. <span>«Oral language skills moderate nonword repetition skills in children with dyslexia: A meta-analysis of the role of nonword repetition skills in dyslexia»</span>. <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1080/10888438.2010.537715">https://doi.org/10.1080/10888438.2010.537715</a>.
+</div>
+<div id="ref-parrila2004predictors" class="csl-entry" role="listitem">
+Parrila, Rauno, John R. Kirby, y Lynn McQuarrie. 2004. <span>«Articulation rate, naming speed, verbal short-term memory, and phonological awareness: Longitudinal predictors of early reading development?»</span> <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1207/S1532799XSSR0801_2">https://doi.org/10.1207/S1532799XSSR0801_2</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

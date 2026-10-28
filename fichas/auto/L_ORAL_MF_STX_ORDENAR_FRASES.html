@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_MF_STX_ORDENAR_FRASES</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_MF_STX_ORDENAR_FRASES</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1012,6 +1033,24 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Estas tareas miden el <strong>conocimiento morfológico y sintáctico del lenguaje oral</strong>: flexionar palabras y pseudopalabras en género, número y tiempo, ordenar palabras para formar una frase y elegir el dibujo que corresponde a una oración. Con pseudopalabras, el niño tiene que aplicar la regla porque no puede apoyarse en una palabra conocida. En la concepción simple de la lectura forman parte de la comprensión del lenguaje <span class="citation" data-cites="hoover1990simple">(<a href="../../referencias.html#ref-hoover1990simple" role="doc-biblioref">Hoover y Gough 1990</a>)</span>.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>La morfología se relaciona con la lectura, también a largo plazo.</strong> Un metaanálisis de 44 estudios encuentra una correlación de .57 entre conciencia morfológica y comprensión lectora <span class="citation" data-cites="liu2023morphological">(<a href="../../referencias.html#ref-liu2023morphological" role="doc-biblioref">Liu, Groen, y Cain 2023</a>)</span>. Otro, con 35 estudios longitudinales, estima .48 con la lectura de palabras posterior y .55 con la comprensión, más con la precisión que con la fluidez <span class="citation" data-cites="bodynek2026longitudinal">(<a href="../../referencias.html#ref-bodynek2026longitudinal" role="doc-biblioref">Bodynek et&nbsp;al. 2026</a>)</span>.</li>
+<li><strong>En español, la morfología ayuda a comprender, no a decodificar.</strong> En 4.º de primaria su efecto sobre la comprensión es solo directo y no pasa por la lectura de palabras, porque las reglas grafema-fonema bastan para pronunciar <span class="citation" data-cites="dalessio2019morphological">(<a href="../../referencias.html#ref-dalessio2019morphological" role="doc-biblioref">D’Alessio, Jaichenco, y Wilson 2019</a>)</span>. En 234 niños sevillanos de 4.º, la sintaxis predijo la comprensión tras controlar decodificación y vocabulario; la morfología no añadió nada <span class="citation" data-cites="simpson2020morphological">(<a href="../../referencias.html#ref-simpson2020morphological" role="doc-biblioref">Simpson et&nbsp;al. 2020</a>)</span>.</li>
+<li><strong>La sintaxis tiene un papel propio.</strong> La conciencia sintáctica de 3.º predice el progreso en comprensión lectora hasta 4.º, pero no la lectura de palabras <span class="citation" data-cites="deacon2018syntactic">(<a href="../../referencias.html#ref-deacon2018syntactic" role="doc-biblioref">Deacon y Kieffer 2018</a>)</span>. El lenguaje de los 3 años y medio, gramática incluida, predice la comprensión a los 8 y medio <span class="citation" data-cites="hulme2015foundations">(<a href="../../referencias.html#ref-hulme2015foundations" role="doc-biblioref">Hulme et&nbsp;al. 2015</a>)</span>.</li>
+</ul>
+<p>Casi toda la evidencia es de niños de 8 a 10 años. Hay poca en español con tareas orales a los 4–6 años, las edades de nuestras tareas.</p>
+<p><strong>Lo que muestran nuestros datos.</strong> Son tareas de clase B y C, con pocos ítems.</p>
+<ul>
+<li><strong>Consistencia y estabilidad bajas.</strong> α = .57–.71. La estabilidad entre trimestres es muy baja: ρ = .22 en género y .05 en número con palabras.</li>
+<li><strong>Techo y suelo.</strong> El 48 % de los niños de 6 años acierta todo en género con pseudopalabras; el 25 % no acierta nada en número con pseudopalabras.</li>
+<li><strong>Lo que más predice.</strong> La recepción gramatical y ordenar frases: AUC .63–.69 frente a la etiqueta de dificultad lectora y .57–.66 frente a la baja comprensión posterior. La morfología con palabras se queda cerca del azar (AUC .45–.62).</li>
+</ul>
+<p>Conviene usarlas como información complementaria del lenguaje oral, no como cribado individual.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1889,6 +1928,29 @@ Tablas completas <code>datos/agregados/AUTO_L_ORAL_MF_STX_ORDENAR_FRASES/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bodynek2026longitudinal" class="csl-entry" role="listitem">
+Bodynek, Joanna, Dana Gaigulo, Andreas Mayer, y Kristina Jonas. 2026. <span>«Prospective associations between morphological awareness and children’s (written) language skills: a systematic meta-analytic review of longitudinal studies»</span>. <em>Educational Research Review</em>. <a href="https://doi.org/10.1016/j.edurev.2026.100831">https://doi.org/10.1016/j.edurev.2026.100831</a>.
+</div>
+<div id="ref-dalessio2019morphological" class="csl-entry" role="listitem">
+D’Alessio, María Josefina, Virginia Jaichenco, y Maximiliano A. Wilson. 2019. <span>«The relationship between morphological awareness and reading comprehension in <span>Spanish</span>-speaking children»</span>. <em>Scandinavian Journal of Psychology</em>. <a href="https://doi.org/10.1111/sjop.12578">https://doi.org/10.1111/sjop.12578</a>.
+</div>
+<div id="ref-deacon2018syntactic" class="csl-entry" role="listitem">
+Deacon, S. Hélène, y Michael J. Kieffer. 2018. <span>«Understanding how syntactic awareness contributes to reading comprehension: evidence from mediation and longitudinal models»</span>. <em>Journal of Educational Psychology</em>. <a href="https://doi.org/10.1037/edu0000198">https://doi.org/10.1037/edu0000198</a>.
+</div>
+<div id="ref-hoover1990simple" class="csl-entry" role="listitem">
+Hoover, Wesley A., y Philip B. Gough. 1990. <span>«The simple view of reading»</span>. <em>Reading and Writing</em> 2 (2): 127-60. <a href="https://doi.org/10.1007/BF00401799">https://doi.org/10.1007/BF00401799</a>.
+</div>
+<div id="ref-hulme2015foundations" class="csl-entry" role="listitem">
+Hulme, Charles, Hannah M. Nash, Debbie Gooch, Arne Lervåg, y Margaret J. Snowling. 2015. <span>«The foundations of literacy development in children at familial risk of dyslexia»</span>. <em>Psychological Science</em> 26 (12): 1877-86. <a href="https://doi.org/10.1177/0956797615603702">https://doi.org/10.1177/0956797615603702</a>.
+</div>
+<div id="ref-liu2023morphological" class="csl-entry" role="listitem">
+Liu, Yazhi, Margriet A. Groen, y Kate Cain. 2023. <span>«The association between morphological awareness and reading comprehension in children: a systematic review and meta-analysis»</span>. <em>Educational Research Review</em>. <a href="https://doi.org/10.1016/j.edurev.2023.100571">https://doi.org/10.1016/j.edurev.2023.100571</a>.
+</div>
+<div id="ref-simpson2020morphological" class="csl-entry" role="listitem">
+Simpson, Ian C., Francisco J. Moreno-Pérez, Isabel R. Rodríguez-Ortiz, Marta Valdés-Coronel, y David Saldaña. 2020. <span>«The effects of morphological and syntactic knowledge on reading comprehension in <span>Spanish</span> speaking children»</span>. <em>Reading and Writing</em>. <a href="https://doi.org/10.1007/s11145-019-09964-5">https://doi.org/10.1007/s11145-019-09964-5</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

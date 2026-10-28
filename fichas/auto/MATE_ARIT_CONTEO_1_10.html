@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -915,6 +935,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
   <li><a href="#cómo-está-programada-en-la-plataforma" id="toc-cómo-está-programada-en-la-plataforma" class="nav-link" data-scroll-target="#cómo-está-programada-en-la-plataforma">Cómo está programada en la plataforma</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -954,7 +975,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_ARIT_CONTEO_1_10</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_ARIT_CONTEO_1_10</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1074,6 +1095,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Contar los gatitos de una lámina mide el <strong>conteo de colecciones</strong>: asignar un numeral a cada objeto y saber que el último dice cuántos hay (cardinalidad). Contar hacia delante en la primera decena mide solo la secuencia verbal, sin objetos. Las dos se tratan con más detalle en el marco de conocimiento numérico.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>La cardinalidad es uno de los mejores predictores tempranos.</strong> En 197 niños evaluados al inicio de Infantil, el conocimiento del valor cardinal de los numerales, la fluidez en la serie numérica y el reconocimiento de cifras predijeron las matemáticas al final de la etapa <span class="citation" data-cites="geary2016core">(<a href="../../referencias.html#ref-geary2016core" role="doc-biblioref">Geary y vanMarle 2016</a>)</span>. En 128 niños británicos, la cardinalidad y el vocabulario receptivo explicaron las diferencias iniciales en matemáticas <span class="citation" data-cites="cahoon2024cognitive">(<a href="../../referencias.html#ref-cahoon2024cognitive" role="doc-biblioref">Cahoon et&nbsp;al. 2024</a>)</span>.</li>
+<li><strong>En español pesa sobre todo la secuencia verbal.</strong> En niños seguidos de Infantil a 2.º, el conteo procedimental fue la tarea con más peso en el rendimiento matemático posterior <span class="citation" data-cites="mercader2017basicas">(<a href="../../referencias.html#ref-mercader2017basicas" role="doc-biblioref">Mercader Ruiz, Presentación Herrero, y Siegenthaler Hierro 2017</a>)</span>.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong> Ambas tareas tienen mucho techo a los 5 años: el 41–47 % acierta todos los ítems de conteo y el 86 % toda la serie. Por eso discriminan poco: AUC .43–.60 frente a la baja aritmética de 10–11 años y .45–.58 frente a la baja fluidez lectora. La consistencia es moderada (α = .68 y .74) y la estabilidad del conteo, baja (ρ = .19). Su uso razonable es detectar a los pocos niños que aún no dominan el conteo en Infantil.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -2351,6 +2382,17 @@ Tablas completas <code>datos/agregados/AUTO_MATE_ARIT_CONTEO_1_10/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-cahoon2024cognitive" class="csl-entry" role="listitem">
+Cahoon, Abbie, Emine Şimşek, Camilla Gilmore, y Victoria Simms. 2024. <span>«The cognitive and numerical predictors of early mathematical achievement: a latent growth curve analysis»</span>. <em>Journal of Cognition and Development</em>. <a href="https://doi.org/10.1080/15248372.2024.2434036">https://doi.org/10.1080/15248372.2024.2434036</a>.
+</div>
+<div id="ref-geary2016core" class="csl-entry" role="listitem">
+Geary, David C., y Kristy vanMarle. 2016. <span>«Young children’s core symbolic and nonsymbolic quantitative knowledge in the prediction of later mathematics achievement»</span>. <em>Developmental Psychology</em>. <a href="https://doi.org/10.1037/dev0000214">https://doi.org/10.1037/dev0000214</a>.
+</div>
+<div id="ref-mercader2017basicas" class="csl-entry" role="listitem">
+Mercader Ruiz, Jessica, María Jesús Presentación Herrero, y Rebeca Siegenthaler Hierro. 2017. <span>«Influencia de las habilidades matemáticas básicas en el rendimiento posterior»</span>. <em>International Journal of Developmental and Educational Psychology (INFAD)</em> 3. <a href="https://doi.org/10.17060/ijodaep.2017.n1.v3.993">https://doi.org/10.17060/ijodaep.2017.n1.v3.993</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

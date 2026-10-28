@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (F · Amplitud y memoria; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea HVIS_CAP_VAten_NUMEROS_LETRAS_2_3</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (F · Amplitud y memoria; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea HVIS_CAP_VAten_NUMEROS_LETRAS_2_3</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1006,6 +1027,25 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>La <strong>amplitud visoatencional</strong> es el número de elementos visuales que se procesan a la vez dentro de una cadena. En la plataforma se presenta brevemente una cadena de letras, números o símbolos y el niño elige lo que ha visto. La <strong>búsqueda serial</strong> pide decir si hay una O entre grupos de Q de distinto tamaño. La tarea de <strong>atención sostenida</strong> (batería UNED) consiste en 50 ensayos en que el niño decide si el nombre que oye corresponde al dibujo; pese a su nombre, el catálogo la describe como un índice de control inhibitorio. Leer exige procesar varias letras a la vez y mantener la atención a lo largo de la línea.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>La amplitud visoatencional predice la lectura más allá de la conciencia fonémica.</strong> En 417 niños franceses de 1.º, 3.º y 5.º, la predijo con independencia de la conciencia fonémica, sobre todo en las palabras irregulares <span class="citation" data-cites="bosse2009span">(<a href="../../referencias.html#ref-bosse2009span" role="doc-biblioref">Bosse y Valdois 2009</a>)</span>. La profundidad ortográfica modula cómo se reparte esta atención: los bilingües avanzados que leían en francés y euskera la repartían de forma más uniforme que los que leían en español y euskera <span class="citation" data-cites="antzaka2018depth">(<a href="../../referencias.html#ref-antzaka2018depth" role="doc-biblioref">Antzaka et&nbsp;al. 2018</a>)</span>.</li>
+<li><strong>La búsqueda visual se asocia a la lectura, con muestras pequeñas.</strong> En 16 niños con dislexia y 16 controles, la búsqueda serial lenta se asoció a la amplitud visoatencional y a la lectura de palabras irregulares, no a la fonología <span class="citation" data-cites="lallier2013search">(<a href="../../referencias.html#ref-lallier2013search" role="doc-biblioref">Lallier, Donnadieu, y Valdois 2013</a>)</span>. La exploración visual medida en Infantil predijo el aprendizaje de la lectura en niños italianos <span class="citation" data-cites="ferretti2008scanning">(<a href="../../referencias.html#ref-ferretti2008scanning" role="doc-biblioref">Ferretti, Mazzotti, y Brizzolara 2008</a>)</span>.</li>
+<li><strong>La atención sostenida se relaciona más con la comprensión que con la lectura de palabras.</strong> En 245 malos lectores de 4.º y 5.º, explicó varianza propia en comprensión, pero no en precisión ni fluidez lectora <span class="citation" data-cites="macdonald2021sustained">(<a href="../../referencias.html#ref-macdonald2021sustained" role="doc-biblioref">Macdonald et&nbsp;al. 2021</a>)</span>.</li>
+</ul>
+<p>La evidencia es más débil que la de los procesos fonológicos y casi no hay estudios en español.</p>
+<p><strong>Lo que muestran nuestros datos.</strong></p>
+<ul>
+<li><strong>Subpruebas de letras y símbolos.</strong> Con 6–10 puntos y una sesión, AUC de .47 a .61: por separado no son interpretables.</li>
+<li><strong>Números y letras (36 ítems, 4–5 años).</strong> α = .60 y AUC de .66–.67 frente a la dificultad persistente y de .65 frente a la baja comprensión posterior. Es la mejor de la familia, como cabe esperar de estímulos alfanuméricos.</li>
+<li><strong>Números (16 ítems).</strong> α = .56 y estabilidad entre cursos casi nula (ρ = .05–.19). AUC de .54 a .69.</li>
+<li><strong>Búsqueda serial.</strong> α = .74, techo del 11–20 % y AUC de .58 a .63.</li>
+<li><strong>Atención sostenida.</strong> A pesar de un α de .95, no muestra validez: techo extremo (mediana 45 de 50), estabilidad de ρ = .03–.16, correlación nula con los demás dominios y AUC de .43 a .56. No debe usarse hasta revisar los datos.</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1838,6 +1878,23 @@ Tablas completas <code>datos/agregados/AUTO_HVIS_CAP_VAten_NUMEROS_LETRAS_2_3/</
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-antzaka2018depth" class="csl-entry" role="listitem">
+Antzaka, Alexia, Clara D. Martin, Sendy Caffarra, Sophie Schlöffel, Manuel Carreiras, y Marie Lallier. 2018. <span>«The effect of orthographic depth on letter string processing: The case of visual attention span and rapid automatized naming»</span>. <em>Reading and Writing</em>. <a href="https://doi.org/10.1007/s11145-017-9799-0">https://doi.org/10.1007/s11145-017-9799-0</a>.
+</div>
+<div id="ref-bosse2009span" class="csl-entry" role="listitem">
+Bosse, Marie-Line, y Sylviane Valdois. 2009. <span>«Influence of the visual attention span on child reading performance: A cross-sectional study»</span>. <em>Journal of Research in Reading</em>. <a href="https://doi.org/10.1111/j.1467-9817.2008.01387.x">https://doi.org/10.1111/j.1467-9817.2008.01387.x</a>.
+</div>
+<div id="ref-ferretti2008scanning" class="csl-entry" role="listitem">
+Ferretti, G., S. Mazzotti, y D. Brizzolara. 2008. <span>«Visual scanning and reading ability in normal and dyslexic children»</span>. <em>Behavioural Neurology</em>. <a href="https://doi.org/10.1155/2008/564561">https://doi.org/10.1155/2008/564561</a>.
+</div>
+<div id="ref-lallier2013search" class="csl-entry" role="listitem">
+Lallier, Marie, Sophie Donnadieu, y Sylviane Valdois. 2013. <span>«Investigating the role of visual and auditory search in reading and developmental dyslexia»</span>. <em>Frontiers in Human Neuroscience</em>. <a href="https://doi.org/10.3389/fnhum.2013.00597">https://doi.org/10.3389/fnhum.2013.00597</a>.
+</div>
+<div id="ref-macdonald2021sustained" class="csl-entry" role="listitem">
+Macdonald, Kelly T., Marcia A. Barnes, Jeremy Miciak, Greg Roberts, Kelly Halverson, Sharon Vaughn, y Paul T. Cirino. 2021. <span>«Sustained attention and behavioral ratings of attention in struggling readers»</span>. <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1080/10888438.2020.1826950">https://doi.org/10.1080/10888438.2020.1826950</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

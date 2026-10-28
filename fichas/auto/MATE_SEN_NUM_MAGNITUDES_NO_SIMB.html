@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -915,6 +935,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
   <li><a href="#cómo-está-programada-en-la-plataforma" id="toc-cómo-está-programada-en-la-plataforma" class="nav-link" data-scroll-target="#cómo-está-programada-en-la-plataforma">Cómo está programada en la plataforma</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -954,7 +975,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (E · Decisión con tiempo de respuesta; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_SEN_NUM_MAGNITUDES_NO_SIMB</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (E · Decisión con tiempo de respuesta; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea MATE_SEN_NUM_MAGNITUDES_NO_SIMB</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1103,6 +1124,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Comparar cantidades mide el <strong>procesamiento de magnitudes numéricas</strong>. En la versión <strong>no simbólica</strong>, el niño ve dos conjuntos de puntos y dice si tienen el mismo número o no: se atribuye al sistema numérico aproximado, que estima cantidades sin contar. En la <strong>simbólica</strong>, compara dos cifras y elige la mayor: requiere acceder a la magnitud desde el símbolo aprendido.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>Las dos se relacionan con las matemáticas, la simbólica algo más.</strong> Un metaanálisis de 45 artículos (284 efectos, 17.201 participantes) estima r = .30 para la comparación simbólica y .24 para la no simbólica. La relación es mayor con el cálculo mental y las matemáticas tempranas <span class="citation" data-cites="schneider2017associations">(<a href="../../referencias.html#ref-schneider2017associations" role="doc-biblioref">Schneider et&nbsp;al. 2017</a>)</span>.</li>
+<li><strong>Lo simbólico predice mejor el progreso aritmético.</strong> En niños de 6 años seguidos 11 meses, el conocimiento de los números arábigos predijo el crecimiento aritmético y la comparación de magnitudes no añadió nada <span class="citation" data-cites="gobel2014arithmetic">(<a href="../../referencias.html#ref-gobel2014arithmetic" role="doc-biblioref">Göbel et&nbsp;al. 2014</a>)</span>. En 62 niños españoles de 4 años, las cifras y la aritmética predijeron la mejora posterior del sistema aproximado, y no al revés <span class="citation" data-cites="munez2024interrelations">(<a href="../../referencias.html#ref-munez2024interrelations" role="doc-biblioref">Múñez et&nbsp;al. 2024</a>)</span>.</li>
+<li><strong>La tarea con puntos no es una medida pura.</strong> La mayoría de los niños compara los conjuntos por sus rasgos visuales (tamaño, superficie) más que por el número <span class="citation" data-cites="clayton2019nonsymbolic">(<a href="../../referencias.html#ref-clayton2019nonsymbolic" role="doc-biblioref">Clayton, Inglis, y Gilmore 2019</a>)</span>.</li>
+</ul>
+<p>La evidencia sobre el sistema aproximado como base causal de la aritmética es contradictoria. La comparación simbólica es la candidata más sólida para el cribado escolar.</p>
+<p><strong>Lo que muestran nuestros datos.</strong></p>
+<ul>
+<li><strong>Fiabilidad.</strong> La versión no simbólica tiene una consistencia modesta (α = .63) y poca estabilidad entre trimestres (ρ = .29–.38); la simbólica, aún menos (ρ = .20–.21). A los 5 años, el 25 % de los niños alcanza el máximo en la no simbólica.</li>
+<li><strong>Validez frente a las matemáticas.</strong> Predicen poco la baja aritmética de 10–11 años (AUC .54–.61). La comparación simbólica de 10–11 años se correlaciona con la aritmética del mismo momento (r = .32–.39) (<a href="../../cognicion-numerica.html#sec-mate-criterio">Cognición numérica</a>).</li>
+<li><strong>Validez frente a la lectura.</strong> Se relacionan con la baja fluidez de Woodcock-Muñoz igual o más que con la aritmética (AUC .57–.70 la simbólica concurrente; hasta .77 la no simbólica a los 5 años, con solo 22 casos). Quizá reflejen velocidad o atención más que sentido numérico.</li>
+</ul>
+<p>Los códigos agrupados no son homogéneos: la no simbólica mezcla una versión con evaluador (1744) y otra autoaplicada (10752), y el código 1745 es una tarea de línea numérica, no de comparación.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -3121,6 +3160,20 @@ Tablas completas <code>datos/agregados/AUTO_MATE_SEN_NUM_MAGNITUDES_NO_SIMB/</co
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-clayton2019nonsymbolic" class="csl-entry" role="listitem">
+Clayton, Sarah, Matthew Inglis, y Camilla Gilmore. 2019. <span>«Developmental differences in approaches to nonsymbolic comparison tasks»</span>. <em>Quarterly Journal of Experimental Psychology</em>. <a href="https://doi.org/10.1177/1747021818755296">https://doi.org/10.1177/1747021818755296</a>.
+</div>
+<div id="ref-gobel2014arithmetic" class="csl-entry" role="listitem">
+Göbel, Silke M., Sarah E. Watson, Arne Lervåg, y Charles Hulme. 2014. <span>«Children’s arithmetic development: it is number knowledge, not the approximate number sense, that counts»</span>. <em>Psychological Science</em>. <a href="https://doi.org/10.1177/0956797613516471">https://doi.org/10.1177/0956797613516471</a>.
+</div>
+<div id="ref-munez2024interrelations" class="csl-entry" role="listitem">
+Múñez, David, Josetxu Orrantia, Rosario Sánchez, Verónica Carreton, y Laura Matilla. 2024. <span>«Interrelations between acuity of the approximate number system and symbolic skills in preschool children»</span>. <em>Journal of Cognition and Development</em>. <a href="https://doi.org/10.1080/15248372.2024.2384562">https://doi.org/10.1080/15248372.2024.2384562</a>.
+</div>
+<div id="ref-schneider2017associations" class="csl-entry" role="listitem">
+Schneider, Michael, Kassandra Beeres, Leyla Coban, Simon Merz, S. Susan Schmidt, Johannes Stricker, y Bert De Smedt. 2017. <span>«Associations of non-symbolic and symbolic numerical magnitude processing with mathematical competence: a meta-analysis»</span>. <em>Developmental Science</em>. <a href="https://doi.org/10.1111/desc.12372">https://doi.org/10.1111/desc.12372</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_FON_PC_IDENTIFICA_II</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad C). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_FON_PC_IDENTIFICA_II</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1006,6 +1027,23 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Las tareas de <strong>percepción categórica</strong> (batería de Serniclaes) usan sílabas sintéticas que van de BA a PA en pasos de sonoridad. En la identificación, el niño dice qué sílaba oye; en la discriminación, si dos sílabas son iguales o distintas. Los <strong>pares mínimos</strong> piden decidir si dos sílabas reales son iguales o diferentes. Miden la precisión de las categorías fonémicas, base de las correspondencias entre letras y sonidos. La <strong>fluidez fonológica</strong> (decir en 30 segundos palabras que empiecen por un fonema) mide otra cosa: el acceso al léxico a partir de un sonido y el control ejecutivo.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>La dislexia muestra un déficit de percepción categórica, más claro al discriminar.</strong> Un metaanálisis confirma el déficit frente a niños de la misma edad y frente a lectores más pequeños de su nivel. El efecto es mayor en la discriminación que en la identificación <span class="citation" data-cites="noordenbos2015meta">(<a href="../../referencias.html#ref-noordenbos2015meta" role="doc-biblioref">Noordenbos y Serniclaes 2015</a>)</span>.</li>
+<li><strong>En español, lo que falla es la frontera entre categorías.</strong> En 204 niños españoles, los que tenían dislexia discriminaban peor los pares que cruzan la frontera fonémica y mejor algunas diferencias dentro de la categoría (percepción alofónica) <span class="citation" data-cites="serniclaes2021allophonic">(<a href="../../referencias.html#ref-serniclaes2021allophonic" role="doc-biblioref">Serniclaes et&nbsp;al. 2021</a>)</span>. Por eso el total de aciertos mezcla dos efectos de signo opuesto.</li>
+<li><strong>Su valor predictivo es modesto y no del todo fonológico.</strong> En 237 niños, la percepción a los 5 años y medio predijo la lectura un año después sin pasar por la conciencia fonémica. Estas tareas también recogen la toma de decisiones <span class="citation" data-cites="snowling2019speech">(<a href="../../referencias.html#ref-snowling2019speech" role="doc-biblioref">Snowling et&nbsp;al. 2019</a>)</span>. En otro estudio, su efecto sobre la decodificación desaparecía al controlar el procesamiento fonológico <span class="citation" data-cites="mcbridechang1997growth">(<a href="../../referencias.html#ref-mcbridechang1997growth" role="doc-biblioref">McBride-Chang, Wagner, y Chang 1997</a>)</span>. La evidencia es, por tanto, contradictoria.</li>
+<li><strong>La fluidez fonológica refleja acceso, no representaciones.</strong> En 66 niños griegos con dislexia o trastorno del lenguaje, la producción de palabras fue menor, pero el tamaño de los grupos de palabras relacionadas fue igual al de 83 controles <span class="citation" data-cites="mengisidou2019fluency">(<a href="../../referencias.html#ref-mengisidou2019fluency" role="doc-biblioref">Mengisidou y Marshall 2019</a>)</span>.</li>
+</ul>
+<p><strong>Lo que muestran nuestros datos.</strong></p>
+<ul>
+<li><strong>Percepción categórica.</strong> La discriminación no predice la dificultad persistente (AUC .39–.53) y la identificación apenas (.51–.63). Es lo esperable si se puntúa el total de aciertos: habría que calcular la pendiente de identificación y la discriminación entre e intra categorías a partir de las respuestas ítem a ítem.</li>
+<li><strong>Pares mínimos.</strong> Estabilidad baja (ρ = .07–.39) y AUC de .45 a .69, mejor a partir de los 5 años. Frente a Woodcock-Muñoz, .63–.66 a los 6–7 años.</li>
+<li><strong>Fluidez fonológica.</strong> Una sola sesión a los 5 años (793 niños, casi todos de colegios con Preleo): AUC de .68 frente a la dificultad persistente y de .59–.62 frente a la baja comprensión. Se relaciona con la conciencia fonológica, las letras y la lectura (ρ = .41–.43).</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1603,6 +1641,23 @@ Tablas completas <code>datos/agregados/AUTO_L_ORAL_FON_PC_IDENTIFICA_II/</code>
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-mcbridechang1997growth" class="csl-entry" role="listitem">
+McBride-Chang, Catherine, Richard K. Wagner, y Lei Chang. 1997. <span>«Growth modeling of phonological awareness»</span>. <em>Journal of Educational Psychology</em>. <a href="https://doi.org/10.1037/0022-0663.89.4.621">https://doi.org/10.1037/0022-0663.89.4.621</a>.
+</div>
+<div id="ref-mengisidou2019fluency" class="csl-entry" role="listitem">
+Mengisidou, Maria, y Chloë Marshall. 2019. <span>«Deficient explicit access to phonological representations explains phonological fluency difficulties in <span>Greek</span> children with dyslexia and/or developmental language disorder»</span>. <em>Frontiers in Psychology</em>. <a href="https://doi.org/10.3389/fpsyg.2019.00638">https://doi.org/10.3389/fpsyg.2019.00638</a>.
+</div>
+<div id="ref-noordenbos2015meta" class="csl-entry" role="listitem">
+Noordenbos, Mark W., y Willy Serniclaes. 2015. <span>«The categorical perception deficit in dyslexia: A meta-analysis»</span>. <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1080/10888438.2015.1052455">https://doi.org/10.1080/10888438.2015.1052455</a>.
+</div>
+<div id="ref-serniclaes2021allophonic" class="csl-entry" role="listitem">
+Serniclaes, Willy, Miguel López-Zamora, Soraya Bordoy, y Juan Luis Luque. 2021. <span>«Allophonic perception of <span>VOT</span> contrasts in <span>Spanish</span> children with dyslexia»</span>. <em>Brain and Behavior</em>. <a href="https://doi.org/10.1002/brb3.2194">https://doi.org/10.1002/brb3.2194</a>.
+</div>
+<div id="ref-snowling2019speech" class="csl-entry" role="listitem">
+Snowling, Margaret J., Arne Lervåg, Hannah M. Nash, y Charles Hulme. 2019. <span>«Longitudinal relationships between speech perception, phonological skills and reading in children at high-risk of dyslexia»</span>. <em>Developmental Science</em>. <a href="https://doi.org/10.1111/desc.12723">https://doi.org/10.1111/desc.12723</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

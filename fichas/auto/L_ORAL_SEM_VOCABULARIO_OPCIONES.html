@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_SEM_VOCABULARIO_OPCIONES</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_SEM_VOCABULARIO_OPCIONES</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1006,6 +1027,23 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Estas tareas miden el <strong>lenguaje oral receptivo</strong>. En la comprensión oral, el niño escucha un texto sin verlo y responde preguntas eligiendo entre opciones. En el vocabulario por elección, oye una palabra y elige entre cuatro dibujos. En la concepción simple de la lectura, la comprensión oral es el componente que no depende de leer <span class="citation" data-cites="hoover1990simple">(<a href="../../referencias.html#ref-hoover1990simple" role="doc-biblioref">Hoover y Gough 1990</a>)</span>. El marco de vocabulario trata el vocabulario expresivo y el de lectura.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>En ortografías transparentes, la comprensión oral es el mejor predictor de la comprensión lectora.</strong> En 1.895 niños italianos de 1.º a 5.º, la comprensión oral predijo la lectora en todos los cursos y la precisión lectora tuvo un papel menor <span class="citation" data-cites="tobia2015simple">(<a href="../../referencias.html#ref-tobia2015simple" role="doc-biblioref">Tobia y Bonifacci 2015</a>)</span>. En 1.815 niños finlandeses, el efecto de la fluidez desapareció tras 1.º y el de la comprensión oral se mantuvo hasta 3.º <span class="citation" data-cites="torppa2016simple">(<a href="../../referencias.html#ref-torppa2016simple" role="doc-biblioref">Torppa et&nbsp;al. 2016</a>)</span>. En 4.750 escolares dominicanos, su peso crece a medida que mejora la comprensión lectora <span class="citation" data-cites="sanchezvincitore2022svr">(<a href="../../referencias.html#ref-sanchezvincitore2022svr" role="doc-biblioref">Sánchez-Vincitore et&nbsp;al. 2022</a>)</span>.</li>
+<li><strong>El lenguaje oral de Infantil anticipa la comprensión lectora.</strong> En niños de 4 a 6 años, las inferencias, la comprensión literal de un cuento y la gramática predijeron la comprensión lectora un año después; el vocabulario actuó a través de ellas <span class="citation" data-cites="silva2014comprehension">(<a href="../../referencias.html#ref-silva2014comprehension" role="doc-biblioref">Silva y Cain 2014</a>)</span>. Predice el lenguaje en sentido amplio más que el vocabulario solo <span class="citation" data-cites="lervag2018comprehension">(<a href="../../referencias.html#ref-lervag2018comprehension" role="doc-biblioref">Lervåg, Hulme, y Melby-Lervåg 2018</a>)</span>.</li>
+<li><strong>El vocabulario receptivo predice el nivel, no el ritmo.</strong> En dos muestras australianas (N = 4.983 y 4.570), el vocabulario receptivo a los 4 años predijo la comprensión a los 8, pero su crecimiento no se relacionó con el crecimiento lector entre los 8 y los 14 <span class="citation" data-cites="larsen2026receptive">(<a href="../../referencias.html#ref-larsen2026receptive" role="doc-biblioref">Larsen y Erbeli 2026</a>)</span>.</li>
+</ul>
+<p>La relación es débil en los primeros cursos, cuando la decodificación limita la comprensión, y crece después. Cabe esperar que estas tareas predigan poco a corto plazo.</p>
+<p><strong>Lo que muestran nuestros datos.</strong> Son las tareas más débiles de su dominio:</p>
+<ul>
+<li><strong>Consistencia baja.</strong> La comprensión oral tiene α = .30 con 10 ítems; el vocabulario por elección, α = .51. Este último es además muy inestable entre trimestres (ρ = .12–.14) y su máximo observado (25) supera el número de ítems (17), lo que hay que revisar.</li>
+<li><strong>Validez predictiva baja.</strong> Frente a la baja comprensión lectora de 7 y 8 años, el AUC es de .58–.59 para la comprensión oral y de .52–.58 para el vocabulario.</li>
+</ul>
+<p>No sirven para decisiones individuales. Antes de usarlas en artículos conviene revisar los ítems y la puntuación.</p>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -2493,6 +2531,29 @@ Tablas completas <code>datos/agregados/AUTO_L_ORAL_SEM_VOCABULARIO_OPCIONES/</co
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hoover1990simple" class="csl-entry" role="listitem">
+Hoover, Wesley A., y Philip B. Gough. 1990. <span>«The simple view of reading»</span>. <em>Reading and Writing</em> 2 (2): 127-60. <a href="https://doi.org/10.1007/BF00401799">https://doi.org/10.1007/BF00401799</a>.
+</div>
+<div id="ref-larsen2026receptive" class="csl-entry" role="listitem">
+Larsen, Sally A., y Florina Erbeli. 2026. <span>«Developmental patterns of receptive vocabulary and reading comprehension from age 4 to 14: a sequential latent growth model design»</span>. <em>Learning and Individual Differences</em>. <a href="https://doi.org/10.1016/j.lindif.2026.102916">https://doi.org/10.1016/j.lindif.2026.102916</a>.
+</div>
+<div id="ref-lervag2018comprehension" class="csl-entry" role="listitem">
+Lervåg, Arne, Charles Hulme, y Monica Melby-Lervåg. 2018. <span>«Unpicking the developmental relationship between oral language skills and reading comprehension: it’s simple, but complex»</span>. <em>Child Development</em> 89 (5): 1821-38. <a href="https://doi.org/10.1111/cdev.12861">https://doi.org/10.1111/cdev.12861</a>.
+</div>
+<div id="ref-sanchezvincitore2022svr" class="csl-entry" role="listitem">
+Sánchez-Vincitore, Laura V., Cledenin Veras, Aída Mencía-Ripley, Carlos Ruiz-Matuk, y Daniel Cubilla-Bonnetier. 2022. <span>«Reading comprehension precursors: evidence of the simple view of reading in a transparent orthography»</span>. <em>Frontiers in Education</em> 7: 914414. <a href="https://doi.org/10.3389/feduc.2022.914414">https://doi.org/10.3389/feduc.2022.914414</a>.
+</div>
+<div id="ref-silva2014comprehension" class="csl-entry" role="listitem">
+Silva, Macarena, y Kate Cain. 2014. <span>«The relations between lower and higher level comprehension skills and their role in prediction of early reading comprehension»</span>. <em>Journal of Educational Psychology</em>. <a href="https://doi.org/10.1037/a0037769">https://doi.org/10.1037/a0037769</a>.
+</div>
+<div id="ref-tobia2015simple" class="csl-entry" role="listitem">
+Tobia, Valentina, y Paola Bonifacci. 2015. <span>«The simple view of reading in a transparent orthography: the stronger role of oral comprehension»</span>. <em>Reading and Writing</em>. <a href="https://doi.org/10.1007/s11145-015-9556-1">https://doi.org/10.1007/s11145-015-9556-1</a>.
+</div>
+<div id="ref-torppa2016simple" class="csl-entry" role="listitem">
+Torppa, Minna, George K. Georgiou, Marja-Kristiina Lerkkanen, Pekka Niemi, Anna-Maija Poikkeus, y Jari-Erik Nurmi. 2016. <span>«Examining the simple view of reading in a transparent orthography: a longitudinal study from kindergarten to grade 3»</span>. <em>Merrill-Palmer Quarterly</em>. <a href="https://doi.org/10.13110/merrpalmquar1982.62.2.0179">https://doi.org/10.13110/merrpalmquar1982.62.2.0179</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

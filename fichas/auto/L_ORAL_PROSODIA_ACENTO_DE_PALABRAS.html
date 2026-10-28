@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9635ee291bed4409ad6967b5c610cf62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -914,6 +934,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#marco-teórico" id="toc-marco-teórico" class="nav-link" data-scroll-target="#marco-teórico">Marco teórico</a></li>
   <li><a href="#muestra-y-descriptivos" id="toc-muestra-y-descriptivos" class="nav-link" data-scroll-target="#muestra-y-descriptivos">Muestra y descriptivos</a></li>
   <li><a href="#fiabilidad" id="toc-fiabilidad" class="nav-link" data-scroll-target="#fiabilidad">Fiabilidad</a></li>
   <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez">Validez</a></li>
@@ -953,7 +974,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_PROSODIA_ACENTO_DE_PALABRAS</code>. Las cifras salen de los datos; <strong>falta el marco teórico, la interpretación y la revisión del equipo</strong>.</p>
+<p><strong>Ficha automática</strong> (A · Precisión; clase de calidad B). Generada el 28/10/2026 con <code>scripts/R/ficha_generica.R --tarea L_ORAL_PROSODIA_ACENTO_DE_PALABRAS</code>. Las cifras salen de los datos; el marco teórico es común a las tareas del mismo constructo. <strong>Falta la interpretación y la revisión del equipo.</strong></p>
 </div>
 </div>
 </div>
@@ -1012,6 +1033,22 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).</figcaption>
 </figure>
 </div>
+</section>
+<section id="marco-teórico" class="level2">
+<h2 class="anchored" data-anchor-id="marco-teórico">Marco teórico</h2>
+<p>Las tareas de acento miden la <strong>sensibilidad al acento léxico</strong>: percibir qué sílaba suena más fuerte. En español el acento distingue palabras (<em>término</em>, <em>termino</em>, <em>terminó</em>), así que forma parte de la representación fonológica de cada palabra. En <strong>acento de palabras</strong> (6–7 años, 18 ítems), el niño oye una palabra de tres sílabas y señala cuál es la tónica. En <strong>acento de pseudopalabras</strong> (4–5 años), oye dos secuencias casi iguales y decide si son iguales o diferentes. La hipótesis es que la sensibilidad al ritmo del habla ayuda a segmentar las palabras y, por esa vía, a aprender a leer.</p>
+<p><strong>Qué dice la evidencia:</strong></p>
+<ul>
+<li><strong>En español, la sensibilidad suprasegmental predice la lectura más allá de la conciencia fonológica.</strong> En 92 niños de 5.º, explicó varianza propia en lectura una vez controlados la conciencia fonológica y el vocabulario <span class="citation" data-cites="calet2016suprasegmental">(<a href="../../referencias.html#ref-calet2016suprasegmental" role="doc-biblioref">Calet et&nbsp;al. 2016</a>)</span>.</li>
+<li><strong>En Infantil, su efecto pasa por la conciencia fonológica.</strong> En 132 escolares españoles, la prosodia léxica de los niños de Infantil influyó en la lectura de palabras y pseudopalabras solo a través de la conciencia fonológica <span class="citation" data-cites="roldan2026prosodic">(<a href="../../referencias.html#ref-roldan2026prosodic" role="doc-biblioref">Roldán et&nbsp;al. 2026</a>)</span>. En 370 niños de 1.º de habla inglesa, la relación del acento con la lectura de palabras quedó mediada por completo por la conciencia fonológica y la morfológica <span class="citation" data-cites="kim2016prosodic">(<a href="../../referencias.html#ref-kim2016prosodic" role="doc-biblioref">Kim y Petscher 2016</a>)</span>. En 45 niños de Infantil, el acento léxico no explicó varianza propia en lectura una vez controlada la conciencia fonológica <span class="citation" data-cites="goodman2010stress">(<a href="../../referencias.html#ref-goodman2010stress" role="doc-biblioref">Goodman, Libenson, y Wade-Woolley 2010</a>)</span>.</li>
+</ul>
+<p>En conjunto, la relación con la lectura es consistente, pero su aportación independiente es dudosa en las edades tempranas, que son justo las de estas tareas.</p>
+<p><strong>Lo que muestran nuestros datos.</strong></p>
+<ul>
+<li><strong>Acento de palabras.</strong> α de 2021 = .74, con apenas efecto techo (4 %). Frente a la dificultad persistente, AUC de .64–.66; frente a la baja comprensión posterior, solo .53–.55, y frente a Woodcock-Muñoz, .52–.63. Se relaciona poco con la lectura y la comprensión (ρ = .15–.26) y nada con el RAN.</li>
+<li><strong>Acento de pseudopalabras.</strong> Estabilidad ρ = .33 entre dos trimestres de 4 años. La validez baja con la edad: AUC de .68 a 4.1, .62 a 4.2 y .55 a los 5 años. Se relaciona con la conciencia fonológica (ρ ≈ .30) y no con el RAN, como cabe esperar de una habilidad fonológica.</li>
+<li><strong>Precaución.</strong> La puntuación máxima pasa de 13 a 4.1 a 31 en las sesiones siguientes: probablemente son versiones distintas de la tarea y no deben compararse sin revisarlas.</li>
+</ul>
 </section>
 <section id="muestra-y-descriptivos" class="level2">
 <h2 class="anchored" data-anchor-id="muestra-y-descriptivos">Muestra y descriptivos</h2>
@@ -1849,6 +1886,20 @@ Tablas completas <code>datos/agregados/AUTO_L_ORAL_PROSODIA_ACENTO_DE_PALABRAS/<
 </details>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-calet2016suprasegmental" class="csl-entry" role="listitem">
+Calet, Nuria, María Flores, Gracia Jiménez-Fernández, y Sylvia Defior. 2016. <span>«Habilidades fonológicas suprasegmentales y desarrollo lector en niños de <span>Educación</span> <span>Primaria</span>»</span>. <em>Anales de Psicología</em>. <a href="https://doi.org/10.6018/analesps.32.1.216221">https://doi.org/10.6018/analesps.32.1.216221</a>.
+</div>
+<div id="ref-goodman2010stress" class="csl-entry" role="listitem">
+Goodman, Ilana, Amanda Libenson, y Lesly Wade-Woolley. 2010. <span>«Sensitivity to linguistic stress, phonological awareness and early reading ability in preschoolers»</span>. <em>Journal of Research in Reading</em>. <a href="https://doi.org/10.1111/j.1467-9817.2009.01423.x">https://doi.org/10.1111/j.1467-9817.2009.01423.x</a>.
+</div>
+<div id="ref-kim2016prosodic" class="csl-entry" role="listitem">
+Kim, Young-Suk Grace, y Yaacov Petscher. 2016. <span>«Prosodic sensitivity and reading: An investigation of pathways of relations using a latent variable approach»</span>. <em>Journal of Educational Psychology</em>. <a href="https://doi.org/10.1037/edu0000078">https://doi.org/10.1037/edu0000078</a>.
+</div>
+<div id="ref-roldan2026prosodic" class="csl-entry" role="listitem">
+Roldán, Luis Ángel, Johanna Rivera Ibaceta, Julia Arnal De la Peña, Nuria Calet, y Gracia Jiménez-Fernández. 2026. <span>«Prosodic sensitivity and phonemic awareness in <span>Spanish</span>-language reading development: A cross-sectional study»</span>. <em>Reading Psychology</em>. <a href="https://doi.org/10.1080/02702711.2026.2735235">https://doi.org/10.1080/02702711.2026.2735235</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
