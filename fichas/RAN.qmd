@@ -43,7 +43,7 @@ El niño nombra en voz alta, lo más rápido que puede, estímulos muy conocidos
 
 ```{r}
 #| results: asis
-plataforma_tabla(codigos = c(1054, 2093, 1922))
+plataforma_tabla(codigos = c(1054, 528, 2093, 1922))
 ```
 
 ## 1 bis. Marco teórico

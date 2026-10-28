@@ -44,6 +44,19 @@ Hoy solo `r sum(M$clase == "A")` tareas son de clase A: contar hacia delante y h
 - **No tienen α**, porque faltan las respuestas ítem a ítem en el análisis de 2021. La plataforma nueva sí las guarda.
 - **Mezclan versiones.** La comparación de magnitudes simbólicas reúne tres versiones con contenido y número de ítems distintos: la de 1.º de Primaria (2006), la de 2021/22 a los 10–11 años, con 62 ítems de una a tres cifras (10747), y la de 2021/22 a los 6–9 años (10750). Hay que separarlas antes de baremarlas. Lo mismo ocurre con el código 10759, que el diccionario asigna a dos tareas.
 
+### Cómo están programadas en la plataforma {.unnumbered}
+
+```{r}
+#| results: asis
+plataforma_tabla(codigos = c(1707, 2029, 2030, 2031, 2032, 1676, 1744, 10752, 2006, 10750, 10747, 2005, 10759, 10760, 2258, 10751, 10753, 10748, 1745))
+```
+
+Con la configuración a la vista se ven tres cosas que conviene tener en cuenta al analizar estas tareas:
+
+- **Cambia el formato de respuesta.** A los 5–6 años el niño resuelve la operación y el evaluador marca acierto o error (2005). En las versiones de 2021/22 (107xx) el niño ve la operación ya resuelta y decide si el resultado es correcto (verificación), con tiempo límite y sin evaluador. No miden lo mismo: la verificación admite respuestas por familiaridad con el resultado.
+- **Las tareas con tiempo límite se puntúan por eficiencia**, así que el número de ítems de la actividad es un techo, no la longitud real de la prueba.
+- **La «línea mental» (1745) es otra tarea**: estimar en una línea numérica, no comparar magnitudes. Hay que separarla de las magnitudes no simbólicas en el diccionario.
+
 ## Lo que ya se sabe con estos datos
 
 **Habilidades fonológicas y desarrollo matemático.** El grupo tiene en curso un estudio longitudinal sobre la relación entre la conciencia fonológica, la denominación rápida y las matemáticas de 5 a 7 años. Sus resultados se incorporarán aquí cuando estén publicados.
