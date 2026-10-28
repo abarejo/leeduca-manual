@@ -40,7 +40,7 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 
 - **Pregunta:** ¿Mejora la detección combinar varios indicadores con razones de verosimilitud y la prevalencia del centro, en vez de usar un solo corte?
 - **Datos:** Precursores, etiquetas de certeza, ISE del centro.
-- **Método:** Razones de verosimilitud por tramos, regresión logística bayesiana, probabilidad posterior [@wagner2022bayes; @wagner2020prevalence].
+- **Método:** Logística bayesiana multinivel con efecto aleatorio de colegio, calibración y curvas de decisión, y actualización secuencial de la probabilidad de los 5 a los 6 años [@wagner2022bayes; @wagner2020prevalence; @hall2026bayesics; @vancalster2019calibration]. Multiplicar razones de verosimilitud sesga el riesgo cuando los indicadores dependen entre sí [@vacek1985conditional].
 - **Revistas posibles:** *Scientific Studies of Reading*, *Annals of Dyslexia*, *Journal of Learning Disabilities*.
 
 ### M6 · Papel, plataforma y pandemia
@@ -75,7 +75,7 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 
 - **Pregunta:** ¿Lleva el RAN bajo en Infantil a una lectura lenta pero exacta, y la conciencia fonológica baja a una lectura lenta e inexacta, como en hebreo y árabe?
 - **Datos:** RAN y conciencia fonológica a los 4–5 años; aciertos y tiempo de palabras y pseudopalabras de 6 a 8 años.
-- **Método:** Perfiles latentes de exactitud y velocidad; regresión multinomial con los precursores; replicación entre cohortes. Es la doble disociación que recogen @catts2026definicion.
+- **Método:** Modelo continuo (SEM) con exactitud y velocidad como resultados correlacionados y la fiabilidad de la morfología corregida; perfiles y su estabilidad de 7.1 a 8.x como análisis secundario. Es la tipología de exactitud y velocidad descrita en hebreo y árabe [@shany2011subtypes; @gott2026preschool] y la doble disociación que recogen @catts2026definicion.
 - **Revistas posibles:** *Scientific Studies of Reading*, *Annals of Dyslexia*, *Reading and Writing*.
 
 ## Cómo aprovecharlo

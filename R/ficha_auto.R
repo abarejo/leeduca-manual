@@ -16,7 +16,27 @@ MARCO_DE <- c(setNames(rep("decodificacion", 9), c("LEC_PAL_1sil", "LEC_PAL_2sil
               setNames(rep("conciencia_fonologica", 11), c("CF_CONTAR_SILABAS", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_IDENTIFICACION_FONEMA_FINAL",
                 "CF_SEGMENTACION_FONEMICA", "CF_SUPRESION_SILABA_INICIAL", "CF_SUPRESION_SILABA_FINAL", "CF_SUPRESION_SILABAS_TP",
                 "CF_SUPRESION_SILABA_JA_TODAS_POSIC", "CF_SUPRESION_FONEMA_INICIAL", "CF_SUPRESION_FONEMA_FINAL", "CF_SUPRESION_FONEMAS_TP")),
-              setNames(rep("numerico", 4), c("MATE_CONTAR_H_DELANTE_2A_DECENA", "MATE_CONTAR_H_ATRAS_1O_DECENA", "MATE_CONTAR_H_ATRAS_2A_DECENA", "MATE_ET_VERB_ARABIGOS")))
+              setNames(rep("numerico", 4), c("MATE_CONTAR_H_DELANTE_2A_DECENA", "MATE_CONTAR_H_ATRAS_1O_DECENA", "MATE_CONTAR_H_ATRAS_2A_DECENA", "MATE_ET_VERB_ARABIGOS")),
+              # 28/10/2026: tareas de clase B y C
+              setNames(rep("conciencia_fonologica", 4), c("CF_EMPAREJA_SILABA_FINAL", "CF_EMPAREJA_SILABA_INICIAL", "CF_SUPRESION_SILABA_INICIAL_Y_FINAL", "CF_SINTESIS_FONEMICA")),
+              LEC_PSEUDO_1sil = "decodificacion", LEC_SILABAS_MEDIA = "decodificacion",
+              setNames(rep("ran_objetos", 7), c("RAN_OBJETOS_SILABA", "RAN_OBJETOS_FONEMA", "RAN_OBJETOS_REPETIDOS_CORTOS", "RAN_OBJETOS_REPETIDOS_LARGOS",
+                "RAN_OBJETOS_VARIADOS_CORTOS", "RAN_OBJETOS_VARIADOS_LARGOS", "RAN_OBJETOS_CONTROL")),
+              setNames(rep("memoria_verbal", 4), c("HFON_MEMVERB_MEMORIA_VERBAL", "HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV", "HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5",
+                "HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA")),
+              setNames(rep("decision_lexica", 9), c(paste0("LEC_DECLEX_PAL_", 1:4, "sil"), paste0("LEC_DECLEX_PSEUDO_", 1:4, "sil"), "LEC_HOMOGRAFOS")),
+              setNames(rep("visoatencion", 12), c(paste0("HVIS_CAP_VAten_LETRAS_", 1:4), "HVIS_CAP_VAten_NUMEROS_5", "HVIS_CAP_VAten_NUMEROS_LETRAS_2_3",
+                paste0("HVIS_CAP_VAten_SIMBOLOS_", 1:4), "HVIS_OR_ESP_BUSQUEDA_SERIAL", "F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA")),
+              setNames(rep("percepcion_habla", 7), c("L_ORAL_FON_PARES_MINIMOS", "L_ORAL_PERCEP_PARES_MINIMOS", "L_ORAL_FON_PC_DISCRIMINA", "L_ORAL_FON_PC_DISCRIMINA_II",
+                "L_ORAL_FON_PC_IDENTIFICA", "L_ORAL_FON_PC_IDENTIFICA_II", "L_ORAL_FON_FLUIDEZ_FONOLOGICA")),
+              L_ORAL_PROSODIA_ACENTO_DE_PALABRAS = "prosodia", L_ORAL_PROSODIA_ACENTO_PSEUDOP = "prosodia",
+              setNames(rep("morfosintaxis", 7), c("L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL", "L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL", "L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL",
+                "L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL", "L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL", "L_ORAL_MF_STX_ORDENAR_FRASES", "L_ORAL_MF_STX_RECEPCION_GRAMATICAL")),
+              L_ORAL_SEM_COMPRENSION_NCP = "comprension_oral", L_ORAL_SEM_VOCABULARIO_OPCIONES = "comprension_oral",
+              setNames(rep("aritmetica", 6), c("MATE_ARITMETIC_SUMA_1_DIGITO", "MATE_ARITMETIC_RESTA_1_DIGITO", "MATE_ARITMETIC_SUMA_2_DIGITOS", "MATE_ARITMETIC_RESTA_2_DIGITOS",
+                "MATE_ARITMETIC_SUMA_Y_RESTA_2_DIGITOS", "MATE_ARITM_SUMA_RESTA_2_DIGITOS")),
+              MATE_SEN_NUM_MAGNITUDES_NO_SIMB = "magnitudes", MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS = "magnitudes",
+              MATE_ARIT_CONTEO_1_10 = "conteo", MATE_CONTAR_H_DELANTE_1O_DECENA = "conteo")
 # criterios externos (capítulos «Validez frente a un criterio externo» y «Cognición numérica»)
 criterio_ext <- function(ficha, TAREA, col = "AUC") {
   f <- file.path(raiz_libro(), "datos", "agregados", ficha, "2a_Validez_tarea_momento.csv"); if (!file.exists(f)) return(data.frame())
@@ -35,7 +55,7 @@ ficha_auto <- function(TAREA) {
   out <- function(...) cat(..., "\n\n", sep = "")
 
   out('::: {.callout-note appearance="minimal"}\n**Ficha automática** (', FAM_NOM[[fam]], '; clase de calidad ', ct$clase, '). Generada el ', format(Sys.Date(), "%d/%m/%Y"),
-      ' con `scripts/R/ficha_generica.R --tarea ', TAREA, '`. Las cifras salen de los datos; ', if (!is.na(MARCO_DE[TAREA])) "el marco teórico es común a las tareas del mismo constructo. **Falta la interpretación y la revisión del equipo.**" else "**falta el marco teórico, la interpretación y la revisión del equipo**.", '\n:::')
+      ' con `scripts/R/ficha_generica.R --tarea ', TAREA, '`. Las cifras salen de los datos; ', if (!is.na(MARCO_DE[TAREA]) && file.exists(file.path(rl, "fichas", "marcos", paste0(MARCO_DE[[TAREA]], ".md")))) "el marco teórico es común a las tareas del mismo constructo. **Falta la interpretación y la revisión del equipo.**" else "**falta el marco teórico, la interpretación y la revisión del equipo**.", '\n:::')
   if (ct$clase %in% c("B", "C")) out('::: {.callout-warning appearance="simple"}\n**Clase ', ct$clase, '.** ',
       if (ct$clase == "B") "Tiene datos suficientes para describirla, pero le falta alguna garantía de la clase A (estabilidad entre momentos, fiabilidad ítem a ítem o validez). Úsese con cautela y no para decisiones individuales."
       else "Se aplicó a pocos niños, en pocos momentos o con versiones distintas. La ficha documenta la tarea y sus primeros datos; las cifras son descriptivas y no sirven todavía como baremo.",
