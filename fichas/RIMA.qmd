@@ -35,6 +35,7 @@ El evaluador lee en voz alta un par de palabras y el niño decide si se parecen 
 ```{r}
 #| results: asis
 plataforma_tabla(codigos = 11795)
+plataforma_capturas(11795, pre = "../")
 ```
 
 **Cómo se puntúa.** La plataforma solo guarda acierto o fallo en cada par. Como el orden y la clave son fijos, se reconstruye la respuesta: un acierto en un par que rima es un «sí»; un fallo en un par que no rima, también. Con eso se separan dos cosas que el número de aciertos mezcla:

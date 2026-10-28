@@ -36,6 +36,10 @@ ficha_auto <- function(TAREA) {
 
   out('::: {.callout-note appearance="minimal"}\n**Ficha automática** (', FAM_NOM[[fam]], '; clase de calidad ', ct$clase, '). Generada el ', format(Sys.Date(), "%d/%m/%Y"),
       ' con `scripts/R/ficha_generica.R --tarea ', TAREA, '`. Las cifras salen de los datos; ', if (!is.na(MARCO_DE[TAREA])) "el marco teórico es común a las tareas del mismo constructo. **Falta la interpretación y la revisión del equipo.**" else "**falta el marco teórico, la interpretación y la revisión del equipo**.", '\n:::')
+  if (ct$clase %in% c("B", "C")) out('::: {.callout-warning appearance="simple"}\n**Clase ', ct$clase, '.** ',
+      if (ct$clase == "B") "Tiene datos suficientes para describirla, pero le falta alguna garantía de la clase A (estabilidad entre momentos, fiabilidad ítem a ítem o validez). Úsese con cautela y no para decisiones individuales."
+      else "Se aplicó a pocos niños, en pocos momentos o con versiones distintas. La ficha documenta la tarea y sus primeros datos; las cifras son descriptivas y no sirven todavía como baremo.",
+      ' [Qué significa cada clase](../../limites.qmd#sec-clases).\n:::')
   # ---- en una frase ----
   est <- if (nrow(ES)) median(ES$rho) else NA
   auc_txt <- if (nrow(VE)) paste0("AUC ", rango(VE$AUC), if (circ) " frente a la dificultad persistente (circular: la etiqueta usa esta tarea)" else " frente a la dificultad lectora persistente") else NULL
@@ -46,11 +50,15 @@ ficha_auto <- function(TAREA) {
   out("## Descripción")
   PL <- plataforma_actividades(); PL <- if (nrow(PL)) PL[PL$tarea_canonica == TAREA, ] else PL
   items_txt <- if (nrow(PL)) paste0(paste0(ifelse(is.na(PL$n_items) | PL$n_items == "", "—", PL$n_items), " (", PL$codigo, ")", collapse = "; "), " según la plataforma") else ifelse(is.na(ct$n_items), "—", ct$n_items)
-  pant <- if (!is.na(ct$formato) && ct$formato %in% names(PANT)) sprintf('\n\n![Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).](../../figuras/pantallas/%s){width=45%%}', PANT[[ct$formato]]) else ""
+  cods0 <- strsplit(as.character(ct$codigos), " ")[[1]]
+  pant <- if (any(file.exists(file.path(rl, "figuras", "plataforma", paste0(cods0, ".jpg"))))) "" else if (!is.na(ct$formato) && ct$formato %in% names(PANT)) sprintf('\n\n![Ejemplo del formato de pantalla (captura de 2018; no es necesariamente un ítem de esta tarea).](../../figuras/pantallas/%s){width=45%%}', PANT[[ct$formato]]) else ""
   out("| | |\n|---|---|\n| Códigos | ", ct$codigos, " |\n| Batería | ", ifelse(is.na(ct$bateria) | ct$bateria == "", "—", ct$bateria), " |\n| Formato | ", ifelse(is.na(ct$formato), "—", ct$formato),
       " |\n| Ítems | ", items_txt, " |\n| Familia de ficha | ", FAM_NOM[[fam]], " |\n| Puntuación | ", FI$puntuacion, " |\n| Consigna (plataforma) | ", ifelse(is.na(ct$descripcion), "—", ct$descripcion), " |", pant)
   # ---- configuración en la plataforma ----
-  if (nrow(plataforma_actividades()) && any(plataforma_actividades()$tarea_canonica == TAREA)) { out("## Cómo está programada en la plataforma"); plataforma_tabla(tarea = TAREA) }
+  cods <- strsplit(as.character(ct$codigos), " ")[[1]]
+  tiene_pl <- nrow(plataforma_actividades()) && any(plataforma_actividades()$tarea_canonica == TAREA)
+  tiene_cap <- any(file.exists(file.path(rl, "figuras", "plataforma", paste0(cods, ".jpg"))))
+  if (tiene_pl || tiene_cap) { out("## Cómo está programada en la plataforma"); if (tiene_pl) plataforma_tabla(tarea = TAREA); plataforma_capturas(cods, pre = "../../") }
   # ---- marco teórico ----
   fm <- if (!is.na(MARCO_DE[TAREA])) file.path(rl, "fichas", "marcos", paste0(MARCO_DE[[TAREA]], ".md")) else ""
   if (nzchar(fm) && file.exists(fm)) { out("## Marco teórico"); out(paste(readLines(fm, encoding = "UTF-8", warn = FALSE), collapse = "\n")) }

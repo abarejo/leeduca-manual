@@ -29,6 +29,11 @@ La batería nueva (nombres que empiezan por `BL_DF_*_3_`) se aplica en el 2.º y
 - **Repetición de pseudopalabras (11256, 12509, 12372).** El niño repite palabras inventadas de longitud creciente (*mu*, *cote*, *chamelo*…). **Se interrumpe tras cuatro errores seguidos** y el resto se marca como error.
 - **Segmentar en sílabas (12166).** Nueve dibujos; el niño rompe la palabra en «trocitos» con palmadas y el evaluador marca sí o no. Es una versión para 3 años de contar sílabas (523), que a los 4 años usa doce (11792) o veinte ítems (523).
 
+```{r}
+#| results: asis
+plataforma_capturas(c(11795, 11794), pre = "../")
+```
+
 ## Descriptivos
 
 ```{r}

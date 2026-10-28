@@ -49,6 +49,7 @@ Hoy solo `r sum(M$clase == "A")` tareas son de clase A: contar hacia delante y h
 ```{r}
 #| results: asis
 plataforma_tabla(codigos = c(1707, 2029, 2030, 2031, 2032, 1676, 1744, 10752, 2006, 10750, 10747, 2005, 10759, 10760, 2258, 10751, 10753, 10748, 1745))
+plataforma_capturas(c(1707, 2029, 2030, 2031, 2032, 1676, 1744, 10752, 1745, 2006, 10750, 10747, 2005, 2258, 10759, 10760, 10751, 10753, 10748), pre = "", ncol = 4)
 ```
 
 Con la configuración a la vista se ven tres cosas que conviene tener en cuenta al analizar estas tareas:

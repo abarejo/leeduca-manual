@@ -1,0 +1,15 @@
+---
+title: "Atención sostenida"
+subtitle: "Ficha automática · F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA · clase B"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA")
+```

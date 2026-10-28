@@ -1,0 +1,15 @@
+---
+title: "Percepción del habla: identificación"
+subtitle: "Ficha automática · L_ORAL_FON_PC_IDENTIFICA · clase C"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("L_ORAL_FON_PC_IDENTIFICA")
+```

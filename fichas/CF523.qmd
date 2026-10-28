@@ -29,6 +29,7 @@ Se pasó en la plataforma antigua (hasta 2017/18) y en la nueva (desde 2018/19),
 ```{r}
 #| results: asis
 plataforma_tabla(codigos = c(523))
+plataforma_capturas(523, pre = "../")
 ```
 
 ## Marco teórico y evidencia

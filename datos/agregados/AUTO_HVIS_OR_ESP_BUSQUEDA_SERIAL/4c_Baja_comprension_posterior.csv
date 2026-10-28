@@ -1,0 +1,5 @@
+"desde","criterio","n","casos","AUC","IC_inf","IC_sup"
+"5.2","Baja comprensión (≤ p25) a los 6 años",712,176,0.569,0.523,0.616
+"5.2","Baja comprensión (≤ p25) a los 7 años",498,119,0.646,0.593,0.702
+"6.2","Baja comprensión (≤ p25) a los 7 años",763,193,0.561,0.517,0.61
+"6.2","Baja comprensión (≤ p25) a los 8 años",480,119,0.6,0.542,0.656

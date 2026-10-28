@@ -1,0 +1,15 @@
+---
+title: "Decisión léxica con sesgo a palabras (monosílabas)"
+subtitle: "Ficha automática · LEC_DECLEX_PAL_1sil · clase B"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("LEC_DECLEX_PAL_1sil")
+```

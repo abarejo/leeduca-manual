@@ -1,0 +1,15 @@
+---
+title: "Memoria verbal (1–4 sílabas CV)"
+subtitle: "Ficha automática · HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV · clase C"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV")
+```

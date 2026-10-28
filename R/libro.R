@@ -115,3 +115,21 @@ plataforma_tabla <- function(codigos = NULL, tarea = NULL) {
   cat("*Edad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.*\n\n")
   invisible(TRUE)
 }
+
+# Capturas de la actividad en la plataforma (figuras/plataforma/<código>.jpg; primer ítem, sin guardar datos).
+# `pre` = ruta relativa desde la página hasta la raíz del libro ("" capítulos, "../" fichas, "../../" fichas/auto).
+# Nunca hay capturas de pruebas comerciales (TECLE, EDICOLE, Woodcock, PROLEC, Raven): no se copian a figuras/plataforma.
+plataforma_capturas <- function(codigos, pre = "", ncol = 3) {
+  codigos <- unique(as.character(codigos))
+  f <- file.path(raiz_libro(), "figuras", "plataforma", paste0(codigos, ".jpg")); codigos <- codigos[file.exists(f)]
+  if (!length(codigos)) return(invisible(FALSE))
+  P <- plataforma_actividades(); nom <- setNames(P$nombre_corto, P$codigo)
+  lab <- ifelse(codigos %in% names(nom), paste0(codigos, " · ", trimws(nom[codigos])), codigos)
+  cat("**Así se ve en la plataforma** (primer ítem o ejemplo; captura de 2026). ")
+  if (any(codigos %in% c("1931", "1932", "1933", "1934", "1935", "1936"))) cat("En las listas de lectura solo se muestran los dos primeros ítems.")
+  cat("\n\n")
+  cat(sprintf("::: {layout-ncol=%d}\n", min(ncol, length(codigos))))
+  w <- if (length(codigos) == 1) " width=\"40%\"" else ""
+  cat(paste0("![", lab, "](", pre, "figuras/plataforma/", codigos, ".jpg){.lightbox", w, " fig-alt=\"Captura de la actividad ", codigos, "\"}", collapse = "\n\n"))
+  cat("\n:::\n\n"); invisible(TRUE)
+}

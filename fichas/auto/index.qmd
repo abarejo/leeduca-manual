@@ -6,20 +6,20 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "li
 source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
 rl <- raiz_libro()
 C <- utils::read.csv(file.path(rl, "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
-A <- C[C$clase == "A", ]
+A <- C[C$tarea_canonica %in% sub("\\.qmd$", "", setdiff(list.files(file.path(rl, "fichas", "auto"), "\\.qmd$"), "index.qmd")), ]
 lee <- function(t, h) { f <- file.path(rl, "datos", "agregados", paste0("AUTO_", t), paste0(h, ".csv")); if (file.exists(f)) leer(paste0("AUTO_", t), h) else data.frame() }
 mx <- function(v) if (length(v) && any(is.finite(v))) max(v, na.rm = TRUE) else NA
 R <- do.call(rbind, lapply(A$tarea_canonica, function(t) {
   ct <- A[A$tarea_canonica == t, ]; FI <- lee(t, "0_Ficha"); MU <- lee(t, "1_Muestra"); ES <- lee(t, "3_Fiabilidad_estabilidad")
   VE <- lee(t, "4b_Validez_frente_etiqueta"); BC <- lee(t, "4c_Baja_comprension_posterior"); DS <- lee(t, "2_Descriptivos_SIN")
   circ <- isTRUE(as.logical(FI$circular_con_etiqueta))
-  data.frame(familia = ct$familia, tarea = sprintf("[%s](%s.qmd)", ct$tarea, t), edades = ct$edades,
+  data.frame(clase = ct$clase, familia = ct$familia, tarea = sprintf("[%s](%s.qmd)", ct$tarea, t), edades = ct$edades,
              N = if (nrow(MU)) sum(MU$N) else NA, cohortes = if (nrow(MU)) length(unique(MU$cohorte)) else NA,
              rho = if (nrow(ES)) median(ES$rho) else NA, alfa = ct$alfa_2021,
              auc_et = mx(VE$AUC), circ = circ, auc_bc = mx(BC$AUC),
              techo = mx(DS$pct_techo), extremo = nrow(DS) > 0 && "minimo" %in% names(DS) && any(extremo(DS) %in% TRUE))
 }))
-R <- R[order(R$familia, A$dominio[match(sub("^\\[.*\\]\\((.*)\\.qmd\\)$", "\\1", R$tarea), A$tarea_canonica)]), ]
+R <- R[order(R$clase, R$familia, A$dominio[match(sub("^\\[.*\\]\\((.*)\\.qmd\\)$", "\\1", R$tarea), A$tarea_canonica)]), ]
 nota <- function(r) paste(c(if (is.finite(r$rho) && r$rho < .30) "estabilidad baja", if (is.na(r$rho)) "sin estabilidad",
                             if (is.finite(r$techo) && r$techo > 15) "techo", if (r$extremo) "valores extremos", if (r$circ) "AUC circular"), collapse = "; ")
 R$avisos <- vapply(seq_len(nrow(R)), function(i) nota(R[i, ]), "")
@@ -28,12 +28,14 @@ R$avisos <- vapply(seq_len(nrow(R)), function(i) nota(R[i, ]), "")
 Cada tarea de la plataforma con datos suficientes tiene una ficha. En el menú lateral están agrupadas por **dominio**; aquí, todas a la vista. Para buscarlas por edad, ver [Tareas por edad](../por_edad.qmd). Hay dos tipos:
 
 - **Fichas piloto** (★): escritas a mano, con marco teórico, análisis propios y revisión del grupo. Son el modelo para las demás.
-- **Fichas automáticas**: generadas con el mismo guion para las `r nrow(R)` tareas de **clase A** del catálogo ([reglas](../../limites.qmd#sec-clases)). Las cifras salen de los datos; les falta el marco teórico y la revisión del equipo.
+- **Fichas automáticas**: generadas con el mismo guion para `r nrow(R)` tareas: las `r sum(R$clase == "A")` de **clase A** y `r sum(R$clase != "A")` de **clase B o C** del catálogo ([reglas](../../limites.qmd#sec-clases)). Las cifras salen de los datos; les falta el marco teórico y la revisión del equipo. Las de clase B y C llevan un aviso: documentan la tarea, pero sus cifras son descriptivas.
+
+Las fichas que tienen captura muestran cómo se ve la tarea en la plataforma. Las pruebas comerciales (TECLE, EDICOLE, Woodcock-Muñoz, PROLEC, Raven) no tienen ficha automática ni capturas.
 
 ```{r}
 #| output: asis
 DGR <- list(`Lectura` = "LECTURA", `Procesamiento fonológico` = c("HFON", "RAN"), `Cognición numérica` = "MATE",
-            `Lenguaje oral y funciones ejecutivas` = c("L_ORAL", "F_EJEC"))
+            `Lenguaje oral` = "L_ORAL", `Atención, funciones ejecutivas y visoatención` = c("F_EJEC", "HVIS"))
 PIL <- list(`Lectura` = c("[Conocimiento de letras](../LET.qmd)", "[Velocidad lectora en palabras por minuto](../VEL.qmd)", "[TECLE](../TECLE.qmd)"),
             `Procesamiento fonológico` = c("[Denominación rápida (RAN)](../RAN.qmd)", "[Contar sílabas (523)](../CF523.qmd)"),
             `Cognición numérica` = "[Cognición numérica: inventario y validez](../../cognicion-numerica.qmd)")
@@ -42,7 +44,8 @@ for (g in names(DGR)) {
   au <- A[A$dominio %in% DGR[[g]], ]; au <- au[order(au$tarea), ]
   cat('::: {.fichas-grupo}\n### ', g, '\n\n', sep = "")
   if (!is.null(PIL[[g]])) cat(paste0("- ★ ", PIL[[g]], "\n"), sep = "")
-  cat(paste0("- [", au$tarea, "](", au$tarea_canonica, ".qmd) <span class='fd-meta'>", au$edades, " años</span>\n"), sep = "")
+  au <- au[order(au$clase, au$tarea), ]
+  cat(paste0("- [", au$tarea, "](", au$tarea_canonica, ".qmd) <span class='fd-meta'>", au$edades, " años", ifelse(au$clase == "A", "", paste0(" · clase ", au$clase)), "</span>\n"), sep = "")
   cat(':::\n\n')
 }
 cat('::::\n')
@@ -50,13 +53,13 @@ cat('::::\n')
 
 ## Las fichas automáticas de un vistazo
 
-Cada ficha automática tiene la misma estructura: descripción, muestra y descriptivos con el **rango de puntuaciones**, fiabilidad (estabilidad entre momentos y α de 2021), validez (concurrente, frente a la dificultad lectora persistente y frente a la baja comprensión posterior), baremo provisional del grupo sin Preleo, variables que la afectan y párrafo para publicaciones. La **familia** indica el tipo de puntuación ([Cómo se agrupan las tareas](../../agrupacion.qmd)). Generadas el 21/10/2026 con `scripts/R/ficha_generica.R --tarea todas_A`.
+Cada ficha automática tiene la misma estructura: descripción, muestra y descriptivos con el **rango de puntuaciones**, fiabilidad (estabilidad entre momentos y α de 2021), validez (concurrente, frente a la dificultad lectora persistente y frente a la baja comprensión posterior), baremo provisional del grupo sin Preleo, variables que la afectan y párrafo para publicaciones. La **familia** indica el tipo de puntuación ([Cómo se agrupan las tareas](../../agrupacion.qmd)). Las de clase A se generaron el 21/10/2026 con `scripts/R/ficha_generica.R --tarea todas_A`, y las de clase B y C el 28/10/2026.
 
 ```{r}
 #| label: tbl-fichas-auto
-#| tbl-cap: "Las fichas automáticas de un vistazo. ρ: mediana de la estabilidad entre momentos. AUC: el máximo frente a la dificultad lectora persistente y frente a la baja comprensión uno o dos cursos después."
-FN <- c(A = "A · Precisión", C = "C · Fluidez", D = "D · Eficiencia", E = "E · Decisión", F = "F · Memoria")
-T <- data.frame(Familia = FN[R$familia], Tarea = R$tarea, Edades = R$edades, Aplicaciones = R$N, Cohortes = R$cohortes,
+#| tbl-cap: "Las fichas automáticas de un vistazo, por clase. ρ: mediana de la estabilidad entre momentos. AUC: el máximo frente a la dificultad lectora persistente y frente a la baja comprensión uno o dos cursos después."
+FN <- c(A = "A · Precisión", B = "B · Denominación rápida", G = "G · Comprensión", C = "C · Fluidez", D = "D · Eficiencia", E = "E · Decisión", F = "F · Memoria")
+T <- data.frame(Clase = R$clase, Familia = FN[R$familia], Tarea = R$tarea, Edades = R$edades, Aplicaciones = R$N, Cohortes = R$cohortes,
                 `ρ` = R$rho, `α 2021` = R$alfa, `AUC dificultad` = R$auc_et, `AUC comprensión` = R$auc_bc, Avisos = R$avisos, check.names = FALSE)
 tabla(T)
 ```
@@ -65,10 +68,10 @@ tabla(T)
 
 ```{r}
 #| include: false
-lec <- R[R$familia == "C", ]; cf <- R[grepl("^\\[(Contar|Identif|Segment|Supres)", R$tarea), ]
+RA <- R[R$clase == "A", ]; lec <- RA[RA$familia == "C", ]; cf <- RA[grepl("^\\[(Contar|Identif|Segment|Supres)", RA$tarea), ]
 ```
 
-- **La lectura es lo más fiable.** Las `r nrow(lec)` tareas de fluidez lectora tienen una estabilidad mediana de ρ = `r r2(median(lec$rho, na.rm = TRUE))`, frente a ρ = `r r2(median(cf$rho, na.rm = TRUE))` en las de conciencia fonológica. Es lo esperable en medidas de velocidad sobre una habilidad que se consolida con la edad.
+- **La lectura es lo más fiable.** Las `r nrow(lec)` tareas de fluidez lectora de clase A tienen una estabilidad mediana de ρ = `r r2(median(lec$rho, na.rm = TRUE))`, frente a ρ = `r r2(median(cf$rho, na.rm = TRUE))` en las de conciencia fonológica. Es lo esperable en medidas de velocidad sobre una habilidad que se consolida con la edad.
 - **La validez de las tareas de lectura frente a la dificultad persistente es circular**, porque esa etiqueta se construye con ellas. Su validez no circular es la de la baja comprensión posterior.
 - **Muchas tareas de conciencia fonológica y de cognición numérica solo se aplicaron en una o dos sesiones,** así que no hay estabilidad. Su clase A se apoya en la α de 2021. Necesitan un retest corto para confirmar la fiabilidad.
 - **Inhibición** tiene una α alta, pero una estabilidad casi nula (ρ = `r r2(R$rho[grepl("Inhibici", R$tarea)])`). **Decisión del 21/10/2026: se pospone.** No se usó en los análisis del grupo y, con los retrasos de la plataforma, los tiempos de respuesta no están bien controlados. No tiene marco teórico ni se interpreta hasta revisar la medida.

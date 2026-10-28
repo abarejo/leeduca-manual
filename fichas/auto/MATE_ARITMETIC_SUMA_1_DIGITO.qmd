@@ -1,0 +1,15 @@
+---
+title: "Sumas de un dígito"
+subtitle: "Ficha automática · MATE_ARITMETIC_SUMA_1_DIGITO · clase B"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("MATE_ARITMETIC_SUMA_1_DIGITO")
+```

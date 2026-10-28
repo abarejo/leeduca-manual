@@ -45,6 +45,7 @@ El niño nombra letras que aparecen en pantalla una a una y en orden aleatorio. 
 ```{r}
 #| results: asis
 plataforma_tabla(codigos = c(535, 67))
+plataforma_capturas(c(535, 67), pre = "../")
 ```
 
 ## 1 bis. Marco teórico: qué mide el conocimiento de letras y por qué importa

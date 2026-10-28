@@ -1,0 +1,15 @@
+---
+title: "Amplitud visoatencional: símbolos 1"
+subtitle: "Ficha automática · HVIS_CAP_VAten_SIMBOLOS_1 · clase C"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("HVIS_CAP_VAten_SIMBOLOS_1")
+```

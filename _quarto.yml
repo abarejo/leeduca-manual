@@ -78,6 +78,17 @@ book:
         - fichas/auto/LEC_LECT_COMPRENSIVA.qmd
         - fichas/auto/LEC_DECISION_ORTOGRAFICA.qmd
         - fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.qmd
+        - fichas/auto/LEC_DECLEX_PAL_2sil.qmd
+        - fichas/auto/LEC_DECLEX_PAL_4sil.qmd
+        - fichas/auto/LEC_DECLEX_PAL_1sil.qmd
+        - fichas/auto/LEC_DECLEX_PAL_3sil.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_2sil.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_4sil.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_1sil.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_3sil.qmd
+        - fichas/auto/LEC_PSEUDO_1sil.qmd
+        - fichas/auto/LEC_HOMOGRAFOS.qmd
+        - fichas/auto/LEC_SILABAS_MEDIA.qmd
     - part: "Fichas · Procesamiento fonológico"
       chapters:
         - fichas/RAN.qmd
@@ -95,6 +106,21 @@ book:
         - fichas/auto/CF_SUPRESION_FONEMA_INICIAL.qmd
         - fichas/auto/CF_SUPRESION_FONEMA_FINAL.qmd
         - fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd
+        - fichas/auto/RAN_OBJETOS_SILABA.qmd
+        - fichas/auto/RAN_OBJETOS_FONEMA.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL.qmd
+        - fichas/auto/CF_SINTESIS_FONEMICA.qmd
+        - fichas/auto/RAN_OBJETOS_CONTROL.qmd
+        - fichas/auto/RAN_OBJETOS_REPETIDOS_CORTOS.qmd
+        - fichas/auto/RAN_OBJETOS_REPETIDOS_LARGOS.qmd
+        - fichas/auto/RAN_OBJETOS_VARIADOS_CORTOS.qmd
+        - fichas/auto/RAN_OBJETOS_VARIADOS_LARGOS.qmd
+        - fichas/auto/CF_EMPAREJA_SILABA_FINAL.qmd
+        - fichas/auto/CF_EMPAREJA_SILABA_INICIAL.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_INICIAL_Y_FINAL.qmd
     - part: "Fichas · Cognición numérica"
       chapters:
         - cognicion-numerica.qmd
@@ -102,10 +128,52 @@ book:
         - fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.qmd
         - fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.qmd
         - fichas/auto/MATE_ET_VERB_ARABIGOS.qmd
-    - part: "Fichas · Lenguaje oral y funciones ejecutivas"
+        - fichas/auto/MATE_CONTAR_H_DELANTE_1O_DECENA.qmd
+        - fichas/auto/MATE_ARITMETIC_SUMA_1_DIGITO.qmd
+        - fichas/auto/MATE_ARITM_SUMA_RESTA_2_DIGITOS.qmd
+        - fichas/auto/MATE_SEN_NUM_MAGNITUDES_NO_SIMB.qmd
+        - fichas/auto/MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS.qmd
+        - fichas/auto/MATE_ARIT_CONTEO_1_10.qmd
+        - fichas/auto/MATE_ARITMETIC_RESTA_2_DIGITOS.qmd
+        - fichas/auto/MATE_ARITMETIC_RESTA_1_DIGITO.qmd
+        - fichas/auto/MATE_ARITMETIC_SUMA_2_DIGITOS.qmd
+        - fichas/auto/MATE_ARITMETIC_SUMA_Y_RESTA_2_DIGITOS.qmd
+    - part: "Fichas · Lenguaje oral"
       chapters:
         - fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.qmd
+        - fichas/auto/L_ORAL_PROSODIA_ACENTO_DE_PALABRAS.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL.qmd
+        - fichas/auto/L_ORAL_MF_STX_ORDENAR_FRASES.qmd
+        - fichas/auto/L_ORAL_SEM_VOCABULARIO_OPCIONES.qmd
+        - fichas/auto/L_ORAL_PROSODIA_ACENTO_PSEUDOP.qmd
+        - fichas/auto/L_ORAL_SEM_COMPRENSION_NCP.qmd
+        - fichas/auto/L_ORAL_FON_FLUIDEZ_FONOLOGICA.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL.qmd
+        - fichas/auto/L_ORAL_FON_PARES_MINIMOS.qmd
+        - fichas/auto/L_ORAL_PERCEP_PARES_MINIMOS.qmd
+        - fichas/auto/L_ORAL_FON_PC_DISCRIMINA.qmd
+        - fichas/auto/L_ORAL_FON_PC_DISCRIMINA_II.qmd
+        - fichas/auto/L_ORAL_FON_PC_IDENTIFICA.qmd
+        - fichas/auto/L_ORAL_FON_PC_IDENTIFICA_II.qmd
+        - fichas/auto/L_ORAL_MF_STX_RECEPCION_GRAMATICAL.qmd
+    - part: "Fichas · Atención, funciones ejecutivas y visoatención"
+      chapters:
         - fichas/auto/F_EJEC_INH_INHIBICION.qmd
+        - fichas/auto/HVIS_CAP_VAten_NUMEROS_5.qmd
+        - fichas/auto/F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA.qmd
+        - fichas/auto/HVIS_OR_ESP_BUSQUEDA_SERIAL.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_1.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_2.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_3.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_4.qmd
+        - fichas/auto/HVIS_CAP_VAten_NUMEROS_LETRAS_2_3.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_1.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_2.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_3.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_4.qmd
     - part: "Investigar con la plataforma"
       chapters:
         - investigacion.qmd

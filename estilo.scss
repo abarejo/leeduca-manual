@@ -40,3 +40,6 @@ a.enlace-discreto:hover::after, a.enlace-discreto:focus-visible::after { opacity
 /* páginas de desarrollo (desarrollos/): fuera del índice lateral y de la navegación anterior/siguiente */
 .sidebar-item:has(a[href*="desarrollos/"]) { display: none; }
 .nav-page-next:has(a[href*="desarrollos/"]), .nav-page-previous:has(a[href*="desarrollos/"]) { visibility: hidden; }
+
+/* Capturas de la plataforma: marco fino para que se lea como pantalla */
+img[src*="figuras/plataforma/"] { border: 1px solid #d9d4cc; border-radius: 6px; padding: 4px; background: #fff; }

@@ -1,0 +1,15 @@
+---
+title: "Denominación rápida de objetos repetidos (cortos)"
+subtitle: "Ficha automática · RAN_OBJETOS_REPETIDOS_CORTOS · clase C"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("RAN_OBJETOS_REPETIDOS_CORTOS")
+```

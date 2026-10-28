@@ -1,0 +1,15 @@
+---
+title: "Conteo del 1 al 10"
+subtitle: "Ficha automática · MATE_ARIT_CONTEO_1_10 · clase C"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("MATE_ARIT_CONTEO_1_10")
+```

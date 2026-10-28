@@ -1,0 +1,4 @@
+"mom","n","casos","AUC","IC_inf","IC_sup","sens_p25","esp_p25","lectura"
+"4.1",441,69,0.533,0.458,0.607,0.246,0.809,"Predictiva o concurrente (la etiqueta no usa esta tarea)"
+"5.1",721,126,0.562,0.502,0.617,0.278,0.832,"Predictiva o concurrente (la etiqueta no usa esta tarea)"
+"6.1",1623,258,0.576,0.539,0.614,0.295,0.782,"Predictiva o concurrente (la etiqueta no usa esta tarea)"

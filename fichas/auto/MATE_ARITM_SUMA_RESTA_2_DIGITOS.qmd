@@ -1,0 +1,15 @@
+---
+title: "Sumas y restas de dos dígitos"
+subtitle: "Ficha automática · MATE_ARITM_SUMA_RESTA_2_DIGITOS · clase B"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("MATE_ARITM_SUMA_RESTA_2_DIGITOS")
+```

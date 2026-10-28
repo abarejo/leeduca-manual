@@ -1,0 +1,15 @@
+---
+title: "Homógrafos"
+subtitle: "Ficha automática · LEC_HOMOGRAFOS · clase C"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto("LEC_HOMOGRAFOS")
+```
