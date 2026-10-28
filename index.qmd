@@ -5,7 +5,7 @@
 Este libro es el espacio de trabajo del grupo LEEDUCA para preparar el manual técnico de la plataforma. Su contenido está en revisión y puede cambiar. No lo cites todavía como versión definitiva.
 :::
 
-La plataforma LEEDUCA/PRELEO evalúa por internet, tres veces por curso, a niños de 4 a 11 años de colegios de Málaga: conocimiento de letras, conciencia fonológica, denominación rápida, lectura de palabras y textos, comprensión, lenguaje oral, matemáticas y funciones ejecutivas. Desde 2014 se han reunido datos de varias cohortes, nombradas por su año de nacimiento (2010, 2011, 2012…).
+La plataforma LEEDUCA/PRELEO evalúa por internet, tres veces por curso, a niños de 3 a 11 años de colegios de Málaga (los de 3 años, desde el curso 2023/24): conocimiento de letras, conciencia fonológica, denominación rápida, lectura de palabras y textos, comprensión, lenguaje oral, matemáticas y funciones ejecutivas. Desde 2014 se han reunido datos de varias cohortes, nombradas por su año de nacimiento (2010, 2011, 2012…).
 
 Este manual describe cada tarea de la plataforma con la misma estructura: qué mide y cómo se aplica, con qué muestra se ha estudiado, qué fiabilidad y validez tiene, cómo se interpreta su puntuación (baremos) y qué variables la afectan. Está pensado para tres lectores:
 

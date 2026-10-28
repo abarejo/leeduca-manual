@@ -4,7 +4,7 @@
 **Estado:** propuesta del 21/10/2026 para el grupo. Revisión de tendencias hecha con SciSpace en revistas de metodología, psicometría y lectura. Cada estudio indica qué datos hay ya, qué método usa y a qué revistas podría ir.
 :::
 
-Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poco comunes que interesan a la psicometría actual: **miles de niños seguidos de 4 a 11 años con tres evaluaciones por curso**, **respuestas y tiempos ítem a ítem** en muchas tareas, y **la misma prueba en papel, plataforma y tableta**. Esta agenda reúne los estudios metodológicos que esos rasgos permiten. Son también una oportunidad para el currículo de todo el grupo, y en especial para quien quiera consolidar una línea en psicometría.
+Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poco comunes que interesan a la psicometría actual: **miles de niños seguidos de 4 a 11 años con tres evaluaciones por curso** (y, desde 2023, también a los 3 años), **respuestas y tiempos ítem a ítem** en muchas tareas, y **la misma prueba en papel, plataforma y tableta**. Esta agenda reúne los estudios metodológicos que esos rasgos permiten. Son también una oportunidad para el currículo de todo el grupo, y en especial para quien quiera consolidar una línea en psicometría.
 
 ## Estudios propuestos
 
@@ -29,11 +29,11 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Comparación de métodos de normas continuas, con validación cruzada entre cohortes [@lenhard2018cnorm; @timmerman2021gamlss; @heister2024normas; @urban2024normas].
 - **Revistas posibles:** *Psychological Methods*, *Assessment*.
 
-### M4 · Percentiles de crecimiento
+### [M4 · Percentiles de crecimiento](desarrollos/M4M7.qmd){.enlace-discreto}
 
 - **Pregunta:** ¿Cuánto progresa un niño frente a los que partían del mismo nivel? ¿Cómo afecta el error de medida de la puntuación anterior?
 - **Datos:** Lectura en cursos sucesivos.
-- **Método:** Regresión cuantílica condicionada y corrección del error de medida [@castellano2013sgp; @shang2015simex].
+- **Método:** Regresión cuantílica condicionada y corrección del error de medida [@castellano2013sgp; @shang2015simex]. Se trabaja junto con M7: los dos responden a cuándo un cambio es real e importante.
 - **Revistas posibles:** *Journal of Educational and Behavioral Statistics*, *Educational Measurement: Issues and Practice*.
 
 ### [M5 · Identificación bayesiana de la dificultad lectora](desarrollos/M5.qmd){.enlace-discreto}
@@ -50,11 +50,11 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Funcionamiento diferencial de los ítems por formato, equiparación, modelos de cohorte.
 - **Revistas posibles:** *Computers in Human Behavior*, *Educational Assessment*, *Reading and Writing*.
 
-### M7 · Cambio mínimo relevante
+### [M7 · Cambio mínimo relevante](desarrollos/M4M7.qmd){.enlace-discreto}
 
 - **Pregunta:** ¿Qué cambio en lectura es importante para el docente y para el pronóstico?
 - **Datos:** Juicio docente, diagnóstico, trayectorias.
-- **Método:** Métodos con anclas, índice de cambio fiable [@anvari2021anclas].
+- **Método:** Índice de cambio fiable y cambio mínimo relevante anclado al pronóstico (fluidez lectora posterior), comparados con los percentiles de crecimiento de M4 en los mismos niños [@anvari2021anclas; @franceschini2023mcid].
 - **Revistas posibles:** *Assessment*, *Journal of School Psychology*.
 
 ### M8 · Artículo de datos

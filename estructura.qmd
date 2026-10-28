@@ -19,7 +19,7 @@ Cada tarea tiene una ficha estandarizada, y hay un capítulo propio sobre los **
 
 **Qué lo distingue de un manual de test convencional:**
 
-1. **Baremos por momento.** Hay datos longitudinales de 4 a 11 años, con tres evaluaciones por curso, así que los baremos son por trimestre y no solo por curso (ver [Baremo por curso o por trimestre](baremos-trimestre.qmd)).
+1. **Baremos por momento.** Hay datos longitudinales de 4 a 11 años (y de 3 años desde 2023/24), con tres evaluaciones por curso, así que los baremos son por trimestre y no solo por curso (ver [Baremo por curso o por trimestre](baremos-trimestre.qmd)).
 2. **Baremos continuos.** Se calculan con normas continuas (cNORM) y toman como referencia los centros sin Preleo, con tablas aparte para los centros con Preleo.
 3. **Fiabilidad ítem a ítem.** ω y teoría de respuesta al ítem (TRI) donde hay respuestas por ítem, error típico condicional y bandas de confianza en cada puntuación.
 4. **Validez predictiva con un criterio de certeza graduada.** La dificultad lectora persistente se define con toda la trayectoria del niño, y se corrige el sesgo de espectro (ver [Cómo estimamos el riesgo](riesgo.qmd)).

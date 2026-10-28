@@ -121,7 +121,7 @@ Tres resultados de aquel estudio reaparecen en los datos de la plataforma:
 - **Hacia el 10 % mantiene la dificultad** en 4.º y 6.º, muchos sin alcanzar siquiera el nivel lector de 2.º.
 - **Las cifras dependen del procedimiento.** Con el mismo enfoque, en Canarias se obtuvo un 8,6 % [@jimenez2009prevalencia], pero la primera selección la hizo el profesorado (27,9 % de la muestra) y el corte fue el 25 % inferior del PROLEC.
 
-La plataforma convierte ese procedimiento en algo continuo: la primera fase se repite tres veces por curso desde los 4 años, y la segunda (palabras, pseudopalabras, decisión ortográfica) ya está en la misma batería.
+La plataforma convierte ese procedimiento en algo continuo: la primera fase se repite tres veces por curso desde los 3 años, y la segunda (palabras, pseudopalabras, decisión ortográfica) ya está en la misma batería.
 
 ### Qué precisión cabe esperar de un cribado
 
