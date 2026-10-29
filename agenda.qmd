@@ -78,10 +78,17 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Modelo continuo (SEM) con exactitud y velocidad como resultados correlacionados y la fiabilidad de la morfología corregida; perfiles y su estabilidad de 7.1 a 8.x como análisis secundario. Es la tipología de exactitud y velocidad descrita en hebreo y árabe [@shany2011subtypes; @gott2026preschool] y la doble disociación que recogen @catts2026definicion.
 - **Revistas posibles:** *Scientific Studies of Reading*, *Annals of Dyslexia*, *Reading and Writing*.
 
+### [M11 · Desarrollo del RAN de 4 a 8 años](desarrollos/M11.qmd){.enlace-discreto}
+
+- **Pregunta:** ¿Cómo cambia la velocidad de denominación rápida entre los 4 y los 8 años, cuánto se estabilizan las diferencias individuales, cuándo deja de pesar la edad en meses y modifica la instrucción lectora el RAN o la relación es unidireccional? (Idea de A. Giménez.)
+- **Datos:** 11 tareas RAN (discretas y láminas DIS-ESP) en 12 momentos de 4.1 a 8.3, cohortes 2010–2015; mismas tareas a la misma edad en varias cohortes; condición Preleo por colegio.
+- **Método:** Escala común en ítems/min, modelo de crecimiento multinivel no lineal con edad en meses y percentiles por edad (como M4), estabilidad de rango corregida por atenuación, RI-CLPM RAN–lectura y contraste CON/SIN Preleo con ISE. Único estudio longitudinal en ortografía transparente con tres medidas por curso desde los 4 años [@avall2019ran; @lervag2009ran; @peterson2018literacy].
+- **Revistas posibles:** *Dyslexia*, *Reading and Writing*, *Scientific Studies of Reading*.
+
 ## Cómo aprovecharlo
 
 - **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.
-- **M3, M4 y M7 alimentan directamente el manual**: baremos, seguimiento y cambio relevante. Conviene que vayan en paralelo a las fichas.
+- **M3, M4, M7 y M11 alimentan directamente el manual**: baremos, seguimiento, cambio relevante y la curva de desarrollo del RAN (baremo por trimestre en infantil). Conviene que vayan en paralelo a las fichas.
 - **M5 y M6 combinan psicometría y lectura**, y pueden salir pronto con los análisis que ya están hechos.
 - **M8 es rápido y suma a todo el grupo**: un artículo de datos se cita cada vez que alguien usa la base.
 - **Orden recomendado:** M8 y M6 primero (casi todo hecho); después M1 y M2 (el núcleo metodológico); M3, M4 y M7 con las fichas; M5 y M9 como proyectos más largos.

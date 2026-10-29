@@ -1,0 +1,120 @@
+---
+search: false
+---
+
+# M11 · Desarrollo del RAN de 4 a 8 años — análisis exploratorio {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Pregunta
+
+¿Cómo cambia la velocidad de denominación rápida (RAN) entre los 4 y los 8 años, cuánto se estabilizan las diferencias individuales y cuándo deja de importar la edad en meses dentro del aula? Y una pregunta teórica abierta que nuestros datos pueden arbitrar: ¿modifica la instrucción lectora el RAN, o la relación es unidireccional, del RAN a la lectura?
+
+## Qué dice la literatura
+
+El RAN es, con la conciencia fonológica, el predictor más robusto de la lectura: r = .43 en un meta-análisis de 137 estudios [@araujo2014ran], predictor de la fluidez en cinco ortografías de distinta consistencia [@landerl2019pa], y con más peso que la conciencia fonológica conforme avanza la primaria en español [@rodriguez2015ran]. Casi toda esa literatura trata el RAN como variable independiente; los estudios sobre el desarrollo del propio RAN son pocos y miden una vez por curso.
+
+| Estudio | Qué aporta | Límite |
+|---|---|---|
+| @avall2019ran; @wolff2023ran (Suecia, 4–10 años, N = 222–364) | Crecimiento mayor entre 4 y 6; diferencias individuales estables de 4 a 10; los dígitos llegan antes a la meseta que las letras; el RAN de 4 años predice fluidez y ortografía en 4º | Una medida por año |
+| @mazzocco2013ran (EE. UU., infantil a 8º) | Crecimiento y estabilidad entre niños; déficits persistentes en dislexia y discalculia | Muestra clínica |
+| @georgiou2006components; @georgiou2014components | El tiempo de pausa, no el de articulación, es el que se desarrolla y predice la lectura; su peso cambia con la edad | N = 62–75 |
+| @lervag2009ran (Noruega) | El RAN preescolar predice el crecimiento de la fluidez; la lectura no retroalimenta el RAN | Tres cursos |
+| @peterson2018literacy (gemelos); @wolff2014ran (intervención aleatorizada) | Al contrario: la alfabetización temprana acelera el RAN posterior y el entrenamiento lector lo mejora | Sin diseño por centros |
+| @rodriguez2015ran; @outon2021ran (España) | RAN de 1º/2º a 6º: mejora con la edad; factores alfanumérico y no alfanumérico invariantes | Transversales; empiezan en primaria |
+
+El hueco: ningún estudio longitudinal en ortografía transparente cubre el tramo 4–8 años con más de una medida por curso y con N suficiente para estimar la forma de la curva y la estabilidad por tramos.
+
+## Datos disponibles
+
+17.160 aplicaciones limpias de 11 tareas RAN en las cohortes 2010–2015, en 12 momentos entre 4.1 y 8.3. Ninguna tarea cubre sola todo el tramo, pero las familias se solapan y varias cohortes repiten la misma tarea a la misma edad.
+
+| Familia | Formato | Momentos con datos (cohortes) |
+|---|---|---|
+| Colores 528 (20 ítems) | discreto | 4.1 (11, 14), 4.3 (12), 5.1 (10) |
+| Colores 2093 (lámina 5 × 5) | lámina | 4.1 (15), 4.2 (13), 5.2 (12) |
+| Números 1054/1053 (20 ítems) | discreto | 4.1 (11, 14), 5.1 (10) |
+| Objetos control 1922 (25 ítems) | discreto | 4.1 (12), 5.1 (11), 6.1 (10) |
+| Objetos control 1921 (lámina) | lámina | 4.2 (12), 5.1 (12), 5.2 (11), 6.1 (11), 6.2 (10, 13) |
+| Objetos repetidos cortos 2094 → 1893 (DIS-ESP, 18) | lámina | 4.2 (13), 5.2 (12); 7.2 (10, 12), 8.1 (11) |
+| Objetos repetidos largos 1945 (DIS-ESP, 18) | lámina | 7.1 (10), 7.2 (12), 8.1 (11), 8.3 (10) |
+| Objetos variados cortos 1891 (DIS-ESP, 18) | lámina | 7.2 (10, 12), 8.3 (10) |
+| Objetos variados largos 1946 (DIS-ESP, 18) | lámina | 7.1 (10), 7.2 (12), 8.3 (10) |
+
+Las láminas de primaria son las cuatro matrices de denominación rápida de la batería DIS-ESP [@carrillo2011prevalencia]: 18 ítems, variados o repetidos × nombres cortos (sol, pie, silla) o largos (manzana, elefante, helicóptero). Formato discreto = ítems correctos por minuto; lámina = tiempo total en segundos sobre una lámina fija, o ítems por minuto cuando se conoce el número de estímulos.
+
+## Resultados preliminares
+
+### La curva 4–8 años
+
+El RAN mejora deprisa entre los 4 y los 6 años y sigue mejorando, más despacio, hasta los 8. En los formatos discretos la mediana pasa de 34 a 44 ítems/min entre 4.1 y 5.1 en colores y números (≈ 1 DT por año) y de 33 a 43 entre 4.1 y 6.1 en objetos (0,5 DT por año). La lámina de objetos baja de 43,6 s en 4.2 a 37,6 (5.1), 35,2 (5.2), 30,0 (6.1) y 30,0 (6.2); entre 6.1 y 6.2 ya es plana. En primaria las láminas de objetos repetidos pasan de 19,2 s en 7.1 a 16,4 en 8.3 (−15 %): a los 7–8 años todavía hay desarrollo, cuatro veces más lento que a los 4–5.
+
+![RAN de 4 a 8 años en las láminas (tiempo total): mediana y banda P10–P90; cada punto es una cohorte × sesión.](../figuras/desarrollos/M11_F1_laminas_v1.png){width="85%"}
+
+En una escala común de ítems por minuto, la lámina de colores da los mismos valores que el formato discreto a la misma edad (35,6 frente a 33,8–35,0 en 4.1; 45,7 en 5.2 frente a 44,1 en 5.1). En primaria aparece el efecto de la longitud del nombre: con los mismos niños, repetidos cortos 68–71 ítems/min, repetidos largos 56–66, variados cortos 45–51 y variados largos 33–41.
+
+![RAN de 4 a 8 años en ítems correctos por minuto (todas las tareas con número de estímulos conocido).](../figuras/desarrollos/M11_F4_items_min_v1.png){width="85%"}
+
+**La curva se replica entre cohortes.** Cuando dos cohortes hicieron la misma tarea a la misma edad, sus medianas coinciden casi al segundo:
+
+| Tarea | Momento | Cohorte A | Cohorte B |
+|---|---|---|---|
+| Colores discreto (ítems/min) | 4.1 | 2011: 33,8 (N = 900) | 2014: 35,0 (N = 441) |
+| Números discreto (ítems/min) | 4.1 | 2011: 34,5 (N = 898) | 2014: 37,9 (N = 436) |
+| Objetos lámina 1921 (s) | 6.2 | 2010: 30,0 (N = 808) | 2013: 30,5 (N = 473) |
+| Objetos repetidos cortos 1893 (s) | 7.2 | 2010: 15,2 (N = 436) | 2012: 16,0 (N = 218) |
+| Objetos repetidos largos 1945 (s) | 7.1 / 7.2 | 2010: 19,2 (N = 697) | 2012: 18,4 (N = 192) |
+
+### Edad relativa
+
+Dentro de una misma sesión, los niños mayores denominan más rápido a los 4 años: ρ con la edad en meses de .21–.24 en colores y números y .18 en objetos; doce meses valen 0,6–0,8 DT. El efecto baja a ρ ≈ .15 a los 5 años, a .04–.12 a los 6 y a 0–.1 a los 7–8. Implicación para el manual: el baremo de RAN en infantil va por trimestre (o por edad en meses); en primaria basta el curso.
+
+### Estabilidad de las diferencias individuales
+
+| Distancia | Misma familia de tarea | Familia distinta |
+|---|---|---|
+| 4 meses | ρ = .45–.57 | .27–.61 |
+| 8 meses | .49–.63 | .30–.51 |
+| 1 año | .39–.52 | .22–.53 |
+| 2 años | .39 | .25–.46 |
+| 3–3,3 años | — | .10–.44 |
+| 4 años (4.1 → 8.x) | — | .14–.30 |
+
+![Estabilidad de rango del RAN entre momentos en el mismo niño, frente a la distancia en años.](../figuras/desarrollos/M11_F2_estabilidad_v1.png){width="75%"}
+
+Son cifras más bajas que las suecas, y la razón más probable es la medida: una sola lámina o 20 ítems en una pasada dan .45–.60 en el retest a cuatro meses (números y colores en la misma sesión correlacionan .58–.60; fiabilidad del compuesto .74 por Spearman-Brown). Corregida por atenuación, la estabilidad a un año rondaría .65–.75, en línea con @avall2019ran. Esto abre un segundo artículo posible sobre la fiabilidad del RAN con una sola lámina, que es lo que usan casi todas las baterías.
+
+### Preleo y lectura
+
+Con la condición disponible hoy solo se contrasta dentro de una cohorte en 6.2 (2013: 175 CON frente a 281 SIN), y el grupo CON es 0,40 DT más lento sin ajustar por el ISE del centro. Entre cohortes, la lámina de objetos en 6.2 da 30,0 s en 2010 (toda CON) y 30,5 s en 2013 (mixta): ninguna señal de que Preleo acelere el RAN. Compatible con @lervag2009ran, pero exige la asignación Preleo cerrada y el ajuste por ISE.
+
+El RAN de 4.1 correlaciona con el percentil lector de 6 años (ρ = .36 colores, .49 números, .37 objetos) y la correlación se atenúa con la distancia (a los 10 años, .14–.22). AUC frente a la dificultad lectora persistente: .70–.76 con números a los 4–5 años, .63–.68 con objetos; las láminas de primaria, .70–.76.
+
+## Cautelas e incidencias
+
+- Sin ajuste por colegio ni por ISE; limpieza mínima documentada (hoja `0_Limpieza` de `m11_ran_desarrollo_v1.xlsx`).
+- Láminas con tiempos no registrados (≈ 0,015 s) en las tres sesiones del primer trimestre de 2016/17 (2010/152, 2011/153, 2012/154); en esas sesiones vale la versión discreta (1922).
+- 2013/181 (2093, 2094) y 2015/906 (2093) con tiempos ≈ 0; 2011/905 con 1891 y 1946 invertidos (posible intercambio de etiquetas, como la lista 1932 de esa sesión); 2010/189 con la mitad de los tiempos de 1891/1893 < 1 s.
+- Número de estímulos de la lámina de control 1921 pendiente de leer en la plataforma; confirmar que 2094 (infantil) y 1893 (primaria) son la misma lámina.
+- Condición Preleo de 2011 pendiente de la v4.
+
+## Qué cambia en el estudio
+
+1. **Escala común** en ítems/min y comprobación de la equivalencia discreto–lámina en las sesiones donde coinciden (2012: 4.1 y 4.2; 2011: 5.1 y 5.2).
+2. **Curva de referencia**: modelo de crecimiento multinivel (niños en colegios) no lineal, con la edad en meses como tiempo y la cohorte como efecto cruzado; percentiles por edad con regresión cuantílica o GAMLSS, como en M4; contraste de un cambio de pendiente al iniciarse 1º.
+3. **Estabilidad** por tramos, corregida por atenuación; RI-CLPM RAN ↔ lectura de 5 a 8 años para la unidireccionalidad.
+4. **Formatos**: números frente a colores en los mismos niños (4.1 y 5.1).
+5. **Preleo**: CON − SIN a cada edad con ISE y efectos aleatorios de colegio, con la asignación v4.
+6. **Ritmo**: con los tiempos ítem a ítem de 2018 en adelante, variabilidad intraindividual y pausas.
+
+**Revistas posibles:** *Dyslexia*, *Reading and Writing*, *Scientific Studies of Reading*; en español, *Psicothema* o *Revista de Psicodidáctica*.
+
+## Archivos
+
+`04\scripts\m11_ran_desarrollo.py` (porte a R pendiente) → `04\DIAGNOSTICO\m11_ran_desarrollo_v1.xlsx` y `DIAGNOSTICO\figs_M11\`. Propuesta completa, con borrador de introducción, en el documento del proyecto de Claude «M11 · Desarrollo del RAN de 4 a 8 años».
