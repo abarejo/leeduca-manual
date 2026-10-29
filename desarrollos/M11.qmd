@@ -4,7 +4,7 @@ search: false
 
 # M11 · Desarrollo del RAN de 4 a 8 años — análisis exploratorio {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
+*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -90,6 +90,20 @@ Dentro de una misma sesión, los niños mayores denominan más rápido a los 4 a
 
 Son cifras más bajas que las suecas, y la razón más probable es la medida: una sola lámina o 20 ítems en una pasada dan .45–.60 en el retest a cuatro meses (números y colores en la misma sesión correlacionan .58–.60; fiabilidad del compuesto .74 por Spearman-Brown). Corregida por atenuación, la estabilidad a un año rondaría .65–.75, en línea con @avall2019ran. Esto abre un segundo artículo posible sobre la fiabilidad del RAN con una sola lámina, que es lo que usan casi todas las baterías.
 
+### Escolarización frente a maduración: un curso más a igual edad
+
+En 2015/16 las cohortes 2011 (4.1) y 2010 (5.1) hicieron las mismas tareas de colores y números en noviembre; en 2016/17, las cohortes 2011 (5.1) y 2010 (6.1) la misma tarea discreta de objetos. Los nacidos en diciembre de 2010 y en enero de 2011 tienen la misma edad y un curso de diferencia: discontinuidad por fecha de corte escolar, que separa un año de escolarización de un año de edad. Regresión lineal a cada lado del corte (±12 meses de nacimiento, errores por colegio):
+
+| Contraste | N | Salto (un curso más, a igual edad) | IC 95 % | 12 meses de edad dentro del curso |
+|---|---|---|---|---|
+| Colores, 2º → 3º de infantil | 1.662 | +0,37 DT | 0,17–0,57 | 0,66 / 0,42 DT |
+| Números, 2º → 3º de infantil | 1.664 | +0,40 DT | 0,17–0,63 | 0,75 / 0,42 DT |
+| Objetos, 3º de infantil → 1º de primaria | 1.755 | +0,31 DT | 0,11–0,51 | 0,21 / 0,18 DT |
+
+![Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte.](../figuras/desarrollos/M11_F5_corte_escolar_v1.png){width="100%"}
+
+Los saltos se mantienen con ventanas de ±2 y ±3 meses y al ajustar por el ISE del centro. A los 4–5 años la maduración pesa más que la escuela (0,7 frente a 0,4 DT por año); a los 6, el curso de 1º —el de la instrucción lectora— vale 0,31 DT y un año de edad solo 0,2. A igual edad, la instrucción acelera el RAN: en la dirección de @peterson2018literacy y @wolff2014ran, y en contra de la unidireccionalidad de @lervag2009ran. Cautela: compara las cohortes 2010 y 2011, ambas con Preleo.
+
 ### Preleo y lectura
 
 Con la condición disponible hoy solo se contrasta dentro de una cohorte en 6.2 (2013: 175 CON frente a 281 SIN), y el grupo CON es 0,40 DT más lento sin ajustar por el ISE del centro. Entre cohortes, la lámina de objetos en 6.2 da 30,0 s en 2010 (toda CON) y 30,5 s en 2013 (mixta): ninguna señal de que Preleo acelere el RAN. Compatible con @lervag2009ran, pero exige la asignación Preleo cerrada y el ajuste por ISE.
@@ -108,13 +122,17 @@ El RAN de 4.1 correlaciona con el percentil lector de 6 años (ρ = .36 colores,
 
 1. **Escala común** en ítems/min y comprobación de la equivalencia discreto–lámina en las sesiones donde coinciden (2012: 4.1 y 4.2; 2011: 5.1 y 5.2).
 2. **Curva de referencia**: modelo de crecimiento multinivel (niños en colegios) no lineal, con la edad en meses como tiempo y la cohorte como efecto cruzado; percentiles por edad con regresión cuantílica o GAMLSS, como en M4; contraste de un cambio de pendiente al iniciarse 1º.
-3. **Estabilidad** por tramos, corregida por atenuación; RI-CLPM RAN ↔ lectura de 5 a 8 años para la unidireccionalidad.
+3. **Estabilidad** por tramos, corregida por atenuación; RI-CLPM RAN ↔ lectura de 5 a 8 años para la unidireccionalidad, junto con la discontinuidad por fecha de corte (que puede repetirse en 2012/2013 y en la lámina 1921).
 4. **Formatos**: números frente a colores en los mismos niños (4.1 y 5.1).
 5. **Preleo**: CON − SIN a cada edad con ISE y efectos aleatorios de colegio, con la asignación v4.
 6. **Ritmo**: con los tiempos ítem a ítem de 2018 en adelante, variabilidad intraindividual y pausas.
 
 **Revistas posibles:** *Dyslexia*, *Reading and Writing*, *Scientific Studies of Reading*; en español, *Psicothema* o *Revista de Psicodidáctica*.
 
+## Referencias de este estudio
+
+Desarrollo del RAN: @avall2019ran, @wolff2023ran, @mazzocco2013ran, @georgiou2006components, @georgiou2014components, @outon2021ran, @rodriguez2015ran. Dirección RAN–lectura e intervención: @lervag2009ran, @peterson2018literacy, @wolff2014ran, @powell2021ran. RAN como predictor: @araujo2014ran, @landerl2019pa, @norton2012ran. Batería DIS-ESP: @carrillo2011prevalencia. Las entradas completas están en el capítulo de [referencias](../referencias.qmd).
+
 ## Archivos
 
-`04\scripts\m11_ran_desarrollo.py` (porte a R pendiente) → `04\DIAGNOSTICO\m11_ran_desarrollo_v1.xlsx` y `DIAGNOSTICO\figs_M11\`. Propuesta completa, con borrador de introducción, en el documento del proyecto de Claude «M11 · Desarrollo del RAN de 4 a 8 años».
+`04\scripts\m11_ran_desarrollo.py` y su porte `04\scripts\R\m11_ran_desarrollo.R` (salida `DIAGNOSTICO\R\m11_ran_desarrollo_R_v1.xlsx`) → `04\DIAGNOSTICO\m11_ran_desarrollo_v1.xlsx` y `DIAGNOSTICO\figs_M11\`. Propuesta completa, con borrador de introducción, en el documento del proyecto de Claude «M11 · Desarrollo del RAN de 4 a 8 años».
