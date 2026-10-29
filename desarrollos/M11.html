@@ -952,10 +952,12 @@ div.csl-indent {
   <li><a href="#la-curva-48-años" id="toc-la-curva-48-años" class="nav-link" data-scroll-target="#la-curva-48-años">La curva 4–8 años</a></li>
   <li><a href="#edad-relativa" id="toc-edad-relativa" class="nav-link" data-scroll-target="#edad-relativa">Edad relativa</a></li>
   <li><a href="#estabilidad-de-las-diferencias-individuales" id="toc-estabilidad-de-las-diferencias-individuales" class="nav-link" data-scroll-target="#estabilidad-de-las-diferencias-individuales">Estabilidad de las diferencias individuales</a></li>
+  <li><a href="#escolarización-frente-a-maduración-un-curso-más-a-igual-edad" id="toc-escolarización-frente-a-maduración-un-curso-más-a-igual-edad" class="nav-link" data-scroll-target="#escolarización-frente-a-maduración-un-curso-más-a-igual-edad">Escolarización frente a maduración: un curso más a igual edad</a></li>
   <li><a href="#preleo-y-lectura" id="toc-preleo-y-lectura" class="nav-link" data-scroll-target="#preleo-y-lectura">Preleo y lectura</a></li>
   </ul></li>
   <li><a href="#cautelas-e-incidencias" id="toc-cautelas-e-incidencias" class="nav-link" data-scroll-target="#cautelas-e-incidencias">Cautelas e incidencias</a></li>
   <li><a href="#qué-cambia-en-el-estudio" id="toc-qué-cambia-en-el-estudio" class="nav-link" data-scroll-target="#qué-cambia-en-el-estudio">Qué cambia en el estudio</a></li>
+  <li><a href="#referencias-de-este-estudio" id="toc-referencias-de-este-estudio" class="nav-link" data-scroll-target="#referencias-de-este-estudio">Referencias de este estudio</a></li>
   <li><a href="#archivos" id="toc-archivos" class="nav-link" data-scroll-target="#archivos">Archivos</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M11.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M11.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></nav>
@@ -982,7 +984,7 @@ div.csl-indent {
 </header>
 
 
-<p><em>Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.</em></p>
+<p><em>Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1241,6 +1243,58 @@ Advertencia
 </div>
 <p>Son cifras más bajas que las suecas, y la razón más probable es la medida: una sola lámina o 20 ítems en una pasada dan .45–.60 en el retest a cuatro meses (números y colores en la misma sesión correlacionan .58–.60; fiabilidad del compuesto .74 por Spearman-Brown). Corregida por atenuación, la estabilidad a un año rondaría .65–.75, en línea con <span class="citation" data-cites="avall2019ran">Åvall, Wolff, y Gustafsson (<a href="../referencias.html#ref-avall2019ran" role="doc-biblioref">2019</a>)</span>. Esto abre un segundo artículo posible sobre la fiabilidad del RAN con una sola lámina, que es lo que usan casi todas las baterías.</p>
 </section>
+<section id="escolarización-frente-a-maduración-un-curso-más-a-igual-edad" class="level3">
+<h3 class="anchored" data-anchor-id="escolarización-frente-a-maduración-un-curso-más-a-igual-edad">Escolarización frente a maduración: un curso más a igual edad</h3>
+<p>En 2015/16 las cohortes 2011 (4.1) y 2010 (5.1) hicieron las mismas tareas de colores y números en noviembre; en 2016/17, las cohortes 2011 (5.1) y 2010 (6.1) la misma tarea discreta de objetos. Los nacidos en diciembre de 2010 y en enero de 2011 tienen la misma edad y un curso de diferencia: discontinuidad por fecha de corte escolar, que separa un año de escolarización de un año de edad. Regresión lineal a cada lado del corte (±12 meses de nacimiento, errores por colegio):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Contraste</th>
+<th>N</th>
+<th>Salto (un curso más, a igual edad)</th>
+<th>IC 95 %</th>
+<th>12 meses de edad dentro del curso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Colores, 2º → 3º de infantil</td>
+<td>1.662</td>
+<td>+0,37 DT</td>
+<td>0,17–0,57</td>
+<td>0,66 / 0,42 DT</td>
+</tr>
+<tr class="even">
+<td>Números, 2º → 3º de infantil</td>
+<td>1.664</td>
+<td>+0,40 DT</td>
+<td>0,17–0,63</td>
+<td>0,75 / 0,42 DT</td>
+</tr>
+<tr class="odd">
+<td>Objetos, 3º de infantil → 1º de primaria</td>
+<td>1.755</td>
+<td>+0,31 DT</td>
+<td>0,11–0,51</td>
+<td>0,21 / 0,18 DT</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M11_F5_corte_escolar_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte."><img src="../figuras/desarrollos/M11_F5_corte_escolar_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte."></a></p>
+<figcaption>Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte.</figcaption>
+</figure>
+</div>
+<p>Los saltos se mantienen con ventanas de ±2 y ±3 meses y al ajustar por el ISE del centro. A los 4–5 años la maduración pesa más que la escuela (0,7 frente a 0,4 DT por año); a los 6, el curso de 1º —el de la instrucción lectora— vale 0,31 DT y un año de edad solo 0,2. A igual edad, la instrucción acelera el RAN: en la dirección de <span class="citation" data-cites="peterson2018literacy">Peterson et&nbsp;al. (<a href="../referencias.html#ref-peterson2018literacy" role="doc-biblioref">2018</a>)</span> y <span class="citation" data-cites="wolff2014ran">Wolff (<a href="../referencias.html#ref-wolff2014ran" role="doc-biblioref">2014</a>)</span>, y en contra de la unidireccionalidad de <span class="citation" data-cites="lervag2009ran">Lervåg y Hulme (<a href="../referencias.html#ref-lervag2009ran" role="doc-biblioref">2009</a>)</span>. Cautela: compara las cohortes 2010 y 2011, ambas con Preleo.</p>
+</section>
 <section id="preleo-y-lectura" class="level3">
 <h3 class="anchored" data-anchor-id="preleo-y-lectura">Preleo y lectura</h3>
 <p>Con la condición disponible hoy solo se contrasta dentro de una cohorte en 6.2 (2013: 175 CON frente a 281 SIN), y el grupo CON es 0,40 DT más lento sin ajustar por el ISE del centro. Entre cohortes, la lámina de objetos en 6.2 da 30,0 s en 2010 (toda CON) y 30,5 s en 2013 (mixta): ninguna señal de que Preleo acelere el RAN. Compatible con <span class="citation" data-cites="lervag2009ran">Lervåg y Hulme (<a href="../referencias.html#ref-lervag2009ran" role="doc-biblioref">2009</a>)</span>, pero exige la asignación Preleo cerrada y el ajuste por ISE.</p>
@@ -1262,16 +1316,20 @@ Advertencia
 <ol type="1">
 <li><strong>Escala común</strong> en ítems/min y comprobación de la equivalencia discreto–lámina en las sesiones donde coinciden (2012: 4.1 y 4.2; 2011: 5.1 y 5.2).</li>
 <li><strong>Curva de referencia</strong>: modelo de crecimiento multinivel (niños en colegios) no lineal, con la edad en meses como tiempo y la cohorte como efecto cruzado; percentiles por edad con regresión cuantílica o GAMLSS, como en M4; contraste de un cambio de pendiente al iniciarse 1º.</li>
-<li><strong>Estabilidad</strong> por tramos, corregida por atenuación; RI-CLPM RAN ↔︎ lectura de 5 a 8 años para la unidireccionalidad.</li>
+<li><strong>Estabilidad</strong> por tramos, corregida por atenuación; RI-CLPM RAN ↔︎ lectura de 5 a 8 años para la unidireccionalidad, junto con la discontinuidad por fecha de corte (que puede repetirse en 2012/2013 y en la lámina 1921).</li>
 <li><strong>Formatos</strong>: números frente a colores en los mismos niños (4.1 y 5.1).</li>
 <li><strong>Preleo</strong>: CON − SIN a cada edad con ISE y efectos aleatorios de colegio, con la asignación v4.</li>
 <li><strong>Ritmo</strong>: con los tiempos ítem a ítem de 2018 en adelante, variabilidad intraindividual y pausas.</li>
 </ol>
 <p><strong>Revistas posibles:</strong> <em>Dyslexia</em>, <em>Reading and Writing</em>, <em>Scientific Studies of Reading</em>; en español, <em>Psicothema</em> o <em>Revista de Psicodidáctica</em>.</p>
 </section>
+<section id="referencias-de-este-estudio" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-de-este-estudio">Referencias de este estudio</h2>
+<p>Desarrollo del RAN: <span class="citation" data-cites="avall2019ran">Åvall, Wolff, y Gustafsson (<a href="../referencias.html#ref-avall2019ran" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="wolff2023ran">Wolff, Åvall, y Gustafsson (<a href="../referencias.html#ref-wolff2023ran" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="mazzocco2013ran">Mazzocco y Grimm (<a href="../referencias.html#ref-mazzocco2013ran" role="doc-biblioref">2013</a>)</span>, <span class="citation" data-cites="georgiou2006components">Georgiou, Parrila, y Kirby (<a href="../referencias.html#ref-georgiou2006components" role="doc-biblioref">2006</a>)</span>, <span class="citation" data-cites="georgiou2014components">Georgiou, Papadopoulos, y Kaizer (<a href="../referencias.html#ref-georgiou2014components" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="outon2021ran">Outón y Ferraces (<a href="../referencias.html#ref-outon2021ran" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="rodriguez2015ran">Rodríguez et&nbsp;al. (<a href="../referencias.html#ref-rodriguez2015ran" role="doc-biblioref">2015</a>)</span>. Dirección RAN–lectura e intervención: <span class="citation" data-cites="lervag2009ran">Lervåg y Hulme (<a href="../referencias.html#ref-lervag2009ran" role="doc-biblioref">2009</a>)</span>, <span class="citation" data-cites="peterson2018literacy">Peterson et&nbsp;al. (<a href="../referencias.html#ref-peterson2018literacy" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="wolff2014ran">Wolff (<a href="../referencias.html#ref-wolff2014ran" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="powell2021ran">Powell y Atkinson (<a href="../referencias.html#ref-powell2021ran" role="doc-biblioref">2021</a>)</span>. RAN como predictor: <span class="citation" data-cites="araujo2014ran">Araújo et&nbsp;al. (<a href="../referencias.html#ref-araujo2014ran" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="landerl2019pa">Landerl et&nbsp;al. (<a href="../referencias.html#ref-landerl2019pa" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="norton2012ran">Norton y Wolf (<a href="../referencias.html#ref-norton2012ran" role="doc-biblioref">2012</a>)</span>. Batería DIS-ESP: <span class="citation" data-cites="carrillo2011prevalencia">Carrillo Gallego et&nbsp;al. (<a href="../referencias.html#ref-carrillo2011prevalencia" role="doc-biblioref">2011</a>)</span>. Las entradas completas están en el capítulo de <a href="../referencias.html">referencias</a>.</p>
+</section>
 <section id="archivos" class="level2">
 <h2 class="anchored" data-anchor-id="archivos">Archivos</h2>
-<p><code>04\scripts\m11_ran_desarrollo.py</code> (porte a R pendiente) → <code>04\DIAGNOSTICO\m11_ran_desarrollo_v1.xlsx</code> y <code>DIAGNOSTICO\figs_M11\</code>. Propuesta completa, con borrador de introducción, en el documento del proyecto de Claude «M11 · Desarrollo del RAN de 4 a 8 años».</p>
+<p><code>04\scripts\m11_ran_desarrollo.py</code> y su porte <code>04\scripts\R\m11_ran_desarrollo.R</code> (salida <code>DIAGNOSTICO\R\m11_ran_desarrollo_R_v1.xlsx</code>) → <code>04\DIAGNOSTICO\m11_ran_desarrollo_v1.xlsx</code> y <code>DIAGNOSTICO\figs_M11\</code>. Propuesta completa, con borrador de introducción, en el documento del proyecto de Claude «M11 · Desarrollo del RAN de 4 a 8 años».</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -1299,11 +1357,17 @@ Lervåg, Arne, y Charles Hulme. 2009. <span>«Rapid automatized naming (<span>RA
 <div id="ref-mazzocco2013ran" class="csl-entry" role="listitem">
 Mazzocco, Michèle M. M., y Kevin J. Grimm. 2013. <span>«Growth in rapid automatized naming from grades <span>K</span> to 8 in children with math or reading disabilities»</span>. <em>Journal of Learning Disabilities</em> 46 (6): 517-33. <a href="https://doi.org/10.1177/0022219413477475">https://doi.org/10.1177/0022219413477475</a>.
 </div>
+<div id="ref-norton2012ran" class="csl-entry" role="listitem">
+Norton, Elizabeth S., y Maryanne Wolf. 2012. <span>«Rapid automatized naming (<span>RAN</span>) and reading fluency: Implications for understanding and treatment of reading disabilities»</span>. <em>Annual Review of Psychology</em> 63: 427-52. <a href="https://doi.org/10.1146/annurev-psych-120710-100431">https://doi.org/10.1146/annurev-psych-120710-100431</a>.
+</div>
 <div id="ref-outon2021ran" class="csl-entry" role="listitem">
 Outón, Paula, y María José Ferraces. 2021. <span>«Rapid serial naming: Developmental trajectory and relationship with the <span>Bangor Dyslexia Test</span> in <span>Spanish</span> students»</span>. <em>Dyslexia</em>. <a href="https://doi.org/10.1002/dys.1683">https://doi.org/10.1002/dys.1683</a>.
 </div>
 <div id="ref-peterson2018literacy" class="csl-entry" role="listitem">
 Peterson, Robin L., Anne B. Arnett, Bruce F. Pennington, Brian Byrne, Stefan Samuelsson, y Richard K. Olson. 2018. <span>«Literacy acquisition influences children’s rapid automatized naming»</span>. <em>Developmental Science</em> 21 (3). <a href="https://doi.org/10.1111/desc.12589">https://doi.org/10.1111/desc.12589</a>.
+</div>
+<div id="ref-powell2021ran" class="csl-entry" role="listitem">
+Powell, Daisy, y Lynette Atkinson. 2021. <span>«Unraveling the links between rapid automatized naming (<span>RAN</span>), phonological awareness, and reading»</span>. <em>Journal of Educational Psychology</em> 113 (4): 706-18. <a href="https://doi.org/10.1037/edu0000625">https://doi.org/10.1037/edu0000625</a>.
 </div>
 <div id="ref-rodriguez2015ran" class="csl-entry" role="listitem">
 Rodríguez, Cristina, Madelon van den Boer, Juan E. Jiménez, y Peter F. de Jong. 2015. <span>«Developmental changes in the relations between <span>RAN</span>, phonological awareness, and reading in <span>Spanish</span> children»</span>. <em>Scientific Studies of Reading</em>. <a href="https://doi.org/10.1080/10888438.2015.1025271">https://doi.org/10.1080/10888438.2015.1025271</a>.
