@@ -1,0 +1,83 @@
+---
+search: false
+---
+
+# M8 · Artículo de datos — ficha para decidir {.unnumbered}
+
+*Ficha de un estudio de la Agenda · versión 1, 30/10/2026. Preparada por P. J. López-Pérez para que J. L. Luque y A. Sánchez Gómez decidan si se hace y cómo. Ficha completa y esqueleto del borrador en el documento de Claude «M8 · Artículo de datos LEEDUCA – ficha y esqueleto del borrador».*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## En cinco líneas
+
+Un artículo de datos (*data descriptor*) describe la base y acompaña a una **versión 1.0 de los datos depositada con DOI**; se cita cada vez que alguien usa la base. Las revistas de datos exigen que los datos estén depositados antes de la revisión: lo que decide la viabilidad y la revista no es el análisis sino **qué datos pueden salir**, y eso depende de los consentimientos, del dictamen ético y de la autorización de la Consejería. Por eso esta ficha no decide: plantea tres escenarios y pide al grupo que elija. El borrador se escribe igual en los tres; cambian la sección *Data Records* y la revista. El coste real de M8 es congelar y versionar la tabla larga (objetivo C del proyecto), que de paso queda citable para el manual, el artículo de predicción y M4M7.
+
+## Tres escenarios
+
+| | 1 · Abierto | 2 · Acceso controlado (recomendado) | 3 · Solo agregados |
+|---|---|---|---|
+| **Qué se deposita** | Microdatos anonimizados por niño y sesión, con ítems | Los mismos, con acceso previa solicitud y acuerdo de uso | Tablas tarea × cohorte × momento, como las del libro web |
+| **Repositorio** | Zenodo u OSF, CC BY 4.0 | Zenodo restringido, OSF controlado o repositorio de la UMA | Zenodo abierto, con el manual |
+| **Artículo y revistas** | *Data Descriptor*: *Scientific Data*, *J. Open Psychology Data*, *Data in Brief* | Los mismos, con justificación del acceso restringido | *Cohort Profile*: *Int. J. Epidemiology*, *BMJ Open* |
+| **Requisito ético** | Consentimiento que cubra la cesión abierta, o informe del DPD de que el conjunto anonimizado no es dato personal | Dictamen ético y acuerdo de uso | Ninguno nuevo |
+| **Reutilización y citas** | Máxima | Alta | Baja; se cita como descripción de la cohorte |
+| **Riesgo** | Reidentificar centros Preleo; el diagnóstico de Séneca es dato de salud | Bajo | Ninguno |
+
+## Decisiones que se piden
+
+1. **Consentimientos** (Auxi): qué dicen los de 2014–2020 sobre cesión de datos; versiones por curso.
+2. **Dictamen ético** (Juan Luis): si el CEUMA o el proyecto ministerial cubren la plataforma y la reutilización.
+3. **Consejería** (Auxi): si la autorización limita la difusión o exige comunicarla.
+4. **DPD de la UMA** (Pedro, con el visto bueno de Juan Luis): si el conjunto anonimizado con las reglas de abajo deja de ser dato personal.
+5. **Escenario**: 1, 2, 3 o aplazar.
+6. **Autoría**: propuesta, los seis autores del manual, Juan Luis primero y Pedro de correspondencia; CRediT por autor.
+
+## Alcance de la versión 1.0
+
+Solo lo verificado contra los brutos: cohortes **2010, 2011 y 2012**, todas las sesiones, incidencias documentadas y sesiones defectuosas marcadas, no borradas. Las cohortes 2013–2015 y el servidor 2020–2026 entran en versiones 1.x con DOI de versión.
+
+| Cohorte | Niños (máx. por sesión) | Momentos | Primer–último | Tareas |
+|---|---|---|---|---|
+| 2010 | 1.565 | 14 | 5.1 – 11.2 | 96 |
+| 2011 | 1.870 | 16 | 4.1 – 10.2 | 103 |
+| 2012 | 1.554 | 13 | 4.1 – 9.2 | 90 |
+| 2013 | 1.318 | 10 | 4.1 – 8.2 | 58 |
+| 2014 | 447 | 6 | 4.1 – 7.1 | 39 |
+| 2015 | 495 | 3 | 4.1 – 6.2 | 28 |
+
+Catálogo: 126 tareas canónicas (32 A, 26 B, 68 C) en nueve dominios. El paquete lleva todas con su clase; el artículo detalla A y B.
+
+**Paquete** (CSV UTF-8 y Parquet, generados por un solo script `04\scripts\R\m8_paquete_datos.R`, nada a mano): `leeduca_largo` (niño × sesión × tarea × medida), `leeduca_items` (respuestas y tiempos por ítem, plataforma nueva), `tareas` (el catálogo), `sesiones`, `centros` (Preleo, fidelidad, ISE en terciles), `incidencias`, `README`, `LICENSE`, `CITATION.cff` y los scripts de validación y de reproducción de tablas y figuras.
+
+## Anonimización (reglas para el DPD)
+
+- NIE y nombres fuera; `id_nino` aleatorio nuevo, correspondencia en `99_ACCESO_RESTRINGIDO`, no se deposita.
+- Centro → `C001`…; profesor no aparece; aula con código del centro.
+- Sin fecha de nacimiento: `edad_meses` por sesión y `cohorte`. Fechas de evaluación al mes.
+- Sexo, respuestas y tiempos por ítem se mantienen.
+- Diagnóstico de Séneca: dato de salud. Escenario 2 con acuerdo de uso; escenario 1, solo la etiqueta construida con las propias tareas.
+- Preleo y fidelidad por centro codificado; ISE en terciles.
+- Centros con menos de 10 niños en una cohorte se agrupan; k ≥ 5 en `cohorte × centro × sexo × edad_meses`.
+- Informe de riesgo con `sdcMicro` antes y después.
+- Nunca: texto libre, cuestionarios familiares, nada de `99_ACCESO_RESTRINGIDO`.
+
+## Esqueleto del borrador
+
+Formato *Scientific Data*: Background & Summary (por qué faltan datos abiertos longitudinales de lectura en español; origen en DIS-ESP; qué permite esta base), Methods (participantes, ética, plataforma y procedimiento, tareas, Preleo, procesado con las incidencias conocidas), Data Records (según escenario), Technical Validation (completitud, α/ω, test-retest, cargas por edad, validez predictiva, rangos y claves, riesgo de reidentificación), Usage Notes y Code Availability. Figuras: diseño cohortes × momentos × familias; fiabilidad y estabilidad por familia; flujo de participantes. Tablas: N por cohorte y momento; tareas A y B; incidencias. Título propuesto: *LEEDUCA: a longitudinal dataset of reading acquisition and its precursors in Spanish children assessed three times per school year from age 4 to 11*. Casi todo Methods y Technical Validation sale del manual y se recalcula sobre el paquete congelado.
+
+## Calendario
+
+| Fase | Qué | Depende de | Duración |
+|---|---|---|---|
+| 0 | Lectura de la ficha; reunir consentimientos, dictamen y autorización | — | 1–2 semanas |
+| 1 | Consulta al DPD; elección del escenario | 0 | 2–4 semanas |
+| 2 | Script del paquete: tabla larga 2010–2012 congelada, anonimización, validación | nada | 2–3 semanas |
+| 3 | Borrador 1 en español con figuras y tablas del paquete | 2 | 1–2 semanas |
+| 4 | Depósito con DOI reservado | 1 y 2 | 1 semana |
+| 5 | Borrador 2 en inglés, Data Records, declaraciones, envío | 3 y 4 | 2 semanas |
+
+Con 0–1 en paralelo con 2, el envío puede estar en unos dos meses y medio desde la decisión. En el escenario 3 desaparece la fase 4 y el artículo pasa a *Cohort Profile*.
