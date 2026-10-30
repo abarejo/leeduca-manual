@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 30/10/2026 | Agenda: M11 (4) | Modelo de crecimiento multinivel del RAN con la edad en meses (3.902 niños, 99 colegios): la pendiente cambia a los 5,5 años (0,73 → 0,29 DT/año), los niños difieren en ritmo de crecimiento y se dan percentiles por edad en meses para el baremo. |
 | 30/10/2026 | Agenda: M11 (3) | Síntesis «En diez líneas» y borrador de introducción en la página de desarrollo. Lámina 1921 leída en la plataforma (25 estímulos): todas las tareas RAN en ítems/min. Discontinuidad por fecha de corte ampliada a nueve contrastes: el paso a 1º de primaria acelera el RAN +0,31 DT en los tres contrastes; el paso de 2º a 3º de infantil solo en el par de cohortes 2011/2010. |
 | 29/10/2026 | Agenda: M11 (2) | Discontinuidad por fecha de corte escolar: a igual edad, un curso más acelera el RAN 0,37–0,40 DT en infantil y 0,31 DT con 1º de primaria, más que un año de edad a los 6. Apartado de referencias en la página de desarrollo y porte del script a R. |
 | 29/10/2026 | Agenda: M11 | Nuevo estudio M11, desarrollo del RAN de 4 a 8 años (idea de A. Giménez), con página de desarrollo: revisión de literatura, cobertura de las tareas RAN por edad y cohorte, curva 4–8 años replicada entre cohortes, edad relativa, estabilidad de las diferencias individuales, Preleo y relación con la lectura. Incidencias nuevas de láminas sin tiempo en 2016/17 y en 2013/181, 2015/906, 2011/905 y 2010/189. |

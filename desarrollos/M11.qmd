@@ -4,7 +4,7 @@ search: false
 
 # M11 · Desarrollo del RAN de 4 a 8 años — análisis exploratorio {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
+*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar y modelo de crecimiento, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -16,7 +16,7 @@ search: false
 
 Proponemos un estudio sobre el desarrollo de la denominación rápida automatizada (RAN) entre los 4 y los 8 años con los datos de la plataforma: cinco cohortes (2010–2015), tres medidas por curso y entre 400 y 900 niños por sesión. La literatura sobre el RAN como predictor es enorme; la literatura sobre cómo cambia el propio RAN con la edad es escasa, y en español casi inexistente. Los resultados preliminares, sobre 17.160 aplicaciones limpias de 11 tareas RAN, dicen cinco cosas:
 
-1. **Hay curva y es reproducible.** El RAN mejora alrededor de 1 DT por año entre los 4 y los 5 años (colores, números y objetos pasan de unos 34 a unos 44 ítems correctos por minuto) y sigue mejorando, más despacio, hasta los 8. Cohortes distintas evaluadas con la misma tarea a la misma edad dan medianas casi idénticas.
+1. **Hay curva y es reproducible.** El RAN crece 0,73 DT por año hasta los 5 años y medio y 0,29 DT por año después (modelo multinivel con 3.902 niños; nodo estimado por verosimilitud). Cohortes distintas evaluadas con la misma tarea a la misma edad dan medianas casi idénticas.
 2. **La edad en meses importa dentro del aula a los 4 años y deja de importar a los 7.** La correlación con la edad en meses baja de ρ ≈ .20–.28 a los 4 años a ≈ 0 a los 7–8.
 3. **Las diferencias individuales son moderadamente estables**, menos que en el estudio sueco de referencia: ρ = .45–.63 a cuatro meses, .30–.45 a dos o tres años, .15–.30 de los 4 a los 8. La fiabilidad de una sola lámina limita estas cifras y es un resultado en sí mismo.
 4. **A igual edad, el paso a 1º de primaria acelera el RAN** (+0,31 DT, tres contrastes concordantes; discontinuidad por fecha de corte escolar); el paso de 2º a 3º de infantil solo en uno de los tres pares de cohortes. La instrucción alfabética modifica el RAN, en contra de la tesis de que la relación RAN → lectura es unidireccional.
@@ -81,6 +81,29 @@ En una escala común de ítems por minuto, la lámina de colores da los mismos v
 | Objetos repetidos cortos 1893 (s) | 7.2 | 2010: 15,2 (N = 436) | 2012: 16,0 (N = 218) |
 | Objetos repetidos largos 1945 (s) | 7.1 / 7.2 | 2010: 19,2 (N = 697) | 2012: 18,4 (N = 192) |
 
+### La curva con un modelo de crecimiento multinivel
+
+Con todas las tareas en ítems/min, un solo modelo: 16.595 aplicaciones de 3.902 niños en 99 colegios; niños (intercepto y pendiente aleatorios) dentro de colegios (intercepto); tarea y cohorte como efectos fijos; la edad en meses como tiempo, con un spline lineal cuyo nodo se busca por verosimilitud entre los 4,75 y los 7,25 años.
+
+- **La pendiente cambia a los 5 años y medio.** El nodo con máxima verosimilitud está en 5,50 años (IC de perfil 5,25–5,50); cualquier nodo a partir de los 6 empeora el ajuste en más de 14 unidades de log-verosimilitud. Antes del nodo el RAN crece 8,6 ítems/min por año (0,73 DT/año); después, 3,5 (0,29 DT/año). El crecimiento rápido no termina al entrar en primaria sino a mitad de 3º de infantil: la instrucción de 1º añade un salto a una curva que ya se ha aplanado.
+- **Los niños difieren en el ritmo de crecimiento, no solo en el nivel.** La pendiente aleatoria mejora el modelo (χ² = 215, 1 gl); su DT es 2,2 ítems/min por año. CCI del niño, descontadas tarea y cohorte, .27; del colegio, .05.
+- **Percentiles por edad en meses** (regresión cuantílica; referencia objetos discreto, cohorte 2010):
+
+| Edad (meses) | P5 | P10 | P25 | P50 | P75 | P90 | P95 |
+|---|---|---|---|---|---|---|---|
+| 48 | 14 | 16 | 22 | 29 | 35 | 41 | 45 |
+| 54 | 18 | 21 | 27 | 33 | 39 | 45 | 49 |
+| 60 | 22 | 26 | 31 | 37 | 42 | 48 | 52 |
+| 66 | 27 | 30 | 36 | 41 | 46 | 52 | 56 |
+| 72 | 28 | 31 | 37 | 43 | 48 | 54 | 57 |
+| 84 | 30 | 33 | 40 | 46 | 52 | 57 | 60 |
+| 96 | 32 | 35 | 42 | 49 | 56 | 60 | 62 |
+| 102 | 32 | 36 | 44 | 51 | 58 | 62 | 64 |
+
+![Curva de desarrollo del RAN (modelo multinivel y percentiles por edad en meses) y perfil de verosimilitud del nodo.](../figuras/desarrollos/M11_F6_crecimiento_v1.png){width="100%"}
+
+La distancia P10–P90 se mantiene en unos 25 ítems/min de los 4 a los 8 años, pero pasa del 150 % de la mediana al 50 %: las diferencias individuales se comprimen conforme la tarea se automatiza, y a los 4 años seis meses de edad valen tanto como un cuartil.
+
 ### Edad relativa
 
 Dentro de una misma sesión, los niños mayores denominan más rápido a los 4 años: ρ con la edad en meses de .21–.24 en colores y números y .18 en objetos; doce meses valen 0,6–0,8 DT. El efecto baja a ρ ≈ .15 a los 5 años, a .04–.12 a los 6 y a 0–.1 a los 7–8. Implicación para el manual: el baremo de RAN en infantil va por trimestre (o por edad en meses); en primaria basta el curso.
@@ -141,7 +164,7 @@ El RAN de 4.1 correlaciona con el percentil lector de 6 años (ρ = .36 colores,
 ## Qué cambia en el estudio
 
 1. **Escala común** en ítems/min (hecha): la equivalencia discreto–lámina se confirma en objetos (32,8 frente a 34,4 ítems/min en 4.1–4.2 de 2012) y en colores.
-2. **Curva de referencia**: modelo de crecimiento multinivel (niños en colegios) no lineal, con la edad en meses como tiempo y la cohorte como efecto cruzado; percentiles por edad con regresión cuantílica o GAMLSS, como en M4; contraste de un cambio de pendiente al iniciarse 1º.
+2. **Curva de referencia** (primera versión hecha): modelo multinivel con nodo libre y percentiles por edad en meses. Pendiente: GAMLSS o cNORM para alisar los percentiles, cohorte como efecto cruzado y comprobación de la invarianza de la pendiente entre tareas.
 3. **Estabilidad** por tramos, corregida por atenuación; RI-CLPM RAN ↔ lectura de 5 a 8 años para la unidireccionalidad, junto con la discontinuidad por fecha de corte (ya replicada en nueve contrastes; falta explicar la heterogeneidad del paso 4→5).
 4. **Formatos**: números frente a colores en los mismos niños (4.1 y 5.1).
 5. **Preleo**: CON − SIN a cada edad con ISE y efectos aleatorios de colegio, con la asignación v4.
