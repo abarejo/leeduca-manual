@@ -4,6 +4,7 @@ project:
     - apps/
     - datos/agregados/CATALOGO/
     - figuras/pantallas/
+    - borradores/
   output-dir: _book
 
 lang: es

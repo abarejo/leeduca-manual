@@ -201,7 +201,17 @@ El presente estudio aprovecha un diseño de cohortes múltiples con tres evaluac
 
 ## Borrador del artículo
 
-Borrador 1 completo (resumen, introducción, método, resultados con cuatro tablas y tres figuras, discusión, referencias y notas para los coautores) en el documento de Claude «Desarrollo de la denominación rápida de 4 a 8 años – borrador del artículo (M11)», para revisión de A. Giménez y J. L. Luque.
+::: {.callout-note collapse="true"}
+## Borrador 1 para revisión (30/10/2026) — abrir
+
+**Para A. Giménez y J. L. Luque.** Borrador completo: resumen, introducción, método, resultados (cuatro tablas, tres figuras), discusión, referencias y lista de pendientes para los coautores.
+
+- [Descargar el borrador en Word (.docx, 0,7 MB)](../borradores/M11_RAN_borrador_1_2026-10-30.docx)
+- Documento vivo en Claude, con comentarios en línea: pedir el enlace a P. J. López (requiere acceso compartido).
+- Copia de trabajo en el PC de PJ López: `PLATAFORMA\ARCHIVOS_CONTROL_JAVI\ARTICULOS_BORRADORES\RAN_M11\`.
+
+Cómo revisar: comentarios o control de cambios en el Word, o anotaciones en el documento de Claude; las versiones nuevas se publicarán aquí con fecha (`borrador_2_…`). No difundir fuera del grupo: es un borrador no enviado.
+:::
 
 ## Archivos
 
