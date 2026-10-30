@@ -954,6 +954,13 @@ div.csl-indent {
   <li><a href="#en-diez-líneas" id="toc-en-diez-líneas" class="nav-link" data-scroll-target="#en-diez-líneas">En diez líneas</a></li>
   <li><a href="#objetivos-hipótesis-y-lo-que-sale" id="toc-objetivos-hipótesis-y-lo-que-sale" class="nav-link" data-scroll-target="#objetivos-hipótesis-y-lo-que-sale">Objetivos, hipótesis y lo que sale</a></li>
   <li><a href="#contraste-con-la-ficha-del-manual" id="toc-contraste-con-la-ficha-del-manual" class="nav-link" data-scroll-target="#contraste-con-la-ficha-del-manual">Contraste con la ficha del manual</a></li>
+  <li><a href="#análisis-complementarios-30102026" id="toc-análisis-complementarios-30102026" class="nav-link" data-scroll-target="#análisis-complementarios-30102026">Análisis complementarios (30/10/2026)</a>
+  <ul class="collapse">
+  <li><a href="#réplica-de-la-tabla-1-del-artículo-cohorte-2020" id="toc-réplica-de-la-tabla-1-del-artículo-cohorte-2020" class="nav-link" data-scroll-target="#réplica-de-la-tabla-1-del-artículo-cohorte-2020">Réplica de la tabla 1 del artículo (cohorte 2020)</a></li>
+  <li><a href="#el-año-de-aplicación-pesa-más-que-la-edad" id="toc-el-año-de-aplicación-pesa-más-que-la-edad" class="nav-link" data-scroll-target="#el-año-de-aplicación-pesa-más-que-la-edad">El año de aplicación pesa más que la edad</a></li>
+  <li><a href="#fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010" id="toc-fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010" class="nav-link" data-scroll-target="#fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010">Fiabilidad y estabilidad para el artículo (cohorte 2020, sin 0/10)</a></li>
+  </ul></li>
+  <li><a href="#revisión-de-literatura-scispace-30102026" id="toc-revisión-de-literatura-scispace-30102026" class="nav-link" data-scroll-target="#revisión-de-literatura-scispace-30102026">Revisión de literatura (SciSpace, 30/10/2026)</a></li>
   <li><a href="#revisión-qué-conviene-cambiar-antes-de-enviar" id="toc-revisión-qué-conviene-cambiar-antes-de-enviar" class="nav-link" data-scroll-target="#revisión-qué-conviene-cambiar-antes-de-enviar">Revisión: qué conviene cambiar antes de enviar</a></li>
   <li><a href="#revistas-posibles" id="toc-revistas-posibles" class="nav-link" data-scroll-target="#revistas-posibles">Revistas posibles</a></li>
   <li><a href="#pendientes" id="toc-pendientes" class="nav-link" data-scroll-target="#pendientes">Pendientes</a></li>
@@ -984,7 +991,7 @@ div.csl-indent {
 </header>
 
 
-<p><em>Página de seguimiento de un manuscrito del grupo · versión 1, 30/10/2026. Artículo de A. Sánchez Gómez (borrador completo recibido el 30/10/2026); contraste con la ficha del manual y revisión de P. J. López-Pérez.</em></p>
+<p><em>Página de seguimiento de un manuscrito del grupo · versión 1, 30/10/2026; análisis complementarios y revisión de literatura esa tarde. Artículo de A. Sánchez Gómez (borrador completo recibido el 30/10/2026); contraste con la ficha del manual y revisión de P. J. López-Pérez.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1177,14 +1184,315 @@ Advertencia
 </tr>
 </tbody>
 </table>
-<p><strong>Siguiente paso de datos:</strong> replicar la tabla 1 del artículo con la tabla larga del servidor filtrando cohorte 2020 y centros de Málaga, con y sin los 0/10. Si sale 62/62 sin los 0/10, la diferencia es de muestra y se documenta; si sale 68/52, hay que revisar el tratamiento de los 0/10 en el artículo. Es media hora con <code>ficha_rima_3anios.R</code>.</p>
+<p><strong>Resuelto el 30/10 (ver análisis complementarios):</strong> con la cohorte 2020 y los centros de Málaga, la tabla larga del servidor da 61 % / 63 % y d′ = −0,05 en febrero de 3 años, lo mismo que el artículo. No hay artefacto de los 0/10. La diferencia con la ficha venía de mezclar cohortes, y eso destapa algo más importante: el año de aplicación.</p>
+</section>
+<section id="análisis-complementarios-30102026" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-complementarios-30102026">Análisis complementarios (30/10/2026)</h2>
+<p>Guion <code>04\scripts\rima_cohorte2020.py</code> → <code>04\DIAGNOSTICO\rima_cohorte2020_replica_v1.xlsx</code>. Tabla larga del servidor (v2), tarea 11795, primera aplicación por niño, curso y trimestre; cohorte = año de inicio del curso − edad. Centros de Málaga y centros sin identificar (la mayoría son de Málaga); sin Cantabria.</p>
+<section id="réplica-de-la-tabla-1-del-artículo-cohorte-2020" class="level3">
+<h3 class="anchored" data-anchor-id="réplica-de-la-tabla-1-del-artículo-cohorte-2020">Réplica de la tabla 1 del artículo (cohorte 2020)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Momento</th>
+<th>N</th>
+<th>No realiza (%)</th>
+<th>«Sí» rima / no rima, sin 0/10 (%)</th>
+<th>d′ agrupado, sin 0/10</th>
+<th>d′ agrupado, con 0/10</th>
+<th>Dominio ≥ 9 (%)</th>
+<th>Artículo: d′ · dominio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.2</td>
+<td>568</td>
+<td>17,3</td>
+<td>61 / 62</td>
+<td>−0,02</td>
+<td>−0,47</td>
+<td>10,7</td>
+<td>−0,07 · 10,8</td>
+</tr>
+<tr class="even">
+<td>3.3</td>
+<td>402</td>
+<td>10,0</td>
+<td>65 / 50</td>
+<td>0,40</td>
+<td>0,11</td>
+<td>18,7</td>
+<td>0,46 · 19,0</td>
+</tr>
+<tr class="odd">
+<td>4.1</td>
+<td>455</td>
+<td>4,4</td>
+<td>63 / 44</td>
+<td>0,49</td>
+<td>0,35</td>
+<td>16,9</td>
+<td>0,48 · 16,2</td>
+</tr>
+<tr class="even">
+<td>4.2</td>
+<td>424</td>
+<td>5,7</td>
+<td>71 / 42</td>
+<td>0,75</td>
+<td>0,56</td>
+<td>21,9</td>
+<td>1,01 · 26,0</td>
+</tr>
+<tr class="odd">
+<td>4.3</td>
+<td>349</td>
+<td>2,6</td>
+<td>75 / 41</td>
+<td>0,90</td>
+<td>0,80</td>
+<td>28,4</td>
+<td>1,27 · 35,9</td>
+</tr>
+<tr class="even">
+<td>5.1</td>
+<td>458</td>
+<td>1,1</td>
+<td>80 / 30</td>
+<td>1,36</td>
+<td>1,31</td>
+<td>39,7</td>
+<td>1,48 · 39,5</td>
+</tr>
+<tr class="odd">
+<td>5.2</td>
+<td>642</td>
+<td>0,3</td>
+<td>80 / 30</td>
+<td>1,37</td>
+<td>1,35</td>
+<td>43,2</td>
+<td>1,77 · 49,0</td>
+</tr>
+<tr class="even">
+<td>5.3</td>
+<td>463</td>
+<td>0,4</td>
+<td>80 / 26</td>
+<td>1,50</td>
+<td>1,48</td>
+<td>45,1</td>
+<td>1,87 · 53,2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>La tabla 1 del artículo se replica</strong> en «no realiza», tasas de «sí», d′ y dominio hasta los 4 años. Las tasas del artículo excluyen los 0/10, como deben (con ellos, d′ en 3.2 bajaría a −0,47).</li>
+<li>A partir de 4.2 el d′ del artículo es mayor que el agrupado (1,87 frente a 1,50 en 5.3). Es lo esperable: el modelo mixto estima un d′ <strong>condicional</strong> (del niño medio), que con una DT entre niños de 0,95 supera al d′ <strong>poblacional</strong> o agrupado. Conviene decir en el método cuál de los dos se publica; para comparar con otros estudios, que casi siempre dan el agrupado, el marginal es más útil.</li>
+<li>Las N difieren (568 frente a 656 en 3.2; 642 frente a 498 en 5.2) porque la tabla larga identifica centros y cohortes de otra manera. No cambia las cifras.</li>
+</ul>
+</section>
+<section id="el-año-de-aplicación-pesa-más-que-la-edad" class="level3">
+<h3 class="anchored" data-anchor-id="el-año-de-aplicación-pesa-más-que-la-edad">El año de aplicación pesa más que la edad</h3>
+<p>Mismo momento, cohortes distintas = cursos escolares distintos de aplicación. d′ agrupado sin 0/10, N ≥ 40:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Edad</th>
+<th>2023/24</th>
+<th>2024/25</th>
+<th>2025/26</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3 años</td>
+<td>0,17 (N = 836)</td>
+<td>0,99 (347)</td>
+<td>1,57 (290)</td>
+</tr>
+<tr class="even">
+<td>4 años</td>
+<td>0,36 (217)</td>
+<td>0,72 (1.207)</td>
+<td>1,15 (395)</td>
+</tr>
+<tr class="odd">
+<td>5 años</td>
+<td>—</td>
+<td>1,11 (306)</td>
+<td>1,42 (1.711)</td>
+</tr>
+</tbody>
+</table>
+<p>En febrero de 3 años, la cohorte 2020 (aplicada en 2023/24) da d′ = −0,05 (N = 396, Málaga); la 2021 (2024/25), 0,92 (N = 64); la 2022 (2025/26), 1,56 (N = 59; Cantabria, 1,51). <strong>A igual edad, cada curso de aplicación añade entre 0,4 y 0,8 de d′.</strong> Dos explicaciones, no excluyentes:</p>
+<ol type="1">
+<li><strong>Aprendizaje de los evaluadores.</strong> 2023/24 fue el primer curso de la batería de 3 años. A los 3 años hay centros de la cohorte 2020 con d′ muy negativo (−1,8 con N = 28; −1,1 con N = 20; −0,8 con N = 37): un grupo de niños no puede discriminar sistemáticamente al revés, pero un evaluador sí puede registrar al revés (acierto = «sí» en vez de acierto = correcto). En 2024/25 esos centros dan valores positivos.</li>
+<li><strong>Selección de centros.</strong> Las cohortes 2021 y 2022 a los 3 años tienen pocos niños y centros (64–115), que pueden ser los más implicados. Dentro de los centros que tienen las dos cohortes, la comparación va en la misma dirección en la mayoría pero con N pequeñas.</li>
+</ol>
+<p><strong>Consecuencias para el artículo.</strong> La «discriminación nula a los 3 años y medio» (H1) está confundida con el primer año de aplicación: en las cohortes siguientes, a esa edad, d′ ≈ 1. Y el salto de febrero a mayo de 3 años (+0,53) puede ser en parte aprendizaje de la administración. Tres cosas que hacer: (a) estimar el d′ <strong>por centro</strong> en 3.2 y mirar los negativos; si son errores de registro, excluirlos o invertirlos con justificación; (b) añadir al modelo un efecto aleatorio de centro sobre la <strong>discriminación</strong> (ahora solo lo tiene sobre el criterio; la DT de 0,37 entre centros en el modelo de ítems ya lo pedía); (c) reescribir H1 y la discusión en términos de «al inicio del seguimiento» y añadir una limitación: primer curso de aplicación. La cohorte 2021, con los mismos centros, servirá de réplica cuando llegue a 5 años (mayo de 2027).</p>
+<p><strong>Consecuencias para el manual.</strong> El baremo de 3 años no puede mezclar cursos de aplicación. La ficha de rima debe separar 2023/24 del resto o baremar desde 2024/25.</p>
+</section>
+<section id="fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010" class="level3">
+<h3 class="anchored" data-anchor-id="fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010">Fiabilidad y estabilidad para el artículo (cohorte 2020, sin 0/10)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Momento</th>
+<th>α sin 0/10</th>
+<th>α con 0/10</th>
+<th>r mitades de d′ (Spearman-Brown)</th>
+<th>ρ con el momento siguiente (aciertos · d′)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.2</td>
+<td>.73</td>
+<td>.84</td>
+<td>.82</td>
+<td>.35 · .35 (N = 304)</td>
+</tr>
+<tr class="even">
+<td>3.3</td>
+<td>.75</td>
+<td>.83</td>
+<td>.78</td>
+<td>.21 · .16 (116)</td>
+</tr>
+<tr class="odd">
+<td>4.1</td>
+<td>.64</td>
+<td>.72</td>
+<td>.68</td>
+<td>.17 · .18 (295)</td>
+</tr>
+<tr class="even">
+<td>4.2</td>
+<td>.65</td>
+<td>.76</td>
+<td>.69</td>
+<td>.41 · .39 (241)</td>
+</tr>
+<tr class="odd">
+<td>4.3</td>
+<td>.66</td>
+<td>.73</td>
+<td>.71</td>
+<td>.48 · .44 (146)</td>
+</tr>
+<tr class="even">
+<td>5.1</td>
+<td>.65</td>
+<td>.70</td>
+<td>.73</td>
+<td>.44 · .44 (312)</td>
+</tr>
+<tr class="odd">
+<td>5.2</td>
+<td>.71</td>
+<td>.72</td>
+<td>.74</td>
+<td>.42 · .40 (282)</td>
+</tr>
+<tr class="even">
+<td>5.3</td>
+<td>.70</td>
+<td>.72</td>
+<td>.71</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Mitades: pares 1–4 y 6 frente a 5 y 7–10 (3 + 2 en cada mitad). El α = .81 del artículo corresponde a α con los 0/10 en 3 años. Para publicar: α sin 0/10 por momento (.64–.75) o, mejor, la fiabilidad de d′ por mitades (.68–.82), que es lo que se analiza. La estabilidad de .16–.48 entre momentos es un dato que falta en el artículo y que apoya su implicación práctica.</p>
+</section>
+</section>
+<section id="revisión-de-literatura-scispace-30102026" class="level2">
+<h2 class="anchored" data-anchor-id="revisión-de-literatura-scispace-30102026">Revisión de literatura (SciSpace, 30/10/2026)</h2>
+<p>Ocho búsquedas sobre rima en español y en ortografías transparentes, distractores, sesgo de respuesta, posición de la unidad y escolarización frente a edad. Lo que añade a las 36 referencias del borrador:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hueco del borrador</th>
+<th>Qué aporta</th>
+<th>Dónde encaja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Evidencia directa en español de que la rima es la tarea más difícil</td>
+<td><span class="citation" data-cites="delacalle2016desarrollo">De la Calle, Aguilar, y Navarro (<a href="../referencias.html#ref-delacalle2016desarrollo" role="doc-biblioref">2016</a>)</span>: 125 prelectores de 4–5 años (BIL 3-6), la rima resulta la tarea de conciencia fonológica más difícil, por detrás de aislar y contar sílabas y fonemas. <span class="citation" data-cites="casillas2007silaba">Casillas y Goikoetxea (<a href="../referencias.html#ref-casillas2007silaba" role="doc-biblioref">2007</a>)</span>: comparación de sílaba, principio-rima y fonema a los 5–6 años. <span class="citation" data-cites="fumagalli2010sensibilidad">Fumagalli, Wilson, y Jaichenco (<a href="../referencias.html#ref-fumagalli2010sensibilidad" role="doc-biblioref">2010</a>)</span>: 4 años a 6.º en Argentina; las unidades finales son las más difíciles</td>
+<td>Introducción («El papel de la lengua») y discusión («La sílaba antes que la rima»)</td>
+</tr>
+<tr class="even">
+<td>Muestra grande de conciencia fonológica en español preescolar</td>
+<td><span class="citation" data-cites="anthony2011spanish">Anthony et&nbsp;al. (<a href="../referencias.html#ref-anthony2011spanish" role="doc-biblioref">2011</a>)</span>: más de 1.200 hispanohablantes de 3 a 6 años; la secuencia por tamaño de unidad resulta ambigua. Y <span class="citation" data-cites="anthony2004nature">Anthony y Lonigan (<a href="../referencias.html#ref-anthony2004nature" role="doc-biblioref">2004</a>)</span>: en los más pequeños la sensibilidad a la rima no se distingue de las demás formas de conciencia fonológica</td>
+<td>Discusión: si la rima es una habilidad aparte o la misma habilidad medida con otra tarea</td>
+</tr>
+<tr class="odd">
+<td>Ortografías transparentes fuera del español</td>
+<td><span class="citation" data-cites="wimmer1994rhyme">Wimmer, Landerl, y Schneider (<a href="../referencias.html#ref-wimmer1994rhyme" role="doc-biblioref">1994</a>)</span>: en alemán la rima apenas predice la lectura en 1.º y gana peso en 3.º–4.º. <span class="citation" data-cites="pfost2015meta">Pfost (<a href="../referencias.html#ref-pfost2015meta" role="doc-biblioref">2015</a>)</span>: meta-análisis en alemán, la rima predice menos que el fonema. <span class="citation" data-cites="defior2004crosslinguistic">Defior (<a href="../referencias.html#ref-defior2004crosslinguistic" role="doc-biblioref">2004</a>)</span>: unidades intrasilábicas en ortografías opacas, fonemas en las transparentes</td>
+<td>Introducción y líneas futuras (validez predictiva)</td>
+</tr>
+<tr class="even">
+<td>Posición final de la palabra</td>
+<td><span class="citation" data-cites="puolakanaho2003assessment">Puolakanaho et&nbsp;al. (<a href="../referencias.html#ref-puolakanaho2003assessment" role="doc-biblioref">2003</a>)</span>: a los 3 años y medio, las unidades iniciales son más fáciles que las finales; <span class="citation" data-cites="fumagalli2010sensibilidad">Fumagalli, Wilson, y Jaichenco (<a href="../referencias.html#ref-fumagalli2010sensibilidad" role="doc-biblioref">2010</a>)</span></td>
+<td>Discusión del resultado de sílaba final (hoy solo apoyado en una tarea de α = .46)</td>
+</tr>
+<tr class="odd">
+<td>Escolarización frente a edad</td>
+<td><span class="citation" data-cites="skibbe2012summer">Skibbe et&nbsp;al. (<a href="../referencias.html#ref-skibbe2012summer" role="doc-biblioref">2012</a>)</span>: crecimiento en el curso frente al verano de preescolar a 2.º; el efecto de la escuela sobre la conciencia fonológica es mediano</td>
+<td>Discusión de la trayectoria (mesetas en verano)</td>
+</tr>
+<tr class="even">
+<td>Ortografía y juicio de rima</td>
+<td><span class="citation" data-cites="castro2005ortografia">Castro, Gomes, y Ribeirinho (<a href="../referencias.html#ref-castro2005ortografia" role="doc-biblioref">2005</a>)</span> (portugués): la congruencia ortográfica afecta al juicio de rima en lectores; <span class="citation" data-cites="wagensveld2012rhyme">Wagensveld et&nbsp;al. (<a href="../referencias.html#ref-wagensveld2012rhyme" role="doc-biblioref">2012</a>)</span></td>
+<td>Limitación de la pantalla</td>
+</tr>
+<tr class="odd">
+<td>Estimulación de la rima a los 3–4 años en español</td>
+<td><span class="citation" data-cites="suarez2019estimulacion">Suárez-Yepes et&nbsp;al. (<a href="../referencias.html#ref-suarez2019estimulacion" role="doc-biblioref">2019</a>)</span>: programa de nueve meses en Barranquilla; mejora la segmentación, no la rima</td>
+<td>Implicaciones</td>
+</tr>
+<tr class="even">
+<td>Clásicos que faltan</td>
+<td><span class="citation" data-cites="bryant1990rhyme">Bryant et&nbsp;al. (<a href="../referencias.html#ref-bryant1990rhyme" role="doc-biblioref">1990</a>)</span>: rima → fonema → lectura, con contribución directa de la rima</td>
+<td>Introducción</td>
+</tr>
+</tbody>
+</table>
+<p>No localizados en SciSpace: Herrera y Defior (2005) y Goswami, Gombert y de Barrera (1998); se mantienen en la lista para buscar a mano. No hay meta-análisis específico de rima en español; el hueco que el artículo cubre es real.</p>
 </section>
 <section id="revisión-qué-conviene-cambiar-antes-de-enviar" class="level2">
 <h2 class="anchored" data-anchor-id="revisión-qué-conviene-cambiar-antes-de-enviar">Revisión: qué conviene cambiar antes de enviar</h2>
-<p>Ordenado por importancia. Lo que afecta a un resultado va primero; lo de redacción, al final.</p>
-<ol type="1">
-<li><strong>Fiabilidad (método, instrumentos).</strong> El α = .81 necesita decir de qué momento es y si incluye las aplicaciones 0/10. Un bloque de ceros infla α; sin ellas la ficha da .65–.79 según el momento. Además, α sobre los aciertos de una tarea con seis «sí» y cuatro «no» mezcla discriminación y sesgo de respuesta: los pares que riman correlacionan entre sí por la tendencia a decir «sí», no por la habilidad. Propuesta: dar α por momento sin los 0/10, o mejor la fiabilidad de d′ (dos mitades: 3 + 2 pares frente a 3 + 2), y comentar en limitaciones que diez ítems dan una medida individual poco precisa.</li>
-<li><strong>Estabilidad.</strong> El artículo no informa de la correlación de un momento al siguiente en los mismos niños. La ficha la sitúa en ρ = .15–.41. Es un dato que un revisor pedirá y que además refuerza una de las implicaciones (no usar la tarea para decidir sobre un niño a los 3–4 años). La DT de 0,95 de la discriminación individual que estima el modelo no sustituye a la estabilidad: mide varianza entre niños, no consistencia en el tiempo.</li>
+<p>Ordenado por importancia. Lo que afecta a un resultado va primero; lo de redacción, al final. El punto 0 se añadió el 30/10 tras los análisis complementarios.</p>
+<ol start="0" type="1">
+<li><strong>Año de aplicación y centros (nuevo, 30/10).</strong> Ver análisis complementarios: la discriminación nula a los 3 años y medio es específica del primer curso de aplicación (2023/24); en las cohortes siguientes, a esa edad, d′ ≈ 1. Hay centros con d′ muy negativo que apuntan a registro invertido. Antes de enviar: d′ por centro en 3.2, efecto aleatorio de centro sobre la discriminación y limitación explícita. Es el punto que más puede cambiar el artículo.</li>
+<li><strong>Fiabilidad (método, instrumentos).</strong> El α = .81 es α con los 0/10 a los 3 años (comprobado: .84 en 3.2 con ellos, .73 sin ellos). Un bloque de ceros infla α; sin ellas sale .64–.75 según el momento. Además, α sobre los aciertos de una tarea con seis «sí» y cuatro «no» mezcla discriminación y sesgo de respuesta: los pares que riman correlacionan entre sí por la tendencia a decir «sí», no por la habilidad. Propuesta: dar α por momento sin los 0/10, o mejor la fiabilidad de d′ (dos mitades: 3 + 2 pares frente a 3 + 2), y comentar en limitaciones que diez ítems dan una medida individual poco precisa.</li>
+<li><strong>Estabilidad.</strong> El artículo no informa de la correlación de un momento al siguiente en los mismos niños. En la cohorte 2020 es ρ = .16–.48 (tabla de arriba). Es un dato que un revisor pedirá y que además refuerza una de las implicaciones (no usar la tarea para decidir sobre un niño a los 3–4 años). La DT de 0,95 de la discriminación individual que estima el modelo no sustituye a la estabilidad: mide varianza entre niños, no consistencia en el tiempo.</li>
 <li><strong>«Sin apoyo visual».</strong> El método dice que el evaluador leía las palabras sin apoyo visual, pero la actividad 11795 muestra el par escrito en pantalla (comprobado en la plataforma el 23/10/2026). Si el niño ve la pantalla, a los 5 años algunos ya leen y pueden juzgar por la escritura (<em>fresa–mesa</em> comparten <em>-esa</em> a la vista). Hay que describirlo tal cual en el método y añadirlo a las limitaciones; si se sabe cómo se colocaba la pantalla en los centros, mejor.</li>
 <li><strong>La trayectoria leída por curso escolar.</strong> Los dos tramos sin avance (mayo de 3 → noviembre de 4: +0,02; mayo de 4 → noviembre de 5: +0,21) son los que atraviesan el verano; los saltos grandes (+0,53, +0,53, +0,27, +0,28) están dentro del curso. El patrón apunta a que lo que mueve la rima es la estimulación escolar, no la edad, y conecta con la <a href="../desarrollos/M11.html">discontinuidad por fecha de corte de M11</a>. Merece un párrafo en la discusión, con la cautela de Preleo. Además, parte del salto de febrero a mayo de 3 años puede ser familiaridad con el formato (segunda vez que hacen la tarea; «no realiza» baja del 18 % al 10 %).</li>
 <li><strong>Cifras que no cuadran entre apartados.</strong> 942 frente a 934 niños (bien explicado, pero conviene usar siempre 934 en tablas y resumen); subgrupo con datos sociodemográficos «n = 432» en participantes y «n = 429» en robustez; «36 centros» en participantes y «23 centros» en el contraste del ISE; N de febrero de 4 años (416) muy por debajo de noviembre (567) y mayo (627), sin explicar por qué (¿centros que no evaluaron ese trimestre?). Tabla 1: 10,8 % de dominio en febrero de 3 años frente a 10,9 % en tabla 3.</li>
@@ -1226,29 +1534,44 @@ Advertencia
 <tr class="odd">
 <td>Replicar la tabla 1 con la tabla larga del servidor (cohorte 2020, Málaga, con y sin 0/10)</td>
 <td>PJ López</td>
-<td>Pendiente</td>
+<td>Hecho 30/10: se replica</td>
 </tr>
 <tr class="even">
 <td>Fiabilidad por momento sin 0/10 y estabilidad entre momentos para el artículo</td>
-<td>PJ López (sale de <code>ficha_rima_3anios.R</code>)</td>
+<td>PJ López</td>
+<td>Hecho 30/10 (tabla en esta página)</td>
+</tr>
+<tr class="odd">
+<td>d′ por centro en 3.2 y revisión de los centros con d′ negativo (¿registro invertido?)</td>
+<td>PJ López</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
+<td>Modelo con efecto aleatorio de centro sobre la discriminación</td>
+<td>A. Sánchez</td>
 <td>Pendiente</td>
 </tr>
 <tr class="odd">
+<td>Decidir si 2023/24 se trata como curso piloto en el baremo de 3 años del manual</td>
+<td>Grupo</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
 <td>Decidir cómo describir la pantalla en el método</td>
 <td>A. Sánchez</td>
 <td>Pendiente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cuadrar 432/429, 36/23 centros, N de febrero de 4</td>
 <td>A. Sánchez</td>
 <td>Pendiente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Resumen, declaraciones, autoría, revista</td>
 <td>A. Sánchez y grupo</td>
 <td>Pendiente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Versión en inglés</td>
 <td>Por decidir</td>
 <td>—</td>
@@ -1259,21 +1582,31 @@ Advertencia
 <section id="registro" class="level2">
 <h2 class="anchored" data-anchor-id="registro">Registro</h2>
 <ul>
+<li><strong>30/10/2026 (tarde).</strong> Análisis complementarios: réplica de la tabla 1 (se replica), efecto del año de aplicación (0,4–0,8 de d′ por curso a igual edad), centros con d′ negativo a los 3 años, α y fiabilidad de d′ por mitades, estabilidad. Revisión de literatura con SciSpace (13 referencias nuevas). Punto 0 añadido a la revisión.</li>
 <li><strong>30/10/2026.</strong> Página creada. Borrador completo recibido de A. Sánchez. Contraste con la ficha de rima y revisión en diez puntos. Figuras del borrador incorporadas. Referencias del artículo añadidas a <code>referencias.bib</code>.</li>
 <li><strong>23/10/2026.</strong> Ficha de rima del manual publicada; se retiran de ella las citas al artículo hasta su publicación. Comprobado en la plataforma que la actividad 11795 muestra el par escrito.</li>
 </ul>
 </section>
 <section id="referencias-de-este-estudio" class="level2">
 <h2 class="anchored" data-anchor-id="referencias-de-este-estudio">Referencias de este estudio</h2>
-<p>Marco: <span class="citation" data-cites="bradley1983categorizing">Bradley y Bryant (<a href="../referencias.html#ref-bradley1983categorizing" role="doc-biblioref">1983</a>)</span>, <span class="citation" data-cites="anthony2003phonological">Anthony et&nbsp;al. (<a href="../referencias.html#ref-anthony2003phonological" role="doc-biblioref">2003</a>)</span>, <span class="citation" data-cites="ziegler2005grain">Ziegler y Goswami (<a href="../referencias.html#ref-ziegler2005grain" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="duncan1997rhyme">Duncan, Seymour, y Hill (<a href="../referencias.html#ref-duncan1997rhyme" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="carrillo1994development">Carrillo (<a href="../referencias.html#ref-carrillo1994development" role="doc-biblioref">1994</a>)</span>, <span class="citation" data-cites="jimenez2000metalinguistic">Jiménez y Ortiz (<a href="../referencias.html#ref-jimenez2000metalinguistic" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="zugarramurdi2022orthography">Zugarramurdi et&nbsp;al. (<a href="../referencias.html#ref-zugarramurdi2022orthography" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="goswami1998analogies">Goswami, Gombert, y Barrera (<a href="../referencias.html#ref-goswami1998analogies" role="doc-biblioref">1998</a>)</span>, <span class="citation" data-cites="herrera2005prelectores">Herrera y Defior (<a href="../referencias.html#ref-herrera2005prelectores" role="doc-biblioref">2005</a>)</span>. Semejanza global y distractores: <span class="citation" data-cites="treiman1982similarity">Treiman y Breaux (<a href="../referencias.html#ref-treiman1982similarity" role="doc-biblioref">1982</a>)</span>, <span class="citation" data-cites="carroll2001global">Carroll y Snowling (<a href="../referencias.html#ref-carroll2001global" role="doc-biblioref">2001</a>)</span>, <span class="citation" data-cites="wagensveld2012rhyme">Wagensveld et&nbsp;al. (<a href="../referencias.html#ref-wagensveld2012rhyme" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="schmitterer2019grain">Schmitterer y Schroeder (<a href="../referencias.html#ref-schmitterer2019grain" role="doc-biblioref">2019</a>)</span>. Detección de señal: <span class="citation" data-cites="macmillan2005detection">Macmillan y Creelman (<a href="../referencias.html#ref-macmillan2005detection" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="hautus1995corrections">Hautus (<a href="../referencias.html#ref-hautus1995corrections" role="doc-biblioref">1995</a>)</span>, <span class="citation" data-cites="decarlo1998sdt">DeCarlo (<a href="../referencias.html#ref-decarlo1998sdt" role="doc-biblioref">1998</a>)</span>, <span class="citation" data-cites="fritzley2003yes">Fritzley y Lee (<a href="../referencias.html#ref-fritzley2003yes" role="doc-biblioref">2003</a>)</span>. Las entradas completas están en el capítulo de <a href="../referencias.html">referencias</a>.</p>
+<p>Marco: <span class="citation" data-cites="bradley1983categorizing">Bradley y Bryant (<a href="../referencias.html#ref-bradley1983categorizing" role="doc-biblioref">1983</a>)</span>, <span class="citation" data-cites="bryant1990rhyme">Bryant et&nbsp;al. (<a href="../referencias.html#ref-bryant1990rhyme" role="doc-biblioref">1990</a>)</span>, <span class="citation" data-cites="anthony2004nature">Anthony y Lonigan (<a href="../referencias.html#ref-anthony2004nature" role="doc-biblioref">2004</a>)</span>, <span class="citation" data-cites="anthony2011spanish">Anthony et&nbsp;al. (<a href="../referencias.html#ref-anthony2011spanish" role="doc-biblioref">2011</a>)</span>, <span class="citation" data-cites="anthony2003phonological">Anthony et&nbsp;al. (<a href="../referencias.html#ref-anthony2003phonological" role="doc-biblioref">2003</a>)</span>, <span class="citation" data-cites="ziegler2005grain">Ziegler y Goswami (<a href="../referencias.html#ref-ziegler2005grain" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="duncan1997rhyme">Duncan, Seymour, y Hill (<a href="../referencias.html#ref-duncan1997rhyme" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="carrillo1994development">Carrillo (<a href="../referencias.html#ref-carrillo1994development" role="doc-biblioref">1994</a>)</span>, <span class="citation" data-cites="jimenez2000metalinguistic">Jiménez y Ortiz (<a href="../referencias.html#ref-jimenez2000metalinguistic" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="zugarramurdi2022orthography">Zugarramurdi et&nbsp;al. (<a href="../referencias.html#ref-zugarramurdi2022orthography" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="goswami1998analogies">Goswami, Gombert, y Barrera (<a href="../referencias.html#ref-goswami1998analogies" role="doc-biblioref">1998</a>)</span>, <span class="citation" data-cites="herrera2005prelectores">Herrera y Defior (<a href="../referencias.html#ref-herrera2005prelectores" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="delacalle2016desarrollo">De la Calle, Aguilar, y Navarro (<a href="../referencias.html#ref-delacalle2016desarrollo" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="casillas2007silaba">Casillas y Goikoetxea (<a href="../referencias.html#ref-casillas2007silaba" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="fumagalli2010sensibilidad">Fumagalli, Wilson, y Jaichenco (<a href="../referencias.html#ref-fumagalli2010sensibilidad" role="doc-biblioref">2010</a>)</span>, <span class="citation" data-cites="defior2004crosslinguistic">Defior (<a href="../referencias.html#ref-defior2004crosslinguistic" role="doc-biblioref">2004</a>)</span>, <span class="citation" data-cites="wimmer1994rhyme">Wimmer, Landerl, y Schneider (<a href="../referencias.html#ref-wimmer1994rhyme" role="doc-biblioref">1994</a>)</span>, <span class="citation" data-cites="pfost2015meta">Pfost (<a href="../referencias.html#ref-pfost2015meta" role="doc-biblioref">2015</a>)</span>. Posición, escolarización y ortografía: <span class="citation" data-cites="puolakanaho2003assessment">Puolakanaho et&nbsp;al. (<a href="../referencias.html#ref-puolakanaho2003assessment" role="doc-biblioref">2003</a>)</span>, <span class="citation" data-cites="skibbe2012summer">Skibbe et&nbsp;al. (<a href="../referencias.html#ref-skibbe2012summer" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="castro2005ortografia">Castro, Gomes, y Ribeirinho (<a href="../referencias.html#ref-castro2005ortografia" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="suarez2019estimulacion">Suárez-Yepes et&nbsp;al. (<a href="../referencias.html#ref-suarez2019estimulacion" role="doc-biblioref">2019</a>)</span>. Semejanza global y distractores: <span class="citation" data-cites="treiman1982similarity">Treiman y Breaux (<a href="../referencias.html#ref-treiman1982similarity" role="doc-biblioref">1982</a>)</span>, <span class="citation" data-cites="carroll2001global">Carroll y Snowling (<a href="../referencias.html#ref-carroll2001global" role="doc-biblioref">2001</a>)</span>, <span class="citation" data-cites="wagensveld2012rhyme">Wagensveld et&nbsp;al. (<a href="../referencias.html#ref-wagensveld2012rhyme" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="schmitterer2019grain">Schmitterer y Schroeder (<a href="../referencias.html#ref-schmitterer2019grain" role="doc-biblioref">2019</a>)</span>. Detección de señal: <span class="citation" data-cites="macmillan2005detection">Macmillan y Creelman (<a href="../referencias.html#ref-macmillan2005detection" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="hautus1995corrections">Hautus (<a href="../referencias.html#ref-hautus1995corrections" role="doc-biblioref">1995</a>)</span>, <span class="citation" data-cites="decarlo1998sdt">DeCarlo (<a href="../referencias.html#ref-decarlo1998sdt" role="doc-biblioref">1998</a>)</span>, <span class="citation" data-cites="fritzley2003yes">Fritzley y Lee (<a href="../referencias.html#ref-fritzley2003yes" role="doc-biblioref">2003</a>)</span>. Las entradas completas están en el capítulo de <a href="../referencias.html">referencias</a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-anthony2004nature" class="csl-entry" role="listitem">
+Anthony, Jason L., y Christopher J. Lonigan. 2004. <span>«The nature of phonological awareness: Converging evidence from four studies of preschool and early grade school children»</span>. <em>Journal of Educational Psychology</em> 96 (1): 43-55. <a href="https://doi.org/10.1037/0022-0663.96.1.43">https://doi.org/10.1037/0022-0663.96.1.43</a>.
+</div>
 <div id="ref-anthony2003phonological" class="csl-entry" role="listitem">
 Anthony, Jason L., Christopher J. Lonigan, Kimberly Driscoll, Beth M. Phillips, y Stephen R. Burgess. 2003. <span>«Phonological sensitivity: A quasi-parallel progression of word structure units and cognitive operations»</span>. <em>Reading Research Quarterly</em> 38 (4): 470-87. <a href="https://doi.org/10.1598/RRQ.38.4.3">https://doi.org/10.1598/RRQ.38.4.3</a>.
 </div>
+<div id="ref-anthony2011spanish" class="csl-entry" role="listitem">
+Anthony, Jason L., Jeffrey M. Williams, Lillian K. Durán, Sandra Laing Gillam, Lan Liang, Rachel Aghara, Paul R. Swank, Michael A. Assel, y Susan H. Landry. 2011. <span>«Spanish phonological awareness: Dimensionality and sequence of development during the preschool and kindergarten years»</span>. <em>Journal of Educational Psychology</em> 103 (4): 857-76. <a href="https://doi.org/10.1037/a0025024">https://doi.org/10.1037/a0025024</a>.
+</div>
 <div id="ref-bradley1983categorizing" class="csl-entry" role="listitem">
 Bradley, Lynette, y Peter E. Bryant. 1983. <span>«Categorizing sounds and learning to read: A causal connection»</span>. <em>Nature</em> 301: 419-21. <a href="https://doi.org/10.1038/301419a0">https://doi.org/10.1038/301419a0</a>.
+</div>
+<div id="ref-bryant1990rhyme" class="csl-entry" role="listitem">
+Bryant, Peter E., Morag MacLean, Lynette L. Bradley, y Jennifer Crossland. 1990. <span>«Rhyme and alliteration, phoneme detection, and learning to read»</span>. <em>Developmental Psychology</em> 26 (3): 429-38. <a href="https://doi.org/10.1037/0012-1649.26.3.429">https://doi.org/10.1037/0012-1649.26.3.429</a>.
 </div>
 <div id="ref-carrillo1994development" class="csl-entry" role="listitem">
 Carrillo, Marisol. 1994. <span>«Development of phonological awareness and reading acquisition: A study in <span>Spanish</span> language»</span>. <em>Reading and Writing</em> 6 (3): 279-98. <a href="https://doi.org/10.1007/BF01027086">https://doi.org/10.1007/BF01027086</a>.
@@ -1281,14 +1614,29 @@ Carrillo, Marisol. 1994. <span>«Development of phonological awareness and readi
 <div id="ref-carroll2001global" class="csl-entry" role="listitem">
 Carroll, Julia M., y Margaret J. Snowling. 2001. <span>«The effects of global similarity between stimuli on children’s judgment of rime and alliteration»</span>. <em>Applied Psycholinguistics</em> 22 (3): 327-42. <a href="https://doi.org/10.1017/S0142716401003022">https://doi.org/10.1017/S0142716401003022</a>.
 </div>
+<div id="ref-casillas2007silaba" class="csl-entry" role="listitem">
+Casillas, Ángela, y Edurne Goikoetxea. 2007. <span>«S<span>í</span>laba, principio-rima y fonema como predictores de la lectura y la escritura tempranas»</span>. <em>Infancia y Aprendizaje</em> 30 (2): 245-59. <a href="https://doi.org/10.1174/021037007780705184">https://doi.org/10.1174/021037007780705184</a>.
+</div>
+<div id="ref-castro2005ortografia" class="csl-entry" role="listitem">
+Castro, São Luís, Inês Gomes, y Ana Ribeirinho. 2005. <span>«Efeito da ortografia no julgamento de rima com palavras e com imagens»</span>. En <em>Actas do VIII Congresso Galaico-Portugu<span>ê</span>s de Psicopedagogia</em>. Braga.
+</div>
+<div id="ref-delacalle2016desarrollo" class="csl-entry" role="listitem">
+De la Calle, Ana María, Manuel Aguilar, y José I. Navarro. 2016. <span>«Desarrollo evolutivo de la conciencia fonol<span>ó</span>gica: <span></span>C<span>ó</span>mo se relaciona con la competencia lectora posterior?»</span> <em>Revista de Investigaci<span>ó</span>n en Logopedia</em> 6 (1): 22-41. <a href="https://doi.org/10.5209/rlog.58553">https://doi.org/10.5209/rlog.58553</a>.
+</div>
 <div id="ref-decarlo1998sdt" class="csl-entry" role="listitem">
 DeCarlo, Lawrence T. 1998. <span>«Signal detection theory and generalized linear models»</span>. <em>Psychological Methods</em> 3 (2): 186-205. <a href="https://doi.org/10.1037/1082-989X.3.2.186">https://doi.org/10.1037/1082-989X.3.2.186</a>.
+</div>
+<div id="ref-defior2004crosslinguistic" class="csl-entry" role="listitem">
+Defior, Sylvia. 2004. <span>«Phonological awareness and learning to read: A cross-linguistic perspective»</span>. En <em>Handbook of children’s literacy</em>, editado por Terezinha Nunes y Peter Bryant, 631-49. Springer. <a href="https://doi.org/10.1007/978-94-017-1731-1_33">https://doi.org/10.1007/978-94-017-1731-1_33</a>.
 </div>
 <div id="ref-duncan1997rhyme" class="csl-entry" role="listitem">
 Duncan, Lynne G., Philip H. K. Seymour, y Shirley Hill. 1997. <span>«How important are rhyme and analogy in beginning reading?»</span> <em>Cognition</em> 63 (2): 171-208. <a href="https://doi.org/10.1016/S0010-0277(97)00001-2">https://doi.org/10.1016/S0010-0277(97)00001-2</a>.
 </div>
 <div id="ref-fritzley2003yes" class="csl-entry" role="listitem">
 Fritzley, V. Heather, y Kang Lee. 2003. <span>«Do young children always say yes to yes-no questions? A metadevelopmental study of the affirmation bias»</span>. <em>Child Development</em> 74 (5): 1297-1313. <a href="https://doi.org/10.1111/1467-8624.00608">https://doi.org/10.1111/1467-8624.00608</a>.
+</div>
+<div id="ref-fumagalli2010sensibilidad" class="csl-entry" role="listitem">
+Fumagalli, Julieta, Maximiliano Wilson, y Virginia Jaichenco. 2010. <span>«Sensibilidad a la informaci<span>ó</span>n fonol<span>ó</span>gica en ni<span>ñ</span>os lectores y prelectores hispanoparlantes»</span>. <em>Neuropsicolog<span>í</span>a Latinoamericana</em> 2 (1): 68-77.
 </div>
 <div id="ref-goswami1998analogies" class="csl-entry" role="listitem">
 Goswami, Usha, Jean Emile Gombert, y Lucia Fraca de Barrera. 1998. <span>«Children’s orthographic representations and linguistic transparency: Nonsense word reading in <span>English</span>, <span>French</span>, and <span>Spanish</span>»</span>. <em>Applied Psycholinguistics</em> 19 (1): 19-52. <a href="https://doi.org/10.1017/S0142716400010560">https://doi.org/10.1017/S0142716400010560</a>.
@@ -1305,14 +1653,29 @@ Jiménez, Juan E., y M. Rosario Ortiz. 2000. <span>«Metalinguistic awareness an
 <div id="ref-macmillan2005detection" class="csl-entry" role="listitem">
 Macmillan, Neil A., y C. Douglas Creelman. 2005. <em>Detection theory: A user’s guide</em>. 2.ª ed. Mahwah, NJ: Lawrence Erlbaum Associates.
 </div>
+<div id="ref-pfost2015meta" class="csl-entry" role="listitem">
+Pfost, Maximilian. 2015. <span>«Children’s phonological awareness as a predictor of reading and spelling: A systematic review of longitudinal research in <span>German</span>-speaking countries»</span>. <em>Zeitschrift f<span>ü</span>r Entwicklungspsychologie und P<span>ä</span>dagogische Psychologie</em> 47 (3): 123-38. <a href="https://doi.org/10.1026/0049-8637/a000141">https://doi.org/10.1026/0049-8637/a000141</a>.
+</div>
+<div id="ref-puolakanaho2003assessment" class="csl-entry" role="listitem">
+Puolakanaho, Anne, Anna-Maija Poikkeus, Timo Ahonen, Asko Tolvanen, y Heikki Lyytinen. 2003. <span>«Assessment of three-and-a-half-year-old children’s emerging phonological awareness in a computer animation context»</span>. <em>Journal of Learning Disabilities</em> 36 (5): 416-23. <a href="https://doi.org/10.1177/00222194030360050301">https://doi.org/10.1177/00222194030360050301</a>.
+</div>
 <div id="ref-schmitterer2019grain" class="csl-entry" role="listitem">
 Schmitterer, Alexandra M. A., y Sascha Schroeder. 2019. <span>«Grain size effects in rime judgment»</span>. <em>Applied Psycholinguistics</em> 40 (3): 673-91.
+</div>
+<div id="ref-skibbe2012summer" class="csl-entry" role="listitem">
+Skibbe, Lori E., Kevin J. Grimm, Ryan P. Bowles, y Frederick J. Morrison. 2012. <span>«Literacy growth in the academic year versus summer from preschool through second grade: Differential effects of schooling across four skills»</span>. <em>Scientific Studies of Reading</em> 16 (2): 141-65. <a href="https://doi.org/10.1080/10888438.2010.543446">https://doi.org/10.1080/10888438.2010.543446</a>.
+</div>
+<div id="ref-suarez2019estimulacion" class="csl-entry" role="listitem">
+Suárez-Yepes, Natalia, Mariluz Sourdis, Soraya Lewis Harb, y Carlos José De los Reyes-Aragón. 2019. <span>«Efecto de un programa de estimulaci<span>ó</span>n de la conciencia fonol<span>ó</span>gica en ni<span>ñ</span>os preescolares: sensibilidad a la rima y a la segmentaci<span>ó</span>n»</span>. <em>Psicogente</em> 22 (42): 236-54. <a href="https://doi.org/10.17081/psico.22.42.3508">https://doi.org/10.17081/psico.22.42.3508</a>.
 </div>
 <div id="ref-treiman1982similarity" class="csl-entry" role="listitem">
 Treiman, Rebecca, y Andrea M. Breaux. 1982. <span>«Common phoneme and overall similarity relations among spoken syllables: Their use by children and adults»</span>. <em>Journal of Psycholinguistic Research</em> 11: 581-610. <a href="https://doi.org/10.1007/BF01067613">https://doi.org/10.1007/BF01067613</a>.
 </div>
 <div id="ref-wagensveld2012rhyme" class="csl-entry" role="listitem">
 Wagensveld, Barbara, Petra van Alphen, Eliane Segers, y Ludo Verhoeven. 2012. <span>«The nature of rhyme processing in preliterate children»</span>. <em>British Journal of Educational Psychology</em> 82 (4): 672-89. <a href="https://doi.org/10.1111/j.2044-8279.2011.02055.x">https://doi.org/10.1111/j.2044-8279.2011.02055.x</a>.
+</div>
+<div id="ref-wimmer1994rhyme" class="csl-entry" role="listitem">
+Wimmer, Heinz, Karin Landerl, y Wolfgang Schneider. 1994. <span>«The role of rhyme awareness in learning to read a regular orthography»</span>. <em>British Journal of Developmental Psychology</em> 12 (4): 469-84. <a href="https://doi.org/10.1111/j.2044-835X.1994.tb00648.x">https://doi.org/10.1111/j.2044-835X.1994.tb00648.x</a>.
 </div>
 <div id="ref-ziegler2005grain" class="csl-entry" role="listitem">
 Ziegler, Johannes C., y Usha Goswami. 2005. <span>«Reading acquisition, developmental dyslexia, and skilled reading across languages: A psycholinguistic grain size theory»</span>. <em>Psychological Bulletin</em> 131 (1): 3-29. <a href="https://doi.org/10.1037/0033-2909.131.1.3">https://doi.org/10.1037/0033-2909.131.1.3</a>.
