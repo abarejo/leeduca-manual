@@ -4,7 +4,7 @@ search: false
 
 # M11 · Desarrollo del RAN de 4 a 8 años — análisis exploratorio {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis e introducción, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
+*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -19,7 +19,7 @@ Proponemos un estudio sobre el desarrollo de la denominación rápida automatiza
 1. **Hay curva y es reproducible.** El RAN mejora alrededor de 1 DT por año entre los 4 y los 5 años (colores, números y objetos pasan de unos 34 a unos 44 ítems correctos por minuto) y sigue mejorando, más despacio, hasta los 8. Cohortes distintas evaluadas con la misma tarea a la misma edad dan medianas casi idénticas.
 2. **La edad en meses importa dentro del aula a los 4 años y deja de importar a los 7.** La correlación con la edad en meses baja de ρ ≈ .20–.28 a los 4 años a ≈ 0 a los 7–8.
 3. **Las diferencias individuales son moderadamente estables**, menos que en el estudio sueco de referencia: ρ = .45–.63 a cuatro meses, .30–.45 a dos o tres años, .15–.30 de los 4 a los 8. La fiabilidad de una sola lámina limita estas cifras y es un resultado en sí mismo.
-4. **A igual edad, un curso más acelera el RAN**: +0,37–0,40 DT en infantil y +0,31 DT con 1º de primaria (discontinuidad por fecha de corte escolar). La instrucción modifica el RAN, en contra de la tesis de que la relación RAN → lectura es unidireccional.
+4. **A igual edad, el paso a 1º de primaria acelera el RAN** (+0,31 DT, tres contrastes concordantes; discontinuidad por fecha de corte escolar); el paso de 2º a 3º de infantil solo en uno de los tres pares de cohortes. La instrucción alfabética modifica el RAN, en contra de la tesis de que la relación RAN → lectura es unidireccional.
 5. **El RAN de los 4 años predice la lectura de los 6 a los 8** (ρ ≈ .35–.50 con el percentil lector; AUC .70–.76 con los números) y la relación se atenúa, sin desaparecer, a los 10.
 
 ## Pregunta
@@ -51,7 +51,7 @@ El hueco: ningún estudio longitudinal en ortografía transparente cubre el tram
 | Colores 2093 (lámina 5 × 5) | lámina | 4.1 (15), 4.2 (13), 5.2 (12) |
 | Números 1054/1053 (20 ítems) | discreto | 4.1 (11, 14), 5.1 (10) |
 | Objetos control 1922 (25 ítems) | discreto | 4.1 (12), 5.1 (11), 6.1 (10) |
-| Objetos control 1921 (lámina) | lámina | 4.2 (12), 5.1 (12), 5.2 (11), 6.1 (11), 6.2 (10, 13) |
+| Objetos control 1921 (lámina 5 × 5) | lámina | 4.2 (12), 5.1 (12), 5.2 (11), 6.1 (11), 6.2 (10, 13) |
 | Objetos repetidos cortos 2094 → 1893 (DIS-ESP, 18) | lámina | 4.2 (13), 5.2 (12); 7.2 (10, 12), 8.1 (11) |
 | Objetos repetidos largos 1945 (DIS-ESP, 18) | lámina | 7.1 (10), 7.2 (12), 8.1 (11), 8.3 (10) |
 | Objetos variados cortos 1891 (DIS-ESP, 18) | lámina | 7.2 (10, 12), 8.3 (10) |
@@ -102,17 +102,27 @@ Son cifras más bajas que las suecas, y la razón más probable es la medida: un
 
 ### Escolarización frente a maduración: un curso más a igual edad
 
-En 2015/16 las cohortes 2011 (4.1) y 2010 (5.1) hicieron las mismas tareas de colores y números en noviembre; en 2016/17, las cohortes 2011 (5.1) y 2010 (6.1) la misma tarea discreta de objetos. Los nacidos en diciembre de 2010 y en enero de 2011 tienen la misma edad y un curso de diferencia: discontinuidad por fecha de corte escolar, que separa un año de escolarización de un año de edad. Regresión lineal a cada lado del corte (±12 meses de nacimiento, errores por colegio):
+Cohortes consecutivas evaluadas el mismo mes con la misma tarea: los nacidos en diciembre y en enero tienen la misma edad y un curso de diferencia. Es una discontinuidad por fecha de corte escolar, que separa un año de escolarización de un año de edad. Regresión lineal a cada lado del corte (±12 meses de nacimiento, errores por colegio); nueve contrastes con tres pares de cohortes y tres tareas:
 
-| Contraste | N | Salto (un curso más, a igual edad) | IC 95 % | 12 meses de edad dentro del curso |
+| Contraste (tarea · cursos · mes, cohortes) | N | Salto a igual edad | IC 95 % | p |
 |---|---|---|---|---|
-| Colores, 2º → 3º de infantil | 1.662 | +0,37 DT | 0,17–0,57 | 0,66 / 0,42 DT |
-| Números, 2º → 3º de infantil | 1.664 | +0,40 DT | 0,17–0,63 | 0,75 / 0,42 DT |
-| Objetos, 3º de infantil → 1º de primaria | 1.755 | +0,31 DT | 0,11–0,51 | 0,21 / 0,18 DT |
+| Colores 528 · 4.1→5.1 · nov 2015 (2011/2010) | 1.662 | +0,37 DT | 0,17–0,58 | < ,001 |
+| Números 1054/1053 · 4.1→5.1 · nov 2015 (2011/2010) | 1.664 | +0,40 DT | 0,17–0,62 | ,001 |
+| Objetos discreto 1922 · 4.1→5.1 · nov 2016 (2012/2011) | 1.255 | +0,13 DT | −0,20–0,46 | ,45 |
+| Objetos lámina 1921 · 4.2→5.2 · feb 2017 (2012/2011) | 1.112 | +0,26 DT | −0,10–0,62 | ,16 |
+| Colores lámina 2093 · 4.2→5.2 · feb 2018 (2013/2012) | 582 | +0,12 DT | −0,16–0,39 | ,40 |
+| Repetidos cortos 2094 · 4.2→5.2 · feb 2018 (2013/2012) | 563 | −0,13 DT | −0,55–0,28 | ,53 |
+| **Objetos discreto 1922 · 5.1→6.1 · nov 2016 (2011/2010)** | 1.755 | **+0,31 DT** | 0,11–0,52 | ,002 |
+| **Objetos lámina 1921 · 5.2→6.2 · feb 2017 (2011/2010)** | 1.541 | **+0,28 DT** | 0,04–0,52 | ,02 |
+| **Objetos lámina 1921 · 5.1→6.1 · nov 2017 (2012/2011)** | 848 | **+0,37 DT** | −0,05–0,79 | ,09 |
 
-![Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte.](../figuras/desarrollos/M11_F5_corte_escolar_v1.png){width="100%"}
+![Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte, nueve contrastes.](../figuras/desarrollos/M11_F5_corte_escolar_v1.png){width="100%"}
 
-Los saltos se mantienen con ventanas de ±2 y ±3 meses y al ajustar por el ISE del centro. A los 4–5 años la maduración pesa más que la escuela (0,7 frente a 0,4 DT por año); a los 6, el curso de 1º —el de la instrucción lectora— vale 0,31 DT y un año de edad solo 0,2. A igual edad, la instrucción acelera el RAN: en la dirección de @peterson2018literacy y @wolff2014ran, y en contra de la unidireccionalidad de @lervag2009ran. Cautela: compara las cohortes 2010 y 2011, ambas con Preleo.
+- **El paso a 1º de primaria acelera el RAN en los tres contrastes** en que se puede medir (dos pares de cohortes, dos formatos): combinado +0,31 DT (IC 0,16–0,45), sin heterogeneidad. A esa edad un año de maduración dentro del curso vale 0,2 DT: la instrucción lectora pesa más que la edad.
+- **El paso de 2º a 3º de infantil es heterogéneo**: +0,37 y +0,40 DT con el par 2011/2010 (colores y números, noviembre de 2015), pero entre −0,13 y +0,26 y no significativo en los cuatro contrastes con los pares 2012/2011 y 2013/2012 (combinado +0,26, IC 0,15–0,37; Q = 7,7, 5 gl). No lo explica Preleo de forma limpia (la cohorte 2011, CON Preleo a los 4 años, no muestra salto frente a la 2012). Pregunta abierta: cohorte, tarea o curso escolar.
+- Los saltos son iguales con y sin ajuste por el ISE del centro; los de 5→6 se mantienen en ventanas de ±3 meses.
+
+A igual edad, el primer curso de instrucción lectora acelera el RAN: en la dirección de @peterson2018literacy y @wolff2014ran, y en contra de la unidireccionalidad de @lervag2009ran. La asimetría entre 1º de primaria y 3º de infantil sugiere que lo que acelera el RAN no es «ir al colegio» sino la instrucción alfabética.
 
 ### Preleo y lectura
 
@@ -125,14 +135,14 @@ El RAN de 4.1 correlaciona con el percentil lector de 6 años (ρ = .36 colores,
 - Sin ajuste por colegio ni por ISE; limpieza mínima documentada (hoja `0_Limpieza` de `m11_ran_desarrollo_v1.xlsx`).
 - Láminas con tiempos no registrados (≈ 0,015 s) en las tres sesiones del primer trimestre de 2016/17 (2010/152, 2011/153, 2012/154); en esas sesiones vale la versión discreta (1922).
 - 2013/181 (2093, 2094) y 2015/906 (2093) con tiempos ≈ 0; 2011/905 con 1891 y 1946 invertidos (posible intercambio de etiquetas, como la lista 1932 de esa sesión); 2010/189 con la mitad de los tiempos de 1891/1893 < 1 s.
-- Número de estímulos de la lámina de control 1921 pendiente de leer en la plataforma; confirmar que 2094 (infantil) y 1893 (primaria) son la misma lámina.
+- La lámina 1921 tiene 25 estímulos (5 × 5; leída en la plataforma el 30/10): todas las tareas están en ítems/min. Pendiente: confirmar que 2094 (infantil) y 1893 (primaria) son la misma lámina.
 - Condición Preleo de 2011 pendiente de la v4.
 
 ## Qué cambia en el estudio
 
-1. **Escala común** en ítems/min y comprobación de la equivalencia discreto–lámina en las sesiones donde coinciden (2012: 4.1 y 4.2; 2011: 5.1 y 5.2).
+1. **Escala común** en ítems/min (hecha): la equivalencia discreto–lámina se confirma en objetos (32,8 frente a 34,4 ítems/min en 4.1–4.2 de 2012) y en colores.
 2. **Curva de referencia**: modelo de crecimiento multinivel (niños en colegios) no lineal, con la edad en meses como tiempo y la cohorte como efecto cruzado; percentiles por edad con regresión cuantílica o GAMLSS, como en M4; contraste de un cambio de pendiente al iniciarse 1º.
-3. **Estabilidad** por tramos, corregida por atenuación; RI-CLPM RAN ↔ lectura de 5 a 8 años para la unidireccionalidad, junto con la discontinuidad por fecha de corte (que puede repetirse en 2012/2013 y en la lámina 1921).
+3. **Estabilidad** por tramos, corregida por atenuación; RI-CLPM RAN ↔ lectura de 5 a 8 años para la unidireccionalidad, junto con la discontinuidad por fecha de corte (ya replicada en nueve contrastes; falta explicar la heterogeneidad del paso 4→5).
 4. **Formatos**: números frente a colores en los mismos niños (4.1 y 5.1).
 5. **Preleo**: CON − SIN a cada edad con ISE y efectos aleatorios de colegio, con la asignación v4.
 6. **Ritmo**: con los tiempos ítem a ítem de 2018 en adelante, variabilidad intraindividual y pausas.
