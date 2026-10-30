@@ -127,6 +127,62 @@ Guiones `rima_cohorte2020_centros.py` e `rima_cohorte2020_incongruencias.py` (sa
 
 **Lectura.** Depurar los centros mejora la estimación de 3 años pero no la lleva al nivel de las cohortes siguientes (d′ ≈ 1): queda 0,22. Es decir, parte del efecto del año de aplicación es registro y parte es otra cosa (centros, formación de los evaluadores, familiaridad de los niños con la plataforma). Para el artículo, la decisión mínima es excluir los centros con d′ invertido o con todos perfectos a los 3 años, con el mismo criterio que se aplicó a Preleo en la cohorte 2010, e informarlo.
 
+### Cohorte 2020 con los centros limpios (30/10, tarde)
+
+Guion `rima_cohorte2020_limpio.py` → `04\DIAGNOSTICO\rima_cohorte2020_limpio_v1.xlsx`. Fuera los 28 centro×momento con aviso (10 en 3.2). d′ agrupado sin 0/10 con IC bootstrap por niño.
+
+**1. La trayectoria se vuelve gradual.**
+
+| Momento | N | No realiza (%) | d′ [IC 95 %] | «Sí» rima / no rima (%) | Dominio ≥ 9 (%) |
+|---|---|---|---|---|---|
+| 3.2 | 321 | 8,7 | 0,22 [0,09; 0,36] | 68 / 60 | 10,9 |
+| 3.3 | 285 | 8,1 | 0,38 [0,23; 0,52] | 66 / 52 | 14,0 |
+| 4.1 | 416 | 4,6 | 0,48 [0,37; 0,60] | 64 / 45 | 15,9 |
+| 4.2 | 383 | 3,7 | 0,70 [0,59; 0,83] | 70 / 43 | 20,4 |
+| 4.3 | 381 | 2,4 | 0,97 [0,83; 1,11] | 76 / 39 | 31,0 |
+| 5.1 | 416 | 1,2 | 1,20 [1,08; 1,31] | 78 / 34 | 32,9 |
+| 5.2 | 751 | 0,7 | 1,38 [1,28; 1,49] | 80 / 29 | 43,1 |
+| 5.3 | 466 | 0,4 | 1,42 [1,29; 1,55] | 79 / 27 | 42,9 |
+
+Cambios entre momentos consecutivos: +0,15, +0,10 (verano), +0,22, +0,26, +0,23 (verano), +0,18, +0,04. **Los escalones del artículo (+0,53, +0,02, +0,53) desaparecen**: eran de los centros mal registrados en 3.2. Queda un crecimiento casi constante de unos 0,2 por trimestre evaluado, sin diferencia entre curso y verano, con desaceleración al final de los 5 años. H1 pasa a «discriminación pequeña pero real a los 3 años y medio» y H2 (trayectoria a saltos) no se sostiene con los datos limpios. Lo que sí se mantiene: sin techo a los 5 (43 % de dominio) y sesgo a decir «sí» en todo el periodo (c de −0,36 a −0,13).
+
+**2. Qué rima perciben antes: ninguna; lo primero que perciben es que dos palabras no se parecen.**
+
+Porcentaje de acierto por ítem (sin 0/10):
+
+| Par | Tipo | 3.2 | 4.1 | 4.3 | 5.3 |
+|---|---|---|---|---|---|
+| *fresa–mesa* | rima llana | 72 | 67 | 80 | 85 |
+| *casa–masa* | rima llana | 64 | 64 | 76 | 83 |
+| *bota–pelota* | rima llana | 70 | 65 | 75 | 82 |
+| *rana–pana* | rima llana | 63 | 65 | 74 | 76 |
+| *sol–col* | rima aguda | 71 | 67 | 79 | 79 |
+| *melón–jamón* | rima aguda | 67 | 53 | 70 | 73 |
+| *pelo–cama* | no rima, sin relación | 51 | 71 | 71 | 83 |
+| *mano–pie* | no rima, semántico | 31 | 47 | 59 | 76 |
+| *silla–mesa* | no rima, semántico + vocal final | 43 | 53 | 59 | 67 |
+| *bota–moto* | no rima, fonológico | 37 | 50 | 53 | 64 |
+
+- **Patrón acentual: no hay efecto.** Dentro del mismo niño, la diferencia entre «sí» ante llanas y ante agudas va de −2 a +6 puntos; *sol–col* se acepta igual que las llanas en todos los momentos. La menor aceptación de *melón–jamón* es del ítem (dos palabras con relación semántica), no de la acentuación. Para la intervención: no hay una rima «más fácil» por acento en esta tarea.
+- A los 3 años la aceptación de las rimas (63–72 %) es la misma que la de los pares que no riman (49–69 % de «sí»): los niños no perciben la rima, dicen «sí». **Lo primero que emerge es rechazar el par sin ninguna relación** (*pelo–cama*: 51 % → 71 % entre febrero de 3 y noviembre de 4). Después caen los semánticos (*mano–pie*, el ítem más difícil a los 3 años: 31 % → 76 %). **Lo último, y sin consolidar a los 5, es rechazar la semejanza parcial** (*bota–moto*: 64 %). El análisis implicacional lo confirma: rechazar *pelo–cama* sin rechazar *bota–moto* es 2–4 veces más frecuente que lo contrario en todos los momentos.
+- Lectura: lo que «tracciona» no es la rima sino el juicio de semejanza global [@treiman1982similarity]: el niño primero distingue «no se parecen en nada» de «se parecen», y solo tarde analiza *en qué* se parecen. En inglés la rima emerge de las canciones infantiles a los 3 años [@bradley1983categorizing; @bryant1990rhyme]; aquí, a los 3 años, no hay rima que emerja.
+
+**3. Sílaba antes que rima: sí, pero a los 3 años el artículo usa un azar equivocado.**
+
+La tarea de contar sílabas de 3 años (12166, 9 ítems) está guardada como respuestas **sí/no**: su azar es 1/2, no 1/3. Con 1/3 el criterio de dominio es 6/9; con 1/2 es 8/9 (p = .02). Comprobar en la plataforma con la skill, pero las respuestas no dejan dudas.
+
+| Tarea silábica | Momento | N | Dominio silábico (%) | Dominio rima (%) | Solo silábica : solo rima | p |
+|---|---|---|---|---|---|---|
+| Contar sílabas sí/no, 6/9 (criterio del artículo) | 3.2 | 321 | 50 | 11 | 139 : 14 (10:1) | < .001 |
+| Contar sílabas sí/no, **8/9** (azar 1/2) | 3.2 | 321 | 17 | 11 | 44 : 25 (1,8:1) | .03 |
+| Contar sílabas sí/no, 8/9 | 3.3 | 284 | 25 | 14 | 52 : 21 (2,5:1) | < .001 |
+| Contar sílabas 1–4, 7/12 | 4.1 | 414 | 53 | 16 | 179 : 25 (7:1) | < .001 |
+| Contar sílabas 1–4, 9/20 | 4.2 | 382 | 66 | 20 | 194 : 19 (10:1) | < .001 |
+| Emparejar sílaba inicial, 5/6 | 4.2 | 382 | 52 | 20 | 143 : 21 (7:1) | < .001 |
+| Emparejar sílaba final, 4/5 | 4.2 | 382 | 26 | 20 | 64 : 42 (1,5:1) | .04 |
+
+La hipótesis de Auxi se sostiene: a los 4 años, contar sílabas e identificar la sílaba inicial van muy por delante de la rima (7:1 a 10:1), y la sílaba final va casi a la par. A los 3 años la ventaja de la sílaba sigue siendo significativa pero es de 2:1, no de 10:1: la tabla 3 del artículo hay que rehacerla con 8/9.
+
 ### Fiabilidad y estabilidad para el artículo (cohorte 2020, sin 0/10)
 
 | Momento | α sin 0/10 | α con 0/10 | r mitades de d′ (Spearman-Brown) | ρ con el momento siguiente (aciertos · d′) |
@@ -194,7 +250,8 @@ Comprobar los cuartiles JCR en Web of Science antes de decidir.
 | Replicar la tabla 1 con la tabla larga del servidor (cohorte 2020, Málaga, con y sin 0/10) | PJ López | Hecho 30/10: se replica |
 | Fiabilidad por momento sin 0/10 y estabilidad entre momentos para el artículo | PJ López | Hecho 30/10 (tabla en esta página) |
 | d′ por centro en 3.2 y revisión de los centros con d′ negativo (¿registro invertido?) | PJ López | Hecho 30/10: 10 centros con aviso en 3.2 |
-| Decidir el criterio de exclusión de centros y rehacer los modelos | A. Sánchez y PJ López | Pendiente |
+| Decidir el criterio de exclusión de centros y rehacer los modelos | A. Sánchez y PJ López | Criterio aceptado (avisos) el 30/10; tablas 1–3 rehechas en esta página; falta el GLMM |
+| Comprobar en la plataforma que 12166 es sí/no y corregir el azar en la tabla 3 | PJ López | Pendiente |
 | Modelo con efecto aleatorio de centro sobre la discriminación | A. Sánchez | Pendiente |
 | Decidir si 2023/24 se trata como curso piloto en el baremo de 3 años del manual | Grupo | Pendiente |
 | Decidir cómo describir la pantalla en el método | A. Sánchez | Pendiente |
@@ -204,6 +261,7 @@ Comprobar los cuartiles JCR en Web of Science antes de decidir.
 
 ## Registro
 
+- **30/10/2026 (tarde, 3).** Auxi acepta los avisos. Cohorte limpia: trayectoria gradual (los escalones eran de los centros mal registrados), sin efecto del patrón acentual, lo primero que emerge es rechazar el par sin relación y lo último la semejanza parcial; sílaba antes que rima (7:1 a los 4 años; 2:1 a los 3 con el azar correcto de la tarea sí/no).
 - **30/10/2026 (tarde, 2).** Análisis por centro de la cohorte 2020: avisos de registro invertido, todos perfectos, no realiza y correlación rima–no rima. Sin los centros con aviso, d′ en 3.2 = 0,22.
 - **30/10/2026 (tarde).** Análisis complementarios: réplica de la tabla 1 (se replica), efecto del año de aplicación (0,4–0,8 de d′ por curso a igual edad), centros con d′ negativo a los 3 años, α y fiabilidad de d′ por mitades, estabilidad. Revisión de literatura con SciSpace (13 referencias nuevas). Punto 0 añadido a la revisión.
 - **30/10/2026.** Página creada. Borrador completo recibido de A. Sánchez. Contraste con la ficha de rima y revisión en diez puntos. Figuras del borrador incorporadas. Referencias del artículo añadidas a `referencias.bib`.
