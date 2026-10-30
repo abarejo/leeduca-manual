@@ -117,6 +117,11 @@ La tarea muestra el par escrito en pantalla, aunque las instrucciones digan que 
 
 ## Pendientes e incidencias
 
+::: {.callout-warning appearance="minimal"}
+**Aviso (30/10/2026).** A igual edad, la discriminación es mucho mayor en los cursos de aplicación posteriores: d′ a los 3 años de 0,17 en 2023/24 (primer curso de la batería de 3 años), 0,99 en 2024/25 y 1,57 en 2025/26, y lo mismo a los 4 y 5 años. A los 3 años hay centros de 2023/24 con d′ muy negativo, compatible con un registro invertido por el evaluador. Las cifras y el baremo de esta ficha mezclan cursos de aplicación y deben rehacerse separándolos o desde 2024/25. Detalle en la página de desarrollo M12 de la Agenda.
+:::
+
+- Rehacer la ficha por curso de aplicación y revisar los centros con d′ negativo a los 3 años.
 - Validez concurrente frente a la conciencia silábica (contar y suprimir sílabas) y validez predictiva frente a la lectura de 6 años, cuando estas cohortes lleguen a Primaria.
 - Baremo por cohorte y comprobar que Cantabria y los centros sin identificar no cambian los resultados (invarianza).
 - Si conviene sustituir la puntuación de aciertos por d′ en los informes del servidor.
