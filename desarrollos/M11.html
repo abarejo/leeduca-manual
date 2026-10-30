@@ -951,6 +951,7 @@ div.csl-indent {
   <li><a href="#resultados-preliminares" id="toc-resultados-preliminares" class="nav-link" data-scroll-target="#resultados-preliminares">Resultados preliminares</a>
   <ul class="collapse">
   <li><a href="#la-curva-48-años" id="toc-la-curva-48-años" class="nav-link" data-scroll-target="#la-curva-48-años">La curva 4–8 años</a></li>
+  <li><a href="#la-curva-con-un-modelo-de-crecimiento-multinivel" id="toc-la-curva-con-un-modelo-de-crecimiento-multinivel" class="nav-link" data-scroll-target="#la-curva-con-un-modelo-de-crecimiento-multinivel">La curva con un modelo de crecimiento multinivel</a></li>
   <li><a href="#edad-relativa" id="toc-edad-relativa" class="nav-link" data-scroll-target="#edad-relativa">Edad relativa</a></li>
   <li><a href="#estabilidad-de-las-diferencias-individuales" id="toc-estabilidad-de-las-diferencias-individuales" class="nav-link" data-scroll-target="#estabilidad-de-las-diferencias-individuales">Estabilidad de las diferencias individuales</a></li>
   <li><a href="#escolarización-frente-a-maduración-un-curso-más-a-igual-edad" id="toc-escolarización-frente-a-maduración-un-curso-más-a-igual-edad" class="nav-link" data-scroll-target="#escolarización-frente-a-maduración-un-curso-más-a-igual-edad">Escolarización frente a maduración: un curso más a igual edad</a></li>
@@ -986,7 +987,7 @@ div.csl-indent {
 </header>
 
 
-<p><em>Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.</em></p>
+<p><em>Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar y modelo de crecimiento, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1005,7 +1006,7 @@ Advertencia
 <h2 class="anchored" data-anchor-id="en-diez-líneas">En diez líneas</h2>
 <p>Proponemos un estudio sobre el desarrollo de la denominación rápida automatizada (RAN) entre los 4 y los 8 años con los datos de la plataforma: cinco cohortes (2010–2015), tres medidas por curso y entre 400 y 900 niños por sesión. La literatura sobre el RAN como predictor es enorme; la literatura sobre cómo cambia el propio RAN con la edad es escasa, y en español casi inexistente. Los resultados preliminares, sobre 17.160 aplicaciones limpias de 11 tareas RAN, dicen cinco cosas:</p>
 <ol type="1">
-<li><strong>Hay curva y es reproducible.</strong> El RAN mejora alrededor de 1 DT por año entre los 4 y los 5 años (colores, números y objetos pasan de unos 34 a unos 44 ítems correctos por minuto) y sigue mejorando, más despacio, hasta los 8. Cohortes distintas evaluadas con la misma tarea a la misma edad dan medianas casi idénticas.</li>
+<li><strong>Hay curva y es reproducible.</strong> El RAN crece 0,73 DT por año hasta los 5 años y medio y 0,29 DT por año después (modelo multinivel con 3.902 niños; nodo estimado por verosimilitud). Cohortes distintas evaluadas con la misma tarea a la misma edad dan medianas casi idénticas.</li>
 <li><strong>La edad en meses importa dentro del aula a los 4 años y deja de importar a los 7.</strong> La correlación con la edad en meses baja de ρ ≈ .20–.28 a los 4 años a ≈ 0 a los 7–8.</li>
 <li><strong>Las diferencias individuales son moderadamente estables</strong>, menos que en el estudio sueco de referencia: ρ = .45–.63 a cuatro meses, .30–.45 a dos o tres años, .15–.30 de los 4 a los 8. La fiabilidad de una sola lámina limita estas cifras y es un resultado en sí mismo.</li>
 <li><strong>A igual edad, el paso a 1º de primaria acelera el RAN</strong> (+0,31 DT, tres contrastes concordantes; discontinuidad por fecha de corte escolar); el paso de 2º a 3º de infantil solo en uno de los tres pares de cohortes. La instrucción alfabética modifica el RAN, en contra de la tesis de que la relación RAN → lectura es unidireccional.</li>
@@ -1201,6 +1202,118 @@ Advertencia
 </tbody>
 </table>
 </section>
+<section id="la-curva-con-un-modelo-de-crecimiento-multinivel" class="level3">
+<h3 class="anchored" data-anchor-id="la-curva-con-un-modelo-de-crecimiento-multinivel">La curva con un modelo de crecimiento multinivel</h3>
+<p>Con todas las tareas en ítems/min, un solo modelo: 16.595 aplicaciones de 3.902 niños en 99 colegios; niños (intercepto y pendiente aleatorios) dentro de colegios (intercepto); tarea y cohorte como efectos fijos; la edad en meses como tiempo, con un spline lineal cuyo nodo se busca por verosimilitud entre los 4,75 y los 7,25 años.</p>
+<ul>
+<li><strong>La pendiente cambia a los 5 años y medio.</strong> El nodo con máxima verosimilitud está en 5,50 años (IC de perfil 5,25–5,50); cualquier nodo a partir de los 6 empeora el ajuste en más de 14 unidades de log-verosimilitud. Antes del nodo el RAN crece 8,6 ítems/min por año (0,73 DT/año); después, 3,5 (0,29 DT/año). El crecimiento rápido no termina al entrar en primaria sino a mitad de 3º de infantil: la instrucción de 1º añade un salto a una curva que ya se ha aplanado.</li>
+<li><strong>Los niños difieren en el ritmo de crecimiento, no solo en el nivel.</strong> La pendiente aleatoria mejora el modelo (χ² = 215, 1 gl); su DT es 2,2 ítems/min por año. CCI del niño, descontadas tarea y cohorte, .27; del colegio, .05.</li>
+<li><strong>Percentiles por edad en meses</strong> (regresión cuantílica; referencia objetos discreto, cohorte 2010):</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Edad (meses)</th>
+<th>P5</th>
+<th>P10</th>
+<th>P25</th>
+<th>P50</th>
+<th>P75</th>
+<th>P90</th>
+<th>P95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>48</td>
+<td>14</td>
+<td>16</td>
+<td>22</td>
+<td>29</td>
+<td>35</td>
+<td>41</td>
+<td>45</td>
+</tr>
+<tr class="even">
+<td>54</td>
+<td>18</td>
+<td>21</td>
+<td>27</td>
+<td>33</td>
+<td>39</td>
+<td>45</td>
+<td>49</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>22</td>
+<td>26</td>
+<td>31</td>
+<td>37</td>
+<td>42</td>
+<td>48</td>
+<td>52</td>
+</tr>
+<tr class="even">
+<td>66</td>
+<td>27</td>
+<td>30</td>
+<td>36</td>
+<td>41</td>
+<td>46</td>
+<td>52</td>
+<td>56</td>
+</tr>
+<tr class="odd">
+<td>72</td>
+<td>28</td>
+<td>31</td>
+<td>37</td>
+<td>43</td>
+<td>48</td>
+<td>54</td>
+<td>57</td>
+</tr>
+<tr class="even">
+<td>84</td>
+<td>30</td>
+<td>33</td>
+<td>40</td>
+<td>46</td>
+<td>52</td>
+<td>57</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>96</td>
+<td>32</td>
+<td>35</td>
+<td>42</td>
+<td>49</td>
+<td>56</td>
+<td>60</td>
+<td>62</td>
+</tr>
+<tr class="even">
+<td>102</td>
+<td>32</td>
+<td>36</td>
+<td>44</td>
+<td>51</td>
+<td>58</td>
+<td>62</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M11_F6_crecimiento_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Curva de desarrollo del RAN (modelo multinivel y percentiles por edad en meses) y perfil de verosimilitud del nodo."><img src="../figuras/desarrollos/M11_F6_crecimiento_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Curva de desarrollo del RAN (modelo multinivel y percentiles por edad en meses) y perfil de verosimilitud del nodo."></a></p>
+<figcaption>Curva de desarrollo del RAN (modelo multinivel y percentiles por edad en meses) y perfil de verosimilitud del nodo.</figcaption>
+</figure>
+</div>
+<p>La distancia P10–P90 se mantiene en unos 25 ítems/min de los 4 a los 8 años, pero pasa del 150 % de la mediana al 50 %: las diferencias individuales se comprimen conforme la tarea se automatiza, y a los 4 años seis meses de edad valen tanto como un cuartil.</p>
+</section>
 <section id="edad-relativa" class="level3">
 <h3 class="anchored" data-anchor-id="edad-relativa">Edad relativa</h3>
 <p>Dentro de una misma sesión, los niños mayores denominan más rápido a los 4 años: ρ con la edad en meses de .21–.24 en colores y números y .18 en objetos; doce meses valen 0,6–0,8 DT. El efecto baja a ρ ≈ .15 a los 5 años, a .04–.12 a los 6 y a 0–.1 a los 7–8. Implicación para el manual: el baremo de RAN en infantil va por trimestre (o por edad en meses); en primaria basta el curso.</p>
@@ -1250,7 +1363,7 @@ Advertencia
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M11_F2_estabilidad_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Estabilidad de rango del RAN entre momentos en el mismo niño, frente a la distancia en años."><img src="../figuras/desarrollos/M11_F2_estabilidad_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Estabilidad de rango del RAN entre momentos en el mismo niño, frente a la distancia en años."></a></p>
+<p><a href="../figuras/desarrollos/M11_F2_estabilidad_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Estabilidad de rango del RAN entre momentos en el mismo niño, frente a la distancia en años."><img src="../figuras/desarrollos/M11_F2_estabilidad_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Estabilidad de rango del RAN entre momentos en el mismo niño, frente a la distancia en años."></a></p>
 <figcaption>Estabilidad de rango del RAN entre momentos en el mismo niño, frente a la distancia en años.</figcaption>
 </figure>
 </div>
@@ -1344,7 +1457,7 @@ Advertencia
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M11_F5_corte_escolar_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte, nueve contrastes."><img src="../figuras/desarrollos/M11_F5_corte_escolar_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte, nueve contrastes."></a></p>
+<p><a href="../figuras/desarrollos/M11_F5_corte_escolar_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte, nueve contrastes."><img src="../figuras/desarrollos/M11_F5_corte_escolar_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte, nueve contrastes."></a></p>
 <figcaption>Discontinuidad por fecha de corte escolar: medias por mes de nacimiento y ajuste lineal a cada lado del corte, nueve contrastes.</figcaption>
 </figure>
 </div>
@@ -1375,7 +1488,7 @@ Advertencia
 <h2 class="anchored" data-anchor-id="qué-cambia-en-el-estudio">Qué cambia en el estudio</h2>
 <ol type="1">
 <li><strong>Escala común</strong> en ítems/min (hecha): la equivalencia discreto–lámina se confirma en objetos (32,8 frente a 34,4 ítems/min en 4.1–4.2 de 2012) y en colores.</li>
-<li><strong>Curva de referencia</strong>: modelo de crecimiento multinivel (niños en colegios) no lineal, con la edad en meses como tiempo y la cohorte como efecto cruzado; percentiles por edad con regresión cuantílica o GAMLSS, como en M4; contraste de un cambio de pendiente al iniciarse 1º.</li>
+<li><strong>Curva de referencia</strong> (primera versión hecha): modelo multinivel con nodo libre y percentiles por edad en meses. Pendiente: GAMLSS o cNORM para alisar los percentiles, cohorte como efecto cruzado y comprobación de la invarianza de la pendiente entre tareas.</li>
 <li><strong>Estabilidad</strong> por tramos, corregida por atenuación; RI-CLPM RAN ↔︎ lectura de 5 a 8 años para la unidireccionalidad, junto con la discontinuidad por fecha de corte (ya replicada en nueve contrastes; falta explicar la heterogeneidad del paso 4→5).</li>
 <li><strong>Formatos</strong>: números frente a colores en los mismos niños (4.1 y 5.1).</li>
 <li><strong>Preleo</strong>: CON − SIN a cada edad con ISE y efectos aleatorios de colegio, con la asignación v4.</li>
