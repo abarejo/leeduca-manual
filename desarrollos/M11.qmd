@@ -4,7 +4,7 @@ search: false
 
 # M11 · Desarrollo del RAN de 4 a 8 años — análisis exploratorio {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar y modelo de crecimiento, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
+*Desarrollo de un estudio de la Agenda · versión 1, 29/10/2026; discontinuidad por fecha de corte añadida esa noche; síntesis, introducción y nueve contrastes de corte escolar, modelo de crecimiento, RI-CLPM y borrador del artículo, 30/10/2026. Idea de A. Giménez de la Peña; análisis exploratorio de P. J. López-Pérez.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -20,7 +20,7 @@ Proponemos un estudio sobre el desarrollo de la denominación rápida automatiza
 2. **La edad en meses importa dentro del aula a los 4 años y deja de importar a los 7.** La correlación con la edad en meses baja de ρ ≈ .20–.28 a los 4 años a ≈ 0 a los 7–8.
 3. **Las diferencias individuales son moderadamente estables**, menos que en el estudio sueco de referencia: ρ = .45–.63 a cuatro meses, .30–.45 a dos o tres años, .15–.30 de los 4 a los 8. La fiabilidad de una sola lámina limita estas cifras y es un resultado en sí mismo.
 4. **A igual edad, el paso a 1º de primaria acelera el RAN** (+0,31 DT, tres contrastes concordantes; discontinuidad por fecha de corte escolar); el paso de 2º a 3º de infantil solo en uno de los tres pares de cohortes. La instrucción alfabética modifica el RAN, en contra de la tesis de que la relación RAN → lectura es unidireccional.
-5. **El RAN de los 4 años predice la lectura de los 6 a los 8** (ρ ≈ .35–.50 con el percentil lector; AUC .70–.76 con los números) y la relación se atenúa, sin desaparecer, a los 10.
+5. **Dentro del niño, el RAN predice el avance lector solo de los 5 a los 6 años; después es la lectura la que predice el avance en RAN** (RI-CLPM, N = 2.092; efectos .09 y .19). Entre niños, RAN y lectura correlacionan .86 como rasgos. El RAN de los 4 años predice la lectura de 6 a 8 (AUC .70–.76 con los números).
 
 ## Pregunta
 
@@ -147,6 +147,17 @@ Cohortes consecutivas evaluadas el mismo mes con la misma tarea: los nacidos en 
 
 A igual edad, el primer curso de instrucción lectora acelera el RAN: en la dirección de @peterson2018literacy y @wolff2014ran, y en contra de la unidireccionalidad de @lervag2009ran. La asimetría entre 1º de primaria y 3º de infantil sugiere que lo que acelera el RAN no es «ir al colegio» sino la instrucción alfabética.
 
+### Dirección RAN ↔ lectura dentro del niño (RI-CLPM)
+
+Modelo autorregresivo cruzado con intercepto aleatorio [@hamaker2015riclpm] entre RAN y decodificación en cuatro olas (cursos de 5 a 8), cohortes 2010–2012, N = 2.092, FIML. Entre niños, RAN y lectura son casi el mismo rasgo (correlación entre interceptos .86). Dentro del niño, la dirección cambia con la edad: de 5 a 6 el RAN predice el avance en decodificación (β = .12) más que al revés (.07); después el RAN deja de predecir cambios en lectura (.01, .00) y es la lectura la que predice cambios en RAN, con efectos crecientes (.09, .19). Mismo patrón que @peterson2018literacy, y misma conclusión que el corte escolar. El CLPM clásico, sin interceptos aleatorios, da efectos en ambas direcciones en todos los intervalos: por eso la literatura no se ponía de acuerdo. Cautelas: solución impropia con la cohorte 2010 sola; índices de ajuste e invarianza pendientes de lavaan.
+
+| Efecto (estandarizado) | 5 → 6 | 6 → 7 | 7 → 8 |
+|---|---|---|---|
+| RAN → decodificación | .12*** | .01 | .00 |
+| Decodificación → RAN | .07* | .09* | .19*** |
+| Autorregresión RAN | .12 | .11 | .16 |
+| Autorregresión decodificación | .49 | .68 | .69 |
+
 ### Preleo y lectura
 
 Con la condición disponible hoy solo se contrasta dentro de una cohorte en 6.2 (2013: 175 CON frente a 281 SIN), y el grupo CON es 0,40 DT más lento sin ajustar por el ISE del centro. Entre cohortes, la lámina de objetos en 6.2 da 30,0 s en 2010 (toda CON) y 30,5 s en 2013 (mixta): ninguna señal de que Preleo acelere el RAN. Compatible con @lervag2009ran, pero exige la asignación Preleo cerrada y el ajuste por ISE.
@@ -187,6 +198,10 @@ Esa literatura trata el RAN como variable independiente. Sorprendentemente, sabe
 Tres preguntas siguen abiertas. La primera es la forma de la curva: si el salto entre los 4 y los 6 años es gradual o se concentra con el inicio de la instrucción lectora, algo que una medida anual no puede resolver. La segunda es la estabilidad: los valores publicados proceden de muestras pequeñas con tareas de una sola matriz, y no se ha estimado cuánto de la inestabilidad observada es fiabilidad de la medida y cuánto es cambio real. La tercera es la dirección de la relación con la lectura. @lervag2009ran no encontraron influencia de la fluidez lectora sobre el crecimiento del RAN y propusieron que el RAN refleja la integridad de circuitos de reconocimiento y denominación que la lectura recluta sin modificar; en cambio, un estudio longitudinal de gemelos halló que la alfabetización temprana sí acelera el RAN posterior [@peterson2018literacy], y una intervención lectora aleatorizada a los 9 años lo mejoró [@wolff2014ran].
 
 El presente estudio aprovecha un diseño de cohortes múltiples con tres evaluaciones por curso escolar entre los 4 y los 8 años (N por sesión entre 400 y 900), en una ortografía transparente, con cohortes consecutivas evaluadas el mismo mes con las mismas tareas y con una intervención en lectura aplicada por colegio, para (a) estimar la curva de desarrollo del RAN y situar su punto de inflexión dentro del curso, (b) cuantificar la estabilidad de rango de las diferencias individuales por tramos de edad, corregida por la fiabilidad de la tarea, (c) comparar formatos alfanuméricos y no alfanuméricos en los mismos niños, y (d) contrastar, mediante la discontinuidad por fecha de corte escolar, si un año de escolarización modifica el RAN a igual edad. Como objetivo aplicado, los resultados fijan a qué edad conviene baremar el RAN por trimestre y a partir de cuándo basta el curso.
+
+## Borrador del artículo
+
+Borrador 1 completo (resumen, introducción, método, resultados con cuatro tablas y tres figuras, discusión, referencias y notas para los coautores) en el documento de Claude «Desarrollo de la denominación rápida de 4 a 8 años – borrador del artículo (M11)», para revisión de A. Giménez y J. L. Luque.
 
 ## Archivos
 
