@@ -4,7 +4,7 @@ search: false
 
 # M5 · Identificación bayesiana de la dificultad lectora — análisis exploratorio {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 24/10/2026; revisión de literatura, 28/10/2026*
+*Desarrollo de un estudio de la Agenda · versión 1, 24/10/2026; revisión de literatura, 28/10/2026; borrador 1 del artículo, 30/10/2026*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -134,6 +134,10 @@ Propuestas tras la revisión de literatura; sustituyen a los próximos pasos de 
 - **Volver a probar el RAN con otro criterio y otra edad.** Repetir el análisis con un criterio solo de fluidez y con el RAN de 6 años. Así se distingue «el RAN no aporta» de «el RAN no aporta a este criterio» [@thompson2015individual; @landerl2019pa].
 - **Probar el formato del informe antes de usarlo.** Matriz de iconos con la probabilidad y su intervalo, probada con un grupo pequeño de docentes y familias [@tubau2019icons].
 - **Revistas.** *Scientific Studies of Reading* (donde publicaron @wagner2022bayes), *Annals of Dyslexia* y *Journal of Learning Disabilities*. Si el peso es metodológico, *Assessment for Effective Intervention* o *School Psychology Review*, donde están @hall2026bayesics y @shen2026cat.
+
+## Borrador del artículo
+
+Borrador 1 completo en español (título, resumen, introducción, método, resultados con tres tablas, discusión, referencias y notas para los coautores) en el documento de Claude «Identificación probabilística de la dificultad lectora a los 5 años – borrador 1 del artículo (M5)», 30/10/2026, para revisión del grupo. Antes del envío: modelo multinivel con efecto de colegio (sustituye a D), calibración completa y curvas de decisión, RAN con criterio de fluidez y a los 6 años, Preleo como covariable, porte del guion a R, versión en inglés.
 
 ## Huecos que puede llenar LEEDUCA
 
