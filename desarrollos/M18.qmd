@@ -1,0 +1,62 @@
+---
+search: false
+---
+
+# M18 · ¿Desconecta Preleo el riesgo lector del nivel socioeconómico? — redes de cambio {.unnumbered}
+
+*Seguimiento de un estudio propio · versión 1, 30/10/2026. Borrador en `LEEDUCA\2026\AUXI\RED` (script `REDES_AÑO.R`, `propuesta_redes_6.docx`, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Estado del borrador
+
+| | |
+|---|---|
+| **Título provisional** | *Early intervention reorganizes the architecture of reading development: a network analysis of developmental change* (hay dos variantes más en el borrador) |
+| **Muestra** | 506 niños de la cohorte 2010 en 20 colegios (10 Preleo, 10 de comparación; 306/200), la misma matriz de la tesis de Auxi y de «Who Benefits and Why»; datos completos a los 6 y 7 años |
+| **Nodos** | Cambios de 6 a 7 años (Δ = X₇ − X₆) en conciencia fonológica, fluidez, decodificación (palabras y pseudopalabras), comprensión, más sexo, ISE (3 niveles), riesgo inicial (categórico) y CI |
+| **Método** | Modelos gráficos mixtos (`mgm`, regla AND) estimados por separado en cada grupo; permutación de la **fuerza global** (B permutaciones); predictibilidad por nodo con red elástica y validación cruzada de 10 pliegues |
+| **Hallazgo** | En comparación, el cambio sigue organizado por ISE y riesgo, con la decodificación aislada; en Preleo, ΔCF es el centro de la red, el ISE queda periférico y la predictibilidad de ΔCF sube de R² = .31 a .50; la de Δcomprensión pasa de −.02 a .03 |
+| **Escrito** | Resumen, introducción, método, resultados (figura 1, figura S1, tabla S1) y discusión en inglés, ≈ 2.900 palabras |
+| **Falta** | Las comprobaciones de abajo; indicador de uso del colegio; decidir la cohorte de réplica; lista de autores; revista |
+
+## En cinco líneas
+
+La idea es buena y tiene un argumento de equidad que ningún análisis de medias da: si Preleo **atenúa** la dependencia entre el nivel socioeconómico del centro y el riesgo lector, el programa no solo sube la media, sino que cambia de quién depende el progreso. El dibujo actual lo sugiere, pero cuatro explicaciones alternativas producen el mismo dibujo y hay que descartarlas antes de escribir «desconecta». El borrador compara la fuerza global de las dos redes, no la arista ISE–riesgo; con 306 frente a 200 niños la regularización deja la red pequeña más dispersa; el ISE es del colegio y Preleo también, así que con 10 centros por grupo la arista refleja diferencias entre colegios; y las puntuaciones de diferencia arrastran regresión a la media. Resueltas esas cuatro, el resultado es publicable y, con el indicador de uso como dosis, muy sólido.
+
+## Debilidades y qué hacer con cada una
+
+| # | Debilidad | Qué se hace | Estado |
+|---|---|---|---|
+| 1 | **Se contrasta la red entera, no la arista.** La permutación del script compara la fuerza global; la afirmación central es sobre ISE–riesgo (y riesgo–ΔCF) | Permutación de **cada arista** (guardar el peso en cada permutación; o `NetworkComparisonTest` con `test.edges`) e intervalo por bootstrap no paramétrico con `bootnet` en cada grupo; comprobar la estabilidad de la centralidad (CS) | Pendiente |
+| 2 | **Grupos de tamaño distinto (306/200).** Con `mgm` y EBIC, la red más pequeña pierde aristas por sí sola | Repetir con submuestras de 200 en los dos grupos (varias veces) y con el mismo λ en ambos; alternativa: **una sola red moderada** (`mgm` con Preleo como moderador), que contrasta las diferencias dentro de un modelo | Pendiente |
+| 3 | **Restricción de rango del ISE.** Si los colegios Preleo abarcan un abanico de ISE más estrecho, la arista se debilita sola | Comparar la distribución del ISE (y su valor continuo, no en 3 niveles) en los dos grupos; repetir en un subconjunto de ISE comparable; el emparejamiento de «Who Benefits» ya da ese subconjunto | Pendiente |
+| 4 | **Pocos colegios detrás del ISE.** ISE y Preleo son de colegio: 10 centros por grupo. Las redes ignoran el anidamiento | Decirlo; comprobar con el ISE desagregado del centro (dejar un colegio fuera cada vez); si hay varianza, red con efectos de colegio parcializados (residuos de un modelo multinivel) | Pendiente |
+| 5 | **Puntuaciones de diferencia.** Δ = X₇ − X₆ hereda la poca fiabilidad del cambio y la regresión a la media; la arista riesgo–ΔCF puede ser en parte artefacto (los de riesgo alto parten de más abajo y suben más) | Red con **cambio residualizado** (X₇ dado X₆) como análisis principal o de sensibilidad; usar las tres evaluaciones del curso (6.1, 6.2, 6.3, 7.1) para una pendiente en vez de una diferencia | Pendiente |
+| 6 | **Variables categóricas a tres niveles en `mgm`** (ISE, riesgo). Las aristas con categóricas no tienen signo y se comparan mal entre grupos | ISE continuo (valor del centro) y riesgo continuo (compuesto a los 5 años) en un modelo gaussiano; dejar el mixto como comprobación | Pendiente |
+| 7 | **Predictibilidad de la comprensión** (R² de −.02 a .03): se presenta como «acoplamiento emergente» y es ruido | Quitarlo de las conclusiones o reportarlo con intervalo | Decidido: suavizar |
+| 8 | **Lenguaje causal** («reorganiza», «desconecta») con un diseño cuasiexperimental por centro | «Se asocia con una atenuación de…»; la dosis (uso del colegio) es lo que acerca a lo causal | Decidido |
+| 9 | **Asignación de Preleo.** La matriz usa la de la tesis (2010); para 2010 y 2011 hay fuentes contradictorias | Confirmar que es la asignación v3; para la réplica en 2011, usar la propuesta v5 (intención de tratar) cuando el grupo la acuerde | Pendiente de Auxi y Juan Luis |
+| 10 | **Grupo «control»** | En el texto, «comparación» (los centros se autoseleccionaron) | Decidido |
+
+## Lo que puede convertirlo en un artículo fuerte
+
+- **Indicador de uso como dosis.** `06_PRELEO_COLEGIOS\acceso_colegios_R_v1.xlsx` da la regularidad de acceso de cada colegio. Dentro del grupo Preleo, red moderada por la regularidad: si la arista ISE–riesgo se debilita más cuanto más usa el colegio la plataforma, es el mejor apoyo posible para la lectura causal.
+- **Réplica en la cohorte 2011**, que tuvo el programa desde los 4 años en los mismos centros (asignación v5, pendiente).
+- **Tres evaluaciones por curso**: pendientes en vez de diferencias, y redes a 6.1, 6.2, 6.3 y 7.1 para ver cuándo se atenúa la arista.
+- Encaja con el artículo de compensación acotada (`2026\AUXI\FINALES`): allí Preleo comprime la distribución; aquí cambia de qué depende el progreso. Conviene que se citen mutuamente.
+
+## Ficha para la Agenda
+
+- **Pregunta:** ¿Atenúa Preleo la dependencia entre el nivel socioeconómico del centro, el riesgo inicial y el progreso lector de 6 a 7 años? ¿Se organiza el cambio en torno a la conciencia fonológica cuando hay programa?
+- **Datos:** Cohorte 2010, 506 niños en 20 colegios (matriz de la tesis); indicador de uso por colegio; cohorte 2011 para replicar.
+- **Método:** Redes de cambio con modelos gráficos mixtos y una sola red moderada por Preleo; contraste por arista con permutación y bootstrap; cambio residualizado; dosis por regularidad de uso.
+- **Revistas posibles:** *Scientific Studies of Reading*, *Journal of Educational Psychology*, *Reading and Writing*, *Developmental Science*.
+
+## Archivos
+
+`LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png`. Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.

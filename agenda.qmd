@@ -94,6 +94,13 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Detección de señal con modelo mixto probit sobre las respuestas a los ítems (d′ y criterio por momento), criterio de dominio por binomial para comparar tareas con distinto azar, análisis implicacional de ítems dentro del niño [@macmillan2005detection; @decarlo1998sdt; @carroll2001global].
 - **Revistas posibles:** *Applied Psycholinguistics*, *Reading and Writing*, *Journal of Child Language*.
 
+### [M18 · ¿Desconecta Preleo el riesgo lector del nivel socioeconómico? Redes de cambio](desarrollos/M18.qmd){.enlace-discreto}
+
+- **Pregunta:** ¿Atenúa Preleo la dependencia entre el nivel socioeconómico del centro, el riesgo inicial y el progreso lector de 6 a 7 años? ¿Se organiza el cambio en torno a la conciencia fonológica cuando hay programa?
+- **Datos:** Cohorte 2010, 506 niños en 20 colegios (matriz de la tesis de A. Sánchez); indicador de uso por colegio; cohorte 2011 para replicar.
+- **Método:** Redes de cambio con modelos gráficos mixtos y una sola red moderada por Preleo; contraste por arista con permutación y bootstrap; cambio residualizado; dosis por regularidad de uso [@epskamp2018redes].
+- **Revistas posibles:** *Scientific Studies of Reading*, *Journal of Educational Psychology*, *Reading and Writing*, *Developmental Science*.
+
 ## Cómo aprovecharlo
 
 - **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.
