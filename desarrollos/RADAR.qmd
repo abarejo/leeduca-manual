@@ -1,0 +1,90 @@
+---
+search: false
+---
+
+# Radar metodológico 2023–2026 {.unnumbered}
+
+*Barrido de literatura para la Agenda · versión 1, 30/10/2026. Nueve búsquedas semánticas en SciSpace sobre datos como los de LEEDUCA (longitudinales con tres medidas por curso, varias cohortes con baterías distintas, ítem a ítem, anidados en aula y centro, corregidos por un evaluador, con una intervención por centro). P. J. López-Pérez.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** No aparece en el índice del libro: se llega desde la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. No contiene datos.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Regla
+
+Una técnica entra en el radar solo si se puede atar a **una pregunta del grupo** y a **datos que ya tenemos**. Las que cumplen las dos condiciones y no están cubiertas por M1–M12 se proponen abajo como estudios nuevos (M13–M17), con el mismo formato que la Agenda, para que el grupo decida cuáles entran. Las demás quedan como herramientas para los estudios ya abiertos.
+
+## Radar
+
+| Técnica | Referencia clave | Pregunta LEEDUCA | Datos | Alimenta a |
+|---|---|---|---|---|
+| **TRI longitudinal cruzada con efectos del evaluador** (L-CCIRT) | Kim, Huang y Ham, *J. Educational Measurement*, 2026 (10.1111/jedm.70046); modelo jerárquico de evaluadores longitudinal, Casabianca et al., *MBR*, 2017; deriva del evaluador por orden de corrección, Huang, *APM*, 2023 | ¿Cuánta varianza de lectura y RAN es del evaluador que corrige con el ratón? ¿Sesga los baremos y el cambio entre trimestres? | Aula: sí. Evaluador por sesión: **por comprobar** en los registros de aplicación | **M13 (nuevo)** |
+| **Escala longitudinal común entre versiones de una prueba** (enlace vertical con factor general) | Branum-Martin et al., *JSLHR*, 2019; Pohl y Carstensen, NEPS, 2013 y 2015 (la invarianza entre edades no siempre se cumple) | ¿Se puede poner la decodificación de 4 a 11 años, y entre cohortes con listas distintas, en una sola escala? | Tareas repetidas y listas con ítems comunes (letras, palabras, pseudopalabras); solapamiento de cohortes en las mismas sesiones | **M14 (nuevo)**; condición previa de M1, M3 y M9 |
+| **Análisis factorial no lineal moderado longitudinal** (MNLFA): DIF por edad, sexo y tiempo sin ítems ancla, con regularización bayesiana | Chen y Bauer, *MBR*, 2026 (10.1080/00273171.2026.2640576); extensión a grupos de ítems, Student y Kanopka, 2026 (preprint) | ¿Cambia lo que mide cada ítem entre trimestres y entre niños y niñas? Si sí, las curvas de crecimiento con puntuaciones sumadas están sesgadas | Respuestas por ítem (plataforma nueva, 2017–) | M14, M3, M4+M7 |
+| **Mapas de interacción persona × ítem variables en el tiempo** | Jeon y Schweinberger, *Psychological Methods*, 2026 (10.1037/met0000825) | ¿Qué ítems cambian de dificultad relativa a lo largo del curso? Base para versiones cortas de seguimiento | Respuestas por ítem | M3; acortamiento de tareas |
+| **Filtrado probabilístico de respuestas sin esfuerzo** con tiempos | Ulitzsch, Domingue y Kanopka, *EMIP*, 2023; umbrales de tiempo en 729.000 niños, Soland et al., *LSAE*, 2021; en niños el desenganche es menor, Welling, 2026 (tesis) | ¿Cuántas puntuaciones bajas son abandono y no incapacidad? Afecta a los baremos y a los cortes de riesgo | Tiempos por ítem (plataforma nueva); el tiempo total es el de la última respuesta | **M15 (nuevo)**; M2 |
+| **Modelo jerárquico de velocidad y exactitud para acortar pruebas** | Bertling y Weeks, *Psychological Assessment*, 2017; van der Linden, 2007 | ¿Cuánto se puede acortar cada tarea sin perder fiabilidad si se usan los tiempos? | Tiempos y aciertos por ítem | M2 (ya en la Agenda) |
+| **Diseño de discontinuidad por fecha de corte escolar** | Kim y Morrison, *AERA Open*, 2018; Kim, Ahmed y Morrison, *Front. Psychol.*, 2021; Dhuey et al., *JPAM*, 2019 (efecto estable de 0,2 DT); De Smedt y Vandermosten, 2024 (preprint; escolarización > maduración en lectura, no tanto en matemáticas) | ¿Qué precursores dependen de la escolarización y cuáles de la edad? M11 lo hizo con el RAN; nadie lo ha hecho con 40 tareas de 4 a 8 años | Fecha de nacimiento y pares de cohortes en la misma sesión: sí | **M16 (nuevo)** |
+| **Métrica común de riesgo entre instrumentos** (bosque aleatorio calibrado a un resultado posterior) | Quesen et al., 2026 (preprint, 19 instrumentos, 84.245 niños, cinco cohortes); revisión de identificación con varios indicadores, Erbeli y Wagner, *SSR*, 2022 | ¿Se puede dar a cada niño una probabilidad calibrada de dificultad a los 8 años, sea cual sea la batería que hizo su cohorte? | Trayectorias y etiqueta de dificultad persistente: sí | **M17 (nuevo)**; M5 |
+| **Trayectorias heterogéneas** (modelos de mezcla de crecimiento) desde infantil | Boscardin, Muthén, Francis y Baker, *JEP*, 2008 (cuatro medidas al año) | ¿Hay perfiles de desarrollo en infantil que predicen la lectura en primaria? | Sí | M4+M7, M5 |
+| **Dinámica dentro del niño** (RI-CLPM, modelos de cambio latente, trayectorias con riesgo familiar) | Blockmans et al., *Developmental Science*, 2023; Grimm et al., 2016; Ferrer et al., 2007 | ¿En qué ventana actúa cada precursor sobre la lectura? | Sí (M11 ya lo aplicó al RAN) | M1, M9, M11 |
+| **Equivalencia de formato** (invarianza, DIF por modo, bifactor con factor de método) | Schöfl et al., *EJPA*, 2023 (tableta frente a papel a los 6 años); Kim y Huynh, *Educational Assessment*, 2010; Pomplun, 2007 | ¿Son intercambiables papel, tableta y plataforma? | TECLE en tres formatos: sí | M6 (ya en la Agenda) |
+| **Efecto de la fidelidad como constructo multinivel** y puntuación de propensión generalizada longitudinal | Zvoch, *AJE*, 2009 y 2012; Moodie y Stephens, 2007; Stuart, *Educational Researcher*, 2007 | ¿Cómo estimar el efecto de Preleo cuando la fidelidad varía por centro y aula? | Condición y fidelidad por centro: sí | Artículos de Preleo (Auxi); no es un estudio M |
+| **Normas para evaluaciones repetidas** (modelos mixtos con imputación múltiple) | Van der Elst et al., *Behavior Research Methods*, 2013 | ¿Qué puntuación es normal *dado lo que el niño sacó el trimestre anterior*? Es el baremo del cambio | Sí | M3, M4+M7 |
+| **Evaluación dinámica como cribado** | Cho, Compton y Josol, *Reading and Writing*, 2020; Nash et al., 2026 | ¿Mejora el cribado medir cuánto aprende el niño en una sesión? | **No hay datos**: haría falta una tarea nueva en la plataforma | Propuesta de tarea, no de estudio |
+
+Lo que el barrido no encontró: nada en 2023–2026 que combine seguimiento de 4 a 11 años, tres medidas por curso y más de 40 tareas. Sigue siendo la ventaja de LEEDUCA y lo que hay que decir en cada introducción.
+
+## Propuestas nuevas para la Agenda
+
+Formato de la Agenda. Entran solo si el grupo las aprueba.
+
+### M13 · El evaluador como fuente de error
+
+- **Pregunta:** ¿Cuánta varianza de las tareas corregidas con el ratón (lectura de letras, palabras y pseudopalabras, RAN) es del evaluador y del aula, y cómo afecta a los baremos y al cambio entre trimestres?
+- **Datos:** Aula y centro en todas las sesiones; evaluador por sesión si quedó registrado (comprobar en la plataforma y en los registros de aplicación). Si no hay evaluador, el aula lo aproxima.
+- **Método:** TRI longitudinal cruzada con efectos del evaluador (Kim, Huang y Ham, 2026) o modelo jerárquico de evaluadores longitudinal (Casabianca et al., 2017); descomposición de varianza por generalizabilidad como primer paso; doble corrección en una submuestra de grabaciones para anclar.
+- **Por qué importa:** es el punto ciego del manual (capítulo *Límites*): el error del evaluador forma parte de la puntuación y nunca se ha medido.
+- **Revistas posibles:** *Journal of Educational Measurement*, *Applied Psychological Measurement*, *Assessment*.
+
+### M14 · Una escala de decodificación de 4 a 11 años
+
+- **Pregunta:** ¿Se puede construir una escala longitudinal única de decodificación que enlace letras, sílabas, palabras y pseudopalabras entre edades y entre cohortes con listas distintas? ¿Hasta dónde se cumple la invarianza?
+- **Datos:** Ítems comunes entre listas y sesiones; tareas repetidas en trimestres consecutivos; cohortes que coinciden en la misma sesión.
+- **Método:** Enlace vertical con factor general (Branum-Martin et al., 2019); comprobación de invarianza entre edades y cohortes (Pohl y Carstensen); MNLFA longitudinal con DIF por edad y sexo sin anclas (Chen y Bauer, 2026).
+- **Por qué importa:** sin esta escala, M1 (redes), M3 (normas) y M9 (sistemas dinámicos) comparan puntuaciones que no significan lo mismo. Es el estudio que desbloquea los otros tres.
+- **Revistas posibles:** *Educational and Psychological Measurement*, *Journal of Educational Measurement*, *Scientific Studies of Reading*.
+
+### M15 · Abandono y respuestas sin esfuerzo en la evaluación colectiva
+
+- **Pregunta:** ¿Qué proporción de puntuaciones bajas en el aula refleja abandono o desenganche y no falta de capacidad? ¿Cambia con la edad, la tarea y la posición en la sesión? ¿Cuánto mueve los baremos y los cortes de riesgo tratarlo?
+- **Datos:** Tiempos por ítem de la plataforma nueva; orden de las tareas en la sesión; respuestas en blanco.
+- **Método:** Filtrado probabilístico por tiempos con imputación múltiple (Ulitzsch, Domingue y Kanopka, 2023); comparación de umbrales (Soland et al., 2021); baremos con y sin filtrado.
+- **Por qué importa:** la plataforma registra el momento de la última respuesta, no la duración, y el capítulo *Límites* ya avisa de que la velocidad puede confundir lentitud con abandono. En niños el desenganche parece menor que en adolescentes (Welling, 2026); hay que comprobarlo.
+- **Revistas posibles:** *Educational Measurement: Issues and Practice*, *Large-scale Assessments in Education*, *Assessment*.
+
+### M16 · Escolarización frente a maduración en 40 tareas
+
+- **Pregunta:** ¿Qué habilidades de 4 a 8 años avanzan por ir a la escuela y cuáles por cumplir años? ¿Difiere el patrón entre precursores, lectura, lenguaje oral y matemáticas?
+- **Datos:** Fecha de nacimiento, pares de cohortes evaluadas en la misma sesión con un curso de diferencia; todas las tareas del catálogo.
+- **Método:** Discontinuidad por fecha de corte escolar (Kim y Morrison, 2018), con los nueve contrastes que M11 ya construyó para el RAN, generalizados a todas las tareas; efecto de la edad relativa como contraste (Dhuey et al., 2019).
+- **Por qué importa:** M11 encontró que el paso a 1.º acelera el RAN +0,31 DT. Hacerlo con 40 tareas da un mapa de qué enseña la escuela en infantil, útil para la Consejería y para los baremos por trimestre.
+- **Revistas posibles:** *Developmental Science*, *Journal of Educational Psychology*, *Child Development*.
+
+### M17 · Una probabilidad de riesgo común para cualquier batería
+
+- **Pregunta:** ¿Se puede dar a cada niño, sea cual sea la cohorte y la batería que hizo, una probabilidad calibrada de dificultad lectora persistente a los 8 años, y mantenerla calibrada cuando cambian los centros?
+- **Datos:** Todas las cohortes con etiqueta de dificultad persistente; baterías distintas por cohorte (el problema que el método resuelve).
+- **Método:** Bosque aleatorio entrenado sobre todas las baterías a la vez, calibrado al resultado común (Quesen et al., 2026); tablas de concordancia por tarea; recalibración por cohorte; comparación con la regresión logística bayesiana de M5.
+- **Por qué importa:** es lo que el servidor podría devolver en el informe de aula: una probabilidad, no un corte por tarea. Prolonga M5 hacia la práctica.
+- **Revistas posibles:** *Assessment*, *Journal of School Psychology*, *Educational Measurement: Issues and Practice*.
+
+## Qué haría primero
+
+M14 antes que M1: sin escala común, las redes de 4 a 11 años comparan constructos distintos. M13 cuando se confirme si el evaluador está registrado; si no lo está, conviene que la plataforma lo guarde desde este curso. M16 es el más barato (los contrastes de M11 ya existen). M15 y M17 son extensiones naturales de M2 y M5.
+
+## Artículos para descargar
+
+Para el directorio de contexto (`05_MANUAL_TECNICO_PSICOMETRIA\RADAR_2026\`), por DOI: 10.1111/jedm.70046 · 10.1080/00273171.2017.1342202 · 10.1177/01466216231174566 · 10.1044/2019_JSLHR-L-18-0362 · 10.1080/00273171.2026.2640576 · 10.1037/met0000825 · 10.1111/emip.12567 · 10.1186/s40536-021-00100-w · 10.1037/pas0000466 · 10.1177/2332858418798793 · 10.3389/fpsyg.2020.607973 · 10.1002/pam.22135 · 10.35542/osf.io/c4d6x_v1 · 10.1080/10888438.2022.2146508 · 10.1037/0022-0663.100.1.192 · 10.1111/desc.13412 · 10.1027/1015-5759/a000793 · 10.1177/1098214012452715 · 10.3758/s13428-012-0305-y · 10.1007/s11145-019-09984-1.

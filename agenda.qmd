@@ -8,6 +8,8 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 
 ## Estudios propuestos
 
+*Hay un [radar metodológico 2023–2026](desarrollos/RADAR.qmd){.enlace-discreto} con las técnicas revisadas y cinco propuestas nuevas (M13–M17) pendientes de que el grupo decida.*
+
 ### M1 · Redes del desarrollo lector
 
 - **Pregunta:** ¿Cómo se reorganiza el sistema de habilidades lectoras de 4 a 11 años? ¿Se densifica la red al aprender a leer, como predice el mutualismo?
