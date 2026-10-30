@@ -109,6 +109,24 @@ En febrero de 3 años, la cohorte 2020 (aplicada en 2023/24) da d′ = −0,05 (
 
 **Consecuencias para el manual.** El baremo de 3 años no puede mezclar cursos de aplicación. La ficha de rima debe separar 2023/24 del resto o baremar desde 2024/25.
 
+### Análisis por centro de la cohorte 2020 (petición de A. Sánchez, 30/10)
+
+Guiones `rima_cohorte2020_centros.py` e `rima_cohorte2020_incongruencias.py` (salidas en `04\DIAGNOSTICO`; los nombres de los centros no salen de la carpeta). Para cada centro y momento: d′ agrupado, porcentaje de niños con d′ individual negativo (binomial), porcentaje con 10/10, «no realiza», y la correlación entre aciertos en pares que riman y en pares que no riman. La lógica es la de la beta por colegio de Preleo: en un centro bien registrado, a los 3 años, el niño que dice «sí» a todo acierta las rimas y falla las no rimas, así que esa correlación no puede ser fuerte y positiva; si lo es, el evaluador marcó «acierto» cuando el niño decía «sí».
+
+| Aviso | Criterio | 3.2 | 3.3 | 4.x | 5.x |
+|---|---|---|---|---|---|
+| d′ invertido | más niños con d′ < 0 que > 0, p < .05, y d′ del centro < 0 | 5 centros (−0,8 a −1,8) | 2 | 1 | 0 |
+| Todos perfectos | ≥ 80 % de los niños con 10/10 | 2 | 2 | 2 | 6 |
+| No realiza > 30 % | | 3 | 1 | 1 | 0 |
+| Correlación rima–no rima > .5 (solo a los 3 años) | | 2 | 4 | — | — |
+
+- En **3.2, 10 de 25 centros tienen algún aviso: 249 de 570 niños (44 %)**. Sin ellos, d′ = 0,22 (N = 321) en vez de −0,02, y «no realiza» baja del 17 % al 9 %. De 4.1 en adelante los avisos son pocos y el d′ de la cohorte no cambia.
+- Los centros invertidos a los 3 años tienen entre 20 % y 50 % de «sí» ante las rimas y entre 60 % y 90 % ante las no rimas: eso no lo produce ninguna forma de responder de un niño; lo produce el registro. Varios de ellos tienen además 40–77 % de 0/10, que bajo un registro invertido serían niños que dicen «no» a todo.
+- Un centro aparece invertido a los 3 años y con todos los niños perfectos a los 5. Dos centros tienen todos los niños perfectos ya en febrero de 3 años, igual de improbable.
+- Las pendientes de d′ sobre contar sílabas o memoria verbal por centro no discriminan (N de 10 a 40 por centro); la correlación global de d′ con contar sílabas es .17 en 3.2 y .28 en 4.1.
+
+**Lectura.** Depurar los centros mejora la estimación de 3 años pero no la lleva al nivel de las cohortes siguientes (d′ ≈ 1): queda 0,22. Es decir, parte del efecto del año de aplicación es registro y parte es otra cosa (centros, formación de los evaluadores, familiaridad de los niños con la plataforma). Para el artículo, la decisión mínima es excluir los centros con d′ invertido o con todos perfectos a los 3 años, con el mismo criterio que se aplicó a Preleo en la cohorte 2010, e informarlo.
+
 ### Fiabilidad y estabilidad para el artículo (cohorte 2020, sin 0/10)
 
 | Momento | α sin 0/10 | α con 0/10 | r mitades de d′ (Spearman-Brown) | ρ con el momento siguiente (aciertos · d′) |
@@ -175,7 +193,8 @@ Comprobar los cuartiles JCR en Web of Science antes de decidir.
 |---|---|---|
 | Replicar la tabla 1 con la tabla larga del servidor (cohorte 2020, Málaga, con y sin 0/10) | PJ López | Hecho 30/10: se replica |
 | Fiabilidad por momento sin 0/10 y estabilidad entre momentos para el artículo | PJ López | Hecho 30/10 (tabla en esta página) |
-| d′ por centro en 3.2 y revisión de los centros con d′ negativo (¿registro invertido?) | PJ López | Pendiente |
+| d′ por centro en 3.2 y revisión de los centros con d′ negativo (¿registro invertido?) | PJ López | Hecho 30/10: 10 centros con aviso en 3.2 |
+| Decidir el criterio de exclusión de centros y rehacer los modelos | A. Sánchez y PJ López | Pendiente |
 | Modelo con efecto aleatorio de centro sobre la discriminación | A. Sánchez | Pendiente |
 | Decidir si 2023/24 se trata como curso piloto en el baremo de 3 años del manual | Grupo | Pendiente |
 | Decidir cómo describir la pantalla en el método | A. Sánchez | Pendiente |
@@ -185,6 +204,7 @@ Comprobar los cuartiles JCR en Web of Science antes de decidir.
 
 ## Registro
 
+- **30/10/2026 (tarde, 2).** Análisis por centro de la cohorte 2020: avisos de registro invertido, todos perfectos, no realiza y correlación rima–no rima. Sin los centros con aviso, d′ en 3.2 = 0,22.
 - **30/10/2026 (tarde).** Análisis complementarios: réplica de la tabla 1 (se replica), efecto del año de aplicación (0,4–0,8 de d′ por curso a igual edad), centros con d′ negativo a los 3 años, α y fiabilidad de d′ por mitades, estabilidad. Revisión de literatura con SciSpace (13 referencias nuevas). Punto 0 añadido a la revisión.
 - **30/10/2026.** Página creada. Borrador completo recibido de A. Sánchez. Contraste con la ficha de rima y revisión en diez puntos. Figuras del borrador incorporadas. Referencias del artículo añadidas a `referencias.bib`.
 - **23/10/2026.** Ficha de rima del manual publicada; se retiran de ella las citas al artículo hasta su publicación. Comprobado en la plataforma que la actividad 11795 muestra el par escrito.
