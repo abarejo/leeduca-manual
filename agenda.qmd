@@ -85,10 +85,17 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Escala común en ítems/min, modelo de crecimiento multinivel no lineal con edad en meses y percentiles por edad (como M4), estabilidad de rango corregida por atenuación, RI-CLPM RAN–lectura y contraste CON/SIN Preleo con ISE. Único estudio longitudinal en ortografía transparente con tres medidas por curso desde los 4 años [@avall2019ran; @lervag2009ran; @peterson2018literacy].
 - **Revistas posibles:** *Dyslexia*, *Reading and Writing*, *Scientific Studies of Reading*.
 
+### [M12 · ¿Es la rima una habilidad fonológica temprana?](desarrollos/M12.qmd){.enlace-discreto}
+
+- **Pregunta:** ¿Cuándo emerge el juicio explícito de rima en español, va antes o después que la conciencia silábica y qué hace difícil un par? Artículo de A. Sánchez Gómez en preparación; la página recoge su estado, el contraste con la ficha de rima y las sugerencias de revisión.
+- **Datos:** Juicio de rima (11795) y tareas silábicas en la cohorte 2020 (36 centros de Málaga, 934 niños) en ocho momentos de 3 a 5 años.
+- **Método:** Detección de señal con modelo mixto probit sobre las respuestas a los ítems (d′ y criterio por momento), criterio de dominio por binomial para comparar tareas con distinto azar, análisis implicacional de ítems dentro del niño [@macmillan2005detection; @decarlo1998sdt; @carroll2001global].
+- **Revistas posibles:** *Applied Psycholinguistics*, *Reading and Writing*, *Journal of Child Language*.
+
 ## Cómo aprovecharlo
 
 - **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.
-- **M3, M4, M7 y M11 alimentan directamente el manual**: baremos, seguimiento, cambio relevante y la curva de desarrollo del RAN (baremo por trimestre en infantil). Conviene que vayan en paralelo a las fichas.
+- **M3, M4, M7 y M11 alimentan directamente el manual**: baremos, seguimiento, cambio relevante y la curva de desarrollo del RAN (baremo por trimestre en infantil). Conviene que vayan en paralelo a las fichas. **M12** es un artículo ya escrito cuyos resultados entrarán en la ficha de rima cuando se publique.
 - **M5 y M6 combinan psicometría y lectura**, y pueden salir pronto con los análisis que ya están hechos.
 - **M8 es rápido y suma a todo el grupo**: un artículo de datos se cita cada vez que alguien usa la base.
 - **Orden recomendado:** M8 y M6 primero (casi todo hecho); después M1 y M2 (el núcleo metodológico); M3, M4 y M7 con las fichas; M5 y M9 como proyectos más largos.

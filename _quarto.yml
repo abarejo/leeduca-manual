@@ -193,6 +193,7 @@ book:
     - desarrollos/M5.qmd
     - desarrollos/M10.qmd
     - desarrollos/M11.qmd
+    - desarrollos/M12.qmd
 
 bibliography: referencias.bib
 

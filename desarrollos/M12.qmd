@@ -1,0 +1,117 @@
+---
+search: false
+---
+
+# M12 · ¿Es la rima una habilidad fonológica temprana? — seguimiento del artículo {.unnumbered}
+
+*Página de seguimiento de un manuscrito del grupo · versión 1, 30/10/2026. Artículo de A. Sánchez Gómez (borrador completo recibido el 30/10/2026); contraste con la ficha del manual y revisión de P. J. López-Pérez.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Recoge el estado de un artículo en preparación, su contraste con los datos del manual y las sugerencias de revisión. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados. Las figuras son las del borrador.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Estado del manuscrito
+
+| | |
+|---|---|
+| **Título** | ¿Es la rima una habilidad fonológica temprana? Evidencia longitudinal del desarrollo de la conciencia de rima en español |
+| **Autoría** | A. Sánchez Gómez (primera autora); resto de la lista por decidir |
+| **Versión recibida** | Borrador completo en español (30/10/2026): introducción, método, resultados (7 tablas, 4 figuras), discusión, conclusiones y 36 referencias. Unas 10.400 palabras sin resumen |
+| **Muestra** | Cohorte 2020 (nacidos en 2020), 36 centros públicos de Málaga; 942 niños, 934 con al menos una aplicación de rima; 8 momentos de febrero de 2024 (3 años) a mayo de 2026 (5 años) |
+| **Tarea del manual** | [Juicio de rima, 11795](../fichas/RIMA.qmd) |
+| **Falta** | Resumen y palabras clave; declaración de ética, financiación y disponibilidad de datos; lista de autores; versión en inglés si va a una revista Q1 |
+| **Sigue en el manual** | La ficha de rima no cita el artículo hasta que se publique (decisión del 23/10/2026) |
+
+## En diez líneas
+
+El artículo pregunta si la rima es, en español, la «primera puerta» de la conciencia fonológica que describe la literatura anglosajona. Sigue a una cohorte con la misma tarea de juicio de rima (diez pares: seis riman, cuatro no) en ocho momentos y separa, con la teoría de detección de señal, la discriminación (d′) de la tendencia a decir «sí» (c). Cuatro resultados:
+
+1. **A los 3 años y medio no hay discriminación** (d′ = −0,07; 62 % de «sí» ante las rimas y ante los pares que no riman; 18 % no realiza la tarea). La discriminación es significativa desde mayo de 3 años (0,46) y llega a 1,87 en mayo de 5 años, pero **solo el 53 % domina la tarea (9–10 aciertos) al terminar Infantil**.
+2. **La trayectoria va a saltos:** +0,53 entre febrero y mayo de 3 años, nada entre mayo de 3 y noviembre de 4 (+0,02), +0,53 entre noviembre y febrero de 4, y desaceleración al final de 5 años (+0,11, n. s.).
+3. **La sílaba va antes que la rima.** En todos los momentos, los niños que dominan el conteo silábico sin dominar la rima son de 6 a 11 veces más que los del patrón inverso. La identificación de la sílaba final, en cambio, se parece a la rima: la posición final de la palabra podría ser parte de la dificultad.
+4. **Lo difícil es rechazar lo que se parece.** Entre los pares que no riman, el orden de dificultad es sin relación < semánticos < semejanza fonológica parcial (*bota–moto*, 71 % de rechazo a los 5 años), y se mantiene dentro de cada niño. A los 3 años interfiere la relación semántica; a los 5, la semejanza fonológica.
+
+La tesis: en español, donde la rima se define desde la vocal tónica y suele atravesar la frontera silábica (*fresa–mesa*: *-esa*), juzgar una rima no es reconocer una unidad compacta como en el inglés (*cat–hat*) sino comparar una secuencia de varios segmentos. No es una habilidad elemental, y conviene no usarla como tarea de entrada ni como indicador de riesgo a los 3 años.
+
+## Objetivos, hipótesis y lo que sale
+
+| Hipótesis | Resultado | Comentario |
+|---|---|---|
+| H1. Discriminación nula a los 3 años; sin techo a los 5 | Nula en febrero de 3 (d′ = −0,07); 0,46 ya en mayo de 3; 53 % de dominio en mayo de 5 | Se cumple con matices: «nula a los 3 años» debería decir «al inicio del seguimiento (3 años y medio)» |
+| H2. Trayectoria no lineal | Fases de +0,53 alternan con una meseta de seis meses y una desaceleración final | Se cumple. Ver más abajo la lectura por curso escolar |
+| H3. Dominio silábico antes que el de rima | Razón 6:1 a 11:1 en todos los momentos; se mantiene con criterio de rima 8/10 | Se cumple. La sílaba final (32 % de dominio) se acerca a la rima (26 %) |
+| H4. Sin relación < semántico < fonológico, dentro del niño | Sin relación < (semántico = fonológico) hasta febrero de 4; después semántico < fonológico | Se cumple en parte: difiere de Carroll y Snowling (2001), donde el fonológico es más difícil desde el principio |
+
+![Figura 1 del borrador. Discriminación (d′) en cada momento y porcentaje de niños que no realizan la tarea o que dominan la rima.](../figuras/desarrollos/M12_F1_borrador_v1.png){width="100%"}
+
+![Figura 2 del borrador. Dominio de las tareas silábicas frente a la rima en los mismos niños.](../figuras/desarrollos/M12_F2_borrador_v1.png){width="100%"}
+
+![Figura 3 del borrador. Probabilidad de rechazo correcto según el tipo de par que no rima.](../figuras/desarrollos/M12_F3_borrador_v1.png){width="80%"}
+
+![Figura 4 del borrador. Porcentaje de acierto de cada par en los ocho momentos, ordenados por el momento en que alcanzan el 75 %.](../figuras/desarrollos/M12_F4_borrador_v1.png){width="90%"}
+
+## Contraste con la ficha del manual
+
+La [ficha de rima](../fichas/RIMA.qmd) usa **todas las aplicaciones del servidor de 2023 a 2026** (varias cohortes y regiones, 43–63 centros por momento) y calcula d′ **por niño** con la corrección de Hautus y promedia; el artículo usa **una cohorte de Málaga** y estima d′ **poblacional** con un modelo mixto probit sobre las respuestas a los ítems [@decarlo1998sdt]. Las conclusiones coinciden; las cifras no, y conviene saber por qué.
+
+| Cifra | Ficha (2023–2026, todas las cohortes) | Artículo (cohorte 2020, Málaga) | Por qué difieren |
+|---|---|---|---|
+| No realiza la tarea, 3.2 | 14 % | 18,4 % | Muestra |
+| «Sí» ante rima / no rima, 3.2 | 68 % / 52 % | 62 % / 62 % | **Por comprobar.** Si la tabla 1 del artículo incluye los 0/10 (que cuentan como «no» a todas las rimas y «sí» a todos los no rimados), las dos tasas se igualan artificialmente. Si las excluye, la diferencia es de muestra y hay que entenderla, porque H1 depende de ella |
+| d′ en 3.2 | 0,45 [0,34; 0,55] | −0,07 [−0,17; 0,02] | Lo anterior, más la diferencia entre d′ individual promediado y d′ poblacional |
+| d′ en 5.3 | 1,35 | 1,87 | El d′ individual con 6 + 4 ítems y corrección de Hautus está acotado (máximo 2,76) y sesgado hacia abajo; el poblacional no. Ninguno es «el bueno», pero la cifra del artículo es la que debe publicarse |
+| Dominio ≥ 9/10 en 5.3 | 42 % | 53 % | Muestra (la ficha incluye Cantabria y centros sin identificar) y cohorte |
+| Meseta | 3.3 → 4.3 (d′ ≈ 0,8 todo el curso de 4 años), salto en 5.1 | 3.3 → 4.1 (seis meses), saltos en 4.2 y durante 5 | La ficha mezcla cohortes; la trayectoria de una sola cohorte es más limpia |
+| α | .65–.79 sin los 0/10; .70–.86 con ellos | .81 (sin especificar momento ni tratamiento de los 0/10) | Ver revisión, punto 1 |
+| Estabilidad entre momentos (ρ) | .15–.41 | No se informa | Ver revisión, punto 2 |
+
+**Siguiente paso de datos:** replicar la tabla 1 del artículo con la tabla larga del servidor filtrando cohorte 2020 y centros de Málaga, con y sin los 0/10. Si sale 62/62 sin los 0/10, la diferencia es de muestra y se documenta; si sale 68/52, hay que revisar el tratamiento de los 0/10 en el artículo. Es media hora con `ficha_rima_3anios.R`.
+
+## Revisión: qué conviene cambiar antes de enviar
+
+Ordenado por importancia. Lo que afecta a un resultado va primero; lo de redacción, al final.
+
+1. **Fiabilidad (método, instrumentos).** El α = .81 necesita decir de qué momento es y si incluye las aplicaciones 0/10. Un bloque de ceros infla α; sin ellas la ficha da .65–.79 según el momento. Además, α sobre los aciertos de una tarea con seis «sí» y cuatro «no» mezcla discriminación y sesgo de respuesta: los pares que riman correlacionan entre sí por la tendencia a decir «sí», no por la habilidad. Propuesta: dar α por momento sin los 0/10, o mejor la fiabilidad de d′ (dos mitades: 3 + 2 pares frente a 3 + 2), y comentar en limitaciones que diez ítems dan una medida individual poco precisa.
+2. **Estabilidad.** El artículo no informa de la correlación de un momento al siguiente en los mismos niños. La ficha la sitúa en ρ = .15–.41. Es un dato que un revisor pedirá y que además refuerza una de las implicaciones (no usar la tarea para decidir sobre un niño a los 3–4 años). La DT de 0,95 de la discriminación individual que estima el modelo no sustituye a la estabilidad: mide varianza entre niños, no consistencia en el tiempo.
+3. **«Sin apoyo visual».** El método dice que el evaluador leía las palabras sin apoyo visual, pero la actividad 11795 muestra el par escrito en pantalla (comprobado en la plataforma el 23/10/2026). Si el niño ve la pantalla, a los 5 años algunos ya leen y pueden juzgar por la escritura (*fresa–mesa* comparten *-esa* a la vista). Hay que describirlo tal cual en el método y añadirlo a las limitaciones; si se sabe cómo se colocaba la pantalla en los centros, mejor.
+4. **La trayectoria leída por curso escolar.** Los dos tramos sin avance (mayo de 3 → noviembre de 4: +0,02; mayo de 4 → noviembre de 5: +0,21) son los que atraviesan el verano; los saltos grandes (+0,53, +0,53, +0,27, +0,28) están dentro del curso. El patrón apunta a que lo que mueve la rima es la estimulación escolar, no la edad, y conecta con la [discontinuidad por fecha de corte de M11](M11.qmd). Merece un párrafo en la discusión, con la cautela de Preleo. Además, parte del salto de febrero a mayo de 3 años puede ser familiaridad con el formato (segunda vez que hacen la tarea; «no realiza» baja del 18 % al 10 %).
+5. **Cifras que no cuadran entre apartados.** 942 frente a 934 niños (bien explicado, pero conviene usar siempre 934 en tablas y resumen); subgrupo con datos sociodemográficos «n = 432» en participantes y «n = 429» en robustez; «36 centros» en participantes y «23 centros» en el contraste del ISE; N de febrero de 4 años (416) muy por debajo de noviembre (567) y mayo (627), sin explicar por qué (¿centros que no evaluaron ese trimestre?). Tabla 1: 10,8 % de dominio en febrero de 3 años frente a 10,9 % en tabla 3.
+6. **H1 como está escrita no se cumple del todo.** «Discriminación nula a los 3 años» choca con d′ = 0,46 en mayo de 3 años. Reformular: nula al inicio del seguimiento (3 años y medio) y sin techo al final de los 5.
+7. **Contrastes múltiples.** Siete contrastes entre momentos consecutivos y varios binomiales por momento sin corrección. Con N > 400 y p < .001 casi en todo no cambia nada, pero conviene decirlo (y señalar que el único contraste marginal, +0,11 con p = .097, se interpreta como desaceleración).
+8. **Un solo ítem por condición.** Ya está en limitaciones; sugerencia de redacción: en resultados, hablar de «el par *bota–moto*» y no de «el distractor fonológico», para que el lector no generalice. Lo mismo con *mano–pie* en noveno lugar (efecto de posición).
+9. **Literatura en español.** Faltan los trabajos que ya mostraron en español que la rima va detrás de la sílaba en prelectores: @herrera2005prelectores y los de S. Defior (Defior y Serrano, 2011; por localizar la cita exacta). También @goswami1998analogies, que compararon analogías de rima en inglés, francés y español: es la pieza del propio grupo de Goswami que admite que la rima pesa menos en español. Con esas citas la introducción deja de apoyarse solo en Carrillo (1994), Jiménez y Ortiz (2000) y Goikoetxea (2005).
+10. **Qué falta para enviar.** Resumen (≤ 250 palabras, en el orden pregunta–muestra–método–cuatro resultados–tesis), palabras clave, comité de ética y consentimiento (ya se menciona), financiación, disponibilidad de datos (agregados en el repositorio del manual sería suficiente), contribución de cada autor. Referencias: faltan DOI en una docena; @schmitterer2019grain y Gutiérrez Palma y Palma Reyes (2004) por confirmar.
+
+Lo que **no** hay que tocar: la introducción (la distinción rima española / *rime* inglesa es el argumento del artículo y está muy bien construida), el uso de detección de señal con modelo mixto, el criterio de dominio por binomial para comparar tareas con distinto azar, y el análisis implicacional individual. Son las piezas que lo diferencian de la literatura.
+
+## Revistas posibles
+
+- **Applied Psycholinguistics** (donde están Carroll y Snowling 2001 y Schmitterer y Schroeder 2019: el artículo dialoga directamente con ellos). Q1 en Lingüística.
+- **Reading and Writing** (Carrillo 1994, Durgunoğlu y Öney 1999, Goikoetxea 2005). Q1.
+- **Journal of Child Language** o **First Language**, si se quiere subrayar la vertiente evolutiva.
+- **Journal of Experimental Child Psychology**, por la detección de señal y el análisis de ítems.
+- En español: *Infancia y Aprendizaje*, *Psicothema*, *Revista de Psicodidáctica* (Q1 en Educación). Más rápido, pero el argumento interlingüístico se lee mejor en inglés.
+
+Comprobar los cuartiles JCR en Web of Science antes de decidir.
+
+## Pendientes
+
+| Qué | Quién | Estado |
+|---|---|---|
+| Replicar la tabla 1 con la tabla larga del servidor (cohorte 2020, Málaga, con y sin 0/10) | PJ López | Pendiente |
+| Fiabilidad por momento sin 0/10 y estabilidad entre momentos para el artículo | PJ López (sale de `ficha_rima_3anios.R`) | Pendiente |
+| Decidir cómo describir la pantalla en el método | A. Sánchez | Pendiente |
+| Cuadrar 432/429, 36/23 centros, N de febrero de 4 | A. Sánchez | Pendiente |
+| Resumen, declaraciones, autoría, revista | A. Sánchez y grupo | Pendiente |
+| Versión en inglés | Por decidir | — |
+
+## Registro
+
+- **30/10/2026.** Página creada. Borrador completo recibido de A. Sánchez. Contraste con la ficha de rima y revisión en diez puntos. Figuras del borrador incorporadas. Referencias del artículo añadidas a `referencias.bib`.
+- **23/10/2026.** Ficha de rima del manual publicada; se retiran de ella las citas al artículo hasta su publicación. Comprobado en la plataforma que la actividad 11795 muestra el par escrito.
+
+## Referencias de este estudio
+
+Marco: @bradley1983categorizing, @anthony2003phonological, @ziegler2005grain, @duncan1997rhyme, @carrillo1994development, @jimenez2000metalinguistic, @zugarramurdi2022orthography, @goswami1998analogies, @herrera2005prelectores. Semejanza global y distractores: @treiman1982similarity, @carroll2001global, @wagensveld2012rhyme, @schmitterer2019grain. Detección de señal: @macmillan2005detection, @hautus1995corrections, @decarlo1998sdt, @fritzley2003yes. Las entradas completas están en el capítulo de [referencias](../referencias.qmd).
