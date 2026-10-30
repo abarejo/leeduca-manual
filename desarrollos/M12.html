@@ -959,6 +959,7 @@ div.csl-indent {
   <li><a href="#réplica-de-la-tabla-1-del-artículo-cohorte-2020" id="toc-réplica-de-la-tabla-1-del-artículo-cohorte-2020" class="nav-link" data-scroll-target="#réplica-de-la-tabla-1-del-artículo-cohorte-2020">Réplica de la tabla 1 del artículo (cohorte 2020)</a></li>
   <li><a href="#el-año-de-aplicación-pesa-más-que-la-edad" id="toc-el-año-de-aplicación-pesa-más-que-la-edad" class="nav-link" data-scroll-target="#el-año-de-aplicación-pesa-más-que-la-edad">El año de aplicación pesa más que la edad</a></li>
   <li><a href="#análisis-por-centro-de-la-cohorte-2020-petición-de-a.-sánchez-3010" id="toc-análisis-por-centro-de-la-cohorte-2020-petición-de-a.-sánchez-3010" class="nav-link" data-scroll-target="#análisis-por-centro-de-la-cohorte-2020-petición-de-a.-sánchez-3010">Análisis por centro de la cohorte 2020 (petición de A. Sánchez, 30/10)</a></li>
+  <li><a href="#cohorte-2020-con-los-centros-limpios-3010-tarde" id="toc-cohorte-2020-con-los-centros-limpios-3010-tarde" class="nav-link" data-scroll-target="#cohorte-2020-con-los-centros-limpios-3010-tarde">Cohorte 2020 con los centros limpios (30/10, tarde)</a></li>
   <li><a href="#fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010" id="toc-fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010" class="nav-link" data-scroll-target="#fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010">Fiabilidad y estabilidad para el artículo (cohorte 2020, sin 0/10)</a></li>
   </ul></li>
   <li><a href="#revisión-de-literatura-scispace-30102026" id="toc-revisión-de-literatura-scispace-30102026" class="nav-link" data-scroll-target="#revisión-de-literatura-scispace-30102026">Revisión de literatura (SciSpace, 30/10/2026)</a></li>
@@ -1410,6 +1411,289 @@ Advertencia
 </ul>
 <p><strong>Lectura.</strong> Depurar los centros mejora la estimación de 3 años pero no la lleva al nivel de las cohortes siguientes (d′ ≈ 1): queda 0,22. Es decir, parte del efecto del año de aplicación es registro y parte es otra cosa (centros, formación de los evaluadores, familiaridad de los niños con la plataforma). Para el artículo, la decisión mínima es excluir los centros con d′ invertido o con todos perfectos a los 3 años, con el mismo criterio que se aplicó a Preleo en la cohorte 2010, e informarlo.</p>
 </section>
+<section id="cohorte-2020-con-los-centros-limpios-3010-tarde" class="level3">
+<h3 class="anchored" data-anchor-id="cohorte-2020-con-los-centros-limpios-3010-tarde">Cohorte 2020 con los centros limpios (30/10, tarde)</h3>
+<p>Guion <code>rima_cohorte2020_limpio.py</code> → <code>04\DIAGNOSTICO\rima_cohorte2020_limpio_v1.xlsx</code>. Fuera los 28 centro×momento con aviso (10 en 3.2). d′ agrupado sin 0/10 con IC bootstrap por niño.</p>
+<p><strong>1. La trayectoria se vuelve gradual.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Momento</th>
+<th>N</th>
+<th>No realiza (%)</th>
+<th>d′ [IC 95 %]</th>
+<th>«Sí» rima / no rima (%)</th>
+<th>Dominio ≥ 9 (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.2</td>
+<td>321</td>
+<td>8,7</td>
+<td>0,22 [0,09; 0,36]</td>
+<td>68 / 60</td>
+<td>10,9</td>
+</tr>
+<tr class="even">
+<td>3.3</td>
+<td>285</td>
+<td>8,1</td>
+<td>0,38 [0,23; 0,52]</td>
+<td>66 / 52</td>
+<td>14,0</td>
+</tr>
+<tr class="odd">
+<td>4.1</td>
+<td>416</td>
+<td>4,6</td>
+<td>0,48 [0,37; 0,60]</td>
+<td>64 / 45</td>
+<td>15,9</td>
+</tr>
+<tr class="even">
+<td>4.2</td>
+<td>383</td>
+<td>3,7</td>
+<td>0,70 [0,59; 0,83]</td>
+<td>70 / 43</td>
+<td>20,4</td>
+</tr>
+<tr class="odd">
+<td>4.3</td>
+<td>381</td>
+<td>2,4</td>
+<td>0,97 [0,83; 1,11]</td>
+<td>76 / 39</td>
+<td>31,0</td>
+</tr>
+<tr class="even">
+<td>5.1</td>
+<td>416</td>
+<td>1,2</td>
+<td>1,20 [1,08; 1,31]</td>
+<td>78 / 34</td>
+<td>32,9</td>
+</tr>
+<tr class="odd">
+<td>5.2</td>
+<td>751</td>
+<td>0,7</td>
+<td>1,38 [1,28; 1,49]</td>
+<td>80 / 29</td>
+<td>43,1</td>
+</tr>
+<tr class="even">
+<td>5.3</td>
+<td>466</td>
+<td>0,4</td>
+<td>1,42 [1,29; 1,55]</td>
+<td>79 / 27</td>
+<td>42,9</td>
+</tr>
+</tbody>
+</table>
+<p>Cambios entre momentos consecutivos: +0,15, +0,10 (verano), +0,22, +0,26, +0,23 (verano), +0,18, +0,04. <strong>Los escalones del artículo (+0,53, +0,02, +0,53) desaparecen</strong>: eran de los centros mal registrados en 3.2. Queda un crecimiento casi constante de unos 0,2 por trimestre evaluado, sin diferencia entre curso y verano, con desaceleración al final de los 5 años. H1 pasa a «discriminación pequeña pero real a los 3 años y medio» y H2 (trayectoria a saltos) no se sostiene con los datos limpios. Lo que sí se mantiene: sin techo a los 5 (43 % de dominio) y sesgo a decir «sí» en todo el periodo (c de −0,36 a −0,13).</p>
+<p><strong>2. Qué rima perciben antes: ninguna; lo primero que perciben es que dos palabras no se parecen.</strong></p>
+<p>Porcentaje de acierto por ítem (sin 0/10):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Par</th>
+<th>Tipo</th>
+<th>3.2</th>
+<th>4.1</th>
+<th>4.3</th>
+<th>5.3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>fresa–mesa</em></td>
+<td>rima llana</td>
+<td>72</td>
+<td>67</td>
+<td>80</td>
+<td>85</td>
+</tr>
+<tr class="even">
+<td><em>casa–masa</em></td>
+<td>rima llana</td>
+<td>64</td>
+<td>64</td>
+<td>76</td>
+<td>83</td>
+</tr>
+<tr class="odd">
+<td><em>bota–pelota</em></td>
+<td>rima llana</td>
+<td>70</td>
+<td>65</td>
+<td>75</td>
+<td>82</td>
+</tr>
+<tr class="even">
+<td><em>rana–pana</em></td>
+<td>rima llana</td>
+<td>63</td>
+<td>65</td>
+<td>74</td>
+<td>76</td>
+</tr>
+<tr class="odd">
+<td><em>sol–col</em></td>
+<td>rima aguda</td>
+<td>71</td>
+<td>67</td>
+<td>79</td>
+<td>79</td>
+</tr>
+<tr class="even">
+<td><em>melón–jamón</em></td>
+<td>rima aguda</td>
+<td>67</td>
+<td>53</td>
+<td>70</td>
+<td>73</td>
+</tr>
+<tr class="odd">
+<td><em>pelo–cama</em></td>
+<td>no rima, sin relación</td>
+<td>51</td>
+<td>71</td>
+<td>71</td>
+<td>83</td>
+</tr>
+<tr class="even">
+<td><em>mano–pie</em></td>
+<td>no rima, semántico</td>
+<td>31</td>
+<td>47</td>
+<td>59</td>
+<td>76</td>
+</tr>
+<tr class="odd">
+<td><em>silla–mesa</em></td>
+<td>no rima, semántico + vocal final</td>
+<td>43</td>
+<td>53</td>
+<td>59</td>
+<td>67</td>
+</tr>
+<tr class="even">
+<td><em>bota–moto</em></td>
+<td>no rima, fonológico</td>
+<td>37</td>
+<td>50</td>
+<td>53</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Patrón acentual: no hay efecto.</strong> Dentro del mismo niño, la diferencia entre «sí» ante llanas y ante agudas va de −2 a +6 puntos; <em>sol–col</em> se acepta igual que las llanas en todos los momentos. La menor aceptación de <em>melón–jamón</em> es del ítem (dos palabras con relación semántica), no de la acentuación. Para la intervención: no hay una rima «más fácil» por acento en esta tarea.</li>
+<li>A los 3 años la aceptación de las rimas (63–72 %) es la misma que la de los pares que no riman (49–69 % de «sí»): los niños no perciben la rima, dicen «sí». <strong>Lo primero que emerge es rechazar el par sin ninguna relación</strong> (<em>pelo–cama</em>: 51 % → 71 % entre febrero de 3 y noviembre de 4). Después caen los semánticos (<em>mano–pie</em>, el ítem más difícil a los 3 años: 31 % → 76 %). <strong>Lo último, y sin consolidar a los 5, es rechazar la semejanza parcial</strong> (<em>bota–moto</em>: 64 %). El análisis implicacional lo confirma: rechazar <em>pelo–cama</em> sin rechazar <em>bota–moto</em> es 2–4 veces más frecuente que lo contrario en todos los momentos.</li>
+<li>Lectura: lo que «tracciona» no es la rima sino el juicio de semejanza global <span class="citation" data-cites="treiman1982similarity">(<a href="../referencias.html#ref-treiman1982similarity" role="doc-biblioref">Treiman y Breaux 1982</a>)</span>: el niño primero distingue «no se parecen en nada» de «se parecen», y solo tarde analiza <em>en qué</em> se parecen. En inglés la rima emerge de las canciones infantiles a los 3 años <span class="citation" data-cites="bradley1983categorizing bryant1990rhyme">(<a href="../referencias.html#ref-bradley1983categorizing" role="doc-biblioref">Bradley y Bryant 1983</a>; <a href="../referencias.html#ref-bryant1990rhyme" role="doc-biblioref">Bryant et&nbsp;al. 1990</a>)</span>; aquí, a los 3 años, no hay rima que emerja.</li>
+</ul>
+<p><strong>3. Sílaba antes que rima: sí, pero a los 3 años el artículo usa un azar equivocado.</strong></p>
+<p>La tarea de contar sílabas de 3 años (12166, 9 ítems) está guardada como respuestas <strong>sí/no</strong>: su azar es 1/2, no 1/3. Con 1/3 el criterio de dominio es 6/9; con 1/2 es 8/9 (p = .02). Comprobar en la plataforma con la skill, pero las respuestas no dejan dudas.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tarea silábica</th>
+<th>Momento</th>
+<th>N</th>
+<th>Dominio silábico (%)</th>
+<th>Dominio rima (%)</th>
+<th>Solo silábica : solo rima</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Contar sílabas sí/no, 6/9 (criterio del artículo)</td>
+<td>3.2</td>
+<td>321</td>
+<td>50</td>
+<td>11</td>
+<td>139 : 14 (10:1)</td>
+<td>&lt; .001</td>
+</tr>
+<tr class="even">
+<td>Contar sílabas sí/no, <strong>8/9</strong> (azar 1/2)</td>
+<td>3.2</td>
+<td>321</td>
+<td>17</td>
+<td>11</td>
+<td>44 : 25 (1,8:1)</td>
+<td>.03</td>
+</tr>
+<tr class="odd">
+<td>Contar sílabas sí/no, 8/9</td>
+<td>3.3</td>
+<td>284</td>
+<td>25</td>
+<td>14</td>
+<td>52 : 21 (2,5:1)</td>
+<td>&lt; .001</td>
+</tr>
+<tr class="even">
+<td>Contar sílabas 1–4, 7/12</td>
+<td>4.1</td>
+<td>414</td>
+<td>53</td>
+<td>16</td>
+<td>179 : 25 (7:1)</td>
+<td>&lt; .001</td>
+</tr>
+<tr class="odd">
+<td>Contar sílabas 1–4, 9/20</td>
+<td>4.2</td>
+<td>382</td>
+<td>66</td>
+<td>20</td>
+<td>194 : 19 (10:1)</td>
+<td>&lt; .001</td>
+</tr>
+<tr class="even">
+<td>Emparejar sílaba inicial, 5/6</td>
+<td>4.2</td>
+<td>382</td>
+<td>52</td>
+<td>20</td>
+<td>143 : 21 (7:1)</td>
+<td>&lt; .001</td>
+</tr>
+<tr class="odd">
+<td>Emparejar sílaba final, 4/5</td>
+<td>4.2</td>
+<td>382</td>
+<td>26</td>
+<td>20</td>
+<td>64 : 42 (1,5:1)</td>
+<td>.04</td>
+</tr>
+</tbody>
+</table>
+<p>La hipótesis de Auxi se sostiene: a los 4 años, contar sílabas e identificar la sílaba inicial van muy por delante de la rima (7:1 a 10:1), y la sílaba final va casi a la par. A los 3 años la ventaja de la sílaba sigue siendo significativa pero es de 2:1, no de 10:1: la tabla 3 del artículo hay que rehacerla con 8/9.</p>
+</section>
 <section id="fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010" class="level3">
 <h3 class="anchored" data-anchor-id="fiabilidad-y-estabilidad-para-el-artículo-cohorte-2020-sin-010">Fiabilidad y estabilidad para el artículo (cohorte 2020, sin 0/10)</h3>
 <table class="caption-top table">
@@ -1615,34 +1899,39 @@ Advertencia
 <tr class="even">
 <td>Decidir el criterio de exclusión de centros y rehacer los modelos</td>
 <td>A. Sánchez y PJ López</td>
-<td>Pendiente</td>
+<td>Criterio aceptado (avisos) el 30/10; tablas 1–3 rehechas en esta página; falta el GLMM</td>
 </tr>
 <tr class="odd">
+<td>Comprobar en la plataforma que 12166 es sí/no y corregir el azar en la tabla 3</td>
+<td>PJ López</td>
+<td>Pendiente</td>
+</tr>
+<tr class="even">
 <td>Modelo con efecto aleatorio de centro sobre la discriminación</td>
 <td>A. Sánchez</td>
 <td>Pendiente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Decidir si 2023/24 se trata como curso piloto en el baremo de 3 años del manual</td>
 <td>Grupo</td>
 <td>Pendiente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Decidir cómo describir la pantalla en el método</td>
 <td>A. Sánchez</td>
 <td>Pendiente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cuadrar 432/429, 36/23 centros, N de febrero de 4</td>
 <td>A. Sánchez</td>
 <td>Pendiente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Resumen, declaraciones, autoría, revista</td>
 <td>A. Sánchez y grupo</td>
 <td>Pendiente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Versión en inglés</td>
 <td>Por decidir</td>
 <td>—</td>
@@ -1653,6 +1942,7 @@ Advertencia
 <section id="registro" class="level2">
 <h2 class="anchored" data-anchor-id="registro">Registro</h2>
 <ul>
+<li><strong>30/10/2026 (tarde, 3).</strong> Auxi acepta los avisos. Cohorte limpia: trayectoria gradual (los escalones eran de los centros mal registrados), sin efecto del patrón acentual, lo primero que emerge es rechazar el par sin relación y lo último la semejanza parcial; sílaba antes que rima (7:1 a los 4 años; 2:1 a los 3 con el azar correcto de la tarea sí/no).</li>
 <li><strong>30/10/2026 (tarde, 2).</strong> Análisis por centro de la cohorte 2020: avisos de registro invertido, todos perfectos, no realiza y correlación rima–no rima. Sin los centros con aviso, d′ en 3.2 = 0,22.</li>
 <li><strong>30/10/2026 (tarde).</strong> Análisis complementarios: réplica de la tabla 1 (se replica), efecto del año de aplicación (0,4–0,8 de d′ por curso a igual edad), centros con d′ negativo a los 3 años, α y fiabilidad de d′ por mitades, estabilidad. Revisión de literatura con SciSpace (13 referencias nuevas). Punto 0 añadido a la revisión.</li>
 <li><strong>30/10/2026.</strong> Página creada. Borrador completo recibido de A. Sánchez. Contraste con la ficha de rima y revisión en diez puntos. Figuras del borrador incorporadas. Referencias del artículo añadidas a <code>referencias.bib</code>.</li>
