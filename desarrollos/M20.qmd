@@ -1,0 +1,53 @@
+---
+search: false
+---
+
+# M20 · La IA como herramienta clínica: concurso de algoritmos de pronóstico y mejora {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 01/11/2026. Idea de P. J. López-Pérez (31/10/2026). Asignatura: Intervención Logopédica en los Trastornos del Lenguaje Escrito y la Discalculia (4.º de Logopedia, UMA), segundo semestre de 2026/27.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** El estudio solo usa datos sintéticos; ningún estudiante recibe datos reales de la plataforma. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## En cinco líneas
+
+Una práctica de la asignatura convertida en estudio. Grupos de 4–5 estudiantes reciben datos sintéticos de cribado de 1.º de Primaria, generados con el simulador de [M19](M19.qmd), y con ayuda de la IA construyen un pronóstico de éxito lector y un plan de mejora para 30 casos. Como el simulador conoce la verdad, cada propuesta se puntúa de forma objetiva: cuánto acierta el pronóstico y cuánto habría ganado cada niño con el plan. La pregunta de investigación es **qué formas de usar la IA producen mejores decisiones clínicas**, y si el enfoque de éxito cambia cómo se comunican los resultados a las familias.
+
+## Preguntas
+
+1. ¿Qué estrategias de uso de la IA (planificación previa, verificación de cifras y fuentes, iteración, delegación) se asocian a pronósticos más precisos y a planes más eficaces?
+2. ¿Detectan los grupos los datos inválidos sembrados, y qué estrategias lo predicen?
+3. ¿Cómo valoran logopedas y maestros externos los informes para familias escritos con el enfoque de éxito?
+4. ¿Supera algún algoritmo de estudiantes al del equipo (M19) en datos reales?
+
+## La práctica
+
+| Elemento | Contenido |
+|---|---|
+| Datos | `PRACTICA_1_entrenamiento.csv` (570 alumnos con el resultado al final de 2.º) y `PRACTICA_2_casos_a_informar.csv` (30 casos sin resultado). ≈ 4 % de registros inválidos sembrados: caída imposible de velocidad, tiempo ×1000, duplicado, combinación incoherente. La clave queda en manos del profesor |
+| Variables | Exposición a Preleo; percentiles de pseudopalabras, palabras, RAN, conciencia fonológica y vocabulario a final de 1.º; velocidad lectora en 6.2 y 6.3 |
+| Tareas | 1) Revisar los datos; 2) leer perfiles y formular hipótesis (cribado, no diagnóstico); 3) estimar la probabilidad de éxito; 4) repartir 12 sesiones por niño; 5) informes para tres familias |
+| IA | Libre, con registro de uso obligatorio, verificación de cifras y fuentes y sin datos reales |
+| Evaluación | Datos 15 %, razonamiento diagnóstico 20 %, pronóstico (AUC y calibración) 20 %, plan (ganancia simulada frente a reparto uniforme) 20 %, informes a familias 15 % (jurado externo), uso de la IA 10 % |
+| Sesiones | Cuatro: presentación y datos; revisión y perfiles; modelos y planes (taller con IA); presentaciones y fallo |
+| Premio | Coautoría en la publicación de la experiencia. El equipo prueba el algoritmo ganador con datos reales y comparte resultados agregados |
+
+El enunciado completo para los estudiantes está en un documento aparte (borrador del 01/11/2026).
+
+## Diseño del estudio
+
+- **Fuentes:** puntuaciones objetivas contra la clave y el simulador, registros de uso de la IA codificados por dos jueces, valoraciones del jurado y un cuestionario breve de autoeficacia y percepción de la IA antes y después.
+- **Análisis:** asociación entre categorías de uso de la IA y resultados, a nivel de grupo; descriptivo y exploratorio en el primer curso. Con un curso, el número de grupos (≈ 10–15) solo permite un estudio piloto; la réplica en cursos siguientes y en el Doble Grado da la muestra.
+- **Ética:** participación voluntaria en la investigación, separada de la nota; consentimiento informado; datos sintéticos; registros anonimizados. Pedir informe al comité de ética antes de febrero.
+
+## Pendiente
+
+- Función que puntúe el plan de cada grupo con el simulador (`R/m19_exito.R`).
+- Plantilla de entrega y rúbrica detallada en el campus virtual.
+- Fechas de las cuatro sesiones en el cronograma de la asignatura.
+- Confirmar con J. L. Luque el uso de su guía de diagnóstico diferencial y del cuadro DIS-ESP como material de apoyo.
+- Informe del comité de ética y cuestionarios.
+- Revista para la experiencia: *Revista de Investigación en Logopedia*, *Computers & Education* (si el diseño lo sostiene) o una revista de innovación docente.

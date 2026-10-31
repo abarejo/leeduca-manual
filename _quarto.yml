@@ -198,6 +198,8 @@ book:
     - desarrollos/M8.qmd
     - desarrollos/RADAR.qmd
     - desarrollos/M18.qmd
+    - desarrollos/M19.qmd
+    - desarrollos/M20.qmd
 
 bibliography: referencias.bib
 
