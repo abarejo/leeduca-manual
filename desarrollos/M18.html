@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -967,7 +970,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#estado-del-borrador" id="toc-estado-del-borrador" class="nav-link active" data-scroll-target="#estado-del-borrador">Estado del borrador</a></li>
   <li><a href="#en-cinco-líneas" id="toc-en-cinco-líneas" class="nav-link" data-scroll-target="#en-cinco-líneas">En cinco líneas</a></li>
   <li><a href="#debilidades-y-qué-hacer-con-cada-una" id="toc-debilidades-y-qué-hacer-con-cada-una" class="nav-link" data-scroll-target="#debilidades-y-qué-hacer-con-cada-una">Debilidades y qué hacer con cada una</a></li>
-  <li><a href="#lo-que-puede-convertirlo-en-un-artículo-fuerte" id="toc-lo-que-puede-convertirlo-en-un-artículo-fuerte" class="nav-link" data-scroll-target="#lo-que-puede-convertirlo-en-un-artículo-fuerte">Lo que puede convertirlo en un artículo fuerte</a></li>
+  <li><a href="#versión-2-01112026-el-análisis-rehecho-con-la-cohorte-completa" id="toc-versión-2-01112026-el-análisis-rehecho-con-la-cohorte-completa" class="nav-link" data-scroll-target="#versión-2-01112026-el-análisis-rehecho-con-la-cohorte-completa">Versión 2 (01/11/2026): el análisis rehecho con la cohorte completa</a>
+  <ul class="collapse">
+  <li><a href="#muestra" id="toc-muestra" class="nav-link" data-scroll-target="#muestra">Muestra</a></li>
+  <li><a href="#redes-de-cambio-por-grupo" id="toc-redes-de-cambio-por-grupo" class="nav-link" data-scroll-target="#redes-de-cambio-por-grupo">Redes de cambio por grupo</a></li>
+  <li><a href="#las-comprobaciones" id="toc-las-comprobaciones" class="nav-link" data-scroll-target="#las-comprobaciones">Las comprobaciones</a></li>
+  <li><a href="#cuándo-aparece-el-gradiente" id="toc-cuándo-aparece-el-gradiente" class="nav-link" data-scroll-target="#cuándo-aparece-el-gradiente">Cuándo aparece el gradiente</a></li>
+  <li><a href="#qué-artículo-queda" id="toc-qué-artículo-queda" class="nav-link" data-scroll-target="#qué-artículo-queda">Qué artículo queda</a></li>
+  <li><a href="#lo-que-falta" id="toc-lo-que-falta" class="nav-link" data-scroll-target="#lo-que-falta">Lo que falta</a></li>
+  </ul></li>
+  <li><a href="#lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010" id="toc-lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010" class="nav-link" data-scroll-target="#lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010">Lo que puede convertirlo en un artículo fuerte (v1, 30/10)</a></li>
   <li><a href="#ficha-para-la-agenda" id="toc-ficha-para-la-agenda" class="nav-link" data-scroll-target="#ficha-para-la-agenda">Ficha para la Agenda</a></li>
   <li><a href="#archivos" id="toc-archivos" class="nav-link" data-scroll-target="#archivos">Archivos</a></li>
   </ul>
@@ -995,7 +1007,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Seguimiento de un estudio propio · versión 1, 30/10/2026. Borrador en <code>LEEDUCA\2026\AUXI\RED</code> (script <code>REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.</em></p>
+<p><em>Seguimiento de un estudio propio · versión 1, 30/10/2026; versión 2 con el análisis rehecho sobre la cohorte 2010 completa, 01/11/2026. Borrador en <code>LEEDUCA\2026\AUXI\RED</code> (script <code>REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1134,8 +1146,272 @@ Advertencia
 </tbody>
 </table>
 </section>
-<section id="lo-que-puede-convertirlo-en-un-artículo-fuerte" class="level2">
-<h2 class="anchored" data-anchor-id="lo-que-puede-convertirlo-en-un-artículo-fuerte">Lo que puede convertirlo en un artículo fuerte</h2>
+<section id="versión-2-01112026-el-análisis-rehecho-con-la-cohorte-completa" class="level2">
+<h2 class="anchored" data-anchor-id="versión-2-01112026-el-análisis-rehecho-con-la-cohorte-completa">Versión 2 (01/11/2026): el análisis rehecho con la cohorte completa</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>El resultado central del borrador no se sostiene.</strong> Con los indicadores corregidos desde la tabla larga (638 niños con las cinco medidas a 6 y a 7 años, 30 colegios, ISE y riesgo continuos), el ISE y el riesgo a los 5 años <strong>no están conectados en los colegios de comparación</strong> (arista 0,00; r = −0,05) y <strong>sí en los colegios Preleo</strong> (arista −0,26; r = −0,31). Es lo contrario de «Preleo desconecta el ISE del riesgo». Lo que sí aparece, y resiste todas las comprobaciones, es una <strong>compensación en el crecimiento de la conciencia fonológica de 6 a 7 años</strong>: en comparación ganan más los niños de ISE alto; en Preleo, los de ISE bajo.</p>
+</div>
+</div>
+<p><strong>Qué cambió respecto al borrador.</strong> (1) Toda la cohorte 2010 de los 30 colegios de la tesis (<code>preleo_2010_indicadores_R.rds</code>, de <code>preleo_02</code>), no los 506; (2) ISE continuo (1–9) y riesgo continuo (compuesto de precursores a los 5 años, <code>PREC_5</code>, de la etiqueta de certeza v2), no categorías; (3) red gaussiana regularizada (glasso, EBIC γ = 0,5) en lugar del modelo mixto con nodos categóricos; (4) contraste <strong>por arista</strong> con 1.000 permutaciones de la condición, bootstrap de 500 por arista, 200 submuestras de igual tamaño, cada colegio fuera; (5) cambio residualizado y CI como sensibilidad; (6) la prueba directa: ISE × Preleo con errores típicos agrupados por colegio; (7) rigor de aplicación como dosis; (8) el gradiente ISE–precursores trimestre a trimestre del curso de 5 años. Guion <code>04\scripts\m18_redes_preleo.py</code> (porte a R en <code>scripts\R\m18_redes_preleo.R</code>, sin ejecutar aún); salida <code>04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx</code>.</p>
+<p><strong>Por qué el borrador decía otra cosa.</strong> En la matriz de 506, la correlación bruta entre el ISE en tres niveles y el riesgo en tres niveles es −0,01 en comparación y −0,07 en Preleo: no había gradiente en ningún grupo. La arista «ISE–riesgo» del modelo mixto venía de asociaciones entre categorías sin orden, no de una relación monótona, y la regularización con 200 niños en comparación y 306 en Preleo hizo el resto. Con la cohorte completa y las variables continuas, el gradiente de los colegios Preleo se ve (los 131 niños de esos colegios que no estaban en los 506 lo tienen con r = −0,41).</p>
+<section id="muestra" class="level3">
+<h3 class="anchored" data-anchor-id="muestra">Muestra</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Comparación</th>
+<th>Preleo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Niños con las cinco medidas a 6 y 7</td>
+<td>215</td>
+<td>423</td>
+</tr>
+<tr class="even">
+<td>Colegios</td>
+<td>11</td>
+<td>19</td>
+</tr>
+<tr class="odd">
+<td>ISE: media (DT), rango</td>
+<td>5,2 (2,3), 1–9</td>
+<td>5,8 (2,6), 1–9</td>
+</tr>
+<tr class="even">
+<td>Riesgo a los 5 años (z, alto = más riesgo)</td>
+<td>−0,11</td>
+<td>−0,50</td>
+</tr>
+<tr class="odd">
+<td>CF a 6 años (z)</td>
+<td>0,01</td>
+<td>0,15</td>
+</tr>
+<tr class="even">
+<td>Dificultad persistente (etiqueta v2)</td>
+<td>11,6 %</td>
+<td>10,4 %</td>
+</tr>
+<tr class="odd">
+<td>De ellos, en la matriz de 506</td>
+<td>190</td>
+<td>292</td>
+</tr>
+</tbody>
+</table>
+<p>Los dos grupos cubren todo el rango de ISE: no hay restricción de rango en Preleo (la debilidad 3 del borrador no se da; la hay, si acaso, en comparación, con 107 de 215 niños en ISE 4–6).</p>
+</section>
+<section id="redes-de-cambio-por-grupo" class="level3">
+<h3 class="anchored" data-anchor-id="redes-de-cambio-por-grupo">Redes de cambio por grupo</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F1_redes_cambio_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura 1. Redes de cambio de 6 a 7 años. Nodos de contexto en naranja. Correlaciones parciales regularizadas."><img src="../figuras/desarrollos/M18_F1_redes_cambio_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 1. Redes de cambio de 6 a 7 años. Nodos de contexto en naranja. Correlaciones parciales regularizadas."></a></p>
+<figcaption>Figura 1. Redes de cambio de 6 a 7 años. Nodos de contexto en naranja. Correlaciones parciales regularizadas.</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Arista</th>
+<th>Preleo</th>
+<th>Comparación</th>
+<th>Diferencia</th>
+<th>p (permutación)</th>
+<th>Bootstrap Preleo</th>
+<th>Bootstrap comparación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ISE–Riesgo5</strong></td>
+<td><strong>−0,26</strong></td>
+<td>0,00</td>
+<td>−0,26</td>
+<td><strong>,001</strong></td>
+<td>−0,34; −0,13 (100 % ≠ 0)</td>
+<td>0,00; 0,07 (11 % ≠ 0)</td>
+</tr>
+<tr class="even">
+<td><strong>ISE–ΔCF</strong></td>
+<td><strong>−0,11</strong></td>
+<td>+0,03</td>
+<td>−0,14</td>
+<td><strong>,002</strong></td>
+<td>−0,19; 0,00 (91 % ≠ 0)</td>
+<td>0,00; 0,16 (49 %)</td>
+</tr>
+<tr class="odd">
+<td>ISE–ΔFLU</td>
+<td>0,00</td>
+<td>+0,10</td>
+<td>−0,10</td>
+<td>,018</td>
+<td></td>
+<td>0,00; 0,21 (80 %)</td>
+</tr>
+<tr class="even">
+<td>Riesgo5–ΔPAL</td>
+<td>0,00</td>
+<td>+0,14</td>
+<td>−0,14</td>
+<td>,009</td>
+<td></td>
+<td>0,00; 0,26 (95 %)</td>
+</tr>
+<tr class="odd">
+<td>Riesgo5–ΔPSE</td>
+<td>+0,16</td>
+<td>+0,20</td>
+<td>−0,05</td>
+<td>,55</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ΔPAL–ΔPSE</td>
+<td>+0,55</td>
+<td>+0,38</td>
+<td>+0,17</td>
+<td>,08</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>ΔPAL–ΔFLU</td>
+<td>+0,42</td>
+<td>+0,32</td>
+<td>+0,10</td>
+<td>,32</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ΔCF–ΔCOMP</td>
+<td>+0,10</td>
+<td>0,00</td>
+<td>+0,10</td>
+<td>,15</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fuerza global</td>
+<td>1,89</td>
+<td>1,38</td>
+<td>+0,51</td>
+<td>,22</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Lectura. En Preleo el riesgo inicial depende del ISE (signo negativo: más ISE, menos riesgo) y el cambio en CF también (más ISE, <strong>menos</strong> ganancia: los niños de ISE bajo recuperan). En comparación, el ISE no se relaciona con el riesgo y sí, positivamente, con las ganancias en CF y en fluidez (más ISE, más ganancia), y el riesgo inicial predice más ganancia en decodificación de palabras (regresión a la media o recuperación en los de peor partida). La red de cambio es más densa en Preleo (fuerza 1,89 frente a 1,38), pero la diferencia global no es significativa.</p>
+</section>
+<section id="las-comprobaciones" class="level3">
+<h3 class="anchored" data-anchor-id="las-comprobaciones">Las comprobaciones</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comprobación</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cambio residualizado</strong> (X7 dado X6)</td>
+<td>Mismas aristas: ISE–Riesgo5 −0,26 frente a 0,00 (p = ,002); ISE–ΔCF −0,06 frente a +0,07 (p = ,002); ISE–ΔFLU 0,00 frente a +0,13 (p = ,03)</td>
+</tr>
+<tr class="even">
+<td><strong>CI como nodo</strong> (n = 596)</td>
+<td>ISE–Riesgo5 −0,17 frente a 0,00 (p = ,025); ISE–ΔCF −0,05 frente a +0,08 (p = ,003). El CI se conecta solo con Riesgo5 (−0,25 y −0,17), no con los cambios</td>
+</tr>
+<tr class="odd">
+<td><strong>Submuestras de Preleo de n = 215</strong> (200)</td>
+<td>ISE–Riesgo5: mediana −0,19, IC −0,29; −0,06; <strong>ninguna</strong> submuestra llega a 0,00. ISE–ΔCF: mediana −0,03 (el 51 % quedan por debajo de la de comparación en valor absoluto): esta arista sí depende del tamaño</td>
+</tr>
+<tr class="even">
+<td><strong>Cada colegio fuera</strong> (30 veces)</td>
+<td>ISE–Riesgo5 en Preleo entre −0,30 y −0,14; en comparación entre −0,04 y +0,04. Ningún colegio sostiene el resultado por sí solo</td>
+</tr>
+<tr class="odd">
+<td><strong>Nivel colegio</strong> (medias)</td>
+<td>r(ISE, riesgo medio): −0,63 en los 19 colegios Preleo; −0,17 en los 11 de comparación. r(ISE, ΔCF media): −0,42 frente a +0,23</td>
+</tr>
+<tr class="even">
+<td><strong>ISE × Preleo con errores por colegio</strong> (prueba directa)</td>
+<td>Riesgo5: interacción −0,14 (IC −0,33; 0,06; p = ,18): pendiente +0,02 en comparación, −0,11 en Preleo; con 30 colegios no llega a la significación. <strong>ΔCF: −0,085 (IC −0,15; −0,02; p = ,010)</strong>; residualizado, <strong>−0,097 (p = ,001)</strong>: pendiente +0,05 por punto de ISE en comparación, −0,04 en Preleo. ΔPAL y ΔFLU: no. Dificultad persistente: el ISE reduce el riesgo en los dos grupos (logit −0,31 y −0,23 por punto), sin moderación. CF a los 7: +0,09 por punto en comparación, +0,02 en Preleo (p = ,095)</td>
+</tr>
+<tr class="odd">
+<td><strong>Rigor como dosis</strong> (dentro de Preleo)</td>
+<td>ISE–Riesgo5: −0,18 en rigor alto (10 colegios) y −0,12 en rigor bajo (9); interacción ISE × rigor p = ,15. El rigor correlaciona con el ISE del colegio: <strong>r = 0,45</strong> (los centros de ISE alto aplicaron mejor)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cuándo-aparece-el-gradiente" class="level3">
+<h3 class="anchored" data-anchor-id="cuándo-aparece-el-gradiente">Cuándo aparece el gradiente</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %."><img src="../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %."></a></p>
+<figcaption>Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %.</figcaption>
+</figure>
+</div>
+<p>En comparación el gradiente es nulo los tres trimestres (−0,07, −0,02, −0,05). En Preleo ya está en noviembre (0,24, IC 0,15–0,35), antes de la mayor parte del programa, y sube a 0,36 en febrero y 0,31 en mayo (intervalos solapados). Es decir: <strong>los colegios Preleo tienen gradiente socioeconómico desde el inicio y los de comparación no</strong>; el programa, si acaso, lo acentuó un poco durante el curso, y los centros de ISE alto fueron los que lo aplicaron con más rigor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n)."><img src="../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n)."></a></p>
+<figcaption>Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n).</figcaption>
+</figure>
+</div>
+</section>
+<section id="qué-artículo-queda" class="level3">
+<h3 class="anchored" data-anchor-id="qué-artículo-queda">Qué artículo queda</h3>
+<p>No es el artículo del borrador. Es uno más interesante y más defendible, con tres resultados:</p>
+<ol type="1">
+<li><strong>El gradiente socioeconómico en los precursores no es universal.</strong> Once colegios de Málaga sin programa no lo muestran a los 5 años; diecinueve con programa sí. Como la asignación fue por autoselección, el gradiente puede ser una característica de los centros que se apuntaron al programa (más heterogéneos, con centros de ISE 9 y de ISE 3) más que un efecto del programa. Hay que decirlo así.</li>
+<li><strong>Durante el curso de la intervención el gradiente no se cerró</strong> (0,24 → 0,31) y la implementación fue mejor en los centros de ISE alto (r = 0,45). Es un resultado sobre equidad en la implementación de programas universales que casi nadie publica: el programa llega mejor donde menos falta hace.</li>
+<li><strong>De 6 a 7 años, con el programa ya terminado, el crecimiento de la conciencia fonológica compensa</strong>: en comparación crecen más los de ISE alto; en Preleo, los de ISE bajo (interacción p = ,001 con cambio residualizado, errores por colegio). Es la única arista que distingue las dos redes en la dirección que el borrador defendía, y es la que sostiene el título «compensación».</li>
+</ol>
+<p>Título posible: <em>Does a universal phonological-awareness programme close or widen the socioeconomic gradient? Network and moderated-growth evidence from 30 Spanish schools.</em> Lo que no se puede decir: «reorganiza la arquitectura», «desconecta el riesgo del ISE».</p>
+</section>
+<section id="lo-que-falta" class="level3">
+<h3 class="anchored" data-anchor-id="lo-que-falta">Lo que falta</h3>
+<ul>
+<li><strong>Cohorte 2011</strong> (confirmado por A. Sánchez el 31/10): los 35 colegios que entraron en 2015/16 fueron todos CON; no hay grupo de comparación interno. No sirve para replicar el contraste; sirve para la pregunta 2 (gradiente y rigor dentro de CON, con el programa desde los 4 años) y para fidelidad. El contraste limpio pendiente es 2013 (SIN) frente a 2014 (CON) en los 22 colegios comunes, pero 2014 solo llega a los 6 años: permite Δ5→6, no Δ6→7.</li>
+<li>Confirmar con Auxi y Juan Luis la condición de los 11 colegios de comparación en 2010 (la asignación v3 y la tesis coinciden en esta muestra).</li>
+<li>Red única <strong>moderada por Preleo</strong> (<code>mgm</code> con moderador, en R) como presentación alternativa al par de redes.</li>
+<li>Ejecutar el porte a R y comprobar que coincide.</li>
+<li>Decidir si el artículo va con la cohorte 2010 sola (30 colegios) o espera a 2013/2014 con Δ5→6.</li>
+</ul>
+</section>
+</section>
+<section id="lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010" class="level2">
+<h2 class="anchored" data-anchor-id="lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010">Lo que puede convertirlo en un artículo fuerte (v1, 30/10)</h2>
 <ul>
 <li><strong>Indicador de uso como dosis.</strong> <code>06_PRELEO_COLEGIOS\acceso_colegios_R_v1.xlsx</code> da la regularidad de acceso de cada colegio. Dentro del grupo Preleo, red moderada por la regularidad: si la arista ISE–riesgo se debilita más cuanto más usa el colegio la plataforma, es el mejor apoyo posible para la lectura causal.</li>
 <li><strong>Réplica en la cohorte 2011</strong>, que tuvo el programa desde los 4 años en los mismos centros (asignación v5, pendiente).</li>
@@ -1154,7 +1430,7 @@ Advertencia
 </section>
 <section id="archivos" class="level2">
 <h2 class="anchored" data-anchor-id="archivos">Archivos</h2>
-<p><code>LEEDUCA\2026\AUXI\RED\REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, <code>Method.docx</code>, <code>Fig1_DeltaNetworks.pdf</code>, <code>FigS1_*</code>, <code>FigS2_Descriptives.png</code>. Datos: <code>data_paper.xlsx</code> (misma matriz que <code>2026\AUXI\data.xlsx</code>). Las comprobaciones nuevas irán a <code>04\scripts\R\m18_redes_preleo.R</code> y a <code>04\DIAGNOSTICO\R\</code>.</p>
+<p>v2: <code>04\scripts\m18_redes_preleo.py</code>, <code>04\scripts\R\m18_redes_preleo.R</code> (porte), <code>04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx</code>, <code>04\DIAGNOSTICO\figs_M18\</code>. <code>LEEDUCA\2026\AUXI\RED\REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, <code>Method.docx</code>, <code>Fig1_DeltaNetworks.pdf</code>, <code>FigS1_*</code>, <code>FigS2_Descriptives.png</code>. Datos: <code>data_paper.xlsx</code> (misma matriz que <code>2026\AUXI\data.xlsx</code>). Las comprobaciones nuevas irán a <code>04\scripts\R\m18_redes_preleo.R</code> y a <code>04\DIAGNOSTICO\R\</code>.</p>
 
 
 </section>
@@ -1590,8 +1866,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M18.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M18.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M18.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M18.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
+</body></html>
