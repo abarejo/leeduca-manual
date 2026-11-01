@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 288" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="760" height="288" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a85"/></marker></defs>
+<text x="24" y="30" font-size="15" font-weight="600" fill="#1f1f1d">Cada sesión actualiza al alumno y prepara la siguiente</text>
+<g fill="none" stroke="#8a8a85" stroke-width="1.25">
+<path d="M288 106V164" marker-end="url(#a)"/>
+<path d="M188 192H206" marker-end="url(#a)"/>
+<path d="M370 192H388" marker-end="url(#a)"/>
+<path d="M552 192H570" marker-end="url(#a)"/>
+<path d="M652 220V256H106V220" marker-end="url(#a)"/>
+</g>
+<rect x="178" y="50" width="220" height="56" rx="8" fill="#ecece9" stroke="#8a8a85" stroke-width="1.25"/>
+<text x="288" y="74" text-anchor="middle" font-weight="600" fill="#1f1f1d">Evaluación trimestral</text>
+<text x="288" y="92" text-anchor="middle" font-size="11.5" fill="#5f5f5a">fija el prior y lo reancla</text>
+<text x="298" y="140" font-size="11.5" fill="#5f5f5a">prior μ, σ²</text>
+<g stroke="#8a8a85" stroke-width="1.25" fill="none">
+<rect x="24" y="164" width="164" height="56" rx="8"/>
+<rect x="206" y="164" width="164" height="56" rx="8"/>
+<rect x="388" y="164" width="164" height="56" rx="8"/>
+</g>
+<rect x="570" y="164" width="164" height="56" rx="8" fill="#2f6fd6" fill-opacity="0.12" stroke="#2f6fd6" stroke-width="2"/>
+<text x="106" y="188" text-anchor="middle" font-weight="600" fill="#1f1f1d">Sesión diaria</text>
+<text x="106" y="206" text-anchor="middle" font-size="11.5" fill="#5f5f5a">actividades Nivel 1 y 2</text>
+<text x="288" y="188" text-anchor="middle" font-weight="600" fill="#1f1f1d">Actualizar habilidades</text>
+<text x="288" y="206" text-anchor="middle" font-size="11.5" fill="#5f5f5a">filtro bayesiano por θ</text>
+<text x="470" y="188" text-anchor="middle" font-weight="600" fill="#1f1f1d">P(éxito) e informe</text>
+<text x="470" y="206" text-anchor="middle" font-size="11.5" fill="#5f5f5a">con intervalo creíble</text>
+<text x="652" y="188" text-anchor="middle" font-weight="600" fill="#1f1f1d">Recomendación</text>
+<text x="652" y="206" text-anchor="middle" font-size="11.5" fill="#1f1f1d">qué y a qué nivel</text>
+<text x="379" y="248" text-anchor="middle" font-size="11.5" fill="#5f5f5a">siguiente sesión: el posterior pasa a ser el prior</text>
+</svg>
