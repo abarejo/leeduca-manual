@@ -4,7 +4,7 @@ search: false
 
 # M23 · RAN con carga fonológica: control, sílaba y fonema {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 01/11/2026. Experimento de J. L. Luque Vilaseca, programado en la plataforma como tareas «camufladas» dentro de las sesiones de evaluación (2016/17–2019/20); marco teórico λ–π–κ de sus borradores «Un marco bayesiano para la dislexia» (2025–2026, no citar). Análisis exploratorio de P. J. López-Pérez con los datos de la plataforma. Página abierta para discutir la propuesta y las dudas con Juan Luis.*
+*Desarrollo de un estudio de la Agenda · versión 2, 01/11/2026 (la variable dependiente pasa a ser la común de [M11](M11.qmd): ítems correctos por minuto). Experimento de J. L. Luque Vilaseca, programado en la plataforma como tareas «camufladas» dentro de las sesiones de evaluación (2016/17–2019/20); marco teórico λ–π–κ de sus borradores «Un marco bayesiano para la dislexia» (2025–2026, no citar). Análisis exploratorio de P. J. López-Pérez con los datos de la plataforma. Página abierta para discutir la propuesta y las dudas con Juan Luis.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. El marco λ–π–κ es un trabajo en preparación de J. L. Luque: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
@@ -17,12 +17,12 @@ search: false
 ::: {.callout-tip}
 ## Lo esencial, sin estadística
 
-1. **El experimento funciona en la plataforma y se replica.** En tres cohortes y dos formatos, nombrar objetos cuyos nombres empiezan igual cuesta más que nombrar objetos variados: con la misma sílaba inicial, un 19–35 % más de tiempo; con el mismo fonema inicial, un 32–44 % más. El orden control < sílaba < fonema aparece en todas las muestras menos una.
-2. **Los niños con dislexia son más lentos en las tres condiciones, y la diferencia crece con la carga fonológica.** En 2010 (1º de primaria) la diferencia con los típicos pasa de 6 segundos en la lista control a 13 en la de fonema.
-3. **Ese aumento no es solo «más lento en todo».** Si los disléxicos fueran simplemente un 19 % más lentos en cualquier cosa, la diferencia en segundos también crecería. Hemos comprobado que crece **más de lo proporcional**, pero solo en la condición de fonema y solo de 5 a 6 años (cuatro de seis muestras). En la de sílaba, casi siempre es proporcional.
-4. **A los 5 y 6 años, la condición de fonema es la mejor versión del RAN de objetos para detectar la dislexia.** En 2010 y 2011 predice la etiqueta DL mejor que la lista control (AUC ,71–,77 frente a ,64–,69). Para el manual, esto ya es aprovechable.
-5. **El «coste» de cada niño se puede medir, pero con poca precisión.** Cuánto le cuesta a un niño la carga fonológica se parece poco entre dos aplicaciones (ρ ≈ .2–.3). Sirve para comparar grupos; para el informe individual, todavía no.
-6. **Preleo no cambia ese coste**, y el coste tampoco se reduce más en los típicos que en los disléxicos en tres meses. Es lo que predice el marco de Juan Luis para κ, aunque con esta muestra no podemos afirmarlo.
+1. **El experimento funciona en la plataforma y se replica.** Medimos lo mismo que en M11: cuántos objetos nombra bien el niño por minuto. En tres cohortes y dos formatos, nombrar objetos cuyos nombres empiezan igual es más lento que nombrar objetos variados. Un niño de 1º nombra unos 43 objetos por minuto en la lista control, 36 en la de sílaba y 31 en la de fonema. El orden control > sílaba > fonema aparece en todas las muestras menos una.
+2. **Los niños con dislexia van más lentos en las tres listas, y la diferencia crece con la carga fonológica.** En 2010 (1º de primaria), un disléxico tarda un 17 % más por objeto que un típico en la lista control y un 36 % más en la de fonema.
+3. **Ese aumento no es solo «más lento en todo».** Si los disléxicos fueran simplemente más lentos en cualquier cosa, la diferencia en tiempo también crecería al alargarse la tarea. Hemos comprobado que crece **más de lo proporcional**, pero solo en la lista de fonema y solo de 5 a 6 años (cuatro de seis muestras). En la de sílaba, es proporcional. En la lista de fonema los disléxicos también se equivocan más: en formato discreto, los errores explican la mitad del efecto.
+4. **A los 5 y 6 años, la condición de fonema es la mejor versión del RAN de objetos para detectar la dislexia.** En 2010 y 2011 predice la etiqueta DL mejor que la lista control (AUC ,72–,78 frente a ,65–,70). Para el manual, esto ya es aprovechable.
+5. **El «coste» de cada niño se puede medir, pero con poca precisión.** Cuánto le cuesta a un niño la carga fonológica se parece poco entre dos aplicaciones (ρ ≈ ,2–,3). Sirve para comparar grupos; para el informe individual, todavía no.
+6. **Preleo no cambia ese coste.** En tres meses, el coste no baja más en los típicos que en los disléxicos (si acaso al revés, sin llegar a ser significativo). Lo primero es lo que predice el marco de Juan Luis para κ; con esta muestra no podemos afirmar ninguna de las dos cosas.
 7. **Antes de escribir el artículo hay que aclarar dos cosas del diseño:** qué objetos lleva cada lista (si cambian de una condición a otra, el gradiente puede deberse a los ítems y no a la fonología) y en qué orden se aplicaron las tres listas.
 :::
 
@@ -65,7 +65,7 @@ es decir, un tiempo base común ($T_0$) más un coste competitivo multiplicado p
 |---|---|---|---|
 | P1 | Gradiente fonema > sílaba > control | Medianas y orden dentro del niño | Se cumple en 5 de 6 muestras (no en 2013) |
 | P2 | El gradiente se amplifica en la dislexia **más allá de un enlentecimiento general** | Interacción condición × grupo en escala logarítmica | Solo en fonema, de 5 a 6 años (4 de 6 muestras) |
-| P3 | El coste ($1/\kappa$) es independiente del tiempo base ($T_0$) | Correlación del índice individual con el tiempo control | Sí: ρ ≈ −.15 a .05 |
+| P3 | El coste ($1/\kappa$) es independiente del tiempo base ($T_0$) | Correlación del índice individual con el tiempo control | Sí: ρ entre −,13 y ,06 |
 | P4 | κ no mejora con la escolaridad ni con una intervención fonológica | Cambio del coste en 3 meses por grupo; Preleo CON frente a SIN | Sin diferencias (potencia limitada) |
 
 ## Qué dice la literatura
@@ -87,54 +87,56 @@ El hueco que cubriría M23: no hay ningún estudio con niños que manipule la se
 
 | Cohorte | Discreto (control, sílaba, fonema) | Lámina | N con las tres condiciones | DL / TE |
 |---|---|---|---|---|
-| 2010 | 152 · 6.1 | 155 · 6.2 | 885 / 800 | 111 / 522 |
-| 2011 | 153 · 5.1 | 156 · 5.2 | 850 / 782 | 84 / 297 |
-| 2012 | 154 · 4.1 (fonema perdido, ver incidencias) | 157 · 4.2 | — / 359 | 33 / 127 |
-| 2013 | — | 903 · 6.2 (plataforma nueva) | 447 | 33 / 168 |
+| 2010 | 152 · 6.1 | 155 · 6.2 | 901 / 765 | 114 / 528 |
+| 2011 | 153 · 5.1 | 156 · 5.2 | 882 / 709 | 89 / 299 |
+| 2012 | 154 · 4.1 (fonema perdido, ver incidencias) | 157 · 4.2 | — / 347 | 33 / 123 |
+| 2013 | — | 903 · 6.2 (plataforma nueva) | 443 | 33 / 166 |
 
-- **Medida:** tiempo total en segundos. Discreto válido si 10–200 s y ≥ 15 aciertos de 25; lámina válida si 8–200 s. Se pierde < 4 % en el discreto y ≈ 10 % en las láminas (tiempos a cero).
+- **Medida: la variable común de [M11](M11.qmd), ítems correctos por minuto.** Discreto = aciertos × 60 / tiempo; lámina = 25 estímulos × 60 / tiempo (la lámina no registra aciertos por ítem). Misma limpieza que M11: tiempo ≥ 5 s; discreto con algún acierto y ≤ 120 ítems/min; lámina con las dos pantallas registradas y ≤ 180 s. Se pierde < 3 % en el discreto y 11–17 % en las láminas (tiempos a cero o una sola pantalla). En los modelos se usa su inversa en escala logarítmica, log(segundos por ítem correcto), para que «más alto» signifique «más lento», como en el marco. La versión 1, solo con el tiempo, daba los mismos resultados con efectos algo menores (`m23_ran_carga_v1.xlsx`).
 - **Grupos:** etiqueta de certeza v2 (lectura de 6 a 11 años frente al grupo SIN agrupado). DL = DL-A + DL-B; TE = típico estable. La etiqueta no usa ninguna tarea RAN, así que la validez no es circular. Como variable continua, el percentil lector medio de 6 a 11 años.
-- **Coste:** log(T~sílaba~/T~control~) y log(T~fonema~/T~control~), es decir, el porcentaje de tiempo añadido por la carga fonológica.
+- **Coste:** log(T~sílaba~/T~control~) y log(T~fonema~/T~control~), con T en segundos por ítem correcto: el porcentaje de tiempo por objeto añadido por la carga fonológica.
 
 **Incidencias nuevas** (para la hoja Incidencias del diccionario):
 
 - **2012/154:** el código 1925 aparece 4 veces por niño (388 duplicados) con tiempos de tarea discreta; casi seguro son los tiempos de 1926 exportados con el código de la lámina. Hasta comprobarlo con el bruto, el fonema discreto de 2012 queda fuera.
-- **2013/903:** en la plataforma nueva desaparece la diferencia entre sílaba y fonema (mediana 40,7 frente a 40,9 s). Hay que comprobar si las instancias 3995/3997/4046 llevan los mismos ítems que 1921/1923/1925.
+- **2013/903:** en la plataforma nueva desaparece la diferencia entre sílaba y fonema (mediana 36,9 frente a 36,8 ítems/min). Hay que comprobar si las instancias 3995/3997/4046 llevan los mismos ítems que 1921/1923/1925.
 - **Láminas a cero:** ≈ 10 % de tiempos 0 en 155, 156 y 903.
 
 ## Resultados v1
 
 ### 1. El gradiente
 
-| Muestra | N | Control (s) | Sílaba (s) | Fonema (s) | Coste sílaba | Coste fonema | Fonema > sílaba en el niño |
+| Muestra | N | Control (ítems/min) | Sílaba | Fonema | Coste sílaba | Coste fonema | Fonema más lento que sílaba en el niño |
 |---|---|---|---|---|---|---|---|
-| 2010 · 6.1 discreto | 885 | 34,8 | 41,4 | 46,4 | +19 % | +32 % | 69 % |
-| 2010 · 6.2 lámina | 800 | 30,0 | 37,8 | 40,7 | +27 % | +35 % | 61 % |
-| 2011 · 5.1 discreto | 850 | 39,4 | 47,9 | 54,9 | +22 % | +38 % | 72 % |
-| 2011 · 5.2 lámina | 782 | 35,4 | 44,6 | 51,1 | +26 % | +44 % | 69 % |
-| 2012 · 4.2 lámina | 359 | 43,5 | 51,2 | 58,5 | +20 % | +38 % | 75 % |
-| 2013 · 6.2 lámina | 447 | 30,3 | 40,7 | 40,9 | +35 % | +36 % | 54 % |
+| 2010 · 6.1 discreto | 901 | 42,6 | 35,6 | 30,6 | +22 % | +42 % | 71 % |
+| 2010 · 6.2 lámina | 765 | 50,2 | 39,8 | 37,0 | +27 % | +35 % | 61 % |
+| 2011 · 5.1 discreto | 882 | 37,5 | 30,3 | 24,2 | +26 % | +56 % | 79 % |
+| 2011 · 5.2 lámina | 709 | 43,1 | 34,1 | 29,6 | +27 % | +44 % | 69 % |
+| 2012 · 4.2 lámina | 347 | 34,4 | 29,0 | 25,6 | +20 % | +37 % | 74 % |
+| 2013 · 6.2 lámina | 443 | 49,6 | 36,9 | 36,8 | +35 % | +36 % | 54 % |
 
-Medianas; costes como media geométrica. **La lista de ejemplo, que va primero, es más lenta que la control** (43 frente a 35 s en 2010): hay efecto de práctica dentro del bloque. Si el orden fue siempre control → sílaba → fonema, la práctica juega en contra del gradiente y lo hace más creíble; si hubo fatiga, a favor. Hay que confirmar el orden.
+Medianas de ítems correctos por minuto; costes como tiempo por ítem añadido (media geométrica). **La lista de ejemplo, que va primero, es más lenta que la control** (34 frente a 43 ítems/min en 2010): hay efecto de práctica dentro del bloque. Si el orden fue siempre control → sílaba → fonema, la práctica juega en contra del gradiente y lo hace más creíble; si hubo fatiga, a favor. Hay que confirmar el orden.
 
 ### 2. Disléxicos frente a típicos: ¿amplificación o enlentecimiento general?
 
-![Tiempo medio por condición en DL y TE (formato discreto). En segundos (izquierda) la diferencia entre grupos crece con la carga; en escala logarítmica (derecha), solo crece de forma clara en la condición de fonema.](../figuras/desarrollos/M23_F1_gradiente_grupos_v1.png){width="100%"}
+![DL y TE por condición (formato discreto). Izquierda: ítems correctos por minuto. Derecha: log(segundos por ítem correcto), la escala en la que un enlentecimiento proporcional da líneas paralelas; solo se abren en la condición de fonema.](../figuras/desarrollos/M23_F1_gradiente_grupos_v2.png){width="100%"}
 
-| Muestra | Diferencia DL − TE (s): control / sílaba / fonema | Razón DL/TE: control / sílaba / fonema | Interacción en log: sílaba × DL | fonema × DL |
+| Muestra | Ítems/min DL / TE: control · sílaba · fonema | Razón de tiempo por ítem DL/TE: control / sílaba / fonema | Interacción en log: sílaba × DL | fonema × DL |
 |---|---|---|---|---|
-| 2010 · 6.1 discreto | 6,4 / 9,3 / 12,8 | 1,17 / 1,21 / 1,27 | +0,04 (p = ,11) | **+0,09 (p < ,001)** |
-| 2010 · 6.2 lámina | 6,7 / 11,7 / 15,1 | 1,20 / 1,29 / 1,37 | **+0,07 (p = ,01)** | **+0,13 (p < ,001)** |
-| 2011 · 5.1 discreto | 6,7 / 7,7 / 14,2 | 1,16 / 1,16 / 1,24 | 0,00 | **+0,07 (p = ,02)** |
-| 2011 · 5.2 lámina | 6,8 / 8,2 / 15,4 | 1,20 / 1,18 / 1,30 | −0,01 | **+0,08 (p = ,03)** |
-| 2012 · 4.2 lámina | 9,5 / 11,4 / 14,6 | 1,22 / 1,23 / 1,27 | +0,01 | +0,04 (p = ,37) |
-| 2013 · 6.2 lámina | 6,4 / 7,3 / 7,0 | 1,21 / 1,18 / 1,20 | −0,03 | −0,01 |
+| 2010 · 6.1 discreto | 38 / 44 · 31 / 37 · 24 / 33 | 1,17 / 1,23 / 1,36 | +0,05 (p = ,08) | **+0,15 (p < ,001)** |
+| 2010 · 6.2 lámina | 43 / 53 · 33 / 42 · 29 / 40 | 1,22 / 1,29 / 1,38 | +0,05 (p = ,09) | **+0,12 (p < ,001)** |
+| 2011 · 5.1 discreto | 35 / 40 · 28 / 33 · 21 / 28 | 1,16 / 1,21 / 1,38 | +0,04 (p = ,26) | **+0,17 (p < ,001)** |
+| 2011 · 5.2 lámina | 38 / 46 · 31 / 37 · 26 / 33 | 1,20 / 1,18 / 1,30 | −0,02 | **+0,08 (p = ,04)** |
+| 2012 · 4.2 lámina | 31 / 37 · 25 / 31 · 21 / 28 | 1,21 / 1,24 / 1,29 | +0,02 | +0,06 (p = ,21) |
+| 2013 · 6.2 lámina | 44 / 53 · 34 / 40 · 34 / 41 | 1,21 / 1,18 / 1,20 | −0,02 | −0,01 |
 
-Modelo mixto por muestra con intercepto aleatorio por niño. **En segundos, todas las interacciones con fonema son significativas** (que es lo que describe la introducción del borrador de Juan Luis). **En escala logarítmica**, que descuenta el enlentecimiento proporcional, el efecto se mantiene en fonema en las cuatro muestras de 5 y 6 años de 2010 y 2011: los disléxicos tardan un 7–14 % más de lo que predice su lentitud general. En sílaba, solo en una muestra.
+Modelo mixto por muestra con intercepto aleatorio por niño. **En escala lineal (segundos por ítem), la interacción con fonema es significativa en cinco de seis muestras** (que es lo que describe la introducción del borrador de Juan Luis). **En escala logarítmica**, que descuenta el enlentecimiento proporcional, el efecto se mantiene en fonema en las cuatro muestras de 5 y 6 años de 2010 y 2011: los disléxicos tardan un 8–18 % más por objeto de lo que predice su lentitud general. En sílaba, en ninguna.
 
-![Gráfico de Brinley: tiempo de DL frente a TE en cada condición. La línea discontinua es lo que se esperaría si los disléxicos fueran igual de más lentos en todo (razón de la condición control). Los puntos de fonema quedan por encima.](../figuras/desarrollos/M23_F2_brinley_v1.png){width="70%"}
+**Velocidad y errores.** En el formato discreto, la interacción con fonema era de +0,09 y +0,07 con el tiempo solo (versión 1) y sube a +0,15 y +0,17 con los ítems correctos por minuto: en la lista de fonema los disléxicos, además de ir más lentos, nombran mal más objetos. En las láminas no hay aciertos por ítem y el efecto es el mismo con las dos medidas. Para el marco, los errores son información: un competidor que gana al objetivo es exactamente lo que predice un κ bajo.
 
-**Lectura en continuo.** Con el tiempo control fijo, a peor lector (percentil medio de 6 a 11 años), mayor coste de fonema: r parcial −.13 a −.30 en las seis muestras (todas p < ,01). En sílaba, −.07 a −.32. La relación es gradual, no exclusiva de un grupo.
+![Gráfico de Brinley: segundos por ítem correcto de DL frente a TE en cada condición. La línea discontinua es lo que se esperaría si los disléxicos fueran igual de más lentos en todo (razón de la condición control). Los puntos de fonema quedan por encima, salvo en 2013.](../figuras/desarrollos/M23_F2_brinley_v2.png){width="70%"}
+
+**Lectura en continuo.** Con la velocidad en la lista control fija, a peor lector (percentil medio de 6 a 11 años), mayor coste de fonema: r parcial −,11 a −,31 en las seis muestras (todas p < ,01). En sílaba, −,09 a −,31. La relación es gradual, no exclusiva de un grupo.
 
 ### 3. Un índice individual tipo κ
 
@@ -142,24 +144,24 @@ Siguiendo la ecuación 5 del marco, para cada niño estimamos $b_i = 1/\kappa_i$
 
 | Muestra | $b$ mediano DL | $b$ mediano TE | Correlación de $b$ con el tiempo control |
 |---|---|---|---|
-| 2010 · 6.1 discreto | 1,51 | 0,87 | −,08 |
-| 2010 · 6.2 lámina | 1,57 | 0,87 | −,13 |
-| 2011 · 5.1 discreto | 1,31 | 0,88 | −,15 |
-| 2011 · 5.2 lámina | 1,23 | 0,92 | 0,00 |
-| 2012 · 4.2 lámina | 1,21 | 0,77 | −,07 |
-| 2013 · 6.2 lámina | 1,08 | 0,93 | ,05 |
+| 2010 · 6.1 discreto | 1,43 | 0,79 | ,03 |
+| 2010 · 6.2 lámina | 1,50 | 0,88 | −,13 |
+| 2011 · 5.1 discreto | 1,62 | 1,10 | ,01 |
+| 2011 · 5.2 lámina | 1,24 | 0,92 | ,01 |
+| 2012 · 4.2 lámina | 1,33 | 0,85 | −,10 |
+| 2013 · 6.2 lámina | 1,09 | 0,94 | ,06 |
 
-En la mediana, los disléxicos pagan 1,4–1,8 veces el coste de los típicos, y ese coste es casi independiente de su velocidad básica. Es lo que el marco espera si $T_0$ y κ son parámetros distintos.
+Con $T$ en segundos por ítem correcto. En la mediana, los disléxicos pagan 1,3–1,8 veces el coste de los típicos (salvo en 2013), y ese coste es independiente de su velocidad básica (ρ entre −,13 y ,06). Es lo que el marco espera si $T_0$ y κ son parámetros distintos.
 
 **El problema es la fiabilidad.** Entre la aplicación discreta y la lámina, 3–4 meses después:
 
 | Índice | 2010 (152 → 155) | 2011 (153 → 156) |
 |---|---|---|
-| Tiempo control | ,42 | ,43 |
-| Velocidad general (media de las tres) | ,61 | ,61 |
-| Coste sílaba | ,21 | ,20 |
-| Coste fonema | ,24 | ,18 |
-| Índice $b$ (1/κ) | ,34 | ,27 |
+| Lista control | ,43 | ,46 |
+| Velocidad general (media de las tres) | ,62 | ,63 |
+| Coste sílaba | ,21 | ,19 |
+| Coste fonema | ,29 | ,23 |
+| Índice $b$ (1/κ) | ,36 | ,30 |
 
 Las diferencias entre condiciones son siempre menos fiables que las condiciones; aquí, además, cambia el formato entre las dos aplicaciones. Para estimar κ por niño hará falta un modelo jerárquico con los tiempos ítem a ítem (plataforma nueva) o más ítems por condición.
 
@@ -167,25 +169,25 @@ Las diferencias entre condiciones son siempre menos fiables que las condiciones;
 
 | Muestra | DL / n | AUC control | AUC fonema | AUC control + coste fonema | ΔAUC (IC 95 %) |
 |---|---|---|---|---|---|
-| 2010 · 6.1 discreto | 111 / 633 | ,68 | ,74 | ,75 | +,07 (,04–,12) |
-| 2010 · 6.2 lámina | 106 / 577 | ,69 | ,77 | ,78 | +,09 (,05–,14) |
-| 2011 · 5.1 discreto | 84 / 381 | ,64 | ,71 | ,71 | +,06 (,02–,14) |
-| 2011 · 5.2 lámina | 71 / 330 | ,69 | ,72 | ,73 | +,04 (,00–,10) |
-| 2012 · 4.2 lámina | 33 / 160 | ,67 | ,72 | ,69 | +,02 (−,00–,13) |
-| 2013 · 6.2 lámina | 33 / 201 | ,69 | ,68 | ,70 | +,01 (−,00–,08) |
+| 2010 · 6.1 discreto | 114 / 642 | ,67 | ,75 | ,75 | +,07 (,03–,12) |
+| 2010 · 6.2 lámina | 102 / 552 | ,70 | ,78 | ,79 | +,09 (,04–,14) |
+| 2011 · 5.1 discreto | 89 / 388 | ,65 | ,73 | ,73 | +,08 (,02–,14) |
+| 2011 · 5.2 lámina | 63 / 297 | ,69 | ,72 | ,72 | +,04 (,00–,10) |
+| 2012 · 4.2 lámina | 33 / 156 | ,67 | ,73 | ,71 | +,03 (,00–,14) |
+| 2013 · 6.2 lámina | 33 / 199 | ,69 | ,69 | ,70 | +,01 (−,00–,09) |
 
 AUC con validación cruzada (5 particiones × 20 repeticiones); IC del ΔAUC por *bootstrap*. **La lista de fonema sola predice mejor que la control.** A los 5 y 6 años mejora la AUC entre 4 y 9 puntos. Para el manual: si solo cabe una lista RAN de objetos en la evaluación de 5–6 años, la de fonema discrimina más.
 
 ### 5. ¿Mejora el sistema? Cambio en tres meses y Preleo
 
-- **Cambio del coste entre la primera y la segunda aplicación** (discreto → lámina): sin diferencia entre DL y TE (2010: +0,05 en fonema, p = ,18; 2011: 0,00). El cambio de formato está confundido con el tiempo, pero afecta igual a los dos grupos.
-- **Preleo (cohorte 2010, 34 colegios):** los colegios CON no difieren de los SIN ni en el RAN control ni en los costes (diferencias ≤ 0,04 en log, p > ,24). Según el marco, una intervención fonológica («homeostática», sobre π) no debería mover κ a corto plazo; lo observado es compatible, pero un nulo no lo demuestra.
+- **Cambio del coste entre la primera y la segunda aplicación** (discreto → lámina): el coste de fonema baja algo más en los DL que en los TE (2010: −0,09 frente a −0,05; 2011: −0,15 frente a −0,07), sin llegar a ser significativo (p = ,37 y ,28). Puede ser regresión a la media, porque los DL parten de costes más altos; además, el cambio de formato está confundido con el tiempo, aunque afecta a los dos grupos.
+- **Preleo (cohorte 2010, 34 colegios):** los colegios CON no difieren de los SIN ni en el RAN control ni en los costes (diferencias ≤ 0,04 en log, p > ,23). Según el marco, una intervención fonológica («homeostática», sobre π) no debería mover κ a corto plazo; lo observado es compatible, pero un nulo no lo demuestra.
 
 ## ¿Mide esto la «capacidad del sistema para mejorar»?
 
 Tal como se aplicó, **no directamente**. Cada niño hizo el experimento dos veces, en formatos distintos, así que mide sobre todo el estado del sistema: cuánto le cuesta la competencia fonológica. Con los datos y la plataforma hay tres maneras de acercarlo a la mejora, de menor a mayor coste:
 
-1. **Mejora entre aplicaciones (ya hecho, versión pobre).** Cambio del coste en tres meses, por grupo. Nulo y confundido con el formato.
+1. **Mejora entre aplicaciones (ya hecho, versión pobre).** Cambio del coste en tres meses, por grupo. Sin diferencia significativa y confundido con el formato.
 2. **Aprendizaje dentro de la lista (datos existentes, por hacer).** Con los tiempos por ítem de la plataforma nueva (2013/903, 2013/628–629, 2014/896) se puede ajustar a cada niño una curva de aceleración a lo largo de los 25 ítems, que es la ecuación 9 del anexo ($H(t)$ con constante de tiempo $1/\kappa$), y la variabilidad ítem a ítem como indicador de λ (predicción P3 del anexo). Hay que extraer las columnas `_di` del servidor.
 3. **Mejora con entrenamiento (estudio nuevo).** El marco predice que un RAN adaptativo con límites de tiempo decrecientes («intervención alostática», ecuación 15) mejora κ sin cambiar π. La plataforma puede aplicarlo como actividad de intervención y medir κ antes y después, con la condición de fonema como medida y la de control como referencia. Encaja con la maleabilidad por habilidad de [M19](M19.qmd): κ sería una de las habilidades con ganancia esperada estimable.
 
@@ -207,7 +209,7 @@ Tal como se aplicó, **no directamente**. Cada niño hizo el experimento dos vec
 
 ## Archivos
 
-Script `04\scripts\m23_ran_carga.py` (pandas, statsmodels, scikit-learn) → `04\DIAGNOSTICO\m23_ran_carga_v1.xlsx` (12 hojas, solo agregados) y `DIAGNOSTICO\figs_M23\`. Marco teórico en `2026\JUANLU\Un marco bayesiano para la dislexia\` (borradores de J. L. Luque). Documento del proyecto de Claude: `claude/M23_RAN_carga_fonologica.md`.
+Script `04\scripts\m23_ran_carga_v2.py` (pandas, statsmodels, scikit-learn; variable de M11) → `04\DIAGNOSTICO\m23_ran_carga_v2.xlsx` (13 hojas, solo agregados) y `DIAGNOSTICO\figs_M23_v2\`. La v1 (solo tiempo) se conserva: `m23_ran_carga.py` → `m23_ran_carga_v1.xlsx`. Marco teórico en `2026\JUANLU\Un marco bayesiano para la dislexia\` (borradores de J. L. Luque). Documento del proyecto de Claude: `claude/M23_RAN_carga_fonologica.md`.
 
 ## Referencias {.unnumbered}
 
