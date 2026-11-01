@@ -151,6 +151,8 @@ A igual edad, el primer curso de instrucción lectora acelera el RAN: en la dire
 
 Modelo autorregresivo cruzado con intercepto aleatorio [@hamaker2015riclpm] entre RAN y decodificación en cuatro olas (cursos de 5 a 8), cohortes 2010–2012, N = 2.092, FIML. Entre niños, RAN y lectura son casi el mismo rasgo (correlación entre interceptos .86). Dentro del niño, la dirección cambia con la edad: de 5 a 6 el RAN predice el avance en decodificación (β = .12) más que al revés (.07); después el RAN deja de predecir cambios en lectura (.01, .00) y es la lectura la que predice cambios en RAN, con efectos crecientes (.09, .19). Mismo patrón que @peterson2018literacy, y misma conclusión que el corte escolar. El CLPM clásico, sin interceptos aleatorios, da efectos en ambas direcciones en todos los intervalos: por eso la literatura no se ponía de acuerdo. Cautelas: solución impropia con la cohorte 2010 sola; índices de ajuste e invarianza pendientes de lavaan.
 
+![Diagrama de senderos del RI-CLPM entre RAN y decodificación de 5 a 8 años (coeficientes estandarizados; discontinuo = no significativo).](../figuras/desarrollos/M11_F7_riclpm_v1.png){width="100%"}
+
 | Efecto (estandarizado) | 5 → 6 | 6 → 7 | 7 → 8 |
 |---|---|---|---|
 | RAN → decodificación | .12*** | .01 | .00 |
