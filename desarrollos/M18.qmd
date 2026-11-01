@@ -86,6 +86,35 @@ Los dos grupos cubren todo el rango de ISE: no hay restricción de rango en Prel
 
 Lectura. En Preleo el riesgo inicial depende del ISE (signo negativo: más ISE, menos riesgo) y el cambio en CF también (más ISE, **menos** ganancia: los niños de ISE bajo recuperan). En comparación, el ISE no se relaciona con el riesgo y sí, positivamente, con las ganancias en CF y en fluidez (más ISE, más ganancia), y el riesgo inicial predice más ganancia en decodificación de palabras (regresión a la media o recuperación en los de peor partida). La red de cambio es más densa en Preleo (fuerza 1,89 frente a 1,38), pero la diferencia global no es significativa.
 
+### Borrador frente a versión 2: las figuras lado a lado
+
+::: {.callout-note}
+Las tres figuras de esta sección son las **originales del borrador de enero de 2026** (`REDES_AÑO.R`, `mgm` con `bootnet`/`qgraph`), sin retocar salvo el montaje lado a lado. Se dejan como ejemplo de partida para ver qué cambia al corregir datos y método; **no deben usarse en el artículo**.
+:::
+
+![Figura 0a (borrador). Redes de cambio 7 − 6 con `mgm`: comparación («Control», izquierda) y Preleo (derecha). 200 y 306 niños; ISE y riesgo en tres categorías; verde = positiva, rojo = negativa.](../figuras/desarrollos/M18_F0a_borrador_redes_cambio.png){width="100%"}
+
+Compárese con la figura 1 de arriba (versión 2). Lo que cambia y por qué:
+
+| | Borrador (fig. 0a) | Versión 2 (fig. 1) | Consecuencia |
+|---|---|---|---|
+| **ISE–Riesgo** | Fuerte en comparación; desaparece en Preleo («desconecta») | 0,00 en comparación; −0,26 en Preleo | La conclusión se invierte (véase la v3: tampoco es efecto del programa) |
+| **Signo de ISE–Riesgo** | Positivo (verde) | Negativo (más ISE, menos riesgo) | Con categorías sin orden en `mgm` el «signo» no tiene interpretación; con variables continuas sí |
+| **ISE–ΔCF** | Arista débil solo en Preleo | −0,11 en Preleo (compensación), +0,03 en comparación | Se mantiene la idea de que en Preleo el ISE toca el cambio en CF, ahora con signo y contraste por arista (p = ,002) |
+| **ΔCF como centro** | ΔCF concentra las aristas en Preleo | La red de Preleo es más densa en todo, no solo en ΔCF; fuerza global sin diferencia (p = ,22) | «ΔCF es el centro» era en parte efecto del tamaño desigual y de la regularización |
+| **Nodos** | dCF, dRF, dRV, dFL, dCOMP + Sexo, CI | ΔCF, ΔPAL, ΔPSE, ΔFLU, ΔCOMP + ISE, Riesgo5 | Sexo y CI quedan como sensibilidad; las tareas se recalculan desde la tabla larga |
+| **Muestra** | 506 niños, 20 colegios | 638 niños, 30 colegios | Se recuperan 131 niños Preleo, que son los que más gradiente tienen (r = −0,41) |
+| **Contraste** | Fuerza global, permutación | Por arista: permutación, bootstrap, igual n, colegio fuera | Ya se puede decir qué arista difiere, no solo que las redes «se ven» distintas |
+| **Disposición** | `spring` con la red de comparación | Circular fija, contexto en naranja, pesos rotulados | Se leen directamente los valores |
+
+![Figura 0b (borrador). Redes de niveles (puntuaciones a 5, 6 y 7 años) por grupo, figura S1 del borrador.](../figuras/desarrollos/M18_F0b_borrador_redes_nivel.png){width="100%"}
+
+En la red de niveles del borrador ya se veía el problema: ISE–Riesgo aparece en comparación y no en Preleo con las categorías, y esa es la arista que se invierte con las variables continuas. RF_6–RV_6 domina las dos redes (son casi la misma medida a los 6 años), lo que apoya haber pasado a cambio residualizado y a nodos menos redundantes. La versión 2 no rehace esta red de niveles; si se quiere conservar como material suplementario, debe estimarse con las mismas variables continuas.
+
+![Figura 0c (borrador). Medias por edad y condición, figura S2 del borrador (puntuaciones z).](../figuras/desarrollos/M18_F0c_borrador_descriptivos.png){width="85%"}
+
+Esta figura deja ver algo que el borrador no comentaba: **los colegios Preleo ya parten por encima a los 6 años en todas las medidas** (en palabras y pseudopalabras, ≈ 0,3 DT), y en lectura de palabras y pseudopalabras no hay ganancia diferencial de 6 a 7. Por eso la versión 2 trabaja con cambio residualizado y la versión 3 busca un contraste sin diferencias de partida (2013 frente a 2014 en los mismos colegios). Para el artículo, la figura descriptiva debería rehacerse con la muestra de 638, con IC y en el mismo eje para todas las medidas.
+
 ### Las comprobaciones
 
 | Comprobación | Resultado |
@@ -197,4 +226,4 @@ Redes por cohorte (glasso, 1.000 permutaciones): ninguna arista con el ISE difie
 
 ## Archivos
 
-v3: `04\scripts\m18_v3_moderada_y_2013_2014.py`, `04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx`. v2: `04\scripts\m18_redes_preleo.py`, `04\scripts\R\m18_redes_preleo.R` (porte), `04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx`, `04\DIAGNOSTICO\figs_M18\`. `LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png`. Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.
+v3: `04\scripts\m18_v3_moderada_y_2013_2014.py`, `04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx`. v2: `04\scripts\m18_redes_preleo.py`, `04\scripts\R\m18_redes_preleo.R` (porte), `04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx`, `04\DIAGNOSTICO\figs_M18\`. `LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png` (montadas en la web como `figuras/desarrollos/M18_F0a–F0c_borrador_*.png`). Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.
