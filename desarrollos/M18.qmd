@@ -4,7 +4,7 @@ search: false
 
 # M18 · ¿Desconecta Preleo el riesgo lector del nivel socioeconómico? — redes de cambio {.unnumbered}
 
-*Seguimiento de un estudio propio · versión 1, 30/10/2026. Borrador en `LEEDUCA\2026\AUXI\RED` (script `REDES_AÑO.R`, `propuesta_redes_6.docx`, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.*
+*Seguimiento de un estudio propio · versión 1, 30/10/2026; versión 2 con el análisis rehecho sobre la cohorte 2010 completa, 01/11/2026. Borrador en `LEEDUCA\2026\AUXI\RED` (script `REDES_AÑO.R`, `propuesta_redes_6.docx`, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -43,7 +43,88 @@ La idea es buena y tiene un argumento de equidad que ningún análisis de medias
 | 9 | **Asignación de Preleo.** La matriz usa la de la tesis (2010); para 2010 y 2011 hay fuentes contradictorias | Confirmar que es la asignación v3; para la réplica en 2011, usar la propuesta v5 (intención de tratar) cuando el grupo la acuerde | Pendiente de Auxi y Juan Luis |
 | 10 | **Grupo «control»** | En el texto, «comparación» (los centros se autoseleccionaron) | Decidido |
 
-## Lo que puede convertirlo en un artículo fuerte
+
+## Versión 2 (01/11/2026): el análisis rehecho con la cohorte completa
+
+::: {.callout-important}
+**El resultado central del borrador no se sostiene.** Con los indicadores corregidos desde la tabla larga (638 niños con las cinco medidas a 6 y a 7 años, 30 colegios, ISE y riesgo continuos), el ISE y el riesgo a los 5 años **no están conectados en los colegios de comparación** (arista 0,00; r = −0,05) y **sí en los colegios Preleo** (arista −0,26; r = −0,31). Es lo contrario de «Preleo desconecta el ISE del riesgo». Lo que sí aparece, y resiste todas las comprobaciones, es una **compensación en el crecimiento de la conciencia fonológica de 6 a 7 años**: en comparación ganan más los niños de ISE alto; en Preleo, los de ISE bajo.
+:::
+
+**Qué cambió respecto al borrador.** (1) Toda la cohorte 2010 de los 30 colegios de la tesis (`preleo_2010_indicadores_R.rds`, de `preleo_02`), no los 506; (2) ISE continuo (1–9) y riesgo continuo (compuesto de precursores a los 5 años, `PREC_5`, de la etiqueta de certeza v2), no categorías; (3) red gaussiana regularizada (glasso, EBIC γ = 0,5) en lugar del modelo mixto con nodos categóricos; (4) contraste **por arista** con 1.000 permutaciones de la condición, bootstrap de 500 por arista, 200 submuestras de igual tamaño, cada colegio fuera; (5) cambio residualizado y CI como sensibilidad; (6) la prueba directa: ISE × Preleo con errores típicos agrupados por colegio; (7) rigor de aplicación como dosis; (8) el gradiente ISE–precursores trimestre a trimestre del curso de 5 años. Guion `04\scripts\m18_redes_preleo.py` (porte a R en `scripts\R\m18_redes_preleo.R`, sin ejecutar aún); salida `04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx`.
+
+**Por qué el borrador decía otra cosa.** En la matriz de 506, la correlación bruta entre el ISE en tres niveles y el riesgo en tres niveles es −0,01 en comparación y −0,07 en Preleo: no había gradiente en ningún grupo. La arista «ISE–riesgo» del modelo mixto venía de asociaciones entre categorías sin orden, no de una relación monótona, y la regularización con 200 niños en comparación y 306 en Preleo hizo el resto. Con la cohorte completa y las variables continuas, el gradiente de los colegios Preleo se ve (los 131 niños de esos colegios que no estaban en los 506 lo tienen con r = −0,41).
+
+### Muestra
+
+| | Comparación | Preleo |
+|---|---|---|
+| Niños con las cinco medidas a 6 y 7 | 215 | 423 |
+| Colegios | 11 | 19 |
+| ISE: media (DT), rango | 5,2 (2,3), 1–9 | 5,8 (2,6), 1–9 |
+| Riesgo a los 5 años (z, alto = más riesgo) | −0,11 | −0,50 |
+| CF a 6 años (z) | 0,01 | 0,15 |
+| Dificultad persistente (etiqueta v2) | 11,6 % | 10,4 % |
+| De ellos, en la matriz de 506 | 190 | 292 |
+
+Los dos grupos cubren todo el rango de ISE: no hay restricción de rango en Preleo (la debilidad 3 del borrador no se da; la hay, si acaso, en comparación, con 107 de 215 niños en ISE 4–6).
+
+### Redes de cambio por grupo
+
+![Figura 1. Redes de cambio de 6 a 7 años. Nodos de contexto en naranja. Correlaciones parciales regularizadas.](../figuras/desarrollos/M18_F1_redes_cambio_v1.png){width="100%"}
+
+| Arista | Preleo | Comparación | Diferencia | p (permutación) | Bootstrap Preleo | Bootstrap comparación |
+|---|---|---|---|---|---|---|
+| **ISE–Riesgo5** | **−0,26** | 0,00 | −0,26 | **,001** | −0,34; −0,13 (100 % ≠ 0) | 0,00; 0,07 (11 % ≠ 0) |
+| **ISE–ΔCF** | **−0,11** | +0,03 | −0,14 | **,002** | −0,19; 0,00 (91 % ≠ 0) | 0,00; 0,16 (49 %) |
+| ISE–ΔFLU | 0,00 | +0,10 | −0,10 | ,018 | | 0,00; 0,21 (80 %) |
+| Riesgo5–ΔPAL | 0,00 | +0,14 | −0,14 | ,009 | | 0,00; 0,26 (95 %) |
+| Riesgo5–ΔPSE | +0,16 | +0,20 | −0,05 | ,55 | | |
+| ΔPAL–ΔPSE | +0,55 | +0,38 | +0,17 | ,08 | | |
+| ΔPAL–ΔFLU | +0,42 | +0,32 | +0,10 | ,32 | | |
+| ΔCF–ΔCOMP | +0,10 | 0,00 | +0,10 | ,15 | | |
+| Fuerza global | 1,89 | 1,38 | +0,51 | ,22 | | |
+
+Lectura. En Preleo el riesgo inicial depende del ISE (signo negativo: más ISE, menos riesgo) y el cambio en CF también (más ISE, **menos** ganancia: los niños de ISE bajo recuperan). En comparación, el ISE no se relaciona con el riesgo y sí, positivamente, con las ganancias en CF y en fluidez (más ISE, más ganancia), y el riesgo inicial predice más ganancia en decodificación de palabras (regresión a la media o recuperación en los de peor partida). La red de cambio es más densa en Preleo (fuerza 1,89 frente a 1,38), pero la diferencia global no es significativa.
+
+### Las comprobaciones
+
+| Comprobación | Resultado |
+|---|---|
+| **Cambio residualizado** (X7 dado X6) | Mismas aristas: ISE–Riesgo5 −0,26 frente a 0,00 (p = ,002); ISE–ΔCF −0,06 frente a +0,07 (p = ,002); ISE–ΔFLU 0,00 frente a +0,13 (p = ,03) |
+| **CI como nodo** (n = 596) | ISE–Riesgo5 −0,17 frente a 0,00 (p = ,025); ISE–ΔCF −0,05 frente a +0,08 (p = ,003). El CI se conecta solo con Riesgo5 (−0,25 y −0,17), no con los cambios |
+| **Submuestras de Preleo de n = 215** (200) | ISE–Riesgo5: mediana −0,19, IC −0,29; −0,06; **ninguna** submuestra llega a 0,00. ISE–ΔCF: mediana −0,03 (el 51 % quedan por debajo de la de comparación en valor absoluto): esta arista sí depende del tamaño |
+| **Cada colegio fuera** (30 veces) | ISE–Riesgo5 en Preleo entre −0,30 y −0,14; en comparación entre −0,04 y +0,04. Ningún colegio sostiene el resultado por sí solo |
+| **Nivel colegio** (medias) | r(ISE, riesgo medio): −0,63 en los 19 colegios Preleo; −0,17 en los 11 de comparación. r(ISE, ΔCF media): −0,42 frente a +0,23 |
+| **ISE × Preleo con errores por colegio** (prueba directa) | Riesgo5: interacción −0,14 (IC −0,33; 0,06; p = ,18): pendiente +0,02 en comparación, −0,11 en Preleo; con 30 colegios no llega a la significación. **ΔCF: −0,085 (IC −0,15; −0,02; p = ,010)**; residualizado, **−0,097 (p = ,001)**: pendiente +0,05 por punto de ISE en comparación, −0,04 en Preleo. ΔPAL y ΔFLU: no. Dificultad persistente: el ISE reduce el riesgo en los dos grupos (logit −0,31 y −0,23 por punto), sin moderación. CF a los 7: +0,09 por punto en comparación, +0,02 en Preleo (p = ,095) |
+| **Rigor como dosis** (dentro de Preleo) | ISE–Riesgo5: −0,18 en rigor alto (10 colegios) y −0,12 en rigor bajo (9); interacción ISE × rigor p = ,15. El rigor correlaciona con el ISE del colegio: **r = 0,45** (los centros de ISE alto aplicaron mejor) |
+
+### Cuándo aparece el gradiente
+
+![Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %.](../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png){width="75%"}
+
+En comparación el gradiente es nulo los tres trimestres (−0,07, −0,02, −0,05). En Preleo ya está en noviembre (0,24, IC 0,15–0,35), antes de la mayor parte del programa, y sube a 0,36 en febrero y 0,31 en mayo (intervalos solapados). Es decir: **los colegios Preleo tienen gradiente socioeconómico desde el inicio y los de comparación no**; el programa, si acaso, lo acentuó un poco durante el curso, y los centros de ISE alto fueron los que lo aplicaron con más rigor.
+
+![Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n).](../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png){width="75%"}
+
+### Qué artículo queda
+
+No es el artículo del borrador. Es uno más interesante y más defendible, con tres resultados:
+
+1. **El gradiente socioeconómico en los precursores no es universal.** Once colegios de Málaga sin programa no lo muestran a los 5 años; diecinueve con programa sí. Como la asignación fue por autoselección, el gradiente puede ser una característica de los centros que se apuntaron al programa (más heterogéneos, con centros de ISE 9 y de ISE 3) más que un efecto del programa. Hay que decirlo así.
+2. **Durante el curso de la intervención el gradiente no se cerró** (0,24 → 0,31) y la implementación fue mejor en los centros de ISE alto (r = 0,45). Es un resultado sobre equidad en la implementación de programas universales que casi nadie publica: el programa llega mejor donde menos falta hace.
+3. **De 6 a 7 años, con el programa ya terminado, el crecimiento de la conciencia fonológica compensa**: en comparación crecen más los de ISE alto; en Preleo, los de ISE bajo (interacción p = ,001 con cambio residualizado, errores por colegio). Es la única arista que distingue las dos redes en la dirección que el borrador defendía, y es la que sostiene el título «compensación».
+
+Título posible: *Does a universal phonological-awareness programme close or widen the socioeconomic gradient? Network and moderated-growth evidence from 30 Spanish schools.* Lo que no se puede decir: «reorganiza la arquitectura», «desconecta el riesgo del ISE».
+
+### Lo que falta
+
+- **Cohorte 2011** (confirmado por A. Sánchez el 31/10): los 35 colegios que entraron en 2015/16 fueron todos CON; no hay grupo de comparación interno. No sirve para replicar el contraste; sirve para la pregunta 2 (gradiente y rigor dentro de CON, con el programa desde los 4 años) y para fidelidad. El contraste limpio pendiente es 2013 (SIN) frente a 2014 (CON) en los 22 colegios comunes, pero 2014 solo llega a los 6 años: permite Δ5→6, no Δ6→7.
+- Confirmar con Auxi y Juan Luis la condición de los 11 colegios de comparación en 2010 (la asignación v3 y la tesis coinciden en esta muestra).
+- Red única **moderada por Preleo** (`mgm` con moderador, en R) como presentación alternativa al par de redes.
+- Ejecutar el porte a R y comprobar que coincide.
+- Decidir si el artículo va con la cohorte 2010 sola (30 colegios) o espera a 2013/2014 con Δ5→6.
+
+## Lo que puede convertirlo en un artículo fuerte (v1, 30/10)
 
 - **Indicador de uso como dosis.** `06_PRELEO_COLEGIOS\acceso_colegios_R_v1.xlsx` da la regularidad de acceso de cada colegio. Dentro del grupo Preleo, red moderada por la regularidad: si la arista ISE–riesgo se debilita más cuanto más usa el colegio la plataforma, es el mejor apoyo posible para la lectura causal.
 - **Réplica en la cohorte 2011**, que tuvo el programa desde los 4 años en los mismos centros (asignación v5, pendiente).
@@ -59,4 +140,4 @@ La idea es buena y tiene un argumento de equidad que ningún análisis de medias
 
 ## Archivos
 
-`LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png`. Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.
+v2: `04\scripts\m18_redes_preleo.py`, `04\scripts\R\m18_redes_preleo.R` (porte), `04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx`, `04\DIAGNOSTICO\figs_M18\`. `LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png`. Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.
