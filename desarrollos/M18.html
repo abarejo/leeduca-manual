@@ -991,6 +991,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#qué-artículo-queda" id="toc-qué-artículo-queda" class="nav-link" data-scroll-target="#qué-artículo-queda">Qué artículo queda</a></li>
   <li><a href="#lo-que-falta" id="toc-lo-que-falta" class="nav-link" data-scroll-target="#lo-que-falta">Lo que falta</a></li>
   </ul></li>
+  <li><a href="#versión-3-01112026-red-única-moderada-y-el-contraste-limpio-2013-frente-a-2014" id="toc-versión-3-01112026-red-única-moderada-y-el-contraste-limpio-2013-frente-a-2014" class="nav-link" data-scroll-target="#versión-3-01112026-red-única-moderada-y-el-contraste-limpio-2013-frente-a-2014">Versión 3 (01/11/2026): red única moderada y el contraste limpio 2013 frente a 2014</a>
+  <ul class="collapse">
+  <li><a href="#la-red-única-moderada-por-preleo-cohorte-2010-67" id="toc-la-red-única-moderada-por-preleo-cohorte-2010-67" class="nav-link" data-scroll-target="#la-red-única-moderada-por-preleo-cohorte-2010-67">La red única moderada por Preleo (cohorte 2010, 6→7)</a></li>
+  <li><a href="#el-contraste-limpio-2013-sin-programa-frente-a-2014-con-programa-en-los-mismos-22-colegios" id="toc-el-contraste-limpio-2013-sin-programa-frente-a-2014-con-programa-en-los-mismos-22-colegios" class="nav-link" data-scroll-target="#el-contraste-limpio-2013-sin-programa-frente-a-2014-con-programa-en-los-mismos-22-colegios">El contraste limpio: 2013 (sin programa) frente a 2014 (con programa) en los mismos 22 colegios</a></li>
+  <li><a href="#lo-que-queda-para-la-versión-4" id="toc-lo-que-queda-para-la-versión-4" class="nav-link" data-scroll-target="#lo-que-queda-para-la-versión-4">Lo que queda para la versión 4</a></li>
+  </ul></li>
   <li><a href="#lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010" id="toc-lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010" class="nav-link" data-scroll-target="#lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010">Lo que puede convertirlo en un artículo fuerte (v1, 30/10)</a></li>
   <li><a href="#ficha-para-la-agenda" id="toc-ficha-para-la-agenda" class="nav-link" data-scroll-target="#ficha-para-la-agenda">Ficha para la Agenda</a></li>
   <li><a href="#archivos" id="toc-archivos" class="nav-link" data-scroll-target="#archivos">Archivos</a></li>
@@ -1019,7 +1025,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Seguimiento de un estudio propio · versión 1, 30/10/2026; versión 2 con el análisis rehecho sobre la cohorte 2010 completa, 01/11/2026. Borrador en <code>LEEDUCA\2026\AUXI\RED</code> (script <code>REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.</em></p>
+<p><em>Seguimiento de un estudio propio · versión 1, 30/10/2026; versión 2 con el análisis rehecho sobre la cohorte 2010 completa y versión 3 con la red moderada y el contraste 2013/2014, 01/11/2026. Borrador en <code>LEEDUCA\2026\AUXI\RED</code> (script <code>REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1422,6 +1428,199 @@ Importante
 </ul>
 </section>
 </section>
+<section id="versión-3-01112026-red-única-moderada-y-el-contraste-limpio-2013-frente-a-2014" class="level2">
+<h2 class="anchored" data-anchor-id="versión-3-01112026-red-única-moderada-y-el-contraste-limpio-2013-frente-a-2014">Versión 3 (01/11/2026): red única moderada y el contraste limpio 2013 frente a 2014</h2>
+<p>Guion <code>04\scripts\m18_v3_moderada_y_2013_2014.py</code> → <code>04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx</code> (porte a R con <code>mgm</code> en la parte 3 de <code>scripts\R\m18_redes_preleo.R</code>, sin ejecutar).</p>
+<section id="la-red-única-moderada-por-preleo-cohorte-2010-67" class="level3">
+<h3 class="anchored" data-anchor-id="la-red-única-moderada-por-preleo-cohorte-2010-67">La red única moderada por Preleo (cohorte 2010, 6→7)</h3>
+<p>En lugar de estimar dos redes y compararlas, se estima <strong>una sola red en la que cada arista puede cambiar con el programa</strong>: regresión nodo a nodo con lasso sobre los demás nodos, la condición y los productos nodo × condición (λ por EBIC, γ = 0,25, regla AND; es el modelo de <code>mgm</code> con moderador). Las aristas de moderación son, por construcción, las que la regularización no deja a cero cuando compiten con las principales: un criterio más exigente que el contraste por permutación.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa."><img src="../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa."></a></p>
+<figcaption>Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa.</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Arista</th>
+<th>Comparación</th>
+<th>Preleo</th>
+<th>Moderación</th>
+<th>Bootstrap de la moderación (500)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ISE–Riesgo5</strong></td>
+<td>0,00</td>
+<td><strong>−0,20</strong></td>
+<td><strong>−0,19</strong></td>
+<td>−0,29; 0,00 (≠ 0 en el 92 %)</td>
+</tr>
+<tr class="even">
+<td>ISE–ΔCF</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>−0,18; 0,00 (≠ 0 en el 42 %)</td>
+</tr>
+<tr class="odd">
+<td>Riesgo5–ΔPSE</td>
+<td>+0,18</td>
+<td>+0,18</td>
+<td>0,00</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Riesgo5–ΔPAL</td>
+<td>+0,05</td>
+<td>+0,02</td>
+<td>0,00</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>resto</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>≠ 0 en &lt; 10 %</td>
+</tr>
+</tbody>
+</table>
+<p>Con el criterio más exigente <strong>sobrevive una sola moderación: ISE–Riesgo5</strong>, que aparece con el programa (0,00 → −0,20). La compensación en ΔCF no llega a entrar en la red moderada (lo hace en el 42 % de las remuestras): es un efecto real pero pequeño, que el modelo de regresión con errores por colegio detecta (p = ,001) y la red regularizada no retiene. En el artículo, la red moderada es la figura principal y la moderación de ΔCF se presenta con el modelo de regresión, no con la red.</p>
+</section>
+<section id="el-contraste-limpio-2013-sin-programa-frente-a-2014-con-programa-en-los-mismos-22-colegios" class="level3">
+<h3 class="anchored" data-anchor-id="el-contraste-limpio-2013-sin-programa-frente-a-2014-con-programa-en-los-mismos-22-colegios">El contraste limpio: 2013 (sin programa) frente a 2014 (con programa) en los mismos 22 colegios</h3>
+<p>Los 22 colegios que entraron en 2017/18 evaluaron a la cohorte 2013 sin programa y a la 2014 con programa desde los 4 años (confirmación de A. Sánchez, 31/10). Es el contraste que elimina la autoselección de centros. Dos límites: la tabla larga solo tiene de 2014 los momentos 4.1 a 5.2 (el curso de 5 años fue 2019/20 y se cortó en marzo; no hay 5.3 ni 6.x), así que el contraste es <strong>el cambio de 4 a 5 años en los precursores, durante el programa</strong>; y solo valen las tareas con el mismo código en las dos cohortes (fuera las letras de 5.1 y el RAN de colores de 4.1, que cambiaron de versión).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>2013 (SIN)</th>
+<th>2014 (CON)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Niños con CF y letras a 4 y a 5</td>
+<td>374</td>
+<td>307</td>
+</tr>
+<tr class="even">
+<td>Colegios con ISE</td>
+<td>18</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>ISE medio</td>
+<td>5,6</td>
+<td>5,5</td>
+</tr>
+<tr class="even">
+<td>Indicadores</td>
+<td>CF4 (contar sílabas, emparejar sílaba inicial y final, supresión de sílaba inicial; 4.1–4.2), LET4 (letras 535, 4.2–4.3), CF5 (identificación de fonema inicial y supresión de fonema final, 5.2), LET5 (letras 67, 5.2), RAN5 (objetos, 5.1); z con referencia 2013</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte."><img src="../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte."></a></p>
+<figcaption>Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte.</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Qué se contrasta</th>
+<th>2013 (SIN)</th>
+<th>2014 (CON)</th>
+<th>ISE × cohorte (errores por colegio)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>r(ISE, CF a 4 años)</td>
+<td>+0,19 (0,09; 0,27)</td>
+<td>−0,02 (−0,12; 0,08)</td>
+<td>nivel 4: −0,065, p = ,004</td>
+</tr>
+<tr class="even">
+<td>r(ISE, CF a 5 años)</td>
+<td>+0,06 (−0,04; 0,17)</td>
+<td>−0,03 (−0,13; 0,10)</td>
+<td>CF5 dado CF4: −0,003, p = ,95</td>
+</tr>
+<tr class="odd">
+<td>r(ISE, letras a 5)</td>
+<td>+0,14</td>
+<td>+0,11</td>
+<td>LET5 dado LET4: +0,02, p = ,58</td>
+</tr>
+<tr class="even">
+<td>r(ISE, ΔCF 4→5)</td>
+<td>−0,08</td>
+<td>−0,01</td>
+<td>+0,03, p = ,69; con EF de colegio +0,003, p = ,97</td>
+</tr>
+<tr class="odd">
+<td>r(ISE, ΔLET 4→5)</td>
+<td>+0,21</td>
+<td>+0,32</td>
+<td>+0,02, p = ,57; con EF +0,01, p = ,72</td>
+</tr>
+<tr class="even">
+<td>r(ISE, RAN a 5)</td>
+<td>+0,29 (0,17; 0,40)</td>
+<td>−0,01 (−0,14; 0,13)</td>
+<td>−0,105, p = ,002</td>
+</tr>
+<tr class="odd">
+<td>Efecto medio del programa, dentro de colegio</td>
+<td></td>
+<td></td>
+<td>ΔCF: −0,33 (−0,72; 0,07), p = ,10; ΔLET: +0,05, p = ,63</td>
+</tr>
+</tbody>
+</table>
+<p>Redes por cohorte (glasso, 1.000 permutaciones): ninguna arista con el ISE difiere salvo ISE–RAN5 (+0,23 en 2013, 0,00 en 2014; p = ,007). La <strong>red moderada por la cohorte no retiene ninguna moderación</strong> (Figura 7): la estructura del cambio 4→5 es la misma con y sin programa.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación."><img src="../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación."></a></p>
+<figcaption>Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación.</figcaption>
+</figure>
+</div>
+<p><strong>Lectura.</strong> En los mismos colegios, el gradiente socioeconómico en la conciencia fonológica es pequeño o nulo a los 4 y a los 5 años, con y sin programa, y el programa <strong>no lo cambia</strong> (interacciones en ΔCF y en CF5 dado CF4 indistinguibles de cero, también con efectos fijos de colegio). Lo único que el programa parece alterar es el gradiente del RAN a los 5 años (desaparece en 2014), que conviene tratar con cautela (RAN de 5.1, n menor). El efecto medio del programa sobre ΔCF es negativo y no significativo, pero no es interpretable como efecto del programa: la cohorte 2014 partía más alta en CF4 (+0,26) y las tareas de CF de 4 y 5 años no son las mismas.</p>
+<p><strong>Qué cambia en el artículo.</strong> El contraste limpio dice que el gradiente de los colegios Preleo de 2010 <strong>no es un efecto del programa</strong>: donde el programa se aplicó a cohortes consecutivas en los mismos centros, el gradiente ni aparece ni desaparece. El resultado 1 (el gradiente no es universal y es un rasgo de los centros que se autoseleccionaron) queda reforzado; el 2 (implementación mejor en los centros de ISE alto) sigue siendo de 2010; el 3 (compensación en ΔCF de 6 a 7) solo se puede comprobar en 2010, porque la cohorte 2014 no tiene datos de 6 y 7. La red moderada aporta la presentación compacta: en 2010 una sola arista cambia con el programa (ISE–Riesgo5); en 2013/2014, ninguna.</p>
+</section>
+<section id="lo-que-queda-para-la-versión-4" class="level3">
+<h3 class="anchored" data-anchor-id="lo-que-queda-para-la-versión-4">Lo que queda para la versión 4</h3>
+<ul>
+<li>Confirmar con Auxi los tres colegios de los 22 sin marca de condición en la tabla larga (dos sin ISE, excluidos) y los códigos de tarea que cambiaron entre 2013 y 2014.</li>
+<li>Si el grupo recupera la evaluación en papel y tableta de 2020/21 (<code>03_PAPEL_TABLETS_PANDEMIA</code>) para la cohorte 2014 a los 6 años, se puede extender el contraste limpio a Δ5→6.</li>
+<li>Ejecutar la parte 3 del porte a R (<code>mgm</code> con moderador, <code>NCT</code>) y comprobar.</li>
+</ul>
+</section>
+</section>
 <section id="lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010" class="level2">
 <h2 class="anchored" data-anchor-id="lo-que-puede-convertirlo-en-un-artículo-fuerte-v1-3010">Lo que puede convertirlo en un artículo fuerte (v1, 30/10)</h2>
 <ul>
@@ -1442,7 +1641,7 @@ Importante
 </section>
 <section id="archivos" class="level2">
 <h2 class="anchored" data-anchor-id="archivos">Archivos</h2>
-<p>v2: <code>04\scripts\m18_redes_preleo.py</code>, <code>04\scripts\R\m18_redes_preleo.R</code> (porte), <code>04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx</code>, <code>04\DIAGNOSTICO\figs_M18\</code>. <code>LEEDUCA\2026\AUXI\RED\REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, <code>Method.docx</code>, <code>Fig1_DeltaNetworks.pdf</code>, <code>FigS1_*</code>, <code>FigS2_Descriptives.png</code>. Datos: <code>data_paper.xlsx</code> (misma matriz que <code>2026\AUXI\data.xlsx</code>). Las comprobaciones nuevas irán a <code>04\scripts\R\m18_redes_preleo.R</code> y a <code>04\DIAGNOSTICO\R\</code>.</p>
+<p>v3: <code>04\scripts\m18_v3_moderada_y_2013_2014.py</code>, <code>04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx</code>. v2: <code>04\scripts\m18_redes_preleo.py</code>, <code>04\scripts\R\m18_redes_preleo.R</code> (porte), <code>04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx</code>, <code>04\DIAGNOSTICO\figs_M18\</code>. <code>LEEDUCA\2026\AUXI\RED\REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, <code>Method.docx</code>, <code>Fig1_DeltaNetworks.pdf</code>, <code>FigS1_*</code>, <code>FigS2_Descriptives.png</code>. Datos: <code>data_paper.xlsx</code> (misma matriz que <code>2026\AUXI\data.xlsx</code>). Las comprobaciones nuevas irán a <code>04\scripts\R\m18_redes_preleo.R</code> y a <code>04\DIAGNOSTICO\R\</code>.</p>
 
 
 </section>
