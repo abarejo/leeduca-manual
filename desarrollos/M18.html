@@ -997,6 +997,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#muestra" id="toc-muestra" class="nav-link" data-scroll-target="#muestra">Muestra</a></li>
   <li><a href="#redes-de-cambio-por-grupo" id="toc-redes-de-cambio-por-grupo" class="nav-link" data-scroll-target="#redes-de-cambio-por-grupo">Redes de cambio por grupo</a></li>
+  <li><a href="#borrador-frente-a-versión-2-las-figuras-lado-a-lado" id="toc-borrador-frente-a-versión-2-las-figuras-lado-a-lado" class="nav-link" data-scroll-target="#borrador-frente-a-versión-2-las-figuras-lado-a-lado">Borrador frente a versión 2: las figuras lado a lado</a></li>
   <li><a href="#las-comprobaciones" id="toc-las-comprobaciones" class="nav-link" data-scroll-target="#las-comprobaciones">Las comprobaciones</a></li>
   <li><a href="#cuándo-aparece-el-gradiente" id="toc-cuándo-aparece-el-gradiente" class="nav-link" data-scroll-target="#cuándo-aparece-el-gradiente">Cuándo aparece el gradiente</a></li>
   <li><a href="#qué-artículo-queda" id="toc-qué-artículo-queda" class="nav-link" data-scroll-target="#qué-artículo-queda">Qué artículo queda</a></li>
@@ -1357,6 +1358,109 @@ Importante
 </table>
 <p>Lectura. En Preleo el riesgo inicial depende del ISE (signo negativo: más ISE, menos riesgo) y el cambio en CF también (más ISE, <strong>menos</strong> ganancia: los niños de ISE bajo recuperan). En comparación, el ISE no se relaciona con el riesgo y sí, positivamente, con las ganancias en CF y en fluidez (más ISE, más ganancia), y el riesgo inicial predice más ganancia en decodificación de palabras (regresión a la media o recuperación en los de peor partida). La red de cambio es más densa en Preleo (fuerza 1,89 frente a 1,38), pero la diferencia global no es significativa.</p>
 </section>
+<section id="borrador-frente-a-versión-2-las-figuras-lado-a-lado" class="level3">
+<h3 class="anchored" data-anchor-id="borrador-frente-a-versión-2-las-figuras-lado-a-lado">Borrador frente a versión 2: las figuras lado a lado</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las tres figuras de esta sección son las <strong>originales del borrador de enero de 2026</strong> (<code>REDES_AÑO.R</code>, <code>mgm</code> con <code>bootnet</code>/<code>qgraph</code>), sin retocar salvo el montaje lado a lado. Se dejan como ejemplo de partida para ver qué cambia al corregir datos y método; <strong>no deben usarse en el artículo</strong>.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F0a_borrador_redes_cambio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura 0a (borrador). Redes de cambio 7 − 6 con mgm: comparación («Control», izquierda) y Preleo (derecha). 200 y 306 niños; ISE y riesgo en tres categorías; verde = positiva, rojo = negativa."><img src="../figuras/desarrollos/M18_F0a_borrador_redes_cambio.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 0a (borrador). Redes de cambio 7 − 6 con mgm: comparación («Control», izquierda) y Preleo (derecha). 200 y 306 niños; ISE y riesgo en tres categorías; verde = positiva, rojo = negativa."></a></p>
+<figcaption>Figura 0a (borrador). Redes de cambio 7 − 6 con <code>mgm</code>: comparación («Control», izquierda) y Preleo (derecha). 200 y 306 niños; ISE y riesgo en tres categorías; verde = positiva, rojo = negativa.</figcaption>
+</figure>
+</div>
+<p>Compárese con la figura 1 de arriba (versión 2). Lo que cambia y por qué:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Borrador (fig.&nbsp;0a)</th>
+<th>Versión 2 (fig.&nbsp;1)</th>
+<th>Consecuencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ISE–Riesgo</strong></td>
+<td>Fuerte en comparación; desaparece en Preleo («desconecta»)</td>
+<td>0,00 en comparación; −0,26 en Preleo</td>
+<td>La conclusión se invierte (véase la v3: tampoco es efecto del programa)</td>
+</tr>
+<tr class="even">
+<td><strong>Signo de ISE–Riesgo</strong></td>
+<td>Positivo (verde)</td>
+<td>Negativo (más ISE, menos riesgo)</td>
+<td>Con categorías sin orden en <code>mgm</code> el «signo» no tiene interpretación; con variables continuas sí</td>
+</tr>
+<tr class="odd">
+<td><strong>ISE–ΔCF</strong></td>
+<td>Arista débil solo en Preleo</td>
+<td>−0,11 en Preleo (compensación), +0,03 en comparación</td>
+<td>Se mantiene la idea de que en Preleo el ISE toca el cambio en CF, ahora con signo y contraste por arista (p = ,002)</td>
+</tr>
+<tr class="even">
+<td><strong>ΔCF como centro</strong></td>
+<td>ΔCF concentra las aristas en Preleo</td>
+<td>La red de Preleo es más densa en todo, no solo en ΔCF; fuerza global sin diferencia (p = ,22)</td>
+<td>«ΔCF es el centro» era en parte efecto del tamaño desigual y de la regularización</td>
+</tr>
+<tr class="odd">
+<td><strong>Nodos</strong></td>
+<td>dCF, dRF, dRV, dFL, dCOMP + Sexo, CI</td>
+<td>ΔCF, ΔPAL, ΔPSE, ΔFLU, ΔCOMP + ISE, Riesgo5</td>
+<td>Sexo y CI quedan como sensibilidad; las tareas se recalculan desde la tabla larga</td>
+</tr>
+<tr class="even">
+<td><strong>Muestra</strong></td>
+<td>506 niños, 20 colegios</td>
+<td>638 niños, 30 colegios</td>
+<td>Se recuperan 131 niños Preleo, que son los que más gradiente tienen (r = −0,41)</td>
+</tr>
+<tr class="odd">
+<td><strong>Contraste</strong></td>
+<td>Fuerza global, permutación</td>
+<td>Por arista: permutación, bootstrap, igual n, colegio fuera</td>
+<td>Ya se puede decir qué arista difiere, no solo que las redes «se ven» distintas</td>
+</tr>
+<tr class="even">
+<td><strong>Disposición</strong></td>
+<td><code>spring</code> con la red de comparación</td>
+<td>Circular fija, contexto en naranja, pesos rotulados</td>
+<td>Se leen directamente los valores</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F0b_borrador_redes_nivel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura 0b (borrador). Redes de niveles (puntuaciones a 5, 6 y 7 años) por grupo, figura S1 del borrador."><img src="../figuras/desarrollos/M18_F0b_borrador_redes_nivel.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 0b (borrador). Redes de niveles (puntuaciones a 5, 6 y 7 años) por grupo, figura S1 del borrador."></a></p>
+<figcaption>Figura 0b (borrador). Redes de niveles (puntuaciones a 5, 6 y 7 años) por grupo, figura S1 del borrador.</figcaption>
+</figure>
+</div>
+<p>En la red de niveles del borrador ya se veía el problema: ISE–Riesgo aparece en comparación y no en Preleo con las categorías, y esa es la arista que se invierte con las variables continuas. RF_6–RV_6 domina las dos redes (son casi la misma medida a los 6 años), lo que apoya haber pasado a cambio residualizado y a nodos menos redundantes. La versión 2 no rehace esta red de niveles; si se quiere conservar como material suplementario, debe estimarse con las mismas variables continuas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figuras/desarrollos/M18_F0c_borrador_descriptivos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura 0c (borrador). Medias por edad y condición, figura S2 del borrador (puntuaciones z)."><img src="../figuras/desarrollos/M18_F0c_borrador_descriptivos.png" class="img-fluid figure-img" style="width:85.0%" alt="Figura 0c (borrador). Medias por edad y condición, figura S2 del borrador (puntuaciones z)."></a></p>
+<figcaption>Figura 0c (borrador). Medias por edad y condición, figura S2 del borrador (puntuaciones z).</figcaption>
+</figure>
+</div>
+<p>Esta figura deja ver algo que el borrador no comentaba: <strong>los colegios Preleo ya parten por encima a los 6 años en todas las medidas</strong> (en palabras y pseudopalabras, ≈ 0,3 DT), y en lectura de palabras y pseudopalabras no hay ganancia diferencial de 6 a 7. Por eso la versión 2 trabaja con cambio residualizado y la versión 3 busca un contraste sin diferencias de partida (2013 frente a 2014 en los mismos colegios). Para el artículo, la figura descriptiva debería rehacerse con la muestra de 638, con IC y en el mismo eje para todas las medidas.</p>
+</section>
 <section id="las-comprobaciones" class="level3">
 <h3 class="anchored" data-anchor-id="las-comprobaciones">Las comprobaciones</h3>
 <table class="caption-top table">
@@ -1406,14 +1510,14 @@ Importante
 <h3 class="anchored" data-anchor-id="cuándo-aparece-el-gradiente">Cuándo aparece el gradiente</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %."><img src="../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %."></a></p>
+<p><a href="../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %."><img src="../figuras/desarrollos/M18_F5_gradiente_trimestres_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %."></a></p>
 <figcaption>Figura 5. Correlación entre el ISE del colegio y el compuesto de precursores del niño en los tres trimestres del curso de 5 años (curso de la intervención), con IC bootstrap del 95 %.</figcaption>
 </figure>
 </div>
 <p>En comparación el gradiente es nulo los tres trimestres (−0,07, −0,02, −0,05). En Preleo ya está en noviembre (0,24, IC 0,15–0,35), antes de la mayor parte del programa, y sube a 0,36 en febrero y 0,31 en mayo (intervalos solapados). Es decir: <strong>los colegios Preleo tienen gradiente socioeconómico desde el inicio y los de comparación no</strong>; el programa, si acaso, lo acentuó un poco durante el curso, y los centros de ISE alto fueron los que lo aplicaron con más rigor.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n)."><img src="../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n)."></a></p>
+<p><a href="../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n)."><img src="../figuras/desarrollos/M18_F3_ISE_riesgo_pendientes_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n)."></a></p>
 <figcaption>Figura 3. ISE del colegio y riesgo a los 5 años: recta por grupo sobre niños; puntos, medias de colegio (tamaño = n).</figcaption>
 </figure>
 </div>
@@ -1447,7 +1551,7 @@ Importante
 <p>En lugar de estimar dos redes y compararlas, se estima <strong>una sola red en la que cada arista puede cambiar con el programa</strong>: regresión nodo a nodo con lasso sobre los demás nodos, la condición y los productos nodo × condición (λ por EBIC, γ = 0,25, regla AND; es el modelo de <code>mgm</code> con moderador). Las aristas de moderación son, por construcción, las que la regularización no deja a cero cuando compiten con las principales: un criterio más exigente que el contraste por permutación.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa."><img src="../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa."></a></p>
+<p><a href="../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa."><img src="../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa."></a></p>
 <figcaption>Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa.</figcaption>
 </figure>
 </div>
@@ -1549,7 +1653,7 @@ Importante
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte."><img src="../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte."></a></p>
+<p><a href="../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte."><img src="../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png" class="img-fluid figure-img" style="width:75.0%" alt="Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte."></a></p>
 <figcaption>Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte.</figcaption>
 </figure>
 </div>
@@ -1616,7 +1720,7 @@ Importante
 <p>Redes por cohorte (glasso, 1.000 permutaciones): ninguna arista con el ISE difiere salvo ISE–RAN5 (+0,23 en 2013, 0,00 en 2014; p = ,007). La <strong>red moderada por la cohorte no retiene ninguna moderación</strong> (Figura 7): la estructura del cambio 4→5 es la misma con y sin programa.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación."><img src="../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación."></a></p>
+<p><a href="../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación."><img src="../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png" class="img-fluid figure-img" style="width:100.0%" alt="Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación."></a></p>
 <figcaption>Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación.</figcaption>
 </figure>
 </div>
@@ -1652,7 +1756,7 @@ Importante
 </section>
 <section id="archivos" class="level2">
 <h2 class="anchored" data-anchor-id="archivos">Archivos</h2>
-<p>v3: <code>04\scripts\m18_v3_moderada_y_2013_2014.py</code>, <code>04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx</code>. v2: <code>04\scripts\m18_redes_preleo.py</code>, <code>04\scripts\R\m18_redes_preleo.R</code> (porte), <code>04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx</code>, <code>04\DIAGNOSTICO\figs_M18\</code>. <code>LEEDUCA\2026\AUXI\RED\REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, <code>Method.docx</code>, <code>Fig1_DeltaNetworks.pdf</code>, <code>FigS1_*</code>, <code>FigS2_Descriptives.png</code>. Datos: <code>data_paper.xlsx</code> (misma matriz que <code>2026\AUXI\data.xlsx</code>). Las comprobaciones nuevas irán a <code>04\scripts\R\m18_redes_preleo.R</code> y a <code>04\DIAGNOSTICO\R\</code>.</p>
+<p>v3: <code>04\scripts\m18_v3_moderada_y_2013_2014.py</code>, <code>04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx</code>. v2: <code>04\scripts\m18_redes_preleo.py</code>, <code>04\scripts\R\m18_redes_preleo.R</code> (porte), <code>04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx</code>, <code>04\DIAGNOSTICO\figs_M18\</code>. <code>LEEDUCA\2026\AUXI\RED\REDES_AÑO.R</code>, <code>propuesta_redes_6.docx</code>, <code>Method.docx</code>, <code>Fig1_DeltaNetworks.pdf</code>, <code>FigS1_*</code>, <code>FigS2_Descriptives.png</code> (montadas en la web como <code>figuras/desarrollos/M18_F0a–F0c_borrador_*.png</code>). Datos: <code>data_paper.xlsx</code> (misma matriz que <code>2026\AUXI\data.xlsx</code>). Las comprobaciones nuevas irán a <code>04\scripts\R\m18_redes_preleo.R</code> y a <code>04\DIAGNOSTICO\R\</code>.</p>
 
 
 </section>
