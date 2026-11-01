@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 01/11/2026 | Agenda: M23 (3) | Figura del marco λ–π–κ de J. L. Luque: esquema de los tres parámetros con sus medidas y tipos de intervención, dinámica de la competencia, predicción para el RAN y el ajuste a los datos de 2010 (κ relativo de los disléxicos ≈ 0,55). |
 | 01/11/2026 | Agenda: M18 | Figuras originales del borrador (redes de cambio, redes de niveles y descriptivos, R, enero de 2026) añadidas a la página de M18 junto a la versión 2, con una tabla de qué cambia y por qué. |
 | 01/11/2026 | Agenda: M11 | Diagrama de senderos del RI-CLPM (RAN ↔ decodificación, 5–8 años) en la página de desarrollo y como Figura 4 del borrador del artículo. |
 | 01/11/2026 | Agenda: M23 (2) | La variable dependiente pasa a ser la común de M11 (ítems correctos por minuto, con la misma limpieza). Los resultados se mantienen y la amplificación de la lista de fonema en los disléxicos aumenta en formato discreto (+0,15 y +0,17 en log), porque además de ir más lentos nombran mal más objetos. |

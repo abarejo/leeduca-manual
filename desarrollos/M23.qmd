@@ -49,6 +49,8 @@ Cada condición existe en formato **discreto** (un objeto por pantalla, 25 ítem
 
 Resumen, para el grupo, del anexo de ecuaciones de Juan Luis. La lectura se modela como inferencia bayesiana sobre candidatos léxicos con tres parámetros de precisión.
 
+![El marco λ–π–κ de un vistazo. **A**: qué es cada parámetro, cómo lo mide el marco, qué podemos medir con la plataforma y sobre qué parámetro actúa cada tipo de intervención. **B**: con menos ganancia κ, la incertidumbre tarda más en caer por debajo del umbral, y más cuantos más competidores activa la lista (ilustración). **C**: la predicción para el RAN; si la dislexia fuera solo un enlentecimiento general, la recta roja seguiría a la gris. **D**: los datos reales de 2010 en 1º de primaria; la pendiente de los disléxicos (≈ 1,8 veces la de los típicos) equivale a un κ relativo de ≈ 0,55. Script `fig_modelo_lpk.py`.](../figuras/desarrollos/M23_F0_modelo_lpk_v1.png){width="100%"}
+
 | Parámetro | Qué es | Cómo se mide según el marco | Qué podemos medir con la plataforma |
 |---|---|---|---|
 | λ (lambda) | Precisión de la evidencia fonológica que entra (calidad de la señal) | Entrainment delta, variabilidad del tiempo de respuesta en condiciones de baja competencia | La variabilidad ítem a ítem del RAN, solo con tiempos por ítem (plataforma nueva, 2013–2014). **No hecho.** |
@@ -199,6 +201,7 @@ Tal como se aplicó, **no directamente**. Cada niño hizo el experimento dos vec
 4. **Fonema frente a sílaba.** El marco supone que un fonema inicial activa más competidores que una sílaba ($n_f > n_s$). Pero una lista que comparte sílaba también comparte fonema. ¿Se calculó $n$ con un léxico infantil (p. ej. densidad de vecindad por inicio en ESPAL o un corpus infantil)? Con esas cifras, la ecuación 5 se podría contrastar cuantitativamente.
 5. **Qué es κ en el RAN.** El coste de fonema correlaciona con el control de la interferencia en otros estudios [@bexkens2015inhibitory]. ¿Distingue el marco entre inhibir competidores léxicos e inhibición general? Una tarea de inhibición no verbal de la plataforma (1863, CANUM) serviría de control.
 6. **2013.** El gradiente desaparece entre sílaba y fonema en la plataforma nueva. ¿Se cambiaron las listas?
+7. **κ = λ/(λ + π) es un cociente.** Si λ y π bajan en la misma proporción, κ no cambia; para que κ baje en la dislexia, λ tiene que bajar más que π (o κ tiene un componente propio, como sugiere la «adaptación crónica» del marco). Convendría precisarlo en el anexo, porque es justo lo que el índice de la figura D intenta medir.
 
 ## Artículo posible
 
