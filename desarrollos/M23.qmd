@@ -1,0 +1,215 @@
+---
+search: false
+---
+
+# M23 · RAN con carga fonológica: control, sílaba y fonema {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 01/11/2026. Experimento de J. L. Luque Vilaseca, programado en la plataforma como tareas «camufladas» dentro de las sesiones de evaluación (2016/17–2019/20); marco teórico λ–π–κ de sus borradores «Un marco bayesiano para la dislexia» (2025–2026, no citar). Análisis exploratorio de P. J. López-Pérez con los datos de la plataforma. Página abierta para discutir la propuesta y las dudas con Juan Luis.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Es un análisis exploratorio, no un resultado del manual. El marco λ–π–κ es un trabajo en preparación de J. L. Luque: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial, sin estadística
+
+1. **El experimento funciona en la plataforma y se replica.** En tres cohortes y dos formatos, nombrar objetos cuyos nombres empiezan igual cuesta más que nombrar objetos variados: con la misma sílaba inicial, un 19–35 % más de tiempo; con el mismo fonema inicial, un 32–44 % más. El orden control < sílaba < fonema aparece en todas las muestras menos una.
+2. **Los niños con dislexia son más lentos en las tres condiciones, y la diferencia crece con la carga fonológica.** En 2010 (1º de primaria) la diferencia con los típicos pasa de 6 segundos en la lista control a 13 en la de fonema.
+3. **Ese aumento no es solo «más lento en todo».** Si los disléxicos fueran simplemente un 19 % más lentos en cualquier cosa, la diferencia en segundos también crecería. Hemos comprobado que crece **más de lo proporcional**, pero solo en la condición de fonema y solo de 5 a 6 años (cuatro de seis muestras). En la de sílaba, casi siempre es proporcional.
+4. **A los 5 y 6 años, la condición de fonema es la mejor versión del RAN de objetos para detectar la dislexia.** En 2010 y 2011 predice la etiqueta DL mejor que la lista control (AUC ,71–,77 frente a ,64–,69). Para el manual, esto ya es aprovechable.
+5. **El «coste» de cada niño se puede medir, pero con poca precisión.** Cuánto le cuesta a un niño la carga fonológica se parece poco entre dos aplicaciones (ρ ≈ .2–.3). Sirve para comparar grupos; para el informe individual, todavía no.
+6. **Preleo no cambia ese coste**, y el coste tampoco se reduce más en los típicos que en los disléxicos en tres meses. Es lo que predice el marco de Juan Luis para κ, aunque con esta muestra no podemos afirmarlo.
+7. **Antes de escribir el artículo hay que aclarar dos cosas del diseño:** qué objetos lleva cada lista (si cambian de una condición a otra, el gradiente puede deberse a los ítems y no a la fonología) y en qué orden se aplicaron las tres listas.
+:::
+
+**Lo que necesitamos de Juan Luis**
+
+- Los ítems de las listas 1922/1924/1926 (discreto) y 1921/1923/1925 (lámina) y cómo se eligieron: frecuencia, longitud y edad de adquisición de los nombres.
+- El orden de las tareas dentro de la sesión y si se contrabalanceó.
+- Qué muestra y qué etiqueta usó para los resultados de la introducción de su artículo (¿cohorte 2010, niños EEG?), para no duplicar ni contradecir.
+- Si quiere que este estudio sea el artículo «RAN con gradiente fonológico» de su plan, con él como primer autor.
+
+## El experimento y la pregunta
+
+Las tareas son tres listas de denominación rápida de objetos que solo se diferencian en la estructura fonológica de los nombres:
+
+- **Control**: objetos sin inicio compartido (RAN clásico).
+- **Sílaba**: todos los nombres empiezan por la misma sílaba.
+- **Fonema**: todos los nombres empiezan por el mismo fonema.
+
+Cada condición existe en formato **discreto** (un objeto por pantalla, 25 ítems) y en **lámina** (25 estímulos a la vez). Antes del bloque discreto hay una lista de ejemplo (1920) que sirve de práctica.
+
+**La pregunta, en palabras del marco de Juan Luis.** Si el RAN mide lo rápido que el sistema resuelve la competencia entre candidatos léxicos, el tiempo debería crecer con el número de competidores que activa el estímulo (control < sílaba < fonema), y ese crecimiento debería ser mayor en la dislexia. Es la misma lógica que el efecto inhibitorio de la frecuencia silábica posicional, que en disléxicos españoles es casi tres veces mayor y no se reduce con la escolaridad [@luque2013psf; @luque2021psf].
+
+## El marco λ–π–κ en una tabla
+
+Resumen, para el grupo, del anexo de ecuaciones de Juan Luis. La lectura se modela como inferencia bayesiana sobre candidatos léxicos con tres parámetros de precisión.
+
+| Parámetro | Qué es | Cómo se mide según el marco | Qué podemos medir con la plataforma |
+|---|---|---|---|
+| λ (lambda) | Precisión de la evidencia fonológica que entra (calidad de la señal) | Entrainment delta, variabilidad del tiempo de respuesta en condiciones de baja competencia | La variabilidad ítem a ítem del RAN, solo con tiempos por ítem (plataforma nueva, 2013–2014). **No hecho.** |
+| π (pi) | Precisión de los *priors* fonológicos (nitidez de las categorías) | Pendiente de la percepción categorial; conciencia fonémica | Conciencia fonológica (no es lo mismo que la percepción categorial). |
+| κ (kappa) | Ganancia de actualización: velocidad con que se inhiben los competidores | Efecto de frecuencia silábica, gradiente RAN | **El coste del RAN de sílaba y de fonema frente al control**, por niño. |
+
+La predicción central para el RAN (ecuaciones 5a–5c del anexo) es
+
+$$T_{c} = T_0 + \frac{1}{\kappa}\,\log\big(n_c \cdot \bar P_c\big),\qquad n_{\text{fonema}} > n_{\text{sílaba}} > n_{\text{control}} = 1,$$
+
+es decir, un tiempo base común ($T_0$) más un coste competitivo multiplicado por $1/\kappa$. De aquí salen cuatro predicciones que nuestros datos pueden contrastar:
+
+| # | Predicción del marco | Contraste con la plataforma | Resultado v1 |
+|---|---|---|---|
+| P1 | Gradiente fonema > sílaba > control | Medianas y orden dentro del niño | Se cumple en 5 de 6 muestras (no en 2013) |
+| P2 | El gradiente se amplifica en la dislexia **más allá de un enlentecimiento general** | Interacción condición × grupo en escala logarítmica | Solo en fonema, de 5 a 6 años (4 de 6 muestras) |
+| P3 | El coste ($1/\kappa$) es independiente del tiempo base ($T_0$) | Correlación del índice individual con el tiempo control | Sí: ρ ≈ −.15 a .05 |
+| P4 | κ no mejora con la escolaridad ni con una intervención fonológica | Cambio del coste en 3 meses por grupo; Preleo CON frente a SIN | Sin diferencias (potencia limitada) |
+
+## Qué dice la literatura
+
+Revisión con SciSpace (01/11/2026). Lo más relevante para situar el estudio:
+
+| Línea | Qué aporta | Implicación para M23 |
+|---|---|---|
+| Frecuencia silábica posicional en español [@carreiras1993syllable; @luque2013psf; @luque2021psf] | La sílaba inicial activa competidores léxicos; el efecto inhibitorio es ~3 veces mayor en disléxicos y estable de 2º a 4º | Es el antecedente directo: M23 lleva la misma lógica al RAN |
+| Semejanza fonológica en el RAN [@jones2013ran] | En adultos ingleses, las letras fonológicamente confundibles vistas en fóvea frenan más a los disléxicos | Único precedente experimental cercano; con letras, no con objetos, y en adultos |
+| Interferencia en la denominación de dibujos [@wang2018blocked; @truman2006locus] | En adultos, los bloques fonológicamente homogéneos **aceleran** la denominación (preparación de la forma); en niños disléxicos, oír parte del nombre facilita más | El marco predice lo contrario (interferencia). Si nuestros datos muestran interferencia, hay que descartar que se deba a los ítems |
+| Enlentecimiento proporcional [@deluca2017slowing; @martelli2014bridging] | Muchas diferencias entre disléxicos y típicos se explican por un único factor multiplicativo | Hay que contrastar la amplificación en escala logarítmica, no en segundos |
+| Qué mide el RAN [@georgiou2018university; @bexkens2015inhibitory; @norton2012ran] | Acceso léxico, procesamiento serial, articulación; el control de la interferencia predice el RAN en disléxicos | El coste de fonema podría medir inhibición, no solo fonología: conviene una tarea de inhibición no verbal como control |
+| Modelos bayesianos de la dislexia [@jaffedax2015implicit; @friston2010free] | La dislexia como peso inadecuado de los *priors* frente al ruido sensorial, con un modelo de dos parámetros ajustado a datos | Antecedente formal del marco λ–π–κ; muestra cómo se estiman los parámetros por sujeto |
+
+El hueco que cubriría M23: no hay ningún estudio con niños que manipule la semejanza fonológica del RAN de objetos, con muestras de cientos de niños, de 4 a 6 años y en una ortografía transparente.
+
+## Datos
+
+| Cohorte | Discreto (control, sílaba, fonema) | Lámina | N con las tres condiciones | DL / TE |
+|---|---|---|---|---|
+| 2010 | 152 · 6.1 | 155 · 6.2 | 885 / 800 | 111 / 522 |
+| 2011 | 153 · 5.1 | 156 · 5.2 | 850 / 782 | 84 / 297 |
+| 2012 | 154 · 4.1 (fonema perdido, ver incidencias) | 157 · 4.2 | — / 359 | 33 / 127 |
+| 2013 | — | 903 · 6.2 (plataforma nueva) | 447 | 33 / 168 |
+
+- **Medida:** tiempo total en segundos. Discreto válido si 10–200 s y ≥ 15 aciertos de 25; lámina válida si 8–200 s. Se pierde < 4 % en el discreto y ≈ 10 % en las láminas (tiempos a cero).
+- **Grupos:** etiqueta de certeza v2 (lectura de 6 a 11 años frente al grupo SIN agrupado). DL = DL-A + DL-B; TE = típico estable. La etiqueta no usa ninguna tarea RAN, así que la validez no es circular. Como variable continua, el percentil lector medio de 6 a 11 años.
+- **Coste:** log(T~sílaba~/T~control~) y log(T~fonema~/T~control~), es decir, el porcentaje de tiempo añadido por la carga fonológica.
+
+**Incidencias nuevas** (para la hoja Incidencias del diccionario):
+
+- **2012/154:** el código 1925 aparece 4 veces por niño (388 duplicados) con tiempos de tarea discreta; casi seguro son los tiempos de 1926 exportados con el código de la lámina. Hasta comprobarlo con el bruto, el fonema discreto de 2012 queda fuera.
+- **2013/903:** en la plataforma nueva desaparece la diferencia entre sílaba y fonema (mediana 40,7 frente a 40,9 s). Hay que comprobar si las instancias 3995/3997/4046 llevan los mismos ítems que 1921/1923/1925.
+- **Láminas a cero:** ≈ 10 % de tiempos 0 en 155, 156 y 903.
+
+## Resultados v1
+
+### 1. El gradiente
+
+| Muestra | N | Control (s) | Sílaba (s) | Fonema (s) | Coste sílaba | Coste fonema | Fonema > sílaba en el niño |
+|---|---|---|---|---|---|---|---|
+| 2010 · 6.1 discreto | 885 | 34,8 | 41,4 | 46,4 | +19 % | +32 % | 69 % |
+| 2010 · 6.2 lámina | 800 | 30,0 | 37,8 | 40,7 | +27 % | +35 % | 61 % |
+| 2011 · 5.1 discreto | 850 | 39,4 | 47,9 | 54,9 | +22 % | +38 % | 72 % |
+| 2011 · 5.2 lámina | 782 | 35,4 | 44,6 | 51,1 | +26 % | +44 % | 69 % |
+| 2012 · 4.2 lámina | 359 | 43,5 | 51,2 | 58,5 | +20 % | +38 % | 75 % |
+| 2013 · 6.2 lámina | 447 | 30,3 | 40,7 | 40,9 | +35 % | +36 % | 54 % |
+
+Medianas; costes como media geométrica. **La lista de ejemplo, que va primero, es más lenta que la control** (43 frente a 35 s en 2010): hay efecto de práctica dentro del bloque. Si el orden fue siempre control → sílaba → fonema, la práctica juega en contra del gradiente y lo hace más creíble; si hubo fatiga, a favor. Hay que confirmar el orden.
+
+### 2. Disléxicos frente a típicos: ¿amplificación o enlentecimiento general?
+
+![Tiempo medio por condición en DL y TE (formato discreto). En segundos (izquierda) la diferencia entre grupos crece con la carga; en escala logarítmica (derecha), solo crece de forma clara en la condición de fonema.](../figuras/desarrollos/M23_F1_gradiente_grupos_v1.png){width="100%"}
+
+| Muestra | Diferencia DL − TE (s): control / sílaba / fonema | Razón DL/TE: control / sílaba / fonema | Interacción en log: sílaba × DL | fonema × DL |
+|---|---|---|---|---|
+| 2010 · 6.1 discreto | 6,4 / 9,3 / 12,8 | 1,17 / 1,21 / 1,27 | +0,04 (p = ,11) | **+0,09 (p < ,001)** |
+| 2010 · 6.2 lámina | 6,7 / 11,7 / 15,1 | 1,20 / 1,29 / 1,37 | **+0,07 (p = ,01)** | **+0,13 (p < ,001)** |
+| 2011 · 5.1 discreto | 6,7 / 7,7 / 14,2 | 1,16 / 1,16 / 1,24 | 0,00 | **+0,07 (p = ,02)** |
+| 2011 · 5.2 lámina | 6,8 / 8,2 / 15,4 | 1,20 / 1,18 / 1,30 | −0,01 | **+0,08 (p = ,03)** |
+| 2012 · 4.2 lámina | 9,5 / 11,4 / 14,6 | 1,22 / 1,23 / 1,27 | +0,01 | +0,04 (p = ,37) |
+| 2013 · 6.2 lámina | 6,4 / 7,3 / 7,0 | 1,21 / 1,18 / 1,20 | −0,03 | −0,01 |
+
+Modelo mixto por muestra con intercepto aleatorio por niño. **En segundos, todas las interacciones con fonema son significativas** (que es lo que describe la introducción del borrador de Juan Luis). **En escala logarítmica**, que descuenta el enlentecimiento proporcional, el efecto se mantiene en fonema en las cuatro muestras de 5 y 6 años de 2010 y 2011: los disléxicos tardan un 7–14 % más de lo que predice su lentitud general. En sílaba, solo en una muestra.
+
+![Gráfico de Brinley: tiempo de DL frente a TE en cada condición. La línea discontinua es lo que se esperaría si los disléxicos fueran igual de más lentos en todo (razón de la condición control). Los puntos de fonema quedan por encima.](../figuras/desarrollos/M23_F2_brinley_v1.png){width="70%"}
+
+**Lectura en continuo.** Con el tiempo control fijo, a peor lector (percentil medio de 6 a 11 años), mayor coste de fonema: r parcial −.13 a −.30 en las seis muestras (todas p < ,01). En sílaba, −.07 a −.32. La relación es gradual, no exclusiva de un grupo.
+
+### 3. Un índice individual tipo κ
+
+Siguiendo la ecuación 5 del marco, para cada niño estimamos $b_i = 1/\kappa_i$ como la pendiente de sus costes en segundos sobre los costes medios del grupo TE de su sesión (TE = 1).
+
+| Muestra | $b$ mediano DL | $b$ mediano TE | Correlación de $b$ con el tiempo control |
+|---|---|---|---|
+| 2010 · 6.1 discreto | 1,51 | 0,87 | −,08 |
+| 2010 · 6.2 lámina | 1,57 | 0,87 | −,13 |
+| 2011 · 5.1 discreto | 1,31 | 0,88 | −,15 |
+| 2011 · 5.2 lámina | 1,23 | 0,92 | 0,00 |
+| 2012 · 4.2 lámina | 1,21 | 0,77 | −,07 |
+| 2013 · 6.2 lámina | 1,08 | 0,93 | ,05 |
+
+En la mediana, los disléxicos pagan 1,4–1,8 veces el coste de los típicos, y ese coste es casi independiente de su velocidad básica. Es lo que el marco espera si $T_0$ y κ son parámetros distintos.
+
+**El problema es la fiabilidad.** Entre la aplicación discreta y la lámina, 3–4 meses después:
+
+| Índice | 2010 (152 → 155) | 2011 (153 → 156) |
+|---|---|---|
+| Tiempo control | ,42 | ,43 |
+| Velocidad general (media de las tres) | ,61 | ,61 |
+| Coste sílaba | ,21 | ,20 |
+| Coste fonema | ,24 | ,18 |
+| Índice $b$ (1/κ) | ,34 | ,27 |
+
+Las diferencias entre condiciones son siempre menos fiables que las condiciones; aquí, además, cambia el formato entre las dos aplicaciones. Para estimar κ por niño hará falta un modelo jerárquico con los tiempos ítem a ítem (plataforma nueva) o más ítems por condición.
+
+### 4. Validez: ¿añade la carga fonológica algo al RAN clásico?
+
+| Muestra | DL / n | AUC control | AUC fonema | AUC control + coste fonema | ΔAUC (IC 95 %) |
+|---|---|---|---|---|---|
+| 2010 · 6.1 discreto | 111 / 633 | ,68 | ,74 | ,75 | +,07 (,04–,12) |
+| 2010 · 6.2 lámina | 106 / 577 | ,69 | ,77 | ,78 | +,09 (,05–,14) |
+| 2011 · 5.1 discreto | 84 / 381 | ,64 | ,71 | ,71 | +,06 (,02–,14) |
+| 2011 · 5.2 lámina | 71 / 330 | ,69 | ,72 | ,73 | +,04 (,00–,10) |
+| 2012 · 4.2 lámina | 33 / 160 | ,67 | ,72 | ,69 | +,02 (−,00–,13) |
+| 2013 · 6.2 lámina | 33 / 201 | ,69 | ,68 | ,70 | +,01 (−,00–,08) |
+
+AUC con validación cruzada (5 particiones × 20 repeticiones); IC del ΔAUC por *bootstrap*. **La lista de fonema sola predice mejor que la control.** A los 5 y 6 años mejora la AUC entre 4 y 9 puntos. Para el manual: si solo cabe una lista RAN de objetos en la evaluación de 5–6 años, la de fonema discrimina más.
+
+### 5. ¿Mejora el sistema? Cambio en tres meses y Preleo
+
+- **Cambio del coste entre la primera y la segunda aplicación** (discreto → lámina): sin diferencia entre DL y TE (2010: +0,05 en fonema, p = ,18; 2011: 0,00). El cambio de formato está confundido con el tiempo, pero afecta igual a los dos grupos.
+- **Preleo (cohorte 2010, 34 colegios):** los colegios CON no difieren de los SIN ni en el RAN control ni en los costes (diferencias ≤ 0,04 en log, p > ,24). Según el marco, una intervención fonológica («homeostática», sobre π) no debería mover κ a corto plazo; lo observado es compatible, pero un nulo no lo demuestra.
+
+## ¿Mide esto la «capacidad del sistema para mejorar»?
+
+Tal como se aplicó, **no directamente**. Cada niño hizo el experimento dos veces, en formatos distintos, así que mide sobre todo el estado del sistema: cuánto le cuesta la competencia fonológica. Con los datos y la plataforma hay tres maneras de acercarlo a la mejora, de menor a mayor coste:
+
+1. **Mejora entre aplicaciones (ya hecho, versión pobre).** Cambio del coste en tres meses, por grupo. Nulo y confundido con el formato.
+2. **Aprendizaje dentro de la lista (datos existentes, por hacer).** Con los tiempos por ítem de la plataforma nueva (2013/903, 2013/628–629, 2014/896) se puede ajustar a cada niño una curva de aceleración a lo largo de los 25 ítems, que es la ecuación 9 del anexo ($H(t)$ con constante de tiempo $1/\kappa$), y la variabilidad ítem a ítem como indicador de λ (predicción P3 del anexo). Hay que extraer las columnas `_di` del servidor.
+3. **Mejora con entrenamiento (estudio nuevo).** El marco predice que un RAN adaptativo con límites de tiempo decrecientes («intervención alostática», ecuación 15) mejora κ sin cambiar π. La plataforma puede aplicarlo como actividad de intervención y medir κ antes y después, con la condición de fonema como medida y la de control como referencia. Encaja con la maleabilidad por habilidad de [M19](M19.qmd): κ sería una de las habilidades con ganancia esperada estimable.
+
+## Dudas sobre el diseño y el marco (para discutir con Juan Luis)
+
+1. **Ítems.** Si los objetos cambian de una lista a otra, el gradiente puede deberse a la longitud, la frecuencia o la edad de adquisición de los nombres. Conviene leer las seis actividades en la plataforma y tabular sus ítems; si difieren, se puede ajustar ítem a ítem con los tiempos de la plataforma nueva.
+2. **Orden de aplicación.** ¿Siempre control → sílaba → fonema? La práctica (la lista de ejemplo es la más lenta) va en contra del gradiente, la fatiga a favor.
+3. **Facilitación frente a interferencia.** En adultos, nombrar en bloque dibujos que comparten inicio acelera la producción [@wang2018blocked], al revés de lo que predice el marco. Nuestros niños van más lentos con la carga. Si los ítems están controlados, sería un hallazgo; conviene discutir por qué los niños de 4–6 años no se benefician de la preparación de la forma.
+4. **Fonema frente a sílaba.** El marco supone que un fonema inicial activa más competidores que una sílaba ($n_f > n_s$). Pero una lista que comparte sílaba también comparte fonema. ¿Se calculó $n$ con un léxico infantil (p. ej. densidad de vecindad por inicio en ESPAL o un corpus infantil)? Con esas cifras, la ecuación 5 se podría contrastar cuantitativamente.
+5. **Qué es κ en el RAN.** El coste de fonema correlaciona con el control de la interferencia en otros estudios [@bexkens2015inhibitory]. ¿Distingue el marco entre inhibir competidores léxicos e inhibición general? Una tarea de inhibición no verbal de la plataforma (1863, CANUM) serviría de control.
+6. **2013.** El gradiente desaparece entre sílaba y fonema en la plataforma nueva. ¿Se cambiaron las listas?
+
+## Artículo posible
+
+- **Título de trabajo:** *Phonological load in rapid naming: a graded cost amplified in Spanish children with dyslexia*.
+- **Núcleo:** P1–P4 con las cohortes 2010 y 2011 (replicación interna) y la discusión λ–π–κ como marco; el índice individual y su fiabilidad como resultado metodológico.
+- **Antes de enviar:** ítems y orden aclarados; modelo ítem a ítem en 2013–2014; control de inhibición; fonema discreto de 2012 recuperado del bruto.
+- **Revistas:** *Annals of Dyslexia*, *Scientific Studies of Reading*, *Journal of Experimental Child Psychology*.
+
+## Archivos
+
+Script `04\scripts\m23_ran_carga.py` (pandas, statsmodels, scikit-learn) → `04\DIAGNOSTICO\m23_ran_carga_v1.xlsx` (12 hojas, solo agregados) y `DIAGNOSTICO\figs_M23\`. Marco teórico en `2026\JUANLU\Un marco bayesiano para la dislexia\` (borradores de J. L. Luque). Documento del proyecto de Claude: `claude/M23_RAN_carga_fonologica.md`.
+
+## Referencias {.unnumbered}
+
+::: {#refs}
+:::
