@@ -160,6 +160,25 @@ Modelo autorregresivo cruzado con intercepto aleatorio [@hamaker2015riclpm] entr
 | Autorregresión RAN | .12 | .11 | .16 |
 | Autorregresión decodificación | .49 | .68 | .69 |
 
+
+::: {.callout-tip collapse="true"}
+## Qué es un RI-CLPM, qué se hacía antes y cómo leer el diagrama
+
+**El problema que resuelve.** Cuando medimos dos habilidades en los mismos niños varias veces, la pregunta interesante es de dirección: ¿el RAN empuja a la lectura, la lectura al RAN, o los dos? Durante treinta años la respuesta se buscó con el **modelo autorregresivo cruzado clásico (CLPM)**: cada habilidad en el tiempo *t* se predice por sí misma en *t−1* (flecha autorregresiva) y por la otra en *t−1* (flecha cruzada). Si la flecha RAN → lectura es mayor que lectura → RAN, se concluye que el RAN es la causa. Así argumentaron Lervåg y Hulme (2009).
+
+**Por qué el CLPM engaña.** El CLPM mezcla dos cosas que no son lo mismo: las **diferencias estables entre niños** (Marta siempre denomina rápido y siempre lee bien) y los **cambios dentro de cada niño** (este trimestre Marta ha denominado mejor de lo que es habitual en ella). Una correlación estable entre niños, como la de .86 que encontramos entre RAN y lectura, se cuela en las flechas cruzadas y las infla en las dos direcciones, aunque dentro de ningún niño un cambio en una habilidad preceda a un cambio en la otra. Hamaker, Kuiper y Grasman (2015) lo demostraron formalmente y propusieron la corrección.
+
+**La corrección: el intercepto aleatorio (RI).** El RI-CLPM añade a cada habilidad una variable latente, el *intercepto aleatorio*, que recoge el nivel estable del niño a lo largo de todas las olas (las elipses del diagrama). Lo que queda de cada medida una vez descontado ese nivel es su **componente dentro del niño** (las cajas): cuánto se desvía el niño en esa ola de su propia trayectoria. Las flechas autorregresivas y cruzadas se estiman solo entre esos componentes. Así, una flecha lectura → RAN de .19 quiere decir: cuando un niño lee en 2º mejor de lo que es habitual *en él*, en 3º denomina más rápido de lo habitual *en él*. Esa es la prueba exigente de direccionalidad; la correlación entre los dos interceptos (.86) es la parte «rasgo», la que ven los estudios de predicción.
+
+**Qué se ganó aquí respecto al CLPM.** Con los mismos datos, el CLPM da efectos cruzados en las dos direcciones en todos los intervalos (RAN → lectura .21, .03, .07; lectura → RAN .14, .23, .23): la conclusión sería «relación recíproca», que es lo que publicaban unos y lo que negaban otros. El RI-CLPM separa el grano de la paja: el RAN solo predice cambios en lectura de los 5 a los 6 años, y de ahí en adelante es la lectura la que predice cambios en RAN, cada vez con más fuerza. La discrepancia entre ambos modelos explica por qué la literatura no se ponía de acuerdo, y es en sí misma un resultado del artículo.
+
+**Cómo leer el diagrama.** Cajas azules y verdes: componentes dentro del niño de RAN y decodificación por curso. Flechas horizontales: autorregresión (cuánto persiste una desviación de una ola a la siguiente; baja en RAN, .11–.16, alta en lectura, .49–.69). Flechas diagonales: efectos cruzados; las continuas son significativas y las discontinuas grises no. Curvas verticales a la izquierda de cada columna: correlación residual dentro de la ola (lo que cambia a la vez sin orden temporal). Elipses: los interceptos aleatorios, con sus cargas fijas a 1 en cada ola y su correlación por el lateral. Los coeficientes son estandarizados.
+
+**Requisitos y límites.** Hacen falta al menos tres olas (aquí cuatro) y muestras grandes; los intervalos entre olas deberían ser similares (aquí, un curso). Los efectos cruzados dentro del niño suelen ser pequeños en valor absoluto (.05–.20 es lo habitual) y no se deben comparar con las β de un CLPM. El modelo asume que la estructura es la misma en las tres cohortes (invarianza, pendiente de comprobar en lavaan) y, con las olas faltantes por diseño, se estima con máxima verosimilitud con información completa (FIML). Con una sola cohorte la solución fue impropia (varianza dentro del niño próxima a cero en una ola), un aviso de que el modelo pide toda la muestra.
+
+**El antecedente en el grupo.** En el artículo de conciencia fonológica y matemáticas (cohorte 2010) se pasó de regresiones por curso a un SEM con variables latentes y un CLPM; allí los efectos cruzados entre CF y matemáticas mantenían la misma dirección en el CLPM, así que el RI-CLPM no era imprescindible. En el RAN, con una correlación de rasgo de .86, sí lo es: es el caso de libro en que el CLPM clásico da una respuesta equivocada.
+:::
+
 ### Preleo y lectura
 
 Con la condición disponible hoy solo se contrasta dentro de una cohorte en 6.2 (2013: 175 CON frente a 281 SIN), y el grupo CON es 0,40 DT más lento sin ajustar por el ISE del centro. Entre cohortes, la lámina de objetos en 6.2 da 30,0 s en 2010 (toda CON) y 30,5 s en 2013 (mixta): ninguna señal de que Preleo acelere el RAN. Compatible con @lervag2009ran, pero exige la asignación Preleo cerrada y el ajuste por ISE.
