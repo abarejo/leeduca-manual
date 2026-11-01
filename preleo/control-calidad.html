@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Control de calidad por colegio: los algoritmos – Manual técnico de la plataforma LEEDUCA</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../informe-aula.html" rel="next">
+<link href="../preleo/datos.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../preleo/programa.html">Preleo</a></li><li class="breadcrumb-item"><a href="../preleo/control-calidad.html"><span class="chapter-title">Control de calidad por colegio: los algoritmos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Manual técnico de la plataforma LEEDUCA</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform" title="Enviar una sugerencia" class="quarto-navigation-tool px-1" aria-label="Enviar una sugerencia"><i class="bi bi-chat-left-text"></i></a>
+    <a href="https://github.com/abarejo/leeduca-manual" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cómo está hecho el manual</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../estructura.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Estructura del manual (propuesta para revisar)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../definicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Qué medimos a la luz de la nueva definición de la dislexia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../metodo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cómo se construye cada ficha</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decisiones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisiones metodológicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../agrupacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cómo se agrupan las tareas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../limites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Límites y calidad de los datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../riesgo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cómo estimamos el riesgo y la dificultad lectora</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../criterio-woodcock.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Validez frente a un criterio externo: la fluidez lectora de la batería Woodcock-Muñoz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../baremos-trimestre.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Baremo por curso o por trimestre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../baremo-nivel-lector.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Baremos por nivel lector</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Catálogo de tareas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../catalogo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Catálogo de tareas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fichas de tareas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía de las fichas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/por_edad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tareas por edad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/propuesta_bateria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Propuesta de tareas por curso y trimestre</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fichas · Lectura</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/LET.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conocimiento de letras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/VEL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Velocidad lectora en palabras por minuto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/TECLE.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TECLE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_LETRAS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conocimiento de letras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificar la letra inicial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_SILABAS_SIMPLE.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de sílabas simples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_SILABAS_COMPLEJA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de sílabas complejas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PAL_1sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de palabras monosílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PAL_2sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de palabras bisílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PAL_3sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de palabras trisílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PAL_4sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de palabras cuatrisílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PSEUDO_2sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de pseudopalabras bisílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PSEUDO_3sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de pseudopalabras trisílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PSEUDO_4sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de pseudopalabras cuatrisílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_VEL_TEXTO.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Velocidad lectora en texto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_LECT_COMPRENSIVA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura comprensiva (segunda lectura)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECISION_ORTOGRAFICA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión ortográfica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vocabulario lector</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PAL_2sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a palabras (bisílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PAL_4sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a palabras (cuatrisílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PAL_1sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a palabras (monosílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PAL_3sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a palabras (trisílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PSEUDO_2sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a pseudopalabras (bisílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PSEUDO_4sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a pseudopalabras (cuatrisílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PSEUDO_1sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a pseudopalabras (monosílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_DECLEX_PSEUDO_3sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Decisión léxica con sesgo a pseudopalabras (trisílabas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_PSEUDO_1sil.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de pseudopalabras monosílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_HOMOGRAFOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homógrafos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/LEC_SILABAS_MEDIA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de sílabas de complejidad media</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fichas · Procesamiento fonológico</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/RAN.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida (RAN)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/RIMA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Juicio de rima</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/TRES_ANIOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Batería de 3 años</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/CF523.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conciencia fonológica: contar sílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_CONTAR_SILABAS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contar sílabas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación del fonema inicial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación del fonema final</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SEGMENTACION_FONEMICA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Segmentación fonémica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_SILABA_INICIAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión de la sílaba inicial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_SILABA_FINAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión de la sílaba final</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_SILABAS_TP.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión de sílabas (todas las posiciones)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión de la sílaba «ja»</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_FONEMA_INICIAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión del fonema inicial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_FONEMA_FINAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión del fonema final</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_FONEMAS_TP.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión de fonemas (todas las posiciones)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_SILABA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos (misma sílaba)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_FONEMA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos (mismo fonema)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Memoria verbal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SINTESIS_FONEMICA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Síntesis fonémica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_CONTROL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos (control)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_REPETIDOS_CORTOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos repetidos (cortos)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_REPETIDOS_LARGOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos repetidos (largos)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_VARIADOS_CORTOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos variados (cortos)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/RAN_OBJETOS_VARIADOS_LARGOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Denominación rápida de objetos variados (largos)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_EMPAREJA_SILABA_FINAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Emparejar sílaba final</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_EMPAREJA_SILABA_INICIAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Emparejar sílaba inicial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Memoria verbal (1–4 sílabas CV)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Memoria verbal (1–5 sílabas CVC)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Memoria verbal a corto plazo (completa)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/CF_SUPRESION_SILABA_INICIAL_Y_FINAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Supresión de la sílaba inicial y final</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fichas · Cognición numérica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognicion-numerica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cognición numérica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contar hacia delante (2.ª decena)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contar hacia atrás (1.ª decena)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contar hacia atrás (2.ª decena)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ET_VERB_ARABIGOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lectura de números arábigos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_CONTAR_H_DELANTE_1O_DECENA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contar hacia delante (1.ª decena)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARITMETIC_SUMA_1_DIGITO.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sumas de un dígito</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARITM_SUMA_RESTA_2_DIGITOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sumas y restas de dos dígitos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_SEN_NUM_MAGNITUDES_NO_SIMB.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Comparación de magnitudes no simbólicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Comparación de magnitudes simbólicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARIT_CONTEO_1_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conteo del 1 al 10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARITMETIC_RESTA_2_DIGITOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Restas de dos dígitos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARITMETIC_RESTA_1_DIGITO.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Restas de un dígito</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARITMETIC_SUMA_2_DIGITOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sumas de dos dígitos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/MATE_ARITMETIC_SUMA_Y_RESTA_2_DIGITOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sumas y restas de dos dígitos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fichas · Lenguaje oral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vocabulario: definiciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_PROSODIA_ACENTO_DE_PALABRAS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acento de palabras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Morfología de número (palabras)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_ORDENAR_FRASES.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ordenar frases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_SEM_VOCABULARIO_OPCIONES.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vocabulario: elección entre opciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_PROSODIA_ACENTO_PSEUDOP.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acento de pseudopalabras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_SEM_COMPRENSION_NCP.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Comprensión oral (sin pistas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_FON_FLUIDEZ_FONOLOGICA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Fluidez fonológica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Morfología de género (palabras)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Morfología de género (pseudopalabras)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Morfología de número (pseudopalabras)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Morfología verbal de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_FON_PARES_MINIMOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pares mínimos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_PERCEP_PARES_MINIMOS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pares mínimos (percepción)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_FON_PC_DISCRIMINA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Percepción del habla: discriminación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_FON_PC_DISCRIMINA_II.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Percepción del habla: discriminación II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_FON_PC_IDENTIFICA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Percepción del habla: identificación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_FON_PC_IDENTIFICA_II.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Percepción del habla: identificación II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/L_ORAL_MF_STX_RECEPCION_GRAMATICAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Recepción gramatical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fichas · Atención, funciones ejecutivas y visoatención</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/F_EJEC_INH_INHIBICION.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inhibición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_NUMEROS_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: números</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Atención sostenida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_OR_ESP_BUSQUEDA_SERIAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Búsqueda serial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_LETRAS_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: letras 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_LETRAS_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: letras 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_LETRAS_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: letras 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_LETRAS_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: letras 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_NUMEROS_LETRAS_2_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: números y letras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_SIMBOLOS_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: símbolos 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_SIMBOLOS_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: símbolos 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_SIMBOLOS_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: símbolos 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichas/auto/HVIS_CAP_VAten_SIMBOLOS_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Amplitud visoatencional: símbolos 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Investigar con la plataforma</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../investigacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Investigar con los datos de la plataforma</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../agenda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Agenda de investigación metodológica</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Preleo</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preleo/programa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El programa Preleo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preleo/datos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Efectos de Preleo: evidencia y datos de la plataforma</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preleo/control-calidad.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Control de calidad por colegio: los algoritmos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../informe-aula.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prototipo de informe de aula</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../consultas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Consultas y sugerencias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../novedades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Novedades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../colaborar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cómo se mantiene este libro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../referencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M4M7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M4 + M7 · ¿Cuándo es real e importante un cambio en lectura? — análisis exploratorio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M5 · Identificación bayesiana de la dificultad lectora — análisis exploratorio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M10 · Subtipos de exactitud y de velocidad — análisis exploratorio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M11 · Desarrollo del RAN de 4 a 8 años — análisis exploratorio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M12 · ¿Es la rima una habilidad fonológica temprana? — seguimiento del artículo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M8 · Artículo de datos — ficha para decidir</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/RADAR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Radar metodológico 2023–2026</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M18.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M18 · ¿Desconecta Preleo el riesgo lector del nivel socioeconómico? — redes de cambio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M19 · Perfiles de éxito y algoritmo de mejora</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M20.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M20 · La IA como herramienta clínica: concurso de algoritmos de pronóstico y mejora</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/M22.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M22 · Dinámicas poblacionales: los indicadores fuera de Málaga</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/PRELEO_QC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preleo · Control de calidad por colegio: detectores de incongruencias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../desarrollos/PRELEO_EFECTOS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preleo · Efectos: plan de análisis y primeros resultados</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#para-qué-sirve" id="toc-para-qué-sirve" class="nav-link active" data-scroll-target="#para-qué-sirve">Para qué sirve</a></li>
+  <li><a href="#de-dónde-viene-el-criterio-de-2010" id="toc-de-dónde-viene-el-criterio-de-2010" class="nav-link" data-scroll-target="#de-dónde-viene-el-criterio-de-2010">De dónde viene: el criterio de 2010</a></li>
+  <li><a href="#cinco-reglas-del-procedimiento" id="toc-cinco-reglas-del-procedimiento" class="nav-link" data-scroll-target="#cinco-reglas-del-procedimiento">Cinco reglas del procedimiento</a></li>
+  <li><a href="#los-detectores" id="toc-los-detectores" class="nav-link" data-scroll-target="#los-detectores">Los detectores</a>
+  <ul class="collapse">
+  <li><a href="#a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo" id="toc-a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo" class="nav-link" data-scroll-target="#a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo">A. Consistencia interna: ¿ordenan igual las tareas que miden lo mismo?</a></li>
+  <li><a href="#b.-esfuerzo-y-proceso-de-respuesta-respondió-cada-niño-por-su-cuenta" id="toc-b.-esfuerzo-y-proceso-de-respuesta-respondió-cada-niño-por-su-cuenta" class="nav-link" data-scroll-target="#b.-esfuerzo-y-proceso-de-respuesta-respondió-cada-niño-por-su-cuenta">B. Esfuerzo y proceso de respuesta: ¿respondió cada niño por su cuenta?</a></li>
+  <li><a href="#c.-evaluador" id="toc-c.-evaluador" class="nav-link" data-scroll-target="#c.-evaluador">C. Evaluador</a></li>
+  <li><a href="#d.-plausibilidad-temporal-y-evolutiva-tienen-sentido-los-tiempos-y-la-trayectoria" id="toc-d.-plausibilidad-temporal-y-evolutiva-tienen-sentido-los-tiempos-y-la-trayectoria" class="nav-link" data-scroll-target="#d.-plausibilidad-temporal-y-evolutiva-tienen-sentido-los-tiempos-y-la-trayectoria">D. Plausibilidad temporal y evolutiva: ¿tienen sentido los tiempos y la trayectoria?</a></li>
+  <li><a href="#e.-distribución-hay-variación-donde-debería-haberla" id="toc-e.-distribución-hay-variación-donde-debería-haberla" class="nav-link" data-scroll-target="#e.-distribución-hay-variación-donde-debería-haberla">E. Distribución: ¿hay variación donde debería haberla?</a></li>
+  <li><a href="#f.-pérdida-de-datos" id="toc-f.-pérdida-de-datos" class="nav-link" data-scroll-target="#f.-pérdida-de-datos">F. Pérdida de datos</a></li>
+  </ul></li>
+  <li><a href="#sec-tres-muestras" id="toc-sec-tres-muestras" class="nav-link" data-scroll-target="#sec-tres-muestras">Del detector a la decisión</a></li>
+  <li><a href="#qué-no-hacen-estos-algoritmos" id="toc-qué-no-hacen-estos-algoritmos" class="nav-link" data-scroll-target="#qué-no-hacen-estos-algoritmos">Qué no hacen estos algoritmos</a></li>
+  <li><a href="#dónde-está-cada-cosa" id="toc-dónde-está-cada-cosa" class="nav-link" data-scroll-target="#dónde-está-cada-cosa">Dónde está cada cosa</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/preleo/control-calidad.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/preleo/control-calidad.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../preleo/programa.html">Preleo</a></li><li class="breadcrumb-item"><a href="../preleo/control-calidad.html"><span class="chapter-title">Control de calidad por colegio: los algoritmos</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Control de calidad por colegio: los algoritmos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Estado:</strong> borrador (01/11/2026). Umbrales en propuesta, pendientes de cierre por el grupo. Los resultados de la primera aplicación están en la <a href="../desarrollos/PRELEO_QC.html" class="enlace-discreto">página de desarrollo</a>; aquí se explica <strong>cómo</strong> funciona cada algoritmo y <strong>por qué</strong> está hecho así. Script: <code>04_DICCIONARIO_PROCESADO_2026/scripts/R/qc_01_detectores_colegio.R</code>.</p>
+</div>
+</div>
+</div>
+<section id="para-qué-sirve" class="level2">
+<h2 class="anchored" data-anchor-id="para-qué-sirve">Para qué sirve</h2>
+<p>Una evaluación en el aula puede salir mal por razones que no tienen nada que ver con lo que saben los niños: la plataforma se cae a mitad de sesión, el tiempo no se registra, un adulto ayuda, se aplica en grupo una tarea individual o una tabla se copia con una columna desplazada. Si esos datos entran en el análisis de Preleo, el efecto estimado mezcla el programa con los fallos de aplicación, y como Preleo se asigna <strong>por colegio</strong>, un solo colegio con datos rotos puede mover el resultado.</p>
+<p>Este capítulo describe un conjunto de <strong>detectores de incongruencias</strong>: algoritmos que miran, colegio por colegio y sesión por sesión, si los datos tienen la forma que deberían tener. No deciden quién sale del análisis; señalan dónde hay que mirar.</p>
+</section>
+<section id="de-dónde-viene-el-criterio-de-2010" class="level2">
+<h2 class="anchored" data-anchor-id="de-dónde-viene-el-criterio-de-2010">De dónde viene: el criterio de 2010</h2>
+<p>En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con una regla sencilla propuesta por P. J. López-Pérez: en cada colegio se ajusta la regresión de la lectura de palabras <strong>trisílabas</strong> sobre la de <strong>bisílabas</strong>; la pendiente debe ser positiva, porque el niño que lee mejor las palabras cortas lee mejor las largas. Si en un colegio sale negativa, «algo pasó» en la aplicación.</p>
+<p>La idea es buena y es la base de todo lo que sigue: <strong>dos tareas que miden lo mismo deben ordenar a los niños igual dentro de cada colegio</strong>. Tenía tres debilidades:</p>
+<ol type="1">
+<li><strong>Inestabilidad.</strong> Con 20–40 niños por colegio y bisílabas cerca del techo a partir de 2.º de primaria, una pendiente negativa puede salir por azar, y una positiva pero muy baja (un problema real) no salta.</li>
+<li><strong>Una sola variable.</strong> Hay fallos que el par bisílabas–trisílabas no puede ver (tiempos sin registrar, filas copiadas, sesiones incompletas).</li>
+<li><strong>No se reportó</strong>, y se decidió con los datos ya mirados. Un revisor puede objetar, con razón, que se eligieron los colegios que convenían.</li>
+</ol>
+<p>La generalización mantiene la idea y corrige las tres debilidades. En la primera aplicación, los tres colegios que la pendiente negativa habría excluido en 2010 (6.3) salen también con el algoritmo nuevo, y aparecen ocho más en 7.1–8.1 que la pendiente no detectaba.</p>
+</section>
+<section id="cinco-reglas-del-procedimiento" class="level2">
+<h2 class="anchored" data-anchor-id="cinco-reglas-del-procedimiento">Cinco reglas del procedimiento</h2>
+<ol type="1">
+<li><strong>A ciegas.</strong> Los detectores se calculan sin saber qué colegios aplicaron Preleo: el script no lee la asignación. Así los criterios de calidad no pueden estar sesgados a favor ni en contra del programa.</li>
+<li><strong>Umbrales escritos antes de estimar efectos.</strong> Se fijan, se aplican, el grupo mira la distribución de alertas (no los efectos) y se cierran. Cambiarlos después exige anotar el motivo en el registro de cambios.</li>
+<li><strong>La unidad es el colegio × sesión.</strong> Un colegio puede tener una sesión defectuosa y las demás bien; se pierde la sesión, no el colegio. Se exige un mínimo de <strong>12 alumnos</strong>: por debajo, ninguna correlación es fiable.</li>
+<li><strong>Nada se borra.</strong> Cada alerta queda en una tabla con su valor, su umbral y su comprobación. Antes de dar por buena una alerta grave se mira el dato bruto de la plataforma: si el fallo lo introdujo una matriz posterior, se corrige la matriz y el colegio no sale.</li>
+<li><strong>El efecto se estima tres veces</strong> (ver <a href="#sec-tres-muestras">Tres muestras</a>) y se informa de las tres.</li>
+</ol>
+</section>
+<section id="los-detectores" class="level2">
+<h2 class="anchored" data-anchor-id="los-detectores">Los detectores</h2>
+<p>Los detectores se agrupan en cinco familias. Para cada uno se indica qué pregunta responde, cómo se calcula y qué umbral usa (<em>leve</em> / <em>grave</em>).</p>
+<section id="a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo" class="level3">
+<h3 class="anchored" data-anchor-id="a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo">A. Consistencia interna: ¿ordenan igual las tareas que miden lo mismo?</h3>
+<p><strong>A1 · Pares de tareas</strong> (generalización directa del criterio de 2010). Se usan cuatro pares de tareas que deberían ordenar a los niños de forma muy parecida:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Par</th>
+<th>Tarea x</th>
+<th>Tarea y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Criterio de 2010</td>
+<td>palabras bisílabas</td>
+<td>palabras trisílabas</td>
+</tr>
+<tr class="even">
+<td>Ruta fonológica</td>
+<td>palabras bisílabas</td>
+<td>pseudopalabras bisílabas</td>
+</tr>
+<tr class="odd">
+<td>Conciencia fonológica</td>
+<td>emparejar sílaba inicial</td>
+<td>identificar fonema inicial</td>
+</tr>
+<tr class="even">
+<td>Fluidez</td>
+<td>velocidad de texto</td>
+<td>TECLE</td>
+</tr>
+</tbody>
+</table>
+<p>En cada colegio × sesión se calcula la <strong>correlación de Spearman</strong> del par (<span class="math inline">\(r_1\)</span>, con <span class="math inline">\(n_1\)</span> niños) y se compara con la correlación de referencia de la misma cohorte y sesión (<span class="math inline">\(r_0\)</span>, con <span class="math inline">\(n_0\)</span> niños) mediante la transformación de Fisher:</p>
+<p><span class="math display">\[
+z = \frac{\operatorname{atanh}(r_1) - \operatorname{atanh}(r_0)}{\sqrt{\dfrac{1}{n_1 - 3} + \dfrac{1}{n_0 - 3}}}
+\]</span></p>
+<p>Un <span class="math inline">\(z\)</span> muy negativo significa que en ese colegio el par ordena a los niños mucho peor que en el resto. Umbral: leve <span class="math inline">\(z &lt; -1{,}96\)</span>; grave <span class="math inline">\(z &lt; -2{,}58\)</span>, o bien <span class="math inline">\(r_1 \le 0\)</span> con un intervalo bootstrap (500 remuestreos) que deja fuera <span class="math inline">\(r_0\)</span>.</p>
+<p>Tres decisiones de diseño:</p>
+<ul>
+<li><strong>Correlación y no pendiente.</strong> La pendiente depende de la escala y de la varianza de cada tarea; la correlación no, y tiene una distribución conocida para compararla.</li>
+<li><strong>Spearman y no Pearson.</strong> Las tareas tienen techos, suelos y valores extremos; Spearman solo usa el orden.</li>
+<li><strong>Referencia intra-colegio.</strong> <span class="math inline">\(r_0\)</span> no es la correlación de toda la cohorte, sino la correlación <strong>dentro de los colegios</strong>, agrupada: antes de calcularla se resta a cada niño la media de su colegio. La correlación total incluye las diferencias entre colegios (unos leen mejor que otros en las dos tareas) y sería un listón inalcanzable para una correlación calculada dentro de un solo colegio.</li>
+</ul>
+<p>Se guarda también la pendiente del criterio original, para comparar los dos.</p>
+<p><strong>A2 · Matriz de correlaciones.</strong> Lo mismo que A1, pero con todas las tareas principales de la sesión (lectura, conciencia fonológica, RAN) a la vez: se calcula el <span class="math inline">\(z\)</span> de Fisher de cada correlación del colegio frente a la agrupada intra-colegio y se promedia. Detecta colegios en los que la batería entera «no se sostiene». Umbral: leve <span class="math inline">\(&lt; -1{,}5\)</span>; grave <span class="math inline">\(&lt; -2{,}5\)</span>.</p>
+<p><strong>A3 · Fiabilidad por colegio</strong> (pendiente). El α de cada tarea en el colegio frente al α de la cohorte, con las respuestas ítem a ítem de la plataforma nueva.</p>
+</section>
+<section id="b.-esfuerzo-y-proceso-de-respuesta-respondió-cada-niño-por-su-cuenta" class="level3">
+<h3 class="anchored" data-anchor-id="b.-esfuerzo-y-proceso-de-respuesta-respondió-cada-niño-por-su-cuenta">B. Esfuerzo y proceso de respuesta: ¿respondió cada niño por su cuenta?</h3>
+<p><strong>B2 · Vectores idénticos.</strong> Porcentaje de niños del colegio con exactamente las mismas puntuaciones que otro niño en al menos cinco tareas, menos el porcentaje esperable en esa sesión (el de la cohorte entera). Con pocas tareas de rango corto, coincidir es normal; por eso se exige que haya cinco tareas y se resta la tasa de la cohorte. Umbral: leve &gt; 10 puntos; grave &gt; 25.</p>
+<p><strong>B3 · Perfectos improbables.</strong> Porcentaje de niños con la puntuación máxima en alguna tarea en la que, en toda la cohorte, menos del 5 % la alcanza. Señala ayuda del adulto o tareas aplicadas en grupo. Umbral: leve &gt; 20 %; grave &gt; 40 %.</p>
+<p><strong>B1 · Respuestas demasiado rápidas</strong> (pendiente). Tiempos por ítem por debajo de lo posible (300 ms en decisión, 1 s en lectura), con los tiempos ítem a ítem.</p>
+</section>
+<section id="c.-evaluador" class="level3">
+<h3 class="anchored" data-anchor-id="c.-evaluador">C. Evaluador</h3>
+<p><strong>C1 · El evaluador como fuente de error</strong> (pendiente). Proporción de varianza que explica el evaluador en tareas que deberían ser automáticas (letras, RAN). Importa porque los evaluadores están anidados en colegios y, por tanto, en la condición Preleo. Necesita el listado de evaluadores de cada curso.</p>
+</section>
+<section id="d.-plausibilidad-temporal-y-evolutiva-tienen-sentido-los-tiempos-y-la-trayectoria" class="level3">
+<h3 class="anchored" data-anchor-id="d.-plausibilidad-temporal-y-evolutiva-tienen-sentido-los-tiempos-y-la-trayectoria">D. Plausibilidad temporal y evolutiva: ¿tienen sentido los tiempos y la trayectoria?</h3>
+<p><strong>D1 · Tiempos imposibles.</strong> Porcentaje de registros de tiempo iguales o menores que cero, o mayores que diez veces la mediana de la tarea en esa sesión. Detecta tiempos no registrados y cambios de unidad (como el ×1000 de la plataforma antigua). Umbral: leve &gt; 5 %; grave &gt; 20 %. En el análisis, <strong>un tiempo cero se trata como ausente</strong>, no como el mejor tiempo posible.</p>
+<p><strong>D2 · Caídas entre trimestres.</strong> Diferencia entre la media del colegio (en puntuaciones z) en una sesión y en la anterior, en los mismos niños y la misma tarea. Un colegio que retrocede medio punto típico de un trimestre a otro, cuando la cohorte avanza, tuvo probablemente una sesión mal aplicada. Umbral: leve <span class="math inline">\(d &lt; -0{,}5\)</span>; grave <span class="math inline">\(d &lt; -1\)</span>.</p>
+<p><strong>D3 · Estabilidad del orden.</strong> Correlación de los mismos niños entre dos sesiones consecutivas de la misma tarea en el colegio, frente a la agrupada intra-colegio, con el mismo <span class="math inline">\(z\)</span> de Fisher que A1.</p>
+<p>D2 y D3 se calculan tarea a tarea y se resumen por colegio × sesión con la <strong>mediana</strong> entre tareas (con al menos dos): un colegio con un problema de aplicación se desvía en varias tareas; una tarea aislada que falla es un problema de la tarea, no del colegio, y queda en la tabla de detalle.</p>
+</section>
+<section id="e.-distribución-hay-variación-donde-debería-haberla" class="level3">
+<h3 class="anchored" data-anchor-id="e.-distribución-hay-variación-donde-debería-haberla">E. Distribución: ¿hay variación donde debería haberla?</h3>
+<p><strong>E1 · Techo y suelo.</strong> Diferencia, en puntos porcentuales, entre el porcentaje de niños del colegio en la puntuación máxima o mínima y el de la cohorte. Umbral: leve &gt; 25; grave &gt; 40.</p>
+<p><strong>E2 · Varianza colapsada.</strong> Desviación típica del colegio dividida por la de la cohorte. Un aula donde casi todos tienen la misma puntuación sugiere un valor por defecto o una columna copiada. Umbral: leve &lt; 0,40; grave &lt; 0,25.</p>
+<p><strong>E3 · Filas duplicadas.</strong> Número de pares de niños con el mismo vector de puntuaciones (≥ 5 tareas). Umbral: leve ≥ 1; grave ≥ 3.</p>
+<p>E1 y E2 también se resumen con la mediana entre tareas.</p>
+</section>
+<section id="f.-pérdida-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="f.-pérdida-de-datos">F. Pérdida de datos</h3>
+<p><strong>F1 · Sesión incompleta.</strong> Porcentaje de las tareas de la sesión que no tienen datos en el colegio. Umbral: leve &gt; 30 %; grave &gt; 60 %.</p>
+<p><strong>F2 · Pérdida diferencial</strong> (pendiente). Si los niños que dejan de evaluarse partían de un nivel distinto según la condición Preleo, la comparación posterior está sesgada aunque los datos que quedan sean buenos.</p>
+</section>
+</section>
+<section id="sec-tres-muestras" class="level2">
+<h2 class="anchored" data-anchor-id="sec-tres-muestras">Del detector a la decisión</h2>
+<p>Cada colegio × sesión recibe un <strong>índice de alertas</strong> = número de alertas leves + 2 × número de graves. Con él se construyen tres muestras fijas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Muestra</th>
+<th>Qué contiene</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>a · completa</strong></td>
+<td>todos los datos</td>
+<td>intención de tratar: nada se excluye</td>
+</tr>
+<tr class="even">
+<td><strong>b · depurada</strong></td>
+<td>sin los colegios × sesión con al menos una alerta grave confirmada frente al bruto, o con tres o más leves</td>
+<td>la estimación «limpia»</td>
+</tr>
+<tr class="odd">
+<td><strong>c · ponderada</strong></td>
+<td>todos los datos, con peso <span class="math inline">\(1/(1 + \text{índice})\)</span></td>
+<td>término medio: nadie sale, pero los datos dudosos pesan menos</td>
+</tr>
+</tbody>
+</table>
+<p>Mientras una alerta grave no se ha comprobado en el bruto, cuenta como excluida en la muestra b (la opción conservadora).</p>
+<p><strong>Cómo se lee:</strong> si el efecto de Preleo es el mismo en las tres muestras, el resultado no depende de la calidad de los datos y se puede defender. Si cambia, se informa del cambio y se explica qué colegios y qué alertas lo producen. En la primera aplicación, las tres coinciden salvo en letras a 5.2 en la cohorte 2014, donde una sesión tiene los tiempos en otra unidad.</p>
+</section>
+<section id="qué-no-hacen-estos-algoritmos" class="level2">
+<h2 class="anchored" data-anchor-id="qué-no-hacen-estos-algoritmos">Qué no hacen estos algoritmos</h2>
+<ul>
+<li><strong>No miden si un colegio aplicó bien Preleo.</strong> La fidelidad de aplicación es otra cosa y entra en el análisis como dosis (rigor de aplicación, registros de uso), no como exclusión.</li>
+<li><strong>No sustituyen la comprobación humana.</strong> Un detector señala; la decisión la toma el grupo mirando el dato bruto.</li>
+<li><strong>No son infalibles.</strong> Con 12–40 niños por colegio, algún colegio sano dará una alerta por azar (con el umbral leve de A1, en torno a 1 de cada 40 colegios × sesión). Por eso cuenta más la coincidencia de varios detectores que uno aislado, y por eso existen las muestras a y c.</li>
+</ul>
+</section>
+<section id="dónde-está-cada-cosa" class="level2">
+<h2 class="anchored" data-anchor-id="dónde-está-cada-cosa">Dónde está cada cosa</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Qué</th>
+<th>Dónde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Script</td>
+<td><code>04_DICCIONARIO_PROCESADO_2026/scripts/R/qc_01_detectores_colegio.R</code></td>
+</tr>
+<tr class="even">
+<td>Resultados (con nombres de colegio, solo en el PC)</td>
+<td><code>DIAGNOSTICO/R/qc_01_detectores_R_v1.xlsx</code>: alertas, resumen por colegio con la columna «confirmada», flujo y umbrales</td>
+</tr>
+<tr class="odd">
+<td>Resultados agregados</td>
+<td><a href="../desarrollos/PRELEO_QC.html" class="enlace-discreto">página de desarrollo del control de calidad</a></td>
+</tr>
+<tr class="even">
+<td>Uso en el análisis del efecto</td>
+<td><a href="../desarrollos/PRELEO_EFECTOS.html" class="enlace-discreto">página de desarrollo de los efectos</a> · script <code>preleo_05_efecto_tres_cohortes.R</code></td>
+</tr>
+<tr class="odd">
+<td>Protocolo y decisiones</td>
+<td>documento del proyecto <code>QC_DETECTORES_INCONGRUENCIAS_v1.md</code> y registro de cambios del 01/11/2026</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../preleo/datos.html" class="pagination-link" aria-label="Efectos de Preleo: evidencia y datos de la plataforma">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Efectos de Preleo: evidencia y datos de la plataforma</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../informe-aula.html" class="pagination-link" aria-label="Prototipo de informe de aula">
+        <span class="nav-page-text">Prototipo de informe de aula</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/preleo/control-calidad.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/preleo/control-calidad.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
