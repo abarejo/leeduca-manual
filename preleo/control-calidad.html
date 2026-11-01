@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../informe-aula.html" rel="next">
+<link href="../preleo/fidelidad.html" rel="next">
 <link href="../preleo/datos.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -894,6 +894,11 @@ window.Quarto = {
   <a href="../preleo/control-calidad.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Control de calidad por colegio: los algoritmos</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preleo/fidelidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cómo mejorar la aplicación y el seguimiento de Preleo</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1100,14 +1105,52 @@ window.Quarto = {
 </section>
 <section id="de-dónde-viene-el-criterio-de-2010" class="level2">
 <h2 class="anchored" data-anchor-id="de-dónde-viene-el-criterio-de-2010">De dónde viene: el criterio de 2010</h2>
-<p>En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con una regla sencilla propuesta por P. J. López-Pérez: en cada colegio se ajusta la regresión de la lectura de palabras <strong>trisílabas</strong> sobre la de <strong>bisílabas</strong>; la pendiente debe ser positiva, porque el niño que lee mejor las palabras cortas lee mejor las largas. Si en un colegio sale negativa, «algo pasó» en la aplicación.</p>
-<p>La idea es buena y es la base de todo lo que sigue: <strong>dos tareas que miden lo mismo deben ordenar a los niños igual dentro de cada colegio</strong>. Tenía tres debilidades:</p>
+<p>En el análisis de Preleo de la cohorte 2010 (tesis de A. Sánchez Gómez, 2023) se buscaron colegios con una aplicación anómala comparando, <strong>colegio por colegio</strong>, tareas que deberían ordenar igual a los niños. Los documentos y scripts de entonces muestran cuatro comprobaciones:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comprobación (cohorte 2010)</th>
+<th>Qué se esperaba</th>
+<th>Qué se hizo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Palabras trisílabas frente a pseudopalabras trisílabas (6.3)</td>
+<td>Pendiente positiva</td>
+<td>Se excluyeron dos colegios con la pendiente contraria («problemas durante la evaluación»)</td>
+</tr>
+<tr class="even">
+<td>Riesgo de dislexia frente a palabras trisílabas (6.3)</td>
+<td>Relación negativa: más riesgo, peor lectura</td>
+<td>Se excluyeron tres colegios con la relación invertida</td>
+</tr>
+<tr class="odd">
+<td>Conciencia fonológica frente a lectura (6 y 7 años), y otras parejas (supresión del fonema final frente a escribir el sonido a los 5 años; ruta fonológica frente a visual; comprensión frente a fluidez)</td>
+<td>Pendiente positiva</td>
+<td>Se exploraron con gráficos por colegio; a los 7 años, tres colegios con pendiente negativa entre conciencia fonológica y lectura</td>
+</tr>
+<tr class="even">
+<td>Variabilidad del colegio</td>
+<td>Dispersión parecida a la del resto</td>
+<td>Se excluyó un colegio por variabilidad muy alta</td>
+</tr>
+</tbody>
+</table>
+<p>Además, a nivel de <strong>alumno</strong>, se anuló la puntuación de trisílabas cuando un niño leía mejor las trisílabas que las bisílabas, y se imputó como dato perdido. En total salieron de la muestra unos ocho colegios. La lista, con sus motivos, está en los documentos de limpieza de la tesis, en la carpeta del proyecto.</p>
+<p>La idea es buena y es la base de todo lo que sigue: <strong>dos tareas que miden lo mismo deben ordenar a los niños igual dentro de cada colegio</strong>. Pero el procedimiento tenía cuatro debilidades:</p>
 <ol type="1">
-<li><strong>Inestabilidad.</strong> Con 20–40 niños por colegio y bisílabas cerca del techo a partir de 2.º de primaria, una pendiente negativa puede salir por azar, y una positiva pero muy baja (un problema real) no salta.</li>
-<li><strong>Una sola variable.</strong> Hay fallos que el par bisílabas–trisílabas no puede ver (tiempos sin registrar, filas copiadas, sesiones incompletas).</li>
-<li><strong>No se reportó</strong>, y se decidió con los datos ya mirados. Un revisor puede objetar, con razón, que se eligieron los colegios que convenían.</li>
+<li><strong>Inestabilidad.</strong> Con 20–40 niños por colegio y tareas cerca del techo, una pendiente negativa puede salir por azar, y una positiva pero muy baja (un problema real) no salta.</li>
+<li><strong>Criterios que no miden calidad de los datos.</strong> La relación entre el riesgo y la lectura es en parte circular, porque el riesgo se define con la lectura; y una relación débil entre conciencia fonológica y lectura en un colegio puede ser un resultado real (incluso un efecto del programa), no un fallo de aplicación.</li>
+<li><strong>Calidad de los datos y fidelidad, mezcladas.</strong> Los criterios se apoyaban también en la impresión, de evaluaciones y seminarios, de que algunos colegios aplicaban mal el programa. Esa impresión procedía sobre todo del profesorado más dispuesto a compartir su experiencia, que no representa a todos (ver <a href="../preleo/fidelidad.html">Cómo mejorar la aplicación y el seguimiento de Preleo</a>).</li>
+<li><strong>No se reportó y se decidió con los datos ya mirados</strong>, sin saber de antemano qué colegios excluiría cada regla. Un revisor puede objetar, con razón, que se eligieron los colegios que convenían.</li>
 </ol>
-<p>La generalización mantiene la idea y corrige las tres debilidades. En la primera aplicación, los tres colegios que la pendiente negativa habría excluido en 2010 (6.3) salen también con el algoritmo nuevo, y aparecen ocho más en 7.1–8.1 que la pendiente no detectaba.</p>
+<p>Los detectores de este capítulo mantienen la idea y corrigen las cuatro debilidades: comparan la correlación del colegio con la de su cohorte en lugar de mirar el signo de una pendiente, usan solo pares de tareas que miden lo mismo, se calculan sin conocer la condición Preleo y se reportan siempre. En la primera aplicación, la regla trisílabas–bisílabas reconstruida a 6.3 señala tres colegios que salen también con el algoritmo nuevo, y aparecen ocho más en 7.1–8.1 que la pendiente no detectaba.</p>
 </section>
 <section id="cinco-reglas-del-procedimiento" class="level2">
 <h2 class="anchored" data-anchor-id="cinco-reglas-del-procedimiento">Cinco reglas del procedimiento</h2>
@@ -1124,7 +1167,7 @@ window.Quarto = {
 <p>Los detectores se agrupan en cinco familias. Para cada uno se indica qué pregunta responde, cómo se calcula y qué umbral usa (<em>leve</em> / <em>grave</em>).</p>
 <section id="a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo" class="level3">
 <h3 class="anchored" data-anchor-id="a.-consistencia-interna-ordenan-igual-las-tareas-que-miden-lo-mismo">A. Consistencia interna: ¿ordenan igual las tareas que miden lo mismo?</h3>
-<p><strong>A1 · Pares de tareas</strong> (generalización directa del criterio de 2010). Se usan cuatro pares de tareas que deberían ordenar a los niños de forma muy parecida:</p>
+<p><strong>A1 · Pares de tareas</strong> (generalización directa de las comparaciones de 2010). Se usan cuatro pares de tareas que deberían ordenar a los niños de forma muy parecida:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1140,7 +1183,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Criterio de 2010</td>
+<td>Longitud (regla de 2010 reconstruida)</td>
 <td>palabras bisílabas</td>
 <td>palabras trisílabas</td>
 </tr>
@@ -1246,7 +1289,7 @@ z = \frac{\operatorname{atanh}(r_1) - \operatorname{atanh}(r_0)}{\sqrt{\dfrac{1}
 <section id="qué-no-hacen-estos-algoritmos" class="level2">
 <h2 class="anchored" data-anchor-id="qué-no-hacen-estos-algoritmos">Qué no hacen estos algoritmos</h2>
 <ul>
-<li><strong>No miden si un colegio aplicó bien Preleo.</strong> La fidelidad de aplicación es otra cosa y entra en el análisis como dosis (rigor de aplicación, registros de uso), no como exclusión.</li>
+<li><strong>No miden si un colegio aplicó bien Preleo.</strong> La fidelidad de aplicación es otra cosa y entra en el análisis como dosis (rigor de aplicación, registros de uso), no como exclusión (ver <a href="../preleo/fidelidad.html">Cómo mejorar la aplicación y el seguimiento de Preleo</a>).</li>
 <li><strong>No sustituyen la comprobación humana.</strong> Un detector señala; la decisión la toma el grupo mirando el dato bruto.</li>
 <li><strong>No son infalibles.</strong> Con 12–40 niños por colegio, algún colegio sano dará una alerta por azar (con el umbral leve de A1, en torno a 1 de cada 40 colegios × sesión). Por eso cuenta más la coincidencia de varios detectores que uno aislado, y por eso existen las muestras a y c.</li>
 </ul>
@@ -1712,8 +1755,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../informe-aula.html" class="pagination-link" aria-label="Prototipo de informe de aula">
-        <span class="nav-page-text">Prototipo de informe de aula</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../preleo/fidelidad.html" class="pagination-link" aria-label="Cómo mejorar la aplicación y el seguimiento de Preleo">
+        <span class="nav-page-text"><span class="chapter-title">Cómo mejorar la aplicación y el seguimiento de Preleo</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
