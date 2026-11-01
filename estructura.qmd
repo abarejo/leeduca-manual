@@ -1,7 +1,7 @@
 # Estructura del manual (propuesta para revisar) {#sec-estructura}
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** propuesta del 14/10/2026, actualizada el 20/10/2026 con lo ya escrito en este libro. **Se pide al grupo que la revise**: al final del capítulo están las preguntas abiertas, y cualquier comentario puede llegar por el [formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform) o por las otras vías de [Consultas y sugerencias](consultas.qmd).
+**Estado:** propuesta del 14/10/2026, actualizada el 02/11/2026 con lo ya escrito en este libro (borradores de los capítulos 3, 5 y 6). **Se pide al grupo que la revise**: al final del capítulo están las preguntas abiertas, y cualquier comentario puede llegar por el [formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform) o por las otras vías de [Consultas y sugerencias](consultas.qmd).
 :::
 
 ## Enfoque
@@ -49,11 +49,11 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
    - Precursores: conciencia fonológica, conocimiento alfabético, denominación rápida, memoria verbal y lenguaje oral.
    - Dislexia y trastorno específico del aprendizaje: DSM-5-TR, CIE-11, respuesta a la intervención y riesgo familiar. Cómo ha cambiado el concepto de dislexia y por qué su prevalencia depende del corte elegido [@wagner2020prevalence].
    - En español la dislexia se manifiesta sobre todo como lectura lenta y no tanto como errores: implicaciones para la evaluación.
-3. **La plataforma LEEDUCA.**
-   - Arquitectura y tipos de tarea.
-   - Formatos de respuesta y medidas registradas: aciertos, errores, tiempo total y eficiencia, con respuestas y tiempos ítem a ítem.
+3. **La plataforma LEEDUCA** (borrador: [La plataforma LEEDUCA](plataforma.qmd)).
+   - Principios de diseño, historia y arquitectura (actividades, sesiones y registros).
+   - Tipos de tarea, formatos de respuesta y medidas registradas, con respuestas y tiempos ítem a ítem.
    - Sesiones y calendario: tres evaluaciones por curso.
-   - Aplicación colectiva en el aula y versiones en papel y tableta (2020–2022).
+   - Aplicación individual con evaluador, con excepciones colectivas y autoaplicadas; versiones en papel, tableta, 3 años, catalán y valenciano.
    - Antecedente en papel: la batería DIS-ESP (11 escalas, 2007–2012).
 4. **Estudio normativo.**
    - Cohortes 2009–2016 y colegios participantes.
@@ -63,19 +63,21 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
 
 ### Parte II. Propiedades psicométricas
 
-5. **Método** (base: [Cómo se construye cada ficha](metodo.qmd) y [Decisiones metodológicas](decisiones.qmd)).
+5. **Método** (borrador: [Método psicométrico](metodo-psicometrico.qmd), con cada apartado enlazado a su estudio de la Agenda; detalle en [Cómo se construye cada ficha](metodo.qmd) y [Decisiones metodológicas](decisiones.qmd)).
    - Puntuaciones: aciertos, tiempo y eficiencia; tratamiento de atípicos.
    - Fiabilidad: α, ω, test-retest entre trimestres, error típico condicional y TRI. En las pruebas de velocidad, test-retest y no consistencia interna.
    - Validez: contenido, estructura interna, invarianza, convergente, predictiva y diagnóstica.
    - Baremación continua: percentiles, puntuaciones T y escalares.
    - **Cuánto cambio importa:** tamaños del efecto de referencia y cambio mínimo relevante con anclas [@anvari2021anclas].
-6. **Resultados globales.**
+6. **Resultados globales** (borrador: [Resultados globales](resultados-globales.qmd)).
    - Tabla resumen de las tareas A.
    - Estructura factorial: precursores, decodificación, fluidez y comprensión.
    - Invarianza por sexo, formato y pandemia.
    - Estabilidad longitudinal de 4 a 11 años.
 
 ### Parte III. Fichas de tareas por dominio
+
+7–18. **Un capítulo por dominio**, con las fichas de sus tareas:
 
 | Dominio | Fichas en este libro |
 |---|---|
@@ -140,16 +142,17 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 
 ## Estado y plan de trabajo
 
-| Bloque | Estado (20/10/2026) | Qué falta |
+| Bloque | Estado (02/11/2026) | Qué falta |
 |---|---|---|
 | Cap. 1–2 Fundamentos y marco teórico | Partes en el borrador del Manual técnico 8 y en el marco psicométrico | Actualizar con DSM-5-TR, CIE-11 y la literatura en español; redacción por el equipo |
-| Cap. 3 Plataforma | Guía de extracción y catálogos de tareas | Capturas y descripción del flujo de aplicación; antecedente DIS-ESP |
+| Cap. 3 Plataforma | **Borrador completo (02/11)**: diseño, historia, arquitectura, tipos de tarea, medidas, cohortes y versiones | Fechas del cambio de plataforma; evaluadores por cohorte; escalas de DIS-ESP |
 | Cap. 4 Estudio normativo | Muestra por tarea, cohorte y momento; condición Preleo revisada | Tabla de colegios y fidelidad; diagrama de flujo de la muestra |
-| Cap. 5–6 Psicometría global | Método y decisiones escritos; α de 2021 en parte de las tareas | ω y TRI ítem a ítem; análisis factorial e invarianza; apartado «Cuánto cambio importa» |
-| Cap. 7–18 Fichas | Cinco fichas piloto: letras, velocidad, RAN, contar sílabas y TECLE | Una ficha por tarea A (75 tareas) |
+| Cap. 5 Método | **Borrador completo (02/11)**, enlazado a los estudios M2–M25 | ω y TRI ítem a ítem; normas continuas; anclas del cambio mínimo relevante |
+| Cap. 6 Resultados globales | **Borrador (02/11)**: tabla de tareas A y estabilidad longitudinal | Análisis factorial confirmatorio e invarianza |
+| Cap. 7–18 Fichas | Cinco fichas piloto (letras, velocidad, RAN, contar sílabas y TECLE), rima, batería de 3 años y fichas automáticas de todas las tareas; 18 marcos teóricos por dominio | Ficha completa de las 32 tareas de clase A |
 | Cap. 19–21 Certeza, cribado e identificación | Capítulo de riesgo con los cinco niveles; AUC y cortes con validación cruzada | Acuerdo del equipo sobre los niveles; intervalos por bootstrap |
-| Cap. 22 Seguimiento | Test-retest disponible; cambio fiable en la ficha de letras | Curvas de crecimiento y cambio mínimo relevante con anclas |
-| Cap. 23 Preleo | Parte del libro con el programa y los efectos; auditoría de los datos y plan de análisis cerrado | Confirmar la exposición de la cohorte 2011 y el modelo multinivel definitivo |
+| Cap. 22 Seguimiento | Cambio fiable en letras y velocidad; percentiles de crecimiento y cambio mínimo relevante en desarrollo (M4+M7); perfiles de éxito (M19) y seguimiento diario (M25) planteados | Cerrar las anclas y llevarlo a las tareas de lectura |
+| Cap. 23 Preleo | Parte del libro con el programa y los efectos; auditoría de los datos, detectores de incongruencias y redes de cambio (M18) | Confirmar la exposición de la cohorte 2011 y el rigor de aplicación de 2013–2014 |
 | Cap. 24 Casos y EEG/fNIRS | Matrices EEG de 2010 y 2013 | Reasignar los grupos EEG con los niveles de certeza; casos anonimizados |
 | Anexos A–B Baremos y cortes | Baremos empíricos por momento y cohorte | Normas continuas que agrupen cohortes |
 

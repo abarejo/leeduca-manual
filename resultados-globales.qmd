@@ -1,0 +1,116 @@
+# Resultados globales {#sec-resultados-globales}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+dir_cat <- file.path(raiz_libro(), "datos", "agregados", "CATALOGO")
+C <- utils::read.csv(file.path(dir_cat, "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+ES <- utils::read.csv(file.path(dir_cat, "Estabilidad.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+FAM <- c(A = "Precisión", B = "Denominación rápida", C = "Fluidez lectora oral", D = "Eficiencia con tiempo limitado",
+         E = "Decisión con tiempo de respuesta", F = "Amplitud y memoria", G = "Comprensión")
+f2 <- function(x) ifelse(is.na(x), "—", sub("^(-?)0", "\\1", sprintf("%.2f", x)))
+rango <- function(e) { e <- suppressWarnings(as.numeric(strsplit(as.character(e), ", ")[[1]])); e <- e[!is.na(e)]; if (!length(e)) "—" else if (length(e) == 1) as.character(e) else paste0(min(e), "–", max(e)) }
+A <- C[C$clase == "A", ]
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primer borrador (02/11/2026) del capítulo 6 del manual, para la reunión del grupo. Por ahora reúne la **tabla resumen de las tareas de clase A** y la **estabilidad longitudinal**, calculadas con las tablas agregadas del catálogo. La estructura factorial y la invarianza están **pendientes** y se indica cómo se harán.
+:::
+
+**En una frase.** Este capítulo da la visión de conjunto que no cabe en ninguna ficha: qué tareas tienen hoy calidad suficiente, cuánto se mantienen las diferencias entre niños de un trimestre a otro y de un curso a otro, y cómo se organizan las habilidades a cada edad.
+
+## 6.1 Tareas de clase A
+
+Hoy hay `r nrow(A)` tareas de clase A: fiabilidad y muestra suficientes, sin avisos pendientes (criterios en [Límites y calidad de los datos](limites.qmd#sec-clases)). Son las que tendrán ficha completa y baremo en la primera versión del manual.
+
+```{r}
+#| label: tbl-tareas-a
+#| tbl-cap: "Tareas de clase A: familia, edades, muestra y fiabilidad disponible."
+T <- data.frame(
+  Tarea = A$tarea,
+  Familia = FAM[A$familia],
+  Edades = vapply(A$edades, rango, ""),
+  Cohortes = vapply(A$cohortes, function(x) { k <- sort(as.integer(strsplit(as.character(x), ", ")[[1]])); if (length(k) > 1 && all(diff(k) == 1)) paste0(k[1], "–", k[length(k)]) else paste(k, collapse = ", ") }, ""),
+  Sesiones = A$n_sesiones,
+  `N máx. por sesión` = format(A$N_max_sesion, big.mark = "."),
+  `α (2021)` = f2(A$alfa_2021),
+  `Estabilidad ρ` = f2(A$estabilidad_rho),
+  check.names = FALSE)
+T <- T[order(T$Familia, T$Tarea), ]; rownames(T) <- NULL
+tabla(T, pie = "α: consistencia interna de 2021 con las respuestas por ítem (en tareas con tiempo limitado sobrestima la fiabilidad). Estabilidad: correlación de rangos entre aplicaciones sucesivas a los mismos niños (mediana de los pares con 12 meses o menos de separación). — = sin dato.")
+```
+
+```{r}
+#| include: false
+nA_fam <- table(factor(A$familia, levels = names(FAM)))
+```
+
+Lo que se ve:
+
+- **Predominan las tareas de precisión y de fluidez lectora.** De las `r nrow(A)` tareas, `r nA_fam[["A"]]` son de precisión y `r nA_fam[["C"]]` de fluidez lectora oral. La denominación rápida, clave en el modelo de riesgo, todavía no llega a clase A en ninguna de sus formas: no le falta calidad, le faltan datos para comprobarla (no tiene α y pocas veces se repite la misma forma a los mismos niños).
+- **Una tarea de clase A necesita revisión antes de usarse:** la inhibición tiene un α muy alto pero su medida está pospuesta hasta revisar cómo se puntúa. Las clases se calculan con reglas automáticas, y el grupo puede corregirlas.
+- **La fiabilidad disponible es desigual.** Varias tareas de clase A se apoyan solo en la estabilidad o solo en el α de 2021. El cálculo de ω con las respuestas por ítem de la plataforma nueva completará la columna (ver [Método psicométrico](metodo-psicometrico.qmd)).
+
+## 6.2 Estabilidad longitudinal
+
+La estabilidad dice cuánto se mantiene el orden de los niños entre dos evaluaciones. Depende de la fiabilidad de la tarea y de cuánto cambian los niños entre medias, así que baja a medida que se separan las evaluaciones.
+
+```{r}
+#| label: tbl-estabilidad-familia
+#| tbl-cap: "Estabilidad (ρ mediana) por familia de tarea y separación entre evaluaciones."
+ES$familia <- C$familia[match(ES$tarea_canonica, C$tarea_canonica)]
+ES$sep <- cut(ES$meses, c(0, 4, 8, 12, Inf), labels = c("≤ 4 meses", "5–8 meses", "9–12 meses", "> 12 meses"))
+ES <- ES[!is.na(ES$familia), ]
+M <- tapply(ES$r, list(factor(ES$familia, levels = names(FAM)), ES$sep), median)
+Np <- tapply(ES$r, list(factor(ES$familia, levels = names(FAM))), length)
+T <- data.frame(Familia = FAM[rownames(M)], `Pares de sesiones` = as.integer(Np[rownames(M)]), check.names = FALSE)
+T <- cbind(T, as.data.frame(apply(M, 2, f2), stringsAsFactors = FALSE))
+T <- T[!is.na(T$`Pares de sesiones`), ]; rownames(T) <- NULL
+tabla(T, pie = sprintf("Correlación de rangos entre dos aplicaciones de la misma tarea a los mismos niños, en %d pares de sesiones de %d tareas (cohortes 2010–2015). — = sin pares con esa separación.", nrow(ES), length(unique(ES$tarea_canonica))))
+```
+
+```{r}
+#| label: fig-estabilidad
+#| fig-cap: "Estabilidad mediana entre dos aplicaciones de la misma tarea según los meses que las separan, por familia de tarea (solo familias con 10 pares de sesiones o más). Los puntos grises son los pares de sesiones."
+#| fig-height: 4.4
+#| fig-width: 7.5
+library(ggplot2)
+ES$Familia <- factor(FAM[ES$familia], levels = FAM)
+mid <- c("≤ 4 meses" = 3, "5–8 meses" = 6.5, "9–12 meses" = 10.5, "> 12 meses" = 18)
+fams <- names(which(table(ES$Familia) >= 10))
+D <- aggregate(r ~ Familia + sep, data = ES[ES$Familia %in% fams, ], FUN = median)
+D$x <- mid[as.character(D$sep)]
+ggplot() +
+  geom_hline(yintercept = c(.4, .6), linetype = "dotted", colour = "grey55") +
+  geom_jitter(data = transform(ES, xm = mid[as.character(sep)]), aes(xm, r), colour = "grey75", size = 1.2, alpha = .6, width = .5, height = 0) +
+  geom_line(data = D, aes(x, r, colour = Familia), linewidth = .9) +
+  geom_point(data = D, aes(x, r, colour = Familia), size = 2.4) +
+  scale_x_continuous("Meses entre las dos aplicaciones", breaks = mid, labels = names(mid)) +
+  scale_y_continuous("Estabilidad (ρ)", limits = c(-.1, 1), breaks = seq(0, 1, .2)) +
+  guides(colour = guide_legend(nrow = 2)) +
+  theme_minimal(base_size = 11) + theme(legend.position = "bottom", legend.title = element_blank(), panel.grid.minor = element_blank())
+```
+
+Lo que se ve:
+
+- **La fluidez lectora es la medida más estable dentro del curso**: entre trimestres (≤ 4 meses) su estabilidad mediana ronda .76, frente a .51 en las tareas de precisión, y se mantiene por encima de .60 hasta los 12 meses. Es coherente con que la velocidad lectora sea el mejor indicador para el seguimiento en una ortografía transparente.
+- **Más allá de un año, la estabilidad cae en todas las familias.** En parte es cambio real, y en parte que la «misma» tarea cambia de lista o de texto entre cursos. Hay que comprobarlo antes de interpretar la estabilidad a largo plazo.
+- **Las tareas de precisión de Infantil son menos estables**, en parte por el techo y por los pocos ítems, y en parte porque a esas edades los niños cambian mucho. Las líneas punteadas marcan los umbrales del semáforo (.40 y .60).
+- **La estabilidad de la etiqueta de dificultad es alta en los primeros cursos y baja después.** De los niños por debajo del percentil 10 a los 6 años, el 89 % sigue por debajo del 25 a los 7; desde el percentil 25, el 78 %. De los 7 a los 8 años esas cifras bajan al 66 % y el 51 %. Por eso el manual define la dificultad con toda la trayectoria y no con una sola evaluación (ver [Cómo estimamos el riesgo](riesgo.qmd)).
+
+## 6.3 Estructura de las habilidades
+
+**Lo que hay.** Un análisis exploratorio de redes por edad (modelos gráficos gaussianos) muestra cómo se organizan las tareas a los 4, 5, 6 y 7 años y cómo se densifica la red al aprender a leer (ver [Cómo se agrupan las tareas](agrupacion.qmd)).
+
+**Pendiente.** Un análisis factorial confirmatorio por edad con cuatro factores esperados (precursores, decodificación, fluidez y comprensión), con las tareas de clase A y B. Se hará en el ordenador del proyecto con los datos por niño, y se contrastará con las redes de M1.
+
+## 6.4 Invarianza
+
+**Lo que hay.** Equivalencia papel–plataforma de TECLE, con su conversión a una escala común (ver [TECLE](fichas/TECLE.qmd)), y predicción diferencial por sexo y nivel socioeconómico en la ficha de letras.
+
+**Pendiente.** Invarianza de medida por sexo, formato (plataforma, papel, tableta) y periodo (antes y después de la pandemia) en las tareas de clase A. Se desarrolla en M6 y, para las regiones y lenguas, en M22.
+
+## Preguntas para el grupo
+
+1. ¿Os parece suficiente, para la primera versión, la tabla de tareas A con la estabilidad, dejando la estructura factorial y la invarianza para la segunda?
+2. La denominación rápida no tiene ninguna tarea de clase A por falta de datos de fiabilidad. ¿La incluimos igualmente con ficha completa, como excepción justificada por su papel en el modelo de riesgo?

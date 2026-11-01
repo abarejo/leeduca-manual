@@ -43,6 +43,9 @@ book:
       chapters:
         - estructura.qmd
         - definicion.qmd
+        - plataforma.qmd
+        - metodo-psicometrico.qmd
+        - resultados-globales.qmd
         - metodo.qmd
         - decisiones.qmd
         - agrupacion.qmd
