@@ -4,7 +4,7 @@ search: false
 
 # M22 · Dinámicas poblacionales: los indicadores fuera de Málaga {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 2, 01/11/2026. Idea de P. J. López-Pérez: estudiar cómo el contexto sociológico, lingüístico y de política educativa de cada comunidad se refleja en los indicadores de la plataforma. Script `R/m22_regiones.R` sobre las copias del servidor de 2023–2026. Muestra regional confirmada por A. Sánchez Gómez.*
+*Desarrollo de un estudio de la Agenda · versión 2.1, 01/11/2026 (añade un resumen sin estadística). Idea de P. J. López-Pérez: estudiar cómo el contexto sociológico, lingüístico y de política educativa de cada comunidad se refleja en los indicadores de la plataforma. Script `R/m22_regiones.R` sobre las copias del servidor de 2023–2026. Muestra regional confirmada por A. Sánchez Gómez.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Proyecto interno. Solo datos agregados; los centros no se nombran y no se ordenan comunidades ni colegios. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo.
@@ -12,7 +12,31 @@ search: false
 
 [← Volver a la Agenda](../agenda.qmd#sec-agenda)
 
-## En cinco líneas
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial, sin estadística
+
+1. **Las tareas funcionan igual fuera de Málaga.** Miden con la misma precisión en Cantabria, Castilla y León y Baleares. *Qué nos permite:* llevar la plataforma a otras comunidades sin rehacer las tareas.
+2. **Un niño de Cantabria rinde como uno de Málaga de su misma edad.** *Qué nos permite:* usar, de momento, los baremos de Málaga en Cantabria.
+3. **En Castilla y León van un poco por detrás, sobre todo en lectura a los 6–7 años, pero no es seguro:** son pocos colegios. *Qué nos permite:* usar los baremos de Málaga con cautela y ampliar la muestra antes de sacar conclusiones.
+4. **En Baleares los niños no rinden menos; la tarea en catalán es otra tarea.** Fallan más solo donde cambian las palabras (vocabulario, sílabas, gramática). En letras, memoria y nombrar números van igual que en Málaga. *Qué nos permite:* hacer un baremo propio para la versión catalana y no comparar sus puntuaciones con las del castellano.
+5. **Pesa más el colegio que la comunidad.** Dentro de una misma comunidad hay más diferencia entre colegios que entre comunidades. *Qué nos permite:* fijarnos en el contexto de cada centro (nivel socioeconómico, cómo se aplica la plataforma, Preleo) más que en la región. Enlaza con [M18](M18.qmd) y [M19](M19.qmd).
+6. **Los niños de 4 años de Málaga rinden hoy como hace diez años; a los 5, algo menos en letras.** *Qué nos permite:* seguir usando los baremos de 2010–2015 a los 4 años y revisar el de letras a los 5 (posible efecto de la pandemia o de cambios en la enseñanza).
+7. **Tenemos datos de secundaria que no conocíamos:** dos colegios concertados de Málaga con 237 alumnos de 12 a 17 años. *Qué nos permite:* empezar un baremo de secundaria y estudiar el alto estrato, aunque para comparar hacen falta colegios públicos de esas edades.
+8. **Los niños de 9–11 años evaluados ahora en colegios públicos parecen casos derivados, no aulas completas.** *Qué nos permite:* no usarlos como referencia y pedir al ingeniero el motivo de cada evaluación.
+:::
+
+**Cómo leer la gráfica principal** (la primera de «Resultados»). Cada punto es una tarea a una edad. Si el punto está a la derecha de la línea vertical, esa comunidad rinde mejor que Málaga; a la izquierda, peor. La raya horizontal es el margen de duda: si cruza la línea vertical, no podemos asegurar que haya diferencia. Las distancias se miden en «pasos» del tamaño de la diferencia habitual entre dos niños de la misma edad: 0,2 es una diferencia pequeña, 0,5 media y 0,8 grande.
+
+**Lo que necesitamos del grupo**
+
+- Saber de qué colegio son «Isabel la Católica» (186 niños) y «Virgen de la Peña» (Mijas o Bembibre).
+- Saber quién coordinó las aplicaciones de Baleares, Cantabria y Castilla y León, y si se evaluó a aulas enteras o a niños concretos.
+- Decidir si la versión catalana merece su propio baremo y, si es así, con qué colegios de Baleares seguir.
+- Marcar qué colegios consideramos de alto estrato (columna `estrato_PJ` de la tabla de centros).
+
+## Resumen técnico
 
 Desde 2023 la plataforma se usa fuera de Málaga: Cantabria, Castilla y León (Burgos, León, Soria, Salamanca) y Baleares, este último con versiones de las tareas en catalán. Antes de leer una diferencia entre comunidades como un efecto del contexto hay que descartar dos explicaciones más simples: que la tarea **mida distinto** (otra lengua, otros ítems) y que la muestra sea **otra** (niños derivados en lugar de aulas completas). Con esas dos cautelas, **Cantabria rinde como Málaga**, **Castilla y León algo por debajo** y **Baleares por debajo solo en las tareas que dependen de las palabras concretas**, lo que apunta al instrumento y a la lengua, no a la población. El colegio pesa tanto como la comunidad o más (ICC ≈ .20). Los dos concertados de Málaga aportan una muestra inesperada de secundaria (12–17 años) que alarga la curva hasta la universidad.
 
