@@ -40,7 +40,9 @@ EXPORTAR <- c(
   NIVEL_LECTOR = "baremo_nivel_lector_R_v1.xlsx",
   WOODCOCK = "criterio_woodcock_R_v1.xlsx",
   MATE_CRITERIO = "criterio_matematicas_R_v1.xlsx",
-  REDES = "red_tareas_v1.xlsx"
+  REDES = "red_tareas_v1.xlsx",
+  PRELEO_QC = "qc_01_detectores_R_v1.xlsx",          # control de calidad por colegio (solo las hojas sin nombre de colegio)
+  PRELEO_EFECTO = "preleo_05_efecto_R_v1.xlsx"       # efecto de Preleo en tres muestras QC
 )
 PROHIBIDAS <- "^(sujeto|nie|nombre|apellidos?|fecha_?n(ac|to)|colegio(_txt)?|centro|profesor|docente|email)$"
 MAX_FILAS <- 2000
@@ -48,7 +50,9 @@ MAX_FILAS <- 2000
 # comparar en el PC, pero no se publican en el libro; se citan con su referencia.
 # Los percentiles del TECLE en papel 2020/21 son la base del estudio normativo publicado por el grupo
 # (Carrillo Gállego et al., 2024): no se publican aquí sin acuerdo con su autora principal.
-OMITIR_HOJAS <- c("1c_PROLEC_R_en_ppm", "P3_Percentiles_NO_PUBLICAR", "P_Woodcock_NO_PUBLICAR")
+OMITIR_HOJAS <- c("1c_PROLEC_R_en_ppm", "P3_Percentiles_NO_PUBLICAR", "P_Woodcock_NO_PUBLICAR",
+                  "2_Pares", "4_Alertas", "5_Resumen_colegio", "8_D2D3_por_tarea",   # QC: hojas con nombre de colegio, solo en el PC
+                  "0_Estructura", "0_Cobertura_ISE")                                  # efecto Preleo: ídem
 OMITIR_PATRON <- "NO_PUBLICAR"   # además, cualquier hoja cuyo nombre lo contenga
 OMITIR_COLUMNAS <- "^(PROLEC|EDICOLE_baremo|clave|opcion_modal)"  # clave y opcion_modal = respuestas correctas de TECLE: solo en el PC
 

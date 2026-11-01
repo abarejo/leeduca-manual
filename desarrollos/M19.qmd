@@ -10,7 +10,7 @@ search: false
 **Página de trabajo del grupo.** Todo lo que aparece aquí procede de datos simulados: sirve para comprobar el procedimiento, no describe a ningún niño ni colegio. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo.
 :::
 
-[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+[← Volver a la Agenda](../agenda.qmd#sec-agenda) · La exposición a Preleo que usa la ficha se estima en [Efectos de Preleo: plan y resultados](PRELEO_EFECTOS.qmd) (01/11/2026).
 
 ## En cinco líneas
 

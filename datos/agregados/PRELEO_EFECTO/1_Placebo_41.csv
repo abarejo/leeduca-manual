@@ -1,0 +1,4 @@
+"dominio","tipo","mom","muestra","n","colegios","colegios_comparacion","colegios_comparacion_2cohortes","d_DiD","ee_DiD","ic_lo_DiD","ic_hi_DiD","p_DiD","deriva_cohorte_comparacion","n_Preleo","d_2014_2013_Preleo","ee_simple","ic_lo_simple","ic_hi_simple","p_simple","d_2014_2013_Preleo_ajust41","ee_ajust41","p_ajust41"
+"CF","entrenado","4.1","a",866,20,1,0,,,,,,,817,-0.067,0.058,-0.181,0.046,0.2448,,,
+"RAN","no entrenado","4.1","a",827,20,1,0,,,,,,,778,0.048,0.056,-0.061,0.158,0.3878,,,
+"VOC","entrenado","4.1","a",451,19,0,0,,,,,,,451,,,,,,,,

@@ -49,7 +49,10 @@ En esta comparación global, casi todas las diferencias son pequeñas (|d| < 0,2
 - **Momento del efecto:** el estudio mira el rendimiento anual; las fichas, cada trimestre.
 - **Asignación de la condición:** las fuentes de 2010 y 2011 no coinciden del todo (consulta abierta).
 
-## Análisis en preparación
+## [Análisis en preparación](../desarrollos/PRELEO_EFECTOS.qmd){.enlace-discreto}
+
+*Primera pasada hecha el 01/11/2026 (página de desarrollo del grupo, enlazada en el título): [plan de análisis y resultados](../desarrollos/PRELEO_EFECTOS.qmd) sobre las cohortes 2013/2014 y 2010, y [control de calidad por colegio](../desarrollos/PRELEO_QC.qmd), que generaliza y reporta el criterio de exclusión usado en 2010.*
+
 
 Para mostrar con rigor los beneficios de Preleo y usarlo para afinar los baremos, el análisis seguirá un diseño cuasiexperimental:
 

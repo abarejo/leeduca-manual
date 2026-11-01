@@ -28,7 +28,7 @@ leeduca-manual/
 3. Copiar a `figuras/` las figuras nuevas.
 4. Subir los cambios. La web se regenera sola en unos minutos.
 
-**Añadir un desarrollo de la Agenda:** crear `desarrollos/<código>.qmd` (por ejemplo `desarrollos/M10.qmd`), poner sus figuras en `figuras/desarrollos/` y enlazar el título del estudio en `agenda.qmd` así: `### [Título](desarrollos/<código>.qmd){.enlace-discreto}`. Se añade al final de `appendices` en `_quarto.yml`; `estilo.scss` la oculta del índice lateral y de la navegación, y `search: false` la saca del buscador.
+**Añadir un desarrollo de la Agenda:** crear `desarrollos/<código>.qmd` (por ejemplo `desarrollos/M10.qmd`), poner sus figuras en `figuras/desarrollos/` y enlazar el título del estudio en `agenda.qmd` así: `### [Título](desarrollos/<código>.qmd){.enlace-discreto}`. Se añade al final de `appendices` en `_quarto.yml`; la misma convención sirve para páginas de desarrollo que no son de la Agenda (por ejemplo `desarrollos/PRELEO_QC.qmd`, enlazada desde el capítulo de Preleo); `estilo.scss` la oculta del índice lateral y de la navegación, y `search: false` la saca del buscador.
 
 **Añadir una ficha:** copiar `fichas/_plantilla.qmd`, cambiarle el nombre y añadirla a `_quarto.yml`.
 

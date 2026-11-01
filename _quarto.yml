@@ -201,6 +201,8 @@ book:
     - desarrollos/M19.qmd
     - desarrollos/M20.qmd
     - desarrollos/M22.qmd
+    - desarrollos/PRELEO_QC.qmd
+    - desarrollos/PRELEO_EFECTOS.qmd
 
 bibliography: referencias.bib
 

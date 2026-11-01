@@ -1,0 +1,96 @@
+---
+search: false
+---
+
+# Preleo · Control de calidad por colegio: detectores de incongruencias {.unnumbered}
+
+*Página de desarrollo · versión 1, 01/11/2026. Generaliza el criterio que P. J. López-Pérez usó en la cohorte 2010 (pendiente de palabras trisílabas sobre bisílabas por colegio). Script `04/scripts/R/qc_01_detectores_colegio.R`; protocolo y umbrales en `claude/QC_DETECTORES_INCONGRUENCIAS_v1.md`. Cohortes 2013, 2014 y 2010.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Solo datos agregados; los colegios no se nombran. Los umbrales están **en propuesta**: se cierran cuando el grupo apruebe esta primera distribución, antes de mirar ningún efecto. No aparece en el índice del libro: se llega desde [Efectos de Preleo](../preleo/datos.qmd) y desde la [página de efectos](PRELEO_EFECTOS.qmd). No citar ni difundir fuera del grupo.
+:::
+
+[← Volver a «Efectos de Preleo»](../preleo/datos.qmd)
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial, sin estadística
+
+1. **El criterio de 2010 funcionaba, pero había que reportarlo y hacerlo robusto.** La idea era buena: en un colegio donde se aplicó bien, los niños que leen mejor las palabras cortas leen mejor las largas. Ahora ese mismo criterio es uno de once «detectores» que miran, colegio por colegio y trimestre por trimestre, si los datos tienen la forma que deberían tener.
+2. **Se aplica a ciegas.** El programa no sabe qué colegios tienen Preleo cuando busca problemas. Así nadie puede decir que elegimos los colegios que nos convenían.
+3. **Nada se borra.** Cada aviso queda anotado con su motivo. El efecto de Preleo se calcula tres veces: con todos los colegios, sin los que tienen avisos graves, y dando menos peso a los que tienen avisos. Si las tres cuentas coinciden, el resultado es sólido.
+4. **Los tres colegios que la pendiente negativa excluía en 2010 saltan también con el detector nuevo**, y además aparecen otros que entonces no se vieron (en 2.º de primaria, sobre todo).
+5. **Lo más frecuente no son colegios que aplican mal, sino tiempos sin registrar**: en varias sesiones de 2013 y 2014 el RAN y algunas listas de lectura tienen entre un 20 % y un 50 % de tiempos a cero. Hay que comprobarlo en los brutos antes de usar esas medidas.
+:::
+
+## De dónde viene
+
+En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con un criterio sencillo: la regresión de palabras trisílabas sobre bisílabas por colegio debía dar pendiente positiva; donde salía negativa, «algo había pasado» en la aplicación. El criterio era razonable y no se reportó. Esta página lo generaliza, lo aplica **a ciegas** (sin la columna de condición) y lo reporta.
+
+Dos problemas del criterio original que la generalización corrige. Primero, con 20–40 niños por colegio y bisílabas cerca del techo, una pendiente negativa aparece por azar: ahora el estadístico es la **correlación del colegio frente a la correlación agrupada intra-colegio** de su cohorte y sesión (z de Fisher e intervalo bootstrap), y el listón es la correlación *dentro* de los colegios, no la total, que incluye las diferencias entre colegios. Segundo, decidir exclusiones mirando una sola variable antes de estimar el efecto invita a la crítica de haber elegido la muestra: ahora hay varios detectores, umbrales fijados por escrito y tres muestras analíticas fijas.
+
+## Detectores
+
+| Familia | Detectores | Qué vigilan |
+|---|---|---|
+| Consistencia interna | A1 pares de tareas · A2 matriz de correlaciones | que las tareas del mismo dominio ordenen igual a los niños dentro del colegio que en la cohorte |
+| Esfuerzo y proceso | B2 vectores de puntuaciones idénticos · B3 perfectos improbables | aplicaciones en grupo, ayuda del adulto, copia de filas |
+| Plausibilidad temporal y evolutiva | D1 tiempos imposibles (≤ 0 o > 10 × mediana) · D2 caídas de media entre trimestres · D3 estabilidad de rango entre trimestres | tiempos no registrados o en otra unidad, sesiones mal aplicadas |
+| Distribución | E1 techo/suelo · E2 varianza colapsada · E3 pares idénticos | aulas con un solo valor, matrices copiadas |
+| Pérdida | F1 tareas de la sesión sin datos | sesiones incompletas |
+
+Pendientes, porque necesitan datos que aún no están en la tabla larga: A3 (α por colegio con las respuestas ítem a ítem), B1 (tiempos por ítem), C1 (evaluador como fuente de error) y F2 (desgaste diferencial por condición).
+
+La unidad es el **colegio × sesión**, con al menos 12 alumnos. Los detectores que se calculan por tarea (D2, D3, E1, E2) se resumen por colegio × sesión con la **mediana entre tareas**: un colegio con un problema de aplicación se desvía en varias tareas; una tarea aislada en el suelo a los 4 años no es una incidencia del colegio. Índice de alertas = leves + 2 × graves. Muestras: **a** completa; **b** sin colegio × sesión con alerta grave confirmada frente al bruto (o ≥ 3 leves); **c** completa ponderada por 1/(1 + índice).
+
+```{r}
+#| label: tbl-qc-umbrales
+#| tbl-cap: "Umbrales aplicados (propuesta del 01/11/2026, pendiente de cierre por el grupo)."
+u <- read.csv("../datos/agregados/PRELEO_QC/7_Umbrales.csv", encoding = "UTF-8")
+knitr::kable(u[, c("detector", "leve", "grave", "descripcion")], col.names = c("Detector", "Leve", "Grave", "Qué calcula"))
+```
+
+## Resultados de la primera pasada
+
+### Cuántas alertas salta cada detector
+
+```{r}
+#| label: tbl-qc-distribucion
+#| tbl-cap: "Colegios × sesión por cohorte, detector y nivel de alerta. «sin n» = menos de 12 alumnos con las dos tareas del par."
+d <- read.csv("../datos/agregados/PRELEO_QC/1_Distribucion.csv", encoding = "UTF-8")
+for (v in c("grave", "leve", "ok", "sin.n")) if (!v %in% names(d)) d[[v]] <- 0
+d <- d[order(d$cohorte, d$detector), c("cohorte", "detector", "grave", "leve", "ok", "sin.n")]
+knitr::kable(d, col.names = c("Cohorte", "Detector", "Grave", "Leve", "Sin alerta", "Sin n"), row.names = FALSE)
+```
+
+Lectura de la tabla. En las tres cohortes, la mayoría de los colegios × sesión no da ninguna alerta. Las graves se concentran en tres detectores: **A1** (pares de tareas) en la cohorte 2010 a 6–8 años, **D1** (tiempos imposibles) en 2013 y 2014, y **D3/E1/E2** en unos pocos colegios de 2013 a los 4–5 años. Las alertas de D1 no son colegios que aplican mal: son sesiones en las que el tiempo del RAN o de una lista de lectura quedó a cero en el 20–50 % de los niños (RAN a 4.1 y 4.2 en 2013, RAN de objetos a 5.1–6.2 en 2013 y 2014, velocidad de texto a 5.3 en 2013, letras a 5.2 en 2014 con la unidad cambiada) o toda una sesión con el 7–18 % de tiempos a cero (2014 a 7.1). Van a la hoja Incidencias del diccionario y, mientras se comprueban en el bruto, el tiempo cero se trata como ausente.
+
+### El criterio de 2010 frente al detector A1
+
+```{r}
+#| label: tbl-qc-2010
+#| tbl-cap: "Palabras trisílabas ~ bisílabas por colegio × sesión: cuántos colegios excluiría la pendiente negativa (criterio de 2010) y cuántos marca el detector A1."
+k <- read.csv("../datos/agregados/PRELEO_QC/3_Criterio_2010_vs_A1.csv", encoding = "UTF-8")
+knitr::kable(k, col.names = c("Cohorte", "Momento", "Colegios × sesión", "Pendiente negativa (2010)", "A1 leve", "A1 grave", "Coinciden"), row.names = FALSE)
+```
+
+![Cada punto es un colegio × sesión; en el eje horizontal, la correlación intra-colegio de su cohorte y sesión; en el vertical, la del colegio. Los puntos por debajo de la línea de puntos ordenan a los niños peor de lo esperado; los coloreados saltan el umbral.](../figuras/desarrollos/QC_F1_pares_2010.png){#fig-qc-pares}
+
+Los tres colegios con pendiente negativa en 6.3 saltan también como graves en A1; A1 añade cinco graves y nueve leves en 7.1–8.1 que la pendiente no detectaba (porque allí la pendiente era positiva pero muy por debajo de la del resto de colegios). El par pseudopalabras ~ palabras marca los mismos colegios en 6.1–6.3 y otros dos en la cohorte 2013 a 6.2.
+
+### Cuántos colegios quedarían fuera de la muestra b
+
+```{r}
+#| label: tbl-qc-flujo
+#| tbl-cap: "Base del diagrama de flujo: colegios y alumnos evaluados por cohorte y momento, y cuántos quedarían fuera de la muestra b con la regla provisional (grave sin confirmar = fuera)."
+f <- read.csv("../datos/agregados/PRELEO_QC/6_Flujo.csv", encoding = "UTF-8")
+knitr::kable(f, col.names = c("Cohorte", "Momento", "Colegios", "Alumnos", "Con alguna grave", "Fuera de b (colegios)", "Fuera de b (alumnos)"), row.names = FALSE)
+```
+
+## Qué hay que decidir
+
+1. **Cerrar los umbrales** con esta distribución delante (sin mirar los efectos). Propuesta: mantenerlos; el único que parece sensible de más es D1 a los 4 años, y es precisamente el que descubre los tiempos sin registrar.
+2. **Comprobar en el bruto las graves de A1 en 2010** (ocho colegios × sesión en 6.1–8.1) y las de D1, y rellenar la columna «confirmada» de la hoja `5_Resumen_colegio` del Excel del PC.
+3. **Pedir al ingeniero** por qué el tiempo queda a cero en el RAN de las sesiones 181, 186, 628–630, 903 y 896, y en qué unidad se guardó el tiempo de letras en la sesión 907.
+4. Añadir A3, B1 y C1 cuando estén las respuestas ítem a ítem y el listado de evaluadores de 2017/18.
