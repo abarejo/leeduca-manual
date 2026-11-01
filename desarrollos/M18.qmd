@@ -4,7 +4,7 @@ search: false
 
 # M18 · ¿Desconecta Preleo el riesgo lector del nivel socioeconómico? — redes de cambio {.unnumbered}
 
-*Seguimiento de un estudio propio · versión 1, 30/10/2026; versión 2 con el análisis rehecho sobre la cohorte 2010 completa, 01/11/2026. Borrador en `LEEDUCA\2026\AUXI\RED` (script `REDES_AÑO.R`, `propuesta_redes_6.docx`, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.*
+*Seguimiento de un estudio propio · versión 1, 30/10/2026; versión 2 con el análisis rehecho sobre la cohorte 2010 completa y versión 3 con la red moderada y el contraste 2013/2014, 01/11/2026. Borrador en `LEEDUCA\2026\AUXI\RED` (script `REDES_AÑO.R`, `propuesta_redes_6.docx`, figuras; enero de 2026). Primer autor: P. J. López-Pérez. Añadido a la Agenda el 30/10/2026 para que no se pierda y para ir mejorándolo.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No citar ni difundir fuera del grupo. Solo contiene datos agregados.
@@ -124,6 +124,63 @@ Título posible: *Does a universal phonological-awareness programme close or wid
 - Ejecutar el porte a R y comprobar que coincide.
 - Decidir si el artículo va con la cohorte 2010 sola (30 colegios) o espera a 2013/2014 con Δ5→6.
 
+## Versión 3 (01/11/2026): red única moderada y el contraste limpio 2013 frente a 2014
+
+Guion `04\scripts\m18_v3_moderada_y_2013_2014.py` → `04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx` (porte a R con `mgm` en la parte 3 de `scripts\R\m18_redes_preleo.R`, sin ejecutar).
+
+### La red única moderada por Preleo (cohorte 2010, 6→7)
+
+En lugar de estimar dos redes y compararlas, se estima **una sola red en la que cada arista puede cambiar con el programa**: regresión nodo a nodo con lasso sobre los demás nodos, la condición y los productos nodo × condición (λ por EBIC, γ = 0,25, regla AND; es el modelo de `mgm` con moderador). Las aristas de moderación son, por construcción, las que la regularización no deja a cero cuando compiten con las principales: un criterio más exigente que el contraste por permutación.
+
+![Figura 6. Red moderada, cohorte 2010. Izquierda y centro: la red con el moderador a 0 (comparación) y a 1 (Preleo). Derecha: las aristas que cambian con el programa.](../figuras/desarrollos/M18_F6_red_moderada_2010_v1.png){width="100%"}
+
+| Arista | Comparación | Preleo | Moderación | Bootstrap de la moderación (500) |
+|---|---|---|---|---|
+| **ISE–Riesgo5** | 0,00 | **−0,20** | **−0,19** | −0,29; 0,00 (≠ 0 en el 92 %) |
+| ISE–ΔCF | 0,00 | 0,00 | 0,00 | −0,18; 0,00 (≠ 0 en el 42 %) |
+| Riesgo5–ΔPSE | +0,18 | +0,18 | 0,00 | — |
+| Riesgo5–ΔPAL | +0,05 | +0,02 | 0,00 | — |
+| resto | 0 | 0 | 0 | ≠ 0 en < 10 % |
+
+Con el criterio más exigente **sobrevive una sola moderación: ISE–Riesgo5**, que aparece con el programa (0,00 → −0,20). La compensación en ΔCF no llega a entrar en la red moderada (lo hace en el 42 % de las remuestras): es un efecto real pero pequeño, que el modelo de regresión con errores por colegio detecta (p = ,001) y la red regularizada no retiene. En el artículo, la red moderada es la figura principal y la moderación de ΔCF se presenta con el modelo de regresión, no con la red.
+
+### El contraste limpio: 2013 (sin programa) frente a 2014 (con programa) en los mismos 22 colegios
+
+Los 22 colegios que entraron en 2017/18 evaluaron a la cohorte 2013 sin programa y a la 2014 con programa desde los 4 años (confirmación de A. Sánchez, 31/10). Es el contraste que elimina la autoselección de centros. Dos límites: la tabla larga solo tiene de 2014 los momentos 4.1 a 5.2 (el curso de 5 años fue 2019/20 y se cortó en marzo; no hay 5.3 ni 6.x), así que el contraste es **el cambio de 4 a 5 años en los precursores, durante el programa**; y solo valen las tareas con el mismo código en las dos cohortes (fuera las letras de 5.1 y el RAN de colores de 4.1, que cambiaron de versión).
+
+| | 2013 (SIN) | 2014 (CON) |
+|---|---|---|
+| Niños con CF y letras a 4 y a 5 | 374 | 307 |
+| Colegios con ISE | 18 | 17 |
+| ISE medio | 5,6 | 5,5 |
+| Indicadores | CF4 (contar sílabas, emparejar sílaba inicial y final, supresión de sílaba inicial; 4.1–4.2), LET4 (letras 535, 4.2–4.3), CF5 (identificación de fonema inicial y supresión de fonema final, 5.2), LET5 (letras 67, 5.2), RAN5 (objetos, 5.1); z con referencia 2013 | |
+
+![Figura 8. El gradiente socioeconómico antes (4 años) y durante (5 años) el programa, en los mismos colegios, por cohorte.](../figuras/desarrollos/M18_F8_gradiente_2013_2014_v1.png){width="75%"}
+
+| Qué se contrasta | 2013 (SIN) | 2014 (CON) | ISE × cohorte (errores por colegio) |
+|---|---|---|---|
+| r(ISE, CF a 4 años) | +0,19 (0,09; 0,27) | −0,02 (−0,12; 0,08) | nivel 4: −0,065, p = ,004 |
+| r(ISE, CF a 5 años) | +0,06 (−0,04; 0,17) | −0,03 (−0,13; 0,10) | CF5 dado CF4: −0,003, p = ,95 |
+| r(ISE, letras a 5) | +0,14 | +0,11 | LET5 dado LET4: +0,02, p = ,58 |
+| r(ISE, ΔCF 4→5) | −0,08 | −0,01 | +0,03, p = ,69; con EF de colegio +0,003, p = ,97 |
+| r(ISE, ΔLET 4→5) | +0,21 | +0,32 | +0,02, p = ,57; con EF +0,01, p = ,72 |
+| r(ISE, RAN a 5) | +0,29 (0,17; 0,40) | −0,01 (−0,14; 0,13) | −0,105, p = ,002 |
+| Efecto medio del programa, dentro de colegio | | | ΔCF: −0,33 (−0,72; 0,07), p = ,10; ΔLET: +0,05, p = ,63 |
+
+Redes por cohorte (glasso, 1.000 permutaciones): ninguna arista con el ISE difiere salvo ISE–RAN5 (+0,23 en 2013, 0,00 en 2014; p = ,007). La **red moderada por la cohorte no retiene ninguna moderación** (Figura 7): la estructura del cambio 4→5 es la misma con y sin programa.
+
+![Figura 7. Red moderada por la cohorte en los mismos 22 colegios. No hay aristas de moderación.](../figuras/desarrollos/M18_F7_red_moderada_2013_2014_v1.png){width="100%"}
+
+**Lectura.** En los mismos colegios, el gradiente socioeconómico en la conciencia fonológica es pequeño o nulo a los 4 y a los 5 años, con y sin programa, y el programa **no lo cambia** (interacciones en ΔCF y en CF5 dado CF4 indistinguibles de cero, también con efectos fijos de colegio). Lo único que el programa parece alterar es el gradiente del RAN a los 5 años (desaparece en 2014), que conviene tratar con cautela (RAN de 5.1, n menor). El efecto medio del programa sobre ΔCF es negativo y no significativo, pero no es interpretable como efecto del programa: la cohorte 2014 partía más alta en CF4 (+0,26) y las tareas de CF de 4 y 5 años no son las mismas.
+
+**Qué cambia en el artículo.** El contraste limpio dice que el gradiente de los colegios Preleo de 2010 **no es un efecto del programa**: donde el programa se aplicó a cohortes consecutivas en los mismos centros, el gradiente ni aparece ni desaparece. El resultado 1 (el gradiente no es universal y es un rasgo de los centros que se autoseleccionaron) queda reforzado; el 2 (implementación mejor en los centros de ISE alto) sigue siendo de 2010; el 3 (compensación en ΔCF de 6 a 7) solo se puede comprobar en 2010, porque la cohorte 2014 no tiene datos de 6 y 7. La red moderada aporta la presentación compacta: en 2010 una sola arista cambia con el programa (ISE–Riesgo5); en 2013/2014, ninguna.
+
+### Lo que queda para la versión 4
+
+- Confirmar con Auxi los tres colegios de los 22 sin marca de condición en la tabla larga (dos sin ISE, excluidos) y los códigos de tarea que cambiaron entre 2013 y 2014.
+- Si el grupo recupera la evaluación en papel y tableta de 2020/21 (`03_PAPEL_TABLETS_PANDEMIA`) para la cohorte 2014 a los 6 años, se puede extender el contraste limpio a Δ5→6.
+- Ejecutar la parte 3 del porte a R (`mgm` con moderador, `NCT`) y comprobar.
+
 ## Lo que puede convertirlo en un artículo fuerte (v1, 30/10)
 
 - **Indicador de uso como dosis.** `06_PRELEO_COLEGIOS\acceso_colegios_R_v1.xlsx` da la regularidad de acceso de cada colegio. Dentro del grupo Preleo, red moderada por la regularidad: si la arista ISE–riesgo se debilita más cuanto más usa el colegio la plataforma, es el mejor apoyo posible para la lectura causal.
@@ -140,4 +197,4 @@ Título posible: *Does a universal phonological-awareness programme close or wid
 
 ## Archivos
 
-v2: `04\scripts\m18_redes_preleo.py`, `04\scripts\R\m18_redes_preleo.R` (porte), `04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx`, `04\DIAGNOSTICO\figs_M18\`. `LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png`. Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.
+v3: `04\scripts\m18_v3_moderada_y_2013_2014.py`, `04\DIAGNOSTICO\m18_v3_resultados_v1.xlsx`. v2: `04\scripts\m18_redes_preleo.py`, `04\scripts\R\m18_redes_preleo.R` (porte), `04\DIAGNOSTICO\m18_redes_preleo_v1.xlsx`, `04\DIAGNOSTICO\figs_M18\`. `LEEDUCA\2026\AUXI\RED\REDES_AÑO.R`, `propuesta_redes_6.docx`, `Method.docx`, `Fig1_DeltaNetworks.pdf`, `FigS1_*`, `FigS2_Descriptives.png`. Datos: `data_paper.xlsx` (misma matriz que `2026\AUXI\data.xlsx`). Las comprobaciones nuevas irán a `04\scripts\R\m18_redes_preleo.R` y a `04\DIAGNOSTICO\R\`.
