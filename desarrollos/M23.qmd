@@ -185,6 +185,41 @@ AUC con validación cruzada (5 particiones × 20 repeticiones); IC del ΔAUC por
 - **Cambio del coste entre la primera y la segunda aplicación** (discreto → lámina): el coste de fonema baja algo más en los DL que en los TE (2010: −0,09 frente a −0,05; 2011: −0,15 frente a −0,07), sin llegar a ser significativo (p = ,37 y ,28). Puede ser regresión a la media, porque los DL parten de costes más altos; además, el cambio de formato está confundido con el tiempo, aunque afecta a los dos grupos.
 - **Preleo (cohorte 2010, 34 colegios):** los colegios CON no difieren de los SIN ni en el RAN control ni en los costes (diferencias ≤ 0,04 en log, p > ,23). Según el marco, una intervención fonológica («homeostática», sobre π) no debería mover κ a corto plazo; lo observado es compatible, pero un nulo no lo demuestra.
 
+## Control de calidad por caso: los tiempos que no son tiempos
+
+En 2016–2020 la plataforma registró mal algunos tiempos de RAN. Un 0 no es un niño rapidísimo: es un tiempo que no se grabó. Hasta ahora el control era de dos tipos: las reglas de limpieza de M11 (tiempo ≥ 5 s, discreto con algún acierto, lámina con las dos pantallas, ≤ 180 s) y el detector D1 por colegio × sesión del [control de calidad de Preleo](PRELEO_QC.qmd). Faltaba bajar al **caso concreto** (niño × sesión × tarea), con reglas fijadas antes de mirar ningún resultado por grupo (`qc_ran_casos.py`, todas las tareas RAN de 2010–2015, 45.120 aplicaciones):
+
+| Regla | Qué detecta | Gravedad |
+|---|---|---|
+| C1 sin tiempo | tiempo ausente o 0 | grave |
+| C2 imposible | menos de 0,3 s por estímulo | grave |
+| C3 unidad | tiempo en milisegundos (≥ 500 con mediana de la sesión < 200) | grave |
+| C7 copiado | el mismo tiempo (±0,01 s) en dos tareas RAN distintas del niño en la sesión | grave |
+| C4 interrupción | más de 180 s o más de 6 veces la mediana de la sesión | leve |
+| C5 aciertos bajos | discreto con menos del 50 % de aciertos | leve |
+| C6 una pantalla | lámina con una sola pantalla registrada | leve |
+| C8 incongruente | el niño se sale de su propio patrón en esa tarea frente a las demás RAN de la sesión (z robusta > 4) | leve |
+| CS contexto | colegio × sesión × tarea con ≥ 20 % de casos graves | marca |
+
+**Qué encuentra** (hoja 1 de `qc_ran_casos_v1.xlsx`):
+
+- Confirma las sesiones rotas que ya conocíamos: láminas de 152/153/154 (95–98 % sin tiempo o imposibles), 2015/906 (100 %) y el fonema discreto de 2012/154.
+- Añade incidencias nuevas: **2010/189**, láminas DIS-ESP 1891 y 1893 con un 45–48 % de tiempos imposibles (menos de 0,3 s por estímulo; es la «mitad de tiempos < 1 s» ya anotada); **2012/154**, RAN de colores 528 sin ningún tiempo; **2013/181 y 186**, 39–58 % de casos graves en las láminas de colores y objetos.
+- En las sesiones de M23, el discreto está limpio (< 1 % grave, 1–4 % leve); las láminas tienen un 6–21 % de casos graves, casi todos ceros que la limpieza de M11 ya quitaba.
+
+**¿Cambian los resultados de M23?** No. Con los casos graves y leves fuera (108 aplicaciones más) o quitando además los colegios × sesión dudosos (1.159 más), la interacción fonema × DL sigue igual (2010 discreto +0,14; 2011 discreto +0,15; láminas +0,07 a +0,12) y la AUC de la lista de fonema también (,70–,78).
+
+**Pero los ceros no son al azar**, y esto importa más que las exclusiones:
+
+| Sesión (lista de fonema) | Ceros en DL | Ceros en TE | Ceros concentrados en pocos colegios |
+|---|---|---|---|
+| 2010 · 155 | 6,8 % | 9,7 % | no |
+| 2011 · 156 | 16,5 % | 11,1 % | 44 % de los ceros en 4 de 35 colegios |
+| 2013 · 903 | 28,3 % | 11,8 % | 54 % en 3 de 31 colegios |
+| 2013 · 628 | 31,2 % | 23,0 % | 62 % en 6 de 33 colegios |
+
+Hay dos mecanismos mezclados: fallos técnicos que afectan a colegios enteros en una sesión, y ceros que caen más en los niños con dislexia (posiblemente listas abandonadas o cortadas por el evaluador, que la plataforma guardaba como 0). Si se quitan sin más, se pierden los disléxicos más lentos y se atenúa la diferencia entre grupos. **Puede ser parte de la razón por la que 2013 no muestra el efecto.** Para el artículo y para los baremos: los ceros del primer tipo se tratan como ausentes; los del segundo, como dato informativo (p. ej., modelo de supervivencia o imputación múltiple con el grupo y los aciertos como predictores), con análisis de sensibilidad.
+
 ## ¿Mide esto la «capacidad del sistema para mejorar»?
 
 Tal como se aplicó, **no directamente**. Cada niño hizo el experimento dos veces, en formatos distintos, así que mide sobre todo el estado del sistema: cuánto le cuesta la competencia fonológica. Con los datos y la plataforma hay tres maneras de acercarlo a la mejora, de menor a mayor coste:
@@ -200,7 +235,7 @@ Tal como se aplicó, **no directamente**. Cada niño hizo el experimento dos vec
 3. **Facilitación frente a interferencia.** En adultos, nombrar en bloque dibujos que comparten inicio acelera la producción [@wang2018blocked], al revés de lo que predice el marco. Nuestros niños van más lentos con la carga. Si los ítems están controlados, sería un hallazgo; conviene discutir por qué los niños de 4–6 años no se benefician de la preparación de la forma.
 4. **Fonema frente a sílaba.** El marco supone que un fonema inicial activa más competidores que una sílaba ($n_f > n_s$). Pero una lista que comparte sílaba también comparte fonema. ¿Se calculó $n$ con un léxico infantil (p. ej. densidad de vecindad por inicio en ESPAL o un corpus infantil)? Con esas cifras, la ecuación 5 se podría contrastar cuantitativamente.
 5. **Qué es κ en el RAN.** El coste de fonema correlaciona con el control de la interferencia en otros estudios [@bexkens2015inhibitory]. ¿Distingue el marco entre inhibir competidores léxicos e inhibición general? Una tarea de inhibición no verbal de la plataforma (1863, CANUM) serviría de control.
-6. **2013.** El gradiente desaparece entre sílaba y fonema en la plataforma nueva. ¿Se cambiaron las listas?
+6. **2013.** El gradiente desaparece entre sílaba y fonema en la plataforma nueva. ¿Se cambiaron las listas? Además, en 2013 los ceros caen más en los disléxicos (28 % frente a 12 %): ¿se cortaba la tarea a los niños que no avanzaban?
 7. **κ = λ/(λ + π) es un cociente.** Si λ y π bajan en la misma proporción, κ no cambia; para que κ baje en la dislexia, λ tiene que bajar más que π (o κ tiene un componente propio, como sugiere la «adaptación crónica» del marco). Convendría precisarlo en el anexo, porque es justo lo que el índice de la figura D intenta medir.
 
 ## Artículo posible
