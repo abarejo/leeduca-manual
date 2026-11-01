@@ -129,6 +129,13 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Modelos mixtos condición × grupo en escala logarítmica para separar amplificación y enlentecimiento proporcional (gráfico de Brinley); índice individual 1/κ según la ecuación del marco y su fiabilidad entre formas; ΔAUC sobre el RAN clásico; después, modelo ítem a ítem con aprendizaje dentro de la lista [@luque2013psf; @jones2013ran; @deluca2017slowing].
 - **Revistas posibles:** *Annals of Dyslexia*, *Scientific Studies of Reading*, *Journal of Experimental Child Psychology*.
 
+### [M24 · Conciencia fonológica y matemáticas de 5 a 11 años](desarrollos/M24.qmd){.enlace-discreto}
+
+- **Pregunta:** ¿Sostienen las habilidades fonológicas (conciencia fonológica, RAN, memoria verbal; precisión y velocidad) el desarrollo de la aritmética y de la magnitud de 5 a 11 años, y disminuye su peso con la edad? Artículo de J. L. Luque, M. Loredo, J. Munilla, P. J. López-Pérez y A. Giménez de la Peña, en revisión interna.
+- **Datos:** Cohorte 2010, 708 niños en 35 colegios, evaluados a los 5, 6, 7 y 11 años (168 niños a los 11); tareas de conteo, arábigos, magnitud no simbólica y simbólica, sumas y restas; base corregida desde la tabla larga v2 (27/10/2026).
+- **Método:** Regresiones por ola con predictores de precisión y velocidad, SEM tipo Korpipää y modelo de paneles cruzados con MLR y FIML; como alternativa, conciencia fonológica latente con errores robustos por colegio [@korpipaa2017covariation; @krajewski2009phonological].
+- **Revistas posibles:** *Journal of Experimental Child Psychology*, *Learning and Individual Differences*, *Contemporary Educational Psychology*.
+
 ## Cómo aprovecharlo
 
 - **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.
@@ -136,6 +143,7 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **M5 y M6 combinan psicometría y lectura**, y pueden salir pronto con los análisis que ya están hechos.
 - **M19 cambia el informe de la plataforma** de quién está en riesgo a qué probabilidad tiene cada niño y qué hacer con él; usa las fiabilidades del manual y la condición Preleo, y es la base de un ensayo. **M20** lo lleva a la docencia con datos sintéticos.
 - **M23 pone a prueba un modelo teórico del grupo con datos que ya están en la plataforma**: el experimento de RAN con carga fonológica de J. L. Luque, y deja para el manual que la lista de fonema es la versión del RAN de objetos que mejor discrimina a los 5–6 años.
+- **M24 es un artículo del grupo casi terminado**: la revisión de la base corrigió sus cifras y conserva el hallazgo central (la conciencia fonológica de un curso predice la aritmética del siguiente); para el manual deja que varias tareas de la plataforma puntúan también los ítems de ejemplo.
 - **M22 decide cómo se baremará fuera de Málaga**: qué comunidades pueden compartir baremo y cuáles necesitan uno propio (las versiones en catalán, por ejemplo).
 - **M8 suma a todo el grupo**: un artículo de datos se cita cada vez que alguien usa la base. Pero solo vale si los datos se pueden reutilizar, y eso depende de los consentimientos y de la ética: la ficha plantea tres escenarios para que el grupo decida (30/10/2026).
 - **Orden recomendado:** M8 y M6 primero (casi todo hecho); después M1 y M2 (el núcleo metodológico); M3, M4 y M7 con las fichas; M5 y M9 como proyectos más largos.
