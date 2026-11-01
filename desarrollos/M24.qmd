@@ -1,0 +1,163 @@
+---
+search: false
+---
+
+# M24 · Conciencia fonológica y matemáticas de 5 a 11 años: revisión del artículo {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 01/11/2026. Artículo de J. L. Luque, M. Loredo, J. Munilla, P. J. López-Pérez y A. Giménez de la Peña (cohorte 2010), en redacción desde enero de 2026 (A. Giménez). Recoge la revisión de la base de datos hecha el 27/10/2026, la propuesta de cambios aceptada por Almudena el 29/10/2026, las figuras rehechas, los datos que faltaban en el manuscrito y una valoración del informe metodológico de Antonio.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados. En la página se escribe «PA» (*phonological awareness*), como en el manuscrito en inglés; en el resto del manual es «CF».
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial
+
+1. **El hallazgo central se mantiene.** La conciencia fonológica (manipulación) de un curso predice la aritmética del curso siguiente: a los 5 años, las sumas de un dígito de 1.º; a los 6, las sumas y restas de 2.º. Lo hace por encima de la matemática previa, del RAN y de la memoria verbal, y apenas cambió al corregir los datos (CF5 → Math6: β = ,117 → ,113 en el SEM; ,308 → ,278 en el CLPM).
+2. **La base del artículo tenía 8 columnas de 5 años con la etiqueta cambiada.** Por ejemplo, la columna «aciertos en arábigos» contenía el tiempo de conteo. Las filas estaban bien: era solo un problema de nombres. Se descubrió al cruzar la base, niño a niño, con la tabla de la plataforma.
+3. **Tres afirmaciones del borrador eran artefactos de ese error** y se han retirado: que la matemática es poco estable de 5 a 6 años, que el RAN predice la magnitud no simbólica y que se descarta la causalidad inversa. En realidad, la matemática de 5 años también predice la conciencia fonológica de 6 (β = ,23), aunque predomina la dirección contraria.
+4. **Almudena aceptó la propuesta (29/10/2026).** Se corrigen los datos sin cambiar su enfoque, sus modelos ni su texto: control de cambios en su versión 46, Tabla 2 recalculada y figuras rehechas.
+5. **Los datos que faltaban ya están** (participantes por ola, edades, pérdida de muestra y Tabla 1 con los 708 niños). Hay que cambiar el 539 del Método por 708 y aclarar cómo se llegó a esa muestra.
+6. **El informe de Antonio se escribió con los resultados anteriores a la corrección.** Sus consejos de forma valen; dos de sus afirmaciones de contenido ya no se sostienen (ver más abajo).
+:::
+
+## Cronología
+
+| Fecha | Qué |
+|---|---|
+| Enero–julio de 2026 | Borradores de A. Giménez (versiones 28–40); análisis de regresión, SEM tipo Korpipää y CLPM con la base `datos.xlsx`. Resultados congelados en julio. |
+| 27/10/2026 | Revisión con la tabla larga v2: 8 columnas de 5 años con la etiqueta cambiada y CF de 7 años con 286 niños en lugar de 570. Réplica completa (`cf_math_replica_v1.R`). |
+| 29/10/2026 | Reunión con Almudena: acepta corregir los datos manteniendo su enfoque. Versión 46 con control de cambios, Tabla 2 recalculada y figuras nuevas. |
+| 29/10/2026 | Almudena consulta a Antonio, que redacta un informe metodológico sobre la versión anterior. |
+| 01/11/2026 | Esta página: figuras con «PA», datos del Método y de la Tabla 1, valoración del informe de Antonio. |
+
+## Qué pasó con la base
+
+La base que usó el artículo tenía estas columnas de 5 años con la etiqueta de otra tarea. Las filas estaban bien alineadas, y las tareas se describen bien en el Método: el error estaba solo en los nombres de las columnas del Excel.
+
+| Columna | Debería contener | Contenía |
+|---|---|---|
+| Arab5_AC | Arábigos, aciertos | Conteo, **tiempo** |
+| MagNoSim5_AC | Magnitud no simbólica, aciertos | **Arábigos**, aciertos |
+| MagNoSim5_T | Magnitud no simbólica, tiempo | Magnitud no simbólica, **aciertos** |
+| ConSil5_AC | Contar sílabas, aciertos | Arábigos, **tiempo** |
+| IdFonIni5_AC | Identificación del fonema inicial, aciertos | Magnitud no simbólica, **tiempo** |
+| IdFonIni5_T | Identificación del fonema inicial, tiempo | **Contar sílabas**, aciertos |
+| Conteo5_T | Conteo, tiempo | **Identificación del fonema inicial**, aciertos |
+| Arab5_T | Arábigos, tiempo | **Identificación del fonema inicial**, tiempo |
+
+Las consecuencias: la matemática de 5 años (Math5) promediaba aciertos y tiempo de conteo; la «magnitud no simbólica» era nombrar números arábigos; el compuesto de identificación fonológica incluía dos tiempos de tareas de matemáticas; y en las regresiones, varias tareas de 5 años no eran las que decía la tabla. Con los mismos niños y las mismas especificaciones, la réplica con la base original reproduce al decimal los resultados congelados, y con las etiquetas correctas cambian las cifras que dependen de esas columnas.
+
+## Qué cambia y qué no
+
+| Efecto (β estandarizado) | Base original | Base corregida | Lectura |
+|---|---|---|---|
+| SEM · PA5 → Math6 | ,117** | ,113** | Se mantiene |
+| SEM · PA6 → Math6 | ,272*** | ,268*** | Se mantiene |
+| SEM · PA6 → Math7 (directo) | ,069 | ,186** | Cambia: la PA de 6 años predice la aritmética de 7 directamente |
+| SEM · PA7 → Math7 | ,237** | ,074 | Cambia (PA7 pasa de 286 a 570 niños) |
+| SEM · indirecto PA5 → Math6 → Math7 | ,035* | ,033* | Se mantiene, pequeño |
+| SEM · RAN5 → magnitud no simbólica 5 | ,412*** | ,058 | Cae: era RAN → arábigos |
+| CLPM · Math5 → Math6 | −,036 | ,195*** | Cae la «baja estabilidad» de 5 a 6 años |
+| CLPM · PA5 → Math6 | ,308*** | ,278*** | Se mantiene |
+| CLPM · PA6 → Math7 | ,209** | ,241*** | Se mantiene |
+| CLPM · Math5 → PA6 (inverso) | ,035 | ,227*** | Cae «se descarta la causalidad inversa» |
+| CLPM · Math6 → PA7 (inverso) | ,003 | ,048 | Se mantiene (nulo) |
+
+Ajuste con la base corregida: SEM χ²(17) = 150,38, CFI = ,921, TLI = ,692, RMSEA = ,105 [,090–,121]; CLPM χ²(14) = 83,33, CFI = ,942, TLI = ,851, RMSEA = ,084 [,067–,101]. Ninguno de los dos llega a un ajuste bueno; el texto ya no los llama «aceptables» sin matizar.
+
+## La propuesta final
+
+Las conclusiones que se pueden sostener con los datos corregidos, ordenadas por los tres objetivos del artículo:
+
+1. **¿Las habilidades fonológicas sostienen la matemática temprana? Sí.** La PA a los 5 años predice la aritmética de los 6, y la de los 6 predice la de los 7, por encima de la matemática del año anterior, el RAN y la memoria verbal. La influencia es concurrente y de un curso al siguiente; no hay efecto directo a dos o más años.
+2. **¿Disminuye con la edad? Sí, de forma gradual.** El peso de la fonología es máximo en el paso de infantil a 1.º, sigue siendo claro de 6 a 7 y desaparece a los 11 (ningún predictor fonológico es significativo a esa edad, con 154–166 niños).
+3. **¿Son iguales los componentes? No.**
+    - La PA es el predictor más consistente; el RAN predice sobre todo el conocimiento de los números arábigos y las medidas de velocidad; la memoria verbal no predice ningún resultado de aciertos.
+    - Precisión y velocidad aportan las dos: la precisión en PA predice los aciertos en matemáticas; la velocidad predice sobre todo la velocidad (tiempo de conteo a los 5 años) y, a los 6, añade algo a la aritmética de 7.
+    - La identificación y la manipulación predicen las dos la matemática de 5 años y la suma de 6 años (identificación: β = ,30 sobre la suma de 6 años, con la manipulación en el modelo). Más allá de los 6 años no se ha probado, porque la identificación no entra en los modelos. *Corrige lo que decía el resumen de conclusiones del 29/10 («la manipulación es la que mantiene la predicción longitudinal»).*
+    - La fonología predice mejor la aritmética (conteo, arábigos, sumas) que la comparación de magnitudes.
+4. **Dirección.** Predomina la dirección fonología → matemáticas, pero no es estrictamente unidireccional: el conocimiento numérico de 5 años también predice la PA de 6. Después ya no.
+5. **Mensaje para la discusión.** La fonología es una condición necesaria pero no suficiente para la matemática temprana: aporta la base verbal para los nombres de los números, el conteo y las primeras sumas, y después la propia competencia matemática y las habilidades de magnitud toman el relevo [@krajewski2009phonological; @korpipaa2017covariation]. Las implicaciones prácticas se mantienen: un cribado fonológico a los 5 años informa del riesgo en matemáticas además del riesgo lector.
+
+## Figuras
+
+Las dos figuras del artículo, rehechas con los coeficientes corregidos y «PA» en lugar de «CF». Solo los caminos significativos llevan etiqueta; los no significativos van en gris discontinuo. Para el manuscrito hay una versión sin título ni notas (`_articulo`), que van en el pie de figura.
+
+![Figura 2 del artículo: SEM tipo Korpipää con la base corregida (N = 708). La PA de 5 años predice la aritmética de 5 y 6 años y la magnitud no simbólica de 5; la de 6 años, la aritmética de 6 y, directamente, la de 7. RAN6, VM6 y las covarianzas se estiman pero no se dibujan.](../figuras/desarrollos/M24_F1_sem3_v1.png){width="100%"}
+
+![Figura 3 del artículo: modelo de paneles cruzados (CLPM) con la base corregida. En naranja, PA → matemáticas del curso siguiente; en morado, el efecto inverso, significativo solo de 5 a 6 años. El tramo de 7 a 11 años no se puede estimar con precisión: solo 73 niños tienen las dos medidas.](../figuras/desarrollos/M24_F2_clpm_v1.png){width="100%"}
+
+## Los datos que faltaban en el manuscrito
+
+Respuesta a «00_Datos que me faltan.docx». Todo sale de los 708 niños analizados, con las etiquetas correctas. Lo que va al manuscrito (texto de participantes en inglés, Tabla 1 y Tabla 2 apaisada con «PA») está en un Word para Almudena.
+
+| Ola | Curso (año escolar) | N | Niñas | Edad media (DT) | Conserva respecto a T1 |
+|---|---|---|---|---|---|
+| T1 | 3.º de infantil (2015/16) | 708 | 333 (47,0 %) | 5,61 (0,30) | 100 % |
+| T2 | 1.º de primaria (2016/17) | 679 | 318 (46,8 %) | 6,62 (0,30) | 95,9 % |
+| T3 | 2.º de primaria (2017/18) | 596 | 268 (45,0 %) | 7,61 (0,30) | 84,2 % |
+| T4 | 6.º de primaria (2021/22) | 168 | 90 (53,6 %) | 11,60 (0,28) | 23,7 % |
+
+Un niño cuenta en una ola si tiene al menos una puntuación de esa ola. La edad está calculada a mitad de curso (15 de febrero), porque la tabla de la plataforma no guarda la fecha de cada sesión.
+
+**Puntos que Almudena tiene que decidir o corregir:**
+
+- **708, no 539.** No hemos encontrado de dónde sale la cifra de 539 (ni las 247 niñas). Con datos a los 5 años hay 912 niños; el criterio que dejó 708 está sin documentar: no coincide con tener todas las sesiones de 5 años ni con excluir colegios enteros.
+- **Colegios.** El Método dice «twenty schools» y que «13 schools declined» a los 11 años. En los datos hay 35 colegios de 5 a 7 años y 15 a los 11 (20 no participaron en 2021/22). Conviene cuadrarlo con el listado de colegios.
+- **Sus descriptivos de T1 venían de otra base** (por ejemplo, N = 734 en contar sílabas, más que los 708). Los nuevos son de los 708.
+- **La puntuación incluye los ítems de ejemplo.** Los máximos observados coinciden con ítems de prueba + ejemplos (conteo 10 + 1 = 11; identificación del fonema inicial 20 + 4 = 24; supresión de sílaba inicial y final 10 + 2 = 12; emparejar sílaba inicial 5 + 1 = 6). Hay que decidir qué número de ítems se describe en el Método.
+- **El RAN de 6 años** son las tres listas de objetos del experimento de J. L. Luque (control, sílaba y fonema iniciales compartidos; ver [M23](M23.qmd)), en formato discreto de 25 ítems, no láminas de 18 dibujos como dice ahora el Método.
+- **La memoria verbal.** La nota de Almudena «le salen a Javi, pero en mis cálculos no» (β = ,08 y ,14) se resuelve a su favor: esos valores venían de la base con las columnas cambiadas.
+- **Síntesis fonémica** (*phoneme blending*) solo existe a los 6 años; a los 7 no se aplicó.
+- **La tarea de sumas y restas de 10–11 años** (código 10748) es de verificación, con 34 ítems frente a los 22 de los 7 años. La plataforma la etiqueta «2 dígitos» y el Método dice «hasta tres dígitos»: falta mirarlo en la ficha de la actividad.
+
+## El informe de Antonio
+
+Antonio valoró el borrador y los análisis a petición de Almudena. Su informe se basa en la versión anterior a la corrección, así que conviene leerlo con esta tabla al lado:
+
+| Lo que dice el informe | Valoración con los datos corregidos | Qué hacer |
+|---|---|---|
+| La PA y el RAN son predictores de primer orden de 5 a 7 años; la memoria verbal contribuye poco | La PA, sí. El RAN, sobre todo en arábigos y velocidad. La memoria verbal no predice ningún aciertos (ni siquiera «en tareas de manipulación»). | Matizar el papel del RAN y de la memoria verbal |
+| El peso fonológico decae hacia los 11 años | Se mantiene | — |
+| Disociación precisión–fluidez | Se mantiene, pero el ejemplo de «denominación rápida de arábigos» venía del error de etiquetas: la velocidad en PA se asocia sobre todo al tiempo de conteo | Cambiar el ejemplo |
+| El CLPM «aísla la variabilidad intraindividual» | No: eso lo hace el RI-CLPM [@hamaker2015riclpm]; el CLPM mezcla diferencias entre y dentro de los niños | No usar esa frase en el artículo |
+| El CLPM confirma prioridad temporal unidireccional y descarta la causalidad inversa | **Ya no**: Math5 → PA6 = ,227*** | Hablar de predominio de la dirección PA → matemáticas |
+| El SEM muestra que la PA de 5 años influye indirectamente en las matemáticas de 11 años | El SEM no llega a los 11 años (no se pudo incluir Math11); el indirecto es solo de 5 a 7 años y pequeño (,033) | No afirmarlo |
+| SEM y CLPM convergen desde dos perspectivas independientes | Usan las mismas variables y la misma muestra: son complementarios, no independientes | Decir «complementarios» |
+| Explicar el autorregresivo bajo de 5 a 6 años (β = ,069) como un salto cualitativo | **Era un artefacto**: corregido, β = ,195*** | Retirar la explicación |
+| Justificar la pérdida de muestra a los 11 años en Limitaciones | De acuerdo; además, solo 73 niños tienen aritmética a los 7 y a los 11 | Añadir ese dato |
+| Justificar el paso de regresiones a SEM/CLPM | De acuerdo | Una frase en el Método |
+| Implicaciones para el cribado | De acuerdo | — |
+
+## Qué falta antes del envío
+
+- [ ] Almudena acepta o rechaza los cambios marcados de la versión 46 (la copia de trabajo de P. J. López es la `_javi2`, con sus comentarios y las figuras).
+- [ ] Cambiar 539 por 708 en el Método, documentar el criterio de selección y cuadrar el número de colegios.
+- [ ] Pegar el texto de participantes y las Tablas 1 y 2 nuevas; regenerar la Tabla 3 de correlaciones con las etiquetas correctas.
+- [ ] Pegar el apartado del SEM (en el 46 está solo el epígrafe) desde `Results_Discussion_EN_revisado_2026-10-29.docx`, con «PA».
+- [ ] Sustituir las figuras por las versiones `_articulo` y poner el texto de las notas en el pie.
+- [ ] Decidir si la identificación fonológica entra en los modelos (con los datos corregidos sí predice).
+- [ ] Decidir cómo se describen los ítems (prueba frente a ejemplos) y comprobar la tarea de 10–11 años en la plataforma.
+- [ ] Opcional: el modelo con PA latente (CFI = ,93, RMSEA = ,044) como material suplementario o para un segundo artículo.
+
+## Relación con el manual
+
+Las tareas de matemáticas del artículo son las del capítulo de [cognición numérica](../cognicion-numerica.qmd), que solo citará el estudio cuando esté publicado (decisión del 23/10/2026). Dos datos de esta revisión sirven ya para las fichas: la puntuación de varias tareas de la plataforma incluye los ítems de ejemplo, y el RAN de objetos de 6 años es el experimento de carga fonológica de [M23](M23.qmd).
+
+## Archivos
+
+- Réplica completa (bases original, corregida con 708 niños y cohorte completa; modelo reorientado): `04\scripts\R\cf_math_replica_v1.R` → `04\DIAGNOSTICO\R\cf_math_replica_R_v1.xlsx`.
+- Datos para el manuscrito: `04\scripts\R\m24_datos_almudena.R` → `04\DIAGNOSTICO\R\m24_datos_almudena_R_v1.xlsx`; Word para Almudena `2026\ALMUDENA\OCTUBRE\Datos_para_Almudena_2026-11-01.docx`.
+- Figuras: `04\scripts\figuras_sem_clpm_v2.py` → `2026\ALMUDENA\OCTUBRE\Figura2_SEM3_PA_*` y `Figura3_CLPM_PA_*` (`_articulo` y `_libro`, PNG y PDF).
+- Manuscrito: `2026\ALMUDENA\OCTUBRE\00_READING AND MATH PREDICTORS_46.docx` (Almudena) y su revisión con control de cambios; informe de Antonio en `Antonio_consultas\`.
+- Documento del proyecto de Claude: `claude/CF_MATEMATICAS_replica.md`.
+
+## Referencias {.unnumbered}
+
+::: {#refs}
+:::
