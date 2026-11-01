@@ -17,7 +17,7 @@ search: false
 ::: {.callout-tip}
 ## Lo esencial, sin estadística
 
-1. **El criterio de 2010 funcionaba, pero había que reportarlo y hacerlo robusto.** La idea era buena: en un colegio donde se aplicó bien, los niños que leen mejor las palabras cortas leen mejor las largas. Ahora ese mismo criterio es uno de once «detectores» que miran, colegio por colegio y trimestre por trimestre, si los datos tienen la forma que deberían tener.
+1. **El criterio de 2010 funcionaba, pero había que reportarlo y hacerlo robusto.** La idea era buena: en un colegio donde se aplicó bien, dos tareas que miden lo mismo (por ejemplo, palabras y pseudopalabras trisílabas) ordenan igual a los niños. Ahora ese mismo criterio es uno de once «detectores» que miran, colegio por colegio y trimestre por trimestre, si los datos tienen la forma que deberían tener.
 2. **Se aplica a ciegas.** El programa no sabe qué colegios tienen Preleo cuando busca problemas. Así nadie puede decir que elegimos los colegios que nos convenían.
 3. **Nada se borra.** Cada aviso queda anotado con su motivo. El efecto de Preleo se calcula tres veces: con todos los colegios, sin los que tienen avisos graves, y dando menos peso a los que tienen avisos. Si las tres cuentas coinciden, el resultado es sólido.
 4. **Los tres colegios que la pendiente negativa excluía en 2010 saltan también con el detector nuevo**, y además aparecen otros que entonces no se vieron (en 2.º de primaria, sobre todo).
@@ -26,7 +26,7 @@ search: false
 
 ## De dónde viene
 
-En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con un criterio sencillo: la regresión de palabras trisílabas sobre bisílabas por colegio debía dar pendiente positiva; donde salía negativa, «algo había pasado» en la aplicación. El criterio era razonable y no se reportó. Esta página lo generaliza, lo aplica **a ciegas** (sin la columna de condición) y lo reporta.
+En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con comparaciones por colegio entre tareas: sobre todo, palabras frente a pseudopalabras trisílabas a 6.3 (pendiente contraria = problema de aplicación), el riesgo frente a la lectura y la conciencia fonológica frente a la lectura (ver [De dónde viene](../preleo/control-calidad.qmd)). El criterio era razonable y no se reportó. Esta página lo generaliza, lo aplica **a ciegas** (sin la columna de condición) y lo reporta.
 
 Dos problemas del criterio original que la generalización corrige. Primero, con 20–40 niños por colegio y bisílabas cerca del techo, una pendiente negativa aparece por azar: ahora el estadístico es la **correlación del colegio frente a la correlación agrupada intra-colegio** de su cohorte y sesión (z de Fisher e intervalo bootstrap), y el listón es la correlación *dentro* de los colegios, no la total, que incluye las diferencias entre colegios. Segundo, decidir exclusiones mirando una sola variable antes de estimar el efecto invita a la crítica de haber elegido la muestra: ahora hay varios detectores, umbrales fijados por escrito y tres muestras analíticas fijas.
 
@@ -66,18 +66,18 @@ knitr::kable(d, col.names = c("Cohorte", "Detector", "Grave", "Leve", "Sin alert
 
 Lectura de la tabla. En las tres cohortes, la mayoría de los colegios × sesión no da ninguna alerta. Las graves se concentran en tres detectores: **A1** (pares de tareas) en la cohorte 2010 a 6–8 años, **D1** (tiempos imposibles) en 2013 y 2014, y **D3/E1/E2** en unos pocos colegios de 2013 a los 4–5 años. Las alertas de D1 no son colegios que aplican mal: son sesiones en las que el tiempo del RAN o de una lista de lectura quedó a cero en el 20–50 % de los niños (RAN a 4.1 y 4.2 en 2013, RAN de objetos a 5.1–6.2 en 2013 y 2014, velocidad de texto a 5.3 en 2013, letras a 5.2 en 2014 con la unidad cambiada) o toda una sesión con el 7–18 % de tiempos a cero (2014 a 7.1). Van a la hoja Incidencias del diccionario y, mientras se comprueban en el bruto, el tiempo cero se trata como ausente.
 
-### El criterio de 2010 frente al detector A1
+### La regla trisílabas–bisílabas (reconstruida) frente al detector A1
 
 ```{r}
 #| label: tbl-qc-2010
-#| tbl-cap: "Palabras trisílabas ~ bisílabas por colegio × sesión: cuántos colegios excluiría la pendiente negativa (criterio de 2010) y cuántos marca el detector A1."
+#| tbl-cap: "Palabras trisílabas ~ bisílabas por colegio × sesión: cuántos colegios excluiría una pendiente negativa (regla reconstruida a partir del criterio de 2010) y cuántos marca el detector A1."
 k <- read.csv("../datos/agregados/PRELEO_QC/3_Criterio_2010_vs_A1.csv", encoding = "UTF-8")
 knitr::kable(k, col.names = c("Cohorte", "Momento", "Colegios × sesión", "Pendiente negativa (2010)", "A1 leve", "A1 grave", "Coinciden"), row.names = FALSE)
 ```
 
 ![Cada punto es un colegio × sesión; en el eje horizontal, la correlación intra-colegio de su cohorte y sesión; en el vertical, la del colegio. Los puntos por debajo de la línea de puntos ordenan a los niños peor de lo esperado; los coloreados saltan el umbral.](../figuras/desarrollos/QC_F1_pares_2010.png){#fig-qc-pares}
 
-Los tres colegios con pendiente negativa en 6.3 saltan también como graves en A1; A1 añade cinco graves y nueve leves en 7.1–8.1 que la pendiente no detectaba (porque allí la pendiente era positiva pero muy por debajo de la del resto de colegios). El par pseudopalabras ~ palabras marca los mismos colegios en 6.1–6.3 y otros dos en la cohorte 2013 a 6.2.
+Los tres colegios con pendiente negativa en 6.3 saltan también como graves en A1. La comparación original de 2010 (palabras frente a pseudopalabras trisílabas) se parece al par de la ruta fonológica de A1, que usa las bisílabas. A1 añade cinco graves y nueve leves en 7.1–8.1 que la pendiente no detectaba (porque allí la pendiente era positiva pero muy por debajo de la del resto de colegios). El par pseudopalabras ~ palabras marca los mismos colegios en 6.1–6.3 y otros dos en la cohorte 2013 a 6.2.
 
 ### Cuántos colegios quedarían fuera de la muestra b
 

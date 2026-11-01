@@ -12,15 +12,25 @@ Este capítulo describe un conjunto de **detectores de incongruencias**: algorit
 
 ## De dónde viene: el criterio de 2010
 
-En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con una regla sencilla propuesta por P. J. López-Pérez: en cada colegio se ajusta la regresión de la lectura de palabras **trisílabas** sobre la de **bisílabas**; la pendiente debe ser positiva, porque el niño que lee mejor las palabras cortas lee mejor las largas. Si en un colegio sale negativa, «algo pasó» en la aplicación.
+En el análisis de Preleo de la cohorte 2010 (tesis de A. Sánchez Gómez, 2023) se buscaron colegios con una aplicación anómala comparando, **colegio por colegio**, tareas que deberían ordenar igual a los niños. Los documentos y scripts de entonces muestran cuatro comprobaciones:
 
-La idea es buena y es la base de todo lo que sigue: **dos tareas que miden lo mismo deben ordenar a los niños igual dentro de cada colegio**. Tenía tres debilidades:
+| Comprobación (cohorte 2010) | Qué se esperaba | Qué se hizo |
+|---|---|---|
+| Palabras trisílabas frente a pseudopalabras trisílabas (6.3) | Pendiente positiva | Se excluyeron dos colegios con la pendiente contraria («problemas durante la evaluación») |
+| Riesgo de dislexia frente a palabras trisílabas (6.3) | Relación negativa: más riesgo, peor lectura | Se excluyeron tres colegios con la relación invertida |
+| Conciencia fonológica frente a lectura (6 y 7 años), y otras parejas (supresión del fonema final frente a escribir el sonido a los 5 años; ruta fonológica frente a visual; comprensión frente a fluidez) | Pendiente positiva | Se exploraron con gráficos por colegio; a los 7 años, tres colegios con pendiente negativa entre conciencia fonológica y lectura |
+| Variabilidad del colegio | Dispersión parecida a la del resto | Se excluyó un colegio por variabilidad muy alta |
 
-1. **Inestabilidad.** Con 20–40 niños por colegio y bisílabas cerca del techo a partir de 2.º de primaria, una pendiente negativa puede salir por azar, y una positiva pero muy baja (un problema real) no salta.
-2. **Una sola variable.** Hay fallos que el par bisílabas–trisílabas no puede ver (tiempos sin registrar, filas copiadas, sesiones incompletas).
-3. **No se reportó**, y se decidió con los datos ya mirados. Un revisor puede objetar, con razón, que se eligieron los colegios que convenían.
+Además, a nivel de **alumno**, se anuló la puntuación de trisílabas cuando un niño leía mejor las trisílabas que las bisílabas, y se imputó como dato perdido. En total salieron de la muestra unos ocho colegios. La lista, con sus motivos, está en los documentos de limpieza de la tesis, en la carpeta del proyecto.
 
-La generalización mantiene la idea y corrige las tres debilidades. En la primera aplicación, los tres colegios que la pendiente negativa habría excluido en 2010 (6.3) salen también con el algoritmo nuevo, y aparecen ocho más en 7.1–8.1 que la pendiente no detectaba.
+La idea es buena y es la base de todo lo que sigue: **dos tareas que miden lo mismo deben ordenar a los niños igual dentro de cada colegio**. Pero el procedimiento tenía cuatro debilidades:
+
+1. **Inestabilidad.** Con 20–40 niños por colegio y tareas cerca del techo, una pendiente negativa puede salir por azar, y una positiva pero muy baja (un problema real) no salta.
+2. **Criterios que no miden calidad de los datos.** La relación entre el riesgo y la lectura es en parte circular, porque el riesgo se define con la lectura; y una relación débil entre conciencia fonológica y lectura en un colegio puede ser un resultado real (incluso un efecto del programa), no un fallo de aplicación.
+3. **Calidad de los datos y fidelidad, mezcladas.** Los criterios se apoyaban también en la impresión, de evaluaciones y seminarios, de que algunos colegios aplicaban mal el programa. Esa impresión procedía sobre todo del profesorado más dispuesto a compartir su experiencia, que no representa a todos (ver [Cómo mejorar la aplicación y el seguimiento de Preleo](fidelidad.qmd)).
+4. **No se reportó y se decidió con los datos ya mirados**, sin saber de antemano qué colegios excluiría cada regla. Un revisor puede objetar, con razón, que se eligieron los colegios que convenían.
+
+Los detectores de este capítulo mantienen la idea y corrigen las cuatro debilidades: comparan la correlación del colegio con la de su cohorte en lugar de mirar el signo de una pendiente, usan solo pares de tareas que miden lo mismo, se calculan sin conocer la condición Preleo y se reportan siempre. En la primera aplicación, la regla trisílabas–bisílabas reconstruida a 6.3 señala tres colegios que salen también con el algoritmo nuevo, y aparecen ocho más en 7.1–8.1 que la pendiente no detectaba.
 
 ## Cinco reglas del procedimiento
 
@@ -36,11 +46,11 @@ Los detectores se agrupan en cinco familias. Para cada uno se indica qué pregun
 
 ### A. Consistencia interna: ¿ordenan igual las tareas que miden lo mismo?
 
-**A1 · Pares de tareas** (generalización directa del criterio de 2010). Se usan cuatro pares de tareas que deberían ordenar a los niños de forma muy parecida:
+**A1 · Pares de tareas** (generalización directa de las comparaciones de 2010). Se usan cuatro pares de tareas que deberían ordenar a los niños de forma muy parecida:
 
 | Par | Tarea x | Tarea y |
 |---|---|---|
-| Criterio de 2010 | palabras bisílabas | palabras trisílabas |
+| Longitud (regla de 2010 reconstruida) | palabras bisílabas | palabras trisílabas |
 | Ruta fonológica | palabras bisílabas | pseudopalabras bisílabas |
 | Conciencia fonológica | emparejar sílaba inicial | identificar fonema inicial |
 | Fluidez | velocidad de texto | TECLE |
