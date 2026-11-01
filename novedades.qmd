@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 02/11/2026 | Preleo | Nueva página [Cómo mejorar la aplicación y el seguimiento de Preleo](preleo/fidelidad.qmd): separar calidad de los datos, fidelidad y efecto; cinco dimensiones de la fidelidad medidas en todas las aulas (registro semanal del docente, observación por muestreo, registros de uso); la fidelidad como dosis y nunca como exclusión; señal mensual por aula como oferta de ayuda. |
 | 02/11/2026 | Manual: cap. 3 | Nuevo capítulo [La plataforma LEEDUCA](plataforma.qmd): principios de diseño, historia (DIS-ESP, plataforma antigua y nueva, pandemia, 3 años), cómo se aplica (individual con evaluador, con excepciones colectivas y autoaplicadas), actividades, sesiones y registros, motores de tarea, medidas, tareas por dominio, cohortes, versiones e incidencias conocidas. Con preguntas para el grupo. |
 | 02/11/2026 | Manual: cap. 5 | Nuevo capítulo [Método psicométrico](metodo-psicometrico.qmd): puntuaciones, fiabilidad según la familia de la tarea, validez, baremación, cuánto cambio importa y equidad, con el estado de cada apartado y el estudio de la Agenda que lo desarrolla. |
 | 02/11/2026 | Manual: cap. 6 | Nuevo capítulo [Resultados globales](resultados-globales.qmd): tabla de las 32 tareas de clase A y estabilidad longitudinal por familia y separación entre evaluaciones; estructura factorial e invarianza, pendientes. |

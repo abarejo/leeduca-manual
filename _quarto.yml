@@ -187,6 +187,7 @@ book:
         - preleo/programa.qmd
         - preleo/datos.qmd
         - preleo/control-calidad.qmd
+        - preleo/fidelidad.qmd
   appendices:
     - informe-aula.qmd
     - consultas.qmd

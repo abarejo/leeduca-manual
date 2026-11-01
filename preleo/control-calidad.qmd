@@ -119,7 +119,7 @@ Mientras una alerta grave no se ha comprobado en el bruto, cuenta como excluida 
 
 ## Qué no hacen estos algoritmos
 
-- **No miden si un colegio aplicó bien Preleo.** La fidelidad de aplicación es otra cosa y entra en el análisis como dosis (rigor de aplicación, registros de uso), no como exclusión.
+- **No miden si un colegio aplicó bien Preleo.** La fidelidad de aplicación es otra cosa y entra en el análisis como dosis (rigor de aplicación, registros de uso), no como exclusión (ver [Cómo mejorar la aplicación y el seguimiento de Preleo](fidelidad.qmd)).
 - **No sustituyen la comprobación humana.** Un detector señala; la decisión la toma el grupo mirando el dato bruto.
 - **No son infalibles.** Con 12–40 niños por colegio, algún colegio sano dará una alerta por azar (con el umbral leve de A1, en torno a 1 de cada 40 colegios × sesión). Por eso cuenta más la coincidencia de varios detectores que uno aislado, y por eso existen las muestras a y c.
 

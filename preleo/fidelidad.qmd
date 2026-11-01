@@ -1,0 +1,81 @@
+# Cómo mejorar la aplicación y el seguimiento de Preleo
+
+::: {.callout-note appearance="minimal"}
+**Estado:** propuesta para discutir (02/11/2026). Parte de la experiencia con la cohorte 2010 y de los detectores de incongruencias. No hay datos nuevos todavía: es un plan de medida.
+:::
+
+**En una frase.** Para saber si Preleo funciona, y en qué condiciones, hay que medir **cómo se aplicó en todas las aulas** con datos sistemáticos, no con impresiones de las aulas que conocemos mejor, y usar esa medida como **dosis** en el análisis, nunca como motivo para excluir colegios.
+
+## Lo que aprendimos de la cohorte 2010
+
+En el análisis de 2010 se intentó separar los colegios que aplicaron bien el programa de los que no, con dos fuentes:
+
+- **Una regla de consistencia de los datos** (regresiones por colegio entre tareas que deberían ordenar igual a los niños), que dio origen a los [detectores de incongruencias](control-calidad.qmd).
+- **La experiencia directa**: evaluaciones en los colegios, seminarios de formación del profesorado y jornadas de retroalimentación, en las que las diferencias entre colegios parecían grandes.
+
+Las dos tenían un problema. La regla mezclaba la calidad de los datos con la calidad de la aplicación del programa, y se decidió después de ver los datos. La experiencia directa procedía sobre todo del profesorado más dispuesto a compartir, que no representa a todos los colegios. El resultado fue un criterio radical, que probablemente excluyó más colegios de los necesarios.
+
+De ahí sale el principio de esta propuesta: **separar tres preguntas** que en 2010 iban juntas.
+
+| Pregunta | Qué la responde | Cómo entra en el análisis |
+|---|---|---|
+| ¿Son fiables los datos de este colegio y sesión? | Los [detectores de incongruencias](control-calidad.qmd), a ciegas respecto a la condición | Tres muestras (completa, depurada, ponderada) |
+| ¿Cuánto y cómo se aplicó Preleo en esta aula? | Las medidas de fidelidad de esta página | Dosis o moderador, nunca exclusión |
+| ¿Funciona Preleo? | La comparación con los colegios sin programa | Intención de tratar como análisis principal |
+
+## Qué medir: las cinco dimensiones de la fidelidad
+
+La investigación en implementación distingue cinco dimensiones [@dane1998integrity; @carroll2007fidelity; @durlak2008implementation]. Para cada una, la propuesta es una medida que se pueda recoger **en todas las aulas**, con el menor esfuerzo para el profesorado:
+
+| Dimensión | Pregunta | Medida propuesta | Fuente |
+|---|---|---|---|
+| **Dosis** | ¿Cuántas sesiones, cuántas semanas, con qué regularidad? | Sesiones por semana, semanas activas, minutos | Registros de uso de la plataforma y registro semanal del docente |
+| **Adherencia** | ¿Se trabajaron los bloques en el orden y la progresión previstos? | Bloques y actividades cubiertos frente a la programación | Registros de uso y registro semanal |
+| **Calidad** | ¿Cómo se condujeron las sesiones? | Lista de observación breve (10–12 ítems) | Observación de una **muestra aleatoria** de aulas |
+| **Respuesta del alumnado** | ¿Participan y progresan los niños dentro del programa? | Aciertos y tiempos en las actividades diarias | Plataforma (ver M25 en la [Agenda](../agenda.qmd)) |
+| **Diferenciación** | ¿Qué se hace en los colegios sin Preleo? | Cuestionario breve sobre conciencia fonológica y método de lectura | Todos los colegios, también los de comparación |
+
+### Dos fuentes nuevas que corrigen el sesgo
+
+**El registro semanal del docente.** Un formulario de un minuto, cada viernes: cuántas sesiones se hicieron, qué bloque, si se adaptó algo y por qué. Lo rellenan todos los docentes, no solo los que quieren contar su experiencia, y se contrasta con los registros de uso de la plataforma.
+
+**La observación por muestreo.** En lugar de observar las aulas a las que nos invitan, se sortea cada trimestre una muestra de aulas, estratificada por colegio y nivel socioeconómico, y se observan con la misma lista. Dos observadores en una parte de las visitas permiten estimar el acuerdo entre ellos. Es poco trabajo y convierte la experiencia directa en un dato.
+
+### Medir también al profesorado, no seleccionarlo
+
+La disposición del docente (sus creencias sobre cómo se aprende a leer, su experiencia y su apertura al programa) influye en cómo aplica Preleo [@gimenez2023opiniones]. En 2010 influyó, además, en qué aulas conocíamos. La solución no es elegir a los docentes más abiertos, sino **medir esa disposición en todos al empezar el curso**, con un cuestionario breve, y tenerla en cuenta en el análisis como covariable o moderador.
+
+## Cómo usarlo en el análisis
+
+1. **Análisis principal por intención de tratar.** Todos los colegios asignados a Preleo cuentan como Preleo, se aplicara como se aplicara. Es la estimación que responde a la pregunta práctica: qué pasa cuando se ofrece el programa a un colegio.
+2. **La fidelidad como dosis.** Se relaciona el efecto con la dosis y la adherencia de cada aula (modelo multinivel con la fidelidad centrada). Así se responde a cuánto importa aplicarlo bien, sin perder colegios.
+3. **Nada de excluir por fidelidad.** Quitar los colegios que aplicaron peor compara a los mejores colegios con programa con todos los colegios sin programa, y sobrestima el efecto. Si se quiere una estimación del efecto en quienes lo aplicaron de verdad, existen métodos que lo hacen sin ese sesgo (efecto causal entre los cumplidores).
+4. **Umbrales escritos antes.** Las medidas de fidelidad, sus cortes y el modelo se registran antes de ver los resultados, como los detectores.
+
+## Del seguimiento a la ayuda
+
+Las mismas medidas sirven para acompañar al profesorado durante el curso, no solo para analizar después. Una vez al mes, cada aula recibe una señal sencilla:
+
+- **Verde:** dosis y progresión según lo previsto.
+- **Ámbar:** dos semanas sin sesiones, o un bloque que se repite sin avanzar. El equipo ofrece una llamada breve.
+- **Rojo:** un mes sin actividad, o alumnos que no progresan en las actividades del programa. Se ofrece una visita o una sesión de apoyo.
+
+La señal debe ser una **oferta de ayuda y no una evaluación del docente**: si se percibe como control, el registro semanal deja de ser fiable.
+
+## Qué hace falta
+
+| Qué | Quién | Esfuerzo |
+|---|---|---|
+| Acceso a los registros de uso de Preleo en la plataforma, por aula y día | Equipo técnico | Bajo: los datos existen |
+| Registro semanal del docente (formulario) | Equipo de Preleo | Bajo |
+| Lista de observación y calendario de muestreo | Equipo de Preleo, con formación de observadores | Medio |
+| Cuestionario inicial al profesorado y cuestionario de diferenciación | Equipo de Preleo (puede partir de la encuesta de @gimenez2023opiniones) | Bajo |
+| Panel mensual por aula | P. J. López-Pérez, con los datos anteriores | Medio |
+| Registro previo del plan de análisis | Grupo | Bajo |
+
+## Preguntas para el grupo
+
+1. ¿Qué medidas de fidelidad se han recogido ya en otras cohortes (rigor de aplicación, visitas, registros)? ¿Se pueden recuperar?
+2. ¿Puede la plataforma exportar los registros de uso de Preleo por aula y día?
+3. ¿Es viable el registro semanal del docente sin cargarles de trabajo? ¿Quién lo revisaría?
+4. ¿Quién podría hacer la observación por muestreo (equipo, estudiantes en prácticas, equipos de orientación)?
