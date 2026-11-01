@@ -1052,6 +1052,7 @@ window.Quarto = {
   <li><a href="#validez-añade-la-carga-fonológica-algo-al-ran-clásico" id="toc-validez-añade-la-carga-fonológica-algo-al-ran-clásico" class="nav-link" data-scroll-target="#validez-añade-la-carga-fonológica-algo-al-ran-clásico">4. Validez: ¿añade la carga fonológica algo al RAN clásico?</a></li>
   <li><a href="#mejora-el-sistema-cambio-en-tres-meses-y-preleo" id="toc-mejora-el-sistema-cambio-en-tres-meses-y-preleo" class="nav-link" data-scroll-target="#mejora-el-sistema-cambio-en-tres-meses-y-preleo">5. ¿Mejora el sistema? Cambio en tres meses y Preleo</a></li>
   </ul></li>
+  <li><a href="#control-de-calidad-por-caso-los-tiempos-que-no-son-tiempos" id="toc-control-de-calidad-por-caso-los-tiempos-que-no-son-tiempos" class="nav-link" data-scroll-target="#control-de-calidad-por-caso-los-tiempos-que-no-son-tiempos">Control de calidad por caso: los tiempos que no son tiempos</a></li>
   <li><a href="#mide-esto-la-capacidad-del-sistema-para-mejorar" id="toc-mide-esto-la-capacidad-del-sistema-para-mejorar" class="nav-link" data-scroll-target="#mide-esto-la-capacidad-del-sistema-para-mejorar">¿Mide esto la «capacidad del sistema para mejorar»?</a></li>
   <li><a href="#dudas-sobre-el-diseño-y-el-marco-para-discutir-con-juan-luis" id="toc-dudas-sobre-el-diseño-y-el-marco-para-discutir-con-juan-luis" class="nav-link" data-scroll-target="#dudas-sobre-el-diseño-y-el-marco-para-discutir-con-juan-luis">Dudas sobre el diseño y el marco (para discutir con Juan Luis)</a></li>
   <li><a href="#artículo-posible" id="toc-artículo-posible" class="nav-link" data-scroll-target="#artículo-posible">Artículo posible</a></li>
@@ -1694,6 +1695,122 @@ Lo esencial, sin estadística
 </ul>
 </section>
 </section>
+<section id="control-de-calidad-por-caso-los-tiempos-que-no-son-tiempos" class="level2">
+<h2 class="anchored" data-anchor-id="control-de-calidad-por-caso-los-tiempos-que-no-son-tiempos">Control de calidad por caso: los tiempos que no son tiempos</h2>
+<p>En 2016–2020 la plataforma registró mal algunos tiempos de RAN. Un 0 no es un niño rapidísimo: es un tiempo que no se grabó. Hasta ahora el control era de dos tipos: las reglas de limpieza de M11 (tiempo ≥ 5 s, discreto con algún acierto, lámina con las dos pantallas, ≤ 180 s) y el detector D1 por colegio × sesión del <a href="../desarrollos/PRELEO_QC.html">control de calidad de Preleo</a>. Faltaba bajar al <strong>caso concreto</strong> (niño × sesión × tarea), con reglas fijadas antes de mirar ningún resultado por grupo (<code>qc_ran_casos.py</code>, todas las tareas RAN de 2010–2015, 45.120 aplicaciones):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Regla</th>
+<th>Qué detecta</th>
+<th>Gravedad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1 sin tiempo</td>
+<td>tiempo ausente o 0</td>
+<td>grave</td>
+</tr>
+<tr class="even">
+<td>C2 imposible</td>
+<td>menos de 0,3 s por estímulo</td>
+<td>grave</td>
+</tr>
+<tr class="odd">
+<td>C3 unidad</td>
+<td>tiempo en milisegundos (≥ 500 con mediana de la sesión &lt; 200)</td>
+<td>grave</td>
+</tr>
+<tr class="even">
+<td>C7 copiado</td>
+<td>el mismo tiempo (±0,01 s) en dos tareas RAN distintas del niño en la sesión</td>
+<td>grave</td>
+</tr>
+<tr class="odd">
+<td>C4 interrupción</td>
+<td>más de 180 s o más de 6 veces la mediana de la sesión</td>
+<td>leve</td>
+</tr>
+<tr class="even">
+<td>C5 aciertos bajos</td>
+<td>discreto con menos del 50 % de aciertos</td>
+<td>leve</td>
+</tr>
+<tr class="odd">
+<td>C6 una pantalla</td>
+<td>lámina con una sola pantalla registrada</td>
+<td>leve</td>
+</tr>
+<tr class="even">
+<td>C8 incongruente</td>
+<td>el niño se sale de su propio patrón en esa tarea frente a las demás RAN de la sesión (z robusta &gt; 4)</td>
+<td>leve</td>
+</tr>
+<tr class="odd">
+<td>CS contexto</td>
+<td>colegio × sesión × tarea con ≥ 20 % de casos graves</td>
+<td>marca</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qué encuentra</strong> (hoja 1 de <code>qc_ran_casos_v1.xlsx</code>):</p>
+<ul>
+<li>Confirma las sesiones rotas que ya conocíamos: láminas de 152/153/154 (95–98 % sin tiempo o imposibles), 2015/906 (100 %) y el fonema discreto de 2012/154.</li>
+<li>Añade incidencias nuevas: <strong>2010/189</strong>, láminas DIS-ESP 1891 y 1893 con un 45–48 % de tiempos imposibles (menos de 0,3 s por estímulo; es la «mitad de tiempos &lt; 1 s» ya anotada); <strong>2012/154</strong>, RAN de colores 528 sin ningún tiempo; <strong>2013/181 y 186</strong>, 39–58 % de casos graves en las láminas de colores y objetos.</li>
+<li>En las sesiones de M23, el discreto está limpio (&lt; 1 % grave, 1–4 % leve); las láminas tienen un 6–21 % de casos graves, casi todos ceros que la limpieza de M11 ya quitaba.</li>
+</ul>
+<p><strong>¿Cambian los resultados de M23?</strong> No.&nbsp;Con los casos graves y leves fuera (108 aplicaciones más) o quitando además los colegios × sesión dudosos (1.159 más), la interacción fonema × DL sigue igual (2010 discreto +0,14; 2011 discreto +0,15; láminas +0,07 a +0,12) y la AUC de la lista de fonema también (,70–,78).</p>
+<p><strong>Pero los ceros no son al azar</strong>, y esto importa más que las exclusiones:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sesión (lista de fonema)</th>
+<th>Ceros en DL</th>
+<th>Ceros en TE</th>
+<th>Ceros concentrados en pocos colegios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2010 · 155</td>
+<td>6,8 %</td>
+<td>9,7 %</td>
+<td>no</td>
+</tr>
+<tr class="even">
+<td>2011 · 156</td>
+<td>16,5 %</td>
+<td>11,1 %</td>
+<td>44 % de los ceros en 4 de 35 colegios</td>
+</tr>
+<tr class="odd">
+<td>2013 · 903</td>
+<td>28,3 %</td>
+<td>11,8 %</td>
+<td>54 % en 3 de 31 colegios</td>
+</tr>
+<tr class="even">
+<td>2013 · 628</td>
+<td>31,2 %</td>
+<td>23,0 %</td>
+<td>62 % en 6 de 33 colegios</td>
+</tr>
+</tbody>
+</table>
+<p>Hay dos mecanismos mezclados: fallos técnicos que afectan a colegios enteros en una sesión, y ceros que caen más en los niños con dislexia (posiblemente listas abandonadas o cortadas por el evaluador, que la plataforma guardaba como 0). Si se quitan sin más, se pierden los disléxicos más lentos y se atenúa la diferencia entre grupos. <strong>Puede ser parte de la razón por la que 2013 no muestra el efecto.</strong> Para el artículo y para los baremos: los ceros del primer tipo se tratan como ausentes; los del segundo, como dato informativo (p.&nbsp;ej., modelo de supervivencia o imputación múltiple con el grupo y los aciertos como predictores), con análisis de sensibilidad.</p>
+</section>
 <section id="mide-esto-la-capacidad-del-sistema-para-mejorar" class="level2">
 <h2 class="anchored" data-anchor-id="mide-esto-la-capacidad-del-sistema-para-mejorar">¿Mide esto la «capacidad del sistema para mejorar»?</h2>
 <p>Tal como se aplicó, <strong>no directamente</strong>. Cada niño hizo el experimento dos veces, en formatos distintos, así que mide sobre todo el estado del sistema: cuánto le cuesta la competencia fonológica. Con los datos y la plataforma hay tres maneras de acercarlo a la mejora, de menor a mayor coste:</p>
@@ -1711,7 +1828,7 @@ Lo esencial, sin estadística
 <li><strong>Facilitación frente a interferencia.</strong> En adultos, nombrar en bloque dibujos que comparten inicio acelera la producción <span class="citation" data-cites="wang2018blocked">(<a href="../referencias.html#ref-wang2018blocked" role="doc-biblioref">Wang et&nbsp;al. 2018</a>)</span>, al revés de lo que predice el marco. Nuestros niños van más lentos con la carga. Si los ítems están controlados, sería un hallazgo; conviene discutir por qué los niños de 4–6 años no se benefician de la preparación de la forma.</li>
 <li><strong>Fonema frente a sílaba.</strong> El marco supone que un fonema inicial activa más competidores que una sílaba (<span class="math inline">\(n_f &gt; n_s\)</span>). Pero una lista que comparte sílaba también comparte fonema. ¿Se calculó <span class="math inline">\(n\)</span> con un léxico infantil (p.&nbsp;ej. densidad de vecindad por inicio en ESPAL o un corpus infantil)? Con esas cifras, la ecuación 5 se podría contrastar cuantitativamente.</li>
 <li><strong>Qué es κ en el RAN.</strong> El coste de fonema correlaciona con el control de la interferencia en otros estudios <span class="citation" data-cites="bexkens2015inhibitory">(<a href="../referencias.html#ref-bexkens2015inhibitory" role="doc-biblioref">Bexkens, Wildenberg, y Tijms 2015</a>)</span>. ¿Distingue el marco entre inhibir competidores léxicos e inhibición general? Una tarea de inhibición no verbal de la plataforma (1863, CANUM) serviría de control.</li>
-<li><strong>2013.</strong> El gradiente desaparece entre sílaba y fonema en la plataforma nueva. ¿Se cambiaron las listas?</li>
+<li><strong>2013.</strong> El gradiente desaparece entre sílaba y fonema en la plataforma nueva. ¿Se cambiaron las listas? Además, en 2013 los ceros caen más en los disléxicos (28 % frente a 12 %): ¿se cortaba la tarea a los niños que no avanzaban?</li>
 <li><strong>κ = λ/(λ + π) es un cociente.</strong> Si λ y π bajan en la misma proporción, κ no cambia; para que κ baje en la dislexia, λ tiene que bajar más que π (o κ tiene un componente propio, como sugiere la «adaptación crónica» del marco). Convendría precisarlo en el anexo, porque es justo lo que el índice de la figura D intenta medir.</li>
 </ol>
 </section>
