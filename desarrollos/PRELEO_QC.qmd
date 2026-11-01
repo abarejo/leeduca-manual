@@ -10,7 +10,7 @@ search: false
 **Página de trabajo del grupo.** Solo datos agregados; los colegios no se nombran. Los umbrales están **en propuesta**: se cierran cuando el grupo apruebe esta primera distribución, antes de mirar ningún efecto. No aparece en el índice del libro: se llega desde [Efectos de Preleo](../preleo/datos.qmd) y desde la [página de efectos](PRELEO_EFECTOS.qmd). No citar ni difundir fuera del grupo.
 :::
 
-[← Volver a «Efectos de Preleo»](../preleo/datos.qmd)
+[← Volver a «Efectos de Preleo»](../preleo/datos.qmd) · Explicación de cada algoritmo: [Control de calidad por colegio: los algoritmos](../preleo/control-calidad.qmd)
 
 ## Para leer en dos minutos
 

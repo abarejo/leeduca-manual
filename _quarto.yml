@@ -183,6 +183,7 @@ book:
       chapters:
         - preleo/programa.qmd
         - preleo/datos.qmd
+        - preleo/control-calidad.qmd
   appendices:
     - informe-aula.qmd
     - consultas.qmd

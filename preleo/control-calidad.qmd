@@ -1,0 +1,134 @@
+# Control de calidad por colegio: los algoritmos
+
+::: {.callout-note appearance="minimal"}
+**Estado:** borrador (01/11/2026). Umbrales en propuesta, pendientes de cierre por el grupo. Los resultados de la primera aplicación están en la [página de desarrollo](../desarrollos/PRELEO_QC.qmd){.enlace-discreto}; aquí se explica **cómo** funciona cada algoritmo y **por qué** está hecho así. Script: `04_DICCIONARIO_PROCESADO_2026/scripts/R/qc_01_detectores_colegio.R`.
+:::
+
+## Para qué sirve
+
+Una evaluación en el aula puede salir mal por razones que no tienen nada que ver con lo que saben los niños: la plataforma se cae a mitad de sesión, el tiempo no se registra, un adulto ayuda, se aplica en grupo una tarea individual o una tabla se copia con una columna desplazada. Si esos datos entran en el análisis de Preleo, el efecto estimado mezcla el programa con los fallos de aplicación, y como Preleo se asigna **por colegio**, un solo colegio con datos rotos puede mover el resultado.
+
+Este capítulo describe un conjunto de **detectores de incongruencias**: algoritmos que miran, colegio por colegio y sesión por sesión, si los datos tienen la forma que deberían tener. No deciden quién sale del análisis; señalan dónde hay que mirar.
+
+## De dónde viene: el criterio de 2010
+
+En el análisis de Preleo de la cohorte 2010 se excluyeron colegios con una regla sencilla propuesta por P. J. López-Pérez: en cada colegio se ajusta la regresión de la lectura de palabras **trisílabas** sobre la de **bisílabas**; la pendiente debe ser positiva, porque el niño que lee mejor las palabras cortas lee mejor las largas. Si en un colegio sale negativa, «algo pasó» en la aplicación.
+
+La idea es buena y es la base de todo lo que sigue: **dos tareas que miden lo mismo deben ordenar a los niños igual dentro de cada colegio**. Tenía tres debilidades:
+
+1. **Inestabilidad.** Con 20–40 niños por colegio y bisílabas cerca del techo a partir de 2.º de primaria, una pendiente negativa puede salir por azar, y una positiva pero muy baja (un problema real) no salta.
+2. **Una sola variable.** Hay fallos que el par bisílabas–trisílabas no puede ver (tiempos sin registrar, filas copiadas, sesiones incompletas).
+3. **No se reportó**, y se decidió con los datos ya mirados. Un revisor puede objetar, con razón, que se eligieron los colegios que convenían.
+
+La generalización mantiene la idea y corrige las tres debilidades. En la primera aplicación, los tres colegios que la pendiente negativa habría excluido en 2010 (6.3) salen también con el algoritmo nuevo, y aparecen ocho más en 7.1–8.1 que la pendiente no detectaba.
+
+## Cinco reglas del procedimiento
+
+1. **A ciegas.** Los detectores se calculan sin saber qué colegios aplicaron Preleo: el script no lee la asignación. Así los criterios de calidad no pueden estar sesgados a favor ni en contra del programa.
+2. **Umbrales escritos antes de estimar efectos.** Se fijan, se aplican, el grupo mira la distribución de alertas (no los efectos) y se cierran. Cambiarlos después exige anotar el motivo en el registro de cambios.
+3. **La unidad es el colegio × sesión.** Un colegio puede tener una sesión defectuosa y las demás bien; se pierde la sesión, no el colegio. Se exige un mínimo de **12 alumnos**: por debajo, ninguna correlación es fiable.
+4. **Nada se borra.** Cada alerta queda en una tabla con su valor, su umbral y su comprobación. Antes de dar por buena una alerta grave se mira el dato bruto de la plataforma: si el fallo lo introdujo una matriz posterior, se corrige la matriz y el colegio no sale.
+5. **El efecto se estima tres veces** (ver [Tres muestras](#sec-tres-muestras)) y se informa de las tres.
+
+## Los detectores
+
+Los detectores se agrupan en cinco familias. Para cada uno se indica qué pregunta responde, cómo se calcula y qué umbral usa (*leve* / *grave*).
+
+### A. Consistencia interna: ¿ordenan igual las tareas que miden lo mismo?
+
+**A1 · Pares de tareas** (generalización directa del criterio de 2010). Se usan cuatro pares de tareas que deberían ordenar a los niños de forma muy parecida:
+
+| Par | Tarea x | Tarea y |
+|---|---|---|
+| Criterio de 2010 | palabras bisílabas | palabras trisílabas |
+| Ruta fonológica | palabras bisílabas | pseudopalabras bisílabas |
+| Conciencia fonológica | emparejar sílaba inicial | identificar fonema inicial |
+| Fluidez | velocidad de texto | TECLE |
+
+En cada colegio × sesión se calcula la **correlación de Spearman** del par ($r_1$, con $n_1$ niños) y se compara con la correlación de referencia de la misma cohorte y sesión ($r_0$, con $n_0$ niños) mediante la transformación de Fisher:
+
+$$
+z = \frac{\operatorname{atanh}(r_1) - \operatorname{atanh}(r_0)}{\sqrt{\dfrac{1}{n_1 - 3} + \dfrac{1}{n_0 - 3}}}
+$$
+
+Un $z$ muy negativo significa que en ese colegio el par ordena a los niños mucho peor que en el resto. Umbral: leve $z < -1{,}96$; grave $z < -2{,}58$, o bien $r_1 \le 0$ con un intervalo bootstrap (500 remuestreos) que deja fuera $r_0$.
+
+Tres decisiones de diseño:
+
+- **Correlación y no pendiente.** La pendiente depende de la escala y de la varianza de cada tarea; la correlación no, y tiene una distribución conocida para compararla.
+- **Spearman y no Pearson.** Las tareas tienen techos, suelos y valores extremos; Spearman solo usa el orden.
+- **Referencia intra-colegio.** $r_0$ no es la correlación de toda la cohorte, sino la correlación **dentro de los colegios**, agrupada: antes de calcularla se resta a cada niño la media de su colegio. La correlación total incluye las diferencias entre colegios (unos leen mejor que otros en las dos tareas) y sería un listón inalcanzable para una correlación calculada dentro de un solo colegio.
+
+Se guarda también la pendiente del criterio original, para comparar los dos.
+
+**A2 · Matriz de correlaciones.** Lo mismo que A1, pero con todas las tareas principales de la sesión (lectura, conciencia fonológica, RAN) a la vez: se calcula el $z$ de Fisher de cada correlación del colegio frente a la agrupada intra-colegio y se promedia. Detecta colegios en los que la batería entera «no se sostiene». Umbral: leve $< -1{,}5$; grave $< -2{,}5$.
+
+**A3 · Fiabilidad por colegio** (pendiente). El α de cada tarea en el colegio frente al α de la cohorte, con las respuestas ítem a ítem de la plataforma nueva.
+
+### B. Esfuerzo y proceso de respuesta: ¿respondió cada niño por su cuenta?
+
+**B2 · Vectores idénticos.** Porcentaje de niños del colegio con exactamente las mismas puntuaciones que otro niño en al menos cinco tareas, menos el porcentaje esperable en esa sesión (el de la cohorte entera). Con pocas tareas de rango corto, coincidir es normal; por eso se exige que haya cinco tareas y se resta la tasa de la cohorte. Umbral: leve > 10 puntos; grave > 25.
+
+**B3 · Perfectos improbables.** Porcentaje de niños con la puntuación máxima en alguna tarea en la que, en toda la cohorte, menos del 5 % la alcanza. Señala ayuda del adulto o tareas aplicadas en grupo. Umbral: leve > 20 %; grave > 40 %.
+
+**B1 · Respuestas demasiado rápidas** (pendiente). Tiempos por ítem por debajo de lo posible (300 ms en decisión, 1 s en lectura), con los tiempos ítem a ítem.
+
+### C. Evaluador
+
+**C1 · El evaluador como fuente de error** (pendiente). Proporción de varianza que explica el evaluador en tareas que deberían ser automáticas (letras, RAN). Importa porque los evaluadores están anidados en colegios y, por tanto, en la condición Preleo. Necesita el listado de evaluadores de cada curso.
+
+### D. Plausibilidad temporal y evolutiva: ¿tienen sentido los tiempos y la trayectoria?
+
+**D1 · Tiempos imposibles.** Porcentaje de registros de tiempo iguales o menores que cero, o mayores que diez veces la mediana de la tarea en esa sesión. Detecta tiempos no registrados y cambios de unidad (como el ×1000 de la plataforma antigua). Umbral: leve > 5 %; grave > 20 %. En el análisis, **un tiempo cero se trata como ausente**, no como el mejor tiempo posible.
+
+**D2 · Caídas entre trimestres.** Diferencia entre la media del colegio (en puntuaciones z) en una sesión y en la anterior, en los mismos niños y la misma tarea. Un colegio que retrocede medio punto típico de un trimestre a otro, cuando la cohorte avanza, tuvo probablemente una sesión mal aplicada. Umbral: leve $d < -0{,}5$; grave $d < -1$.
+
+**D3 · Estabilidad del orden.** Correlación de los mismos niños entre dos sesiones consecutivas de la misma tarea en el colegio, frente a la agrupada intra-colegio, con el mismo $z$ de Fisher que A1.
+
+D2 y D3 se calculan tarea a tarea y se resumen por colegio × sesión con la **mediana** entre tareas (con al menos dos): un colegio con un problema de aplicación se desvía en varias tareas; una tarea aislada que falla es un problema de la tarea, no del colegio, y queda en la tabla de detalle.
+
+### E. Distribución: ¿hay variación donde debería haberla?
+
+**E1 · Techo y suelo.** Diferencia, en puntos porcentuales, entre el porcentaje de niños del colegio en la puntuación máxima o mínima y el de la cohorte. Umbral: leve > 25; grave > 40.
+
+**E2 · Varianza colapsada.** Desviación típica del colegio dividida por la de la cohorte. Un aula donde casi todos tienen la misma puntuación sugiere un valor por defecto o una columna copiada. Umbral: leve < 0,40; grave < 0,25.
+
+**E3 · Filas duplicadas.** Número de pares de niños con el mismo vector de puntuaciones (≥ 5 tareas). Umbral: leve ≥ 1; grave ≥ 3.
+
+E1 y E2 también se resumen con la mediana entre tareas.
+
+### F. Pérdida de datos
+
+**F1 · Sesión incompleta.** Porcentaje de las tareas de la sesión que no tienen datos en el colegio. Umbral: leve > 30 %; grave > 60 %.
+
+**F2 · Pérdida diferencial** (pendiente). Si los niños que dejan de evaluarse partían de un nivel distinto según la condición Preleo, la comparación posterior está sesgada aunque los datos que quedan sean buenos.
+
+## Del detector a la decisión {#sec-tres-muestras}
+
+Cada colegio × sesión recibe un **índice de alertas** = número de alertas leves + 2 × número de graves. Con él se construyen tres muestras fijas:
+
+| Muestra | Qué contiene | Para qué sirve |
+|---|---|---|
+| **a · completa** | todos los datos | intención de tratar: nada se excluye |
+| **b · depurada** | sin los colegios × sesión con al menos una alerta grave confirmada frente al bruto, o con tres o más leves | la estimación «limpia» |
+| **c · ponderada** | todos los datos, con peso $1/(1 + \text{índice})$ | término medio: nadie sale, pero los datos dudosos pesan menos |
+
+Mientras una alerta grave no se ha comprobado en el bruto, cuenta como excluida en la muestra b (la opción conservadora).
+
+**Cómo se lee:** si el efecto de Preleo es el mismo en las tres muestras, el resultado no depende de la calidad de los datos y se puede defender. Si cambia, se informa del cambio y se explica qué colegios y qué alertas lo producen. En la primera aplicación, las tres coinciden salvo en letras a 5.2 en la cohorte 2014, donde una sesión tiene los tiempos en otra unidad.
+
+## Qué no hacen estos algoritmos
+
+- **No miden si un colegio aplicó bien Preleo.** La fidelidad de aplicación es otra cosa y entra en el análisis como dosis (rigor de aplicación, registros de uso), no como exclusión.
+- **No sustituyen la comprobación humana.** Un detector señala; la decisión la toma el grupo mirando el dato bruto.
+- **No son infalibles.** Con 12–40 niños por colegio, algún colegio sano dará una alerta por azar (con el umbral leve de A1, en torno a 1 de cada 40 colegios × sesión). Por eso cuenta más la coincidencia de varios detectores que uno aislado, y por eso existen las muestras a y c.
+
+## Dónde está cada cosa
+
+| Qué | Dónde |
+|---|---|
+| Script | `04_DICCIONARIO_PROCESADO_2026/scripts/R/qc_01_detectores_colegio.R` |
+| Resultados (con nombres de colegio, solo en el PC) | `DIAGNOSTICO/R/qc_01_detectores_R_v1.xlsx`: alertas, resumen por colegio con la columna «confirmada», flujo y umbrales |
+| Resultados agregados | [página de desarrollo del control de calidad](../desarrollos/PRELEO_QC.qmd){.enlace-discreto} |
+| Uso en el análisis del efecto | [página de desarrollo de los efectos](../desarrollos/PRELEO_EFECTOS.qmd){.enlace-discreto} · script `preleo_05_efecto_tres_cohortes.R` |
+| Protocolo y decisiones | documento del proyecto `QC_DETECTORES_INCONGRUENCIAS_v1.md` y registro de cambios del 01/11/2026 |
