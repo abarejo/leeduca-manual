@@ -94,7 +94,7 @@ Es una predicción concreta y comprobable con los datos:
 - **DL-B (leve):** exactitud normal al final de los 6 años; lentitud, y dificultades en ortografía u otros procesos.
 - **TR (transitoria):** retraso inicial que se cierra.
 
-Las tablas se calculan en el ordenador del proyecto con `scripts/R/m26_patrones_perfiles.R` (cohortes 2010–2013), que solo exporta agregados por grupo y momento, con un mínimo de 10 niños por celda. El script se ha probado con datos simulados de la misma estructura.
+Las tablas se calculan en el ordenador del proyecto con `scripts/R/m26_patrones_perfiles.R` (cohortes 2010–2013), que solo exporta agregados por grupo y momento, con un mínimo de 10 niños por celda.
 
 ```{r}
 #| include: false
@@ -102,6 +102,8 @@ dir_m26 <- file.path("..", "datos", "agregados", "M26")
 hay_m26 <- file.exists(file.path(dir_m26, "P1.csv"))
 GR <- c("DL-A" = "DL-A · grave", "DL-B" = "DL-B · leve", "TR" = "TR · transitoria", "INT" = "INT", "TE" = "TE · típica")
 lee <- function(f) utils::read.csv(file.path(dir_m26, f), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+CLAVE <- c("LEC_LETRAS", "LEC_SILABAS_SIMPLE", "LEC_SILABAS_COMPLEJA", "LEC_PAL_2sil", "LEC_PAL_3sil", "LEC_PSEUDO_2sil", "LEC_PSEUDO_3sil", "LEC_VEL_TEXTO",
+           "LEC_DECISION_ORTOGRAFICA", "LEC_LECT_COMPRENSIVA", "CF_SEGMENTACION_FONEMICA", "CF_SUPRESION_FONEMAS_TP", "RAN_COLORES", "RAN_NUMEROS", "HFON_MEMVERB_MEMORIA_VERBAL")
 ```
 
 ```{r}
@@ -112,12 +114,12 @@ if (!hay_m26) cat("::: {.callout-note appearance=\"minimal\"}\n**Pendiente de ej
 
 ```{r}
 #| label: fig-m26-mapa
-#| fig-cap: "Mapa de patrones: mediana del percentil de cada grupo (dentro de su cohorte y sesión) por tarea, medida y momento. Rojo, por debajo de la media; azul, por encima. Exactitud = aciertos; velocidad = tiempo invertido."
+#| fig-cap: "Mapa de patrones (tareas clave, 4–8 años): mediana del percentil de cada grupo (dentro de su cohorte y sesión) por tarea, medida y momento. Rojo, por debajo de la media; azul, por encima. Exactitud = aciertos; velocidad = tiempo invertido."
 #| fig-height: 9
 #| fig-width: 9
 #| eval: !expr hay_m26
 library(ggplot2)
-P1 <- lee("P1.csv"); P1 <- P1[P1$grupo %in% c("DL-A", "DL-B", "TR", "TE") & P1$medida %in% c("aciertos", "tiempo"), ]
+P1 <- lee("P1.csv"); P1$mom <- sprintf("%.1f", as.numeric(P1$mom)); P1 <- P1[P1$grupo %in% c("DL-A", "DL-B", "TR", "TE") & P1$medida %in% c("aciertos", "tiempo") & as.numeric(P1$mom) <= 8.3 & P1$tarea_canonica %in% CLAVE, ]
 P1$medida <- ifelse(P1$medida == "aciertos", "exactitud", "velocidad")
 P1$fila <- factor(paste0(P1$tarea_canonica, " · ", P1$medida))
 o <- unique(P1[order(P1$orden, P1$medida), "fila"]); P1$fila <- factor(P1$fila, levels = rev(o))
@@ -131,10 +133,10 @@ ggplot(P1, aes(mom, fila, fill = pr_mediana)) + geom_tile(colour = "white") + fa
 
 ```{r}
 #| label: fig-m26-exactitud-velocidad
-#| fig-cap: "Lectura de palabras y pseudopalabras: porcentaje de niños con exactitud por debajo del 90 % y porcentaje que lee con exactitud pero lento (≥ 90 % de aciertos y velocidad ≤ P25), por grupo y momento."
+#| fig-cap: "Lectura de palabras y pseudopalabras: porcentaje de niños con exactitud por debajo del 90 % y porcentaje que lee con exactitud pero lento (≥ 90 % de aciertos y velocidad ≤ P25), por grupo y momento. Sin 8.2 (incidencia: todos los grupos caen a la vez)."
 #| fig-height: 4
 #| eval: !expr hay_m26
-P4 <- lee("P4.csv"); P4 <- P4[P4$grupo %in% c("DL-A", "DL-B", "TR", "TE"), ]
+P4 <- lee("P4.csv"); P4$mom <- sprintf("%.1f", as.numeric(P4$mom)); P4 <- P4[P4$grupo %in% c("DL-A", "DL-B", "TR", "TE") & P4$mom != "8.2", ]
 P4 <- rbind(data.frame(grupo = P4$grupo, mom = P4$mom, panel = "Exactitud < 90 %", v = P4$pct_inexacto),
             data.frame(grupo = P4$grupo, mom = P4$mom, panel = "Exacto pero lento", v = P4$pct_exacto_y_lento))
 P4$grupo <- factor(GR[P4$grupo], levels = GR); niv <- unique(P4$mom[order(as.numeric(P4$mom))]); P4$m <- match(P4$mom, niv)
@@ -147,21 +149,35 @@ ggplot(P4, aes(m, v, colour = grupo)) + geom_line(linewidth = .8) + geom_point(s
 ```{r}
 #| label: fig-m26-grave-leve
 #| fig-cap: "¿Cuándo se distingue la dificultad grave de la leve? AUC de cada tarea y medida para separar DL-A de DL-B, por momento (0,5 = no separa). Las celdas en blanco no tienen datos o tienen menos de 10 niños por grupo."
-#| fig-height: 6
-#| fig-width: 8
+#| fig-height: 7
+#| fig-width: 9
 #| eval: !expr hay_m26
-P3 <- lee("P3.csv"); P3 <- P3[P3$comparacion == "DL-A frente a DL-B" & P3$medida %in% c("aciertos", "tiempo"), ]
+P3 <- lee("P3.csv"); P3$mom <- sprintf("%.1f", as.numeric(P3$mom)); P3 <- P3[P3$comparacion == "DL-A frente a DL-B" & P3$medida %in% c("aciertos", "tiempo") & as.numeric(P3$mom) <= 8.3 & P3$tarea_canonica %in% CLAVE, ]
 P3$medida <- ifelse(P3$medida == "aciertos", "exactitud", "velocidad")
 P3$fila <- paste0(P3$tarea_canonica, " · ", P3$medida); o <- unique(P3[order(P3$orden, P3$medida), "fila"]); P3$fila <- factor(P3$fila, levels = rev(o))
 P3$mom <- factor(P3$mom, levels = unique(P3$mom[order(as.numeric(P3$mom))]))
-ggplot(P3, aes(mom, fila, fill = auc)) + geom_tile(colour = "white") + geom_text(aes(label = sub("^0", "", sprintf("%.2f", auc))), size = 2.4) +
+ggplot(P3, aes(mom, fila, fill = auc)) + geom_tile(colour = "white") + geom_text(aes(label = sub("^0", "", sprintf("%.2f", auc))), size = 2.8) +
   scale_fill_gradient(low = "#F4F1EA", high = "#5E4FA2", limits = c(.5, 1), na.value = "white", name = "AUC") +
   labs(x = "Momento", y = NULL) + theme_minimal(base_size = 9) + theme(panel.grid = element_blank(), legend.position = "bottom")
 ```
 
-**Cómo leerlas.** Si Juan Luis tiene razón, en el mapa los niños DL-A aparecerán en rojo en la exactitud de la lectura de 6.3–7.1 y los DL-B no. En la segunda figura, la línea de DL-A seguirá alta en «exactitud < 90 %» al final de los 6 años, y la de DL-B estará arriba en «exacto pero lento». La tercera dirá en qué momentos y con qué tarea se separan mejor, que es lo útil para un diagnóstico temprano.
+### Primeros resultados (02/11/2026)
 
-**Cautela.** Los grupos se definen con la lectura de 6 a 11 años, así que en esas edades una parte de la diferencia es circular. Las diferencias a los 4–5 años y el contraste entre exactitud y velocidad, que no forman parte de la definición del grupo del mismo modo, son los más informativos.
+Con 2.754 niños de las cohortes 2010–2013 (114 graves, 303 leves, 557 con dificultad transitoria, 153 intermedios y 1.627 típicos), **los datos apoyan la idea de Juan Luis**:
+
+1. **La exactitud separa al grave del leve a los 6 años.** En la lectura de palabras y pseudopalabras, la exactitud mediana a 6.3 es del 11 % en el grupo grave, del 65 % en el leve y del 94 % en el típico. Casi todos los graves (97 %) siguen por debajo del 90 % de aciertos al final de los 6 años. Para distinguir grave de leve, la exactitud a 6.2–6.3 es lo que mejor funciona (AUC .80–.83 en palabras, pseudopalabras y sílabas complejas); la velocidad no los separa en ese momento.
+2. **El leve llega a la exactitud, pero no a la velocidad.** Hacia 7.1–7.3 el grupo leve alcanza una exactitud mediana del 88–90 %, y su diferencia con los típicos en exactitud se diluye (AUC de .92 a 6.3 a .58 a 8.1). En cambio, la velocidad lo separa de los típicos desde 6.2 y ya no deja de hacerlo (AUC .91–.98), igual que la decisión ortográfica (.83–.90) y el tiempo de lectura comprensiva (.94–.97). La proporción de leves que leen **con exactitud pero lento** sube del 7 % a 6.3 al 40 % a 8.1–8.3.
+3. **El grave también automatiza tarde, pero va un ciclo por detrás.** Su exactitud mediana llega al 81 % a 7.3 y al 88 % a 8.3; mientras tanto, su velocidad es la más baja. Es decir: en el grave falla primero el ciclo de la exactitud y después el de la automatización; en el leve, solo el segundo.
+4. **Antes de leer, la diferencia es pequeña.** A los 4–5 años, las tareas de conciencia fonológica, RAN, memoria y vocabulario separan poco al grave del leve (AUC .5–.66). Lo que más anticipa el grave es el conocimiento de letras (.64–.76) y, ya a 6.1–6.2, la segmentación y la supresión de fonemas (.75–.77).
+
+**Lectura clínica.** A los 6 años, un niño que todavía no lee con exactitud tiene más probabilidad de acabar en el grupo grave; uno que ya lee con exactitud pero lento, en el leve. Son dos ventanas distintas y dos tipos de ayuda: precisión en la decodificación antes, fluidez y ortografía después.
+
+**Cautelas de esta primera pasada.**
+
+- Las etiquetas se definen con la lectura de 6 a 11 años, así que una parte de estas diferencias es circular. Lo menos circular es el contraste entre exactitud y velocidad dentro del mismo grupo y lo que ocurre antes de los 6 años.
+- **A los 5 años y a 6.1, el tiempo de los graves es «mejor»** que el de los típicos (AUC por debajo de .5): leen pocos ítems y abandonan antes. La velocidad solo tiene sentido cuando hay exactitud.
+- **El momento 8.2 es una incidencia:** todos los grupos caen a la vez en exactitud, probablemente por un cambio de lista o de formato en esa sesión. Hay que revisarlo en el bruto.
+- El grupo grave es pequeño en las cohortes 2012 y 2013 (alrededor de 10 niños cada una).
 
 ## Cómo se analiza
 
@@ -208,7 +224,7 @@ ggplot(P3, aes(mom, fila, fill = auc)) + geom_tile(colour = "white") + geom_text
 
 | Qué | Quién |
 |---|---|
-| Acceso a los datos por niño: activar la virtualización del PC del proyecto o preparar una tabla seudonimizada | P. J. López-Pérez |
+| Revisar la incidencia de 8.2 en el bruto y repetir el análisis con grupos definidos a partir de 8 años (contra la circularidad) | P. J. López-Pérez |
 | Confirmar qué listas de palabras se repiten igual entre cursos | Equipo, con el diccionario maestro |
 | Acordar las hipótesis y el umbral de dominio (90 %) antes de los datos | J. L. Luque y grupo |
 | Simulación de potencia | P. J. López-Pérez |
