@@ -119,6 +119,29 @@ Las mismas fichas, ordenadas por edad y con un núcleo mínimo propuesto para ca
 - **G.** Fórmulas y código reproducible (R).
 - **H.** Glosario y referencias.
 
+## Qué estudios alimentan cada capítulo
+
+Los estudios de la [Agenda](agenda.qmd) no son un trabajo aparte del manual: cada uno responde a una pregunta de algún capítulo, y lo que aprendemos en ellos entra en el manual como dato, criterio o ficha. La tabla los asocia. Los estudios con enlace ya tienen página con análisis; los demás están planteados. Los capítulos 3, 5 y 6 tienen además su propio mapa por apartados.
+
+| Capítulo | Qué necesita | Estudios | Lo que ya aportan |
+|---|---|---|---|
+| 1–2 Fundamentos y marco teórico | Cómo se aprende a leer en español y qué distingue una dificultad grave de una leve | [M26](desarrollos/M26.qmd), [M10](desarrollos/M10.qmd), [M12](desarrollos/M12.qmd), [M23](desarrollos/M23.qmd), [M24](desarrollos/M24.qmd) | **M26:** la exactitud se domina durante 1.º; lo que separa la dificultad grave de la leve es la exactitud, y lo que separa cualquier dificultad de la lectura típica es la velocidad. **M24:** la conciencia fonológica de un curso predice la aritmética del siguiente |
+| 3 La plataforma ([mapa](plataforma.qmd)) | Qué registra la plataforma y con qué calidad | M2, M6, [M13](desarrollos/RADAR.qmd), [M15](desarrollos/RADAR.qmd) | Planteados; la aplicación es sobre todo individual con evaluador |
+| 4 Estudio normativo | Muestra, colegios, condición Preleo y limpieza | [M8](desarrollos/M8.qmd), [M18](desarrollos/M18.qmd), [M22](desarrollos/M22.qmd) | **M8:** tres escenarios de reutilización de los datos según los consentimientos. **M22:** qué comunidades pueden compartir baremo. Fidelidad de Preleo en [su página](preleo/fidelidad.qmd) |
+| 5 Método ([mapa](metodo-psicometrico.qmd)) | Puntuaciones, fiabilidad, validez, baremos, cambio y equidad | M1–M7, [M13–M17](desarrollos/RADAR.qmd), [M19](desarrollos/M19.qmd), [M25](desarrollos/M25.qmd) | Ver el mapa del capítulo 5 |
+| 6 Resultados globales ([mapa](resultados-globales.qmd)) | Estructura, invarianza y estabilidad | M1, M6, M9, [M14](desarrollos/RADAR.qmd), [M26](desarrollos/M26.qmd) | Estabilidad por familia de tareas; redes exploratorias por edad |
+| 7–18 Fichas por dominio | Fiabilidad, validez y baremo de cada tarea | M2, M3; RAN: [M11](desarrollos/M11.qmd), [M23](desarrollos/M23.qmd); rima: [M12](desarrollos/M12.qmd); numérica: [M24](desarrollos/M24.qmd); lectura de palabras: [M26](desarrollos/M26.qmd) | **M11:** curva de desarrollo del RAN de 4 a 8 años. **M23:** la lista de fonema es la versión del RAN de objetos que mejor discrimina a los 5–6 años. **M26:** porcentaje de niños que dominan la exactitud en cada momento |
+| 19 Niveles de certeza | Qué significa cada nivel y cuánto se mantiene | [M5](desarrollos/M5.qmd), [M10](desarrollos/M10.qmd), [M17](desarrollos/RADAR.qmd), [M26](desarrollos/M26.qmd) | **M26:** los grupos definidos solo con la lectura de 8 años coinciden solo en parte con las etiquetas de certeza |
+| 20 Cribado a los 4–5 años | Índices de precursores y puntos de corte | [M5](desarrollos/M5.qmd), [M11](desarrollos/M11.qmd), [M16](desarrollos/RADAR.qmd), [M17](desarrollos/RADAR.qmd) | Planteados |
+| 21 Identificación y confirmación | Qué medir a los 6–7 años y cómo confirmar a los 8 | [M26](desarrollos/M26.qmd), [M10](desarrollos/M10.qmd), [M5](desarrollos/M5.qmd) | **M26:** la velocidad a 7.1 identifica la dificultad posterior (AUC .84); la exactitud a 6.3–7.1 orienta la gravedad |
+| 22 Seguimiento del progreso | Cuándo un cambio es real e importante | [M4+M7](desarrollos/M4M7.qmd), [M19](desarrollos/M19.qmd), [M25](desarrollos/M25.qmd), [M26](desarrollos/M26.qmd) | Cambio fiable en letras y velocidad. **M26:** en 1.º la mitad de los niños en riesgo sale al trimestre siguiente; desde 2.º el riesgo es más estable |
+| 23 Preleo | Efectos del programa y cómo leer las puntuaciones en sus centros | [M18](desarrollos/M18.qmd), [M19](desarrollos/M19.qmd) | Detectores de incongruencias y propuesta de fidelidad como dosis |
+| 24 Casos y EEG/fNIRS | Casos ilustrativos y validación neurofisiológica | Sin estudio en la Agenda | Matrices EEG de 2010 y 2013 |
+| Anexo A Baremos | Normas por momento que agrupen cohortes | M3, [M4](desarrollos/M4M7.qmd), [M16](desarrollos/RADAR.qmd), [M22](desarrollos/M22.qmd) | Baremos empíricos por momento y cohorte |
+| Anexo F Informe | Qué recibe el centro y la familia | [M19](desarrollos/M19.qmd), [M25](desarrollos/M25.qmd) | Prototipo de informe de aula; probabilidad de éxito en lugar de etiqueta de riesgo |
+
+Dos estudios quedan fuera de los capítulos: [M20](desarrollos/M20.qmd), que lleva los datos a la docencia, y [M8](desarrollos/M8.qmd), que además de alimentar el capítulo 4 es un artículo de datos para todo el grupo.
+
 ## Plantilla de la ficha por tarea
 
 Cada ficha ocupa de 4 a 6 páginas y tiene siempre los mismos diez apartados, para comparar tareas de un vistazo. Se genera desde el diccionario maestro y los guiones de análisis: las cifras no se copian a mano.

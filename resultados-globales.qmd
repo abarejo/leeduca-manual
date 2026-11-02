@@ -19,6 +19,19 @@ A <- C[C$clase == "A", ]
 
 **En una frase.** Este capítulo da la visión de conjunto que no cabe en ninguna ficha: qué tareas tienen hoy calidad suficiente, cuánto se mantienen las diferencias entre niños de un trimestre a otro y de un curso a otro, y cómo se organizan las habilidades a cada edad.
 
+## Mapa del capítulo
+
+| Apartado | Qué responde | Estado | Estudio que lo desarrolla |
+|---|---|---|---|
+| 6.1 Tareas de clase A | Qué tareas tienen hoy calidad suficiente para una ficha completa | Tabla de las 32 tareas de clase A | M2, [M14](desarrollos/RADAR.qmd) (una escala de decodificación de 4 a 11 años) |
+| 6.2 Estabilidad longitudinal | Cuánto se mantienen las diferencias entre niños | Estabilidad por familia y separación entre evaluaciones; estabilidad del riesgo trimestre a trimestre en [M26](desarrollos/M26.qmd) | [M4+M7](desarrollos/M4M7.qmd), [M26](desarrollos/M26.qmd) |
+| 6.3 Estructura de las habilidades | Cómo se organizan las habilidades a cada edad | Redes exploratorias por edad; análisis factorial confirmatorio pendiente | M1 (redes del desarrollo lector), M9 (modelos dinámicos), [M14](desarrollos/RADAR.qmd) |
+| 6.4 Invarianza | Si las tareas miden igual por sexo, formato y periodo | TECLE papel–plataforma y predicción diferencial en letras; resto pendiente | M6, [M22](desarrollos/M22.qmd) |
+| Los dos ciclos de la lectura | Cuándo se domina la exactitud y cuándo se automatiza | Resultados y borrador de artículo | [M26](desarrollos/M26.qmd) |
+
+Los estudios con enlace ya tienen página con análisis; los demás están planteados en la [Agenda](agenda.qmd).
+
+
 ## 6.1 Tareas de clase A
 
 Hoy hay `r nrow(A)` tareas de clase A: fiabilidad y muestra suficientes, sin avisos pendientes (criterios en [Límites y calidad de los datos](limites.qmd#sec-clases)). Son las que tendrán ficha completa y baremo en la primera versión del manual.
