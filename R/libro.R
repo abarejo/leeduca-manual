@@ -46,13 +46,18 @@ tablas_completas <- function(ficha) {
 }
 
 # Paleta y tema LEEDUCA (validados para daltonismo; los mismos que en los scripts de análisis)
-PAL <- c(mar = "#008FA3", coral = "#D64545", anil = "#5E4FA2", ocre = "#B07A10", tinta = "#22223B", gris = "#8D8F99",
-         rejilla = "#E6E3DC", papel = "#FBFAF7")
+# 02/11/2026: los nombres antiguos se conservan, pero apuntan a la paleta del grupo (mar = azul, coral = naranja,
+# anil = verde oscuro, ocre = amarillo oscuro). Paleta anterior: mar #008FA3, coral #D64545, anil #5E4FA2, ocre #B07A10.
+PAL <- c(mar = "#2689B7", coral = "#E57813", anil = "#7C8710", ocre = "#C9920E", tinta = "#22223B", gris = "#888888",
+         rejilla = "#E4E1D6", papel = "#F5F4EF")
 # Paleta del grupo LEEDUCA (02/11/2026): colores de la web (leeduca.es, verde #ABBB10) y de las presentaciones de
 # J. L. Luque (azul de títulos #2689B7, naranja de cabecera #E57813, amarillo #F1B115, fondo crema #F5F4EF).
 # Para figuras nuevas; acompañar siempre el color con forma, rótulo o tipo de línea (accesibilidad).
 PAL_GRUPO <- c(azul = "#2689B7", verde = "#ABBB10", verde_osc = "#7C8710", naranja = "#E57813", amarillo = "#F1B115",
                crema = "#F5F4EF", tinta = "#22223B", gris = "#888888", rejilla = "#E4E1D6")
+# Paleta categórica del grupo: predeterminada para todos los ggplot del libro (colores discretos)
+PAL_CAT <- c("#2689B7", "#E57813", "#7C8710", "#F1B115", "#22223B", "#ABBB10", "#888888", "#1F6F96")
+options(ggplot2.discrete.colour = PAL_CAT, ggplot2.discrete.fill = PAL_CAT)
 tema_grupo <- function(base = 11) {
   theme_minimal(base_size = base) +
     theme(panel.background = element_rect(fill = PAL_GRUPO[["crema"]], colour = NA), plot.background = element_rect(fill = "white", colour = NA),

@@ -115,7 +115,7 @@ o <- unique(P1[order(P1$orden, P1$medida), "fila"]); P1$fila <- factor(P1$fila, 
 P1$grupo <- factor(GR[P1$grupo], levels = GR)
 P1$mom <- factor(P1$mom, levels = unique(P1$mom[order(as.numeric(P1$mom))]))
 ggplot(P1, aes(mom, fila, fill = pr_mediana)) + geom_tile(colour = "white") + facet_wrap(~grupo, nrow = 1) +
-  scale_fill_gradient2(low = "#D64545", mid = "#F4F1EA", high = "#2B7BB9", midpoint = 50, limits = c(0, 100), name = "Percentil") +
+  scale_fill_gradient2(low = "#E57813", mid = "#F5F4EF", high = "#2689B7", midpoint = 50, limits = c(0, 100), name = "Percentil") +
   labs(x = "Momento (edad.trimestre)", y = NULL) + theme_minimal(base_size = 9) +
   theme(panel.grid = element_blank(), axis.text.x = element_text(angle = 90, vjust = .5), legend.position = "bottom")
 ```
@@ -130,7 +130,7 @@ P4 <- rbind(data.frame(grupo = P4$grupo, mom = P4$mom, panel = "Exactitud < 90 %
             data.frame(grupo = P4$grupo, mom = P4$mom, panel = "Exacto pero lento", v = P4$pct_exacto_y_lento))
 P4$grupo <- factor(GR[P4$grupo], levels = GR); niv <- unique(P4$mom[order(as.numeric(P4$mom))]); P4$m <- match(P4$mom, niv)
 ggplot(P4, aes(m, v, colour = grupo)) + geom_line(linewidth = .8) + geom_point(size = 1.8) + facet_wrap(~panel) +
-  scale_colour_manual(values = c("#D64545", "#B07A10", "#5E4FA2", "#008FA3")) +
+  scale_colour_manual(values = c("#E57813", "#C9920E", "#7C8710", "#2689B7")) +
   scale_x_continuous("Momento", breaks = seq_along(niv), labels = niv) + scale_y_continuous("% de niños", limits = c(0, 100)) +
   theme_minimal(base_size = 10) + theme(legend.position = "bottom", legend.title = element_blank(), panel.grid.minor = element_blank())
 ```
@@ -146,7 +146,7 @@ P3$medida <- ifelse(P3$medida == "aciertos", "exactitud", "velocidad")
 P3$fila <- paste0(P3$tarea_canonica, " · ", P3$medida); o <- unique(P3[order(P3$orden, P3$medida), "fila"]); P3$fila <- factor(P3$fila, levels = rev(o))
 P3$mom <- factor(P3$mom, levels = unique(P3$mom[order(as.numeric(P3$mom))]))
 ggplot(P3, aes(mom, fila, fill = auc)) + geom_tile(colour = "white") + geom_text(aes(label = sub("^0", "", sprintf("%.2f", auc))), size = 2.8) +
-  scale_fill_gradient(low = "#F4F1EA", high = "#5E4FA2", limits = c(.5, 1), na.value = "white", name = "AUC") +
+  scale_fill_gradient(low = "#F5F4EF", high = "#2689B7", limits = c(.5, 1), na.value = "white", name = "AUC") +
   labs(x = "Momento", y = NULL) + theme_minimal(base_size = 9) + theme(panel.grid = element_blank(), legend.position = "bottom")
 ```
 

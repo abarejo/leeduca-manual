@@ -1,12 +1,12 @@
 /*-- scss:defaults --*/
-$primary: #007F91;
+$primary: #2689B7;
 $body-color: #22223B;
 $body-bg: #FFFFFF;
-$link-color: #007F91;
+$link-color: #1F6F96;
 $font-family-sans-serif: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
 $headings-font-family: "Literata", Georgia, serif;
 $headings-font-weight: 650;
-$code-color: #5E4FA2;
+$code-color: #6B7410;
 
 /*-- scss:rules --*/
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,650&display=swap');
@@ -14,9 +14,9 @@ body { font-size: 1.02rem; line-height: 1.6; }
 h1.title { letter-spacing: -0.01em; }
 table { font-variant-numeric: tabular-nums; font-size: .92rem; }
 .table > :not(caption) > * > * { padding: .35rem .5rem; }
-details { margin: .4rem 0; border: 1px solid #E6E3DC; border-radius: 8px; padding: .4rem .8rem; }
+details { margin: .4rem 0; border: 1px solid #E4E1D6; border-radius: 8px; padding: .4rem .8rem; }
 details summary { cursor: pointer; font-weight: 700; }
-details summary code { font-weight: 400; font-size: .78rem; color: #8D8F99; }
+details summary code { font-weight: 400; font-size: .78rem; color: #888888; }
 .sidebar-title { font-family: "Literata", Georgia, serif; }
 
 /* tablas anchas: se desplazan dentro de su caja, sin invadir el índice lateral */
@@ -25,11 +25,11 @@ details { overflow-x: auto; }
 
 /* guía de las fichas: directorio por dominio */
 .fichas-dir { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.2rem 0 2rem; }
-.fichas-grupo { border: 1px solid #E6E3DC; border-radius: 10px; padding: .7rem 1rem .4rem; background: #FBFAF7; }
+.fichas-grupo { border: 1px solid #E4E1D6; border-radius: 10px; padding: .7rem 1rem .4rem; background: #F5F4EF; }
 .fichas-grupo h3 { font-size: 1.05rem; margin: .1rem 0 .5rem; border: none; }
 .fichas-grupo ul { padding-left: 1.1rem; margin-bottom: .4rem; font-size: .93rem; }
 .fichas-grupo li { margin-bottom: .15rem; }
-.fd-meta { color: #8D8F99; font-size: .8rem; white-space: nowrap; }
+.fd-meta { color: #888888; font-size: .8rem; white-space: nowrap; }
 
 /* enlace discreto de la Agenda a las páginas de desarrollo (desarrollos/): no cambia el título; se ve al pasar el ratón */
 a.enlace-discreto, a.enlace-discreto:visited { color: inherit; text-decoration: none; }
