@@ -1103,7 +1103,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>6.3 Estructura de las habilidades</td>
 <td>Cómo se organizan las habilidades a cada edad</td>
-<td>Redes exploratorias por edad; análisis factorial confirmatorio pendiente</td>
+<td>Redes exploratorias por edad; análisis factorial confirmatorio por edad (02/11): exactitud y fluidez se separan desde los 7 años</td>
 <td>M1 (redes del desarrollo lector), M9 (modelos dinámicos), <a href="./desarrollos/RADAR.html">M14</a></td>
 </tr>
 <tr class="even">
@@ -1612,7 +1612,197 @@ Figura&nbsp;6.1: Estabilidad mediana entre dos aplicaciones de la misma tarea se
 <section id="estructura-de-las-habilidades" class="level2">
 <h2 class="anchored" data-anchor-id="estructura-de-las-habilidades">6.3 Estructura de las habilidades</h2>
 <p><strong>Lo que hay.</strong> Un análisis exploratorio de redes por edad (modelos gráficos gaussianos) muestra cómo se organizan las tareas a los 4, 5, 6 y 7 años y cómo se densifica la red al aprender a leer (ver <a href="./agrupacion.html">Cómo se agrupan las tareas</a>).</p>
-<p><strong>Pendiente.</strong> Un análisis factorial confirmatorio por edad con cuatro factores esperados (precursores, decodificación, fluidez y comprensión), con las tareas de clase A y B. Se hará en el ordenador del proyecto con los datos por niño, y se contrastará con las redes de M1.</p>
+<p><strong>Análisis factorial confirmatorio por edad (02/11/2026).</strong> Con <code>cap6_estructura_cfa_v1.R</code> se ajustaron, en cada edad de 4 a 8 años, tres modelos con las tareas de clase A del <strong>seguimiento trimestral</strong> (sin las evaluaciones en papel ni en tabletas): un factor general (M1), los factores esperados del manual con al menos dos indicadores (M2: conciencia fonológica, conocimiento alfabético, exactitud de decodificación y fluidez; comprensión y vocabulario no llegaron a dos indicadores) y el mismo modelo con exactitud y fluidez unidas (M3). Los indicadores son puntuaciones normales dentro de cohorte y sesión, promediadas por niño en el curso (lavaan, MLR con información completa).</p>
+<div class="cell">
+<div id="tbl-cfa" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cfa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6.3: Ajuste de los modelos factoriales por edad. CFI y RMSEA robustos; SRMR. A los 4 años solo hay tres indicadores de conciencia fonológica (modelo saturado) y a los 5 años la escasa cobertura conjunta de algunas tareas hace inestables los índices robustos: se dan solo como orientación.
+</figcaption>
+<div aria-describedby="tbl-cfa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 35%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Edad</th>
+<th style="text-align: left;">Modelo</th>
+<th style="text-align: right;">Factores</th>
+<th style="text-align: right;">Indicadores</th>
+<th style="text-align: right;">Niños</th>
+<th style="text-align: right;">CFI</th>
+<th style="text-align: right;">RMSEA</th>
+<th style="text-align: right;">SRMR</th>
+<th style="text-align: right;">BIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">M1 · un factor</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">3.388</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">0,000</td>
+<td style="text-align: right;">0,156</td>
+<td style="text-align: right;">54.996</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">M2 · factores esperados</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">3.388</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">0,000</td>
+<td style="text-align: right;">0,170</td>
+<td style="text-align: right;">52.522</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">M3 · exactitud y fluidez unidas</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">3.388</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">0,000</td>
+<td style="text-align: right;">0,172</td>
+<td style="text-align: right;">53.893</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">M1 · un factor</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">2.774</td>
+<td style="text-align: right;">0,844</td>
+<td style="text-align: right;">0,145</td>
+<td style="text-align: right;">0,055</td>
+<td style="text-align: right;">74.527</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">M2 · factores esperados</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">2.774</td>
+<td style="text-align: right;">0,938</td>
+<td style="text-align: right;">0,093</td>
+<td style="text-align: right;">0,045</td>
+<td style="text-align: right;">69.367</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">M3 · exactitud y fluidez unidas</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">2.774</td>
+<td style="text-align: right;">0,870</td>
+<td style="text-align: right;">0,133</td>
+<td style="text-align: right;">0,044</td>
+<td style="text-align: right;">73.539</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">M1 · un factor</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1.678</td>
+<td style="text-align: right;">0,773</td>
+<td style="text-align: right;">0,186</td>
+<td style="text-align: right;">0,115</td>
+<td style="text-align: right;">45.236</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">M2 · factores esperados</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1.678</td>
+<td style="text-align: right;">0,936</td>
+<td style="text-align: right;">0,100</td>
+<td style="text-align: right;">0,044</td>
+<td style="text-align: right;">41.191</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">M3 · exactitud y fluidez unidas</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1.678</td>
+<td style="text-align: right;">0,795</td>
+<td style="text-align: right;">0,177</td>
+<td style="text-align: right;">0,112</td>
+<td style="text-align: right;">44.871</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">M1 · un factor</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.090</td>
+<td style="text-align: right;">0,799</td>
+<td style="text-align: right;">0,172</td>
+<td style="text-align: right;">0,113</td>
+<td style="text-align: right;">25.246</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">M2 · factores esperados</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.090</td>
+<td style="text-align: right;">0,931</td>
+<td style="text-align: right;">0,103</td>
+<td style="text-align: right;">0,042</td>
+<td style="text-align: right;">23.908</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">M3 · exactitud y fluidez unidas</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.090</td>
+<td style="text-align: right;">0,822</td>
+<td style="text-align: right;">0,163</td>
+<td style="text-align: right;">0,111</td>
+<td style="text-align: right;">25.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-dec-flu" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dec-flu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="resultados-globales_files/figure-html/fig-dec-flu-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;6.2: Correlación del factor de exactitud de decodificación con la fluidez y con la conciencia fonológica (modelo M2) según la edad. Exactitud y fluidez son casi la misma habilidad a los 5 y 6 años y se separan desde los 7. Las barras son ±2 errores típicos."><img src="resultados-globales_files/figure-html/fig-dec-flu-1.png" class="img-fluid figure-img" width="624"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dec-flu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.2: Correlación del factor de exactitud de decodificación con la fluidez y con la conciencia fonológica (modelo M2) según la edad. Exactitud y fluidez son casi la misma habilidad a los 5 y 6 años y se separan desde los 7. Las barras son ±2 errores típicos.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Lo que dicen.</strong> Desde los 6 años, el modelo con los factores esperados ajusta claramente mejor que un factor general (a los 6 años, CFI .94 frente a .84; a los 7 y 8, .93–.94 frente a .77–.80), con un RMSEA todavía algo alto (.09–.10) que mejorará al añadir comprensión y otras tareas. Las cargas son altas: exactitud .62–.95, fluidez .65–.94, conciencia fonológica .64–.87.</p>
+<p>El resultado más interesante es la relación entre <strong>exactitud y fluidez</strong>. A los 5 y 6 años sus factores correlacionan .98 y .94: son prácticamente la misma habilidad, porque leer con exactitud y leer deprisa todavía van juntos. A los 7 y 8 años la correlación baja a .75 y .74, y separarlas mejora mucho el ajuste (CFI .93 frente a .80 si se unen). Es la huella estructural de los <strong>dos ciclos de la lectura</strong> que describe <a href="./desarrollos/M26.html">M26</a>: cuando la mayoría ya lee con exactitud, las diferencias entre niños pasan a estar en la automatización. La conciencia fonológica se va desligando también de la lectura con la edad (con la exactitud, de .82 a los 6 años a .66–.69 a los 7–8; con la fluidez, de .75 a .56).</p>
+<p><strong>Pendiente.</strong> Añadir comprensión, vocabulario y denominación rápida cuando tengan indicadores suficientes; repetir por cohorte y comprobar la invarianza entre edades (M14); contrastar con las redes de M1.</p>
 </section>
 <section id="invarianza" class="level2">
 <h2 class="anchored" data-anchor-id="invarianza">6.4 Invarianza</h2>
@@ -1625,10 +1815,10 @@ Figura&nbsp;6.1: Estabilidad mediana entre dos aplicaciones de la misma tarea se
 <div id="fig-dos-ciclos-rg" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Infografía con dos paneles de líneas por grupo y tres tarjetas de conclusiones.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dos-ciclos-rg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/infografias/dos_ciclos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;6.2: Los dos ciclos de la lectura (M26): dominio de la exactitud y efecto de longitud por grupo de lectura a los 8 años."><img src="figuras/infografias/dos_ciclos.png" class="img-fluid figure-img" alt="Infografía con dos paneles de líneas por grupo y tres tarjetas de conclusiones."></a>
+<a href="figuras/infografias/dos_ciclos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;6.3: Los dos ciclos de la lectura (M26): dominio de la exactitud y efecto de longitud por grupo de lectura a los 8 años."><img src="figuras/infografias/dos_ciclos.png" class="img-fluid figure-img" alt="Infografía con dos paneles de líneas por grupo y tres tarjetas de conclusiones."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dos-ciclos-rg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;6.2: Los dos ciclos de la lectura (M26): dominio de la exactitud y efecto de longitud por grupo de lectura a los 8 años.
+Figura&nbsp;6.3: Los dos ciclos de la lectura (M26): dominio de la exactitud y efecto de longitud por grupo de lectura a los 8 años.
 </figcaption>
 </figure>
 </div>
