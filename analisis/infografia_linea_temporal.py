@@ -57,7 +57,7 @@ for i, coh in enumerate(COH):
         if dd.empty: continue
         ed = c - coh; x = x0 + j * cw + 0.5
         if c == 2020: fc, ec, txt = NARANJA, NARANJA, "TECLE\nen papel"
-        elif c == 2021: fc, ec, txt = AMARILLO, AMARILLO, "Batería\n2021/22"
+        elif c == 2021: fc, ec, txt = AMARILLO, AMARILLO, "Tabletas,\ntiempo límite"
         else: fc, ec, txt = AZUL, AZUL, None
         box = FancyBboxPatch((x, y), cw - 1.0, rh - 1.6, boxstyle="round,pad=0,rounding_size=1.1",
                              facecolor=fc if c >= 2020 else "white", edgecolor=ec, linewidth=1.6)
@@ -83,8 +83,8 @@ ax.text(9.5, ly, "Seguimiento trimestral en la plataforma (punto lleno = trimest
 ax.add_patch(FancyBboxPatch((66, ly - 1.4), 5, 2.8, boxstyle="round,pad=0,rounding_size=0.8", facecolor=NARANJA, edgecolor=NARANJA))
 ax.text(72.5, ly, "Feb. 2021: TECLE en papel", fontsize=8.8, color=TINTA, va="center")
 ax.add_patch(FancyBboxPatch((95, ly - 1.4), 5, 2.8, boxstyle="round,pad=0,rounding_size=0.8", facecolor=AMARILLO, edgecolor=AMARILLO))
-ax.text(101.5, ly, "2021/22: comprensión, decisión\nléxica, velocidad, matemáticas", fontsize=8.8, color=TINTA, va="center", linespacing=1.1)
-ax.text(127, 66.6, "Fuente: tabla larga v2 (agregados del capítulo 4) y asignación Preleo v5", fontsize=7.5, color=GRIS, ha="right", va="center")
+ax.text(101.5, ly, "2021/22: plataforma en tabletas, tareas\ncon tiempo límite (comprensión, velocidad…)", fontsize=8.8, color=TINTA, va="center", linespacing=1.1)
+ax.text(127, 66.6, "Fuente: tabla larga v2 (agregados del capítulo 4) y asignación Preleo v6 (condición solo en el seguimiento trimestral)", fontsize=7.5, color=GRIS, ha="right", va="center")
 for ext in ("svg", "png"):
     fig.savefig(os.path.join(OUT, f"linea_temporal.{ext}"), dpi=200 if ext == "png" else None, facecolor="white")
 print("OK", OUT)
