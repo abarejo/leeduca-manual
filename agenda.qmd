@@ -157,12 +157,26 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Emparejamiento por puntuación de propensión, ANCOVA con interacción intervención × riesgo y regresión cuantílica (τ = .10–.90) con corrección FDR; después, réplica en las cohortes 2013 (sin Preleo) y 2014 (con Preleo) en los mismos colegios y análisis dosis-respuesta con la fidelidad [@stanovich1986matthew; @share1995phonological].
 - **Revistas posibles:** *Journal of School Psychology*, *Reading and Writing*, *Learning and Individual Differences*.
 
-### [M28 · Predicción temprana de la dificultad lectora persistente (L2 y L3)](desarrollos/M28.qmd){.enlace-discreto}
+### [M28A · Predicción temprana de la dificultad lectora persistente (L2)](desarrollos/M28.qmd#sec-m28a){.enlace-discreto}
 
-- **Pregunta:** ¿Desde cuándo y con qué precisión se predice la dificultad lectora persistente con las tareas de la plataforma, y qué añaden otros dominios a la conciencia fonológica, las letras y el RAN? Dos artículos acordados el 14/10/2026: L2 (predicción principal) y L3 (perfil multidimensional).
-- **Datos:** Cohortes 2010–2013; precursores a los 4 y 5 años y lectura al empezar 1.º; criterio, la etiqueta de certeza DL del manual (dificultad en dos o más cursos de 6 a 8 años).
-- **Método:** Regresión logística validada dejando fuera una cohorte cada vez, calibración, curvas de decisión y comparación con *gradient boosting*; incremento del AUC por dominio en L3; protocolo TRIPOD.
-- **Revistas posibles:** *Scientific Studies of Reading*, *Journal of School Psychology*, *Annals of Dyslexia*; L3, *Learning and Individual Differences*.
+- **Pregunta:** ¿Desde cuándo y con qué precisión predicen las tareas de la plataforma la dificultad lectora persistente? Artículo principal de predicción (L2), acordado el 14/10/2026; sustituye al borrador de 2021.
+- **Datos:** Cohortes 2010–2013; conciencia fonológica, letras y RAN a los 4 y 5 años y lectura al empezar 1.º; criterio, la etiqueta de certeza DL del manual (dificultad en dos o más cursos de 6 a 8 años).
+- **Método:** Regresión logística validada dejando fuera una cohorte cada vez, calibración, curvas de decisión y comparación con *gradient boosting*; protocolo TRIPOD.
+- **Revistas posibles:** *Scientific Studies of Reading*, *Journal of School Psychology*, *Annals of Dyslexia*.
+
+### [M28B · Qué añaden otros dominios a la predicción (L3)](desarrollos/M28.qmd#sec-m28b){.enlace-discreto}
+
+- **Pregunta:** Sobre la conciencia fonológica, las letras y el RAN, ¿aporta algo el lenguaje oral, el número, la memoria verbal, el razonamiento, las funciones ejecutivas o la atención visual? Artículo multidimensional (L3).
+- **Datos:** Los de M28A más el resto de tareas de 5 años.
+- **Método:** Incremento del AUC por dominio con la misma validación; aprendizaje automático con las nuevas etiquetas (propuesta: lo lidera Andrés).
+- **Revistas posibles:** *Learning and Individual Differences*, *Annals of Dyslexia*, *Reading and Writing*.
+
+### [M29 · El juicio del docente frente a LEEDUCA (L1)](desarrollos/M29.qmd){.enlace-discreto}
+
+- **Pregunta:** ¿Predice el juicio del docente, recogido antes de conocer los resultados de la plataforma, la dificultad lectora tan bien como LEEDUCA? ¿Qué se gana combinándolos y hay sesgo por nivel sociocultural?
+- **Datos:** Cuestionario docente de 9 ítems (2018): 477 niños de 20 clases a los 4 años (cohorte 2013) y 264 de 11 clases a los 7 (cohorte 2010); lectura a los 6 y a los 10 años.
+- **Método:** Fiabilidad de la escala docente, modelos multinivel con la clase como efecto aleatorio, AUC con validación cruzada de cada fuente y de su combinación, regla «cualquiera de los dos».
+- **Revistas posibles:** *Education in the Knowledge Society* (versión en español), *Annals of Dyslexia*, *Learning and Individual Differences*.
 
 ## Cómo aprovecharlo
 
@@ -171,7 +185,7 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **M5 y M6 combinan psicometría y lectura**, y pueden salir pronto con los análisis que ya están hechos.
 - **M19 cambia el informe de la plataforma** de quién está en riesgo a qué probabilidad tiene cada niño y qué hacer con él; usa las fiabilidades del manual y la condición Preleo, y es la base de un ensayo. **M20** lo lleva a la docencia con datos sintéticos. **M25** lleva el informe al día a día: cada sesión de Nivel 1 y 2 actualiza el perfil y propone la siguiente. **M26** pregunta cuándo se domina la exactitud y cuándo se automatiza la lectura, y si esas dos ventanas explican la clasificación del riesgo.
 - **M23 pone a prueba un modelo teórico del grupo con datos que ya están en la plataforma**: el experimento de RAN con carga fonológica de J. L. Luque, y deja para el manual que la lista de fonema es la versión del RAN de objetos que mejor discrimina a los 5–6 años.
-- **M27 y M28 son artículos del grupo ya en marcha.** M27 (tesis de A. Sánchez Gómez) muestra que el beneficio de Preleo depende del riesgo inicial y del cuantil, lo que justifica los baremos por condición; M28 (L2 y L3) fija la validez predictiva de las etiquetas de certeza y los puntos de corte del cribado.
+- **M27, M28A, M28B y M29 son artículos del grupo ya en marcha.** M27 (tesis de A. Sánchez Gómez) muestra que el beneficio de Preleo depende del riesgo inicial y del cuantil, lo que justifica los baremos por condición; M28A y M28B (L2 y L3) fijan la validez predictiva de las etiquetas de certeza y los puntos de corte del cribado, y M29 (L1) contrasta la plataforma con el juicio del docente.
 - **M24 es un artículo del grupo casi terminado**: la revisión de la base corrigió sus cifras y conserva el hallazgo central (la conciencia fonológica de un curso predice la aritmética del siguiente); para el manual deja que varias tareas de la plataforma puntúan también los ítems de ejemplo.
 - **M22 decide cómo se baremará fuera de Málaga**: qué comunidades pueden compartir baremo y cuáles necesitan uno propio (las versiones en catalán, por ejemplo).
 - **M8 suma a todo el grupo**: un artículo de datos se cita cada vez que alguien usa la base. Pero solo vale si los datos se pueden reutilizar, y eso depende de los consentimientos y de la ética: la ficha plantea tres escenarios para que el grupo decida (30/10/2026).

@@ -170,6 +170,7 @@ Con 2.754 niños de las cohortes 2010–2013 (114 graves, 303 leves, 557 con dif
 
 
 ![Los dos ciclos de la lectura en español con los resultados definitivos (m26_articulo_v6.R): cuándo dominan la exactitud los lectores típicos, leves y graves, y cómo evoluciona el efecto de longitud.](../figuras/infografias/dos_ciclos.png){#fig-dos-ciclos fig-alt="Infografía con dos paneles de líneas por grupo y tres tarjetas de conclusiones."}
+
 ## Segunda fase: los dos ciclos sin circularidad
 
 **Resultados definitivos (02/11/2026)**, con `m26_articulo_v6.R` y la prueba de solidez de `m26_articulo_v7.R`. Los grupos se definen **solo con la lectura cronometrada de 8 años en adelante** (sin 8.2): grave ≤ P10, leve P10–P25 y típico > P25 dentro de cada cohorte. Todo lo que ocurre antes de los 8 años queda libre de circularidad. Son 1.777 niños de las cohortes 2010–2012: 177 graves, 268 leves y 1.332 típicos.

@@ -1,0 +1,54 @@
+---
+search: false
+---
+
+# M29 · El juicio del docente frente a LEEDUCA (L1) {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Artículo L1 del proyecto: ¿predice el «ojo clínico» del docente la dificultad lectora tan bien como la plataforma, y qué se gana combinándolos? Borrador completo en inglés y versión en español preparada para* Education in the Knowledge Society *(EKS). Prioridad: rápida.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Artículo en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados; los docentes van seudonimizados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial
+
+1. **Diseño.** En marzo y abril de 2018, **antes de recibir ninguna información de LEEDUCA**, los docentes valoraron a cada alumno con un cuestionario de 9 ítems (1–5): atención, memoria, articulación, vocabulario, comprensión oral, preparación para leer, conciencia fonológica, apoyo parental y nivel sociocultural.
+2. **Muestra.** 477 niños de 20 clases a los 4 años (cohorte 2013) y 264 niños de 11 clases a los 7 años (cohorte 2010).
+3. **La escala del docente es muy consistente** (α = .94 a los 4 años y .97 a los 7) y tiene un factor dominante, pero cada docente la usa a su manera (ICC por clase de .28 y .15).
+4. **A los 4 años, LEEDUCA predice mejor** la lectura de 6 años (AUC .82 frente a .72); juntos, .83. **A los 7 años, empatan** al predecir la lectura de 10 años (.86 y .86), y juntos llegan a .91 (ganancia +.04, IC .00–.08).
+5. **La regla «cualquiera de los dos»** detecta el 67 % de los casos a los 4 años y el 85 % a los 7, con valor predictivo negativo de .91–.96.
+6. **Posible sesgo docente.** Los niños que solo detecta LEEDUCA tienen un nivel sociocultural percibido más bajo. Hay que contrastarlo formalmente antes de afirmarlo.
+:::
+
+## Resultados
+
+| Edad | Resultado | LEEDUCA | Docente | Ambos |
+|---|---|---|---|---|
+| 4 años (cohorte 2013) | Lectura ≤ p25 a los 6 años | .82 | .72 | .83 |
+| 7 años (cohorte 2010) | Lectura ≤ p25 a los 10 años | .86 | .86 | .91 |
+
+AUC con validación cruzada. Modelos multinivel con la clase como efecto aleatorio: β = .58 entre la valoración docente y los precursores a los 4 años, y β = .70 con la lectura a los 7. Frente a la dificultad persistente (etiqueta DL) a los 4 años: docente .71, LEEDUCA .74 y combinados .77.
+
+## Cómo se une al manual
+
+| Capítulo o estudio | Qué aporta M29 |
+|---|---|
+| Cap. 5 · Validez ([método psicométrico](../metodo-psicometrico.qmd)) | Validez convergente con un criterio externo independiente: el juicio del docente recogido antes de conocer los resultados |
+| Cap. 20 · Cribado (4–5 años) | A los 4 años, la plataforma añade información que el docente no tiene; la combinación con la regla «cualquiera de los dos» es una opción de cribado en dos fuentes |
+| Cap. 22 · Informe al centro | Argumento para presentar el informe como complemento del juicio docente, no como sustituto, y para vigilar el sesgo por nivel sociocultural |
+| [M28 · Predicción](M28.qmd) | Mismos criterios de lectura y misma lógica de validación; L1 puede citar los puntos de corte de M28A |
+| [M5 · Bayes](M5.qmd) | La valoración docente puede entrar como información previa del modelo bayesiano |
+
+## Qué falta antes de enviar
+
+- [ ] Revisión interna del borrador y orden de autores.
+- [ ] Ética (comité y consentimientos de 2018) y tabla 1 de participantes.
+- [ ] Contraste formal del sesgo por nivel sociocultural (interacción nivel sociocultural percibido × fuente de detección).
+- [ ] Decidir la revista: EKS (versión en español ya preparada) o, en inglés, *Annals of Dyslexia*, *Learning and Individual Differences*, *Journal of Research in Reading* o *Dyslexia*.
+
+**Archivos (PC):** `04_DICCIONARIO_PROCESADO_2026\DIAGNOSTICO\juicio_docente_v1.xlsx` (emparejamiento, con identificadores: no sale de la carpeta), `juicio_docente_analisis_v3.xlsx` (análisis del artículo) y `figs_juicio\` (incluye `EKS_envio\`); scripts `cuestionario_docente.py`, `juicio_docente_analisis.py`, `figuras_juicio_docente(_es).py` y `R\juicio_docente_analisis.R`.
