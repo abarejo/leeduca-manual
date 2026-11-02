@@ -10,7 +10,7 @@ search: false
 **Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
 :::
 
-[← Volver a la Agenda](../agenda.qmd#sec-agenda) · En el manual: [Efectos de Preleo](../preleo/datos.qmd) y [Fidelidad de Preleo](../preleo/fidelidad.qmd) · [Descargar el borrador en Word](#sec-borrador)
+[← Volver a la Agenda](../agenda.qmd#sec-agenda) · En el manual: [Efectos de Preleo](../preleo/datos.qmd) y [Fidelidad de Preleo](../preleo/fidelidad.qmd) · [Descargar el manuscrito (versión 5) en Word](#sec-borrador)
 
 ## Síntesis para el grupo {#sec-sintesis}
 
@@ -401,23 +401,46 @@ Notas para la siguiente versión, en orden de importancia. Ninguna cambia el pla
 - [x] **Segundo diseño:** diferencias en diferencias 2010 → 2011 ([resultados](#sec-did)). Los pares 2011/2012 y 2013/2014 no son viables en bruto (pocos colegios comunes; cambio de plataforma).
 - [ ] Auxi revisa los puntos 1–5 de la revisión del borrador (datos y texto).
 - [ ] Decidir la historia, la revista y el idioma con los tres análisis (réplica, diferencias en diferencias y fidelidad).
-- [ ] Preparar la versión 5 del manuscrito con los resultados de esta página ([borrador actual](#sec-borrador)).
+- [x] Versión 5 del manuscrito con los resultados de esta página ([descargar y comparar](#sec-borrador)). Falta la revisión de Auxi y Juan Luis.
 
 **Carpetas de trabajo:** `DRIVE\LEEDUCA\2025\AUXI` y `2026\AUXI` (borradores, guiones de R y figuras de 2025–2026). Se conservan tal cual.
 
 ## Borrador del manuscrito {#sec-borrador}
 
-**Descargar el borrador para revisar (versión de Auxi, 22/10/2026):** [M27_INTRO_BEYOND_4_Auxi_2026-10-22.docx](../borradores/M27_INTRO_BEYOND_4_Auxi_2026-10-22.docx)
+| Versión | Qué contiene | Descargar |
+|---|---|---|
+| **5 · 02/11/2026** (PJ López-Pérez con Claude) | Introducción de la versión 4; resumen, highlights, objetivos, Método, Resultados y Discusión reescritos con la réplica, el segundo diseño y la fidelidad. 4 tablas y 4 figuras finales | [M27_INTRO_BEYOND_5_2026-11-02.docx](../borradores/M27_INTRO_BEYOND_5_2026-11-02.docx) |
+| 4 · 22/10/2026 (Auxi) | Análisis de enero de 2026 (riesgo con letras y RAN de 5.3, ANCOVA 7 \| 6, 330 niños emparejados) | [M27_INTRO_BEYOND_4_Auxi_2026-10-22.docx](../borradores/M27_INTRO_BEYOND_4_Auxi_2026-10-22.docx) |
 
 ::: {.callout-note}
-## Cómo revisarlo
-Es el último borrador del grupo (*Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica*, 9.500 palabras, resumen aún vacío). **Todavía no incluye los análisis de esta página**: sus métodos y resultados son los de la versión 6 de la tabla de [arriba](#sec-sintesis) (riesgo con letras y RAN de 5.3, ANCOVA 7|6, 330 niños). Para la versión que se envíe:
+## Cómo compararlas y revisar
 
-1. **Método:** sustituir el riesgo de partida y el modelo por los de la réplica ([por qué](#sec-por-que)) y añadir el segundo diseño y la fidelidad.
-2. **Resultados:** los de la [síntesis](#sec-sintesis), con las figuras de esta página.
-3. **Discusión:** la historia de los tres diseños; la disposición docente como limitación.
-4. **Revisar** los diez puntos de la [revisión del borrador](#sec-revision).
+**Para ver los cambios:** descarga las dos versiones y, en Word, abre *Revisar › Comparar › Comparar documentos*. Elige la 4 como original y la 5 como revisada: Word marca todo lo que cambia con control de cambios.
 
-Se recomienda revisar en Word con control de cambios y devolver con las iniciales en el nombre del archivo.
+**Qué cambia de la 4 a la 5:**
+
+1. **Título.** «Compensación acotada **y transitoria**».
+2. **Resumen y highlights.** Completados.
+3. **El presente estudio.** Riesgo medido en 5.1, tres objetivos y la lógica de los tres diseños.
+4. **Método.** Muestra del manual (957 niños, 34 colegios), fidelidad, medidas por momento y las cinco decisiones del análisis.
+5. **Resultados.**
+   - Efecto por riesgo (Tabla 2, Figuras 1 y 2).
+   - Diferencias en diferencias con placebo (Tabla 3, Figura 3).
+   - Fidelidad (Tabla 4, Figura 4).
+6. **Discusión.**
+   - Compensación acotada en a quién, en qué y en cuánto dura.
+   - Convergencia de diseños y desvanecimiento del efecto.
+   - Lección metodológica sobre la ANCOVA y el riesgo medido tarde.
+   - Implicaciones para el apoyo escalonado.
+   - Limitaciones, incluida la disposición docente.
+7. **Referencias.** Seis nuevas: Angrist y Pischke; Bailey et al. (2017, 2020); Cameron et al.; Giménez et al.; Montgomery et al.
+
+**Antes de enviarla:**
+
+1. Borrar la nota para coautores de la primera página.
+2. Confirmar los puntos que señala esa nota: escala de rigor, ética de la cohorte 2010, alfas y pérdida de muestra a los 8 años.
+3. Ordenar las referencias que no se citan.
+4. Decidir el idioma con la revista.
+
+Se recomienda revisar con control de cambios y devolver el archivo con las iniciales en el nombre.
 :::
-
