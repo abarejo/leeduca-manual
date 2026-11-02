@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-8eed1e82f492401572b90938e2a1ccbf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1057,6 +1060,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#cuatro-problemas-de-método-que-conviene-resolver" id="toc-cuatro-problemas-de-método-que-conviene-resolver" class="nav-link" data-scroll-target="#cuatro-problemas-de-método-que-conviene-resolver">Cuatro problemas de método que conviene resolver</a></li>
   </ul></li>
   <li><a href="#sec-replica" id="toc-sec-replica" class="nav-link" data-scroll-target="#sec-replica">Réplica con la muestra del manual (script v1)</a></li>
+  <li><a href="#sec-resultados-v1" id="toc-sec-resultados-v1" class="nav-link" data-scroll-target="#sec-resultados-v1">Resultados de la réplica (v1, 02/11/2026)</a></li>
+  <li><a href="#sec-eleccion" id="toc-sec-eleccion" class="nav-link" data-scroll-target="#sec-eleccion">Qué análisis elegir para el artículo</a></li>
   <li><a href="#sec-revision" id="toc-sec-revision" class="nav-link" data-scroll-target="#sec-revision">Revisión del borrador «INTRO_BEYOND 4»</a></li>
   <li><a href="#siguientes-pasos" id="toc-siguientes-pasos" class="nav-link" data-scroll-target="#siguientes-pasos">Siguientes pasos</a></li>
   </ul>
@@ -1084,7 +1089,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Desarrollo de un estudio de la Agenda · versión 2, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, </em>Who benefits and why<em>). Esta página resume el borrador «INTRO_BEYOND 4», lo une al manual y deja una revisión para la siguiente versión.</em></p>
+<p><em>Desarrollo de un estudio de la Agenda · versión 3, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, </em>Who benefits and why<em>). Esta página resume el borrador «INTRO_BEYOND 4», lo une al manual y deja una revisión para la siguiente versión.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1116,7 +1121,9 @@ Lo esencial
 <li><strong>Diseño.</strong> 506 niños de 20 colegios (10 con Preleo y 10 de comparación), seguidos a los 5, 6 y 7 años. Riesgo inicial en tres niveles con un compuesto de 5 años (alto ≤ −1 DT, moderado, bajo &gt; −0,5 DT). Emparejamiento por puntuación de propensión (165 pares). ANCOVA con interacción intervención × riesgo y regresión cuantílica (τ = .10–.90).</li>
 <li><strong>Lectura de palabras.</strong> El beneficio más robusto está en el <strong>riesgo bajo</strong> (d = 0,47 a los 7 años, ajustado por los 6): compatible con un efecto acumulativo tipo Mateo.</li>
 <li><strong>Comprensión.</strong> En la media no hay interacción. Pero en el <strong>riesgo moderado</strong> la intervención se asocia con +0,29–0,31 DT entre los cuantiles .20 y .60, y nada en la parte alta (τ ≥ .80). Es la <strong>compensación acotada</strong>: el beneficio se concentra en una ventana de vulnerabilidad. Tras la corrección FDR queda en p = .071.</li>
-<li><strong>Para el manual.</strong> Es la mejor prueba disponible de que el efecto de Preleo <strong>no es un desplazamiento uniforme</strong>. Por eso los baremos de los centros con Preleo no pueden obtenerse sumando una constante a los de los centros sin programa, y la lectura de las puntuaciones en esos centros debe hacerse por nivel de riesgo (cap. 23).</li>
+<li><strong>La réplica con la muestra del manual cambia la lectura</strong> (<a href="#sec-resultados-v1">resultados</a>). Con 957 niños de 34 colegios, el riesgo medido antes de Preleo y errores por colegio: <strong>a los 6 años</strong> los niños de riesgo moderado con Preleo rinden más en conciencia fonológica (+0,44 DT) y algo más en decodificación, y los de riesgo bajo no ganan nada; <strong>a los 7 años</strong> no queda efecto en ningún dominio ni nivel de riesgo. La ventaja del riesgo bajo en palabras del borrador es un artefacto de ajustar por los 6 años.</li>
+<li><strong>Propuesta para el artículo</strong> (<a href="#sec-eleccion">por qué</a>): compensación en el riesgo moderado que se desvanece en un curso. Análisis principal, el de la réplica con la trayectoria trimestre a trimestre; la versión de enero de 2026, al suplementario.</li>
+<li><strong>Para el manual.</strong> El efecto de Preleo no es un desplazamiento uniforme y cambia con la edad: los baremos de los centros con Preleo no se obtienen sumando una constante, y a los 7 años los dos grupos pueden compartir referencia (cap. 23).</li>
 </ol>
 </div>
 </div>
@@ -1358,6 +1365,122 @@ Lo esencial
 <p>La muestra será mayor que la del borrador (506): el seguimiento de 2010 tiene 843 niños CON y 320 SIN en la asignación v6. Habrá que explicar la diferencia: el borrador exigía datos completos en los tres cursos.</p>
 <p><strong>A5 es la novedad que aporta el manual:</strong> en lugar de preguntar solo si sube la media, pregunta si Preleo cambia el destino lector de cada nivel de riesgo, con la clasificación que usará el manual.</p>
 </section>
+<section id="sec-resultados-v1" class="level2">
+<h2 class="anchored" data-anchor-id="sec-resultados-v1">Resultados de la réplica (v1, 02/11/2026)</h2>
+<p>Ejecutada por PJ López con la tabla larga v2. <strong>957 niños con riesgo de 5.1 en 34 colegios</strong> (CON: 696 niños en 23 colegios; SIN: 261 en 11), de los que unos 700 tienen datos a los 7 años. Al empezar, los niños CON parten algo mejor (+0,25 DT en el riesgo de 5.1) y en colegios de mayor ISE (+0,38 DT); la ponderación por propensión equilibra ambos (diferencia restante 0,03 DT).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-m27-efectos" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m27-efectos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="M27_files/figure-html/fig-m27-efectos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Efecto de Preleo (en DT del grupo SIN) por nivel de riesgo de partida, a los 6 y a los 7 años, con IC 95 % por bootstrap de colegios. A la derecha, la ANCOVA del borrador (7 años ajustando por los 6). Los IC muy anchos del riesgo alto y moderado reflejan que el grupo SIN tiene solo 11 colegios."><img src="M27_files/figure-html/fig-m27-efectos-1.png" class="img-fluid figure-img" width="864"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m27-efectos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Efecto de Preleo (en DT del grupo SIN) por nivel de riesgo de partida, a los 6 y a los 7 años, con IC 95 % por bootstrap de colegios. A la derecha, la ANCOVA del borrador (7 años ajustando por los 6). Los IC muy anchos del riesgo alto y moderado reflejan que el grupo SIN tiene solo 11 colegios.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Lo que dicen los datos:</strong></p>
+<ol type="1">
+<li><strong>A los 7 años no hay efecto de Preleo</strong>, ni en la media ni en ningún nivel de riesgo, en ninguno de los cinco dominios: el efecto global va de −0,05 a +0,04 DT. Lo mismo con ponderación por propensión, sin los 3 colegios con pendiente negativa y con el riesgo medido solo con contar sílabas.</li>
+<li><strong>A los 6 años sí hay un patrón compensatorio.</strong> La interacción Preleo × riesgo es significativa en conciencia fonológica, palabras, pseudopalabras y velocidad (p = .006–.036). Los niños de <strong>riesgo moderado</strong> con Preleo rinden más en conciencia fonológica (+0,44 DT, IC 0,16–0,80) y, con menos precisión, en palabras (+0,27) y pseudopalabras (+0,23). Los de <strong>riesgo bajo</strong> no ganan nada e incluso leen el texto algo más despacio (−0,32 DT).</li>
+<li><strong>Ese beneficio se ha desvanecido a los 7.</strong> Es el patrón de <strong>desvanecimiento (<em>fade-out</em>)</strong> que describe la literatura sobre intervenciones tempranas: la ventaja existe al terminar el programa y los controles alcanzan a los tratados en uno o dos cursos.</li>
+<li><strong>La ANCOVA del borrador fabrica el resultado del riesgo bajo.</strong> Al ajustar por los 6 años, los moderados (que ganaron a los 6) parecen empeorar de 6 a 7 (−0,43 en palabras) y los bajos parecen mejorar (+0,13); la interacción sale significativa (p = .008) sin que haya ninguna diferencia a los 7. Es el artefacto que mostraba la simulación.</li>
+<li><strong>La compensación acotada en comprensión no se replica.</strong> En la cuantílica, ninguna banda difiere de cero; en comprensión, además, la prueba tiene techo (10 preguntas) y los cuantiles altos salen 0 exactos: hace falta una cuantílica para datos discretos.</li>
+<li><strong>Las etiquetas del manual no cambian.</strong> La probabilidad de terminar con dificultad persistente es la misma con y sin Preleo en los tres niveles (diferencias de +0,01 a +0,07, IC que incluyen el 0).</li>
+</ol>
+</section>
+<section id="sec-eleccion" class="level2">
+<h2 class="anchored" data-anchor-id="sec-eleccion">Qué análisis elegir para el artículo</h2>
+<p>El criterio no puede ser qué análisis da el efecto mayor: con siete versiones sobre los mismos datos, elegir por el resultado invalida los valores <em>p</em> y es lo primero que señala un revisor. El criterio es <strong>qué análisis responde mejor a la pregunta con menos supuestos</strong>. Valoración de las siete versiones:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Versión</th>
+<th>Riesgo de partida previo a Preleo</th>
+<th>Estima el efecto total</th>
+<th>Errores por colegio</th>
+<th>Contraste único</th>
+<th>Muestra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jul.&nbsp;2025, cuatro cuantílicas</td>
+<td>Sí (dos niveles)</td>
+<td>No (ajusta por todo lo de 6 años)</td>
+<td>No</td>
+<td>No</td>
+<td>506</td>
+</tr>
+<tr class="even">
+<td>Ago. 2025, propuesta para la revista</td>
+<td>No (letras de 5.3)</td>
+<td>No</td>
+<td>Estratificado por colegio</td>
+<td>No</td>
+<td>506</td>
+</tr>
+<tr class="odd">
+<td>Oct.&nbsp;2025, cinco cuantílicas</td>
+<td>¿?</td>
+<td>Sí</td>
+<td>No</td>
+<td>No</td>
+<td>506</td>
+</tr>
+<tr class="even">
+<td>Nov.–dic. 2025, ANOVA y modelos mixtos</td>
+<td>¿?</td>
+<td>Sí (trayectorias)</td>
+<td>No</td>
+<td>No</td>
+<td>506</td>
+</tr>
+<tr class="odd">
+<td>Dic. 2025, propuesta SSR</td>
+<td><strong>No (riesgo con la lectura de 6–7)</strong></td>
+<td>—</td>
+<td>No</td>
+<td>No</td>
+<td>506</td>
+</tr>
+<tr class="even">
+<td>Ene. 2026, emparejamiento + ANCOVA + cuantílica</td>
+<td>No (letras y RAN)</td>
+<td><strong>No (ajusta por los 6)</strong></td>
+<td>No</td>
+<td>No (FDR)</td>
+<td>330 emparejados</td>
+</tr>
+<tr class="odd">
+<td><strong>Réplica v1 del manual</strong></td>
+<td><strong>Sí (5.1)</strong></td>
+<td><strong>Sí, a 6 y 7</strong></td>
+<td><strong>Sí</strong></td>
+<td><strong>Sí</strong></td>
+<td><strong>957</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Propuesta:</strong> el análisis principal es el de la réplica, ampliado en una v2 con la <strong>trayectoria del efecto trimestre a trimestre</strong> (de 5.3 a 7.3), que convierte el hallazgo en la pregunta del artículo: <em>¿una intervención universal de conciencia fonológica compensa la desventaja de partida, y cuánto dura esa compensación?</em> La versión de enero de 2026 pasa al suplementario como comparación, con la explicación del artefacto.</p>
+<p>Es un artículo más fuerte, no más débil, y con más opciones de una revista de alto impacto:</p>
+<ul>
+<li><strong>Un resultado honesto y bien identificado vale más que un efecto frágil.</strong> El <em>fade-out</em> es un tema central hoy en psicología del desarrollo y en política educativa, y hay pocos datos de intervenciones universales de conciencia fonológica en ortografías transparentes con seguimiento trimestral.</li>
+<li><strong>Revistas posibles, de mayor a menor impacto:</strong> <em>Child Development</em>, <em>Journal of Educational Psychology</em>, <em>Educational Evaluation and Policy Analysis</em> o <em>Journal of Research on Educational Effectiveness</em> (que aprecian réplicas preespecificadas con resultados nulos o transitorios), y <em>Scientific Studies of Reading</em>.</li>
+<li><strong>Para subir el listón,</strong> replicar en un segundo diseño: la cohorte 2013 (sin Preleo) frente a la 2014 (con Preleo) en los mismos colegios elimina la autoselección de centros, que es la principal objeción al diseño de 2010.</li>
+</ul>
+</section>
 <section id="sec-revision" class="level2">
 <h2 class="anchored" data-anchor-id="sec-revision">Revisión del borrador «INTRO_BEYOND 4»</h2>
 <p>Notas para la siguiente versión, en orden de importancia. Ninguna cambia el planteamiento.</p>
@@ -1378,7 +1501,8 @@ Lo esencial
 <h2 class="anchored" data-anchor-id="siguientes-pasos">Siguientes pasos</h2>
 <ul class="task-list">
 <li><label><input type="checkbox">Auxi revisa los puntos 1–5 de la revisión (datos y texto).</label></li>
-<li><label><input type="checkbox">Ejecutar <code>m27_compensacion_v1.R</code> en el PC y traer la carpeta <code>DIAGNOSTICO/R/M27/v1</code> (<a href="#sec-replica">plan</a>).</label></li>
+<li><label><input type="checkbox" checked="">Ejecutar <code>m27_compensacion_v1.R</code> (<a href="#sec-resultados-v1">resultados</a>).</label></li>
+<li><label><input type="checkbox">v2: trayectoria del efecto de 5.3 a 7.3 (comprobación de que el programa mejoró lo que entrenaba en 5.3), sexo bien codificado y cuantílica para la comprensión discreta.</label></li>
 <li><label><input type="checkbox">Decidir con Auxi el análisis principal antes de ver los resultados de la réplica (y registrarlo).</label></li>
 <li><label><input type="checkbox"><strong>Réplica en otra cohorte</strong>: la comparación 2013 (sin Preleo) frente a 2014 (con Preleo) en los mismos colegios controla el centro, que es la principal amenaza del diseño actual. Pendiente de confirmar con Auxi la condición de 2013 y 2014.</label></li>
 <li><label><input type="checkbox">Análisis dosis-respuesta con el rigor de aplicación.</label></li>
@@ -1821,8 +1945,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M27.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M27.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M27.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M27.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
+</body></html>
