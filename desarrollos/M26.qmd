@@ -311,3 +311,17 @@ Grupos definidos con la lectura de 8 años en adelante: 3.881 niños de las coho
 | Confirmar qué listas de palabras se repiten igual entre cursos | Equipo, con el diccionario maestro |
 | Acordar las hipótesis y el umbral de dominio (90 %) antes de los datos | J. L. Luque y grupo |
 | Simulación de potencia | P. J. López-Pérez |
+
+## Borrador del artículo
+
+::: {.callout-note collapse="true"}
+## Borrador 1 para revisión (02/11/2026) — abrir
+
+**Para J. L. Luque.** Borrador completo para *Scientific Studies of Reading*: resumen estructurado, introducción con hipótesis, método, resultados (tres tablas, con las cifras de `m26_articulo_v6.R`), discusión con limitaciones, declaraciones, referencias en APA 7, lista de figuras y lista de comprobación para el envío. Faltan las figuras, los datos de ética y la revisión de la idea por su autor.
+
+- [Descargar el borrador en Word (.docx, 19 KB)](../borradores/M26_exactitud_borrador_1_2026-11-02.docx)
+- Documento vivo en Claude, con comentarios en línea: pedir el enlace a P. J. López (requiere acceso compartido).
+- Copia de trabajo en el PC de PJ López: `PLATAFORMA\ARCHIVOS_CONTROL_JAVI\ARTICULOS_BORRADORES\EXACTITUD_M26\`.
+
+Cómo revisar: comentarios o control de cambios en el Word, o anotaciones en el documento de Claude; las versiones nuevas se publicarán aquí con fecha (`borrador_2_…`). No difundir fuera del grupo: es un borrador no enviado.
+:::
