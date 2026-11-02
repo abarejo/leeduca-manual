@@ -70,7 +70,28 @@ ggplot(N1, aes(mom_f, factor(cohorte, levels = rev(sort(unique(cohorte)))))) +
 El mapa muestra dos diseños distintos dentro de la misma base:
 
 - **Seguimiento trimestral (hasta 2019/20).** Tres evaluaciones por curso desde los 4 años (cohortes 2011–2015) o los 5 (cohorte 2010), con entre 300 y 950 niños por momento y una pérdida gradual con la edad.
-- **Evaluaciones amplias de 2020/21 y 2021/22** (borde naranja). Una sola evaluación por curso, en febrero, con hasta `r miles(max(N1$ninos[N1$pandemia], na.rm = TRUE))` niños por cohorte, muchos de ellos nuevos. Tras la llegada de la pandemia, en 2021 se aplicaron **versiones en papel** de varias tareas, sobre todo pruebas de eficiencia (TECLE con sus formas de relaciones semánticas y sintaxis, PEALE y otras), de 2.º a 6.º de primaria (datos tabulados en `03_PAPEL_TABLETS_PANDEMIA`; los cuadernillos de TECLE, PEALE y sintaxis están en la carpeta del proyecto con Colombia).
+- **Evaluaciones amplias de 2020/21 y 2021/22** (borde naranja). Una sola evaluación por curso, en febrero, con muchos niños nuevos. Tras la llegada de la pandemia se aplicaron **versiones en papel**, sobre todo de pruebas de eficiencia, de 2.º a 6.º de primaria (datos tabulados en `03_PAPEL_TABLETS_PANDEMIA`; los cuadernillos de TECLE, PEALE y sintaxis están en la carpeta del proyecto con Colombia). Son dos baterías distintas (@tbl-amplias):
+  - **Febrero de 2021**, con unos 1.300–1.560 niños por cohorte: la batería TECLE completa (TECLE, relaciones semánticas, sintaxis y vocabulario lector).
+  - **Febrero de 2022**, con unos 260–470 niños por cohorte: comprensión de textos, Woodcock, decisión léxica, homógrafos, lectura comprensiva, velocidad lectora y matemáticas (y, en las cohortes 2014 y 2015, segmentación fonémica y letra inicial).
+
+```{r}
+#| label: tbl-amplias
+#| tbl-cap: "Tareas de las evaluaciones amplias de 2020/21 y 2021/22 por cohorte y momento (niños evaluados; solo tareas con 10 niños o más)."
+N7 <- lee("N7.csv"); names(N7)[1] <- "cohorte"
+nom <- c(LEC_TECLE = "TECLE", LECTURA_DECODIFIC_SEMANTICA = "Relaciones semánticas", LECTURA_DECODIFIC_SINTAXIS = "Sintaxis",
+         LECTURA_DECODIFIC_VOCABULARIO = "Vocabulario lector", LEC_COMPR_TEXTO = "Comprensión de textos", LEC_COMPR_WOODCOCK = "Woodcock",
+         LEC_HOMOGRAFOS = "Homógrafos", LEC_LECT_COMPRENSIVA = "Lectura comprensiva", LEC_VEL_TEXTO = "Velocidad lectora",
+         CF_SEGMENTACION_FONEMICA = "Segmentación fonémica", LECTURA_RF_ESCRIBIR_LETRA_INICIAL = "Letra inicial")
+N7$t <- ifelse(N7$tarea_canonica %in% names(nom), nom[N7$tarea_canonica],
+          ifelse(grepl("^LEC_DECLEX", N7$tarea_canonica), "Decisión léxica", ifelse(grepl("^MATE_", N7$tarea_canonica), "Matemáticas", N7$tarea_canonica)))
+ag <- aggregate(ninos ~ cohorte + mom + t, N7, max)
+ag$curso <- ifelse(ag$cohorte + floor(ag$mom) == 2020, "2020/21", "2021/22")
+tb <- aggregate(cbind(Tareas = t) ~ cohorte + mom + curso, ag, function(x) paste(unique(x), collapse = ", "))
+tb$`Niños (máx.)` <- miles(aggregate(ninos ~ cohorte + mom, ag, max)$ninos[match(paste(tb$cohorte, tb$mom), paste(aggregate(ninos ~ cohorte + mom, ag, max)$cohorte, aggregate(ninos ~ cohorte + mom, ag, max)$mom))])
+tb <- tb[order(tb$curso, tb$cohorte), c("curso", "cohorte", "mom", "Niños (máx.)", "Tareas")]
+names(tb)[1:3] <- c("Curso", "Cohorte", "Momento"); tb$Momento <- num_es(tb$Momento, 1)
+knitr::kable(tb, row.names = FALSE, align = c("l", "l", "r", "r", "l"))
+```
 
 Esto tiene una consecuencia práctica: el **momento 8.2 de la cohorte 2012 es la evaluación de 2020/21**, y lo mismo ocurre con el 7.2 de 2013, el 9.2 de 2011 y el 10.2 de 2010. La caída de exactitud en 8.2 que se trató como incidencia en [M26](desarrollos/M26.qmd) se explica probablemente por este cambio de formato (papel) y de muestra, y no por un cambio de lista. Estas evaluaciones se tratan como un **diseño transversal aparte**: no se mezclan con el seguimiento trimestral en los análisis longitudinales y, si se bareman, se bareman por separado.
 
@@ -104,13 +125,13 @@ t2 <- data.frame(Cohorte = N2$cohorte, Evaluados = miles(N2$evaluados),
 knitr::kable(t2, align = c("l", "r", "r", "r", "r"))
 ```
 
-La mediana de momentos por niño es baja (1 o 2) porque las evaluaciones amplias añaden muchos niños con una sola evaluación. El núcleo longitudinal es más pequeño: en la cohorte 2010, `r miles(N2$de_5_a_8[N2$cohorte == 2010])` niños tienen datos a los 5 años y a los 8 o más, y en la 2011, `r miles(N2$de_5_a_8[N2$cohorte == 2011])`. Los análisis longitudinales (M26, M11, M4+M7) trabajan con ese núcleo, y cada uno debe comprobar si los que siguen se parecen a los que salen: en M26, la lectura a los 6 años de quienes llegan a los 8 no difiere de la de quienes salen antes.
+La mediana de momentos por niño es baja (1 o 2) porque las evaluaciones amplias añaden muchos niños con una sola evaluación. **La mitad de los niños o más solo está en las evaluaciones amplias**: `r miles(N2$solo_evaluaciones_amplias[N2$cohorte == 2010])` de `r miles(N2$evaluados[N2$cohorte == 2010])` en la cohorte 2010, `r miles(N2$solo_evaluaciones_amplias[N2$cohorte == 2011])` de `r miles(N2$evaluados[N2$cohorte == 2011])` en 2011 y `r miles(N2$solo_evaluaciones_amplias[N2$cohorte == 2012])` de `r miles(N2$evaluados[N2$cohorte == 2012])` en 2012. El núcleo longitudinal es, por tanto, mucho más pequeño: en la cohorte 2010, `r miles(N2$de_5_a_8[N2$cohorte == 2010])` niños tienen datos a los 5 años y a los 8 o más, y en la 2011, `r miles(N2$de_5_a_8[N2$cohorte == 2011])`; si solo se cuentan las evaluaciones del seguimiento trimestral (sin las amplias), quedan `r miles(N2$de_5_a_8_seguimiento[N2$cohorte == 2010])` y `r miles(N2$de_5_a_8_seguimiento[N2$cohorte == 2011])`. Los análisis longitudinales (M26, M11, M4+M7) trabajan con ese núcleo, y cada uno debe comprobar si los que siguen se parecen a los que salen: en M26, la lectura a los 6 años de quienes llegan a los 8 no difiere de la de quienes salen antes.
 
 ## 4.4 Condición Preleo y nivel socioeconómico
 
 ```{r}
 #| label: tbl-preleo-n
-#| tbl-cap: "Condición Preleo por cohorte según la columna preleo_4a6_seguimiento de la tabla larga (niños y colegios). PROVISIONAL: no coincide con la asignación v3 (ver «Por resolver»)."
+#| tbl-cap: "Condición Preleo por cohorte según la asignación v5 (información de Auxiliadora Sánchez): niños y colegios canónicos. Incluye a los niños que solo están en las evaluaciones amplias (ver el texto)."
 nm <- function(x) if (x %in% names(N4)) N4[[x]] else rep(0, nrow(N4))
 t4 <- data.frame(Cohorte = N4$cohorte, `Niños CON` = miles(nm("ninos_CON")), `Niños SIN` = miles(nm("ninos_SIN")),
                  `Niños sin dato` = miles(nm("ninos_sin dato")), `Colegios CON` = nm("colegios_CON"), `Colegios SIN` = nm("colegios_SIN"),
@@ -118,7 +139,11 @@ t4 <- data.frame(Cohorte = N4$cohorte, `Niños CON` = miles(nm("ninos_CON")), `N
 knitr::kable(t4, align = c("l", rep("r", 6)))
 ```
 
-El índice socioeconómico de los colegios es parecido entre condiciones dentro de cada cohorte (medias entre `r num_es(min(N6$ISE_media), 1)` y `r num_es(max(N6$ISE_media), 1)`, con DT de unos 2,4 puntos), así que la comparación CON–SIN no parte de colegios muy distintos en nivel socioeconómico. *[Completar: escala del ISE y su fuente.]*
+La tabla tiene una lectura delicada. En la cohorte 2010, los 1.394 niños SIN no son solo los de los 11 colegios sin programa de la tesis: incluyen a los niños que solo aparecen en las evaluaciones amplias, a los que la asignación infiere SIN porque su colegio no figura con Preleo para esa cohorte. En la cohorte 2011 pasa lo contrario: al marcar CON a toda la cohorte, 923 niños que la v3 tenía como SIN pasan a CON, y probablemente son, en su mayoría, niños de colegios que solo se evaluaron en 2021 y 2022. **La condición Preleo solo tiene sentido para los niños del seguimiento trimestral**; para los demás, lo prudente es dejarla como desconocida (ver «Decisiones y pendientes»).
+
+El contraste más limpio sigue siendo el de las cohortes 2013 (sin programa) y 2014 (con programa) en los mismos colegios. En los datos, sin embargo, 413 niños de 2013 figuran como CON y 337 de 2014 como SIN, lo que hay que revisar con Auxi.
+
+El índice socioeconómico medio de los colegios va de `r num_es(min(N6$ISE_media[N6$colegios >= 5]), 1)` a `r num_es(max(N6$ISE_media[N6$colegios >= 5]), 1)` según la cohorte y la condición, con DT de unos 2,4 puntos; en 2010 los colegios con programa tienen un ISE algo más alto (`r num_es(N6$ISE_media[N6$cohorte == 2010 & N6$cond == "CON"], 1)` frente a `r num_es(N6$ISE_media[N6$cohorte == 2010 & N6$cond == "SIN"], 1)`), lo que hay que controlar al estimar efectos. *[Completar: escala del ISE y su fuente.]*
 
 ## 4.5 Limpieza y datos perdidos
 
@@ -135,6 +160,6 @@ Los valores no numéricos (entre el `r num_es(100 * min(N5$no_numericos / N5$reg
 
 ## Decisiones y pendientes
 
-1. **Condición Preleo (decidido el 02/11/2026).** La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, **todos los niños son de Preleo**. El resto de cohortes, como la asignación v3, pendiente de revisar con ella (2012; y 2013 sin programa frente a 2014 con programa en los 22 colegios comunes). La tabla de 4.4 todavía muestra la columna antigua de la tabla larga, que no tenía ningún niño SIN en 2010; se actualizará con la asignación v5. Afecta también a la cifra de colegios con programa del artículo de M26.
-2. **Nombres de colegio.** En la asignación de Preleo (v2, 13/10/2026) ya se emparejaron los nombres de la plataforma con los del seguimiento de colegios, por parecido y con comprobación manual. La v5 usa ese emparejamiento como **colegio canónico** y normaliza el resto; así se contarán colegios y no variantes de nombre.
-3. **Evaluaciones de 2020/21 y 2021/22.** Versiones en papel, sobre todo de eficiencia, de 2.º a 6.º. Falta la lista exacta de tareas por cohorte (la dará la tabla N7 de la v2 del script) y decidir si se baremarán aparte.
+1. **Condición Preleo (decidido el 02/11/2026).** La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, todos los niños son de Preleo. Implementado en la asignación v5. **Propuesta pendiente:** aplicar la condición solo a los niños del seguimiento trimestral y dejar como «desconocida» la de quienes solo están en las evaluaciones amplias, porque esos colegios no figuran en el seguimiento de Preleo para su cohorte. Revisar con Auxi también 2012 y las excepciones de 2013 y 2014.
+2. **Nombres de colegio (hecho).** La v5 usa el emparejamiento de la v2 (por parecido y con comprobación manual) como colegio canónico: 65–72 colegios en las cohortes grandes y 31 en las pequeñas, frente a 79–96 nombres en la plataforma. Quedan entre 209 y 346 niños por cohorte sin colegio emparejado, sobre todo de colegios que solo están en las evaluaciones amplias.
+3. **Evaluaciones de 2020/21 y 2021/22 (hecho, falta una confirmación).** Febrero de 2021: batería TECLE en papel. Febrero de 2022: comprensión, Woodcock, decisión léxica, homógrafos, velocidad lectora y matemáticas. Confirmar el formato de 2022 (papel o plataforma) y decidir si se baremarán aparte.
