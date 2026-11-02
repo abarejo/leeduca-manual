@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -41,6 +61,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-8eed1e82f492401572b90938e2a1ccbf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1048,10 +1071,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#para-leer-en-dos-minutos" id="toc-para-leer-en-dos-minutos" class="nav-link active" data-scroll-target="#para-leer-en-dos-minutos">Para leer en dos minutos</a></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  <li><a href="#en-una-página" id="toc-en-una-página" class="nav-link active" data-scroll-target="#en-una-página">En una página</a></li>
+  <li><a href="#por-qué-importa-lo-que-ya-se-sabe" id="toc-por-qué-importa-lo-que-ya-se-sabe" class="nav-link" data-scroll-target="#por-qué-importa-lo-que-ya-se-sabe">Por qué importa: lo que ya se sabe</a></li>
+  <li><a href="#diseño" id="toc-diseño" class="nav-link" data-scroll-target="#diseño">Diseño</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a>
+  <ul class="collapse">
+  <li><a href="#la-valoración-docente-es-fiable-pero-global" id="toc-la-valoración-docente-es-fiable-pero-global" class="nav-link" data-scroll-target="#la-valoración-docente-es-fiable-pero-global">La valoración docente es fiable, pero global</a></li>
+  <li><a href="#converge-con-la-plataforma-sobre-todo-cuando-ya-se-lee" id="toc-converge-con-la-plataforma-sobre-todo-cuando-ya-se-lee" class="nav-link" data-scroll-target="#converge-con-la-plataforma-sobre-todo-cuando-ya-se-lee">Converge con la plataforma, sobre todo cuando ya se lee</a></li>
+  <li><a href="#quién-predice-mejor-y-cuándo" id="toc-quién-predice-mejor-y-cuándo" class="nav-link" data-scroll-target="#quién-predice-mejor-y-cuándo">Quién predice mejor, y cuándo</a></li>
+  <li><a href="#se-equivocan-con-niños-distintos" id="toc-se-equivocan-con-niños-distintos" class="nav-link" data-scroll-target="#se-equivocan-con-niños-distintos">Se equivocan con niños distintos</a></li>
+  <li><a href="#quién-se-le-escapa-al-docente" id="toc-quién-se-le-escapa-al-docente" class="nav-link" data-scroll-target="#quién-se-le-escapa-al-docente">Quién se le escapa al docente</a></li>
+  </ul></li>
+  <li><a href="#lo-que-aporta-al-campo" id="toc-lo-que-aporta-al-campo" class="nav-link" data-scroll-target="#lo-que-aporta-al-campo">Lo que aporta al campo</a></li>
   <li><a href="#cómo-se-une-al-manual" id="toc-cómo-se-une-al-manual" class="nav-link" data-scroll-target="#cómo-se-une-al-manual">Cómo se une al manual</a></li>
-  <li><a href="#qué-falta-antes-de-enviar" id="toc-qué-falta-antes-de-enviar" class="nav-link" data-scroll-target="#qué-falta-antes-de-enviar">Qué falta antes de enviar</a></li>
+  <li><a href="#sec-m29-falta" id="toc-sec-m29-falta" class="nav-link" data-scroll-target="#sec-m29-falta">Qué falta antes de enviar</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M29.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M29.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></nav>
     </div>
@@ -1077,7 +1110,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Artículo L1 del proyecto: ¿predice el «ojo clínico» del docente la dificultad lectora tan bien como la plataforma, y qué se gana combinándolos? Borrador completo en inglés y versión en español preparada para</em> Education in the Knowledge Society <em>(EKS). Prioridad: rápida.</em></p>
+<p><em>Desarrollo de un estudio de la Agenda · versión 2, 02/11/2026. Artículo L1 del proyecto: «¿Ven los docentes lo que ve un cribado digital? Juicio docente y evaluación en línea como predictores tempranos de las dificultades lectoras». Manuscrito completo en español preparado para</em> Education in the Knowledge Society <em>(15/10/2026) y versión en inglés. Esta página resume el estudio, sus resultados y su lugar en la literatura (revisada con SciSpace el 02/11/2026), y deja la lista de lo que falta antes del envío.</em></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1088,12 +1121,12 @@ Advertencia
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Página de trabajo del grupo.</strong> Artículo en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la <a href="../agenda.html#sec-agenda">Agenda</a>. Solo contiene datos agregados; los docentes van seudonimizados.</p>
+<p><strong>Página de trabajo del grupo.</strong> Artículo en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la <a href="../agenda.html#sec-agenda">Agenda</a>. Solo contiene datos agregados; los docentes van seudonimizados y la figura de dispersión del manuscrito (un punto por niño) no se reproduce aquí.</p>
 </div>
 </div>
 <p><a href="../agenda.html#sec-agenda">← Volver a la Agenda</a></p>
-<section id="para-leer-en-dos-minutos" class="level2">
-<h2 class="anchored" data-anchor-id="para-leer-en-dos-minutos">Para leer en dos minutos</h2>
+<section id="en-una-página" class="level2">
+<h2 class="anchored" data-anchor-id="en-una-página">En una página</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1105,53 +1138,321 @@ Lo esencial
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><strong>Diseño.</strong> En marzo y abril de 2018, <strong>antes de recibir ninguna información de LEEDUCA</strong>, los docentes valoraron a cada alumno con un cuestionario de 9 ítems (1–5): atención, memoria, articulación, vocabulario, comprensión oral, preparación para leer, conciencia fonológica, apoyo parental y nivel sociocultural.</li>
-<li><strong>Muestra.</strong> 477 niños de 20 clases a los 4 años (cohorte 2013) y 264 niños de 11 clases a los 7 años (cohorte 2010).</li>
-<li><strong>La escala del docente es muy consistente</strong> (α = .94 a los 4 años y .97 a los 7) y tiene un factor dominante, pero cada docente la usa a su manera (ICC por clase de .28 y .15).</li>
-<li><strong>A los 4 años, LEEDUCA predice mejor</strong> la lectura de 6 años (AUC .82 frente a .72); juntos, .83. <strong>A los 7 años, empatan</strong> al predecir la lectura de 10 años (.86 y .86), y juntos llegan a .91 (ganancia +.04, IC .00–.08).</li>
-<li><strong>La regla «cualquiera de los dos»</strong> detecta el 67 % de los casos a los 4 años y el 85 % a los 7, con valor predictivo negativo de .91–.96.</li>
-<li><strong>Posible sesgo docente.</strong> Los niños que solo detecta LEEDUCA tienen un nivel sociocultural percibido más bajo. Hay que contrastarlo formalmente antes de afirmarlo.</li>
+<li><strong>La pregunta.</strong> El docente es el primer filtro para detectar a los niños que tendrán dificultades lectoras. ¿Es tan preciso como un cribado digital? ¿Qué se gana combinando los dos?</li>
+<li><strong>El diseño, su punto fuerte.</strong> En marzo y abril de 2018, los docentes de 31 aulas valoraron a 741 niños (477 de 4 años y 264 de 7) <strong>antes de recibir ningún resultado de LEEDUCA</strong>. Así su juicio es independiente de la evaluación, algo poco frecuente en esta literatura. La lectura se siguió durante dos o tres años.</li>
+<li><strong>Antes de leer, la plataforma ve más.</strong> A los 4 años, LEEDUCA predice la lectura de 6 años mejor que el docente (AUC .82 frente a .72), y el docente apenas añade.</li>
+<li><strong>Cuando ya se lee, el docente iguala a la plataforma.</strong> A los 7 años, los dos predicen igual la lectura de 10 años (.86) y juntos llegan a .91.</li>
+<li><strong>Se equivocan con niños distintos.</strong> Marcar a un niño cuando <em>cualquiera</em> de las dos fuentes lo sitúa en el 20 % inferior detecta 2 de cada 3 futuros lectores con dificultades a los 4 años y el 85 % a los 7, con valores predictivos negativos de .90–.96.</li>
+<li><strong>Una pista de equidad.</strong> Los niños que solo detecta LEEDUCA son los que el docente percibe de nivel sociocultural más bajo (1,8 frente a 3,1 en una escala de 1 a 5). Si se confirma, el cribado universal protege precisamente a quienes el juicio docente pasa por alto.</li>
 </ol>
 </div>
 </div>
 </section>
-<section id="resultados" class="level2">
-<h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
+<section id="por-qué-importa-lo-que-ya-se-sabe" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-importa-lo-que-ya-se-sabe">Por qué importa: lo que ya se sabe</h2>
+<p>La literatura sobre la precisión del juicio docente es amplia, pero deja tres huecos que este estudio cubre.</p>
+<ul>
+<li><strong>Los docentes juzgan bien el rendimiento, peor las capacidades.</strong> La correlación media entre la valoración docente y las pruebas de rendimiento es de .63 <span class="citation" data-cites="sudkamp2012">(<a href="../referencias.html#ref-sudkamp2012" role="doc-biblioref">Südkamp, Kaiser, y Möller 2012</a>)</span>, y un metaanálisis psicométrico reciente, que corrige el error de medida, la sitúa aún más alta <span class="citation" data-cites="kaufmann2024">(<a href="../referencias.html#ref-kaufmann2024" role="doc-biblioref">Kaufmann 2024</a>)</span>. Pero cuando se juzgan capacidades cognitivas o habilidades previas al aprendizaje escolar, baja a .43 <span class="citation" data-cites="machts2016">(<a href="../referencias.html#ref-machts2016" role="doc-biblioref">Machts et&nbsp;al. 2016</a>)</span>. Antes de que el niño lea, el docente tiene que juzgar precisamente esas capacidades.</li>
+<li><strong>Los docentes se equivocan más con los alumnos que más importan.</strong> Juzgan peor a los alumnos de bajo rendimiento y peor la decodificación que la comprensión <span class="citation" data-cites="paleczek2017 begeny2011">(<a href="../referencias.html#ref-paleczek2017" role="doc-biblioref">Paleczek, Seifert, y Gasteiger-Klicpera 2017</a>; <a href="../referencias.html#ref-begeny2011" role="doc-biblioref">Begeny et&nbsp;al. 2011</a>)</span>, y tienden a sobrestimar a los lectores más flojos <span class="citation" data-cites="bates2001">(<a href="../referencias.html#ref-bates2001" role="doc-biblioref">Bates y Nettelbeck 2001</a>)</span>.</li>
+<li><strong>Combinar fuentes funciona, pero casi toda la evidencia es en inglés.</strong> Desde hace décadas se sabe que la valoración docente y las pruebas breves identifican juntas a más niños que cualquiera por separado <span class="citation" data-cites="flynn1998 teisl2001 snowling2011">(<a href="../referencias.html#ref-flynn1998" role="doc-biblioref">Flynn y Rahbar 1998</a>; <a href="../referencias.html#ref-teisl2001" role="doc-biblioref">Teisl, Mazzocco, y Myers 2001</a>; <a href="../referencias.html#ref-snowling2011" role="doc-biblioref">Snowling et&nbsp;al. 2011</a>)</span>, también en la escuela secundaria <span class="citation" data-cites="cho2024">(<a href="../referencias.html#ref-cho2024" role="doc-biblioref">Cho y Barrett 2024</a>)</span>. Pero apenas hay datos en ortografías transparentes, donde la dificultad se manifiesta como lentitud más que como errores y puede ser más difícil de percibir en el aula <span class="citation" data-cites="seymour2003foundation">(<a href="../referencias.html#ref-seymour2003foundation" role="doc-biblioref">Seymour, Aro, y Erskine 2003</a>)</span>.</li>
+<li><strong>El nivel socioeconómico sesga el juicio.</strong> Con un mismo trabajo, los docentes valoran peor al alumno de nivel socioeconómico bajo <span class="citation" data-cites="doyle2023">(<a href="../referencias.html#ref-doyle2023" role="doc-biblioref">Doyle, Easterbrook, y Harris 2023</a>)</span>, y en Inglaterra y Alemania infravaloran a los hijos de familias con menos estudios, con efectos sobre su progreso posterior <span class="citation" data-cites="olczyk2022">(<a href="../referencias.html#ref-olczyk2022" role="doc-biblioref">Olczyk et&nbsp;al. 2022</a>)</span>. Un estudio con una reforma real en Dinamarca atribuye parte de esa brecha a la «reputación académica» previa del alumno <span class="citation" data-cites="birkelund2026">(<a href="../referencias.html#ref-birkelund2026" role="doc-biblioref">Birkelund 2026</a>)</span>.</li>
+<li><strong>En España, el punto de partida del profesorado.</strong> Muchos docentes españoles prefieren métodos globales y dan poco peso a la conciencia fonológica <span class="citation" data-cites="gimenez2023">(<a href="../referencias.html#ref-gimenez2023" role="doc-biblioref">Giménez et&nbsp;al. 2023</a>)</span>. Es una razón más para esperar que, antes de la lectura, su juicio capte peor los precursores que mide LEEDUCA.</li>
+</ul>
+</section>
+<section id="diseño" class="level2">
+<h2 class="anchored" data-anchor-id="diseño">Diseño</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Edad</th>
-<th>Resultado</th>
-<th>LEEDUCA</th>
-<th>Docente</th>
-<th>Ambos</th>
+<th>Aspecto</th>
+<th>4 años</th>
+<th>7 años</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>4 años (cohorte 2013)</td>
-<td>Lectura ≤ p25 a los 6 años</td>
-<td>.82</td>
-<td>.72</td>
-<td>.83</td>
+<td>Cohorte y curso</td>
+<td>2013, 2.º de infantil</td>
+<td>2010, 2.º de primaria</td>
 </tr>
 <tr class="even">
-<td>7 años (cohorte 2010)</td>
-<td>Lectura ≤ p25 a los 10 años</td>
-<td>.86</td>
-<td>.86</td>
-<td>.91</td>
+<td>Niños (aulas)</td>
+<td>477 (20)</td>
+<td>264 (11)</td>
+</tr>
+<tr class="odd">
+<td>Niñas</td>
+<td>51 %</td>
+<td>47 %</td>
+</tr>
+<tr class="even">
+<td>Con Preleo</td>
+<td>Ninguno</td>
+<td>58 % (un curso, a los 5 años)</td>
+</tr>
+<tr class="odd">
+<td>Valoración docente</td>
+<td>7 ítems de habilidad (1–5) + apoyo familiar y nivel sociocultural percibido; marzo–abril de 2018, antes de conocer los resultados</td>
+<td>Igual</td>
+</tr>
+<tr class="even">
+<td>LEEDUCA</td>
+<td>Compuesto prelector (conciencia fonológica y letras)</td>
+<td>Compuesto lector (decodificación y fluidez)</td>
+</tr>
+<tr class="odd">
+<td>Criterio posterior</td>
+<td>Lectura ≤ P25 a los 6 años; dificultad persistente (etiqueta del manual)</td>
+<td>Lectura ≤ P25 a los 8 y 10 años</td>
+</tr>
+<tr class="even">
+<td>Con criterio</td>
+<td>325 (67 casos)</td>
+<td>220 a los 8 (42); 105 a los 10 (20)</td>
 </tr>
 </tbody>
 </table>
-<p>AUC con validación cruzada. Modelos multinivel con la clase como efecto aleatorio: β = .58 entre la valoración docente y los precursores a los 4 años, y β = .70 con la lectura a los 7. Frente a la dificultad persistente (etiqueta DL) a los 4 años: docente .71, LEEDUCA .74 y combinados .77.</p>
+<p><strong>Análisis.</strong> Fiabilidad (α y correlación intraclase por aula); validez convergente con modelos mixtos con intercepto de aula; validez predictiva e incremental con AUC por validación cruzada (10 particiones × 20 repeticiones) e intervalos por <em>bootstrap</em> de aulas; errores de clasificación con una marca en el 20 % inferior. Todo replicado en R y Python.</p>
+</section>
+<section id="resultados" class="level2">
+<h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
+<section id="la-valoración-docente-es-fiable-pero-global" class="level3">
+<h3 class="anchored" data-anchor-id="la-valoración-docente-es-fiable-pero-global">La valoración docente es fiable, pero global</h3>
+<ul>
+<li><strong>Muy consistente:</strong> α = .94 a los 4 años y .97 a los 7; el primer componente explica el 74 % y el 84 % de la varianza. El docente se forma una impresión global de cada niño más que juicios separados de atención, vocabulario o conciencia fonológica.</li>
+<li><strong>Depende del aula:</strong> el 28 % (4 años) y el 15 % (7 años) de la varianza está entre aulas. Una misma puntuación significa cosas distintas en aulas distintas, por eso los análisis usan la valoración centrada en la media del aula.</li>
+<li><strong>Mezcla capacidad y contexto:</strong> la capacidad valorada se relaciona con el apoyo familiar percibido (ρ = .59 a los 4 años; .75 a los 7) y con el nivel sociocultural percibido (.46 y .75). El nivel sociocultural percibido se parece solo en parte al índice oficial del centro (ρ = .34).</li>
+</ul>
+</section>
+<section id="converge-con-la-plataforma-sobre-todo-cuando-ya-se-lee" class="level3">
+<h3 class="anchored" data-anchor-id="converge-con-la-plataforma-sobre-todo-cuando-ya-se-lee">Converge con la plataforma, sobre todo cuando ya se lee</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Valoración docente (tipificada) como predictor de LEEDUCA en modelos mixtos con intercepto de aula.</caption>
+<colgroup>
+<col style="width: 4%">
+<col style="width: 30%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Edad</th>
+<th style="text-align: left;">Medida de LEEDUCA</th>
+<th style="text-align: right;">n (aulas)</th>
+<th style="text-align: right;">β [IC 95 %]</th>
+<th style="text-align: right;">β ajustando nivel sociocultural percibido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">concurrente (precursores 4 años)</td>
+<td style="text-align: right;">331 (18)</td>
+<td style="text-align: right;">0.58 [0.50, 0.66]</td>
+<td style="text-align: right;">0.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">predictiva (precursores 5 años)</td>
+<td style="text-align: right;">327 (18)</td>
+<td style="text-align: right;">0.51 [0.43, 0.59]</td>
+<td style="text-align: right;">0.46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">predictiva (lectura inicio 1º)</td>
+<td style="text-align: right;">300 (18)</td>
+<td style="text-align: right;">0.53 [0.44, 0.62]</td>
+<td style="text-align: right;">0.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">concurrente (lectura 7 años)</td>
+<td style="text-align: right;">264 (11)</td>
+<td style="text-align: right;">0.70 [0.60, 0.79]</td>
+<td style="text-align: right;">0.74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">predictiva (lectura 8 años)</td>
+<td style="text-align: right;">220 (10)</td>
+<td style="text-align: right;">0.66 [0.52, 0.80]</td>
+<td style="text-align: right;">0.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">predictiva (lectura 10 años)</td>
+<td style="text-align: right;">105 (8)</td>
+<td style="text-align: right;">0.48 [0.29, 0.68]</td>
+<td style="text-align: right;">0.55</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>A los 4 años, el nivel sociocultural percibido añade una pequeña contribución propia (β = .11–.19): una parte de lo que el docente «ve» es contexto familiar. A los 7 años, no añade nada una vez valorada la habilidad.</p>
+</section>
+<section id="quién-predice-mejor-y-cuándo" class="level3">
+<h3 class="anchored" data-anchor-id="quién-predice-mejor-y-cuándo">Quién predice mejor, y cuándo</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-m29-auc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m29-auc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="M29_files/figure-html/fig-m29-auc-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: AUC con validación cruzada (IC 95 % por bootstrap de aulas) de LEEDUCA, de la valoración docente y de los dos juntos, según la edad de la valoración y el criterio de lectura posterior."><img src="M29_files/figure-html/fig-m29-auc-1.png" class="img-fluid figure-img" width="816"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m29-auc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: AUC con validación cruzada (IC 95 % por bootstrap de aulas) de LEEDUCA, de la valoración docente y de los dos juntos, según la edad de la valoración y el criterio de lectura posterior.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>A los 4 años</strong>, LEEDUCA supera al docente al predecir la lectura de 6 años (.82 frente a .72), y añadir al docente no mejora (+.01, IC −.01 a .04). Con la dificultad persistente del manual, el patrón es el mismo, con menos casos (.74 frente a .68).</li>
+<li><strong>A los 7 años</strong>, para la lectura de 8, la plataforma es casi perfecta (.95) y el docente bueno (.86); para la de 10 años, los dos empatan (.86) y juntos llegan a .91 (+.04, IC .00 a .08).</li>
+</ul>
+</section>
+<section id="se-equivocan-con-niños-distintos" class="level3">
+<h3 class="anchored" data-anchor-id="se-equivocan-con-niños-distintos">Se equivocan con niños distintos</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-m29-quien" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m29-quien-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="M29_files/figure-html/fig-m29-quien-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Futuros lectores con dificultades (lectura ≤ P25 a los 6 años) según qué fuente los marcó a los 4 años (20 % inferior). Las barras suman los 67 casos."><img src="M29_files/figure-html/fig-m29-quien-1.png" class="img-fluid figure-img" width="768"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m29-quien-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Futuros lectores con dificultades (lectura ≤ P25 a los 6 años) según qué fuente los marcó a los 4 años (20 % inferior). Las barras suman los 67 casos.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Clasificación con una marca en el 20 % inferior. VPP y VPN: valores predictivos positivo y negativo.</caption>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 23%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Criterio</th>
+<th style="text-align: left;">Regla</th>
+<th style="text-align: right;">Marcados</th>
+<th style="text-align: right;">Sensibilidad</th>
+<th style="text-align: right;">Especificidad</th>
+<th style="text-align: right;">VPP</th>
+<th style="text-align: right;">VPN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">4 años → lectura a los 6</td>
+<td style="text-align: left;">Docente</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4 años → lectura a los 6</td>
+<td style="text-align: left;">LEEDUCA</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.86</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4 años → lectura a los 6</td>
+<td style="text-align: left;">Cualquiera de los dos</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">0.79</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4 años → lectura a los 6</td>
+<td style="text-align: left;">Los dos a la vez</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0.27</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.83</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7 años → lectura a los 10</td>
+<td style="text-align: left;">Docente</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.91</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7 años → lectura a los 10</td>
+<td style="text-align: left;">LEEDUCA</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">0.88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7 años → lectura a los 10</td>
+<td style="text-align: left;">Cualquiera de los dos</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: right;">0.81</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">0.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7 años → lectura a los 10</td>
+<td style="text-align: left;">Los dos a la vez</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.85</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Cada fuente por separado deja sin detectar a cerca de la mitad de los futuros lectores con dificultades, pero no a los mismos. La regla «cualquiera de los dos» marca a unos 3 de cada 10 niños y encuentra a 2 de cada 3 casos a los 4 años y al 85 % a los 7; si un niño no queda marcado por ninguna de las dos, la probabilidad de que tenga dificultades después es del 4–10 %.</p>
+</section>
+<section id="quién-se-le-escapa-al-docente" class="level3">
+<h3 class="anchored" data-anchor-id="quién-se-le-escapa-al-docente">Quién se le escapa al docente</h3>
+<p>Los niños que solo detecta LEEDUCA tenían, según su docente, un nivel sociocultural percibido de 1,8 (de 1 a 5), frente a 3,1 en los que solo detecta el docente. La lectura prudente: el docente puede atribuir al contexto familiar las dificultades de estos niños, en lugar de señalarlas como riesgo. Coincide con la literatura sobre sesgo socioeconómico <span class="citation" data-cites="olczyk2022 doyle2023">(<a href="../referencias.html#ref-olczyk2022" role="doc-biblioref">Olczyk et&nbsp;al. 2022</a>; <a href="../referencias.html#ref-doyle2023" role="doc-biblioref">Doyle, Easterbrook, y Harris 2023</a>)</span>, pero aquí son 12 frente a 15 niños: <strong>falta contrastarlo formalmente</strong> (ver <a href="#sec-m29-falta">qué falta</a>).</p>
+</section>
+</section>
+<section id="lo-que-aporta-al-campo" class="level2">
+<h2 class="anchored" data-anchor-id="lo-que-aporta-al-campo">Lo que aporta al campo</h2>
+<ol type="1">
+<li><strong>Juicio docente independiente y previo a la lectura.</strong> La mayoría de estudios usan juicios «informados» (el docente ya conoce resultados de pruebas), que inflan la correlación <span class="citation" data-cites="sudkamp2012">(<a href="../referencias.html#ref-sudkamp2012" role="doc-biblioref">Südkamp, Kaiser, y Möller 2012</a>)</span>. Aquí el juicio es anterior a cualquier resultado y a la enseñanza formal de la lectura.</li>
+<li><strong>Comparación directa con un cribado digital repetido</strong>, no con una prueba aislada, en una ortografía transparente.</li>
+<li><strong>El momento importa.</strong> El mismo docente que apenas añade a los 4 años iguala a la plataforma a los 7: el juicio mejora cuando la habilidad se vuelve observable <span class="citation" data-cites="kenny1993 hecht2001">(<a href="../referencias.html#ref-kenny1993" role="doc-biblioref">Kenny y Chekaluk 1993</a>; <a href="../referencias.html#ref-hecht2001" role="doc-biblioref">Hecht y Greenfield 2001</a>)</span>.</li>
+<li><strong>Equidad.</strong> Si se confirma, el resultado es un argumento empírico para el cribado universal: protege a los niños que el juicio docente, por su contexto, tiende a pasar por alto.</li>
+</ol>
 </section>
 <section id="cómo-se-une-al-manual" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-se-une-al-manual">Cómo se une al manual</h2>
@@ -1165,38 +1466,103 @@ Lo esencial
 <tbody>
 <tr class="odd">
 <td>Cap. 5 · Validez (<a href="../metodo-psicometrico.html">método psicométrico</a>)</td>
-<td>Validez convergente con un criterio externo independiente: el juicio del docente recogido antes de conocer los resultados</td>
+<td>Validez convergente con un criterio externo independiente: el juicio docente recogido antes de conocer los resultados</td>
 </tr>
 <tr class="even">
 <td>Cap. 20 · Cribado (4–5 años)</td>
-<td>A los 4 años, la plataforma añade información que el docente no tiene; la combinación con la regla «cualquiera de los dos» es una opción de cribado en dos fuentes</td>
+<td>A los 4 años, la plataforma aporta información que el docente no tiene; la regla «cualquiera de los dos» es una opción de cribado con dos fuentes</td>
 </tr>
 <tr class="odd">
-<td>Cap. 22 · Informe al centro</td>
-<td>Argumento para presentar el informe como complemento del juicio docente, no como sustituto, y para vigilar el sesgo por nivel sociocultural</td>
+<td>Cap. 21 · Identificación (6–7 años)</td>
+<td>Desde 2.º, la valoración docente es casi tan buena como la plataforma: el informe puede pedirla y combinarla</td>
 </tr>
 <tr class="even">
-<td><a href="../desarrollos/M28.html">M28 · Predicción</a></td>
-<td>Mismos criterios de lectura y misma lógica de validación; L1 puede citar los puntos de corte de M28A</td>
+<td>Cap. 22 · Informe al centro</td>
+<td>Presentar el informe como complemento del juicio docente, no como sustituto, y vigilar el sesgo por nivel sociocultural</td>
 </tr>
 <tr class="odd">
+<td><a href="../desarrollos/M28.html#sec-m28a">M28A · Predicción</a></td>
+<td>Mismos criterios de lectura y misma lógica de validación; los puntos de corte de M28A pueden sustituir al 20 % inferior</td>
+</tr>
+<tr class="even">
 <td><a href="../desarrollos/M5.html">M5 · Bayes</a></td>
 <td>La valoración docente puede entrar como información previa del modelo bayesiano</td>
+</tr>
+<tr class="odd">
+<td><a href="../desarrollos/M19.html">M19 · Perfiles de éxito</a></td>
+<td>El docente como segunda fuente para la probabilidad de éxito de cada niño</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="qué-falta-antes-de-enviar" class="level2">
-<h2 class="anchored" data-anchor-id="qué-falta-antes-de-enviar">Qué falta antes de enviar</h2>
+<section id="sec-m29-falta" class="level2">
+<h2 class="anchored" data-anchor-id="sec-m29-falta">Qué falta antes de enviar</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Revisión interna del borrador y orden de autores.</label></li>
-<li><label><input type="checkbox">Ética (comité y consentimientos de 2018) y tabla 1 de participantes.</label></li>
-<li><label><input type="checkbox">Contraste formal del sesgo por nivel sociocultural (interacción nivel sociocultural percibido × fuente de detección).</label></li>
-<li><label><input type="checkbox">Decidir la revista: EKS (versión en español ya preparada) o, en inglés, <em>Annals of Dyslexia</em>, <em>Learning and Individual Differences</em>, <em>Journal of Research in Reading</em> o <em>Dyslexia</em>.</label></li>
+<li><label><input type="checkbox"><strong>Contraste formal del sesgo socioeconómico.</strong> Propuesta: entre los niños con dificultad posterior, regresión logística de «marcado por el docente» sobre la puntuación de LEEDUCA y el nivel sociocultural percibido, con intercepto de aula. Si el nivel sociocultural percibido predice no ser marcado a igual nivel de LEEDUCA, el sesgo queda demostrado; con pocos casos, informar del intervalo y presentarlo como hipótesis.</label></li>
+<li><label><input type="checkbox"><strong>Sexo:</strong> confirmar la codificación (en la tabla larga actual los códigos son «niño» y «niña»).</label></li>
+<li><label><input type="checkbox"><strong>Condición Preleo de la muestra de 7 años</strong> con la asignación v6, y análisis de sensibilidad sin los niños de colegios con Preleo.</label></li>
+<li><label><input type="checkbox"><strong>Ética:</strong> referencia del comité, consentimientos de 2018 y protección de datos.</label></li>
+<li><label><input type="checkbox"><strong>Literatura:</strong> incorporar las referencias nuevas de esta página (Kaufmann, 2024; Paleczek et al., 2017; Bates y Nettelbeck, 2001; Flynn y Rahbar, 1998; Teisl et al., 2001; Cho y Barrett, 2024; Birkelund, 2026; Giménez et al., 2023) y comprobar las marcadas «[verificar]» en el manuscrito (Hoge y Coladarci, 1989; Machts et al., 2016).</label></li>
+<li><label><input type="checkbox"><strong>Revisión interna y autoría.</strong></label></li>
+<li><label><input type="checkbox"><strong>Revista.</strong> <em>Education in the Knowledge Society</em> (versión en español lista). En inglés, por orden: <em>Annals of Dyslexia</em>, <em>Learning and Individual Differences</em>, <em>Journal of Research in Reading</em>, <em>Dyslexia</em>.</label></li>
 </ul>
-<p><strong>Archivos (PC):</strong> <code>04_DICCIONARIO_PROCESADO_2026\DIAGNOSTICO\juicio_docente_v1.xlsx</code> (emparejamiento, con identificadores: no sale de la carpeta), <code>juicio_docente_analisis_v3.xlsx</code> (análisis del artículo) y <code>figs_juicio\</code> (incluye <code>EKS_envio\</code>); scripts <code>cuestionario_docente.py</code>, <code>juicio_docente_analisis.py</code>, <code>figuras_juicio_docente(_es).py</code> y <code>R\juicio_docente_analisis.R</code>.</p>
+<p><strong>Descargar el manuscrito para EKS (anónimo, 15/10/2026):</strong> <a href="../borradores/M29_juicio_docente_EKS_anonimo_2026-10-15.docx">M29_juicio_docente_EKS_anonimo_2026-10-15.docx</a></p>
+<p><strong>Archivos (PC):</strong> <code>04_DICCIONARIO_PROCESADO_2026\DIAGNOSTICO\juicio_docente_analisis_v3.xlsx</code> (análisis), <code>juicio_docente_v1.xlsx</code> (emparejamiento, con identificadores: no sale de la carpeta) y <code>figs_juicio\</code> (figuras del artículo y <code>EKS_envio\</code>); scripts <code>juicio_docente_analisis.py</code>, <code>figuras_juicio_docente(_es).py</code> y <code>R\juicio_docente_analisis.R</code>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bates2001" class="csl-entry" role="listitem">
+Bates, Caroline, y Ted Nettelbeck. 2001. <span>«Primary school teachers’ judgements of reading achievement»</span>. <em>Educational Psychology</em> 21 (2): 177-87. <a href="https://doi.org/10.1080/01443410020043878">https://doi.org/10.1080/01443410020043878</a>.
+</div>
+<div id="ref-begeny2011" class="csl-entry" role="listitem">
+Begeny, John C., Hailey E. Krouse, Kristina G. Brown, y Courtney M. Mann. 2011. <span>«Teacher judgments of students’ reading abilities across a continuum of rating methods and achievement measures»</span>. <em>School Psychology Review</em> 40 (1): 23-38. <a href="https://doi.org/10.1080/02796015.2011.12087726">https://doi.org/10.1080/02796015.2011.12087726</a>.
+</div>
+<div id="ref-birkelund2026" class="csl-entry" role="listitem">
+Birkelund, Jesper Fels. 2026. <span>«Teacher bias, socioeconomic inequality, and the role of academic reputations: Evidence from a grading reform»</span>. <em>Sociology of Education</em>. <a href="https://doi.org/10.1177/00380407261479708">https://doi.org/10.1177/00380407261479708</a>.
+</div>
+<div id="ref-cho2024" class="csl-entry" role="listitem">
+Cho, Eunsoo, y Courtenay A. Barrett. 2024. <span>«Comparing options for screening of reading difficulties in middle school: Do teacher ratings improve accuracy?»</span> <em>School Psychology</em>. <a href="https://doi.org/10.1037/spq0000674">https://doi.org/10.1037/spq0000674</a>.
+</div>
+<div id="ref-doyle2023" class="csl-entry" role="listitem">
+Doyle, Lewis, Matthew J. Easterbrook, y Peter R. Harris. 2023. <span>«Roles of socioeconomic status, ethnicity and teacher beliefs in academic grading»</span>. <em>British Journal of Educational Psychology</em> 93 (1): 91-112. <a href="https://doi.org/10.1111/bjep.12541">https://doi.org/10.1111/bjep.12541</a>.
+</div>
+<div id="ref-flynn1998" class="csl-entry" role="listitem">
+Flynn, Jane M., y Mohammad H. Rahbar. 1998. <span>«Improving teacher prediction of children at risk for reading failure»</span>. <em>Psychology in the Schools</em> 35 (2): 163-72. <a href="https://doi.org/10.1002/(SICI)1520-6807(199804)35:2<163::AID-PITS8>3.0.CO;2-Q">https://doi.org/10.1002/(SICI)1520-6807(199804)35:2&lt;163::AID-PITS8&gt;3.0.CO;2-Q</a>.
+</div>
+<div id="ref-gimenez2023" class="csl-entry" role="listitem">
+Giménez, Almudena, Auxiliadora Sánchez, Amanda Flores, y Juan Luis Luque. 2023. <span>«Teachers’ opinions about the teaching of reading in Spain»</span>. <em>Psicología Educativa</em> 29 (1): 1-10. <a href="https://doi.org/10.5093/psed2022a11">https://doi.org/10.5093/psed2022a11</a>.
+</div>
+<div id="ref-hecht2001" class="csl-entry" role="listitem">
+Hecht, Steven A., y Daryl B. Greenfield. 2001. <span>«Comparing the predictive validity of first grade teacher ratings and reading-related tests on third grade levels of reading skills in young children exposed to poverty»</span>. <em>School Psychology Review</em> 30 (1): 50-69. <a href="https://doi.org/10.1080/02796015.2001.12086100">https://doi.org/10.1080/02796015.2001.12086100</a>.
+</div>
+<div id="ref-kaufmann2024" class="csl-entry" role="listitem">
+Kaufmann, Esther. 2024. <span>«Teachers’ judgment accuracy: A replication check by psychometric meta-analysis»</span>. <em>PLOS ONE</em> 19 (7): e0307594. <a href="https://doi.org/10.1371/journal.pone.0307594">https://doi.org/10.1371/journal.pone.0307594</a>.
+</div>
+<div id="ref-kenny1993" class="csl-entry" role="listitem">
+Kenny, Dianna T., y Eugene Chekaluk. 1993. <span>«Early reading performance: A comparison of teacher-based and test-based assessments»</span>. <em>Journal of Learning Disabilities</em> 26 (4): 227-36. <a href="https://doi.org/10.1177/002221949302600403">https://doi.org/10.1177/002221949302600403</a>.
+</div>
+<div id="ref-machts2016" class="csl-entry" role="listitem">
+Machts, Nils, Johanna Kaiser, Fabian T. C. Schmidt, y Jens Möller. 2016. <span>«Accuracy of teachers’ judgments of students’ cognitive abilities: A meta-analysis»</span>. <em>Educational Research Review</em> 19: 85-103. <a href="https://doi.org/10.1016/j.edurev.2016.06.003">https://doi.org/10.1016/j.edurev.2016.06.003</a>.
+</div>
+<div id="ref-olczyk2022" class="csl-entry" role="listitem">
+Olczyk, Melanie, Sarah J. Kwon, Georg Lorenz, Valentina Perinetti Casoni, Thorsten Schneider, Anna Volodina, Jane Waldfogel, y Elizabeth Washbrook. 2022. <span>«Teacher judgements, student social background, and student progress in primary school: A cross-country perspective»</span>. <em>Zeitschrift für Erziehungswissenschaft</em> 25: 1135-62. <a href="https://doi.org/10.1007/s11618-022-01119-7">https://doi.org/10.1007/s11618-022-01119-7</a>.
+</div>
+<div id="ref-paleczek2017" class="csl-entry" role="listitem">
+Paleczek, Lisa, Susanne Seifert, y Barbara Gasteiger-Klicpera. 2017. <span>«Influences on teachers’ judgment accuracy of reading abilities on second and third grade students: A multilevel analysis»</span>. <em>Psychology in the Schools</em> 54 (3): 228-45. <a href="https://doi.org/10.1002/pits.21993">https://doi.org/10.1002/pits.21993</a>.
+</div>
+<div id="ref-seymour2003foundation" class="csl-entry" role="listitem">
+Seymour, Philip H. K., Mikko Aro, y Jane M. Erskine. 2003. <span>«Foundation literacy acquisition in European orthographies»</span>. <em>British Journal of Psychology</em> 94 (2): 143-74. <a href="https://doi.org/10.1348/000712603321661859">https://doi.org/10.1348/000712603321661859</a>.
+</div>
+<div id="ref-snowling2011" class="csl-entry" role="listitem">
+Snowling, Margaret J., Fiona J. Duff, Alex Petrou, Josie Schiffeldrin, y Alison M. Bailey. 2011. <span>«Identification of children at risk of dyslexia: The validity of teacher judgements using ’Phonic Phases’»</span>. <em>Journal of Research in Reading</em> 34 (2): 157-70. <a href="https://doi.org/10.1111/j.1467-9817.2011.01492.x">https://doi.org/10.1111/j.1467-9817.2011.01492.x</a>.
+</div>
+<div id="ref-sudkamp2012" class="csl-entry" role="listitem">
+Südkamp, Anna, Johanna Kaiser, y Jens Möller. 2012. <span>«Accuracy of teachers’ judgments of students’ academic achievement: A meta-analysis»</span>. <em>Journal of Educational Psychology</em> 104 (3): 743-62. <a href="https://doi.org/10.1037/a0027627">https://doi.org/10.1037/a0027627</a>.
+</div>
+<div id="ref-teisl2001" class="csl-entry" role="listitem">
+Teisl, James T., Michèle M. M. Mazzocco, y Gwen F. Myers. 2001. <span>«The utility of kindergarten teacher ratings for predicting low academic achievement in first grade»</span>. <em>Journal of Learning Disabilities</em> 34 (3): 286-93. <a href="https://doi.org/10.1177/002221940103400308">https://doi.org/10.1177/002221940103400308</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1630,8 +1996,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M29.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M29.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M29.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M29.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
+</body></html>
