@@ -4,7 +4,7 @@ search: false
 
 # M26 · Cuándo se domina la exactitud y cuándo se automatiza la lectura {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Idea de J. L. Luque Vilaseca (mensaje de audio, 01/11/2026), desarrollada con P. J. López-Pérez. Proyecto y esqueleto de artículo, sin datos reales todavía.*
+*Desarrollo de un estudio de la Agenda · versión 2, 02/11/2026. Idea de J. L. Luque Vilaseca (mensajes del 01 y 02/11/2026), desarrollada con P. J. López-Pérez. Proyecto, esqueleto de artículo y primeros resultados con los datos de las cohortes 2010–2013 ([ir a los resultados](#primeros-resultados-02112026)).*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Es una propuesta, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No contiene datos de alumnos.
@@ -21,7 +21,7 @@ search: false
 2. **Por qué LEEDUCA puede responderlo.** Tres evaluaciones por curso de los 4 a los 11 años, con aciertos y tiempos (por ítem en la plataforma nueva), en seis cohortes. Casi ningún estudio en el mundo tiene esa resolución temporal en una ortografía transparente.
 3. **Qué se espera.** En español la exactitud llega pronto (hacia el final de 1.º) y la automatización tarda años. Los niños con dificultad persistente se separarían de los demás en dos ventanas distintas: un retraso **transitorio** en la exactitud a los 6 años y un fallo **persistente** en la automatización desde los 7.
 4. **Por qué importa.** Si es así, la dificultad transitoria y la persistente del manual no serían dos grados de lo mismo, sino dos ciclos distintos que fallan. Eso cambia qué tarea mirar en cada momento y qué tipo de ayuda dar.
-5. **Qué falta.** Los datos por niño: hay que activar la virtualización del PC del proyecto o preparar una tabla seudonimizada. Antes de tocar datos reales, una simulación con lo que se espera encontrar.
+5. **Lo que dicen ya los datos** (2.754 niños). La exactitud a 6.2–6.3 separa la dificultad grave de la leve (AUC .80–.83). El leve alcanza la exactitud hacia los 7 años, pero no la velocidad: el 40 % lee con exactitud pero lento a los 8. Falta descartar la circularidad, con los grupos definidos desde los 8 años.
 :::
 
 ## Preguntas
