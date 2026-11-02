@@ -1,0 +1,186 @@
+# Conciencia fonológica: qué hace difícil una tarea y cómo leer un fallo {#sec-cf-dificultad}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+CF <- C[startsWith(C$tarea_canonica, "CF_") & C$tarea_canonica != "CF_NUMEROS_LAMINA" & is.finite(C$n_items), ]
+# rasgos de cada tarea (unidad, operación, posición, respuesta y azar)
+rasgo <- function(t) {
+  unidad <- if (grepl("FONEM", t)) "Fonema" else "Sílaba"
+  oper <- if (grepl("EMPAREJA", t)) "Emparejar" else if (grepl("IDENTIFICACION", t)) "Aislar" else if (grepl("CONTAR|SEGMENTACION", t)) "Contar / segmentar" else if (grepl("SINTESIS", t)) "Sintetizar" else "Suprimir"
+  pos <- if (grepl("INICIAL", t)) "Inicial" else if (grepl("FINAL", t)) "Final" else if (grepl("TP|TODAS", t)) "Cualquiera" else "—"
+  resp <- if (grepl("EMPAREJA", t)) "Señalar un dibujo" else if (grepl("CONTAR|SEGMENTACION", t)) "Decir un número" else "Decir sonidos o palabras"
+  azar <- if (grepl("EMPAREJA", t)) 1 / 3 else 0
+  data.frame(tarea_canonica = t, unidad, oper, pos, resp, azar)
+}
+R0 <- do.call(rbind, lapply(CF$tarea_canonica, rasgo))
+R0 <- merge(R0, CF[, c("tarea_canonica", "tarea", "n_items", "formato")], by = "tarea_canonica")
+# proporción de aciertos por tarea y momento (todas las cohortes, ponderada por N), corregida por azar en emparejar
+P <- do.call(rbind, lapply(R0$tarea_canonica, function(t) {
+  b <- leer(paste0("AUTO_", t), "2b_Descriptivos_por_cohorte"); if (!nrow(b)) return(NULL)
+  r <- R0[R0$tarea_canonica == t, ]
+  do.call(rbind, lapply(split(b, b$mom), function(g) data.frame(tarea_canonica = t, mom = g$mom[1], N = sum(g$N),
+    cohortes = paste(sort(unique(g$cohorte)), collapse = ", "), p_bruta = sum(g$M * g$N) / sum(g$N) / r$n_items,
+    suelo = sum(g$pct_suelo * g$N) / sum(g$N), techo = sum(g$pct_techo * g$N) / sum(g$N))))
+}))
+P <- merge(P, R0, by = "tarea_canonica")
+P <- P[P$N >= 100, ]
+P$p <- pmax(0, (P$p_bruta - P$azar) / (1 - P$azar))
+pv <- function(t, m, col = "p") { x <- P[[col]][P$tarea_canonica == t & P$mom == m]; if (length(x)) x else NA }
+f2 <- function(x) formatC(100 * x, format = "f", digits = 0)
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** borrador del 02/11/2026. Este capítulo abre las fichas de procesamiento fonológico. Integra el marco teórico del manual docente de A. Sánchez Gómez para la asignatura *Intervención logopédica en los trastornos infantiles del habla* (Universidad de Málaga) [@sanchezgomez2026tsh], centrado en el sistema fonológico y no en los sonidos sueltos. Los datos son los descriptivos de las fichas automáticas: todas las cohortes, ponderados por el número de niños, en momentos con al menos 100 niños.
+:::
+
+## Por qué empezar por el habla
+
+Todas las tareas de conciencia fonológica de la plataforma piden al niño que reflexione sobre los sonidos de palabras que oye, y casi todas le piden que **responda hablando**. Por eso, antes de interpretar una puntuación conviene tener presente cómo se organiza el sistema fonológico de un niño de 4 a 7 años. El manual docente de Sánchez Gómez [-@sanchezgomez2026tsh] lo resume en tres ideas que sirven igual para la conciencia fonológica.
+
+**1. El niño no aprende sonidos, aprende contrastes.** Un fonema no tiene valor por sí mismo, sino por las oposiciones que establece con otros: *pala*/*bala* (sonoridad), *taza*/*casa* (punto de articulación), *pata*/*fata* (modo). El desarrollo consiste en incorporar oposiciones al sistema. Cuando un niño dice *tasa* por *casa*, el problema no es el sonido /k/, sino que la oposición /k/–/t/ todavía no está operativa en su sistema [@bosch2004evaluacion; @sanchezgomez2026tsh].
+
+**2. El habla pasa por varios niveles.** Hay percepción del habla, representación fonológica, planificación y programación, y ejecución motora. Un mismo error superficial puede nacer en cualquiera de ellos, y los niveles interactúan.
+
+**3. Del síntoma al mecanismo.** Siguiendo a Rvachew y Matthews, el manual distingue tres niveles de análisis [@sanchezgomez2026tsh]:
+
+- el **superficial**: lo que el niño dice (*¿qué dice?*);
+- el **proximal**: los procesos del sistema que pueden estar fallando (*¿qué falla?*);
+- el **distal**: los factores de origen, como los genéticos, neurológicos o ambientales (*¿por qué?*).
+
+Clasificar no es poner una etiqueta, sino inferir el mecanismo a partir de las producciones.
+
+Trasladado a la plataforma, **una puntuación en una tarea de conciencia fonológica es un dato del nivel superficial**. Lo que el manual quiere estimar está en el proximal: si el niño accede a las unidades del habla (sílabas, fonemas) y puede operar con ellas. Entre una cosa y otra se interponen tres factores, que este capítulo intenta separar:
+
+1. lo difícil que es la tarea en sí;
+2. el habla del propio niño;
+3. su variedad dialectal.
+
+## Cinco dimensiones de dificultad
+
+La investigación sobre conciencia fonológica, en inglés y en español, coincide en que la dificultad de una tarea depende sobre todo de cinco rasgos [@carrillo1994development; @jimenez2000metalinguistic; @anthony2003phonological; @anthony2004nature; @anthony2011spanish; @defior2004crosslinguistic]. La plataforma permite ver cuatro de ellos con sus propios datos.
+
+```{r}
+#| label: tbl-cf-dimensiones
+#| tbl-cap: "Las tareas de conciencia fonológica de la plataforma según las cinco dimensiones de dificultad."
+#| echo: false
+d <- R0[order(R0$unidad != "Sílaba", match(R0$oper, c("Contar / segmentar", "Emparejar", "Aislar", "Sintetizar", "Suprimir")), R0$pos), ]
+knitr::kable(data.frame(Tarea = d$tarea, Unidad = d$unidad, `Operación` = d$oper, `Posición` = d$pos, `Respuesta del niño` = d$resp,
+                        `Ítems` = d$n_items, check.names = FALSE), align = "lllllr")
+```
+
+**① La unidad: sílaba antes que fonema.** La sílaba es una unidad que el niño percibe de forma natural en el habla. El fonema, en cambio, es una abstracción que en gran parte se construye al aprender a leer, y más en una ortografía transparente como la española [@carrillo1994development; @ziegler2005grain].
+
+**② La operación: reconocer antes que manipular.** De menos a más demanda, las operaciones son:
+
+- detectar o emparejar (¿empiezan igual?);
+- aislar (¿por qué sonido empieza?);
+- contar, segmentar y sintetizar;
+- suprimir (¿qué queda si quito…?).
+
+Suprimir obliga a mantener la palabra en la memoria, quitar una parte y recomponer el resto [@anthony2003phonological].
+
+**③ La posición.** En la literatura en inglés, el inicio de la palabra suele ser más fácil de aislar que el final. En la plataforma el efecto de la posición **depende de la operación**:
+
+- **Para emparejar y aislar,** el inicio es más fácil.
+- **Para suprimir,** es más fácil quitar el final, porque lo que queda conserva el comienzo de la palabra y a menudo es otra palabra (*patada* → *pata*).
+
+**④ La estructura y el tipo de sonido.** Influyen en la dificultad:
+
+- las sílabas complejas (CCV, CVC) frente a las simples (CV);
+- los grupos consonánticos;
+- los fonemas de adquisición tardía (/r/, /ɾ/, /θ/, grupos con líquida);
+- las consonantes oclusivas, que no se pueden prolongar, frente a las continuas (/s/, /f/, /m/), que se aíslan mejor.
+
+Con los datos ítem a ítem de la plataforma nueva (`_res`) se podrá estimar este efecto ítem a ítem (ver [lo que falta](#sec-cf-falta)).
+
+**⑤ El modo de respuesta y el soporte léxico.**
+
+- **Modo de respuesta.** Señalar un dibujo no exige hablar. En cambio, decir el fonema inicial, la palabra que queda o la sílaba resultante sí, y ahí se mezclan la conciencia fonológica y el habla del niño (ver más abajo).
+- **Soporte léxico.** Operar con palabras conocidas es más fácil que con pseudopalabras (las tareas «todas las posiciones» de 7–8 años usan pseudopalabras).
+- **Memoria.** Las palabras largas añaden carga de memoria.
+
+## Lo que muestran los datos de la plataforma
+
+```{r}
+#| label: fig-cf-dificultad
+#| fig-cap: "Proporción de aciertos de cada tarea de conciencia fonológica por momento (todas las cohortes, ponderada por N; momentos con al menos 100 niños). En emparejar se descuenta el acierto por azar (1 de 3). Color: unidad; forma: operación."
+#| fig-width: 9.5
+#| fig-height: 5.6
+#| echo: false
+P$etq <- ifelse(P$mom == ave(P$mom, P$tarea_canonica, FUN = max), P$tarea, NA)
+P$momf <- factor(P$mom, levels = sort(unique(P$mom)))
+ggplot(P, aes(momf, 100 * p, colour = unidad, group = tarea_canonica)) +
+  geom_line(linewidth = .6, alpha = .7) +
+  geom_point(aes(shape = oper), size = 2.6, stroke = .9, fill = "white") +
+  ggrepel::geom_text_repel(aes(label = etq), size = 2.8, nudge_x = .35, direction = "y", hjust = 0, segment.colour = PAL_GRUPO[["rejilla"]],
+                           min.segment.length = 0, na.rm = TRUE, show.legend = FALSE, max.overlaps = 30) +
+  scale_colour_manual(values = c("Sílaba" = PAL_GRUPO[["azul"]], "Fonema" = PAL_GRUPO[["naranja"]]), name = "Unidad") +
+  scale_shape_manual(values = c("Emparejar" = 21, "Aislar" = 24, "Contar / segmentar" = 22, "Sintetizar" = 23, "Suprimir" = 16), name = "Operación") +
+  scale_x_discrete(expand = expansion(add = c(.4, 2.6))) +
+  scale_y_continuous(limits = c(0, 100)) +
+  labs(x = "Momento (edad.trimestre)", y = "% de aciertos (emparejar: sobre el azar)") +
+  tema_grupo(10) + theme(legend.position = "top", legend.box = "vertical")
+```
+
+```{r}
+#| label: tbl-cf-contrastes
+#| tbl-cap: "Contrastes de dificultad en el mismo momento de evaluación (% de aciertos; en emparejar, sobre el azar). Las cohortes y los ítems no siempre coinciden: son comparaciones descriptivas, no pruebas."
+#| echo: false
+K <- data.frame(
+  Dimension = c("Unidad", "Unidad", "Unidad", "Operación", "Operación", "Posición al emparejar", "Posición al emparejar", "Posición al aislar", "Posición al suprimir sílabas", "Posición al suprimir sílabas", "Posición al suprimir fonemas", "Posición al suprimir fonemas"),
+  mom = c("7.1", "8.1", "8.2", "5.2", "6.1", "4.2", "5.1", "6.1", "4.2", "4.3", "5.2", "5.3"),
+  A = c("CF_SUPRESION_SILABAS_TP", "CF_SUPRESION_SILABAS_TP", "CF_SUPRESION_SILABAS_TP", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_EMPAREJA_SILABA_INICIAL", "CF_EMPAREJA_SILABA_INICIAL", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_SUPRESION_SILABA_INICIAL", "CF_SUPRESION_SILABA_INICIAL", "CF_SUPRESION_FONEMA_INICIAL", "CF_SUPRESION_FONEMA_INICIAL"),
+  B = c("CF_SUPRESION_FONEMAS_TP", "CF_SUPRESION_FONEMAS_TP", "CF_SUPRESION_FONEMAS_TP", "CF_SUPRESION_FONEMA_INICIAL", "CF_SINTESIS_FONEMICA", "CF_EMPAREJA_SILABA_FINAL", "CF_EMPAREJA_SILABA_FINAL", "CF_IDENTIFICACION_FONEMA_FINAL", "CF_SUPRESION_SILABA_FINAL", "CF_SUPRESION_SILABA_FINAL", "CF_SUPRESION_FONEMA_FINAL", "CF_SUPRESION_FONEMA_FINAL"))
+nom <- setNames(R0$tarea, R0$tarea_canonica)
+K$pa <- mapply(pv, K$A, K$mom); K$pb <- mapply(pv, K$B, K$mom)
+K <- K[is.finite(K$pa) & is.finite(K$pb), ]
+knitr::kable(data.frame(`Dimensión` = K$Dimension, Momento = K$mom, `Tarea A` = nom[K$A], `% A` = f2(K$pa), `Tarea B` = nom[K$B], `% B` = f2(K$pb),
+                        `A − B` = sprintf("%+.0f", 100 * (K$pa - K$pb)), check.names = FALSE), align = "lllrlrr", row.names = FALSE)
+```
+
+Lo que se ve, con la cautela de que cada tarea tiene sus propios ítems y no siempre las mismas cohortes:
+
+- **Unidad.** A los 4–5 años, suprimir una sílaba inicial ya está al alcance de la mitad de los ítems (`r f2(pv("CF_SUPRESION_SILABA_INICIAL", "5.1"))` % a los 5.1), mientras que suprimir el fonema inicial se queda en `r f2(pv("CF_SUPRESION_FONEMA_INICIAL", "5.2"))` % en 5.2. A los 7–8 años, con la lectura ya adquirida, la distancia entre sílaba y fonema casi desaparece en las tareas con pseudopalabras (`r f2(pv("CF_SUPRESION_SILABAS_TP", "8.2"))` % frente a `r f2(pv("CF_SUPRESION_FONEMAS_TP", "8.2"))` % en 8.2). Es lo que predice la idea de que la conciencia fonémica se construye, en gran parte, al aprender a leer en una ortografía transparente.
+- **Operación.** En el mismo trimestre (5.2), aislar el fonema inicial (`r f2(pv("CF_IDENTIFICACION_FONEMA_INICIAL", "5.2"))` %) es mucho más fácil que suprimirlo (`r f2(pv("CF_SUPRESION_FONEMA_INICIAL", "5.2"))` %).
+- **Posición.** Emparejar por la sílaba inicial es más fácil que por la final, una vez descontado el azar (`r f2(pv("CF_EMPAREJA_SILABA_INICIAL", "4.2"))` % frente a `r f2(pv("CF_EMPAREJA_SILABA_FINAL", "4.2"))` % en 4.2), y aislar el fonema inicial más que el final (`r f2(pv("CF_IDENTIFICACION_FONEMA_INICIAL", "6.1"))` % frente a `r f2(pv("CF_IDENTIFICACION_FONEMA_FINAL", "6.1"))` % en 6.1). Al **suprimir** pasa lo contrario: quitar la sílaba o el fonema **final** es más fácil que quitar el inicial.
+- **Suelos.** Las tareas de manipulación tienen muchos niños con cero aciertos justo cuando se introducen. Suprimir el fonema inicial a los 5 años tiene un `r f2(pv("CF_SUPRESION_FONEMA_INICIAL", "5.2", "suelo") / 100)` % de niños en cero. Suprimir la sílaba inicial a los 4.2 tiene un `r f2(pv("CF_SUPRESION_SILABA_INICIAL", "4.2", "suelo") / 100)` %. Encaja con la idea del manual docente de que una unidad o un contraste está o no está operativo: muchos niños aún no «ven» el fonema como unidad, y no tienen solo una habilidad baja. Por eso, en estas edades el cero se lee mejor como «todavía no accesible» que como un percentil más, y proponemos que el baremo y la [clasificación del riesgo](riesgo.qmd) lo traten así.
+
+## Cómo leer un fallo: ¿conciencia fonológica, habla o dialecto? {#sec-cf-leer-fallo}
+
+En la mayoría de las tareas el niño **responde hablando**: dice el fonema inicial, la palabra que queda o la sílaba resultante, y el evaluador juzga si la respuesta es correcta. Ahí aparecen dos fuentes de error que no son de conciencia fonológica.
+
+**1. El habla del propio niño.** A los 4–5 años, muchos niños aún tienen procesos de simplificación propios del desarrollo:
+
+- frontalización: *casa* → *tasa*;
+- reducción de grupos: *plato* → *pato*;
+- simplificación de líquidas: *perro* → *pelo*;
+- omisión de la consonante final: *sol* → *so*.
+
+Algunos tienen además un trastorno de los sonidos del habla (TSH). Si al niño se le pide quitar /p/ a *plato* y responde *ato* en lugar de *lato*, puede que haya hecho bien la supresión sobre **su** representación de la palabra (*pato*). En el modelo de niveles, el fallo está en el habla (representación, planificación o ejecución) y no en la conciencia fonológica.
+
+**2. La variedad dialectal.** En el habla de Málaga son habituales:
+
+- el seseo o el ceceo, que neutralizan /s/–/θ/;
+- la aspiración o pérdida de /s/ al final de sílaba (*los niños* → [loh niño]);
+- la neutralización de /r/ y /l/ al final de sílaba;
+- la caída de /d/ entre vocales.
+
+Estos rasgos afectan a los ítems que piden **aislar o suprimir un fonema final**, o que contienen esos sonidos. Un niño que aspira la /s/ final no «oye» una /s/ que quitar en su propia pronunciación.
+
+**Qué hacemos en el manual:**
+
+- **Regla de corrección.** Se acepta como correcta la respuesta que es coherente con la forma en que el niño pronuncia la palabra (su variedad dialectal y sus procesos de habla), siempre que la operación pedida esté bien hecha. Debe constar en la consigna de cada ficha y en la formación de evaluadores.
+- **Comparar formatos.** Si un niño falla las tareas en las que hay que hablar, pero empareja bien las sílabas (donde solo señala un dibujo), el perfil apunta más al habla que a la conciencia fonológica. Al revés, fallar también el emparejamiento sugiere una dificultad de percepción o de representación. Proponemos que las fichas de procesamiento fonológico lo recojan en su apartado de interpretación.
+- **Marcar el habla.** Un niño con un TSH conocido, o con procesos de simplificación más allá de lo esperable para su edad, debería quedar señalado en la plataforma (cuestionario al docente o al logopeda del centro). Así se puede leer su perfil de conciencia fonológica con esa información y estudiar el efecto en la investigación.
+- **Revisar los ítems.** Hay que localizar los ítems cuya respuesta correcta depende de un sonido afectado por el dialecto (/s/ y /θ/, /s/ final, /r/ y /l/ finales) o de un sonido de adquisición tardía, y estudiar si funcionan peor (ver abajo).
+
+**Por qué importa más allá de la evaluación.** Los niños con TSH que persisten más allá de los 5–6 años, sobre todo si se acompañan de dificultades del lenguaje, tienen más riesgo de dificultades lectoras. Es la «hipótesis de la edad crítica» [@bishop1990prospective; @pennington2009relations]. El habla, la conciencia fonológica y la lectura comparten la misma base: la calidad de las representaciones fonológicas. Una baja puntuación en conciencia fonológica de un niño con TSH no es, por tanto, un «falso positivo» que haya que descartar, sino una señal que conviene interpretar con el logopeda.
+
+## Lo que falta {#sec-cf-falta}
+
+1. **Contrastes dentro de cada niño.** Comparar tareas de distinta unidad, operación y posición en los mismos niños y en el mismo trimestre, con un modelo de ítems (Rasch o TRI explicativa) que estime el efecto de cada dimensión. Sustituiría las comparaciones descriptivas de este capítulo. Se puede hacer con la tabla larga y, para la plataforma nueva, con las respuestas ítem a ítem (`_res`).
+2. **Rasgos de los ítems.** Codificar cada ítem por estructura silábica, tipo de fonema (continuo u oclusivo; adquisición temprana o tardía), longitud, frecuencia y sensibilidad dialectal (/s/ final, /θ/, líquidas finales), y estimar cuánto explican de la dificultad.
+3. **Perfil receptivo frente a productivo.** Construir un indicador que compare las tareas en las que se señala (emparejar) con las que piden decir sonidos, y estudiar si separa a los niños con TSH de los niños con riesgo lector.
+4. **Habla en la plataforma.** Un breve registro de habla (o un cuestionario al docente) a los 4 y 5 años permitiría separar en el análisis el componente de habla del de conciencia fonológica, siguiendo el modelo de niveles del manual docente.

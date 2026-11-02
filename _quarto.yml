@@ -96,6 +96,7 @@ book:
         - fichas/auto/LEC_SILABAS_MEDIA.qmd
     - part: "Fichas · Procesamiento fonológico"
       chapters:
+        - conciencia-fonologica.qmd
         - fichas/RAN.qmd
         - fichas/RIMA.qmd
         - fichas/TRES_ANIOS.qmd
