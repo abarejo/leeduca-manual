@@ -315,11 +315,12 @@ Grupos definidos con la lectura de 8 años en adelante: 3.881 niños de las coho
 ## Borrador del artículo
 
 ::: {.callout-note collapse="true"}
-## Borrador 1 para revisión (02/11/2026) — abrir
+## Borrador 2 para revisión (02/11/2026) — abrir
 
-**Para J. L. Luque.** Borrador completo para *Scientific Studies of Reading*: resumen estructurado, introducción con hipótesis, método, resultados (tres tablas, con las cifras de `m26_articulo_v6.R`), discusión con limitaciones, declaraciones, referencias en APA 7, lista de figuras y lista de comprobación para el envío. Faltan las figuras, los datos de ética y la revisión de la idea por su autor.
+**Para J. L. Luque.** Borrador completo para *Scientific Studies of Reading*: resumen estructurado, introducción con hipótesis, método, resultados (tres tablas y tres figuras, con las cifras de `m26_articulo_v6.R`), discusión con limitaciones, declaraciones, referencias en APA 7 y lista de comprobación para el envío. Faltan los datos de ética y la revisión de la idea por su autor.
 
-- [Descargar el borrador en Word (.docx, 19 KB)](../borradores/M26_exactitud_borrador_1_2026-11-02.docx)
+- [Descargar el borrador 2 en Word, con figuras (.docx, 0,5 MB)](../borradores/M26_exactitud_borrador_2_2026-11-02.docx)
+- Versión anterior, sin figuras: [borrador 1](../borradores/M26_exactitud_borrador_1_2026-11-02.docx)
 - Documento vivo en Claude, con comentarios en línea: pedir el enlace a P. J. López (requiere acceso compartido).
 - Copia de trabajo en el PC de PJ López: `PLATAFORMA\ARCHIVOS_CONTROL_JAVI\ARTICULOS_BORRADORES\EXACTITUD_M26\`.
 
