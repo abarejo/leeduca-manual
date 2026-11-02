@@ -4,7 +4,7 @@ search: false
 
 # M29 · El juicio del docente frente a LEEDUCA (L1) {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 2, 02/11/2026. Artículo L1 del proyecto: «¿Ven los docentes lo que ve un cribado digital? Juicio docente y evaluación en línea como predictores tempranos de las dificultades lectoras». Manuscrito completo en español preparado para* Education in the Knowledge Society *(15/10/2026) y versión en inglés. Esta página resume el estudio, sus resultados y su lugar en la literatura (revisada con SciSpace el 02/11/2026), y deja la lista de lo que falta antes del envío.*
+*Desarrollo de un estudio de la Agenda · versión 3, 02/11/2026. Artículo L1 del proyecto: «¿Ven los docentes lo que ve un cribado digital? Juicio docente y evaluación en línea como predictores tempranos de las dificultades lectoras». Manuscrito completo en español preparado para* Education in the Knowledge Society *(15/10/2026) y versión en inglés. Esta página resume el estudio, sus resultados y su lugar en la literatura (revisada con SciSpace el 02/11/2026), y deja la lista de lo que falta antes del envío.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** Artículo en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados; los docentes van seudonimizados y la figura de dispersión del manuscrito (un punto por niño) no se reproduce aquí.
@@ -32,7 +32,7 @@ M <- read.csv(file.path(d, "2_Multinivel.csv"), encoding = "UTF-8")
 3. **Antes de leer, la plataforma ve más.** A los 4 años, LEEDUCA predice la lectura de 6 años mejor que el docente (AUC .82 frente a .72), y el docente apenas añade.
 4. **Cuando ya se lee, el docente iguala a la plataforma.** A los 7 años, los dos predicen igual la lectura de 10 años (.86) y juntos llegan a .91.
 5. **Se equivocan con niños distintos.** Marcar a un niño cuando *cualquiera* de las dos fuentes lo sitúa en el 20 % inferior detecta 2 de cada 3 futuros lectores con dificultades a los 4 años y el 85 % a los 7, con valores predictivos negativos de .90–.96.
-6. **Una pista de equidad.** Los niños que solo detecta LEEDUCA son los que el docente percibe de nivel sociocultural más bajo (1,8 frente a 3,1 en una escala de 1 a 5). Si se confirma, el cribado universal protege precisamente a quienes el juicio docente pasa por alto.
+6. **El juicio docente lleva incorporada la percepción del contexto familiar** ([contraste formal](#sec-m29-sesgo)). A igual habilidad medida y a igual lectura posterior, el docente valora mejor a los niños que percibe de nivel sociocultural más alto: β = .24 a los 4 años y .61–.71 a los 7, más que la propia habilidad. En cambio, la hipótesis del borrador (que el docente pasa por alto a los niños de nivel bajo) **no se confirma**: entre los futuros lectores con dificultades, el nivel percibido no cambia la probabilidad de que el docente los marque a los 4 años, y a los 7 tiende a marcarlos *más*. El dato descriptivo del borrador (1,8 frente a 3,1) se explica porque LEEDUCA marca más a los niños de nivel bajo, que puntúan más bajo, no porque el docente se los salte.
 :::
 
 ## Por qué importa: lo que ya se sabe
@@ -136,16 +136,51 @@ knitr::kable(E2[, c("Criterio", "Regla", "marcados", "sens", "esp", "VPP", "VPN"
 
 Cada fuente por separado deja sin detectar a cerca de la mitad de los futuros lectores con dificultades, pero no a los mismos. La regla «cualquiera de los dos» marca a unos 3 de cada 10 niños y encuentra a 2 de cada 3 casos a los 4 años y al 85 % a los 7; si un niño no queda marcado por ninguna de las dos, la probabilidad de que tenga dificultades después es del 4–10 %.
 
-### Quién se le escapa al docente
+### El nivel sociocultural percibido en el juicio docente {#sec-m29-sesgo}
 
-Los niños que solo detecta LEEDUCA tenían, según su docente, un nivel sociocultural percibido de 1,8 (de 1 a 5), frente a 3,1 en los que solo detecta el docente. La lectura prudente: el docente puede atribuir al contexto familiar las dificultades de estos niños, en lugar de señalarlas como riesgo. Coincide con la literatura sobre sesgo socioeconómico [@olczyk2022; @doyle2023], pero aquí son 12 frente a 15 niños: **falta contrastarlo formalmente** (ver [qué falta](#sec-m29-falta)).
+El borrador observó que los niños que solo detecta LEEDUCA tienen un nivel sociocultural percibido más bajo (1,8 frente a 3,1, con 12 y 15 niños) y lo interpretó como que el docente pasa por alto a esos niños. Se contrastó formalmente con el script `juicio_docente_sesgo_v1.R` (02/11/2026), con la misma muestra y las mismas marcas que el artículo, y dos preguntas distintas:
+
+```{r}
+#| echo: false
+s <- "../datos/agregados/M29/sesgo_v1"
+B1 <- read.csv(file.path(s, "B1_casos_nivel_sociocultural.csv"), encoding = "UTF-8"); B3 <- read.csv(file.path(s, "B3_casos_ISE_oficial.csv"), encoding = "UTF-8")
+B5 <- read.csv(file.path(s, "B5_casos_apoyo_familiar.csv"), encoding = "UTF-8")
+X <- rbind(transform(B1, contexto = "Nivel sociocultural percibido"), transform(B3, contexto = "ISE oficial del centro"), transform(B5, contexto = "Apoyo familiar percibido"))
+X <- X[X$termino == "OR_contexto_por_DT", ]
+X$Criterio <- sub(" · .*", "", X$analisis)
+X$`OR por DT [IC 95 %]` <- sprintf("%.2f [%.2f, %s]", X$estimacion, X$ic_inf, ifelse(is.infinite(X$ic_sup) | X$ic_sup > 20, "—", sprintf("%.2f", X$ic_sup)))
+X <- X[order(match(X$Criterio, c("4 años → lectura ≤ P25 a los 6", "7 años → lectura ≤ P25 a los 8", "7 años → lectura ≤ P25 a los 10")), X$contexto != "Nivel sociocultural percibido"), ]
+knitr::kable(X[, c("Criterio", "contexto", "n_casos", "marcados_docente", "OR por DT [IC 95 %]", "p_boot")], row.names = FALSE,
+             col.names = c("Criterio", "Contexto", "Casos", "Marcados por el docente", "OR por DT [IC 95 %]", "p (bootstrap)"),
+             caption = "B1, B3 y B5. Entre los futuros lectores con dificultades: odds de ser marcado por el docente por cada DT más de contexto, a igual puntuación de LEEDUCA. OR > 1: el docente pasa por alto a los de nivel bajo; OR < 1: los marca más. IC por bootstrap de aulas (1.000).")
+```
+
+```{r}
+#| echo: false
+B2 <- read.csv(file.path(s, "B2_sesgo_juicio.csv"), encoding = "UTF-8")
+B2$`β [IC 95 %]` <- sprintf("%.2f [%.2f, %.2f]", B2$beta, B2$ic_inf, B2$ic_sup)
+knitr::kable(B2[, c("analisis", "n", "aulas", "termino", "β [IC 95 %]")], row.names = FALSE,
+             col.names = c("Muestra y criterio", "n", "Aulas", "Predictor de la valoración docente", "β [IC 95 %]"),
+             caption = "B2. Valoración docente (centrada en el aula, tipificada) explicada a la vez por la habilidad medida (LEEDUCA concurrente y lectura posterior) y por el nivel sociocultural percibido. Modelo mixto con intercepto de aula.")
+```
+
+**Qué dicen, en palabras sencillas:**
+
+1. **La valoración del docente mezcla habilidad y contexto (B2).** A los 4 años, el nivel sociocultural percibido explica la valoración casi tanto como la lectura posterior (β = .24 frente a .23). A los 7 años pesa **más que la propia habilidad medida** (β = .61–.71 frente a .15–.25). Es el sesgo «clásico» que describe la literatura: el docente valora mejor a quien percibe de nivel más alto [@olczyk2022; @doyle2023].
+2. **La hipótesis del borrador no se confirma (B1).** A los 4 años, entre los 67 futuros lectores con dificultades, el nivel percibido no cambia la probabilidad de ser marcado por el docente (OR 1,05; IC 0,44–2,45). A los 7 años la tendencia va en sentido contrario: el docente marca *más* a los de nivel bajo (OR 0,64 con la lectura de 8 años; con el apoyo familiar percibido, OR 0,52, IC 0,16–0,86).
+3. **El dato descriptivo del borrador tiene otra explicación (B4).** Entre los futuros lectores con dificultades de 4 años, el docente marca a un porcentaje parecido en los tres tercios de nivel percibido (44 %, 60 % y 31 %), mientras que LEEDUCA marca mucho más en el tercio bajo que en el alto (62 % frente a 13 %). Los casos «solo LEEDUCA» son de nivel bajo porque LEEDUCA detecta más a esos niños, no porque el docente se los salte.
+4. **Con el ISE oficial del centro no hay efecto claro** (B3, OR 1,53; IC 0,68–5,97): lo que entra en el juicio es la *percepción* del docente, que coincide poco con el índice oficial (ρ = .34).
+
+**Cautela de método.** El docente valora a la vez la habilidad y el nivel sociocultural, en el mismo cuestionario. Parte de la relación puede ser un efecto halo en ambos sentidos: quien parece más capaz puede parecer también de «mejor familia». Por eso se habla de *nivel sociocultural percibido* y no de nivel socioeconómico, y el resultado se presenta como contaminación del juicio por la percepción del contexto, no como discriminación. Con 20 casos, el criterio de 10 años no permite conclusiones (intervalos sin límite superior por separación).
+
+**Para el artículo (propuesta de párrafo):** *«Contrastamos formalmente si el profesorado pasaba por alto a los niños de entornos percibidos como desfavorecidos. No fue así: entre los futuros lectores con dificultades, el nivel sociocultural percibido no se asoció con la probabilidad de ser señalado por el docente a los 4 años (OR = 1,05; IC 95 % [0,44, 2,45]) y, a los 7 años, tendió a asociarse con una mayor probabilidad de señalamiento (OR = 0,64; [0,24, 1,07]). Sin embargo, a igual habilidad medida y a igual rendimiento lector posterior, la valoración docente dependió del nivel sociocultural percibido (β = 0,24 a los 4 años y 0,61–0,71 a los 7). Las valoraciones docentes incorporan, por tanto, una percepción del contexto familiar que no recoge la evaluación digital; combinarlas con un cribado objetivo permite separar ambas fuentes de información.»*
 
 ## Lo que aporta al campo
 
 1. **Juicio docente independiente y previo a la lectura.** La mayoría de estudios usan juicios «informados» (el docente ya conoce resultados de pruebas), que inflan la correlación [@sudkamp2012]. Aquí el juicio es anterior a cualquier resultado y a la enseñanza formal de la lectura.
 2. **Comparación directa con un cribado digital repetido**, no con una prueba aislada, en una ortografía transparente.
 3. **El momento importa.** El mismo docente que apenas añade a los 4 años iguala a la plataforma a los 7: el juicio mejora cuando la habilidad se vuelve observable [@kenny1993; @hecht2001].
-4. **Equidad.** Si se confirma, el resultado es un argumento empírico para el cribado universal: protege a los niños que el juicio docente, por su contexto, tiende a pasar por alto.
+4. **Equidad.** El juicio docente incorpora la percepción del contexto familiar, sobre todo a los 7 años. No hace que el docente pase por alto a los niños de nivel bajo, pero sí que su valoración diga, en parte, cómo percibe a la familia. Un cribado objetivo separa esa información de la habilidad del niño.
 
 ## Cómo se une al manual
 
@@ -161,7 +196,7 @@ Los niños que solo detecta LEEDUCA tenían, según su docente, un nivel sociocu
 
 ## Qué falta antes de enviar {#sec-m29-falta}
 
-- [ ] **Contraste formal del sesgo socioeconómico.** Propuesta: entre los niños con dificultad posterior, regresión logística de «marcado por el docente» sobre la puntuación de LEEDUCA y el nivel sociocultural percibido, con intercepto de aula. Si el nivel sociocultural percibido predice no ser marcado a igual nivel de LEEDUCA, el sesgo queda demostrado; con pocos casos, informar del intervalo y presentarlo como hipótesis.
+- [x] **Contraste formal del sesgo socioeconómico** ([resultados](#sec-m29-sesgo)). Hay que **reescribir** en el manuscrito el párrafo de «¿A quién se deja de detectar?» y el de la discusión sobre equidad con el párrafo propuesto.
 - [ ] **Sexo:** confirmar la codificación (en la tabla larga actual los códigos son «niño» y «niña»).
 - [ ] **Condición Preleo de la muestra de 7 años** con la asignación v6, y análisis de sensibilidad sin los niños de colegios con Preleo.
 - [ ] **Ética:** referencia del comité, consentimientos de 2018 y protección de datos.

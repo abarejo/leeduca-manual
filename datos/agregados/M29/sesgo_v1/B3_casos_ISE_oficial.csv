@@ -1,0 +1,3 @@
+﻿analisis,n_casos,aulas,marcados_docente,termino,estimacion,ic_inf,ic_sup,p_boot,OR_mixto,p_mixto
+4 años → lectura ≤ P25 a los 6 · ISE oficial del centro,67,16,33,OR_LEEDUCA_por_DT,0.813,0.302,1.343,0.308,,
+4 años → lectura ≤ P25 a los 6 · ISE oficial del centro,67,16,33,OR_contexto_por_DT,1.527,0.678,5.966,0.14,,
