@@ -4,7 +4,7 @@ search: false
 
 # M27 · ¿Para quién funciona una intervención universal? Compensación acotada en Preleo {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 6, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). La página empieza con una **síntesis para el grupo**, sigue con la **explicación sencilla del análisis** y termina con la **ficha completa** del estudio.*
+*Desarrollo de un estudio de la Agenda · versión 7, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). La página empieza con una **síntesis para el grupo**, sigue con la **explicación sencilla del análisis** y termina con la **ficha completa** del estudio.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
@@ -22,7 +22,8 @@ search: false
 3. **Qué encontramos.** A los 6 años, los niños de **riesgo moderado** con Preleo rinden algo más en conciencia fonológica que sus iguales sin el programa (+0,44 DT), sobre todo al empezar 1.º. A los 7 años **no queda ninguna diferencia**, en ningún dominio ni nivel de riesgo, y Preleo no cambia la probabilidad de terminar con dificultad lectora persistente.
 4. **El segundo diseño, sin autoselección de centros, apunta en la misma dirección** ([resultados](#sec-did)). Comparando los 11 colegios que pasaron de no aplicar Preleo (2010) a aplicarlo (2011) con los 23 que lo aplicaron los dos años: al acabar el curso del programa (5.3) los niños saben más letras (+0,31 DT, IC 0,03–0,56). En conciencia fonológica la ventaja de 5.2 (+0,41) es menos clara, porque en la prueba de placebo (5.1, antes del programa) ya había +0,22, sin significación. Desde los 6 años no hay efecto en ningún dominio ni en la lectura, y los niños que partían más bajo no se benefician más.
 5. **Lo que no se sostiene del borrador.** La ventaja del riesgo bajo en palabras es un efecto del método (ajustar por los 6 años), y la compensación en comprensión no se replica.
-6. **La historia del artículo, con dos diseños que coinciden:** un programa universal de un curso mejora lo que entrena (letras y conciencia fonológica) mientras se aplica, con una pequeña ventaja compensatoria a los 6 años en el riesgo moderado, pero no se transfiere a la lectura ni cambia la dificultad persistente. Falta el análisis de la fidelidad (¿más rigor, más efecto?) y una prueba de placebo en 5.1 (ver [siguientes pasos](#sec-siguientes)).
+6. **La historia del artículo, con dos diseños que coinciden:** un programa universal de un curso mejora lo que entrena (letras y conciencia fonológica) mientras se aplica, con una pequeña ventaja compensatoria a los 6 años en el riesgo moderado, pero no se transfiere a la lectura ni cambia la dificultad persistente.
+7. **La tercera prueba, la fidelidad, refuerza la conciencia fonológica** ([resultados](#sec-fidelidad)). En los colegios que aplicaron Preleo con más rigor la ventaja en conciencia fonológica es de +0,25 DT de 5.2 a 6.1, y en los de poco rigor no hay ninguna (diferencia +0,26 en 5.3, IC 0,01–0,58; +0,13 DT por punto de rigor). Antes del programa no se diferenciaban. Ni siquiera con rigor alto mejoran las letras ni la lectura.
 :::
 
 ### Cómo hemos llegado aquí: seis análisis y una réplica
@@ -201,6 +202,54 @@ ggplot(E3, aes(mom, efecto_DT, colour = dominio, group = dominio)) +
 
 **Por qué la réplica no veía el efecto en 5.3.** La réplica compara colegios distintos (los que eligieron Preleo frente a los que no); este diseño compara cada colegio consigo mismo. Que el efecto en letras aparezca aquí y no allí indica que los colegios que eligieron el programa partían de situaciones diferentes, justo la objeción que este diseño resuelve.
 
+## Tercera prueba: más rigor, ¿más efecto? {#sec-fidelidad}
+
+Si el efecto es del programa, debería ser mayor donde el programa se aplicó mejor (relación **dosis-respuesta**). La tesis de Auxi valoró el **rigor de aplicación** de 19 colegios CON (`06_PRELEO_COLEGIOS/coles_intervencion.xlsx`): 2 (5 colegios), 3 (4), 4 (6) y «rigor absoluto» (4). Se agrupan en **rigor bajo** (2–3) y **rigor alto** (4–absoluto) y se comparan con el grupo SIN de la cohorte 2010, trimestre a trimestre, con el mismo ajuste que la réplica (riesgo de 5.1, sexo, edad, ISE) y bootstrap de colegios dentro de cada grupo (script `m27_fidelidad_v1.R`).
+
+**Muestra.** 17 de los 19 colegios con rigor están en la muestra del manual: 9 de rigor alto (264 niños con riesgo de 5.1) y 7–8 de rigor bajo (189), frente a 11 colegios SIN (261). Otros 9 colegios CON (297 niños) no tienen rigor asignado y quedan fuera. **Equilibrio:** antes del programa (placebo en 5.1) los colegios de rigor alto estaban igual que los SIN (+0,03 DT, IC −0,48 a 0,54) y los de rigor bajo algo por encima (+0,19, IC −0,26 a 0,69); los de rigor alto tienen un ISE algo mayor (5,9 frente a 4,7), que entra en el ajuste.
+
+```{r}
+#| label: fig-m27-fidelidad
+#| echo: false
+#| fig-cap: "Efecto de Preleo (en DT del grupo SIN) en los colegios de rigor alto (4–absoluto) y bajo (2–3), trimestre a trimestre, con IC 95 % por bootstrap de colegios. Punto relleno: IC sin el 0. Cohorte 2010."
+#| fig-width: 9.5
+#| fig-height: 5.6
+F1 <- read.csv("../datos/agregados/M27/fidelidad_v1/F1_efecto_por_rigor.csv", encoding = "UTF-8")
+F1 <- F1[F1$termino != "dif_alta_baja" & F1$dominio %in% c("CF", "LET", "RAN", "PAL", "PSE", "COMP"), ]
+F1$dominio <- factor(F1$dominio, levels = c("CF", "LET", "RAN", "PAL", "PSE", "COMP"),
+                     labels = c("Conciencia fonológica", "Letras", "RAN", "Palabras", "Pseudopalabras", "Comprensión"))
+F1$grupo <- factor(F1$termino, levels = c("efecto_alta", "efecto_baja"), labels = c("Rigor alto", "Rigor bajo"))
+F1$mom <- factor(F1$mom, levels = sort(unique(F1$mom)))
+F1$sig <- F1$ic_inf > 0 | F1$ic_sup < 0
+ggplot(F1, aes(mom, estimacion, colour = grupo, group = grupo)) +
+  geom_hline(yintercept = 0, colour = PAL_GRUPO[["gris"]], linewidth = .4) +
+  geom_linerange(aes(ymin = ic_inf, ymax = ic_sup), position = position_dodge(.5), linewidth = .55, alpha = .45) +
+  geom_line(position = position_dodge(.5), linewidth = .5, alpha = .6) +
+  geom_point(aes(shape = sig), position = position_dodge(.5), size = 2.2, fill = "white", stroke = .9) +
+  scale_shape_manual(values = c(`TRUE` = 16, `FALSE` = 21), labels = c(`TRUE` = "IC sin el 0", `FALSE` = "IC con el 0"), name = NULL) +
+  scale_colour_manual(values = c("Rigor alto" = PAL_GRUPO[["azul"]], "Rigor bajo" = PAL_GRUPO[["naranja"]]), name = NULL) +
+  facet_wrap(~ dominio, ncol = 3, scales = "free_x") +
+  labs(x = "Momento (edad.trimestre)", y = "Efecto de Preleo (DT)") +
+  tema_grupo(10) + theme(legend.position = "top")
+```
+
+| Conciencia fonológica | 5.2 | 5.3 | 6.1 | 6.2 | 7.1 |
+|---|---|---|---|---|---|
+| Rigor alto frente a SIN | +0,26 | +0,25 | **+0,26** (0,05 a 0,51) | +0,17 | +0,12 |
+| Rigor bajo frente a SIN | +0,10 | −0,01 | −0,07 | −0,12 | +0,03 |
+| Diferencia alto − bajo | +0,16 | **+0,26** (0,01 a 0,58) | +0,33 (−0,04 a 0,69) | +0,28 | +0,10 |
+| Por cada punto de rigor (solo CON) | +0,01 | **+0,13** (0,02 a 0,30) | +0,11 | +0,12 | 0,00 |
+
+**En palabras sencillas:**
+
+1. **En conciencia fonológica hay dosis-respuesta.** Donde Preleo se aplicó con rigor, los niños rinden un cuarto de DT más que sin el programa desde 5.2 hasta el comienzo de 1.º (6.1); donde se aplicó con poco rigor, no hay ventaja. La diferencia es la misma en cuatro trimestres seguidos y crece con cada punto de la escala (+0,13 DT por punto en 5.3). Como los colegios de rigor alto partían igual que los SIN en 5.1, no es una diferencia de partida. **Esto refuerza que la ventaja en conciencia fonológica es del programa**, y responde en parte a la duda del placebo del segundo diseño.
+2. **Se apaga en 1.º.** A los 7 años (7.1) la diferencia ya es de una décima.
+3. **Letras: sin dosis.** Dentro de 2010, ni los colegios de rigor alto ni los de rigor bajo saben más letras que los SIN, y no hay diferencia entre ellos. El efecto en letras del segundo diseño procede de los colegios que empezaron en 2011, de los que no hay valoración de rigor.
+4. **Lectura: tampoco.** En palabras y pseudopalabras las estimaciones del rigor alto son algo negativas a los 6–7 años (−0,2 a −0,34), siempre con el 0 en el intervalo. No hay transferencia, ni siquiera donde el programa se aplicó mejor. Si se repitiera, valdría la pena preguntar si más horas de Preleo restaron tiempo a la decodificación, pero con estos datos es solo una pregunta.
+5. **Cautelas.** Son 17 colegios: los intervalos son anchos y hay 34 celdas por grupo, de modo que algún resultado aislado (RAN en 6.2) puede ser azar; lo que pesa es el patrón de conciencia fonológica, repetido en cuatro trimestres. El rigor no se asignó al azar. Detrás del rigor está, en buena parte, **la disposición del docente** (sus creencias sobre cómo se aprende a leer, su experiencia y su apertura al programa), que influye en cómo aplica Preleo [@gimenez2023opiniones]. Un docente así puede enseñar mejor la conciencia fonológica también por su cuenta, de modo que parte de la «dosis» puede ser efecto del docente y no del programa; el ISE ajustado y el placebo equilibrado lo acotan, pero no lo descartan. Por eso el manual propone [medir la disposición de todo el profesorado al empezar el curso](../preleo/fidelidad.qmd) y usarla como covariable o moderador: en los próximos estudios permitiría separar el efecto del programa del efecto del docente. En el artículo va como limitación y como recomendación de diseño. **Falta confirmar con Auxi** el sentido de la escala (2 < 3 < 4 < absoluto), la cohorte a la que se refiere y cómo se valoró, y por qué 9 colegios CON no tienen rigor.
+
+**Frase para el artículo:** *«In schools rated as high-fidelity implementers, the phonological-awareness advantage was a quarter of a standard deviation and persisted into the first term of Grade 1, whereas low-fidelity schools showed none; schools did not differ before the programme. The advantage did not extend to letter knowledge or word reading at any fidelity level.»*
+
 ## Por qué este análisis, explicado paso a paso {#sec-por-que}
 
 Esta sección explica cada decisión del análisis sin fórmulas: qué se hace habitualmente, qué hacemos aquí y por qué. Cada apartado termina con una frase que puede ir casi tal cual al método del artículo, donde estas justificaciones dan solidez y elegancia.
@@ -347,7 +396,8 @@ Notas para la siguiente versión, en orden de importancia. Ninguna cambia el pla
 - [ ] Presentar esta síntesis a Auxi y Juan Luis y acordar el análisis principal (réplica y diferencias en diferencias) por escrito.
 - [x] **Diferencias en diferencias por momento (v2)** ([resultados](#sec-did-v2)): placebo en 5.1 no concluyente (+0,22 en CF); letras +0,31 en 5.3; nada desde los 6 años.
 - [ ] **Pérdida de muestra a los 8 años en el par 2010 → 2011:** comprobar si los niños que siguen a los 8 son comparables en los dos tipos de colegio antes de interpretar la señal negativa del tercio bajo.
-- [ ] **Fidelidad como dosis:** emparejar el rigor de aplicación de la tesis con los colegios de la asignación v6 y repetir A1 y A6 con el rigor como moderador (script v3).
+- [x] **Fidelidad como dosis** ([resultados](#sec-fidelidad)): dosis-respuesta en conciencia fonológica de 5.2 a 6.1; sin dosis en letras ni lectura.
+- [ ] **Confirmar con Auxi la escala de rigor** (sentido, cohorte, cómo se valoró) y por qué 9 colegios CON de 2010 no tienen valoración.
 - [x] **Segundo diseño:** diferencias en diferencias 2010 → 2011 ([resultados](#sec-did)). Los pares 2011/2012 y 2013/2014 no son viables en bruto (pocos colegios comunes; cambio de plataforma).
 - [ ] Auxi revisa los puntos 1–5 de la revisión del borrador (datos y texto).
 - [ ] Decidir la historia, la revista y el idioma después de los dos análisis anteriores.
