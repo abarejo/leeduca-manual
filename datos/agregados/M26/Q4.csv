@@ -1,0 +1,31 @@
+momento,comparacion,modelo,auc_cv,ic95,n,casos
+6.3,Grave frente a leve,Exactitud,0.708370656370656,0.66–0.76,545,175
+6.3,Grave frente a leve,Velocidad,0.707186377128574,0.66–0.75,543,173
+6.3,Grave frente a leve,Letras a 5 años,0.630268853953065,0.58–0.68,496,154
+6.3,Grave frente a leve,Exactitud + velocidad,0.755897516013123,0.71–0.8,543,173
+6.3,Grave frente a leve,Exactitud + velocidad + letras,0.747882461064607,0.7–0.8,444,127
+6.3,Dificultad (grave o leve) frente a típico,Exactitud,0.69034250764526,0.66–0.72,995,545
+6.3,Dificultad (grave o leve) frente a típico,Velocidad,0.761379169224473,0.73–0.79,993,543
+6.3,Dificultad (grave o leve) frente a típico,Letras a 5 años,0.597389323403937,0.56–0.63,927,496
+6.3,Dificultad (grave o leve) frente a típico,Exactitud + velocidad,0.773406998158379,0.74–0.8,993,543
+6.3,Dificultad (grave o leve) frente a típico,Exactitud + velocidad + letras,0.767450742513087,0.74–0.8,845,444
+6.2,Grave frente a leve,Exactitud,0.708852697661723,0.66–0.76,553,174
+6.2,Grave frente a leve,Velocidad,0.707821833403885,0.66–0.76,544,171
+6.2,Grave frente a leve,Letras a 5 años,0.630268853953065,0.58–0.68,496,154
+6.2,Grave frente a leve,Exactitud + velocidad,0.739695530156938,0.69–0.79,544,171
+6.2,Grave frente a leve,Exactitud + velocidad + letras,0.736023622047244,0.68–0.79,447,127
+6.2,Dificultad (grave o leve) frente a típico,Exactitud,0.657449155985374,0.62–0.69,1007,553
+6.2,Dificultad (grave o leve) frente a típico,Velocidad,0.739337420112169,0.71–0.77,995,544
+6.2,Dificultad (grave o leve) frente a típico,Letras a 5 años,0.597389323403937,0.56–0.63,927,496
+6.2,Dificultad (grave o leve) frente a típico,Exactitud + velocidad,0.746148265292813,0.72–0.78,995,544
+6.2,Dificultad (grave o leve) frente a típico,Exactitud + velocidad + letras,0.738427120977457,0.7–0.77,850,447
+7.1,Grave frente a leve,Exactitud,0.673136496970694,0.62–0.72,575,189
+7.1,Grave frente a leve,Velocidad,0.770622584094087,0.73–0.81,575,189
+7.1,Grave frente a leve,Letras a 5 años,0.630268853953065,0.58–0.68,496,154
+7.1,Grave frente a leve,Exactitud + velocidad,0.774063108259999,0.73–0.82,575,189
+7.1,Grave frente a leve,Exactitud + velocidad + letras,0.767211538461538,0.72–0.82,450,130
+7.1,Dificultad (grave o leve) frente a típico,Exactitud,0.607514428626395,0.57–0.64,1027,575
+7.1,Dificultad (grave o leve) frente a típico,Velocidad,0.785007763975155,0.76–0.81,1023,575
+7.1,Dificultad (grave o leve) frente a típico,Letras a 5 años,0.597389323403937,0.56–0.63,927,496
+7.1,Dificultad (grave o leve) frente a típico,Exactitud + velocidad,0.781820652173913,0.75–0.81,1023,575
+7.1,Dificultad (grave o leve) frente a típico,Exactitud + velocidad + letras,0.77175423485501,0.74–0.8,837,450

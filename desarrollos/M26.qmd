@@ -21,7 +21,7 @@ search: false
 2. **Por qué LEEDUCA puede responderlo.** Tres evaluaciones por curso de los 4 a los 11 años, con aciertos y tiempos (por ítem en la plataforma nueva), en seis cohortes. Casi ningún estudio en el mundo tiene esa resolución temporal en una ortografía transparente.
 3. **Qué se espera.** En español la exactitud llega pronto (hacia el final de 1.º) y la automatización tarda años. Los niños con dificultad persistente se separarían de los demás en dos ventanas distintas: un retraso **transitorio** en la exactitud a los 6 años y un fallo **persistente** en la automatización desde los 7.
 4. **Por qué importa.** Si es así, la dificultad transitoria y la persistente del manual no serían dos grados de lo mismo, sino dos ciclos distintos que fallan. Eso cambia qué tarea mirar en cada momento y qué tipo de ayuda dar.
-5. **Lo que dicen ya los datos** (2.754 niños). La exactitud a 6.2–6.3 separa la dificultad grave de la leve (AUC .80–.83). El leve alcanza la exactitud hacia los 7 años, pero no la velocidad: el 40 % lee con exactitud pero lento a los 8. Falta descartar la circularidad, con los grupos definidos desde los 8 años.
+5. **Lo que dicen ya los datos.** Con los grupos definidos solo con la lectura de 8 años en adelante (sin circularidad), la mitad de los típicos domina la exactitud a 6.2, la de los leves a 6.3 y la de los graves a 7.2. Para separar grave de leve, a los 6 años sirven igual la exactitud y la velocidad (AUC .71); a los 7, ya más la velocidad (.77). El efecto de longitud desaparece a los 8 años en los típicos y no baja en los graves.
 :::
 
 ## Preguntas
@@ -47,7 +47,7 @@ search: false
 Se registran antes de analizar los datos.
 
 - **H1. Exactitud temprana.** La mayoría de los niños sin dificultad supera el 90 % de aciertos en palabras y pseudopalabras simples al final de 1.º (6.3); las sílabas complejas y las palabras largas tardan uno o dos trimestres más.
-- **H2. Automatización lenta.** La velocidad sigue creciendo hasta 3.º–4.º; el efecto de longitud (tiempo extra por sílaba) se reduce de forma gradual y el de lexicalidad (pseudopalabras frente a palabras) se mantiene más tiempo.
+- **H2. Automatización lenta.** La velocidad sigue creciendo hasta 3.º–4.º; el efecto de longitud (tiempo extra por sílaba) se reduce de forma gradual y el de lexicalidad (pseudopalabras frente a palabras) se mantiene más tiempo. *(Revisada con los datos: el efecto de lexicalidad crece entre los 6 y los 8 años, porque marca la formación del léxico ortográfico.)*
 - **H3. Dos ventanas de divergencia.** En exactitud, la diferencia entre niños con dificultad y típicos es máxima en 6.1–6.3 y después se cierra. En velocidad y efecto de longitud, crece desde 7.1 y no se cierra.
 - **H4. Perfiles por ciclo.** Los niños con dificultad transitoria tienen una exactitud tardía pero una automatización normal; los de dificultad persistente alcanzan (tarde) la exactitud y fallan en la automatización.
 
@@ -243,6 +243,19 @@ names(w) <- sub("^AUC\\.", "A ", names(w)); w <- w[order(w$comparacion), ]
 knitr::kable(w, row.names = FALSE, col.names = c("Comparación", "Modelo", names(w)[-(1:2)]))
 ```
 
+### Resultados de la segunda fase (02/11/2026)
+
+Grupos definidos con la lectura de 8 años en adelante: 3.881 niños de las cohortes 2010–2012 (389 graves, 582 leves y 2.910 típicos; la cohorte 2013 aún no tiene datos a esa edad).
+
+1. **Los dos ciclos se confirman sin circularidad.** La mitad de los niños típicos domina la exactitud a 6.2, la de los leves a 6.3 y la de los graves a 7.2: el grave va **un curso por detrás**. A 6.3 domina la exactitud el 78 % de los típicos, el 51 % de los leves y el 25 % de los graves; a 7.3, el 97 % de los leves y el 75 % de los graves.
+2. **Qué separa grave de leve cambia con la edad.** A 6.2–6.3 la exactitud y la velocidad separan igual (AUC .71 cada una; .76 juntas). A 7.1 ya separa más la velocidad (.77) que la exactitud (.67). Para separar la dificultad (grave o leve) de lo típico, la velocidad es mejor que la exactitud en todos los momentos (.74–.79 frente a .61–.69). Es el cambio de ventana que propone Juan Luis: primero la exactitud, después la automatización.
+3. **La automatización se ve en el efecto de longitud.** En los típicos, leer una trisílaba cuesta un 34 % más por ítem que una bisílaba a 6.3, y casi nada a 8.3 (1,01): la lectura deja de ser serial. En los leves baja más despacio (1,25 → 1,17) y en los graves no baja (≈ 1,4 de 7 a 8 años).
+4. **La lexicalidad crece, no baja.** A estas edades, el tiempo de las pseudopalabras respecto al de las palabras **aumenta** con el aprendizaje (1,15 a 6.1 → 1,59 a 7.3 en los típicos), porque las palabras conocidas se empiezan a leer por la vía léxica. Los graves leen palabras y pseudopalabras igual de despacio hasta 6.3 (≈ 1,0): todavía no tienen esa ventaja léxica, y la alcanzan a los 8. Hay que corregir la hipótesis H2: en español, el efecto de lexicalidad es un marcador del **léxico ortográfico que se forma**, no de la automatización que se completa.
+5. **Salir del riesgo sigue siendo posible, pero cada vez es menos duradero.** De un trimestre al siguiente sale del riesgo (pasa por encima del P25) entre el 31 % y el 58 % de los niños, sin una caída brusca. Pero entre los que salen, la proporción que acaba en el grupo grave a los 8 años sube del 1 % a 5.2 al 13 % a 8.1. Parte de esas salidas es ruido de medida: por eso una sola evaluación no basta para clasificar.
+6. **Las etiquetas del manual y los grupos de 8 años no coinciden del todo.** De los graves a los 8 años, una parte tenía etiqueta de dificultad leve o transitoria con el criterio actual. Hay que revisar si la etiqueta DL-A es demasiado estricta o si el grupo de 8 años mezcla casos.
+
+**Lectura.** Sin circularidad, los AUC bajan (de .80–.95 en la primera pasada a .70–.79 aquí): una parte de la separación anterior venía de definir los grupos con las mismas medidas. Lo que queda es real y tiene sentido teórico. Las letras a los 5 años predicen poco por sí solas (.60–.63). La combinación de exactitud y velocidad a los 6 años es la mejor señal temprana disponible, y la velocidad gana peso a partir de 7.
+
 ## Cómo se analiza
 
 1. **Edad de dominio de la exactitud.** Análisis de supervivencia con censura por intervalos (el hito ocurre entre dos evaluaciones) o modelo de riesgo en tiempo discreto: la curva del porcentaje de niños que ya domina cada tarea en cada momento, por grupo, con los niños que dejan de evaluarse como censurados. Da la edad mediana de dominio y su dispersión.
@@ -288,7 +301,8 @@ knitr::kable(w, row.names = FALSE, col.names = c("Comparación", "Modelo", names
 
 | Qué | Quién |
 |---|---|
-| Revisar la incidencia de 8.2 en el bruto y repetir el análisis con grupos definidos a partir de 8 años (contra la circularidad) | P. J. López-Pérez |
+| Revisar la incidencia de 8.2 en el bruto, y por qué los grupos de 8 años y las etiquetas de certeza no coinciden del todo | P. J. López-Pérez |
+| Añadir la cohorte 2013 cuando tenga datos a los 8 años, y los datos del servidor 2023–2026 | P. J. López-Pérez |
 | Confirmar qué listas de palabras se repiten igual entre cursos | Equipo, con el diccionario maestro |
 | Acordar las hipótesis y el umbral de dominio (90 %) antes de los datos | J. L. Luque y grupo |
 | Simulación de potencia | P. J. López-Pérez |
