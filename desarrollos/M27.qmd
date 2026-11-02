@@ -1,0 +1,86 @@
+---
+search: false
+---
+
+# M27 · ¿Para quién funciona una intervención universal? Compensación acotada en Preleo {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). Esta página resume el borrador «INTRO_BEYOND 4», lo une al manual y deja una revisión para la siguiente versión.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial
+
+1. **La pregunta.** Una intervención es universal por su alcance, pero ¿lo es también su beneficio? El artículo pregunta **para quién, en qué resultado y en qué parte de la distribución** aporta más una misma dosis de Preleo aplicada a los 5 años.
+2. **Diseño.** 506 niños de 20 colegios (10 con Preleo y 10 de comparación), seguidos a los 5, 6 y 7 años. Riesgo inicial en tres niveles con un compuesto de 5 años (alto ≤ −1 DT, moderado, bajo > −0,5 DT). Emparejamiento por puntuación de propensión (165 pares). ANCOVA con interacción intervención × riesgo y regresión cuantílica (τ = .10–.90).
+3. **Lectura de palabras.** El beneficio más robusto está en el **riesgo bajo** (d = 0,47 a los 7 años, ajustado por los 6): compatible con un efecto acumulativo tipo Mateo.
+4. **Comprensión.** En la media no hay interacción. Pero en el **riesgo moderado** la intervención se asocia con +0,29–0,31 DT entre los cuantiles .20 y .60, y nada en la parte alta (τ ≥ .80). Es la **compensación acotada**: el beneficio se concentra en una ventana de vulnerabilidad. Tras la corrección FDR queda en p = .071.
+5. **Para el manual.** Es la mejor prueba disponible de que el efecto de Preleo **no es un desplazamiento uniforme**. Por eso los baremos de los centros con Preleo no pueden obtenerse sumando una constante a los de los centros sin programa, y la lectura de las puntuaciones en esos centros debe hacerse por nivel de riesgo (cap. 23).
+:::
+
+## Qué propone el artículo
+
+El marco teórico contrasta cuatro patrones posibles del beneficio a lo largo de la distribución del rendimiento posterior:
+
+| Patrón | Qué predice | Base teórica |
+|---|---|---|
+| Homogeneidad | El mismo beneficio en todos los cuantiles | Efecto medio como resumen suficiente |
+| Compensación lineal | Más beneficio cuanto más bajo el rendimiento | Intensificación de apoyos (Gillon et al., 2022) |
+| Divergencia | Más beneficio cuanto más alto el rendimiento | Efecto Mateo (Stanovich, 1986) y autoaprendizaje fonológico (Share, 1995) |
+| **Compensación acotada** | Beneficio concentrado en una región de vulnerabilidad moderada | Hipótesis del artículo: hace falta necesidad **y** que la dosis universal baste |
+
+La hipótesis añade una predicción por nivel de riesgo: el beneficio compensatorio debería verse sobre todo en el **riesgo moderado**. En el riesgo bajo hay poco que compensar, aunque puede haber beneficio en resultados próximos a lo entrenado; en el riesgo alto, una dosis universal puede no bastar.
+
+## Resultados principales
+
+| Resultado a los 7 años | Interacción intervención × riesgo (ANCOVA) | Dónde está la asociación |
+|---|---|---|
+| Lectura de palabras | F(2, 318) = 3,94; p = .020 | Riesgo bajo: d = 0,47 (p < .001); nada en riesgo alto y moderado |
+| Lectura de pseudopalabras | F(2, 318) = 4,52; p = .012 | Riesgo alto: los controles rinden más (diferencia 0,46; p = .009), probablemente por confusión residual en un grupo pequeño |
+| Comprensión | F(2, 318) = 1,07; p = .344 | En la media, nada. Regresión cuantílica en riesgo moderado (n = 57): β = .29–.31 entre τ = .20 y .60; p ≈ .01–.05 sin corregir y .071 con FDR; nada en τ ≥ .80 |
+
+Los modelos controlan la puntuación de 6 años en la misma medida, el CI, el sexo, el nivel socioeconómico y la conciencia fonológica temprana. Todo se interpreta como asociación, no como efecto causal, porque los colegios eligieron participar.
+
+## Cómo se une al manual
+
+| Capítulo o estudio | Qué aporta M27 |
+|---|---|
+| [Cap. 4 · Estudio normativo](../estudio-normativo.qmd) | Una muestra de la cohorte 2010 con la condición Preleo de la tesis (la misma fuente que la [decisión del 02/11/2026](../estudio-normativo.qmd)). Hay que comprobar que los 20 colegios coinciden con la asignación v6 |
+| [Cap. 23 · Preleo](../preleo/datos.qmd) | El efecto depende del riesgo inicial y del cuantil: argumento para baremos diferenciados por condición y para informar por nivel de riesgo |
+| [M18 · Redes de cambio](M18.qmd) | M18 pregunta si Preleo desconecta el riesgo del nivel socioeconómico; M27, para quién aporta. Pueden compartir muestra y covariables |
+| [M19 · Perfiles de éxito](M19.qmd) | La maleabilidad de M19 debería variar por nivel de riesgo, como sugiere M27, en lugar de ser una constante por habilidad |
+| [Fidelidad de Preleo](../preleo/fidelidad.qmd) | El rigor de aplicación de la tesis permite un análisis dosis-respuesta dentro de los 10 colegios con programa |
+| [M26 · Dos ciclos](M26.qmd) | El beneficio en palabras para el riesgo bajo encaja con el ciclo de automatización; conviene mirar si también separa exactitud y velocidad |
+
+## Revisión del borrador «INTRO_BEYOND 4» {#sec-revision}
+
+Notas para la siguiente versión, en orden de importancia. Ninguna cambia el planteamiento.
+
+1. **Porcentaje del riesgo bajo.** «359 low-risk students (7.9%)» debe ser **70,9 %** (359 / 506).
+2. **Dirección de las diferencias de partida.** El texto dice que los colegios con intervención tienen *menor* CI (M = .26 frente a −.30) y *menor* conciencia fonológica temprana (M = .18 frente a −.04), pero las medias indican lo contrario. Hay que comprobar cuál es cada grupo en la tabla 1.
+3. **Componentes del compuesto de riesgo.** El texto dice letras, conciencia fonológica y RAN a los 5 años, pero en «Measures» las letras aparecen solo en T2 y el RAN no aparece. Conviene listar las tareas y sesiones exactas del compuesto, con su fiabilidad.
+4. **Fiabilidad baja del emparejamiento silábico** (α = .468 y .629). Si entra en el compuesto de riesgo, conviene decirlo o hacer un análisis de sensibilidad sin ella.
+5. **Qué muestra usa cada análisis.** Los grados de libertad (F(2, 318)) corresponden a la muestra emparejada (n = 330), pero el texto dice que se informa de las dos. Hay que indicar en cada tabla qué muestra es y dar la otra en el suplementario.
+6. **La comprensión no supera la corrección FDR** (p = .071). La discusión ya lo reconoce. Para reforzarla sin cambiar el planteamiento, se puede contrastar la banda τ = .20–.60 de forma conjunta (un solo contraste con *bootstrap* por colegio) o estimar el proceso cuantílico completo con banda de confianza simultánea.
+7. **Errores agrupados por colegio.** Los colegios eligieron la condición, así que los errores típicos deberían agruparse por colegio (o usarse *bootstrap* por conglomerados). Con 20 colegios, conviene una corrección para pocos conglomerados (CR2 o *wild bootstrap*).
+8. **Cohorte y muestra.** Hay que nombrar la cohorte (2010, Preleo solo a los 5 años y durante un curso) y explicar cómo se pasa de los colegios de la tesis (19 con Preleo y 11 sin) a los 20 analizados.
+9. **Un solo idioma.** La introducción y la discusión están en español; el método y los resultados, en inglés. Hay que decidir la revista antes de unificar.
+10. **Resumen y *highlights* vacíos.** Se completan al final, con las cifras de la tabla 3 y la figura 2.
+
+## Siguientes pasos
+
+- [ ] Auxi revisa los puntos 1–5 de la revisión (datos y texto).
+- [ ] Réplica con la tabla larga v2: misma muestra de 506, mismo compuesto y mismos modelos (script en R, solo agregados).
+- [ ] **Réplica en otra cohorte**: la comparación 2013 (sin Preleo) frente a 2014 (con Preleo) en los mismos colegios controla el centro, que es la principal amenaza del diseño actual. Pendiente de confirmar con Auxi la condición de 2013 y 2014.
+- [ ] Análisis dosis-respuesta con el rigor de aplicación.
+- [ ] Decidir revista e idioma.
+
+**Revistas posibles:** *Journal of School Psychology*, *Reading and Writing*, *Learning and Individual Differences*; en español, *Revista de Psicodidáctica*.
+
+**Carpeta de trabajo:** `DRIVE\LEEDUCA\2026\AUXI` (borradores desde enero, scripts de ANCOVA, emparejamiento y regresión cuantílica, y figuras). Se conserva tal cual.

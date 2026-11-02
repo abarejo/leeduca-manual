@@ -1,0 +1,68 @@
+---
+search: false
+---
+
+# M28 · Predicción temprana de la dificultad lectora persistente (L2 y L3) {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Reúne los dos artículos de predicción acordados el 14/10/2026 (opción C): **L2**, la predicción principal, y **L3**, el perfil multidimensional. Sustituyen al borrador de 2021 (v2.5, PCA + SVM), que no se actualiza sino que se reescribe. Prioridad del grupo junto con el manual, porque fija las etiquetas que usarán los estudios con EEG y fNIRS.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Artículos en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+::: {.callout-note appearance="minimal"}
+**Nomenclatura.** En los documentos del proyecto, **L1** es el artículo del juicio docente frente a LEEDUCA, **L2** el de predicción principal y **L3** el multidimensional. Esta página trata L2 y L3. (No confundir con los algoritmos diagnósticos L1–L5 de la propuesta del 13/10/2026.)
+:::
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial
+
+1. **L2: ¿cuándo y con qué se puede predecir la dificultad lectora persistente?** Criterio: la etiqueta de certeza DL (DL-A + DL-B, dificultad en dos o más cursos de 6 a 8 años). Predictores: conciencia fonológica, letras y RAN a los 4 y 5 años, y lectura al empezar 1.º. Validación dejando fuera una cohorte cada vez (2010–2013).
+2. **A los 5 años ya se predice bien** (AUC .82, calibración 0,97). A los 4 años, solo para vigilar (AUC .73). Añadir la lectura de 6.1 no mejora mucho la predicción de 5 años (.83).
+3. **Pesan las letras y la conciencia fonológica** (OR por DT 0,37 y 0,56). El compuesto RAN no aporta (OR 1,01), pero la [ficha de RAN](../fichas/RAN.qmd) muestra que eso se debe en parte a que mezcla versiones ruidosas: el RAN de números depurado sí predice (AUC 0,76 frente a 0,65 del compuesto).
+4. **Un modelo logístico basta.** El *gradient boosting* no mejora (.80) y está peor calibrado. Las curvas de decisión dan beneficio neto entre umbrales de riesgo del 5 % y el 40 %.
+5. **L3: lo demás apenas añade.** Sobre CF, letras y RAN, solo la lectura temprana a los 5 años mejora algo (ΔAUC +.024). Lenguaje oral, número, memoria verbal, Raven, funciones ejecutivas y atención visual añaden ≤ .004.
+:::
+
+## Resultados de L2 (v1, 14–15/10/2026)
+
+| Modelo logístico | AUC (IC 95 %) | Pendiente de calibración |
+|---|---|---|
+| 4 años: CF + letras + RAN | .73 (.69–.77) | 0,88 |
+| 5 años: CF + letras + RAN | .82 (.79–.84) | 0,97 |
+| 4 + 5 años | .83 (.80–.85) | 0,99 |
+| 6.1: lectura + precursores de 5 años (resultado desde los 7) | .83 (.80–.86) | 0,86 |
+
+Puntos de corte de referencia (muestra completa, percentil SIN agrupado): precursores de 5 años ≤ p40, sensibilidad .74 y especificidad .72 (VPN .94); lectura en 6.1 ≤ p35, .75 y .80 (VPN .94). El AUC sube con el sesgo de espectro (.80 en la muestra completa, .85 en la nuclear y .91 en la de certeza), por lo que el artículo debe dar la cifra de la muestra completa.
+
+## Cómo se une al manual
+
+| Capítulo o estudio | Qué aporta M28 |
+|---|---|
+| [Cap. 19 · Niveles de certeza](../estructura.qmd) | El criterio de L2 es la etiqueta DL; su validez externa con el [criterio Woodcock](../criterio-woodcock.qmd) se cita en L2 y L3 |
+| Cap. 20 · Cribado (4–5 años) | Puntos de corte, sensibilidad, especificidad, VPN y curvas de decisión |
+| Cap. 21 · Identificación (6–7 años) | Qué añade la lectura de 6.1; enlace con [M26](M26.qmd): la velocidad a 7.1 identifica la dificultad posterior (AUC .84) |
+| [M5 · Bayes](M5.qmd) | Misma pregunta con probabilidad individual y contexto del centro. M5 puede publicarse como continuación de L2 |
+| [Fichas LET y RAN](../fichas/LET.qmd) | Pesos de los predictores y los dos errores que hay que corregir antes del envío (ver abajo) |
+| [M27 · Compensación acotada](M27.qmd) | Preleo puede cambiar la relación predictor-criterio por nivel de riesgo: conviene comprobar la calibración por condición |
+
+## Qué falta antes de enviar L2
+
+1. **Letras sin el código 1887.** La v2 de las etiquetas promedia las letras con la anotación «¿cómo lee las letras?» (código 1887). El orden apenas cambia (ρ = .92–.98), pero hay que generar la v3 y volver a correr L2.
+2. **RAN depurado.** Repetir el modelo de 4 y 5 años con el RAN de números depurado en lugar del compuesto (estudio E1 de la ficha de RAN).
+3. **Condición Preleo v6.** Las etiquetas y los modelos usan la asignación v3; con la v6 (decisión del 02/11/2026: condición solo para el seguimiento trimestral), comprobar que no cambian y añadir la calibración por condición.
+4. **Muestra.** Explicar el núcleo longitudinal y la pérdida (ver [cap. 4](../estudio-normativo.qmd)): las evaluaciones de 2020/21 y 2021/22 no deben entrar en la etiqueta sin decidirlo.
+5. **TRIPOD** (lista de comprobación de modelos de predicción), ética, tabla de participantes y fiabilidad de cada predictor.
+
+## Qué falta en L3
+
+- Revisar qué cuenta «aciertos» en atención sostenida e inhibición: predicen al revés en 2010 y 2012 (AUC .39–.48).
+- Decidir si lo lidera Andrés (aprendizaje automático con las nuevas etiquetas), como se propuso.
+
+**Revistas posibles:** L2, *Scientific Studies of Reading* → *Journal of School Psychology* → *Journal of Learning Disabilities* → *Annals of Dyslexia*; L3, *Learning and Individual Differences* → *Annals of Dyslexia* → *Reading and Writing*.
+
+**Archivos (PC):** `04_DICCIONARIO_PROCESADO_2026\DIAGNOSTICO\prediccion_L2_v1.xlsx`, `prediccion_L3_v1.xlsx`, figuras `figs_L2\F1–F6` y manuscrito `figs_L2\L2_prediccion_manuscrito_2026-10-15.docx`; scripts `prediccion_L2.py` y `prediccion_L3.py`.
