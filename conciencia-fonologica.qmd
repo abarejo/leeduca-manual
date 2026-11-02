@@ -32,7 +32,7 @@ f2 <- function(x) formatC(100 * x, format = "f", digits = 0)
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador del 02/11/2026. Este capítulo abre las fichas de procesamiento fonológico. Integra el marco teórico del manual docente de A. Sánchez Gómez para la asignatura *Intervención logopédica en los trastornos infantiles del habla* (Universidad de Málaga) [@sanchezgomez2026tsh], centrado en el sistema fonológico y no en los sonidos sueltos. Los datos son los descriptivos de las fichas automáticas: todas las cohortes, ponderados por el número de niños, en momentos con al menos 100 niños.
+**Estado:** borrador del 02/11/2026. Este capítulo abre las fichas de procesamiento fonológico. Integra el marco teórico del manual de A. Sánchez Gómez sobre los trastornos de los sonidos del habla, que nace del material de la asignatura *Intervención logopédica en los trastornos infantiles del habla* (Universidad de Málaga) y está en preparación para su publicación [@sanchezgomez2026tsh]. La cita es provisional y se actualizará cuando se publique. El marco se centra en el sistema fonológico, no en los sonidos sueltos. Los datos son los descriptivos de las fichas automáticas: todas las cohortes, ponderados por el número de niños, en momentos con al menos 100 niños.
 :::
 
 ## Por qué empezar por el habla
