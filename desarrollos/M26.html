@@ -1058,6 +1058,13 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#primeros-resultados-02112026" id="toc-primeros-resultados-02112026" class="nav-link" data-scroll-target="#primeros-resultados-02112026">Primeros resultados (02/11/2026)</a></li>
   </ul></li>
+  <li><a href="#segunda-fase-los-dos-ciclos-sin-circularidad" id="toc-segunda-fase-los-dos-ciclos-sin-circularidad" class="nav-link" data-scroll-target="#segunda-fase-los-dos-ciclos-sin-circularidad">Segunda fase: los dos ciclos sin circularidad</a>
+  <ul class="collapse">
+  <li><a href="#cuándo-se-domina-la-exactitud" id="toc-cuándo-se-domina-la-exactitud" class="nav-link" data-scroll-target="#cuándo-se-domina-la-exactitud">¿Cuándo se domina la exactitud?</a></li>
+  <li><a href="#cuándo-se-automatiza" id="toc-cuándo-se-automatiza" class="nav-link" data-scroll-target="#cuándo-se-automatiza">¿Cuándo se automatiza?</a></li>
+  <li><a href="#cuándo-deja-de-ser-probable-salir-del-riesgo" id="toc-cuándo-deja-de-ser-probable-salir-del-riesgo" class="nav-link" data-scroll-target="#cuándo-deja-de-ser-probable-salir-del-riesgo">¿Cuándo deja de ser probable salir del riesgo?</a></li>
+  <li><a href="#qué-permite-un-diagnóstico-temprano" id="toc-qué-permite-un-diagnóstico-temprano" class="nav-link" data-scroll-target="#qué-permite-un-diagnóstico-temprano">¿Qué permite un diagnóstico temprano?</a></li>
+  </ul></li>
   <li><a href="#cómo-se-analiza" id="toc-cómo-se-analiza" class="nav-link" data-scroll-target="#cómo-se-analiza">Cómo se analiza</a></li>
   <li><a href="#figuras-previstas" id="toc-figuras-previstas" class="nav-link" data-scroll-target="#figuras-previstas">Figuras previstas</a></li>
   <li><a href="#esqueleto-del-artículo" id="toc-esqueleto-del-artículo" class="nav-link" data-scroll-target="#esqueleto-del-artículo">Esqueleto del artículo</a></li>
@@ -1316,6 +1323,44 @@ Figura&nbsp;3: ¿Cuándo se distingue la dificultad grave de la leve? AUC de cad
 <li><strong>El momento 8.2 es una incidencia:</strong> todos los grupos caen a la vez en exactitud, probablemente por un cambio de lista o de formato en esa sesión. Hay que revisarlo en el bruto.</li>
 <li>El grupo grave es pequeño en las cohortes 2012 y 2013 (alrededor de 10 niños cada una).</li>
 </ul>
+</section>
+</section>
+<section id="segunda-fase-los-dos-ciclos-sin-circularidad" class="level2">
+<h2 class="anchored" data-anchor-id="segunda-fase-los-dos-ciclos-sin-circularidad">Segunda fase: los dos ciclos sin circularidad</h2>
+<p>Para responder a la principal objeción de la primera pasada, los grupos se definen <strong>solo con la lectura de 8 años en adelante</strong> (sin 8.2): grave ≤ P10, leve P10–P25 y típico &gt; P25 dentro de cada cohorte. Así, todo lo que ocurre antes de los 8 años está libre de circularidad. Script: <code>scripts/R/m26_ciclos_v2.R</code> (probado con datos simulados).</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Pendiente de ejecutar</strong> <code>m26_ciclos_v2.R</code> en el PC del proyecto. Aquí aparecerán: la curva de dominio de la exactitud, los marcadores de automatización (longitud y lexicalidad), la probabilidad de salir del riesgo trimestre a trimestre y la tabla de diagnóstico temprano.</p>
+</div>
+</div>
+</div>
+<section id="cuándo-se-domina-la-exactitud" class="level3">
+<h3 class="anchored" data-anchor-id="cuándo-se-domina-la-exactitud">¿Cuándo se domina la exactitud?</h3>
+</section>
+<section id="cuándo-se-automatiza" class="level3">
+<h3 class="anchored" data-anchor-id="cuándo-se-automatiza">¿Cuándo se automatiza?</h3>
+</section>
+<section id="cuándo-deja-de-ser-probable-salir-del-riesgo" class="level3">
+<h3 class="anchored" data-anchor-id="cuándo-deja-de-ser-probable-salir-del-riesgo">¿Cuándo deja de ser probable salir del riesgo?</h3>
+</section>
+<section id="qué-permite-un-diagnóstico-temprano" class="level3">
+<h3 class="anchored" data-anchor-id="qué-permite-un-diagnóstico-temprano">¿Qué permite un diagnóstico temprano?</h3>
+<div id="tbl-m26-temprano" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m26-temprano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: AUC con validación cruzada (se ajusta en tres cohortes y se evalúa en la cuarta) de modelos con la exactitud, la velocidad y las letras a 5 años para separar grave de leve, y dificultad de típico, con los grupos definidos a partir de 8 años.
+</figcaption>
+<div aria-describedby="tbl-m26-temprano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+
+</div>
+</div>
+</figure>
+</div>
 </section>
 </section>
 <section id="cómo-se-analiza" class="level2">
