@@ -324,5 +324,5 @@ Grupos definidos con la lectura de 8 años en adelante: 3.881 niños de las coho
 - Documento vivo en Claude, con comentarios en línea: pedir el enlace a P. J. López (requiere acceso compartido).
 - Copia de trabajo en el PC de PJ López: `PLATAFORMA\ARCHIVOS_CONTROL_JAVI\ARTICULOS_BORRADORES\EXACTITUD_M26\`.
 
-Cómo revisar: comentarios o control de cambios en el Word, o anotaciones en el documento de Claude; las versiones nuevas se publicarán aquí con fecha (`borrador_2_…`). No difundir fuera del grupo: es un borrador no enviado.
+Cómo revisar: comentarios o control de cambios en el Word, o anotaciones en el documento de Claude; las versiones nuevas se publicarán aquí con fecha (`borrador_3_…`). No difundir fuera del grupo: es un borrador no enviado.
 :::
