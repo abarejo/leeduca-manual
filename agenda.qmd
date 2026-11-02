@@ -143,12 +143,19 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Filtro bayesiano por alumno y habilidad (Kalman extendido con un modelo de Rasch) anclado en la evaluación trimestral; probabilidad de éxito de M19 con su incertidumbre; recomendación de la sesión siguiente por muestreo de Thompson con prerrequisitos y dificultad objetivo del 70–85 %; simulación con verdad conocida, validación retrospectiva y ensayo por conglomerados.
 - **Revistas posibles:** *Behavior Research Methods*, *Journal of Educational Psychology*; el ensayo, con el de M19.
 
+### [M26 · Cuándo se domina la exactitud y cuándo se automatiza la lectura](desarrollos/M26.qmd){.enlace-discreto}
+
+- **Pregunta:** ¿A qué edad domina cada niño la exactitud lectora y cuándo automatiza la lectura? ¿En qué momentos divergen las trayectorias de los niños con dificultad transitoria, persistente y típica, y explican esas divergencias la clasificación del riesgo? (Idea de J. L. Luque.)
+- **Datos:** Aciertos y tiempos de letras, sílabas, palabras (1–4 sílabas) y pseudopalabras de 5 a 11 años, cohortes 2010–2013; tiempos por ítem desde 2013; niveles de certeza del manual.
+- **Método:** Análisis de supervivencia del dominio de la exactitud (≥ 90 %), crecimiento no lineal con efectos mixtos para la velocidad y los efectos de longitud y lexicalidad, divergencia momento a momento (d y AUC con *bootstrap*) y perfiles latentes sobre los parámetros de cada niño; simulación previa [@seymour2003foundation; @share1995phonological; @serrano2008speed; @zoccolotti2005length].
+- **Revistas posibles:** *Scientific Studies of Reading*, *Journal of Experimental Child Psychology*, *Annals of Dyslexia*.
+
 ## Cómo aprovecharlo
 
 - **M1, M2 y M9 piden un perfil de modelización matemática.** Son los más adecuados para quien venga de la física teórica o de la estadística, y los que más peso tienen en una plaza de psicometría. Las redes y los sistemas dinámicos tienen la misma base matemática que la física estadística.
 - **M3, M4, M7 y M11 alimentan directamente el manual**: baremos, seguimiento, cambio relevante y la curva de desarrollo del RAN (baremo por trimestre en infantil). Conviene que vayan en paralelo a las fichas. **M12** es un artículo ya escrito cuyos resultados entrarán en la ficha de rima cuando se publique.
 - **M5 y M6 combinan psicometría y lectura**, y pueden salir pronto con los análisis que ya están hechos.
-- **M19 cambia el informe de la plataforma** de quién está en riesgo a qué probabilidad tiene cada niño y qué hacer con él; usa las fiabilidades del manual y la condición Preleo, y es la base de un ensayo. **M20** lo lleva a la docencia con datos sintéticos. **M25** lleva el informe al día a día: cada sesión de Nivel 1 y 2 actualiza el perfil y propone la siguiente.
+- **M19 cambia el informe de la plataforma** de quién está en riesgo a qué probabilidad tiene cada niño y qué hacer con él; usa las fiabilidades del manual y la condición Preleo, y es la base de un ensayo. **M20** lo lleva a la docencia con datos sintéticos. **M25** lleva el informe al día a día: cada sesión de Nivel 1 y 2 actualiza el perfil y propone la siguiente. **M26** pregunta cuándo se domina la exactitud y cuándo se automatiza la lectura, y si esas dos ventanas explican la clasificación del riesgo.
 - **M23 pone a prueba un modelo teórico del grupo con datos que ya están en la plataforma**: el experimento de RAN con carga fonológica de J. L. Luque, y deja para el manual que la lista de fonema es la versión del RAN de objetos que mejor discrimina a los 5–6 años.
 - **M24 es un artículo del grupo casi terminado**: la revisión de la base corrigió sus cifras y conserva el hallazgo central (la conciencia fonológica de un curso predice la aritmética del siguiente); para el manual deja que varias tareas de la plataforma puntúan también los ítems de ejemplo.
 - **M22 decide cómo se baremará fuera de Málaga**: qué comunidades pueden compartir baremo y cuáles necesitan uno propio (las versiones en catalán, por ejemplo).

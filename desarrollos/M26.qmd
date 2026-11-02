@@ -1,0 +1,113 @@
+---
+search: false
+---
+
+# M26 · Cuándo se domina la exactitud y cuándo se automatiza la lectura {.unnumbered}
+
+*Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Idea de J. L. Luque Vilaseca (mensaje de audio, 01/11/2026), desarrollada con P. J. López-Pérez. Proyecto y esqueleto de artículo, sin datos reales todavía.*
+
+::: {.callout-warning}
+**Página de trabajo del grupo.** Es una propuesta, no un resultado del manual. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). No contiene datos de alumnos.
+:::
+
+[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+
+## Para leer en dos minutos
+
+::: {.callout-tip}
+## Lo esencial
+
+1. **La idea de Juan Luis.** Aprender a leer tiene dos ciclos: primero se domina la **exactitud** (leer bien) y después se **automatiza** (leer deprisa y sin esfuerzo). Saber cuándo ocurre cada uno, en cada niño, puede ser la clave para definir los perfiles. Las diferencias entre niños pueden concentrarse en momentos concretos, y esas divergencias podrían explicar la clasificación del riesgo que propone el manual.
+2. **Por qué LEEDUCA puede responderlo.** Tres evaluaciones por curso de los 4 a los 11 años, con aciertos y tiempos (por ítem en la plataforma nueva), en seis cohortes. Casi ningún estudio en el mundo tiene esa resolución temporal en una ortografía transparente.
+3. **Qué se espera.** En español la exactitud llega pronto (hacia el final de 1.º) y la automatización tarda años. Los niños con dificultad persistente se separarían de los demás en dos ventanas distintas: un retraso **transitorio** en la exactitud a los 6 años y un fallo **persistente** en la automatización desde los 7.
+4. **Por qué importa.** Si es así, la dificultad transitoria y la persistente del manual no serían dos grados de lo mismo, sino dos ciclos distintos que fallan. Eso cambia qué tarea mirar en cada momento y qué tipo de ayuda dar.
+5. **Qué falta.** Los datos por niño: hay que activar la virtualización del PC del proyecto o preparar una tabla seudonimizada. Antes de tocar datos reales, una simulación con lo que se espera encontrar.
+:::
+
+## Preguntas
+
+1. **¿Cuándo se domina la exactitud?** ¿A qué edad y trimestre alcanza cada niño una lectura exacta de letras, sílabas, palabras y pseudopalabras, y cómo varía esa edad entre niños?
+2. **¿Cuándo se automatiza?** ¿Cuándo deja de crecer la velocidad, cuándo deja de importar la longitud de la palabra y cuándo se acerca la lectura de pseudopalabras a la de palabras?
+3. **¿Dónde divergen las trayectorias?** ¿En qué momentos y en qué medidas se separan más los niños con dificultad persistente, transitoria y típica?
+4. **¿Explican esas divergencias la clasificación del riesgo?** ¿Los perfiles que salen de los parámetros de cada niño (cuándo empieza, a qué ritmo avanza, dónde se estanca) coinciden con los niveles de certeza del manual?
+
+## Marco teórico
+
+| Modelo | Qué predice para este estudio |
+|---|---|
+| Fases del aprendizaje de palabras [@ehri2005learning] | De la decodificación secuencial, letra a letra, al reconocimiento consolidado de unidades mayores |
+| Autoaprendizaje [@share1995phonological] | Cada decodificación exacta deja una huella ortográfica: la exactitud es la condición de la automatización |
+| Automaticidad [@laberge1974automatic] | La automatización se ve en la velocidad, pero también en que el coste por unidad (sílaba, ítem) deja de crecer |
+| Ortografías transparentes [@seymour2003foundation] | En español la exactitud se alcanza casi al terminar 1.º; la diferencia entre lenguas está en la velocidad |
+| Dislexia en ortografías transparentes [@serrano2008speed; @davies2007spanish; @zoccolotti2005length] | La dificultad persistente se manifiesta como lentitud y un efecto de longitud que no desaparece, más que como errores |
+| Ciclo de éxito y dificultad del manual ([Cómo estimamos el riesgo](../riesgo.qmd)) | La dificultad transitoria se resolvería al dominar la exactitud; la persistente sería un fallo de automatización |
+
+## Hipótesis
+
+Se registran antes de analizar los datos.
+
+- **H1. Exactitud temprana.** La mayoría de los niños sin dificultad supera el 90 % de aciertos en palabras y pseudopalabras simples al final de 1.º (6.3); las sílabas complejas y las palabras largas tardan uno o dos trimestres más.
+- **H2. Automatización lenta.** La velocidad sigue creciendo hasta 3.º–4.º; el efecto de longitud (tiempo extra por sílaba) se reduce de forma gradual y el de lexicalidad (pseudopalabras frente a palabras) se mantiene más tiempo.
+- **H3. Dos ventanas de divergencia.** En exactitud, la diferencia entre niños con dificultad y típicos es máxima en 6.1–6.3 y después se cierra. En velocidad y efecto de longitud, crece desde 7.1 y no se cierra.
+- **H4. Perfiles por ciclo.** Los niños con dificultad transitoria tienen una exactitud tardía pero una automatización normal; los de dificultad persistente alcanzan (tarde) la exactitud y fallan en la automatización.
+
+## Cómo se mide
+
+| Concepto | Medida por niño, tarea y momento | Datos |
+|---|---|---|
+| Exactitud | Proporción de aciertos | Todas las cohortes |
+| Dominio de la exactitud | Primer momento con ≥ 90 % de aciertos que se mantiene en el siguiente | Todas las cohortes |
+| Velocidad | Ítems correctos por minuto; en la plataforma nueva, tiempo mediano de los aciertos por ítem | Todas; por ítem desde 2013 |
+| Efecto de longitud | Pendiente del tiempo por palabra frente al número de sílabas (listas de 1 a 4 sílabas) | Todas las cohortes con las cuatro listas |
+| Efecto de lexicalidad | Tiempo en pseudopalabras dividido por el tiempo en palabras de la misma longitud | Todas |
+| Estabilidad del tiempo | Coeficiente de variación del tiempo por ítem | Plataforma nueva (2013 en adelante) |
+| Grupo | Niveles de certeza del manual (persistente, transitoria, típica…) | Cohortes 2010–2013 |
+
+## Cómo se analiza
+
+1. **Edad de dominio de la exactitud.** Análisis de supervivencia: la curva del porcentaje de niños que ya domina cada tarea en cada momento, por grupo. Da la edad mediana de dominio y su dispersión.
+2. **Curvas de automatización.** Para la velocidad, un modelo de crecimiento no lineal con efectos mixtos (exponencial hacia una asíntota). Da tres parámetros por niño: punto de partida, ritmo y techo. Para los efectos de longitud y lexicalidad, el mismo modelo con tendencia descendente.
+3. **Divergencia momento a momento.** Tamaño del efecto entre grupos y AUC de cada medida en cada momento, con intervalos por *bootstrap*. Las ventanas de máxima divergencia indican qué tarea mirar y cuándo.
+4. **Perfiles.** Clases latentes sobre los parámetros de cada niño (dominio de la exactitud, ritmo y techo de la velocidad, efecto de longitud), y su acuerdo con los niveles de certeza.
+5. **Antes de los datos reales,** una simulación con los efectos esperados, como en [M10](M10.qmd), para saber qué se puede detectar con la muestra disponible.
+
+**Cautelas.**
+
+- **Circularidad.** Los niveles de certeza se definen con la lectura, así que una parte de la divergencia está construida de antemano. Para evitarlo, los grupos se definen con la lectura de 8 años en adelante y se estudia la divergencia antes de esa edad, o se usa un criterio externo (fluidez de Woodcock-Muñoz).
+- **Techo.** Las tareas de exactitud llegan al techo, y eso puede crear convergencias aparentes. Se modela con modelos de respuesta al ítem o con la proporción de niños en el techo.
+- **Calidad de los datos.** Tiempos en otra unidad y tiempos a cero (tratados como ausentes) según el [control de calidad](PRELEO_QC.qmd).
+- **Cambios de tarea.** Las listas no son siempre las mismas entre cursos; se comparan dentro de tarea y momento, y se usa la escala común de M14 cuando exista.
+
+## Figuras previstas
+
+1. Curvas de supervivencia del dominio de la exactitud por tarea y grupo.
+2. Curvas de velocidad con bandas de percentiles, de 5 a 11 años, y la asíntota estimada.
+3. Efecto de longitud y de lexicalidad por momento y grupo.
+4. Mapa de divergencia (tareas × momentos) coloreado por el tamaño del efecto, con las dos ventanas marcadas.
+5. Perfiles: parámetros de cada niño en el plano exactitud × automatización, coloreados por nivel de certeza.
+
+## Esqueleto del artículo
+
+- **Título provisional:** *When is reading accurate and when does it become automatic? Two developmental windows that separate transient from persistent reading difficulties in Spanish.*
+- **Autoría:** abierta; la idea es de J. L. Luque Vilaseca.
+- **Introducción:** dos ciclos en el aprendizaje de la lectura; por qué las ortografías transparentes separan exactitud y velocidad; lo que no se sabe (cuándo, en cada niño, y si esos momentos distinguen la dificultad transitoria de la persistente).
+- **Método:** cohortes 2010–2013, tres evaluaciones por curso; medidas de la tabla anterior; plan registrado.
+- **Resultados:** H1 a H4, en el orden de las figuras.
+- **Discusión:** implicaciones para los perfiles y la clasificación del riesgo, para cuándo evaluar qué y para la intervención (precisión antes, fluidez después).
+- **Revistas posibles:** *Scientific Studies of Reading*, *Journal of Experimental Child Psychology*, *Reading and Writing*, *Annals of Dyslexia*.
+
+## Relación con otros estudios
+
+- **M4 y M7:** las curvas de velocidad son la base de los percentiles de crecimiento y del cambio mínimo relevante.
+- **M10:** separa exactitud y velocidad como resultados; M26 añade cuándo.
+- **M19:** los parámetros por niño pueden ser los predictores de la probabilidad de éxito.
+- **M2:** los tiempos por ítem para los marcadores de automatización.
+
+## Qué hace falta
+
+| Qué | Quién |
+|---|---|
+| Acceso a los datos por niño: activar la virtualización del PC del proyecto o preparar una tabla seudonimizada | P. J. López-Pérez |
+| Confirmar qué listas de palabras se repiten igual entre cursos | Equipo, con el diccionario maestro |
+| Acordar las hipótesis y el umbral de dominio (90 %) antes de los datos | J. L. Luque y grupo |
+| Simulación de potencia | P. J. López-Pérez |
