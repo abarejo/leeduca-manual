@@ -39,11 +39,11 @@ f2 <- function(x) formatC(100 * x, format = "f", digits = 0)
 
 Todas las tareas de conciencia fonológica de la plataforma piden al niño que reflexione sobre los sonidos de palabras que oye, y casi todas le piden que **responda hablando**. Por eso, antes de interpretar una puntuación conviene tener presente cómo se organiza el sistema fonológico de un niño de 4 a 7 años. El manual de Sánchez Gómez et al. [-@sanchezgomez2026tsh] lo resume en tres ideas que sirven igual para la conciencia fonológica.
 
-**1. El niño no aprende sonidos, aprende contrastes.** Un fonema no tiene valor por sí mismo, sino por las oposiciones que establece con otros: *pala*/*bala* (sonoridad), *taza*/*casa* (punto de articulación), *pata*/*fata* (modo). El desarrollo consiste en incorporar oposiciones al sistema. Cuando un niño dice *tasa* por *casa*, el problema no es el sonido /k/, sino que la oposición /k/–/t/ todavía no está operativa en su sistema [@bosch2004evaluacion; @sanchezgomez2026tsh].
+**1. El niño no aprende sonidos, aprende contrastes.** Un fonema no tiene valor por sí mismo, sino por las oposiciones que establece con otros: *pala*/*bala* (sonoridad), *tapa*/*capa* (punto de articulación), *bala*/*mala* (modo: oral frente a nasal). El desarrollo consiste en incorporar oposiciones al sistema. Cuando un niño dice *tasa* por *casa*, el problema no es el sonido /k/, sino que la oposición /k/–/t/ todavía no está operativa en su sistema [@bosch2004evaluacion; @sanchezgomez2026tsh].
 
 **2. El habla pasa por varios niveles.** Hay percepción del habla, representación fonológica, planificación y programación, y ejecución motora. Un mismo error superficial puede nacer en cualquiera de ellos, y los niveles interactúan.
 
-**3. Del síntoma al mecanismo.** Siguiendo a Rvachew y Matthews, el manual distingue tres niveles de análisis [@sanchezgomez2026tsh]:
+**3. Del síntoma al mecanismo.** El manual distingue tres niveles de análisis, en la línea de los modelos que separan síntomas, procesos y causas [@sanchezgomez2026tsh]:
 
 - el **superficial**: lo que el niño dice (*¿qué dice?*);
 - el **proximal**: los procesos del sistema que pueden estar fallando (*¿qué falla?*);
