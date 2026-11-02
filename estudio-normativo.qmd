@@ -52,7 +52,7 @@ La edad media en la primera evaluación varía mucho entre cohortes porque **no 
 
 ```{r}
 #| label: fig-mapa-momentos
-#| fig-cap: "Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, con muchos niños que no se habían evaluado antes (formato por confirmar)."
+#| fig-cap: "Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, en papel y sobre todo con pruebas de eficiencia, con muchos niños que no se habían evaluado antes."
 #| fig-width: 9
 #| fig-height: 3.8
 N1$mom_f <- factor(sprintf("%.1f", N1$mom), levels = sprintf("%.1f", sort(unique(N1$mom))))
@@ -70,9 +70,9 @@ ggplot(N1, aes(mom_f, factor(cohorte, levels = rev(sort(unique(cohorte)))))) +
 El mapa muestra dos diseños distintos dentro de la misma base:
 
 - **Seguimiento trimestral (hasta 2019/20).** Tres evaluaciones por curso desde los 4 años (cohortes 2011–2015) o los 5 (cohorte 2010), con entre 300 y 950 niños por momento y una pérdida gradual con la edad.
-- **Evaluaciones amplias de 2020/21 y 2021/22** (borde naranja). Una sola evaluación por curso, en febrero, con hasta `r miles(max(N1$ninos[N1$pandemia], na.rm = TRUE))` niños por cohorte, muchos de ellos nuevos. Coinciden en el tiempo con las aplicaciones en papel y tableta de la pandemia (carpeta `03_PAPEL_TABLETS_PANDEMIA`); falta confirmar que son las mismas.
+- **Evaluaciones amplias de 2020/21 y 2021/22** (borde naranja). Una sola evaluación por curso, en febrero, con hasta `r miles(max(N1$ninos[N1$pandemia], na.rm = TRUE))` niños por cohorte, muchos de ellos nuevos. Tras la llegada de la pandemia, en 2021 se aplicaron **versiones en papel** de varias tareas, sobre todo pruebas de eficiencia (TECLE con sus formas de relaciones semánticas y sintaxis, PEALE y otras), de 2.º a 6.º de primaria (datos tabulados en `03_PAPEL_TABLETS_PANDEMIA`; los cuadernillos de TECLE, PEALE y sintaxis están en la carpeta del proyecto con Colombia).
 
-Esto tiene una consecuencia práctica: el **momento 8.2 de la cohorte 2012 es la evaluación de 2020/21**, y lo mismo ocurre con el 7.2 de 2013, el 9.2 de 2011 y el 10.2 de 2010. La caída de exactitud en 8.2 que se trató como incidencia en [M26](desarrollos/M26.qmd) puede deberse a este cambio de formato y de muestra, y no a un cambio de lista.
+Esto tiene una consecuencia práctica: el **momento 8.2 de la cohorte 2012 es la evaluación de 2020/21**, y lo mismo ocurre con el 7.2 de 2013, el 9.2 de 2011 y el 10.2 de 2010. La caída de exactitud en 8.2 que se trató como incidencia en [M26](desarrollos/M26.qmd) se explica probablemente por este cambio de formato (papel) y de muestra, y no por un cambio de lista. Estas evaluaciones se tratan como un **diseño transversal aparte**: no se mezclan con el seguimiento trimestral en los análisis longitudinales y, si se bareman, se bareman por separado.
 
 ## 4.3 Seguimiento y pérdida de la muestra
 
@@ -133,8 +133,8 @@ knitr::kable(t5, align = c("l", rep("r", 5)))
 
 Los valores no numéricos (entre el `r num_es(100 * min(N5$no_numericos / N5$registros), 1)` y el `r num_es(100 * max(N5$no_numericos / N5$registros), 1)` % según la cohorte) son sobre todo celdas vacías de tareas no aplicadas. Los tiempos registrados como 0 se tratan como perdidos. En la cohorte 2010 hay `r miles(N5$sin_edad[N5$cohorte == 2010])` registros sin edad asignada, que hay que revisar en el diccionario de sesiones.
 
-## Por resolver
+## Decisiones y pendientes
 
-1. **La condición Preleo de la tabla larga no es la asignación v3.** La columna `preleo_4a6_seguimiento` no tiene ningún niño SIN en las cohortes 2010 y 2011, cuando la asignación v3 (tesis de Auxi) pasó a SIN a 402 niños de 2010, y deja como «sin dato» a unos mil niños por cohorte. Hay que decidir qué fuente usa el manual y regenerar la columna. Afecta también a la cifra de colegios con programa del artículo de M26.
-2. **Los nombres de colegio tienen variantes.** En total hay 164 nombres de colegio distintos, y parte de ellos son el mismo colegio escrito de varias formas (por eso el seudónimo de la tabla privada no equivale todavía a un colegio). Hay que normalizarlos (tabla de equivalencias privada) antes de contar colegios o de usar el colegio como nivel en los modelos.
-3. **Las evaluaciones de 2020/21 y 2021/22.** Confirmar qué fueron (formato, tareas, quién aplicó) y si se baremarán aparte. Mientras tanto, los análisis longitudinales deben marcarlas o excluirlas, como ya se hace con 8.2.
+1. **Condición Preleo (decidido el 02/11/2026).** La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, **todos los niños son de Preleo**. El resto de cohortes, como la asignación v3, pendiente de revisar con ella (2012; y 2013 sin programa frente a 2014 con programa en los 22 colegios comunes). La tabla de 4.4 todavía muestra la columna antigua de la tabla larga, que no tenía ningún niño SIN en 2010; se actualizará con la asignación v5. Afecta también a la cifra de colegios con programa del artículo de M26.
+2. **Nombres de colegio.** En la asignación de Preleo (v2, 13/10/2026) ya se emparejaron los nombres de la plataforma con los del seguimiento de colegios, por parecido y con comprobación manual. La v5 usa ese emparejamiento como **colegio canónico** y normaliza el resto; así se contarán colegios y no variantes de nombre.
+3. **Evaluaciones de 2020/21 y 2021/22.** Versiones en papel, sobre todo de eficiencia, de 2.º a 6.º. Falta la lista exacta de tareas por cohorte (la dará la tabla N7 de la v2 del script) y decidir si se baremarán aparte.
