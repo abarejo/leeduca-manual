@@ -4,7 +4,7 @@ search: false
 
 # M27 · ¿Para quién funciona una intervención universal? Compensación acotada en Preleo {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 4, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). La página empieza con una **síntesis para el grupo**, sigue con la **explicación sencilla del análisis** y termina con la **ficha completa** del estudio.*
+*Desarrollo de un estudio de la Agenda · versión 5, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). La página empieza con una **síntesis para el grupo**, sigue con la **explicación sencilla del análisis** y termina con la **ficha completa** del estudio.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
@@ -20,9 +20,9 @@ search: false
 1. **La pregunta.** Preleo se aplicó a toda la clase, pero ¿benefició a todos por igual? ¿A quién ayudó más y durante cuánto tiempo?
 2. **Cómo hemos llegado aquí.** Entre julio de 2025 y enero de 2026 se hicieron **seis análisis** con los mismos 506 niños, y cada uno llegó a una conclusión distinta. El 02/11/2026 hicimos una **réplica** con la muestra y las reglas del manual (957 niños de 34 colegios), con un plan fijado antes de ver los datos. Es el único de los siete análisis que cumple los cinco criterios de rigor de la tabla de abajo, y es el que proponemos.
 3. **Qué encontramos.** A los 6 años, los niños de **riesgo moderado** con Preleo rinden algo más en conciencia fonológica que sus iguales sin el programa (+0,44 DT), sobre todo al empezar 1.º. A los 7 años **no queda ninguna diferencia**, en ningún dominio ni nivel de riesgo, y Preleo no cambia la probabilidad de terminar con dificultad lectora persistente.
-4. **Un aviso importante.** Al terminar el curso del programa (5.3) no se ve que los niños con Preleo sepan más conciencia fonológica ni más letras que los demás. Si el programa no movió lo que entrenaba, la pregunta deja de ser «¿para quién funciona?» y pasa a ser «¿llegó a aplicarse con la intensidad prevista?».
+4. **El segundo diseño, sin autoselección de centros, lo confirma** ([resultados](#sec-did)). Comparando los 11 colegios que pasaron de no aplicar Preleo (2010) a aplicarlo (2011) con los 23 que lo aplicaron los dos años, Preleo mejora **las letras durante el curso del programa** (+0,31 DT a los 5 años) y algo la conciencia fonológica (+0,29, IC que roza el 0). A los 6 años la ventaja ha desaparecido y no hay efecto en la lectura de 6 a 8 años. Entre colegios (réplica) el efecto en 5.3 no se veía, probablemente porque los colegios que eligieron Preleo eran distintos.
 5. **Lo que no se sostiene del borrador.** La ventaja del riesgo bajo en palabras es un efecto del método (ajustar por los 6 años), y la compensación en comprensión no se replica.
-6. **Lo que decide el artículo.** El análisis de la fidelidad (rigor de aplicación de la tesis): si los colegios que aplicaron bien Preleo muestran efectos, el artículo trata de la dosis necesaria; si no, de los límites de un programa universal aplicado un solo curso. Las dos historias son publicables con este diseño.
+6. **La historia del artículo, con dos diseños que coinciden:** un programa universal de un curso mejora lo que entrena (letras y conciencia fonológica) mientras se aplica, con una pequeña ventaja compensatoria a los 6 años en el riesgo moderado, pero no se transfiere a la lectura ni cambia la dificultad persistente. Falta el análisis de la fidelidad (¿más rigor, más efecto?) y una prueba de placebo en 5.1 (ver [siguientes pasos](#sec-siguientes)).
 :::
 
 ### Cómo hemos llegado aquí: seis análisis y una réplica
@@ -112,10 +112,57 @@ ggplot(T, aes(mom, estimacion, colour = riesgo, shape = riesgo, group = riesgo))
 1. **Análisis principal: la réplica (versión 7)**, con el plan fijado antes de ver los datos y la trayectoria trimestral. La versión de enero de 2026 pasa al suplementario, con la explicación de por qué su resultado en el riesgo bajo es un efecto del método.
 2. **Antes de redactar, dos análisis que deciden la historia:**
    - **Fidelidad como dosis.** Con el rigor de aplicación de la tesis: ¿los colegios que aplicaron Preleo con rigor sí muestran efecto en 5.3 y a los 6 años? Ver la [propuesta de fidelidad](../preleo/fidelidad.qmd).
-   - **Réplica en un segundo diseño.** La cohorte 2013 (sin Preleo) frente a la 2014 (con Preleo) en los mismos colegios elimina la autoselección de centros y, con Preleo desde los 4 años, permite ver si más dosis da más efecto.
+   - **Segundo diseño (hecho, [resultados](#sec-did)).** Diferencias en diferencias con los colegios que cambian de condición entre 2010 y 2011. Confirma el patrón sin autoselección de centros.
 3. **Dos historias posibles, ambas publicables:**
    - *Si la fidelidad explica el efecto:* «Una intervención universal compensa la desventaja de partida solo cuando se aplica con suficiente intensidad». Revistas: *Journal of Educational Psychology*, *Child Development*.
    - *Si no la explica:* «Los límites de una intervención universal de un curso: compensación pequeña y transitoria, sin cambio en la dificultad persistente», con diseño preespecificado y comprobación de la aplicación. Revistas que valoran evaluaciones rigurosas con resultados nulos o transitorios: *Journal of Research on Educational Effectiveness*, *Educational Evaluation and Policy Analysis*; y *Scientific Studies of Reading*.
+
+
+## Segundo diseño: colegios que cambian de condición {#sec-did}
+
+**La idea, sin fórmulas.** Un colegio que no aplicó Preleo con la cohorte 2010 y sí con la 2011 se compara consigo mismo un año después. Si el programa funciona, ese colegio debería «subir puestos» dentro de su cohorte respecto a los colegios que lo aplicaron los dos años, en los que no cambia nada. Comparar el **cambio** (y no el nivel) neutraliza todo lo que distingue a un colegio de otro y no cambia de un año a otro: el barrio, el nivel socioeconómico, el estilo del centro y su decisión de participar. Es un diseño de **diferencias en diferencias**.
+
+**Por qué este y no los otros (comprobado con `m27_cohortes_v2.R`):**
+
+- 2011 frente a 2012 casi no comparten colegios (5 colegios y 11 niños de la 2012).
+- Entre 2013 y 2014 cambia la plataforma: dentro del mismo colegio, la 2014 «parte» 1,5 DT por encima en 4.1, lo que es imposible como efecto del programa. Las puntuaciones brutas no se pueden comparar entre esas cohortes. Por eso se usa la posición de cada niño **dentro de su cohorte**, que no depende de la escala de la plataforma.
+
+**Muestra.** Par 2010 → 2011: 34 colegios presentes en las dos cohortes, 11 que pasan de SIN a CON (667 niños) y 23 CON los dos años (1.710 niños). La composición de cada grupo de colegios apenas cambia de una cohorte a otra (ISE medio 6,09 → 6,03 y 5,07 → 4,85), que es lo que exige el diseño. Par 2013 → 2014 (exploratorio, solo 4–5 años): 19 colegios que pasan a CON y solo 3 que siguen SIN.
+
+```{r}
+#| label: fig-m27-did
+#| echo: false
+#| fig-cap: "Efecto de Preleo estimado por diferencias en diferencias (colegios que pasan de SIN a CON entre 2010 y 2011 frente a colegios CON los dos años), en DT dentro de la cohorte, con IC 95 % por bootstrap de colegios. Franja verde: curso en que se aplicó el programa de 2010 (5 años)."
+#| fig-width: 8.5
+#| fig-height: 3.8
+DD <- read.csv("../datos/agregados/M27/did_v1/E1_efecto_did.csv", encoding = "UTF-8")
+DD <- DD[startsWith(DD$par, "A"), ]
+DD$dominio <- factor(DD$dominio, levels = c("LET", "CF", "RAN", "PAL", "PSE", "FLU", "COMP"),
+                     labels = c("Letras", "Conciencia fonológica", "RAN", "Palabras", "Pseudopalabras", "Velocidad en texto", "Comprensión"))
+DD$sig <- DD$ic_inf > 0 | DD$ic_sup < 0
+ggplot(DD, aes(factor(edad), efecto_DT, colour = dominio, group = dominio)) +
+  geom_blank() + scale_x_discrete() +
+  annotate("rect", xmin = .5, xmax = 1.5, ymin = -Inf, ymax = Inf, fill = PAL_GRUPO[["verde"]], alpha = .12) +
+  geom_hline(yintercept = 0, colour = PAL_GRUPO[["gris"]], linewidth = .4) +
+  geom_linerange(aes(ymin = pmax(ic_inf, -1), ymax = pmin(ic_sup, 1)), position = position_dodge(.6), linewidth = .6, alpha = .5) +
+  geom_line(position = position_dodge(.6), linewidth = .5, alpha = .6) +
+  geom_point(aes(shape = sig), position = position_dodge(.6), size = 2.3, fill = "white", stroke = .9) +
+  scale_shape_manual(values = c(`TRUE` = 16, `FALSE` = 21), labels = c(`TRUE` = "IC sin el 0", `FALSE` = "IC con el 0"), name = NULL) +
+  scale_colour_manual(values = unname(PAL_CAT[1:7]), name = NULL) +
+  labs(x = "Edad (años)", y = "Efecto de Preleo (DT)") + coord_cartesian(ylim = c(-1, 1)) +
+  tema_grupo(10) + theme(legend.position = "right")
+```
+
+**En palabras sencillas:**
+
+1. **Durante el curso del programa, Preleo mejora lo que entrena.** A los 5 años, los niños de los colegios que empezaron a aplicarlo ganan +0,31 DT en conocimiento de letras (IC 0,01–0,56) y +0,29 en conciencia fonológica (IC −0,06 a 0,60). El RAN, que el programa no entrena, no cambia (−0,08).
+2. **A los 6 años la ventaja ha desaparecido** en letras (+0,03) y conciencia fonológica (+0,06), y no aparece en palabras, pseudopalabras, velocidad ni comprensión (de −0,04 a +0,10).
+3. **A los 7 y 8 años tampoco hay efecto**; las estimaciones son incluso algo negativas en decodificación (de −0,20 a −0,43), con intervalos que incluyen el 0.
+4. **Par 2013 → 2014 (exploratorio):** ningún efecto en conciencia fonológica, letras ni RAN a los 4–5 años (de −0,05 a +0,09), pero con solo 3 colegios de comparación.
+
+**Qué supone el diseño, y cómo se cuenta.** (a) Que el programa de 2011 tuvo el mismo efecto en los dos tipos de colegio; si los colegios nuevos en el programa lo aplicaron con más entusiasmo, la estimación sería algo conservadora. (b) Que los dos tipos de colegio habrían evolucionado igual sin el cambio; con dos cohortes no se puede comprobar con tendencias previas, pero sí con una **prueba de placebo**: en 5.1, antes de que empezara el programa de 2010, el efecto debe ser 0. Es el siguiente análisis.
+
+**Por qué la réplica no veía el efecto en 5.3.** La réplica compara colegios distintos (los que eligieron Preleo frente a los que no); este diseño compara cada colegio consigo mismo. Que el efecto en letras aparezca aquí y no allí indica que los colegios que eligieron el programa partían de situaciones diferentes, justo la objeción que este diseño resuelve.
 
 ## Por qué este análisis, explicado paso a paso {#sec-por-que}
 
@@ -258,11 +305,12 @@ Notas para la siguiente versión, en orden de importancia. Ninguna cambia el pla
 9. **Un solo idioma.** La introducción y la discusión están en español; el método y los resultados, en inglés. Hay que decidir la revista antes de unificar.
 10. **Resumen y *highlights* vacíos.** Se completan al final, con las cifras de la tabla 3 y la figura 2.
 
-### Siguientes pasos
+### Siguientes pasos {#sec-siguientes}
 
-- [ ] Presentar esta síntesis a Auxi y Juan Luis y acordar el análisis principal (versión 7) por escrito.
+- [ ] Presentar esta síntesis a Auxi y Juan Luis y acordar el análisis principal (réplica y diferencias en diferencias) por escrito.
+- [ ] **Diferencias en diferencias por momento (v2):** efecto en 5.1 como prueba de placebo (debe ser 0), en 5.2 y 5.3, y trimestre a trimestre después; también por nivel de riesgo de partida.
 - [ ] **Fidelidad como dosis:** emparejar el rigor de aplicación de la tesis con los colegios de la asignación v6 y repetir A1 y A6 con el rigor como moderador (script v3).
-- [ ] **Segundo diseño:** cohorte 2013 (sin Preleo) frente a 2014 (con Preleo) en los mismos colegios; confirmar con Auxi la condición de ambas.
+- [x] **Segundo diseño:** diferencias en diferencias 2010 → 2011 ([resultados](#sec-did)). Los pares 2011/2012 y 2013/2014 no son viables en bruto (pocos colegios comunes; cambio de plataforma).
 - [ ] Auxi revisa los puntos 1–5 de la revisión del borrador (datos y texto).
 - [ ] Decidir la historia, la revista y el idioma después de los dos análisis anteriores.
 
