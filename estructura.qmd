@@ -55,7 +55,7 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
    - Sesiones y calendario: tres evaluaciones por curso.
    - Aplicación individual con evaluador, con excepciones colectivas y autoaplicadas; versiones en papel, tableta, 3 años, catalán y valenciano.
    - Antecedente en papel: la batería DIS-ESP (11 escalas, 2007–2012).
-4. **Estudio normativo.**
+4. **Estudio normativo** (borrador: [Estudio normativo](estudio-normativo.qmd)).
    - Cohortes 2009–2016 y colegios participantes.
    - Número de niños por cohorte y momento.
    - Condición Preleo por cohorte y fidelidad de aplicación (ver [El programa Preleo](preleo/programa.qmd)).
@@ -127,7 +127,7 @@ Los estudios de la [Agenda](agenda.qmd) no son un trabajo aparte del manual: cad
 |---|---|---|---|
 | 1–2 Fundamentos y marco teórico | Cómo se aprende a leer en español y qué distingue una dificultad grave de una leve | [M26](desarrollos/M26.qmd), [M10](desarrollos/M10.qmd), [M12](desarrollos/M12.qmd), [M23](desarrollos/M23.qmd), [M24](desarrollos/M24.qmd) | **M26:** la exactitud se domina durante 1.º; lo que separa la dificultad grave de la leve es la exactitud, y lo que separa cualquier dificultad de la lectura típica es la velocidad. **M24:** la conciencia fonológica de un curso predice la aritmética del siguiente |
 | 3 La plataforma ([mapa](plataforma.qmd)) | Qué registra la plataforma y con qué calidad | M2, M6, [M13](desarrollos/RADAR.qmd), [M15](desarrollos/RADAR.qmd) | Planteados; la aplicación es sobre todo individual con evaluador |
-| 4 Estudio normativo | Muestra, colegios, condición Preleo y limpieza | [M8](desarrollos/M8.qmd), [M18](desarrollos/M18.qmd), [M22](desarrollos/M22.qmd) | **M8:** tres escenarios de reutilización de los datos según los consentimientos. **M22:** qué comunidades pueden compartir baremo. Fidelidad de Preleo en [su página](preleo/fidelidad.qmd) |
+| 4 Estudio normativo ([mapa](estudio-normativo.qmd)) | Muestra, colegios, condición Preleo y limpieza | [M8](desarrollos/M8.qmd), [M18](desarrollos/M18.qmd), [M22](desarrollos/M22.qmd) | **M8:** tres escenarios de reutilización de los datos según los consentimientos. **M22:** qué comunidades pueden compartir baremo. Fidelidad de Preleo en [su página](preleo/fidelidad.qmd) |
 | 5 Método ([mapa](metodo-psicometrico.qmd)) | Puntuaciones, fiabilidad, validez, baremos, cambio y equidad | M1–M7, [M13–M17](desarrollos/RADAR.qmd), [M19](desarrollos/M19.qmd), [M25](desarrollos/M25.qmd) | Ver el mapa del capítulo 5 |
 | 6 Resultados globales ([mapa](resultados-globales.qmd)) | Estructura, invarianza y estabilidad | M1, M6, M9, [M14](desarrollos/RADAR.qmd), [M26](desarrollos/M26.qmd) | Estabilidad por familia de tareas; redes exploratorias por edad |
 | 7–18 Fichas por dominio | Fiabilidad, validez y baremo de cada tarea | M2, M3; RAN: [M11](desarrollos/M11.qmd), [M23](desarrollos/M23.qmd); rima: [M12](desarrollos/M12.qmd); numérica: [M24](desarrollos/M24.qmd); lectura de palabras: [M26](desarrollos/M26.qmd) | **M11:** curva de desarrollo del RAN de 4 a 8 años. **M23:** la lista de fonema es la versión del RAN de objetos que mejor discrimina a los 5–6 años. **M26:** porcentaje de niños que dominan la exactitud en cada momento |
@@ -169,7 +169,7 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 |---|---|---|
 | Cap. 1–2 Fundamentos y marco teórico | Partes en el borrador del Manual técnico 8 y en el marco psicométrico | Actualizar con DSM-5-TR, CIE-11 y la literatura en español; redacción por el equipo |
 | Cap. 3 Plataforma | **Borrador completo (02/11)**: diseño, historia, arquitectura, tipos de tarea, medidas, cohortes y versiones | Fechas del cambio de plataforma; evaluadores por cohorte; escalas de DIS-ESP |
-| Cap. 4 Estudio normativo | Muestra por tarea, cohorte y momento; condición Preleo revisada | Tabla de colegios y fidelidad; diagrama de flujo de la muestra |
+| Cap. 4 Estudio normativo | **Borrador (02/11)**: cohortes, niños por momento, seguimiento, Preleo provisional y limpieza | Fuente de la condición Preleo; normalizar nombres de colegio; qué fueron las evaluaciones de 2020/21 y 2021/22 |
 | Cap. 5 Método | **Borrador completo (02/11)**, enlazado a los estudios M2–M25 | ω y TRI ítem a ítem; normas continuas; anclas del cambio mínimo relevante |
 | Cap. 6 Resultados globales | **Borrador (02/11)**: tabla de tareas A y estabilidad longitudinal | Análisis factorial confirmatorio e invarianza |
 | Cap. 7–18 Fichas | Cinco fichas piloto (letras, velocidad, RAN, contar sílabas y TECLE), rima, batería de 3 años y fichas automáticas de todas las tareas; 18 marcos teóricos por dominio | Ficha completa de las 32 tareas de clase A |

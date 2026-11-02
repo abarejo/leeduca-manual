@@ -1,0 +1,140 @@
+# Estudio normativo {#sec-estudio-normativo}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+d4 <- file.path(raiz_libro(), "datos", "agregados", "CAP4")
+lee <- function(f) utils::read.csv(file.path(d4, f), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+N0 <- lee("N0.csv"); N1 <- lee("N1.csv"); N2 <- lee("N2.csv"); N4 <- lee("N4.csv"); N5 <- lee("N5.csv"); N6 <- lee("N6.csv")
+names(N0)[1] <- names(N1)[1] <- names(N2)[1] <- names(N4)[1] <- names(N5)[1] <- names(N6)[1] <- "cohorte"
+N1$ed <- floor(N1$mom); N1$tr <- round((N1$mom - N1$ed) * 10)
+N1$curso <- N1$cohorte + N1$ed                      # año de inicio del curso escolar
+N1$pandemia <- N1$curso >= 2020
+tot <- sum(N0$ninos)
+miles <- function(x) format(x, big.mark = ".", decimal.mark = ",", trim = TRUE)
+```
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primer borrador (02/11/2026) del capítulo 4 del manual, calculado con `cap4_estudio_normativo_v1.R` sobre la tabla larga v2 (cohortes 2010–2015). Solo usa tablas agregadas, con las celdas de menos de 10 niños suprimidas y los colegios seudonimizados. Hay **tres asuntos por resolver** antes de dar por buena la muestra: se explican al final.
+:::
+
+**En una frase.** La muestra normativa reúne `r miles(tot)` registros de niño y cohorte de seis cohortes (nacidos de 2010 a 2015), evaluados en colegios de la provincia de Málaga desde los 4 o 5 años; hasta el curso 2019/20 se siguió a los niños tres veces por curso, y en 2020/21 y 2021/22 hubo una sola evaluación por curso, mucho más amplia.
+
+## Mapa del capítulo
+
+| Apartado | Qué responde | Estado | Estudio que lo desarrolla |
+|---|---|---|---|
+| 4.1 Cohortes y colegios | Quién forma la muestra | Tabla por cohorte | [M8](desarrollos/M8.qmd) |
+| 4.2 Niños por momento | Cuántos niños hay en cada evaluación | Mapa de cohortes y momentos | [M8](desarrollos/M8.qmd), M6 |
+| 4.3 Seguimiento y pérdida | Cuántos niños se siguen de un curso a otro | Flujo por edad | [M26](desarrollos/M26.qmd) (sesgo de abandono) |
+| 4.4 Condición Preleo y nivel socioeconómico | En qué colegios se aplicó el programa | Tabla provisional | [M18](desarrollos/M18.qmd), [fidelidad](preleo/fidelidad.qmd) |
+| 4.5 Limpieza y datos perdidos | Qué se descarta y por qué | Recuento de registros | [Control de calidad](preleo/control-calidad.qmd) |
+
+## 4.1 Cohortes y colegios
+
+```{r}
+#| label: tbl-cohortes-n
+#| tbl-cap: "Muestra por cohorte (año de nacimiento). Edad en meses en la primera evaluación de cada niño; ISE: índice socioeconómico del colegio, media de los niños."
+t0 <- data.frame(Cohorte = N0$cohorte, `Niños` = miles(N0$ninos), Colegios = N0$colegios,
+                 `% niñas` = num_es(N0$pct_ninas, 1), `Sexo conocido` = miles(N0$sexo_conocido),
+                 Sesiones = N0$sesiones, Tareas = N0$tareas,
+                 `Primer–último momento` = paste0(num_es(N0$primer_momento, 1), "–", num_es(N0$ultimo_momento, 1)),
+                 `Edad (meses) en la 1.ª evaluación` = num_es(N0$edad_meses_primera_eval, 1),
+                 ISE = num_es(N0$ISE_media_ninos, 2), check.names = FALSE)
+knitr::kable(t0, align = c("l", rep("r", 9)))
+```
+
+Cada cohorte se evaluó en entre `r min(N0$colegios)` y `r max(N0$colegios)` colegios. Las cohortes 2010 a 2013 son las grandes (unos 2.000 niños cada una); las de 2014 y 2015, con menos de 800, solo llegan a infantil y 1.º. La proporción de niñas está entre el `r num_es(min(N0$pct_ninas), 0)` y el `r num_es(max(N0$pct_ninas), 0)` %, y el sexo consta para el `r num_es(100 * sum(N0$sexo_conocido) / tot, 0)` % de los niños.
+
+La edad media en la primera evaluación varía mucho entre cohortes porque **no todos los niños entran a la vez**: muchos aparecen por primera vez en las evaluaciones amplias de 2020/21 y 2021/22 (ver 4.2). Para describir la edad conviene darla en un momento fijo (por ejemplo, 6.1) y no en la primera evaluación.
+
+## 4.2 Niños por momento
+
+```{r}
+#| label: fig-mapa-momentos
+#| fig-cap: "Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, con muchos niños que no se habían evaluado antes (formato por confirmar)."
+#| fig-width: 9
+#| fig-height: 3.8
+N1$mom_f <- factor(sprintf("%.1f", N1$mom), levels = sprintf("%.1f", sort(unique(N1$mom))))
+N1$lab <- ifelse(is.na(N1$ninos), "<10", miles(N1$ninos))
+ggplot(N1, aes(mom_f, factor(cohorte, levels = rev(sort(unique(cohorte)))))) +
+  geom_tile(aes(fill = ninos), colour = "white", linewidth = 1.2) +
+  geom_tile(data = N1[N1$pandemia, ], fill = NA, colour = PAL_GRUPO[["naranja"]], linewidth = 1.1, width = .92, height = .88) +
+  geom_text(aes(label = lab, colour = !is.na(ninos) & ninos > 900), size = 3) +
+  scale_fill_gradient(low = "#DCEBF3", high = PAL_GRUPO[["azul"]], na.value = "grey92", guide = "none") +
+  scale_colour_manual(values = c(`FALSE` = PAL_GRUPO[["tinta"]], `TRUE` = "white"), guide = "none") +
+  labs(x = "Momento (edad.trimestre)", y = "Cohorte") +
+  tema_grupo(10) + theme(panel.grid.major = element_blank(), panel.background = element_rect(fill = "white", colour = NA))
+```
+
+El mapa muestra dos diseños distintos dentro de la misma base:
+
+- **Seguimiento trimestral (hasta 2019/20).** Tres evaluaciones por curso desde los 4 años (cohortes 2011–2015) o los 5 (cohorte 2010), con entre 300 y 950 niños por momento y una pérdida gradual con la edad.
+- **Evaluaciones amplias de 2020/21 y 2021/22** (borde naranja). Una sola evaluación por curso, en febrero, con hasta `r miles(max(N1$ninos[N1$pandemia], na.rm = TRUE))` niños por cohorte, muchos de ellos nuevos. Coinciden en el tiempo con las aplicaciones en papel y tableta de la pandemia (carpeta `03_PAPEL_TABLETS_PANDEMIA`); falta confirmar que son las mismas.
+
+Esto tiene una consecuencia práctica: el **momento 8.2 de la cohorte 2012 es la evaluación de 2020/21**, y lo mismo ocurre con el 7.2 de 2013, el 9.2 de 2011 y el 10.2 de 2010. La caída de exactitud en 8.2 que se trató como incidencia en [M26](desarrollos/M26.qmd) puede deberse a este cambio de formato y de muestra, y no a un cambio de lista.
+
+## 4.3 Seguimiento y pérdida de la muestra
+
+```{r}
+#| label: fig-flujo
+#| fig-cap: "Niños con al menos una evaluación a cada edad, por cohorte. Las barras de 8 años o más incluyen las evaluaciones amplias de 2020/21 y 2021/22."
+#| fig-width: 8
+#| fig-height: 3.6
+fl <- do.call(rbind, lapply(seq_len(nrow(N2)), function(i) data.frame(cohorte = N2$cohorte[i],
+        edad = c("4 años", "5 años", "6 años", "7 años", "8 años o más"),
+        n = unlist(N2[i, c("con_4_anos", "con_5_anos", "con_6_anos", "con_7_anos", "con_8_o_mas")]))))
+fl$edad <- factor(fl$edad, levels = c("4 años", "5 años", "6 años", "7 años", "8 años o más"))
+ggplot(fl, aes(edad, n, fill = edad)) +
+  geom_col(width = .75) +
+  geom_text(aes(label = ifelse(is.na(n), "", miles(n))), vjust = -.3, size = 2.7, colour = PAL_GRUPO[["tinta"]]) +
+  facet_wrap(~ cohorte, nrow = 1) +
+  scale_fill_manual(values = c(PAL_GRUPO[["amarillo"]], PAL_GRUPO[["verde"]], PAL_GRUPO[["azul"]], "#1B5E80", PAL_GRUPO[["naranja"]]), guide = "none") +
+  scale_y_continuous(expand = expansion(mult = c(0, .12))) +
+  labs(x = NULL, y = "Niños") + tema_grupo(9) + theme(axis.text.x = element_text(angle = 50, hjust = 1))
+```
+
+```{r}
+#| label: tbl-flujo
+#| tbl-cap: "Seguimiento por cohorte: niños evaluados a los 5 años y a los 8 o más, a los 6 y a los 8 o más, y número de momentos por niño (mediana y rango intercuartílico)."
+t2 <- data.frame(Cohorte = N2$cohorte, Evaluados = miles(N2$evaluados),
+                 `De 5 a 8+` = ifelse(is.na(N2$de_5_a_8), "—", miles(N2$de_5_a_8)),
+                 `De 6 a 8+` = ifelse(is.na(N2$de_6_a_8), "—", miles(N2$de_6_a_8)),
+                 `Momentos por niño` = paste0(N2$momentos_mediana, " (", N2$momentos_p25, "–", N2$momentos_p75, ")"), check.names = FALSE)
+knitr::kable(t2, align = c("l", "r", "r", "r", "r"))
+```
+
+La mediana de momentos por niño es baja (1 o 2) porque las evaluaciones amplias añaden muchos niños con una sola evaluación. El núcleo longitudinal es más pequeño: en la cohorte 2010, `r miles(N2$de_5_a_8[N2$cohorte == 2010])` niños tienen datos a los 5 años y a los 8 o más, y en la 2011, `r miles(N2$de_5_a_8[N2$cohorte == 2011])`. Los análisis longitudinales (M26, M11, M4+M7) trabajan con ese núcleo, y cada uno debe comprobar si los que siguen se parecen a los que salen: en M26, la lectura a los 6 años de quienes llegan a los 8 no difiere de la de quienes salen antes.
+
+## 4.4 Condición Preleo y nivel socioeconómico
+
+```{r}
+#| label: tbl-preleo-n
+#| tbl-cap: "Condición Preleo por cohorte según la columna preleo_4a6_seguimiento de la tabla larga (niños y colegios). PROVISIONAL: no coincide con la asignación v3 (ver «Por resolver»)."
+nm <- function(x) if (x %in% names(N4)) N4[[x]] else rep(0, nrow(N4))
+t4 <- data.frame(Cohorte = N4$cohorte, `Niños CON` = miles(nm("ninos_CON")), `Niños SIN` = miles(nm("ninos_SIN")),
+                 `Niños sin dato` = miles(nm("ninos_sin dato")), `Colegios CON` = nm("colegios_CON"), `Colegios SIN` = nm("colegios_SIN"),
+                 `Colegios sin dato` = nm("colegios_sin dato"), check.names = FALSE)
+knitr::kable(t4, align = c("l", rep("r", 6)))
+```
+
+El índice socioeconómico de los colegios es parecido entre condiciones dentro de cada cohorte (medias entre `r num_es(min(N6$ISE_media), 1)` y `r num_es(max(N6$ISE_media), 1)`, con DT de unos 2,4 puntos), así que la comparación CON–SIN no parte de colegios muy distintos en nivel socioeconómico. *[Completar: escala del ISE y su fuente.]*
+
+## 4.5 Limpieza y datos perdidos
+
+```{r}
+#| label: tbl-limpieza
+#| tbl-cap: "Registros de la tabla larga y motivos de pérdida por cohorte. Los registros de 8.2 se conservan y se marcan."
+t5 <- data.frame(Cohorte = N5$cohorte, Registros = miles(N5$registros), `No numéricos` = miles(N5$no_numericos),
+                 `Tiempos 0 (perdidos)` = ifelse(is.na(N5$tiempos_cero), "<10", miles(N5$tiempos_cero)),
+                 `Sin edad` = miles(N5$sin_edad), `En 8.2` = miles(N5$en_8.2), check.names = FALSE)
+knitr::kable(t5, align = c("l", rep("r", 5)))
+```
+
+Los valores no numéricos (entre el `r num_es(100 * min(N5$no_numericos / N5$registros), 1)` y el `r num_es(100 * max(N5$no_numericos / N5$registros), 1)` % según la cohorte) son sobre todo celdas vacías de tareas no aplicadas. Los tiempos registrados como 0 se tratan como perdidos. En la cohorte 2010 hay `r miles(N5$sin_edad[N5$cohorte == 2010])` registros sin edad asignada, que hay que revisar en el diccionario de sesiones.
+
+## Por resolver
+
+1. **La condición Preleo de la tabla larga no es la asignación v3.** La columna `preleo_4a6_seguimiento` no tiene ningún niño SIN en las cohortes 2010 y 2011, cuando la asignación v3 (tesis de Auxi) pasó a SIN a 402 niños de 2010, y deja como «sin dato» a unos mil niños por cohorte. Hay que decidir qué fuente usa el manual y regenerar la columna. Afecta también a la cifra de colegios con programa del artículo de M26.
+2. **Los nombres de colegio tienen variantes.** En total hay 164 nombres de colegio distintos, y parte de ellos son el mismo colegio escrito de varias formas (por eso el seudónimo de la tabla privada no equivale todavía a un colegio). Hay que normalizarlos (tabla de equivalencias privada) antes de contar colegios o de usar el colegio como nivel en los modelos.
+3. **Las evaluaciones de 2020/21 y 2021/22.** Confirmar qué fueron (formato, tareas, quién aplicó) y si se baremarán aparte. Mientras tanto, los análisis longitudinales deben marcarlas o excluirlas, como ya se hace con 8.2.

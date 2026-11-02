@@ -48,6 +48,21 @@ tablas_completas <- function(ficha) {
 # Paleta y tema LEEDUCA (validados para daltonismo; los mismos que en los scripts de análisis)
 PAL <- c(mar = "#008FA3", coral = "#D64545", anil = "#5E4FA2", ocre = "#B07A10", tinta = "#22223B", gris = "#8D8F99",
          rejilla = "#E6E3DC", papel = "#FBFAF7")
+# Paleta del grupo LEEDUCA (02/11/2026): colores de la web (leeduca.es, verde #ABBB10) y de las presentaciones de
+# J. L. Luque (azul de títulos #2689B7, naranja de cabecera #E57813, amarillo #F1B115, fondo crema #F5F4EF).
+# Para figuras nuevas; acompañar siempre el color con forma, rótulo o tipo de línea (accesibilidad).
+PAL_GRUPO <- c(azul = "#2689B7", verde = "#ABBB10", verde_osc = "#7C8710", naranja = "#E57813", amarillo = "#F1B115",
+               crema = "#F5F4EF", tinta = "#22223B", gris = "#888888", rejilla = "#E4E1D6")
+tema_grupo <- function(base = 11) {
+  theme_minimal(base_size = base) +
+    theme(panel.background = element_rect(fill = PAL_GRUPO[["crema"]], colour = NA), plot.background = element_rect(fill = "white", colour = NA),
+          panel.grid.major = element_line(colour = PAL_GRUPO[["rejilla"]], linewidth = .3), panel.grid.minor = element_blank(),
+          axis.text = element_text(colour = PAL_GRUPO[["gris"]]), axis.title = element_text(colour = PAL_GRUPO[["tinta"]]),
+          plot.title = element_text(face = "bold", colour = PAL_GRUPO[["azul"]], hjust = 0), plot.title.position = "plot",
+          plot.subtitle = element_text(colour = PAL_GRUPO[["tinta"]]),
+          strip.text = element_text(face = "bold", hjust = 0, colour = PAL_GRUPO[["tinta"]]),
+          legend.position = "bottom", legend.title = element_blank())
+}
 tema_leeduca <- function(base = 11) {
   theme_minimal(base_size = base) +
     theme(panel.background = element_rect(fill = PAL[["papel"]], colour = NA), plot.background = element_rect(fill = "white", colour = NA),
