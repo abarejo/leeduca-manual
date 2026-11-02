@@ -59,7 +59,7 @@ Para mostrar con rigor los beneficios de Preleo y usarlo para afinar los baremos
 1. **Equivalencia inicial:** comparar los grupos antes o al comienzo del programa (4.1 o 5.1), en las tareas y en nivel socioeconómico.
 2. **Modelo multinivel con el colegio como unidad:** Preleo se asigna por colegio, así que el colegio debe entrar en el modelo.
 3. **Curvas de crecimiento:** comparar la trayectoria de cada grupo de 4 a 8 años, no un solo momento.
-4. **Dosis y respuesta:** relacionar el efecto con la fidelidad de aplicación de cada colegio.
+4. **Dosis y respuesta:** relacionar el efecto con la fidelidad de aplicación de cada colegio. Primer resultado (cohorte 2010, 17 colegios): la ventaja en conciencia fonológica de 5 años aparece solo en los colegios que aplicaron el programa con rigor, y no se extiende a las letras ni a la lectura ([estudio M27](../desarrollos/M27.qmd#sec-fidelidad)).
 5. **Resultados que entiende un docente:** el porcentaje de niños por debajo de p16 en cada grupo y la reducción del riesgo, con su intervalo de confianza.
 6. **Moderadores:** nivel socioeconómico y riesgo inicial, para comprobar el efecto compensador descrito en el estudio publicado.
 7. **Reproducir el estudio publicado** con sus 20 colegios y sus indicadores, como punto de partida común.

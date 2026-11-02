@@ -10,7 +10,7 @@ search: false
 **Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
 :::
 
-[← Volver a la Agenda](../agenda.qmd#sec-agenda)
+[← Volver a la Agenda](../agenda.qmd#sec-agenda) · En el manual: [Efectos de Preleo](../preleo/datos.qmd) y [Fidelidad de Preleo](../preleo/fidelidad.qmd) · [Descargar el borrador en Word](#sec-borrador)
 
 ## Síntesis para el grupo {#sec-sintesis}
 
@@ -327,10 +327,10 @@ Los modelos controlan la puntuación de 6 años en la misma medida, el CI, el se
 | Capítulo o estudio | Qué aporta M27 |
 |---|---|
 | [Cap. 4 · Estudio normativo](../estudio-normativo.qmd) | Una muestra de la cohorte 2010 con la condición Preleo de la tesis (la misma fuente que la [decisión del 02/11/2026](../estudio-normativo.qmd)). Hay que comprobar que los 20 colegios coinciden con la asignación v6 |
-| [Cap. 23 · Preleo](../preleo/datos.qmd) | El efecto depende del riesgo de partida y de la edad: diferencias a los 6 años en el riesgo moderado, ninguna a los 7. A los 7 años los centros con y sin Preleo pueden compartir referencia |
+| [Cap. 23 · Efectos de Preleo](../preleo/datos.qmd) | El efecto depende del riesgo de partida y de la edad: diferencias a los 6 años en el riesgo moderado, ninguna a los 7. A los 7 años los centros con y sin Preleo pueden compartir referencia |
 | [M18 · Redes de cambio](M18.qmd) | M18 pregunta si Preleo desconecta el riesgo del nivel socioeconómico; M27, para quién aporta. Pueden compartir muestra y covariables |
 | [M19 · Perfiles de éxito](M19.qmd) | La maleabilidad de M19 debería variar por nivel de riesgo, como sugiere M27, en lugar de ser una constante por habilidad |
-| [Fidelidad de Preleo](../preleo/fidelidad.qmd) | El rigor de aplicación de la tesis permite un análisis dosis-respuesta dentro de los 10 colegios con programa |
+| [Fidelidad de Preleo](../preleo/fidelidad.qmd) | Primer análisis dosis-respuesta con el rigor de aplicación de la tesis (17 colegios con programa, [resultados](#sec-fidelidad)): la ventaja en conciencia fonológica aparece solo donde se aplicó con rigor. Apoya la propuesta del capítulo de medir la fidelidad y la disposición de todo el profesorado |
 | [M26 · Dos ciclos](M26.qmd) | La compensación de 6 años coincide con el ciclo de la exactitud; a los 7, cuando manda la velocidad, ya no hay diferencias |
 
 ### Historia detallada de los análisis de 2025–2026 {#sec-historia}
@@ -400,6 +400,24 @@ Notas para la siguiente versión, en orden de importancia. Ninguna cambia el pla
 - [ ] **Confirmar con Auxi la escala de rigor** (sentido, cohorte, cómo se valoró) y por qué 9 colegios CON de 2010 no tienen valoración.
 - [x] **Segundo diseño:** diferencias en diferencias 2010 → 2011 ([resultados](#sec-did)). Los pares 2011/2012 y 2013/2014 no son viables en bruto (pocos colegios comunes; cambio de plataforma).
 - [ ] Auxi revisa los puntos 1–5 de la revisión del borrador (datos y texto).
-- [ ] Decidir la historia, la revista y el idioma después de los dos análisis anteriores.
+- [ ] Decidir la historia, la revista y el idioma con los tres análisis (réplica, diferencias en diferencias y fidelidad).
+- [ ] Preparar la versión 5 del manuscrito con los resultados de esta página ([borrador actual](#sec-borrador)).
 
 **Carpetas de trabajo:** `DRIVE\LEEDUCA\2025\AUXI` y `2026\AUXI` (borradores, guiones de R y figuras de 2025–2026). Se conservan tal cual.
+
+## Borrador del manuscrito {#sec-borrador}
+
+**Descargar el borrador para revisar (versión de Auxi, 22/10/2026):** [M27_INTRO_BEYOND_4_Auxi_2026-10-22.docx](../borradores/M27_INTRO_BEYOND_4_Auxi_2026-10-22.docx)
+
+::: {.callout-note}
+## Cómo revisarlo
+Es el último borrador del grupo (*Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica*, 9.500 palabras, resumen aún vacío). **Todavía no incluye los análisis de esta página**: sus métodos y resultados son los de la versión 6 de la tabla de [arriba](#sec-sintesis) (riesgo con letras y RAN de 5.3, ANCOVA 7|6, 330 niños). Para la versión que se envíe:
+
+1. **Método:** sustituir el riesgo de partida y el modelo por los de la réplica ([por qué](#sec-por-que)) y añadir el segundo diseño y la fidelidad.
+2. **Resultados:** los de la [síntesis](#sec-sintesis), con las figuras de esta página.
+3. **Discusión:** la historia de los tres diseños; la disposición docente como limitación.
+4. **Revisar** los diez puntos de la [revisión del borrador](#sec-revision).
+
+Se recomienda revisar en Word con control de cambios y devolver con las iniciales en el nombre del archivo.
+:::
+

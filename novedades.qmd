@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 02/11/2026 | Agenda: M27 (8) y Efectos de Preleo | M27 enlaza con los capítulos de Efectos y Fidelidad de Preleo y ofrece el último borrador en Word (versión de Auxi, 22/10) con una guía para revisarlo; el capítulo de Efectos de Preleo recoge el primer resultado dosis-respuesta. |
 | 02/11/2026 | Agenda: M27 (7) | Tercera prueba, fidelidad como dosis: en los colegios que aplicaron Preleo con más rigor la ventaja en conciencia fonológica es de +0,25 DT de 5.2 a 6.1 y en los de poco rigor no hay ninguna (+0,13 DT por punto de rigor), sin diferencias antes del programa; ni letras ni lectura mejoran con más rigor. |
 | 02/11/2026 | Agenda: M27 (6) | Diferencias en diferencias trimestre a trimestre: letras +0,31 DT al acabar el programa (5.3); en conciencia fonológica el placebo de 5.1 no sale limpio (+0,22, no significativo), lo que resta fuerza al pico de 5.2; nada desde los 6 años; ningún beneficio mayor para quien parte más bajo. |
 | 02/11/2026 | Agenda: M27 (5) | Segundo diseño por diferencias en diferencias (11 colegios que pasan de SIN a CON entre 2010 y 2011 frente a 23 CON los dos años): Preleo mejora las letras durante el curso del programa (+0,31 DT a los 5 años) y algo la conciencia fonológica, sin efecto desde los 6 años ni en la lectura. Los pares 2011/2012 y 2013/2014 no son comparables en bruto (pocos colegios comunes; cambio de plataforma). |
