@@ -1246,10 +1246,10 @@ Tabla&nbsp;4.1: Muestra por cohorte (año de nacimiento). Edad en meses en la pr
 <div id="fig-linea-temporal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-linea-temporal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/infografias/linea_temporal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;4.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la batería de 2021/22."><img src="figuras/infografias/linea_temporal.png" class="img-fluid figure-img" alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22)."></a>
+<a href="figuras/infografias/linea_temporal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;4.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la evaluación de 2021/22 en tabletas, con tiempo límite."><img src="figuras/infografias/linea_temporal.png" class="img-fluid figure-img" alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linea-temporal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;4.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la batería de 2021/22.
+Figura&nbsp;4.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la evaluación de 2021/22 en tabletas, con tiempo límite.
 </figcaption>
 </figure>
 </div>
@@ -1273,9 +1273,10 @@ Figura&nbsp;4.2: Niños evaluados en cada momento (edad.trimestre) por cohorte. 
 <li><strong>Evaluaciones amplias de 2020/21 y 2021/22</strong> (borde naranja). Una sola evaluación por curso, en febrero, con muchos niños nuevos. Tras la llegada de la pandemia se aplicaron <strong>versiones en papel</strong>, sobre todo de pruebas de eficiencia, de 2.º a 6.º de primaria (datos tabulados en <code>03_PAPEL_TABLETS_PANDEMIA</code>; los cuadernillos de TECLE, PEALE y sintaxis están en la carpeta del proyecto con Colombia). Son dos baterías distintas (<a href="#tbl-amplias" class="quarto-xref">Tabla&nbsp;<span>4.2</span></a>):
 <ul>
 <li><strong>Febrero de 2021</strong>, con unos 1.300–1.560 niños por cohorte: la batería TECLE completa (TECLE, relaciones semánticas, sintaxis y vocabulario lector).</li>
-<li><strong>Febrero de 2022</strong>, con unos 260–470 niños por cohorte: comprensión de textos, Woodcock, decisión léxica, homógrafos, lectura comprensiva, velocidad lectora y matemáticas (y, en las cohortes 2014 y 2015, segmentación fonémica y letra inicial).</li>
+<li><strong>Curso 2021/22</strong>, con unos 260–470 niños por cohorte: comprensión de textos, Woodcock, decisión léxica, homógrafos, lectura comprensiva, velocidad lectora y matemáticas (y, en las cohortes 2014 y 2015, segmentación fonémica y letra inicial).</li>
 </ul></li>
 </ul>
+<p><strong>¿Papel o plataforma?</strong> La estructura de la salida lo aclara (<code>cap4_estructura_sesiones_v1.R</code>). La evaluación de 2021 (sesión 2021) solo trae número de respuestas, aciertos y errores por prueba, sin tiempos: es la <strong>tabulación de los cuadernillos en papel</strong>. La de 2021/22 (sesiones 948–950) tiene la huella de la <strong>plataforma nueva</strong>, con aciertos, fallos, tiempo total y eficiencia por tarea y códigos de instancia, y se aplicó <strong>en tabletas</strong> (en <code>03_PAPEL_TABLETS_PANDEMIA</code> está la exportación «SESION 948 TABLETS»). Sus tareas tienen <strong>tiempo límite</strong>: las listas de palabras y pseudopalabras se cortan a los 45 s y Woodcock y homógrafos a los 180 s, de modo que la puntuación es cuántos ítems se leen en ese tiempo, no cuánto se tarda en leer la lista.</p>
 <div class="cell">
 <div id="tbl-amplias" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -1379,7 +1380,7 @@ Tabla&nbsp;4.2: Tareas de las evaluaciones amplias de 2020/21 y 2021/22 por coho
 </figure>
 </div>
 </div>
-<p>Esto tiene una consecuencia práctica: el <strong>momento 8.2 de la cohorte 2012 es la evaluación de 2020/21</strong>, y lo mismo ocurre con el 7.2 de 2013, el 9.2 de 2011 y el 10.2 de 2010. La caída de exactitud en 8.2 que se trató como incidencia en <a href="./desarrollos/M26.html">M26</a> se explica probablemente por este cambio de formato (papel) y de muestra, y no por un cambio de lista. Estas evaluaciones se tratan como un <strong>diseño transversal aparte</strong>: no se mezclan con el seguimiento trimestral en los análisis longitudinales y, si se bareman, se bareman por separado.</p>
+<p>Esto tiene una consecuencia práctica: el <strong>momento 8.2 de la cohorte 2012 es la evaluación de 2020/21</strong>, y lo mismo ocurre con el 7.2 de 2013, el 9.2 de 2011 y el 10.2 de 2010. La caída de exactitud en 8.2 que se trató como incidencia en <a href="./desarrollos/M26.html">M26</a> se explica probablemente por este cambio de formato (papel) y de muestra, y no por un cambio de lista. Las dos evaluaciones se tratan como un <strong>diseño transversal aparte</strong>, cada una con su formato: no se mezclan con el seguimiento trimestral en los análisis longitudinales y, si se bareman, se bareman por separado.</p>
 </section>
 <section id="seguimiento-y-pérdida-de-la-muestra" class="level2">
 <h2 class="anchored" data-anchor-id="seguimiento-y-pérdida-de-la-muestra">4.3 Seguimiento y pérdida de la muestra</h2>
@@ -1654,9 +1655,9 @@ Tabla&nbsp;4.5: Registros de la tabla larga y motivos de pérdida por cohorte. L
 <section id="decisiones-y-pendientes" class="level2">
 <h2 class="anchored" data-anchor-id="decisiones-y-pendientes">Decisiones y pendientes</h2>
 <ol type="1">
-<li><strong>Condición Preleo (decidido el 02/11/2026).</strong> La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, todos los niños son de Preleo. Implementado en la asignación v5. <strong>Propuesta pendiente:</strong> aplicar la condición solo a los niños del seguimiento trimestral y dejar como «desconocida» la de quienes solo están en las evaluaciones amplias, porque esos colegios no figuran en el seguimiento de Preleo para su cohorte. Revisar con Auxi también 2012 y las excepciones de 2013 y 2014.</li>
+<li><strong>Condición Preleo (decidido el 02/11/2026).</strong> La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, todos los niños son de Preleo. Implementado en la asignación v5. <strong>Decidido también (02/11/2026):</strong> la condición solo se aplica a los niños del seguimiento trimestral; la de quienes solo están en las evaluaciones amplias queda como «desconocida», porque sus colegios no figuran en el seguimiento de Preleo para su cohorte (asignación v6, <code>asignar_preleo_v6.R</code>; la tabla de 4.4 se actualizará con ella). Revisar con Auxi también 2012 y las excepciones de 2013 y 2014.</li>
 <li><strong>Nombres de colegio (hecho).</strong> La v5 usa el emparejamiento de la v2 (por parecido y con comprobación manual) como colegio canónico: 65–72 colegios en las cohortes grandes y 31 en las pequeñas, frente a 79–96 nombres en la plataforma. Quedan entre 209 y 346 niños por cohorte sin colegio emparejado, sobre todo de colegios que solo están en las evaluaciones amplias.</li>
-<li><strong>Evaluaciones de 2020/21 y 2021/22 (hecho, falta una confirmación).</strong> Febrero de 2021: batería TECLE en papel. Febrero de 2022: comprensión, Woodcock, decisión léxica, homógrafos, velocidad lectora y matemáticas. Confirmar el formato de 2022 (papel o plataforma) y decidir si se baremarán aparte.</li>
+<li><strong>Evaluaciones de 2020/21 y 2021/22 (hecho).</strong> 2021: batería TECLE en papel, sin tiempos. 2021/22: plataforma en tabletas, con tiempo límite. Falta decidir si se baremarán aparte y cómo se citan en los artículos que usan la lectura a los 8 años o más (M26).</li>
 </ol>
 
 
