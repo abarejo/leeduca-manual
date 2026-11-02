@@ -21,7 +21,7 @@ search: false
 2. **Por qué LEEDUCA puede responderlo.** Tres evaluaciones por curso de los 4 a los 11 años, con aciertos y tiempos (por ítem en la plataforma nueva), en seis cohortes. Casi ningún estudio en el mundo tiene esa resolución temporal en una ortografía transparente.
 3. **Qué se espera.** En español la exactitud llega pronto (hacia el final de 1.º) y la automatización tarda años. Los niños con dificultad persistente se separarían de los demás en dos ventanas distintas: un retraso **transitorio** en la exactitud a los 6 años y un fallo **persistente** en la automatización desde los 7.
 4. **Por qué importa.** Si es así, la dificultad transitoria y la persistente del manual no serían dos grados de lo mismo, sino dos ciclos distintos que fallan. Eso cambia qué tarea mirar en cada momento y qué tipo de ayuda dar.
-5. **Lo que dicen ya los datos.** Con los grupos definidos solo con la lectura de 8 años en adelante (sin circularidad), la mitad de los típicos domina la exactitud a 6.2, la de los leves a 6.3 y la de los graves a 7.2. Para separar grave de leve, a los 6 años sirven igual la exactitud y la velocidad (AUC .71); a los 7, ya más la velocidad (.77). El efecto de longitud desaparece a los 8 años en los típicos y no baja en los graves.
+5. **Lo que dicen ya los datos (corregido el 02/11/2026).** Con los grupos definidos solo con la lectura cronometrada de 8 años en adelante (sin circularidad; 1.777 niños), la mitad de los típicos domina la exactitud a 6.2, la de los leves a 7.1 y la de los graves a 7.3. Lo que separa al grave del leve a los 6–7 años es la **exactitud** (AUC .66–.67); la velocidad no los separa (.44–.63). Lo que separa a cualquier dificultad de los típicos es sobre todo la **velocidad** (.77–.84 a 7.1). El efecto de longitud baja con la edad en los típicos (1,34 → 1,09) y sube en los graves (1,17 → 1,51).
 :::
 
 ## Preguntas
@@ -169,6 +169,11 @@ Con 2.754 niños de las cohortes 2010–2013 (114 graves, 303 leves, 557 con dif
 - El grupo grave es pequeño en las cohortes 2012 y 2013 (alrededor de 10 niños cada una).
 
 ## Segunda fase: los dos ciclos sin circularidad
+
+::: {.callout-warning}
+## Corrección (02/11/2026)
+Las figuras y tablas de esta sección salen de `m26_ciclos_v3.R`, que tenía un error al formar los grupos: incluía unos 2.100 niños con lectura a 8+ años sin tiempo ni eficiencia, que quedaban como «típicos» y hacían que «grave» fuera el 22 % inferior y «leve» el 22–55 %. Los grupos correctos (10 % / 15 % / 75 %, 1.777 niños) dan el resumen de arriba. Esta sección se rehará con `m26_articulo_v6.R`; mientras tanto, sus cifras no deben citarse.
+:::
 
 Para responder a la principal objeción de la primera pasada, los grupos se definen **solo con la lectura de 8 años en adelante** (sin 8.2): grave ≤ P10, leve P10–P25 y típico > P25 dentro de cada cohorte. Así, todo lo que ocurre antes de los 8 años está libre de circularidad. Script: `scripts/R/m26_ciclos_v2.R` (probado con datos simulados).
 
