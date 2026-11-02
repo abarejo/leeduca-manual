@@ -4,7 +4,7 @@ search: false
 
 # M27 · ¿Para quién funciona una intervención universal? Compensación acotada en Preleo {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 5, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). La página empieza con una **síntesis para el grupo**, sigue con la **explicación sencilla del análisis** y termina con la **ficha completa** del estudio.*
+*Desarrollo de un estudio de la Agenda · versión 6, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). La página empieza con una **síntesis para el grupo**, sigue con la **explicación sencilla del análisis** y termina con la **ficha completa** del estudio.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
@@ -20,7 +20,7 @@ search: false
 1. **La pregunta.** Preleo se aplicó a toda la clase, pero ¿benefició a todos por igual? ¿A quién ayudó más y durante cuánto tiempo?
 2. **Cómo hemos llegado aquí.** Entre julio de 2025 y enero de 2026 se hicieron **seis análisis** con los mismos 506 niños, y cada uno llegó a una conclusión distinta. El 02/11/2026 hicimos una **réplica** con la muestra y las reglas del manual (957 niños de 34 colegios), con un plan fijado antes de ver los datos. Es el único de los siete análisis que cumple los cinco criterios de rigor de la tabla de abajo, y es el que proponemos.
 3. **Qué encontramos.** A los 6 años, los niños de **riesgo moderado** con Preleo rinden algo más en conciencia fonológica que sus iguales sin el programa (+0,44 DT), sobre todo al empezar 1.º. A los 7 años **no queda ninguna diferencia**, en ningún dominio ni nivel de riesgo, y Preleo no cambia la probabilidad de terminar con dificultad lectora persistente.
-4. **El segundo diseño, sin autoselección de centros, lo confirma** ([resultados](#sec-did)). Comparando los 11 colegios que pasaron de no aplicar Preleo (2010) a aplicarlo (2011) con los 23 que lo aplicaron los dos años, Preleo mejora **las letras durante el curso del programa** (+0,31 DT a los 5 años) y algo la conciencia fonológica (+0,29, IC que roza el 0). A los 6 años la ventaja ha desaparecido y no hay efecto en la lectura de 6 a 8 años. Entre colegios (réplica) el efecto en 5.3 no se veía, probablemente porque los colegios que eligieron Preleo eran distintos.
+4. **El segundo diseño, sin autoselección de centros, apunta en la misma dirección** ([resultados](#sec-did)). Comparando los 11 colegios que pasaron de no aplicar Preleo (2010) a aplicarlo (2011) con los 23 que lo aplicaron los dos años: al acabar el curso del programa (5.3) los niños saben más letras (+0,31 DT, IC 0,03–0,56). En conciencia fonológica la ventaja de 5.2 (+0,41) es menos clara, porque en la prueba de placebo (5.1, antes del programa) ya había +0,22, sin significación. Desde los 6 años no hay efecto en ningún dominio ni en la lectura, y los niños que partían más bajo no se benefician más.
 5. **Lo que no se sostiene del borrador.** La ventaja del riesgo bajo en palabras es un efecto del método (ajustar por los 6 años), y la compensación en comprensión no se replica.
 6. **La historia del artículo, con dos diseños que coinciden:** un programa universal de un curso mejora lo que entrena (letras y conciencia fonológica) mientras se aplica, con una pequeña ventaja compensatoria a los 6 años en el riesgo moderado, pero no se transfiere a la lectura ni cambia la dificultad persistente. Falta el análisis de la fidelidad (¿más rigor, más efecto?) y una prueba de placebo en 5.1 (ver [siguientes pasos](#sec-siguientes)).
 :::
@@ -160,7 +160,44 @@ ggplot(DD, aes(factor(edad), efecto_DT, colour = dominio, group = dominio)) +
 3. **A los 7 y 8 años tampoco hay efecto**; las estimaciones son incluso algo negativas en decodificación (de −0,20 a −0,43), con intervalos que incluyen el 0.
 4. **Par 2013 → 2014 (exploratorio):** ningún efecto en conciencia fonológica, letras ni RAN a los 4–5 años (de −0,05 a +0,09), pero con solo 3 colegios de comparación.
 
-**Qué supone el diseño, y cómo se cuenta.** (a) Que el programa de 2011 tuvo el mismo efecto en los dos tipos de colegio; si los colegios nuevos en el programa lo aplicaron con más entusiasmo, la estimación sería algo conservadora. (b) Que los dos tipos de colegio habrían evolucionado igual sin el cambio; con dos cohortes no se puede comprobar con tendencias previas, pero sí con una **prueba de placebo**: en 5.1, antes de que empezara el programa de 2010, el efecto debe ser 0. Es el siguiente análisis.
+**Qué supone el diseño, y cómo se cuenta.** (a) Que el programa de 2011 tuvo el mismo efecto en los dos tipos de colegio; si los colegios nuevos en el programa lo aplicaron con más entusiasmo, la estimación sería algo conservadora. (b) Que los dos tipos de colegio habrían evolucionado igual sin el cambio (tendencias paralelas). Con dos cohortes no hay tendencias previas, pero sí una **prueba de placebo**: en 5.1 el programa de 2010 aún no había empezado, así que el efecto debe ser ≈ 0.
+
+### Trimestre a trimestre y prueba de placebo (did v2) {#sec-did-v2}
+
+```{r}
+#| label: fig-m27-did-mom
+#| echo: false
+#| fig-cap: "Diferencias en diferencias trimestre a trimestre (2010 → 2011), con IC 95 % por bootstrap de colegios. Recuadro en 5.1: prueba de placebo (antes del programa de 2010). Franja verde: curso del programa (5 años)."
+#| fig-width: 9
+#| fig-height: 4.4
+E3 <- read.csv("../datos/agregados/M27/did_v2/E3_por_momento.csv", encoding = "UTF-8")
+E3 <- E3[startsWith(E3$par, "A"), ]
+E3$dominio <- factor(E3$dominio, levels = c("LET", "CF", "RAN", "PAL", "PSE", "FLU", "COMP"),
+                     labels = c("Letras", "Conciencia fonológica", "RAN", "Palabras", "Pseudopalabras", "Velocidad en texto", "Comprensión"))
+E3$mom <- factor(E3$mom, levels = sort(unique(E3$mom)))
+E3$sig <- E3$ic_inf > 0 | E3$ic_sup < 0
+ggplot(E3, aes(mom, efecto_DT, colour = dominio, group = dominio)) +
+  geom_blank() + scale_x_discrete() +
+  annotate("rect", xmin = .5, xmax = 3.5, ymin = -Inf, ymax = Inf, fill = PAL_GRUPO[["verde"]], alpha = .12) +
+  annotate("rect", xmin = .6, xmax = 1.4, ymin = -1, ymax = 1, fill = NA, colour = PAL_GRUPO[["naranja"]], linetype = "dashed") +
+  annotate("text", x = 1, y = .97, label = "placebo", colour = PAL_GRUPO[["naranja"]], size = 3, vjust = 1) +
+  geom_hline(yintercept = 0, colour = PAL_GRUPO[["gris"]], linewidth = .4) +
+  geom_linerange(aes(ymin = pmax(ic_inf, -1), ymax = pmin(ic_sup, 1)), position = position_dodge(.6), linewidth = .55, alpha = .45) +
+  geom_line(position = position_dodge(.6), linewidth = .5, alpha = .6) +
+  geom_point(aes(shape = sig), position = position_dodge(.6), size = 2.2, fill = "white", stroke = .9) +
+  scale_shape_manual(values = c(`TRUE` = 16, `FALSE` = 21), labels = c(`TRUE` = "IC sin el 0", `FALSE` = "IC con el 0"), name = NULL) +
+  scale_colour_manual(values = unname(PAL_CAT[1:7]), name = NULL) +
+  labs(x = "Momento (edad.trimestre)", y = "Efecto de Preleo (DT)") + coord_cartesian(ylim = c(-1, 1)) +
+  tema_grupo(10) + theme(legend.position = "right")
+```
+
+**En palabras sencillas:**
+
+1. **La prueba de placebo no sale limpia del todo.** En 5.1, antes del programa, los colegios que iban a empezar ya estaban +0,22 DT por encima en conciencia fonológica (IC −0,31 a 0,75; no significativo, pero lejos de 0). En RAN, −0,06. Con un intervalo tan ancho, el placebo no descarta ni confirma tendencias paralelas. Además, en 2010 el programa pudo empezar unas semanas antes de 5.1.
+2. **Letras, sí; conciencia fonológica, con dudas.** Al acabar el curso (5.3) los niños saben más letras (+0,31, IC 0,03–0,56; no hay letras en 5.1 para el placebo). En conciencia fonológica el pico de 5.2 (+0,41) es solo unas dos décimas mayor que el placebo, y en 5.3 vuelve a +0,21.
+3. **Nada que dure.** En 6.1 todo está en torno a 0. En decodificación hay un ligero repunte en 6.3 (+0,13 a +0,22) y una bajada en 7.1 (−0,23 a −0,29), ninguno significativo: oscilaciones dentro del ruido.
+4. **No beneficia más a quienes parten más bajo.** Por tercio de la primera evaluación, a los 5 años las letras mejoran parecido en el tercio bajo (+0,31) y en el alto (+0,41). A los 7–8 años, en decodificación, las estimaciones del tercio bajo son negativas (−0,59 a −0,65 a los 8, IC sin el 0), pero son 60 comparaciones exploratorias, la muestra de 8 años es la más pequeña (unos 800 niños, 9 colegios que cambian) y en la cohorte 2011 la primera evaluación ya cae dentro del programa. Es una señal que hay que revisar (pérdida de muestra a los 8 años), no un resultado.
+5. **Par 2013 → 2014:** nada en conciencia fonológica, letras ni RAN de 4.1 a 5.2.
 
 **Por qué la réplica no veía el efecto en 5.3.** La réplica compara colegios distintos (los que eligieron Preleo frente a los que no); este diseño compara cada colegio consigo mismo. Que el efecto en letras aparezca aquí y no allí indica que los colegios que eligieron el programa partían de situaciones diferentes, justo la objeción que este diseño resuelve.
 
@@ -308,7 +345,8 @@ Notas para la siguiente versión, en orden de importancia. Ninguna cambia el pla
 ### Siguientes pasos {#sec-siguientes}
 
 - [ ] Presentar esta síntesis a Auxi y Juan Luis y acordar el análisis principal (réplica y diferencias en diferencias) por escrito.
-- [ ] **Diferencias en diferencias por momento (v2):** efecto en 5.1 como prueba de placebo (debe ser 0), en 5.2 y 5.3, y trimestre a trimestre después; también por nivel de riesgo de partida.
+- [x] **Diferencias en diferencias por momento (v2)** ([resultados](#sec-did-v2)): placebo en 5.1 no concluyente (+0,22 en CF); letras +0,31 en 5.3; nada desde los 6 años.
+- [ ] **Pérdida de muestra a los 8 años en el par 2010 → 2011:** comprobar si los niños que siguen a los 8 son comparables en los dos tipos de colegio antes de interpretar la señal negativa del tercio bajo.
 - [ ] **Fidelidad como dosis:** emparejar el rigor de aplicación de la tesis con los colegios de la asignación v6 y repetir A1 y A6 con el rigor como moderador (script v3).
 - [x] **Segundo diseño:** diferencias en diferencias 2010 → 2011 ([resultados](#sec-did)). Los pares 2011/2012 y 2013/2014 no son viables en bruto (pocos colegios comunes; cambio de plataforma).
 - [ ] Auxi revisa los puntos 1–5 de la revisión del borrador (datos y texto).
