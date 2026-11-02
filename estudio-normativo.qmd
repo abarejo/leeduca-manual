@@ -50,6 +50,8 @@ La edad media en la primera evaluación varía mucho entre cohortes porque **no 
 
 ## 4.2 Niños por momento
 
+![Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la batería de 2021/22.](figuras/infografias/linea_temporal.png){#fig-linea-temporal fig-alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22)."}
+
 ```{r}
 #| label: fig-mapa-momentos
 #| fig-cap: "Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, en papel y sobre todo con pruebas de eficiencia, con muchos niños que no se habían evaluado antes."

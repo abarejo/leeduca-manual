@@ -123,6 +123,12 @@ Lo que se ve:
 
 **Pendiente.** Invarianza de medida por sexo, formato (plataforma, papel, tableta) y periodo (antes y después de la pandemia) en las tareas de clase A. Se desarrolla en M6 y, para las regiones y lenguas, en M22.
 
+## 6.5 Los dos ciclos de la lectura
+
+El estudio [M26](desarrollos/M26.qmd) resume en una imagen cómo se aprende a leer en español con los datos de la plataforma: primero se domina la exactitud, durante 1.º, y después la lectura se automatiza; las dificultades graves y leves se separan en ventanas distintas.
+
+![Los dos ciclos de la lectura (M26): dominio de la exactitud y efecto de longitud por grupo de lectura a los 8 años.](figuras/infografias/dos_ciclos.png){#fig-dos-ciclos-rg fig-alt="Infografía con dos paneles de líneas por grupo y tres tarjetas de conclusiones."}
+
 ## Preguntas para el grupo
 
 1. ¿Os parece suficiente, para la primera versión, la tabla de tareas A con la estabilidad, dejando la estructura factorial y la invarianza para la segunda?

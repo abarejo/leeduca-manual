@@ -1,0 +1,3 @@
+﻿marcador,n_obs,n_ninos,colegio_aleatorio,chi2_interaccion,gl,p
+Longitud (trisílabas / bisílabas),4056,1094,TRUE,315.269241631623,12,2.90494157247265e-60
+Lexicalidad (pseudopalabras / palabras),5433,1094,TRUE,67.4089083679728,16,2.82442303918786e-08

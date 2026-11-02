@@ -168,6 +168,8 @@ Con 2.754 niños de las cohortes 2010–2013 (114 graves, 303 leves, 557 con dif
 - **El momento 8.2 es una incidencia:** todos los grupos caen a la vez en exactitud, probablemente por un cambio de lista o de formato en esa sesión. Hay que revisarlo en el bruto.
 - El grupo grave es pequeño en las cohortes 2012 y 2013 (alrededor de 10 niños cada una).
 
+
+![Los dos ciclos de la lectura en español con los resultados definitivos (m26_articulo_v6.R): cuándo dominan la exactitud los lectores típicos, leves y graves, y cómo evoluciona el efecto de longitud.](../figuras/infografias/dos_ciclos.png){#fig-dos-ciclos fig-alt="Infografía con dos paneles de líneas por grupo y tres tarjetas de conclusiones."}
 ## Segunda fase: los dos ciclos sin circularidad
 
 ::: {.callout-warning}

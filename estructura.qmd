@@ -39,6 +39,8 @@ Falta completar estas referencias con las ediciones exactas.
 
 ## Índice comentado
 
+![Cómo se construye el manual: seis pasos de la evaluación en el aula a la decisión, con sus capítulos y los estudios de la Agenda que los desarrollan.](figuras/infografias/construccion.png){#fig-construccion fig-alt="Infografía con seis pasos encadenados: evaluar, ordenar, depurar, medir bien, comparar y decidir."}
+
 El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de la Parte III siguen los dominios del diccionario maestro y solo incluyen las tareas de clase A; las de clase B y C van al anexo D. Donde ya hay algo escrito en este libro, se enlaza.
 
 ### Parte I. Fundamentos
