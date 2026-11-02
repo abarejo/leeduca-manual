@@ -84,6 +84,85 @@ Los niveles de riesgo que propone el manual (típico, transitorio, persistente) 
 
 Así M26 valida los indicadores de riesgo del manual desde dentro: si la clasificación es buena, las transiciones deberían concentrarse en las ventanas que predicen las hipótesis.
 
+## Patrones por perfil: la tabla que propone Juan Luis
+
+> «Me pregunto si los niños que en 6.3 o 7.1 cometen errores de exactitud son, quizá, los que van a ser graves. En algunos momentos hay resultados que ayudan a mejorar el diagnóstico, y temprano, además de ver en qué se diferencian esos perfiles. El leve no tiene problemas de exactitud al final de los 6, pero sí de velocidad, ortografía o de otros procesos.» (J. L. Luque, 02/11/2026)
+
+Es una predicción concreta y comprobable con los datos:
+
+- **DL-A (grave):** exactitud baja todavía en 6.3–7.1, además de lentitud.
+- **DL-B (leve):** exactitud normal al final de los 6 años; lentitud, y dificultades en ortografía u otros procesos.
+- **TR (transitoria):** retraso inicial que se cierra.
+
+Las tablas se calculan en el ordenador del proyecto con `scripts/R/m26_patrones_perfiles.R` (cohortes 2010–2013), que solo exporta agregados por grupo y momento, con un mínimo de 10 niños por celda. El script se ha probado con datos simulados de la misma estructura.
+
+```{r}
+#| include: false
+dir_m26 <- file.path("..", "datos", "agregados", "M26")
+hay_m26 <- file.exists(file.path(dir_m26, "P1.csv"))
+GR <- c("DL-A" = "DL-A · grave", "DL-B" = "DL-B · leve", "TR" = "TR · transitoria", "INT" = "INT", "TE" = "TE · típica")
+lee <- function(f) utils::read.csv(file.path(dir_m26, f), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+```
+
+```{r}
+#| results: asis
+#| echo: false
+if (!hay_m26) cat("::: {.callout-note appearance=\"minimal\"}\n**Pendiente de ejecutar** el script en el PC del proyecto. Cuando se ejecute, aquí aparecerán: el mapa de patrones por perfil, la exactitud frente a la velocidad por grupo y los momentos que mejor separan la dificultad grave de la leve.\n:::\n")
+```
+
+```{r}
+#| label: fig-m26-mapa
+#| fig-cap: "Mapa de patrones: mediana del percentil de cada grupo (dentro de su cohorte y sesión) por tarea, medida y momento. Rojo, por debajo de la media; azul, por encima. Exactitud = aciertos; velocidad = tiempo invertido."
+#| fig-height: 9
+#| fig-width: 9
+#| eval: !expr hay_m26
+library(ggplot2)
+P1 <- lee("P1.csv"); P1 <- P1[P1$grupo %in% c("DL-A", "DL-B", "TR", "TE") & P1$medida %in% c("aciertos", "tiempo"), ]
+P1$medida <- ifelse(P1$medida == "aciertos", "exactitud", "velocidad")
+P1$fila <- factor(paste0(P1$tarea_canonica, " · ", P1$medida))
+o <- unique(P1[order(P1$orden, P1$medida), "fila"]); P1$fila <- factor(P1$fila, levels = rev(o))
+P1$grupo <- factor(GR[P1$grupo], levels = GR)
+P1$mom <- factor(P1$mom, levels = unique(P1$mom[order(as.numeric(P1$mom))]))
+ggplot(P1, aes(mom, fila, fill = pr_mediana)) + geom_tile(colour = "white") + facet_wrap(~grupo, nrow = 1) +
+  scale_fill_gradient2(low = "#D64545", mid = "#F4F1EA", high = "#2B7BB9", midpoint = 50, limits = c(0, 100), name = "Percentil") +
+  labs(x = "Momento (edad.trimestre)", y = NULL) + theme_minimal(base_size = 9) +
+  theme(panel.grid = element_blank(), axis.text.x = element_text(angle = 90, vjust = .5), legend.position = "bottom")
+```
+
+```{r}
+#| label: fig-m26-exactitud-velocidad
+#| fig-cap: "Lectura de palabras y pseudopalabras: porcentaje de niños con exactitud por debajo del 90 % y porcentaje que lee con exactitud pero lento (≥ 90 % de aciertos y velocidad ≤ P25), por grupo y momento."
+#| fig-height: 4
+#| eval: !expr hay_m26
+P4 <- lee("P4.csv"); P4 <- P4[P4$grupo %in% c("DL-A", "DL-B", "TR", "TE"), ]
+P4 <- rbind(data.frame(grupo = P4$grupo, mom = P4$mom, panel = "Exactitud < 90 %", v = P4$pct_inexacto),
+            data.frame(grupo = P4$grupo, mom = P4$mom, panel = "Exacto pero lento", v = P4$pct_exacto_y_lento))
+P4$grupo <- factor(GR[P4$grupo], levels = GR); niv <- unique(P4$mom[order(as.numeric(P4$mom))]); P4$m <- match(P4$mom, niv)
+ggplot(P4, aes(m, v, colour = grupo)) + geom_line(linewidth = .8) + geom_point(size = 1.8) + facet_wrap(~panel) +
+  scale_colour_manual(values = c("#D64545", "#B07A10", "#5E4FA2", "#008FA3")) +
+  scale_x_continuous("Momento", breaks = seq_along(niv), labels = niv) + scale_y_continuous("% de niños", limits = c(0, 100)) +
+  theme_minimal(base_size = 10) + theme(legend.position = "bottom", legend.title = element_blank(), panel.grid.minor = element_blank())
+```
+
+```{r}
+#| label: fig-m26-grave-leve
+#| fig-cap: "¿Cuándo se distingue la dificultad grave de la leve? AUC de cada tarea y medida para separar DL-A de DL-B, por momento (0,5 = no separa). Las celdas en blanco no tienen datos o tienen menos de 10 niños por grupo."
+#| fig-height: 6
+#| fig-width: 8
+#| eval: !expr hay_m26
+P3 <- lee("P3.csv"); P3 <- P3[P3$comparacion == "DL-A frente a DL-B" & P3$medida %in% c("aciertos", "tiempo"), ]
+P3$medida <- ifelse(P3$medida == "aciertos", "exactitud", "velocidad")
+P3$fila <- paste0(P3$tarea_canonica, " · ", P3$medida); o <- unique(P3[order(P3$orden, P3$medida), "fila"]); P3$fila <- factor(P3$fila, levels = rev(o))
+P3$mom <- factor(P3$mom, levels = unique(P3$mom[order(as.numeric(P3$mom))]))
+ggplot(P3, aes(mom, fila, fill = auc)) + geom_tile(colour = "white") + geom_text(aes(label = sub("^0", "", sprintf("%.2f", auc))), size = 2.4) +
+  scale_fill_gradient(low = "#F4F1EA", high = "#5E4FA2", limits = c(.5, 1), na.value = "white", name = "AUC") +
+  labs(x = "Momento", y = NULL) + theme_minimal(base_size = 9) + theme(panel.grid = element_blank(), legend.position = "bottom")
+```
+
+**Cómo leerlas.** Si Juan Luis tiene razón, en el mapa los niños DL-A aparecerán en rojo en la exactitud de la lectura de 6.3–7.1 y los DL-B no. En la segunda figura, la línea de DL-A seguirá alta en «exactitud < 90 %» al final de los 6 años, y la de DL-B estará arriba en «exacto pero lento». La tercera dirá en qué momentos y con qué tarea se separan mejor, que es lo útil para un diagnóstico temprano.
+
+**Cautela.** Los grupos se definen con la lectura de 6 a 11 años, así que en esas edades una parte de la diferencia es circular. Las diferencias a los 4–5 años y el contraste entre exactitud y velocidad, que no forman parte de la definición del grupo del mismo modo, son los más informativos.
+
 ## Cómo se analiza
 
 1. **Edad de dominio de la exactitud.** Análisis de supervivencia con censura por intervalos (el hito ocurre entre dos evaluaciones) o modelo de riesgo en tiempo discreto: la curva del porcentaje de niños que ya domina cada tarea en cada momento, por grupo, con los niños que dejan de evaluarse como censurados. Da la edad mediana de dominio y su dispersión.
