@@ -168,6 +168,81 @@ Con 2.754 niños de las cohortes 2010–2013 (114 graves, 303 leves, 557 con dif
 - **El momento 8.2 es una incidencia:** todos los grupos caen a la vez en exactitud, probablemente por un cambio de lista o de formato en esa sesión. Hay que revisarlo en el bruto.
 - El grupo grave es pequeño en las cohortes 2012 y 2013 (alrededor de 10 niños cada una).
 
+## Segunda fase: los dos ciclos sin circularidad
+
+Para responder a la principal objeción de la primera pasada, los grupos se definen **solo con la lectura de 8 años en adelante** (sin 8.2): grave ≤ P10, leve P10–P25 y típico > P25 dentro de cada cohorte. Así, todo lo que ocurre antes de los 8 años está libre de circularidad. Script: `scripts/R/m26_ciclos_v2.R` (probado con datos simulados).
+
+```{r}
+#| include: false
+hay_q <- file.exists(file.path(dir_m26, "Q1.csv"))
+G8C <- c(Grave = "#D64545", Leve = "#B07A10", "Típico" = "#008FA3")
+ordm <- function(m) { m <- sprintf("%.1f", as.numeric(m)); factor(m, levels = unique(m[order(as.numeric(m))])) }
+```
+
+```{r}
+#| results: asis
+#| echo: false
+if (!hay_q) cat("::: {.callout-note appearance=\"minimal\"}\n**Pendiente de ejecutar** `m26_ciclos_v2.R` en el PC del proyecto. Aquí aparecerán: la curva de dominio de la exactitud, los marcadores de automatización (longitud y lexicalidad), la probabilidad de salir del riesgo trimestre a trimestre y la tabla de diagnóstico temprano.\n:::\n")
+```
+
+### ¿Cuándo se domina la exactitud?
+
+```{r}
+#| label: fig-m26-dominio
+#| fig-cap: "Porcentaje acumulado de niños que dominan la exactitud (≥ 90 % de aciertos en palabras y pseudopalabras bisílabas, mantenido en el momento siguiente), por grupo definido con la lectura de 8 años en adelante. Estimación de Kaplan-Meier en tiempo discreto: los niños que dejan de evaluarse cuentan hasta su última evaluación."
+#| fig-height: 3.8
+#| eval: !expr hay_q
+Q1 <- lee("Q1.csv"); Q1$mom <- ordm(Q1$mom)
+ggplot(Q1, aes(mom, pct_domina, colour = g8, group = g8)) + geom_step(linewidth = .9) + geom_point(size = 1.6) +
+  geom_hline(yintercept = 50, linetype = "dotted", colour = "grey55") +
+  scale_colour_manual(values = G8C) + scale_y_continuous("% que domina la exactitud", limits = c(0, 100)) + labs(x = "Momento") +
+  theme_minimal(base_size = 10) + theme(legend.position = "bottom", legend.title = element_blank(), panel.grid.minor = element_blank())
+```
+
+```{r}
+#| eval: !expr hay_q
+Q1b <- lee("Q1b.csv")
+knitr::kable(data.frame(Grupo = Q1b$g8, `Momento en que la mitad domina` = Q1b$edad_mediana_dominio, `% que domina a 6.3` = round(Q1b$pct_domina_6.3), `% que domina a 7.3` = round(Q1b$pct_domina_7.3), check.names = FALSE))
+```
+
+### ¿Cuándo se automatiza?
+
+```{r}
+#| label: fig-m26-automatizacion
+#| fig-cap: "Dos marcadores de automatización dentro de cada niño y sesión: cuánto más tarda por ítem en las palabras trisílabas que en las bisílabas (longitud) y en las pseudopalabras que en las palabras (lexicalidad). Un cociente que baja hacia 1 indica lectura menos serial. Mediana por grupo y momento."
+#| fig-height: 3.8
+#| eval: !expr hay_q
+Q2 <- lee("Q2.csv"); Q2$mom <- ordm(Q2$mom)
+ggplot(Q2, aes(mom, mediana, colour = g8, group = g8)) + geom_line(linewidth = .8) + geom_point(size = 1.6) + facet_wrap(~marcador, scales = "free_y") +
+  geom_hline(yintercept = 1, linetype = "dotted", colour = "grey55") + scale_colour_manual(values = G8C) + labs(x = "Momento", y = "Cociente de tiempo por ítem") +
+  theme_minimal(base_size = 10) + theme(legend.position = "bottom", legend.title = element_blank(), panel.grid.minor = element_blank(), axis.text.x = element_text(angle = 90, vjust = .5))
+```
+
+### ¿Cuándo deja de ser probable salir del riesgo?
+
+```{r}
+#| label: fig-m26-salir
+#| fig-cap: "De los niños por debajo del P25 en decodificación en un trimestre, porcentaje que pasa por encima del P25 en el trimestre siguiente del mismo curso."
+#| fig-height: 3.2
+#| eval: !expr hay_q
+Q3b <- lee("Q3b.csv"); Q3b$mom <- ordm(Q3b$mom)
+ggplot(Q3b, aes(mom, pct_sale, group = 1)) + geom_col(fill = "#5E4FA2", width = .6) + geom_text(aes(label = round(pct_sale)), vjust = -.4, size = 3) +
+  labs(x = "Trimestre de partida", y = "% que sale del riesgo") + theme_minimal(base_size = 10) + theme(panel.grid.minor = element_blank())
+```
+
+### ¿Qué permite un diagnóstico temprano?
+
+```{r}
+#| label: tbl-m26-temprano
+#| tbl-cap: "AUC con validación cruzada (se ajusta en tres cohortes y se evalúa en la cuarta) de modelos con la exactitud, la velocidad y las letras a 5 años para separar grave de leve, y dificultad de típico, con los grupos definidos a partir de 8 años."
+#| eval: !expr hay_q
+Q4 <- lee("Q4.csv")
+Q4$AUC <- sprintf("%.2f [%s]", Q4$auc_cv, Q4$ic95)
+w <- reshape(Q4[, c("momento", "comparacion", "modelo", "AUC")], idvar = c("comparacion", "modelo"), timevar = "momento", direction = "wide")
+names(w) <- sub("^AUC\\.", "A ", names(w)); w <- w[order(w$comparacion), ]
+knitr::kable(w, row.names = FALSE, col.names = c("Comparación", "Modelo", names(w)[-(1:2)]))
+```
+
 ## Cómo se analiza
 
 1. **Edad de dominio de la exactitud.** Análisis de supervivencia con censura por intervalos (el hito ocurre entre dos evaluaciones) o modelo de riesgo en tiempo discreto: la curva del porcentaje de niños que ya domina cada tarea en cada momento, por grupo, con los niños que dejan de evaluarse como censurados. Da la edad mediana de dominio y su dispersión.
