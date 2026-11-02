@@ -1,0 +1,11 @@
+﻿edad,relacion,valor,n
+4,SES percibido – capacidad valorada (ρ),0.46,461
+4,Apoyo parental – capacidad valorada (ρ),0.59,475
+4,SES percibido – ISE del centro (ρ),0.34,461
+4,Capacidad valorada – ISE del centro (ρ),0.17,477
+4,"β capacidad valorada sobre PREC_4 (media del curso), ajustando SES",0.46,331
+4,"β SES percibido sobre PREC_4 (media del curso), ajustando capacidad",0.18,331
+7,SES percibido – capacidad valorada (ρ),0.75,237
+7,Apoyo parental – capacidad valorada (ρ),0.75,263
+7,"β capacidad valorada sobre pr_7, ajustando SES",0.77,237
+7,"β SES percibido sobre pr_7, ajustando capacidad",-0.16,237
