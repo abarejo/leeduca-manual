@@ -4,7 +4,7 @@ search: false
 
 # M27 · ¿Para quién funciona una intervención universal? Compensación acotada en Preleo {.unnumbered}
 
-*Desarrollo de un estudio de la Agenda · versión 1, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). Esta página resume el borrador «INTRO_BEYOND 4», lo une al manual y deja una revisión para la siguiente versión.*
+*Desarrollo de un estudio de la Agenda · versión 2, 02/11/2026. Artículo de la tesis de A. Sánchez Gómez (cohorte 2010), en preparación desde enero de 2026 con el título provisional «Más allá de los efectos promedio: compensación acotada en una intervención universal de conciencia fonológica» (antes, *Who benefits and why*). Esta página resume el borrador «INTRO_BEYOND 4», lo une al manual y deja una revisión para la siguiente versión.*
 
 ::: {.callout-warning}
 **Página de trabajo del grupo.** El artículo está en preparación: no citar ni difundir fuera del grupo. No aparece en el índice del libro: se llega desde el título del estudio en la [Agenda](../agenda.qmd#sec-agenda). Solo contiene datos agregados.
@@ -58,13 +58,55 @@ Los modelos controlan la puntuación de 6 años en la misma medida, el CI, el se
 | [Fidelidad de Preleo](../preleo/fidelidad.qmd) | El rigor de aplicación de la tesis permite un análisis dosis-respuesta dentro de los 10 colegios con programa |
 | [M26 · Dos ciclos](M26.qmd) | El beneficio en palabras para el riesgo bajo encaja con el ciclo de automatización; conviene mirar si también separa exactitud y velocidad |
 
+## Los análisis de 2025–2026: qué se probó y qué cambió {#sec-historia}
+
+Revisión de las carpetas `DRIVE\LEEDUCA\2025\AUXI` y `2026\AUXI` (guiones, borradores y resúmenes; no se han abierto las matrices con datos de alumnos). La misma muestra de unos 506 niños se ha analizado al menos de seis formas distintas, y **la conclusión ha cambiado con cada una**:
+
+| Fecha | Riesgo de partida | Análisis | Conclusión principal |
+|---|---|---|---|
+| Julio de 2025 | Dos niveles (con y sin riesgo) | Cuatro regresiones cuantílicas (COMP, FL, RF, RV a los 7), ajustando por todas las medidas de 6 años | Comprensión: +0,41 DT en el **riesgo alto** y solo en τ = .10 |
+| Agosto de 2025 | Tres niveles: memoria fonológica, conciencia fonémica y letras | Propuesta para la revista (22 colegios, 256 frente a 250 niños) | Efecto medio nulo; compensación en la parte baja del riesgo alto |
+| Octubre de 2025 | Tres niveles | Cinco regresiones cuantílicas sin ajustar por los 6 años | Fluidez (+0,39) y ruta visual (+0,35); «mayor beneficio en riesgo alto» |
+| Noviembre–diciembre de 2025 | Tres niveles | ANOVA mixto (R) y modelos mixtos (Python) | Resultados distintos según la covariable (CI o CF de 5 años); grupos no equivalentes (CF de 5 años, d = 0,69) |
+| Diciembre de 2025 | **Con las pruebas de lectura de 6–7 años** | Propuesta para *Scientific Studies of Reading* | OR = 0,25 de riesgo lector (circular: el riesgo se define con el resultado) |
+| Enero de 2026 | Tres niveles por DT | Emparejamiento por propensión, ANCOVA de 7 ajustando por 6 y cuantílica por nivel | Palabras en **riesgo bajo**; comprensión en **riesgo moderado** (τ = .20–.60) |
+
+No hay mala práctica en probar enfoques, pero el artículo tiene que poder decir qué análisis estaba decidido antes de ver los datos. Si no, un revisor puede pensar que se eligió la versión con el resultado más interesante (el llamado jardín de los senderos que se bifurcan).
+
+### Cuatro problemas de método que conviene resolver
+
+1. **Cuándo se mide el riesgo.** En la cohorte 2010, las únicas tareas anteriores a Preleo son las de 5.1: contar sílabas, emparejamiento silábico inicial y final, y memoria verbal. Las letras y el RAN se midieron en 5.3, con el programa ya aplicado durante un curso. Si entran en el índice de riesgo, el programa cambia el riesgo y el riesgo deja de ser una condición de partida. La versión de diciembre de 2025, que define el riesgo con la lectura de 6–7 años, es circular.
+2. **Ajustar por los 6 años no estima el efecto del programa.** La ANCOVA de 7 años ajustando por los 6 estima solo el cambio de 6 a 7. Si Preleo ya había mejorado la lectura a los 6, ajustar por esa puntuación quita el efecto y puede crear efectos falsos. En una simulación con un efecto real y uniforme a los 6 años, la ANCOVA da un efecto **negativo** en el riesgo alto (−0,24), parecido al resultado de las pseudopalabras del borrador. El efecto total debe estimarse ajustando solo por lo que había antes de la intervención.
+3. **Errores típicos por colegio.** Los colegios eligieron la condición: los niños de un mismo colegio no son observaciones independientes. Los IC deben salir de un *bootstrap* por colegios.
+4. **Una sola prueba de la hipótesis principal.** La compensación acotada se contrasta mejor con un único contraste fijado de antemano (efecto medio en τ = .20–.60 frente a τ = .70–.90) que con nueve cuantiles y corrección FDR.
+
+## Réplica con la muestra del manual (script v1) {#sec-replica}
+
+Script `m27_compensacion_v1.R` (en `04_DICCIONARIO_PROCESADO_2026\scripts\R`), probado con datos simulados en los que recupera los efectos sembrados. Plan fijado antes de ver los datos:
+
+| Paso | Qué hace |
+|---|---|
+| Muestra | Cohorte 2010, seguimiento trimestral, condición Preleo v6 (tesis de Auxi). Sin excluir colegios |
+| Riesgo de partida | Tareas de 5.1 en puntuación normal frente al grupo SIN. Alto ≤ P16 (≈ −1 DT), moderado P16–P31, bajo > P31; y también como variable continua |
+| A1 · Efecto total | A los 6 y a los 7 años, en CF, palabras, pseudopalabras, velocidad en texto y comprensión; ajuste por riesgo de partida, sexo, edad en meses e ISE del colegio |
+| A2 · ANCOVA del artículo | 7 años ajustando por los 6, para comparar con el borrador |
+| A3 · Cuantílica | Por nivel de riesgo, τ = .10–.90, y el contraste banda .20–.60 frente a .70–.90 |
+| A4 · Riesgo continuo | Efecto de Preleo según el percentil de partida (P5 a P90), sin cortes |
+| A5 · Etiquetas del manual | Probabilidad de terminar con dificultad persistente (DL-A o DL-B), transitoria o típica, por condición y nivel de riesgo |
+| Sensibilidad | Ponderación por propensión; sin los colegios con pendiente negativa trisílabas ~ bisílabas (el criterio de 2010, ahora como sensibilidad); riesgo solo con contar sílabas |
+| Errores | *Bootstrap* por colegios dentro de cada condición (500 réplicas; 200 en la cuantílica) |
+
+La muestra será mayor que la del borrador (506): el seguimiento de 2010 tiene 843 niños CON y 320 SIN en la asignación v6. Habrá que explicar la diferencia: el borrador exigía datos completos en los tres cursos.
+
+**A5 es la novedad que aporta el manual:** en lugar de preguntar solo si sube la media, pregunta si Preleo cambia el destino lector de cada nivel de riesgo, con la clasificación que usará el manual.
+
 ## Revisión del borrador «INTRO_BEYOND 4» {#sec-revision}
 
 Notas para la siguiente versión, en orden de importancia. Ninguna cambia el planteamiento.
 
 1. **Porcentaje del riesgo bajo.** «359 low-risk students (7.9%)» debe ser **70,9 %** (359 / 506).
 2. **Dirección de las diferencias de partida.** El texto dice que los colegios con intervención tienen *menor* CI (M = .26 frente a −.30) y *menor* conciencia fonológica temprana (M = .18 frente a −.04), pero las medias indican lo contrario. Hay que comprobar cuál es cada grupo en la tabla 1.
-3. **Componentes del compuesto de riesgo.** El texto dice letras, conciencia fonológica y RAN a los 5 años, pero en «Measures» las letras aparecen solo en T2 y el RAN no aparece. Conviene listar las tareas y sesiones exactas del compuesto, con su fiabilidad.
+3. **Componentes del compuesto de riesgo.** El texto dice letras, conciencia fonológica y RAN a los 5 años, pero en «Measures» las letras aparecen solo en T2 y el RAN no aparece; en la cohorte 2010, letras y RAN son de 5.3, después de la intervención (ver [problemas de método](#sec-historia)). Conviene listar las tareas y sesiones exactas del compuesto, con su fiabilidad.
 4. **Fiabilidad baja del emparejamiento silábico** (α = .468 y .629). Si entra en el compuesto de riesgo, conviene decirlo o hacer un análisis de sensibilidad sin ella.
 5. **Qué muestra usa cada análisis.** Los grados de libertad (F(2, 318)) corresponden a la muestra emparejada (n = 330), pero el texto dice que se informa de las dos. Hay que indicar en cada tabla qué muestra es y dar la otra en el suplementario.
 6. **La comprensión no supera la corrección FDR** (p = .071). La discusión ya lo reconoce. Para reforzarla sin cambiar el planteamiento, se puede contrastar la banda τ = .20–.60 de forma conjunta (un solo contraste con *bootstrap* por colegio) o estimar el proceso cuantílico completo con banda de confianza simultánea.
@@ -76,7 +118,8 @@ Notas para la siguiente versión, en orden de importancia. Ninguna cambia el pla
 ## Siguientes pasos
 
 - [ ] Auxi revisa los puntos 1–5 de la revisión (datos y texto).
-- [ ] Réplica con la tabla larga v2: misma muestra de 506, mismo compuesto y mismos modelos (script en R, solo agregados).
+- [ ] Ejecutar `m27_compensacion_v1.R` en el PC y traer la carpeta `DIAGNOSTICO/R/M27/v1` ([plan](#sec-replica)).
+- [ ] Decidir con Auxi el análisis principal antes de ver los resultados de la réplica (y registrarlo).
 - [ ] **Réplica en otra cohorte**: la comparación 2013 (sin Preleo) frente a 2014 (con Preleo) en los mismos colegios controla el centro, que es la principal amenaza del diseño actual. Pendiente de confirmar con Auxi la condición de 2013 y 2014.
 - [ ] Análisis dosis-respuesta con el rigor de aplicación.
 - [ ] Decidir revista e idioma.
