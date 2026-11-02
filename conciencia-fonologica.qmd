@@ -32,12 +32,12 @@ f2 <- function(x) formatC(100 * x, format = "f", digits = 0)
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador del 02/11/2026. Este capítulo abre las fichas de procesamiento fonológico. Integra el marco teórico del manual de A. Sánchez Gómez sobre los trastornos de los sonidos del habla, que nace del material de la asignatura *Intervención logopédica en los trastornos infantiles del habla* (Universidad de Málaga) y está en preparación para su publicación [@sanchezgomez2026tsh]. La cita es provisional y se actualizará cuando se publique. El marco se centra en el sistema fonológico, no en los sonidos sueltos. Los datos son los descriptivos de las fichas automáticas: todas las cohortes, ponderados por el número de niños, en momentos con al menos 100 niños.
+**Estado:** borrador del 02/11/2026. Este capítulo abre las fichas de procesamiento fonológico. Integra el marco teórico del manual coordinado por A. Sánchez Gómez (con M. Rodríguez y P. J. López-Pérez) sobre los trastornos de los sonidos del habla, que nace del material de la asignatura *Intervención logopédica en los trastornos infantiles del habla* (Universidad de Málaga) y está en preparación para su publicación [@sanchezgomez2026tsh]. La cita es provisional y se actualizará cuando se publique. El marco se centra en el sistema fonológico, no en los sonidos sueltos. Los datos son los descriptivos de las fichas automáticas: todas las cohortes, ponderados por el número de niños, en momentos con al menos 100 niños.
 :::
 
 ## Por qué empezar por el habla
 
-Todas las tareas de conciencia fonológica de la plataforma piden al niño que reflexione sobre los sonidos de palabras que oye, y casi todas le piden que **responda hablando**. Por eso, antes de interpretar una puntuación conviene tener presente cómo se organiza el sistema fonológico de un niño de 4 a 7 años. El manual docente de Sánchez Gómez [-@sanchezgomez2026tsh] lo resume en tres ideas que sirven igual para la conciencia fonológica.
+Todas las tareas de conciencia fonológica de la plataforma piden al niño que reflexione sobre los sonidos de palabras que oye, y casi todas le piden que **responda hablando**. Por eso, antes de interpretar una puntuación conviene tener presente cómo se organiza el sistema fonológico de un niño de 4 a 7 años. El manual de Sánchez Gómez et al. [-@sanchezgomez2026tsh] lo resume en tres ideas que sirven igual para la conciencia fonológica.
 
 **1. El niño no aprende sonidos, aprende contrastes.** Un fonema no tiene valor por sí mismo, sino por las oposiciones que establece con otros: *pala*/*bala* (sonoridad), *taza*/*casa* (punto de articulación), *pata*/*fata* (modo). El desarrollo consiste en incorporar oposiciones al sistema. Cuando un niño dice *tasa* por *casa*, el problema no es el sonido /k/, sino que la oposición /k/–/t/ todavía no está operativa en su sistema [@bosch2004evaluacion; @sanchezgomez2026tsh].
 
