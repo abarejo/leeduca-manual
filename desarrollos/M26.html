@@ -61,6 +61,9 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1052,7 +1055,10 @@ div.csl-indent {
   <li><a href="#cómo-se-mide" id="toc-cómo-se-mide" class="nav-link" data-scroll-target="#cómo-se-mide">Cómo se mide</a></li>
   <li><a href="#antecedente-el-análisis-de-supervivencia-de-la-cohorte-2011" id="toc-antecedente-el-análisis-de-supervivencia-de-la-cohorte-2011" class="nav-link" data-scroll-target="#antecedente-el-análisis-de-supervivencia-de-la-cohorte-2011">Antecedente: el análisis de supervivencia de la cohorte 2011</a></li>
   <li><a href="#los-indicadores-de-riesgo-como-estados" id="toc-los-indicadores-de-riesgo-como-estados" class="nav-link" data-scroll-target="#los-indicadores-de-riesgo-como-estados">Los indicadores de riesgo como estados</a></li>
-  <li><a href="#patrones-por-perfil-la-tabla-que-propone-juan-luis" id="toc-patrones-por-perfil-la-tabla-que-propone-juan-luis" class="nav-link" data-scroll-target="#patrones-por-perfil-la-tabla-que-propone-juan-luis">Patrones por perfil: la tabla que propone Juan Luis</a></li>
+  <li><a href="#patrones-por-perfil-la-tabla-que-propone-juan-luis" id="toc-patrones-por-perfil-la-tabla-que-propone-juan-luis" class="nav-link" data-scroll-target="#patrones-por-perfil-la-tabla-que-propone-juan-luis">Patrones por perfil: la tabla que propone Juan Luis</a>
+  <ul class="collapse">
+  <li><a href="#primeros-resultados-02112026" id="toc-primeros-resultados-02112026" class="nav-link" data-scroll-target="#primeros-resultados-02112026">Primeros resultados (02/11/2026)</a></li>
+  </ul></li>
   <li><a href="#cómo-se-analiza" id="toc-cómo-se-analiza" class="nav-link" data-scroll-target="#cómo-se-analiza">Cómo se analiza</a></li>
   <li><a href="#figuras-previstas" id="toc-figuras-previstas" class="nav-link" data-scroll-target="#figuras-previstas">Figuras previstas</a></li>
   <li><a href="#esqueleto-del-artículo" id="toc-esqueleto-del-artículo" class="nav-link" data-scroll-target="#esqueleto-del-artículo">Esqueleto del artículo</a></li>
@@ -1262,19 +1268,67 @@ Lo esencial
 <li><strong>DL-B (leve):</strong> exactitud normal al final de los 6 años; lentitud, y dificultades en ortografía u otros procesos.</li>
 <li><strong>TR (transitoria):</strong> retraso inicial que se cierra.</li>
 </ul>
-<p>Las tablas se calculan en el ordenador del proyecto con <code>scripts/R/m26_patrones_perfiles.R</code> (cohortes 2010–2013), que solo exporta agregados por grupo y momento, con un mínimo de 10 niños por celda. El script se ha probado con datos simulados de la misma estructura.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<p>Las tablas se calculan en el ordenador del proyecto con <code>scripts/R/m26_patrones_perfiles.R</code> (cohortes 2010–2013), que solo exporta agregados por grupo y momento, con un mínimo de 10 niños por celda.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-m26-mapa" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m26-mapa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="M26_files/figure-html/fig-m26-mapa-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Mapa de patrones (tareas clave, 4–8 años): mediana del percentil de cada grupo (dentro de su cohorte y sesión) por tarea, medida y momento. Rojo, por debajo de la media; azul, por encima. Exactitud = aciertos; velocidad = tiempo invertido."><img src="M26_files/figure-html/fig-m26-mapa-1.png" class="img-fluid figure-img" width="864"></a>
 </div>
-<div class="callout-body-container">
-<p><strong>Pendiente de ejecutar</strong> el script en el PC del proyecto. Cuando se ejecute, aquí aparecerán: el mapa de patrones por perfil, la exactitud frente a la velocidad por grupo y los momentos que mejor separan la dificultad grave de la leve.</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m26-mapa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Mapa de patrones (tareas clave, 4–8 años): mediana del percentil de cada grupo (dentro de su cohorte y sesión) por tarea, medida y momento. Rojo, por debajo de la media; azul, por encima. Exactitud = aciertos; velocidad = tiempo invertido.
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<p><strong>Cómo leerlas.</strong> Si Juan Luis tiene razón, en el mapa los niños DL-A aparecerán en rojo en la exactitud de la lectura de 6.3–7.1 y los DL-B no. En la segunda figura, la línea de DL-A seguirá alta en «exactitud &lt; 90 %» al final de los 6 años, y la de DL-B estará arriba en «exacto pero lento». La tercera dirá en qué momentos y con qué tarea se separan mejor, que es lo útil para un diagnóstico temprano.</p>
-<p><strong>Cautela.</strong> Los grupos se definen con la lectura de 6 a 11 años, así que en esas edades una parte de la diferencia es circular. Las diferencias a los 4–5 años y el contraste entre exactitud y velocidad, que no forman parte de la definición del grupo del mismo modo, son los más informativos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-m26-exactitud-velocidad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m26-exactitud-velocidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="M26_files/figure-html/fig-m26-exactitud-velocidad-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Lectura de palabras y pseudopalabras: porcentaje de niños con exactitud por debajo del 90 % y porcentaje que lee con exactitud pero lento (≥ 90 % de aciertos y velocidad ≤ P25), por grupo y momento. Sin 8.2 (incidencia: todos los grupos caen a la vez)."><img src="M26_files/figure-html/fig-m26-exactitud-velocidad-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m26-exactitud-velocidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Lectura de palabras y pseudopalabras: porcentaje de niños con exactitud por debajo del 90 % y porcentaje que lee con exactitud pero lento (≥ 90 % de aciertos y velocidad ≤ P25), por grupo y momento. Sin 8.2 (incidencia: todos los grupos caen a la vez).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-m26-grave-leve" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m26-grave-leve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="M26_files/figure-html/fig-m26-grave-leve-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: ¿Cuándo se distingue la dificultad grave de la leve? AUC de cada tarea y medida para separar DL-A de DL-B, por momento (0,5 = no separa). Las celdas en blanco no tienen datos o tienen menos de 10 niños por grupo."><img src="M26_files/figure-html/fig-m26-grave-leve-1.png" class="img-fluid figure-img" width="864"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m26-grave-leve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: ¿Cuándo se distingue la dificultad grave de la leve? AUC de cada tarea y medida para separar DL-A de DL-B, por momento (0,5 = no separa). Las celdas en blanco no tienen datos o tienen menos de 10 niños por grupo.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="primeros-resultados-02112026" class="level3">
+<h3 class="anchored" data-anchor-id="primeros-resultados-02112026">Primeros resultados (02/11/2026)</h3>
+<p>Con 2.754 niños de las cohortes 2010–2013 (114 graves, 303 leves, 557 con dificultad transitoria, 153 intermedios y 1.627 típicos), <strong>los datos apoyan la idea de Juan Luis</strong>:</p>
+<ol type="1">
+<li><strong>La exactitud separa al grave del leve a los 6 años.</strong> En la lectura de palabras y pseudopalabras, la exactitud mediana a 6.3 es del 11 % en el grupo grave, del 65 % en el leve y del 94 % en el típico. Casi todos los graves (97 %) siguen por debajo del 90 % de aciertos al final de los 6 años. Para distinguir grave de leve, la exactitud a 6.2–6.3 es lo que mejor funciona (AUC .80–.83 en palabras, pseudopalabras y sílabas complejas); la velocidad no los separa en ese momento.</li>
+<li><strong>El leve llega a la exactitud, pero no a la velocidad.</strong> Hacia 7.1–7.3 el grupo leve alcanza una exactitud mediana del 88–90 %, y su diferencia con los típicos en exactitud se diluye (AUC de .92 a 6.3 a .58 a 8.1). En cambio, la velocidad lo separa de los típicos desde 6.2 y ya no deja de hacerlo (AUC .91–.98), igual que la decisión ortográfica (.83–.90) y el tiempo de lectura comprensiva (.94–.97). La proporción de leves que leen <strong>con exactitud pero lento</strong> sube del 7 % a 6.3 al 40 % a 8.1–8.3.</li>
+<li><strong>El grave también automatiza tarde, pero va un ciclo por detrás.</strong> Su exactitud mediana llega al 81 % a 7.3 y al 88 % a 8.3; mientras tanto, su velocidad es la más baja. Es decir: en el grave falla primero el ciclo de la exactitud y después el de la automatización; en el leve, solo el segundo.</li>
+<li><strong>Antes de leer, la diferencia es pequeña.</strong> A los 4–5 años, las tareas de conciencia fonológica, RAN, memoria y vocabulario separan poco al grave del leve (AUC .5–.66). Lo que más anticipa el grave es el conocimiento de letras (.64–.76) y, ya a 6.1–6.2, la segmentación y la supresión de fonemas (.75–.77).</li>
+</ol>
+<p><strong>Lectura clínica.</strong> A los 6 años, un niño que todavía no lee con exactitud tiene más probabilidad de acabar en el grupo grave; uno que ya lee con exactitud pero lento, en el leve. Son dos ventanas distintas y dos tipos de ayuda: precisión en la decodificación antes, fluidez y ortografía después.</p>
+<p><strong>Cautelas de esta primera pasada.</strong></p>
+<ul>
+<li>Las etiquetas se definen con la lectura de 6 a 11 años, así que una parte de estas diferencias es circular. Lo menos circular es el contraste entre exactitud y velocidad dentro del mismo grupo y lo que ocurre antes de los 6 años.</li>
+<li><strong>A los 5 años y a 6.1, el tiempo de los graves es «mejor»</strong> que el de los típicos (AUC por debajo de .5): leen pocos ítems y abandonan antes. La velocidad solo tiene sentido cuando hay exactitud.</li>
+<li><strong>El momento 8.2 es una incidencia:</strong> todos los grupos caen a la vez en exactitud, probablemente por un cambio de lista o de formato en esa sesión. Hay que revisarlo en el bruto.</li>
+<li>El grupo grave es pequeño en las cohortes 2012 y 2013 (alrededor de 10 niños cada una).</li>
+</ul>
+</section>
 </section>
 <section id="cómo-se-analiza" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-se-analiza">Cómo se analiza</h2>
@@ -1340,7 +1394,7 @@ Lo esencial
 </thead>
 <tbody>
 <tr class="odd">
-<td>Acceso a los datos por niño: activar la virtualización del PC del proyecto o preparar una tabla seudonimizada</td>
+<td>Revisar la incidencia de 8.2 en el bruto y repetir el análisis con grupos definidos a partir de 8 años (contra la circularidad)</td>
 <td>P. J. López-Pérez</td>
 </tr>
 <tr class="even">
@@ -1815,8 +1869,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M26.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M26.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/desarrollos/M26.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/desarrollos/M26.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
+</body></html>
