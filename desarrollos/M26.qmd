@@ -63,17 +63,6 @@ Se registran antes de analizar los datos.
 | Estabilidad del tiempo | Coeficiente de variación del tiempo por ítem | Plataforma nueva (2013 en adelante) |
 | Grupo | Niveles de certeza del manual (persistente, transitoria, típica…) | Cohortes 2010–2013 |
 
-## Antecedente: el análisis de supervivencia de la cohorte 2011
-
-P. J. López-Pérez ya intentó un análisis de supervivencia con la cohorte 2011 ([blog N400](https://sites.google.com/view/n400/articulos/supervivencia_disl)): 15 momentos de 4 a 8 años, con el «evento» definido como puntuar por debajo de un percentil (P10–P30) en la tarea de cada momento, Kaplan-Meier y regresión de Cox con sexo e ISE. La intuición era buena: **el tiempo hasta un hito es justo la pregunta de los ciclos de aprendizaje**. La aplicación tenía cuatro problemas, que este estudio corrige:
-
-1. **El evento no era un hito.** Estar por debajo de un percentil no es algo que ocurre una vez y se queda: los niños entran y salen del riesgo de un trimestre a otro. Kaplan-Meier supone que, tras el evento, el niño ya no vuelve.
-2. **El evento estaba fijado de antemano.** Por definición, en cada momento cae un porcentaje fijo de niños bajo el percentil; con tareas cortas y poco fiables, muchos lo cruzan por azar. La curva baja aunque nadie cambie de verdad.
-3. **Se quitaron los casos incompletos** (101 de 2.029). El análisis de supervivencia existe precisamente para no tener que hacerlo: los niños que dejan de evaluarse entran como **censurados**.
-4. **La tarea cambiaba en cada momento**, así que el umbral no medía lo mismo a lo largo del tiempo.
-
-La corrección es dar la vuelta al evento: en lugar del riesgo, un **hito de desarrollo** (dominar la exactitud de una tarea, alcanzar una velocidad), que una vez logrado se mantiene, medido siempre con la misma tarea. Y para el riesgo, que sí entra y sale, un modelo de **estados**.
-
 ## Los indicadores de riesgo como estados
 
 Los niveles de riesgo que propone el manual (típico, transitorio, persistente) no son una etiqueta fija, sino lugares por los que un niño pasa. Un **modelo multiestado** estima, momento a momento, la probabilidad de pasar de uno a otro:
