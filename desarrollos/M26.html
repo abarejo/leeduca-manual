@@ -1052,6 +1052,7 @@ div.csl-indent {
   <li><a href="#cómo-se-mide" id="toc-cómo-se-mide" class="nav-link" data-scroll-target="#cómo-se-mide">Cómo se mide</a></li>
   <li><a href="#antecedente-el-análisis-de-supervivencia-de-la-cohorte-2011" id="toc-antecedente-el-análisis-de-supervivencia-de-la-cohorte-2011" class="nav-link" data-scroll-target="#antecedente-el-análisis-de-supervivencia-de-la-cohorte-2011">Antecedente: el análisis de supervivencia de la cohorte 2011</a></li>
   <li><a href="#los-indicadores-de-riesgo-como-estados" id="toc-los-indicadores-de-riesgo-como-estados" class="nav-link" data-scroll-target="#los-indicadores-de-riesgo-como-estados">Los indicadores de riesgo como estados</a></li>
+  <li><a href="#patrones-por-perfil-la-tabla-que-propone-juan-luis" id="toc-patrones-por-perfil-la-tabla-que-propone-juan-luis" class="nav-link" data-scroll-target="#patrones-por-perfil-la-tabla-que-propone-juan-luis">Patrones por perfil: la tabla que propone Juan Luis</a></li>
   <li><a href="#cómo-se-analiza" id="toc-cómo-se-analiza" class="nav-link" data-scroll-target="#cómo-se-analiza">Cómo se analiza</a></li>
   <li><a href="#figuras-previstas" id="toc-figuras-previstas" class="nav-link" data-scroll-target="#figuras-previstas">Figuras previstas</a></li>
   <li><a href="#esqueleto-del-artículo" id="toc-esqueleto-del-artículo" class="nav-link" data-scroll-target="#esqueleto-del-artículo">Esqueleto del artículo</a></li>
@@ -1249,6 +1250,31 @@ Lo esencial
 <li>qué precursores a los 4–5 años (conciencia fonológica, RAN, letras) predicen cada transición, no solo el estado final.</li>
 </ul>
 <p>Así M26 valida los indicadores de riesgo del manual desde dentro: si la clasificación es buena, las transiciones deberían concentrarse en las ventanas que predicen las hipótesis.</p>
+</section>
+<section id="patrones-por-perfil-la-tabla-que-propone-juan-luis" class="level2">
+<h2 class="anchored" data-anchor-id="patrones-por-perfil-la-tabla-que-propone-juan-luis">Patrones por perfil: la tabla que propone Juan Luis</h2>
+<blockquote class="blockquote">
+<p>«Me pregunto si los niños que en 6.3 o 7.1 cometen errores de exactitud son, quizá, los que van a ser graves. En algunos momentos hay resultados que ayudan a mejorar el diagnóstico, y temprano, además de ver en qué se diferencian esos perfiles. El leve no tiene problemas de exactitud al final de los 6, pero sí de velocidad, ortografía o de otros procesos.» (J. L. Luque, 02/11/2026)</p>
+</blockquote>
+<p>Es una predicción concreta y comprobable con los datos:</p>
+<ul>
+<li><strong>DL-A (grave):</strong> exactitud baja todavía en 6.3–7.1, además de lentitud.</li>
+<li><strong>DL-B (leve):</strong> exactitud normal al final de los 6 años; lentitud, y dificultades en ortografía u otros procesos.</li>
+<li><strong>TR (transitoria):</strong> retraso inicial que se cierra.</li>
+</ul>
+<p>Las tablas se calculan en el ordenador del proyecto con <code>scripts/R/m26_patrones_perfiles.R</code> (cohortes 2010–2013), que solo exporta agregados por grupo y momento, con un mínimo de 10 niños por celda. El script se ha probado con datos simulados de la misma estructura.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Pendiente de ejecutar</strong> el script en el PC del proyecto. Cuando se ejecute, aquí aparecerán: el mapa de patrones por perfil, la exactitud frente a la velocidad por grupo y los momentos que mejor separan la dificultad grave de la leve.</p>
+</div>
+</div>
+</div>
+<p><strong>Cómo leerlas.</strong> Si Juan Luis tiene razón, en el mapa los niños DL-A aparecerán en rojo en la exactitud de la lectura de 6.3–7.1 y los DL-B no. En la segunda figura, la línea de DL-A seguirá alta en «exactitud &lt; 90 %» al final de los 6 años, y la de DL-B estará arriba en «exacto pero lento». La tercera dirá en qué momentos y con qué tarea se separan mejor, que es lo útil para un diagnóstico temprano.</p>
+<p><strong>Cautela.</strong> Los grupos se definen con la lectura de 6 a 11 años, así que en esas edades una parte de la diferencia es circular. Las diferencias a los 4–5 años y el contraste entre exactitud y velocidad, que no forman parte de la definición del grupo del mismo modo, son los más informativos.</p>
 </section>
 <section id="cómo-se-analiza" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-se-analiza">Cómo se analiza</h2>
