@@ -135,19 +135,19 @@ La mediana de momentos por niño es baja (1 o 2) porque las evaluaciones amplias
 
 ```{r}
 #| label: tbl-preleo-n
-#| tbl-cap: "Condición Preleo por cohorte según la asignación v5 (información de Auxiliadora Sánchez): niños y colegios canónicos. Incluye a los niños que solo están en las evaluaciones amplias (ver el texto)."
+#| tbl-cap: "Condición Preleo por cohorte según la asignación v6 (información de Auxiliadora Sánchez; solo para los niños del seguimiento trimestral): niños y colegios canónicos. «Desconocida»: niños que solo están en las evaluaciones de 2020/21 y 2021/22. Un colegio puede contar en más de una columna."
 nm <- function(x) if (x %in% names(N4)) N4[[x]] else rep(0, nrow(N4))
 t4 <- data.frame(Cohorte = N4$cohorte, `Niños CON` = miles(nm("ninos_CON")), `Niños SIN` = miles(nm("ninos_SIN")),
-                 `Niños sin dato` = miles(nm("ninos_sin dato")), `Colegios CON` = nm("colegios_CON"), `Colegios SIN` = nm("colegios_SIN"),
-                 `Colegios sin dato` = nm("colegios_sin dato"), check.names = FALSE)
+                 `Niños: desconocida` = miles(nm("ninos_desconocida")), `Colegios CON` = nm("colegios_CON"), `Colegios SIN` = nm("colegios_SIN"),
+                 `Colegios: desconocida` = nm("colegios_desconocida"), check.names = FALSE)
 knitr::kable(t4, align = c("l", rep("r", 6)))
 ```
 
-La tabla tiene una lectura delicada. En la cohorte 2010, los 1.394 niños SIN no son solo los de los 11 colegios sin programa de la tesis: incluyen a los niños que solo aparecen en las evaluaciones amplias, a los que la asignación infiere SIN porque su colegio no figura con Preleo para esa cohorte. En la cohorte 2011 pasa lo contrario: al marcar CON a toda la cohorte, 923 niños que la v3 tenía como SIN pasan a CON, y probablemente son, en su mayoría, niños de colegios que solo se evaluaron en 2021 y 2022. **La condición Preleo solo tiene sentido para los niños del seguimiento trimestral**; para los demás, lo prudente es dejarla como desconocida (ver «Decisiones y pendientes»).
+Con la condición restringida al seguimiento trimestral, la tabla se parece a lo que describe el equipo: en 2010, 843 niños de 23 colegios con programa y 320 de 12 sin él (la tesis cuenta 19 y 11 colegios); en 2011, toda la cohorte del seguimiento con Preleo (1.227 niños); 2012, sin programa. Unos 1.000–1.500 niños por cohorte quedan con condición desconocida porque solo están en las evaluaciones de 2020/21 y 2021/22.
 
-El contraste más limpio sigue siendo el de las cohortes 2013 (sin programa) y 2014 (con programa) en los mismos colegios. En los datos, sin embargo, 413 niños de 2013 figuran como CON y 337 de 2014 como SIN, lo que hay que revisar con Auxi.
+El contraste más limpio sigue siendo el de las cohortes 2013 (sin programa) y 2014 (con programa) en los mismos colegios. En los datos, sin embargo, 299 niños de 2013 (14 colegios) figuran como CON y 68 de 2014 como SIN, lo que hay que revisar con Auxi.
 
-El índice socioeconómico medio de los colegios va de `r num_es(min(N6$ISE_media[N6$colegios >= 5]), 1)` a `r num_es(max(N6$ISE_media[N6$colegios >= 5]), 1)` según la cohorte y la condición, con DT de unos 2,4 puntos; en 2010 los colegios con programa tienen un ISE algo más alto (`r num_es(N6$ISE_media[N6$cohorte == 2010 & N6$cond == "CON"], 1)` frente a `r num_es(N6$ISE_media[N6$cohorte == 2010 & N6$cond == "SIN"], 1)`), lo que hay que controlar al estimar efectos. *[Completar: escala del ISE y su fuente.]*
+El índice socioeconómico medio de los colegios va de `r num_es(min(N6$ISE_media[N6$colegios >= 5]), 1)` a `r num_es(max(N6$ISE_media[N6$colegios >= 5]), 1)` según la cohorte y la condición, con DT de unos 2,4 puntos. En 2010, los 5 colegios sin programa con ISE conocido tienen un índice algo más alto que los 18 con programa (`r num_es(N6$ISE_media[N6$cohorte == 2010 & N6$cond == "SIN"], 1)` frente a `r num_es(N6$ISE_media[N6$cohorte == 2010 & N6$cond == "CON"], 1)`), lo que hay que controlar al estimar efectos. *[Completar: escala del ISE y su fuente.]*
 
 ## 4.5 Limpieza y datos perdidos
 
@@ -164,6 +164,6 @@ Los valores no numéricos (entre el `r num_es(100 * min(N5$no_numericos / N5$reg
 
 ## Decisiones y pendientes
 
-1. **Condición Preleo (decidido el 02/11/2026).** La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, todos los niños son de Preleo. Implementado en la asignación v5. **Decidido también (02/11/2026):** la condición solo se aplica a los niños del seguimiento trimestral; la de quienes solo están en las evaluaciones amplias queda como «desconocida», porque sus colegios no figuran en el seguimiento de Preleo para su cohorte (asignación v6, `asignar_preleo_v6.R`; la tabla de 4.4 se actualizará con ella). Revisar con Auxi también 2012 y las excepciones de 2013 y 2014.
+1. **Condición Preleo (decidido el 02/11/2026).** La fuente preferente es la información de Auxiliadora Sánchez: en la cohorte 2010, la clasificación de su tesis (19 colegios con Preleo y 11 sin él, con el rigor de aplicación); en la cohorte 2011, todos los niños son de Preleo. Implementado en la asignación v5. **Decidido también (02/11/2026):** la condición solo se aplica a los niños del seguimiento trimestral; la de quienes solo están en las evaluaciones amplias queda como «desconocida», porque sus colegios no figuran en el seguimiento de Preleo para su cohorte (asignación v6, `asignar_preleo_v6.R`; la tabla de 4.4 ya la usa). Revisar con Auxi también 2012 y las excepciones de 2013 y 2014.
 2. **Nombres de colegio (hecho).** La v5 usa el emparejamiento de la v2 (por parecido y con comprobación manual) como colegio canónico: 65–72 colegios en las cohortes grandes y 31 en las pequeñas, frente a 79–96 nombres en la plataforma. Quedan entre 209 y 346 niños por cohorte sin colegio emparejado, sobre todo de colegios que solo están en las evaluaciones amplias.
 3. **Evaluaciones de 2020/21 y 2021/22 (hecho).** 2021: batería TECLE en papel, sin tiempos. 2021/22: plataforma en tabletas, con tiempo límite. Falta decidir si se baremarán aparte y cómo se citan en los artículos que usan la lectura a los 8 años o más (M26).

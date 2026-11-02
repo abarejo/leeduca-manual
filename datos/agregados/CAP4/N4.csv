@@ -1,7 +1,7 @@
-﻿cohorte,ninos_CON,ninos_SIN,ninos_sin dato,colegios_CON,colegios_SIN,colegios_sin dato
-2010,989,1394,3,23,41,2
-2011,2321,0,0,72,0,0
-2012,0,1930,7,0,63,3
-2013,413,1615,63,14,56,0
-2014,444,337,0,20,11,0
-2015,553,209,0,24,7,0
+﻿cohorte,ninos_CON,ninos_SIN,ninos_desconocida,colegios_CON,colegios_SIN,colegios_desconocida
+2010,843,320,1223,23,12,53
+2011,1227,0,1094,42,0,47
+2012,0,461,1476,0,22,54
+2013,299,779,1013,14,28,44
+2014,444,68,269,20,3,8
+2015,511,0,251,24,0,8
