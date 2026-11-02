@@ -61,6 +61,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-2747c9f0d0967211d5ebf59a56fed75e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1132,6 +1135,16 @@ div.csl-indent {
 </section>
 <section id="índice-comentado" class="level2">
 <h2 class="anchored" data-anchor-id="índice-comentado">Índice comentado</h2>
+<div id="fig-construccion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Infografía con seis pasos encadenados: evaluar, ordenar, depurar, medir bien, comparar y decidir.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-construccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/infografias/construccion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1.1: Cómo se construye el manual: seis pasos de la evaluación en el aula a la decisión, con sus capítulos y los estudios de la Agenda que los desarrollan."><img src="figuras/infografias/construccion.png" class="img-fluid figure-img" alt="Infografía con seis pasos encadenados: evaluar, ordenar, depurar, medir bien, comparar y decidir."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-construccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.1: Cómo se construye el manual: seis pasos de la evaluación en el aula a la decisión, con sus capítulos y los estudios de la Agenda que los desarrollan.
+</figcaption>
+</figure>
+</div>
 <p>El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de la Parte III siguen los dominios del diccionario maestro y solo incluyen las tareas de clase A; las de clase B y C van al anexo D. Donde ya hay algo escrito en este libro, se enlaza.</p>
 <section id="parte-i.-fundamentos" class="level3">
 <h3 class="anchored" data-anchor-id="parte-i.-fundamentos">Parte I. Fundamentos</h3>
@@ -2016,8 +2029,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/estructura.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/estructura.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/estructura.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/estructura.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>
+</body></html>
