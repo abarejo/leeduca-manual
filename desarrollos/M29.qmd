@@ -204,6 +204,8 @@ knitr::kable(B2[, c("analisis", "n", "aulas", "termino", "β [IC 95 %]")], row.n
 - [ ] **Revisión interna y autoría.**
 - [ ] **Revista.** *Education in the Knowledge Society* (versión en español lista). En inglés, por orden: *Annals of Dyslexia*, *Learning and Individual Differences*, *Journal of Research in Reading*, *Dyslexia*.
 
-**Descargar el manuscrito para EKS (anónimo, 15/10/2026):** [M29_juicio_docente_EKS_anonimo_2026-10-15.docx](../borradores/M29_juicio_docente_EKS_anonimo_2026-10-15.docx)
+**Descargar el manuscrito para EKS (anónimo, versión del 03/11/2026):** [M29_juicio_docente_EKS_anonimo_2026-11-03.docx](../borradores/M29_juicio_docente_EKS_anonimo_2026-11-03.docx). Incluye el contraste formal del sesgo sociocultural (método, resultados, discusión y resúmenes), la literatura nueva, las referencias verificadas y los porcentajes de niñas corregidos. Faltan la referencia del comité de ética (marcada en 2.1) y la autoría, que va en archivo aparte.
+
+Versión anterior: [15/10/2026](../borradores/M29_juicio_docente_EKS_anonimo_2026-10-15.docx).
 
 **Archivos (PC):** `04_DICCIONARIO_PROCESADO_2026\DIAGNOSTICO\juicio_docente_analisis_v3.xlsx` (análisis), `juicio_docente_v1.xlsx` (emparejamiento, con identificadores: no sale de la carpeta) y `figs_juicio\` (figuras del artículo y `EKS_envio\`); scripts `juicio_docente_analisis.py`, `figuras_juicio_docente(_es).py` y `R\juicio_docente_analisis.R`.
