@@ -6,6 +6,7 @@ FAM_NOM <- c(A = "A · Precisión", B = "B · Denominación rápida", C = "C · 
              E = "E · Decisión con tiempo de respuesta", F = "F · Amplitud y memoria", G = "G · Comprensión")
 PANT <- c("imágenes en pantalla" = "formato_imagenes.png", "lectura en voz alta de una lista" = "formato_lista.png",
           "denominación rápida de una serie" = "formato_ran.png", "elección entre opciones" = "formato_decision.png")
+y_es <- function(v) if (length(v) < 2) paste(v) else paste(paste(head(v, -1), collapse = ", "), "y", tail(v, 1))
 r2 <- function(x) sub("^(-?)0", "\\1", sprintf("%.2f", x))
 # marco teórico escrito a mano, compartido por las tareas de un mismo constructo (fichas/marcos/<id>.md)
 MARCO_DE <- c(setNames(rep("decodificacion", 9), c("LEC_PAL_1sil", "LEC_PAL_2sil", "LEC_PAL_3sil", "LEC_PAL_4sil", "LEC_PSEUDO_2sil", "LEC_PSEUDO_3sil",
@@ -100,6 +101,15 @@ ficha_auto <- function(TAREA) {
   }
   if (nrow(DS) && any(DS$pct_techo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto techo en %s (más del 15 %% de los niños con la puntuación máxima).", paste(DS$mom[DS$pct_techo > 15 & !is.na(DS$pct_techo)], collapse = ", ")))
   if (nrow(DS) && any(DS$pct_suelo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto suelo en %s (más del 15 %% con cero aciertos).", paste(DS$mom[DS$pct_suelo > 15 & !is.na(DS$pct_suelo)], collapse = ", ")))
+  # Efecto suelo en el baremo (03/11/2026, M3): si el P10 coincide con la peor puntuación observada, al menos el 10 % de los niños
+  # empata en el mínimo y el P10 no existe. Vale para todas las familias salvo la B (tiempos: menor es mejor).
+  suelo10 <- suelo25 <- character()
+  if (nrow(BA) && nrow(DS) && "minimo" %in% names(DS) && fam != "B") {
+    mm <- merge(BA[, c("mom", "P10", "P25")], DS[, c("mom", "minimo")], by = "mom")
+    suelo10 <- mm$mom[is.finite(mm$P10) & is.finite(mm$minimo) & mm$P10 <= mm$minimo]
+    suelo25 <- mm$mom[is.finite(mm$P25) & is.finite(mm$minimo) & mm$P25 <= mm$minimo]
+    if (length(suelo10)) avisos <- c(avisos, sprintf("Efecto suelo en el baremo en %s: al menos el 10 %% de los niños tiene la peor puntuación posible, así que el P10 no existe. En esos momentos no deben asignarse los niveles «severa» ni «muy severa» con esta tarea (estudio M3).", y_es(suelo10)))
+  }
   if (length(unique(unlist(strsplit(ct$codigos, " ")))) > 1) avisos <- c(avisos, "La tarea tiene varios códigos (versiones o formas): comprobar que los momentos son comparables antes de unir baremos.")
   # ---- fiabilidad ----
   out("## Fiabilidad")
@@ -132,6 +142,10 @@ ficha_auto <- function(TAREA) {
   if (nrow(BA)) {
     print(tabla(BA[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90")], c("Momento", "N", "Cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 1)); cat("\n\n")
     if (fam == "B") out("En la denominación rápida, menos tiempo es mejor: el P10 es el tiempo del 10 % más lento.")
+    if (length(suelo10)) out("**Efecto suelo.** En ", y_es(suelo10), " el P10 coincide con la peor puntuación posible",
+                             if (length(suelo25)) paste0(" (en ", y_es(suelo25), ", también el P25)") else "",
+                             ": muchos niños empatan en el mínimo y el baremo no distingue entre ellos. En esos momentos esta tarea no sirve para graduar la dificultad.")
+    out("Es un baremo por momento (curso × trimestre). Para fechas entre evaluaciones y momentos sin muestra normativa, el [estudio M3](../../desarrollos/M3.qmd) propone un baremo continuo sobre los **meses de enseñanza**, no sobre la edad, con la edad relativa dentro del curso como ajuste.")
     f1 <- file.path(rl, "figuras", paste0("Ficha_auto_", TAREA, "_F1_baremo.png")); if (file.exists(f1)) out("![Baremo provisional (centros sin Preleo).](../../figuras/Ficha_auto_", TAREA, "_F1_baremo.png){width=85%}")
   } else out("No hay momentos con al menos 100 niños de referencia.")
   # ---- efectos ----

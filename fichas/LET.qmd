@@ -279,6 +279,14 @@ Esto refuerza dos decisiones: informar del percentil con su banda y no clasifica
 
 **Pendiente:** el funcionamiento diferencial de cada letra (DIF) por sexo e ISE, cuando tengamos las respuestas ítem a ítem.
 
+::: {.callout-note}
+## Baremo continuo y efecto suelo (estudio M3, 03/11/2026)
+
+El modelo continuo de esta ficha (regresión cuantílica sobre la edad en meses) se ha comparado con otros cinco métodos. En letras, el eje importa poco: dentro de cada momento, el error en el P10 es de 1,6–2,1 puntos con cualquier método continuo, frente a 0,5 de la tabla por momento. Fuera de muestra, el mejor método es cNORM sobre los meses de enseñanza (error medio 3,3 puntos, frente a 4,0 del modelo por edad), y llega a todos los niños, mientras que la tabla solo cubre el 76 %. Se propone pasar el modelo del servidor al eje de la enseñanza por coherencia con las tareas de lectura, donde la edad sí descalibra. El suelo en letras no pasa del 6 % (a 4.2).
+
+Detalle en el [estudio M3](../desarrollos/M3.qmd).
+:::
+
 ## 7. Pendientes y decisiones para el equipo
 
 **Incidencias de datos encontradas al hacer la ficha** (se añaden a la hoja Incidencias del diccionario):

@@ -69,6 +69,14 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 - **Validez incremental.** Sobre letras y denominación rápida, añade muy poco: +0,005 de AUC a los 4 años y +0,002 a los 5, con validación cruzada.
 - **Variables que la afectan.** La edad relativa pesa a los 4 años (d = 0,44 entre nacidos en el primer y el segundo semestre) y menos a los 5 (d = 0,24). El nivel socioeconómico del centro, poco (d = 0,26 a los 4 años; nulo a los 5). Los colegios explican el 14–19 % de la varianza.
 
+::: {.callout-note}
+## Baremo continuo y efecto suelo (estudio M3, 03/11/2026)
+
+Contar sílabas es un recuento de 0 a 20 aciertos, así que GAMLSS necesita una distribución discreta (beta-binomial). Con ella es el mejor método fuera de muestra (error medio 1,4 puntos de percentil) y todos los métodos quedan a menos de 2,3 puntos del P10 nominal. Suelo: 4 % con cero aciertos a 4.1.
+
+Detalle en el [estudio M3](../desarrollos/M3.qmd).
+:::
+
 ## Estudios que abre
 
 | # | Estudio | Tipo | Pregunta | Qué hay ya |

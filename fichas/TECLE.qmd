@@ -144,6 +144,14 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 - **Criterio no circular.** Frente a la baja comprensión (≤ p25) un curso después, el AUC es .59 (7 → 8 años, 875 niños).
 - **Variables que la afectan.** El nivel socioeconómico del centro, moderadamente (d = 0,36 a los 7 años). Los colegios explican el 6–8 % de la varianza.
 
+::: {.callout-note}
+## Baremo continuo y efecto suelo (estudio M3, 03/11/2026)
+
+TECLE no entró en la comparación de M3, porque cada cohorte se evaluó a una edad distinta (7.2 en 2013, 8.2 en 2012, 10.2 en 2010) y no se puede validar reservando una cohorte. Precisamente por eso es la tarea que más necesita un baremo continuo para cubrir los cursos intermedios: se hará cuando se añadan las cohortes 2014–2015 y los datos del servidor 2020–2026.
+
+Detalle en el [estudio M3](../desarrollos/M3.qmd).
+:::
+
 ## Otras versiones (en construcción)
 
 ::: {.callout-warning appearance="minimal"}

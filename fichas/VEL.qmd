@@ -379,6 +379,14 @@ Primera medida a 6–7 años frente a baja comprensión posterior. Cohorte 2010.
 | E7 | Palabras frente a pseudopalabras: ruta léxica y subléxica en una lengua transparente | Teórico | Las dos listas en los mismos niños de 5 a 8 años |
 | E8 | Relectura e instrucción: ganancia de velocidad de la primera lectura («rápido») a la segunda («despacio para comprender») del mismo texto. ¿Quién ajusta la velocidad a la tarea? ¿Predice esa capacidad la comprensión? | Experimento implícito | Las dos lecturas, con sus tiempos y aciertos de comprensión, en los mismos niños (2010, 2011) |
 
+::: {.callout-note}
+## Baremo continuo y efecto suelo (estudio M3, 03/11/2026)
+
+En velocidad en texto (forma 2034), los baremos continuos por edad se desvían de forma sistemática dentro del curso. Con cNORM por edad, el 22 % de los niños queda bajo el P10 a 6.3 y solo el 4 % a 7.3. Sobre los meses de enseñanza, el mismo método se queda entre el 8 y el 13 % en todos los momentos. La tabla por momento sigue siendo la referencia publicada; el modelo continuo sobre la enseñanza es el que se propone para fechas intermedias. Suelo: 8 % de ceros a 6.3.
+
+Detalle en el [estudio M3](../desarrollos/M3.qmd).
+:::
+
 ## 5. Uso en el aula y en el informe; pendientes
 
 **En el informe del servidor**, el resultado puede darse así: «Lee 45 palabras por minuto en voz alta; la mitad de su curso lee 77 o más (percentil 15)». Tiene la misma lógica que el ejercicio de clase sobre funciones ejecutivas: con la velocidad de cada alumno se estima cuánto tardará en leer un texto. La columna «minutos para 1.000 palabras» lo hace directamente. Por ejemplo, un texto de 300 palabras lleva unos 4 minutos a un niño típico de 2.º y más del doble a uno en P10.
