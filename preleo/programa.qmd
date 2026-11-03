@@ -1,41 +1,97 @@
 # El programa Preleo
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador. Descripción a partir de las programaciones del programa y de @sanchezgomez2025. Pendiente de revisión por el equipo de Preleo.
+**Estado:** borrador v2 (03/11/2026). Descripción a partir de los dossiers de actividades de 4 y 5 años, las programaciones por edad y por bloque, y @sanchezgomez2025. Pendiente de revisión por el equipo de Preleo.
 :::
 
 ## Qué es
 
-Preleo es un programa de **prevención universal** de las dificultades de aprendizaje de la lectura, diseñado por el grupo LEEDUCA de la Universidad de Málaga. Se aplica a toda la clase en Educación Infantil, antes de que aparezcan las dificultades, y no solo a los niños con riesgo. Parte de una idea bien establecida: para aprender a leer sin dificultad hace falta una base sólida de lenguaje oral y, sobre todo, de conciencia fonológica.
+Preleo es un programa de **prevención universal** de las dificultades de aprendizaje de la lectura, diseñado por el grupo LEEDUCA de la Universidad de Málaga. Se aplica a toda la clase en Educación Infantil, antes de que aparezcan las dificultades, y no solo a los niños con riesgo. Parte de una idea bien establecida: para aprender a leer sin dificultad hace falta una base sólida de lenguaje oral y, sobre todo, de conciencia fonológica. En español, una lengua de ortografía casi transparente, la conciencia silábica y la fonémica se relacionan de forma moderada con la lectura de palabras, de pseudopalabras y con la comprensión [@miguez2022].
 
-Tiene cuatro rasgos:
+Tiene cinco rasgos:
 
 - **Lo aplican los propios docentes** en el aula ordinaria, en sesiones diarias de 10 a 30 minutos según la edad y la actividad.
 - **Formación breve y acompañamiento:** el profesorado recibe una formación inicial corta y un seguimiento a distancia que ayuda a adaptar las actividades a su grupo.
+- **Está secuenciado semana a semana:** cada curso tiene una temporalización de 29 semanas (de octubre a mayo) que dice qué actividad de cada bloque toca esa semana.
 - **Va unido a la plataforma LEEDUCA:** la evaluación trimestral permite ver cómo avanza cada niño y quién necesita más apoyo, como en los modelos de respuesta a la intervención (RtI).
-- **Encaja en el currículo:** cada bloque se acompaña de una programación que lo relaciona con los objetivos, contenidos y criterios de evaluación del currículo de Infantil y Primaria de Andalucía.
+- **Encaja en el currículo:** cada bloque se acompaña de una programación que lo relaciona con los objetivos, contenidos, criterios de evaluación y estándares del currículo de Infantil y Primaria de Andalucía.
+
+## Materiales
+
+| Material | Contenido |
+|---|---|
+| **Dossier de 4 años** | Temporalización de 29 semanas y 109 fichas: conciencia fonológica (47), vocabulario (22), comprensión (29) y fluidez (11) |
+| **Dossier de 5 años** | Temporalización de 29 semanas y 174 fichas: conciencia fonológica (22), principio alfabético (54), vocabulario (20), comprensión (55) y fluidez (23) |
+| **Programaciones por edad** (3, 4 y 5 años) | Para cada actividad: bloque, objetivos, contenidos, criterio de evaluación y estándar de aprendizaje |
+| **Programaciones por bloque** (conciencia fonológica, principio alfabético y fluidez; vocabulario; comprensión) | Relación con el currículo andaluz: Orden de 5 de agosto de 2008 (Infantil) y Orden de 17 de marzo de 2015 (Primaria), competencias clave y estándares |
+
+Para 3 años hay programación, pero no dossier de fichas entre los materiales revisados.
+
+### Cómo es una ficha
+
+Todas las fichas siguen la misma plantilla, pensada para que la aplique un docente sin formación específica:
+
+1. **Contenidos, criterio de evaluación y estándar de aprendizaje**, tomados de la programación.
+2. **Manos a la obra · ¿Cómo lo hacemos?:** objetivo de la actividad y desarrollo paso a paso, con el guion de lo que dice el docente y un ejemplo resuelto.
+3. **Material:** listas de ítems (palabras, sílabas, oraciones, pseudopalabras) y láminas, que el docente puede cambiar por otras de su clase.
+4. **Fundamentación teórica de la actividad:** un texto breve que explica por qué se hace (por ejemplo, cómo se organiza el vocabulario en categorías semánticas, cómo se adquieren el género y las flexiones verbales en español o qué mide la fluidez verbal).
+
+Ejemplo (4 años, «¿Cuántas palabras hay?»): el docente forma oraciones con tarjetas de nombres y pictogramas de acción («María come»), la clase las «lee» y cuenta cuántas palabras tienen. Se empieza con oraciones de dos palabras con nombres propios y se pasa a tres y luego a oraciones con determinantes y preposiciones.
 
 ## Estructura
 
-La versión actual se organiza en cinco bloques. Se trabajan de forma progresiva de los 3 a los 5 años.
+La versión actual se organiza en cinco bloques que se trabajan cada semana en paralelo.
 
 | Bloque | Qué se trabaja |
 |---|---|
-| Conciencia fonológica | Rimas; conciencia léxica (palabras dentro de otras, palabras compuestas, contar palabras de una oración); conciencia silábica (identificar, contar, unir, quitar, añadir y cambiar sílabas; sílaba tónica); conciencia fonémica (identificar, contar, unir, quitar y cambiar fonemas) |
-| Principio alfabético | Asociar cada fonema con su letra y unirlos para leer palabras |
-| Fluidez | Lectura cada vez más automática |
-| Vocabulario | Campos y categorías semánticas, relaciones entre palabras, uso y función de los objetos |
-| Comprensión oral | Comprender textos e inferir información |
+| Conciencia fonológica | Rimas; conciencia léxica y sintáctica (contar palabras de una oración, palabras dentro de otras, palabras compuestas); conciencia silábica (identificar la sílaba inicial, media y final; contar, unir, quitar, añadir, cambiar e invertir sílabas; sílaba tónica); conciencia fonémica (contar y segmentar fonemas; unir, quitar y cambiar el fonema inicial y final; síntesis de fonemas). Las manipulaciones se hacen con resultado de palabra y de pseudopalabra |
+| Principio alfabético (5 años) | Un **sonido de la semana**: identificar si una palabra empieza o termina por él, discriminarlo de sonidos parecidos (oposición fonológica) y asociarlo con su letra. Al final del curso, unir sonidos y letras para leer palabras de 3, 4 y 5 fonemas |
+| Vocabulario | Campos y categorías semánticas, relaciones entre palabras (parte de, generalización, semejanzas y diferencias, contrarios, función, rasgos), palabras compuestas y familias de palabras. A los 5 años, además, morfosintaxis: concordancia de género y número (también con pseudopalabras), conjugación por persona y por tiempo, frases hechas y detección de oraciones mal construidas |
+| Comprensión oral | Inferencias a partir de láminas (4 años: «El juego del detective», «El león fisgón»); a los 5 años, textos orales breves con preguntas de distinto tipo, comprensión de oraciones según el orden de las palabras («Frases con truco») y pronombres de género («El juego de Lola») |
+| Fluidez | **Fluidez verbal y denominación rápida**, no fluidez lectora: nombrar deprisa imágenes de un campo semántico o palabras que empiezan por la sílaba o el sonido de la semana («De la Habana ha venido un barco cargado de…») y, a los 5 años, denominación rápida de las letras ya conocidas |
 
-La conciencia fonológica sigue una progresión de unidades grandes a pequeñas:
+Algunas actividades de vocabulario trabajan también la **flexibilidad cognitiva** (cambiar de criterio, por ejemplo «¿profesión o medio de comunicación?»).
 
-| Edad | Contenido principal |
+### Progresión por edad
+
+| Edad | Conciencia fonológica | Resto de bloques |
+|---|---|---|
+| 3 años | Escucha y rimas; conciencia léxica y sintáctica con apoyos (canciones) | Vocabulario por categorías; inferencias con láminas («El juego del búho»), conceptos espaciales; denominación fluida de imágenes |
+| 4 años | 2 semanas de conciencia sintáctica y 27 de conciencia silábica | Vocabulario y relaciones semánticas; inferencias con láminas; denominación rápida |
+| 5 años | 4 semanas de conciencia silábica y 25 de conciencia fonémica | Principio alfabético; morfosintaxis; comprensión de textos orales; denominación rápida de palabras y letras |
+
+### La secuencia semanal
+
+**4 años.** Tras dos semanas de conciencia sintáctica («¿Cuántas palabras hay?», «Rompiendo palabras», con canciones), el curso avanza en **ciclos de tres semanas por consonante**: P, L, S, M, T, N, D, F y J. En cada ciclo se trabaja la sílaba inicial, la final y la media con esa consonante, se canta «El monosílabo» y se hace denominación rápida de palabras que empiezan por ella; la tercera semana cierra con «De la Habana ha venido un barco». En paralelo, cada semana añade una operación silábica, de menor a mayor dificultad:
+
+| Semanas | Operación silábica |
 |---|---|
-| 3 años | Escucha y rimas; conciencia léxica y sintáctica con apoyos |
-| 4 años | Conciencia silábica: identificar, contar, unir y manipular sílabas |
-| 5 años | Conciencia fonémica: identificar, contar, unir y manipular fonemas; unión de fonema y letra |
+| 3–5 | Contar sílabas con palmadas; unir sílabas; sílaba tónica («La palmada más fuerte») |
+| 6–12 | Cambiar la sílaba inicial; unir la primera sílaba (con palabra y con pseudopalabra); cambiar la sílaba final |
+| 13–20 | Unir la última sílaba (palabra y pseudopalabra); cadena de palabras; quitar la última sílaba (palabra y pseudopalabra); puzle de sílabas |
+| 21–29 | Quitar la primera sílaba (palabra y pseudopalabra); «Sílabas bailongas»; invertir sílabas; añadir y quitar la sílaba de en medio |
 
-Los materiales incluyen un dossier de actividades para 4 y 5 años y una programación por edad y por bloque.
+Comprensión: «El juego del detective» (semanas 1–23) y «El león fisgón» (24–29).
+
+**5 años.** La conciencia fonológica pasa de la sílaba al fonema, y el principio alfabético avanza un **sonido por semana** (dos en los más difíciles):
+
+| Semanas | Conciencia fonológica | Sonido de la semana |
+|---|---|---|
+| 1–4 | Unir y quitar la sílaba inicial y final | A, O, U, E |
+| 5–11 | Contar sonidos (2–3, 4, 5); decir los sonidos de una palabra (2 a 5) | I, M, L, S, N, Ñ, D |
+| 12–19 | Unir y quitar el primer sonido (palabra y pseudopalabra); cambiar el fonema inicial | J, F, P, T, Z/C (2 semanas), G (2 semanas) |
+| 20–27 | Unir y quitar el último sonido (palabra y pseudopalabra); cambiar el fonema final | LL/Y, B/V, CH, R/RR (2 semanas cada uno) |
+| 28–29 | Síntesis de fonemas («¿Qué estoy diciendo?») | C/Q/K |
+
+Desde la semana 22 se unen sonidos y letras para leer palabras de 3, 4 y 5 fonemas, y el curso termina con «El árbol» (palabra, sílaba, fonema y letra). Comprensión: dos textos orales por semana (semanas 1–25), uno más «Frases con truco» en las semanas 26–27 y «El juego de Lola» (28–29). Fluidez: denominación rápida de palabras con el sonido de la semana y, en semanas alternas desde la 17, de las letras ya conocidas.
+
+### Dosis
+
+Cada curso son 29 semanas de aplicación diaria, con 4 bloques por semana a los 4 años y 5 a los 5 años. Ni los dossiers ni las programaciones fijan los minutos por bloque: la referencia publicada es de 10 a 30 minutos por sesión [@sanchezgomez2025].
+
+## Qué entrena Preleo y qué mide la plataforma
+
+Varias actividades de Preleo ejercitan las mismas operaciones que evalúan las tareas de conciencia fonológica de la plataforma a los 4 y 5 años (contar, unir y quitar sílabas y fonemas, conocimiento de letras). Por eso, una diferencia en esas tareas al final de Infantil es en parte **transferencia cercana**. La prueba exigente del programa es la lectura de palabras, pseudopalabras, fluidez y comprensión a los 6 y 7 años, que el programa no entrena de forma directa. Esto se tiene en cuenta en los baremos (referencia preferente: centros sin Preleo) y en [Preleo en los datos](datos.qmd).
 
 ## Antecedentes y estudios publicados
 
@@ -56,8 +112,8 @@ Con datos de la plataforma, el grupo también ha estudiado perfiles de riesgo an
 
 El contenido de Preleo ha cambiado con los años. Esto importa al comparar cohortes:
 
-- **Curso 2015/16 (cohorte 2010, 5 años):** solo conciencia silábica (10 semanas) y conciencia fonémica (19 semanas), de octubre a mayo, en el último curso de Infantil [@sanchezgomez2025].
+- **Curso 2015/16 (cohorte 2010, 5 años):** solo conciencia silábica (10 semanas) y conciencia fonémica (19 semanas), de octubre a mayo, en el último curso de Infantil [@sanchezgomez2025]. Es un reparto distinto del de la versión actual a 5 años (4 semanas de sílabas y 25 de fonemas).
 - **Cohorte 2011:** desde los 4 años y durante tres cursos.
-- **Versión actual:** los cinco bloques descritos arriba, de 3 a 5 años. Los bloques de fluidez y comprensión se añadieron para reforzar los efectos sobre esos componentes de la lectura.
+- **Versión actual:** los cinco bloques descritos arriba, de 3 a 5 años, con la temporalización de los dossiers. Los bloques de fluidez y comprensión se añadieron para reforzar los efectos sobre esos componentes de la lectura.
 
-*Pendiente:* calendario de aplicación por cohorte y colegio, y medida de la fidelidad de aplicación (ver [Preleo en los datos](datos.qmd)).
+*Pendiente:* fecha de edición de los dossiers y versión aplicada a cada cohorte y colegio; medida de la fidelidad de aplicación (ver [Preleo en los datos](datos.qmd)).
