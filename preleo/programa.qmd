@@ -25,7 +25,7 @@ Tiene cinco rasgos:
 | **Programaciones por edad** (3, 4 y 5 años) | Para cada actividad: bloque, objetivos, contenidos, criterio de evaluación y estándar de aprendizaje |
 | **Programaciones por bloque** (conciencia fonológica, principio alfabético y fluidez; vocabulario; comprensión) | Relación con el currículo andaluz: Orden de 5 de agosto de 2008 (Infantil) y Orden de 17 de marzo de 2015 (Primaria), competencias clave y estándares |
 
-Para 3 años hay programación, pero no dossier de fichas entre los materiales revisados.
+Para 3 años hay programación y temporalización (en la zona de descargas de la plataforma), pero no dossier de fichas entre los materiales revisados.
 
 ### Cómo es una ficha
 
@@ -88,6 +88,48 @@ Desde la semana 22 se unen sonidos y letras para leer palabras de 3, 4 y 5 fonem
 ### Dosis
 
 Cada curso son 29 semanas de aplicación diaria, con 4 bloques por semana a los 4 años y 5 a los 5 años. Ni los dossiers ni las programaciones fijan los minutos por bloque: la referencia publicada es de 10 a 30 minutos por sesión [@sanchezgomez2025].
+
+## Niveles de intervención en la plataforma
+
+En la plataforma, Preleo no es solo el programa de aula. La sección «Sistemas de intervención › Preleo» organiza un modelo de respuesta a la intervención en tres piezas, unidas por el cribado trimestral:
+
+| Pieza | Para quién | Formato | Contenido |
+|---|---|---|---|
+| **Programa universal** | Toda la clase | Grupo, en el aula | Temporalización y programación de 3, 4 y 5 años, con fichas y canciones descargables |
+| **Programa de repaso** | Cada niño | Individual, una sesión semanal | Las semanas del programa universal (18 a los 3 años, 32 a los 4 y 32 a los 5), hechas por el niño con su propio usuario. Se aplica la semana *siguiente* a la trabajada en grupo, de modo que el tiempo, los aciertos y la eficiencia hacen de línea base y de medida semanal del progreso |
+| **Intensificación** | Niños con riesgo en el cribado o con respuesta insuficiente | Individual, diaria | Dos modalidades: sugerida y personalizable (abajo) |
+
+La plataforma tiene también, sin uso descrito todavía, una «Paleta Leeduca» por aula y el programa **Leetrea** para el aprendizaje de la lectura (universal y repaso), cuyos enlaces aún no llevan a ningún contenido.
+
+### Intensificación sugerida: 45 semanas prediseñadas
+
+Cada semana es una sesión de la plataforma con cinco días (lunes a viernes) y un **patrón fijo de componentes** que se repite cada día en el mismo orden. Cambian el contenido y la dificultad. Se pueden aplicar la semana completa o solo el componente que el cribado señala.
+
+| Semanas | Actividades al día | Conciencia fonológica | Resto de componentes, cada día |
+|---|---|---|---|
+| 1–15 | 5 | Rimas, segmentar y contar sílabas | RAN de objetos; memoria verbal (repetir sílabas o pseudopalabras, recordar palabras); vocabulario o inferencias, en días alternos; morfología de género y número |
+| 16–30 | 6 (9 en las semanas 21 y 27) | Repaso de 16 a 19; después, sílaba inicial y final por consonante; unir, quitar y cambiar sílabas | RAN; memoria verbal; vocabulario; comprensión (inferencias con láminas, conceptos espaciales, comprensión oral); morfosintaxis |
+| 31–45 | 7 | Repaso silábico de 31 a 34; después, fonemas: contar, decir, identificar, unir, quitar y cambiar | Igual que el bloque anterior, más **discriminación fonológica** (pares mínimos, oposición fonema a fonema) |
+
+Los tres bloques de 15 semanas siguen la misma progresión que el programa de aula de 3, 4 y 5 años. Lo propio de la intensificación es que trabaja **cada día** dos componentes que el aula no trabaja de forma sistemática: la velocidad de denominación (RAN) y la memoria verbal. Son los mismos dominios que evalúa el cribado, y el material de formación del equipo indica, prueba a prueba, en qué semanas se entrena cada debilidad (por ejemplo, rimas en la semana 1, identificar sílabas en la 20 y la 26, pares mínimos en las 35–45).
+
+### Intensificación personalizable: índice de actividades
+
+Para perfiles muy focalizados, el docente o especialista elige el nivel de conciencia fonológica del niño y monta su propia secuencia:
+
+| Nivel | Bloques | Ejemplos |
+|---|---|---|
+| Conciencia léxica | 5 | Rima, suma y resta de palabras, longitud de palabras, contar palabras |
+| Conciencia silábica | 40 | Identificar la sílaba inicial y final con 15 consonantes; contar, sintetizar, omitir, añadir y sustituir sílabas; sílaba tónica |
+| Conciencia fonémica | 40 | Identificar el fonema inicial (21) y final (10); contar, segmentar y sintetizar fonemas; añadir, omitir y cambiar fonemas; discriminación |
+
+Cada bloque tiene 5 sesiones de 5 actividades, es decir, unas 2.100 actividades en total.
+
+### Cómo se decide
+
+Según el material de formación del equipo, la intensificación se justifica con el cribado y la monitorización repetidos, no con un único dato. Se mantiene o se retira según la trayectoria, y un niño puede seguir con intensificación después de salir de la zona de riesgo si mantiene una diferencia funcional con su grupo. Lo mínimo que hay que registrar es la fecha de inicio, el motivo, la dosis y los componentes. Esto es justo lo que hace falta para estudiar la intensificación como dosis (ver [Cómo mejorar la aplicación y el seguimiento](fidelidad.qmd)).
+
+*Pendiente:* fijar la numeración de niveles. El material de formación llama a la intensificación «Nivel 2»; en otros documentos del grupo es el nivel 3.
 
 ## Qué entrena Preleo y qué mide la plataforma
 
