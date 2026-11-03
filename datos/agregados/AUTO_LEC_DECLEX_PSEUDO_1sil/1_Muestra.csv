@@ -1,3 +1,3 @@
-"mom","cohorte","sesion","curso_escolar","plataforma","N","SIN","CON","colegios","pct_con_ISE"
-"6.2","2015","950","2021/22","nueva",246,186,60,8,0
-"7.1","2014","950","2021/22","nueva",218,218,0,8,0
+"mom","cohorte","sesion","curso_escolar","plataforma","forma","N","SIN","CON","colegios","pct_con_ISE"
+"6.2","2015","950","2021/22","nueva","10758",246,0,23,8,0
+"7.1","2014","950","2021/22","nueva","10758",218,0,0,8,0

@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 03/11/2026 | Fichas | Fichas automáticas regeneradas con `ficha_generica_v3.R`: cada forma (código) tiene sus descriptivos, su baremo y su panel en la figura; nueva sección «Formas: ¿se pueden unir?» con la equivalencia entre formas y la igualación lineal cuando las hicieron los mismos niños (25 tareas con varias formas; 18 con escalas distintas; 11 igualables). Validez y efectos sobre puntuaciones tipificadas dentro de forma × momento; condición Preleo v6. |
 | 03/11/2026 | Fichas | Las fichas automáticas avisan del efecto suelo (P10 igual a la peor puntuación posible: 17 de 98 tareas) y remiten al baremo continuo sobre meses de enseñanza (M3). Las cinco fichas piloto incluyen el resultado de M3 para su tarea. |
 | 03/11/2026 | Agenda | M3 (normas continuas): primer análisis exploratorio. Seis métodos sobre dos ejes (edad y meses de enseñanza) en cinco tareas; el eje de la enseñanza calibra mejor dentro de cada trimestre y se documenta el efecto suelo de la lectura a los 5 años. |
 | 03/11/2026 | Presentación | Autoría provisional ampliada: Ricardo Cruz Arándiga (ingeniero de la plataforma) y María Rodríguez pasan a ser coautores. |

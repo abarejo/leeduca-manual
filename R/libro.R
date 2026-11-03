@@ -92,7 +92,7 @@ tabla_rango <- function(D, grupo = NULL, d = 1, posible = NULL) {
   out <- data.frame(D[, c(grupo, "mom", "N")], habitual = rango_txt(D$P1, D$P99, d), observado = rango_txt(D$minimo, D$maximo, d), check.names = FALSE)
   if (!is.null(posible)) out$posible <- posible
   out$aviso <- ifelse(extremo(D) %in% TRUE, "valor extremo: revisar", "")
-  nm <- c(if (!is.null(grupo)) c(medida = "Medida")[grupo] %||% grupo, "Momento", "N", "Rango habitual (P1–P99)", "Mín.–máx.", if (!is.null(posible)) "Rango posible", "Aviso")
+  nm <- c(if (!is.null(grupo)) c(medida = "Medida", forma = "Forma")[grupo] %||% grupo, "Momento", "N", "Rango habitual (P1–P99)", "Mín.–máx.", if (!is.null(posible)) "Rango posible", "Aviso")
   tabla(out, unname(nm), digitos = d)
 }
 `%||%` <- function(a, b) if (is.null(a) || all(is.na(a))) b else a

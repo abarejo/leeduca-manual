@@ -1,0 +1,4 @@
+"mom","forma_1","forma_2","referencia","n_1","n_2","cohortes_1","cohortes_2","M_1","M_2","DT_1","DT_2","d_2_menos_1","razon_DT","mismos_ninos","veredicto","n_igualacion","r_entre_formas","pendiente","intercepto"
+"4.1","1921","1922","SIN Preleo",357,374,"2012","2012",2.13,46.38,9.71,11.8,-4.09,1.21,344,"escalas distintas",344,0.01,0.83,-36.28
+"5.1","1921","1922","todos",1045,898,"2011, 2012","2011",10.22,41.22,17.99,9.93,-2.09,0.55,808,"escalas distintas",808,0.02,0.87,-34.02
+"6.1","1921","1922","todos",725,912,"2010, 2011","2010",31.36,36.59,8.21,8.78,-0.61,1.07,15,"escalas distintas",15,,,

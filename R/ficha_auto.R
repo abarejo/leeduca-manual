@@ -51,12 +51,17 @@ ficha_auto <- function(TAREA) {
   ct <- C[C$tarea_canonica == TAREA, ]
   lee <- function(h) if (file.exists(file.path(dir, paste0(h, ".csv")))) leer(paste0("AUTO_", TAREA), h) else data.frame()
   FI <- lee("0_Ficha"); MU <- lee("1_Muestra"); DS <- lee("2_Descriptivos_SIN"); ES <- lee("3_Fiabilidad_estabilidad"); VC <- lee("4a_Validez_concurrente")
-  VE <- lee("4b_Validez_frente_etiqueta"); BC <- lee("4c_Baja_comprension_posterior"); BA <- lee("5_Baremo_SIN"); EF <- lee("6_Efectos_variables")
+  VE <- lee("4b_Validez_frente_etiqueta"); BC <- lee("4c_Baja_comprension_posterior"); BA <- lee("5_Baremo_SIN"); EF <- lee("6_Efectos_variables"); EQ <- lee("5b_Equivalencia_formas")
+  # v3 de ficha_generica (03/11/2026): descriptivos y baremo por forma (código). Si hay más de una forma, se muestran por separado.
+  for (nm in c("MU", "DS", "BA")) { d <- get(nm); if ("forma" %in% names(d)) { d$forma <- as.character(d$forma); assign(nm, d) } }   # códigos: sin separador de miles
+  if (nrow(EQ)) { EQ$forma_1 <- as.character(EQ$forma_1); EQ$forma_2 <- as.character(EQ$forma_2) }
+  ff <- "forma" %in% names(DS) && length(unique(DS$forma)) > 1
+  etq <- function(D) if (ff && "forma" %in% names(D)) paste0(D$mom, " (forma ", D$forma, ")") else D$mom
   fam <- ct$familia; circ <- isTRUE(as.logical(FI$circular_con_etiqueta))
   out <- function(...) cat(..., "\n\n", sep = "")
 
   out('::: {.callout-note appearance="minimal"}\n**Ficha automática** (', FAM_NOM[[fam]], '; clase de calidad ', ct$clase, '). Generada el ', format(Sys.Date(), "%d/%m/%Y"),
-      ' con `scripts/R/ficha_generica.R --tarea ', TAREA, '`. Las cifras salen de los datos; ', if (!is.na(MARCO_DE[TAREA]) && file.exists(file.path(rl, "fichas", "marcos", paste0(MARCO_DE[[TAREA]], ".md")))) "el marco teórico es común a las tareas del mismo constructo. **Falta la interpretación y la revisión del equipo.**" else "**falta el marco teórico, la interpretación y la revisión del equipo**.", '\n:::')
+      ' con `scripts/R/ficha_generica_v3.R --tarea ', TAREA, '`. Las cifras salen de los datos; ', if (!is.na(MARCO_DE[TAREA]) && file.exists(file.path(rl, "fichas", "marcos", paste0(MARCO_DE[[TAREA]], ".md")))) "el marco teórico es común a las tareas del mismo constructo. **Falta la interpretación y la revisión del equipo.**" else "**falta el marco teórico, la interpretación y la revisión del equipo**.", '\n:::')
   if (ct$clase %in% c("B", "C")) out('::: {.callout-warning appearance="simple"}\n**Clase ', ct$clase, '.** ',
       if (ct$clase == "B") "Tiene datos suficientes para describirla, pero le falta alguna garantía de la clase A (estabilidad entre momentos, fiabilidad ítem a ítem o validez). Úsese con cautela y no para decisiones individuales."
       else "Se aplicó a pocos niños, en pocos momentos o con versiones distintas. La ficha documenta la tarea y sus primeros datos; las cifras son descriptivas y no sirven todavía como baremo.",
@@ -65,7 +70,7 @@ ficha_auto <- function(TAREA) {
   est <- if (nrow(ES)) median(ES$rho) else NA
   auc_txt <- if (nrow(VE)) paste0("AUC ", rango(VE$AUC), if (circ) " frente a la dificultad persistente (circular: la etiqueta usa esta tarea)" else " frente a la dificultad lectora persistente") else NULL
   ed <- as.numeric(strsplit(as.character(ct$edades), ", ")[[1]]); ed_txt <- if (length(ed) > 1) paste0("de ", min(ed), " a ", max(ed), " años") else paste0("a los ", ed, " años")
-  out("**En una frase.** Mide ", ct$constructo, " ", ed_txt, " (", num_es(sum(MU$N), 0), " aplicaciones en ", length(unique(MU$cohorte)), " cohortes). ",
+  out("**En una frase.** Mide ", ct$constructo, " ", ed_txt, " (", num_es(sum(MU$N), 0), " aplicaciones en ", length(unique(MU$cohorte)), " cohortes", if (ff) paste0("; ", length(unique(DS$forma)), " formas") else "", "). ",
       if (is.finite(est)) paste0("Estabilidad entre momentos ρ = ", r2(est), ". ") else "", if (!is.null(auc_txt)) paste0(auc_txt, ".") else "")
   # ---- descripción ----
   out("## Descripción")
@@ -85,32 +90,37 @@ ficha_auto <- function(TAREA) {
   if (nzchar(fm) && file.exists(fm)) { out("## Marco teórico"); out(paste(readLines(fm, encoding = "UTF-8", warn = FALSE), collapse = "\n")) }
   # ---- muestra y descriptivos ----
   out("## Muestra y descriptivos")
+  if (ff && "forma" %in% names(MU)) print(tabla(MU[, c("mom", "forma", "cohorte", "sesion", "curso_escolar", "N", "SIN", "CON", "colegios")], c("Momento", "Forma", "Cohorte", "Sesión", "Curso escolar", "N", "Sin Preleo", "Con Preleo", "Colegios"), digitos = 0)) else
   print(tabla(MU[, c("mom", "cohorte", "sesion", "curso_escolar", "N", "SIN", "CON", "colegios")], c("Momento", "Cohorte", "Sesión", "Curso escolar", "N", "Sin Preleo", "Con Preleo", "Colegios"), digitos = 0))
   cat("\n\n")
-  if (nrow(DS)) { print(tabla(DS[, c("mom", "N", "cohortes", "M", "DT", "Md", "asimetria", "pct_suelo", "pct_techo")],
-                              c("Momento", "N", "Cohortes", "Media", "DT", "Mediana", "Asimetría", "% suelo", "% techo"), digitos = 2)); cat("\n\n") }
+  if (nrow(DS)) { cs <- c(if (ff) "forma", "mom", "N", "cohortes", "M", "DT", "Md", "asimetria", "pct_suelo", "pct_techo")
+                  print(tabla(DS[, cs], c(if (ff) "Forma", "Momento", "N", "Cohortes", "Media", "DT", "Mediana", "Asimetría", "% suelo", "% techo"), digitos = 2)); cat("\n\n") }
   avisos <- character()
   if (nrow(DS) && "minimo" %in% names(DS)) {
     pos <- if (fam %in% c("A", "F", "G") && !is.na(ct$n_items)) paste0("0–", ct$n_items) else NULL
     uni <- c(A = "aciertos", B = "segundos", C = "ítems correctos por minuto", D = "aciertos − errores/3", E = "aciertos", F = "aciertos", G = "aciertos")[[fam]]
     out("**Rango de puntuaciones** (grupo SIN, en ", uni, "). El rango habitual va del P1 al P99 (el 98 % de los niños). El mínimo–máximo es el observado tras la limpieza",
         if (!is.null(pos)) paste0("; el rango posible es ", pos, " aciertos") else "", ".")
-    print(tabla_rango(DS, posible = if (!is.null(pos)) rep(pos, sum(is.finite(DS$minimo))) else NULL)); cat("\n\n")
+    print(tabla_rango(DS, grupo = if (ff) "forma" else NULL, posible = if (!is.null(pos)) rep(pos, sum(is.finite(DS$minimo))) else NULL)); cat("\n\n")
     if (any(extremo(DS) %in% TRUE)) avisos <- c(avisos, sprintf("Valor extremo en %s: el máximo o el mínimo se aleja más de 2 DT del P99 o del P1. Revisar en los brutos (posible error de tiempo o de registro).",
-                                                    paste(DS$mom[extremo(DS) %in% TRUE], collapse = ", ")))
+                                                    paste(etq(DS)[extremo(DS) %in% TRUE], collapse = ", ")))
   }
-  if (nrow(DS) && any(DS$pct_techo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto techo en %s (más del 15 %% de los niños con la puntuación máxima).", paste(DS$mom[DS$pct_techo > 15 & !is.na(DS$pct_techo)], collapse = ", ")))
-  if (nrow(DS) && any(DS$pct_suelo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto suelo en %s (más del 15 %% con cero aciertos).", paste(DS$mom[DS$pct_suelo > 15 & !is.na(DS$pct_suelo)], collapse = ", ")))
+  if (nrow(DS) && any(DS$pct_techo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto techo en %s (más del 15 %% de los niños con la puntuación máxima).", paste(etq(DS)[DS$pct_techo > 15 & !is.na(DS$pct_techo)], collapse = ", ")))
+  if (nrow(DS) && any(DS$pct_suelo > 15, na.rm = TRUE)) avisos <- c(avisos, sprintf("Efecto suelo en %s (más del 15 %% con cero aciertos).", paste(etq(DS)[DS$pct_suelo > 15 & !is.na(DS$pct_suelo)], collapse = ", ")))
   # Efecto suelo en el baremo (03/11/2026, M3): si el P10 coincide con la peor puntuación observada, al menos el 10 % de los niños
   # empata en el mínimo y el P10 no existe. Vale para todas las familias salvo la B (tiempos: menor es mejor).
   suelo10 <- suelo25 <- character()
   if (nrow(BA) && nrow(DS) && "minimo" %in% names(DS) && fam != "B") {
-    mm <- merge(BA[, c("mom", "P10", "P25")], DS[, c("mom", "minimo")], by = "mom")
-    suelo10 <- mm$mom[is.finite(mm$P10) & is.finite(mm$minimo) & mm$P10 <= mm$minimo]
-    suelo25 <- mm$mom[is.finite(mm$P25) & is.finite(mm$minimo) & mm$P25 <= mm$minimo]
+    k <- if (ff && "forma" %in% names(BA)) c("mom", "forma") else "mom"
+    mm <- merge(BA[, c(k, "P10", "P25")], DS[, c(k, "minimo")], by = k)
+    suelo10 <- etq(mm)[is.finite(mm$P10) & is.finite(mm$minimo) & mm$P10 <= mm$minimo]
+    suelo25 <- etq(mm)[is.finite(mm$P25) & is.finite(mm$minimo) & mm$P25 <= mm$minimo]
     if (length(suelo10)) avisos <- c(avisos, sprintf("Efecto suelo en el baremo en %s: al menos el 10 %% de los niños tiene la peor puntuación posible, así que el P10 no existe. En esos momentos no deben asignarse los niveles «severa» ni «muy severa» con esta tarea (estudio M3).", y_es(suelo10)))
   }
-  if (length(unique(unlist(strsplit(ct$codigos, " ")))) > 1) avisos <- c(avisos, "La tarea tiene varios códigos (versiones o formas): comprobar que los momentos son comparables antes de unir baremos.")
+  if (ff) { nd <- if (nrow(EQ)) sum(EQ$veredicto == "escalas distintas") else NA
+    avisos <- c(avisos, if (is.na(nd)) "La tarea tiene varias formas que no coinciden en ningún momento: no se puede comprobar si son equivalentes; el baremo va por forma." else
+      sprintf("La tarea tiene %d formas; en %d de %d comparaciones tienen escalas distintas. El baremo va por forma (ver «Formas»).", length(unique(DS$forma)), nd, nrow(EQ)))
+  } else if (length(unique(unlist(strsplit(ct$codigos, " ")))) > 1) avisos <- c(avisos, "La tarea tiene varios códigos (versiones o formas): comprobar que los momentos son comparables antes de unir baremos.")
   # ---- fiabilidad ----
   out("## Fiabilidad")
   if (nrow(ES)) {
@@ -140,7 +150,9 @@ ficha_auto <- function(TAREA) {
   # ---- baremo ----
   out("## Baremo provisional")
   if (nrow(BA)) {
-    print(tabla(BA[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90")], c("Momento", "N", "Cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 1)); cat("\n\n")
+    cb <- c(if (ff && "forma" %in% names(BA)) "forma", "mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90")
+    print(tabla(BA[, cb], c(if (ff && "forma" %in% names(BA)) "Forma", "Momento", "N", "Cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P90"), digitos = 1)); cat("\n\n")
+    if (ff) out("Cada forma (código de la plataforma) tiene su propio baremo, porque las formas no tienen por qué medir en la misma escala.")
     if (fam == "B") out("En la denominación rápida, menos tiempo es mejor: el P10 es el tiempo del 10 % más lento.")
     if (length(suelo10)) out("**Efecto suelo.** En ", y_es(suelo10), " el P10 coincide con la peor puntuación posible",
                              if (length(suelo25)) paste0(" (en ", y_es(suelo25), ", también el P25)") else "",
@@ -148,6 +160,15 @@ ficha_auto <- function(TAREA) {
     out("Es un baremo por momento (curso × trimestre). Para fechas entre evaluaciones y momentos sin muestra normativa, el [estudio M3](../../desarrollos/M3.qmd) propone un baremo continuo sobre los **meses de enseñanza**, no sobre la edad, con la edad relativa dentro del curso como ajuste.")
     f1 <- file.path(rl, "figuras", paste0("Ficha_auto_", TAREA, "_F1_baremo.png")); if (file.exists(f1)) out("![Baremo provisional (centros sin Preleo).](../../figuras/Ficha_auto_", TAREA, "_F1_baremo.png){width=85%}")
   } else out("No hay momentos con al menos 100 niños de referencia.")
+  if (ff && nrow(EQ)) {
+    out("### Formas: ¿se pueden unir?")
+    out("Se comparan las formas que se aplicaron en un mismo momento. Se consideran **equivalentes** si la diferencia de medias es menor de 0,20 DT y la razón de DT está entre 0,80 y 1,25. Si las hicieron los mismos niños, se calcula además la **igualación lineal**, que pasa la segunda forma a la escala de la primera, y la correlación entre formas (fiabilidad de formas paralelas). Si son grupos distintos, la diferencia mezcla forma y cohorte.")
+    EQ$igualacion <- ifelse(is.finite(EQ$pendiente), sprintf("%s = %s × %s %s %s", EQ$forma_1, num_es(EQ$pendiente, 2), EQ$forma_2, ifelse(EQ$intercepto < 0, "−", "+"), num_es(abs(EQ$intercepto), 1)), "—")
+    EQ$r <- ifelse(is.finite(EQ$r_entre_formas), r2(EQ$r_entre_formas), "—")
+    EQ$grupos <- ifelse(EQ$mismos_ninos >= 100, "mismos niños", "grupos distintos")
+    print(tabla(EQ[, c("mom", "forma_1", "forma_2", "grupos", "d_2_menos_1", "razon_DT", "veredicto", "r", "igualacion")],
+                c("Momento", "Forma 1", "Forma 2", "Comparación", "d (2 − 1)", "Razón de DT", "Veredicto", "r entre formas", "Igualación"), digitos = 2)); cat("\n\n")
+  }
   # ---- efectos ----
   if (nrow(EF)) { out("## Variables que la afectan")
     print(tabla(EF[, c("variable", "mom", "n", "efecto", "p")], c("Variable", "Momento", "n", "Efecto", "p"), digitos = 3)); cat("\n\n") }

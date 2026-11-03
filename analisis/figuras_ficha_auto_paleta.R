@@ -1,4 +1,4 @@
-# figuras_ficha_auto_paleta.R (Claude, 02/11/2026) · Regenera en la paleta del grupo las dos figuras de cada ficha automática
+# figuras_ficha_auto_paleta.R (Claude, 02/11/2026; 03/11: un panel por forma si la tarea tiene varias) · Regenera en la paleta del grupo las dos figuras de cada ficha automática
 #   figuras/Ficha_auto_<tarea>_F1_baremo.png   bandas P10–P90 y P25–P75, mediana y p16 (referencia: niños sin Preleo)
 #   figuras/Ficha_auto_<tarea>_F2_validez.png  AUC (IC 95 %) frente a la dificultad persistente y a la baja comprensión posterior
 # Lee solo los agregados del libro: datos/agregados/AUTO_<tarea>/0_Ficha.csv, 5_Baremo_SIN.csv, 4b_Validez_frente_etiqueta.csv
@@ -29,7 +29,9 @@ for (d in list.dirs(file.path("datos", "agregados"), recursive = FALSE)) {
       geom_errorbar(aes(ymin = P16, ymax = P16), colour = G[["naranja"]], width = .18, linewidth = 1.3) +
       geom_point(aes(y = P50), colour = G[["tinta"]], size = 3.6) +
       labs(title = paste("Baremo:", nom), x = "Momento (edad.trimestre)", y = pun,
-           caption = "Bandas: P10–P90 y P25–P75; punto: mediana; raya naranja: p16. Referencia: niños sin Preleo.") + tema
+           caption = paste0("Bandas: P10–P90 y P25–P75; punto: mediana; raya naranja: p16. Referencia: niños sin Preleo.",
+                            if ("forma" %in% names(B) && uniqueN(B$forma) > 1) " Un panel por forma (código)." else "")) + tema +
+      (if ("forma" %in% names(B) && uniqueN(B$forma) > 1) facet_grid(. ~ paste("Forma", forma), scales = "free_x", space = "free_x") else NULL)
     guardar(p, file.path("figuras", paste0("Ficha_auto_", t, "_F1_baremo.png"))); n1 <- n1 + 1
   }
   # --- F2 validez ---

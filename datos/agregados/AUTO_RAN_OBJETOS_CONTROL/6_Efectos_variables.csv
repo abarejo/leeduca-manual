@@ -1,25 +1,25 @@
 "variable","mom","n","efecto","p"
-"ISE del centro (ρ)","4.1",273,0.031,0.606
-"Sexo (d niña − niño; codificación en revisión)","4.1",386,0.192,0.061
-"Edad relativa (ρ con la edad en meses)","4.1",382,0.141,0.006
-"Colegio (CCI)","4.1",386,0.052,
-"ISE del centro (ρ)","4.2",241,-0.125,0.052
-"Sexo (d niña − niño; codificación en revisión)","4.2",354,0.241,0.024
-"Edad relativa (ρ con la edad en meses)","4.2",351,0.119,0.026
-"Colegio (CCI)","4.2",354,0.183,
-"ISE del centro (ρ)","5.1",1102,0.078,0.01
-"Sexo (d niña − niño; codificación en revisión)","5.1",1121,0.023,0.703
-"Edad relativa (ρ con la edad en meses)","5.1",1112,0.07,0.019
-"Colegio (CCI)","5.1",1126,0.097,
-"ISE del centro (ρ)","5.2",794,0.025,0.478
-"Sexo (d niña − niño; codificación en revisión)","5.2",793,0.125,0.076
-"Edad relativa (ρ con la edad en meses)","5.2",789,0.112,0.002
-"Colegio (CCI)","5.2",795,0.035,
-"ISE del centro (ρ)","6.1",1594,0.103,0
-"Sexo (d niña − niño; codificación en revisión)","6.1",1602,0.072,0.146
-"Edad relativa (ρ con la edad en meses)","6.1",1597,0.055,0.028
-"Colegio (CCI)","6.1",1607,0.057,
-"ISE del centro (ρ)","6.2",1287,0.14,0
-"Sexo (d niña − niño; codificación en revisión)","6.2",1283,0.031,0.583
-"Edad relativa (ρ con la edad en meses)","6.2",1284,0.032,0.248
-"Colegio (CCI)","6.2",1287,0.101,
+"ISE del centro (ρ)","4.1",509,-0.024,0.596
+"Sexo (d niña − niño; codificación en revisión)","4.1",731,0.174,0.018
+"Edad relativa (ρ con la edad en meses)","4.1",723,0.131,0
+"Colegio (CCI)","4.1",731,0.04,
+"ISE del centro (ρ)","4.2",245,-0.124,0.052
+"Sexo (d niña − niño; codificación en revisión)","4.2",358,0.293,0.006
+"Edad relativa (ρ con la edad en meses)","4.2",355,0.14,0.008
+"Colegio (CCI)","4.2",358,0.187,
+"ISE del centro (ρ)","5.1",1919,0.009,0.683
+"Sexo (d niña − niño; codificación en revisión)","5.1",1935,-0.009,0.843
+"Edad relativa (ρ con la edad en meses)","5.1",1921,0.024,0.289
+"Colegio (CCI)","5.1",1943,0.002,
+"ISE del centro (ρ)","5.2",800,0.026,0.463
+"Sexo (d niña − niño; codificación en revisión)","5.2",799,0.102,0.149
+"Edad relativa (ρ con la edad en meses)","5.2",795,0.111,0.002
+"Colegio (CCI)","5.2",801,0.029,
+"ISE del centro (ρ)","6.1",1624,0.07,0.005
+"Sexo (d niña − niño; codificación en revisión)","6.1",1632,0.043,0.386
+"Edad relativa (ρ con la edad en meses)","6.1",1627,0.068,0.006
+"Colegio (CCI)","6.1",1637,0.06,
+"ISE del centro (ρ)","6.2",1289,0.14,0
+"Sexo (d niña − niño; codificación en revisión)","6.2",1285,0.047,0.402
+"Edad relativa (ρ con la edad en meses)","6.2",1286,0.034,0.229
+"Colegio (CCI)","6.2",1289,0.097,
