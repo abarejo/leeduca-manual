@@ -1267,7 +1267,7 @@ Advertencia
 </section>
 <section id="estabilidad-ganancia-modesta-de-los-métodos-continuos" class="level3">
 <h3 class="anchored" data-anchor-id="estabilidad-ganancia-modesta-de-los-métodos-continuos">4. Estabilidad: ganancia modesta de los métodos continuos</h3>
-<p>Al partir la muestra en dos mitades, el corte p10 de la tabla por momento cambia entre 0,04 y 0,25 DT. El mejor método continuo lo reduce entre un 20 % y un 70 % en palabras, velocidad y RAN, porque cada momento toma información de los vecinos. En letras y contar sílabas, con momentos de más de 300 niños, apenas hay diferencia.</p>
+<p>Al partir la muestra en dos mitades (20 repeticiones), el corte p10 de la tabla por momento cambia entre 0,05 y 0,18 DT, y es el menos estable en tres de las cinco tareas. El mejor método continuo lo reduce un 70 % en palabras bisílabas, un 57 % en velocidad, un 33 % en contar sílabas y un 30 % en RAN, porque cada momento toma información de los vecinos. En letras, con momentos de más de 300 niños, la ganancia es pequeña (19 %).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../figuras/desarrollos/M3_F2_curvas_p10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Corte del p10 a lo largo de la escolarización. Los puntos son la tabla por momento; las líneas, los métodos continuos."><img src="../figuras/desarrollos/M3_F2_curvas_p10.png" class="img-fluid figure-img" style="width:100.0%" alt="Corte del p10 a lo largo de la escolarización. Los puntos son la tabla por momento; las líneas, los métodos continuos."></a></p>
@@ -1298,7 +1298,7 @@ Advertencia
 <li>Comparar la edad relativa con el efecto del mes de nacimiento descrito en la literatura.</li>
 <li>Exportar el modelo elegido al formato del servidor (<code>BAREMOS_SERVIDOR</code>, fase 2).</li>
 </ul>
-<p><strong>Reproducibilidad.</strong> Guion <code>04_DICCIONARIO_PROCESADO_2026/scripts/R/m3_normas_continuas_v1.R</code> (paquetes <code>quantreg</code>, <code>gamlss</code> y <code>cNORM</code>). Usa la tabla larga v2, la asignación Preleo v6 y las fechas de nacimiento de <code>ise_sexo_nacimiento_R_v1.xlsx</code>. Salida completa en <code>DIAGNOSTICO/R/M3/m3_normas_continuas_R_v1.xlsx</code>; agregados en <code>datos/agregados/M3/v1/</code>. La estabilidad se calculó con 5 repeticiones (<code>--reps 5</code>); para el artículo, 100.</p>
+<p><strong>Reproducibilidad.</strong> Guion <code>04_DICCIONARIO_PROCESADO_2026/scripts/R/m3_normas_continuas_v1.R</code> (paquetes <code>quantreg</code>, <code>gamlss</code> y <code>cNORM</code>). Usa la tabla larga v2, la asignación Preleo v6 y las fechas de nacimiento de <code>ise_sexo_nacimiento_R_v1.xlsx</code>. Salida completa en <code>DIAGNOSTICO/R/M3/m3_normas_continuas_R_v1.xlsx</code>; agregados en <code>datos/agregados/M3/v1/</code>. La estabilidad se calculó con 20 repeticiones (ejecución en el PC del proyecto, R 4.6.2, 03/11/2026; las demás cifras coinciden exactamente con la primera ejecución); para el artículo, 100.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
