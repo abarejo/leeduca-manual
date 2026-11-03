@@ -61,7 +61,7 @@ Al reservar una cohorte, todos los métodos se desvían unos 3 puntos en el p10 
 
 ### 4. Estabilidad: ganancia modesta de los métodos continuos
 
-Al partir la muestra en dos mitades, el corte p10 de la tabla por momento cambia entre 0,04 y 0,25 DT. El mejor método continuo lo reduce entre un 20 % y un 70 % en palabras, velocidad y RAN, porque cada momento toma información de los vecinos. En letras y contar sílabas, con momentos de más de 300 niños, apenas hay diferencia.
+Al partir la muestra en dos mitades (20 repeticiones), el corte p10 de la tabla por momento cambia entre 0,05 y 0,18 DT, y es el menos estable en tres de las cinco tareas. El mejor método continuo lo reduce un 70 % en palabras bisílabas, un 57 % en velocidad, un 33 % en contar sílabas y un 30 % en RAN, porque cada momento toma información de los vecinos. En letras, con momentos de más de 300 niños, la ganancia es pequeña (19 %).
 
 ![Corte del p10 a lo largo de la escolarización. Los puntos son la tabla por momento; las líneas, los métodos continuos.](../figuras/desarrollos/M3_F2_curvas_p10.png){width=100%}
 
@@ -85,4 +85,4 @@ La literatura de normas continuas usa casi siempre la edad como predictor [@lenh
 - Comparar la edad relativa con el efecto del mes de nacimiento descrito en la literatura.
 - Exportar el modelo elegido al formato del servidor (`BAREMOS_SERVIDOR`, fase 2).
 
-**Reproducibilidad.** Guion `04_DICCIONARIO_PROCESADO_2026/scripts/R/m3_normas_continuas_v1.R` (paquetes `quantreg`, `gamlss` y `cNORM`). Usa la tabla larga v2, la asignación Preleo v6 y las fechas de nacimiento de `ise_sexo_nacimiento_R_v1.xlsx`. Salida completa en `DIAGNOSTICO/R/M3/m3_normas_continuas_R_v1.xlsx`; agregados en `datos/agregados/M3/v1/`. La estabilidad se calculó con 5 repeticiones (`--reps 5`); para el artículo, 100.
+**Reproducibilidad.** Guion `04_DICCIONARIO_PROCESADO_2026/scripts/R/m3_normas_continuas_v1.R` (paquetes `quantreg`, `gamlss` y `cNORM`). Usa la tabla larga v2, la asignación Preleo v6 y las fechas de nacimiento de `ise_sexo_nacimiento_R_v1.xlsx`. Salida completa en `DIAGNOSTICO/R/M3/m3_normas_continuas_R_v1.xlsx`; agregados en `datos/agregados/M3/v1/`. La estabilidad se calculó con 20 repeticiones (ejecución en el PC del proyecto, R 4.6.2, 03/11/2026; las demás cifras coinciden exactamente con la primera ejecución); para el artículo, 100.
