@@ -24,9 +24,9 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 - **Método:** Modelo jerárquico de velocidad y exactitud; ítems no alcanzados modelados con el tiempo [@vanderlinden2007tiempos; @pohl2019noalcanzados].
 - **Revistas posibles:** *Psychometrika*, *Journal of Educational Measurement*, *British Journal of Mathematical and Statistical Psychology*.
 
-### M3 · Normas continuas con datos longitudinales
+### [M3 · Normas continuas con datos longitudinales](desarrollos/M3.qmd){.enlace-discreto}
 
-- **Pregunta:** ¿Qué método da baremos más precisos cuando hay tres momentos por curso: cNORM, GAMLSS o normas basadas en TRI?
+- **Pregunta:** ¿Qué método da baremos más precisos cuando hay tres momentos por curso: cNORM, GAMLSS o normas basadas en TRI? ¿Y sobre qué eje: la edad o el tiempo de enseñanza?
 - **Datos:** Puntuaciones por momento y edad en meses; ítems donde los hay.
 - **Método:** Comparación de métodos de normas continuas, con validación cruzada entre cohortes [@lenhard2018cnorm; @timmerman2021gamlss; @heister2024normas; @urban2024normas].
 - **Revistas posibles:** *Psychological Methods*, *Assessment*.
