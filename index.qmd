@@ -46,10 +46,12 @@ Orden de autoría provisional, pendiente de confirmar:
 3. Marisol Carrillo Gallego (Departamento de Psicología Evolutiva y de la Educación, Universidad de Murcia).
 4. Almudena Giménez de la Peña (Departamento de Psicología Básica, Universidad de Málaga).
 5. Amanda Flores Marín (Departamento de Psicología Básica, Universidad de Málaga).
-6. Pedro Javier López-Pérez (Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga).
+6. Ricardo Cruz Arándiga (Grupo LEEDUCA, Universidad de Málaga).
+7. María Rodríguez (Grupo LEEDUCA, Universidad de Málaga).
+8. Pedro Javier López-Pérez (Departamento de Psicología Evolutiva y de la Educación, Universidad de Málaga).
 
 La autoría definitiva se acordará antes de depositar la versión de consulta.
 
 ## Cómo citar este borrador
 
-Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A. y López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.9). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/
+Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez, M. y López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.9). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/
