@@ -91,17 +91,21 @@ Cada curso son 29 semanas de aplicación diaria, con 4 bloques por semana a los 
 
 ## Niveles de intervención en la plataforma
 
-En la plataforma, Preleo no es solo el programa de aula. La sección «Sistemas de intervención › Preleo» organiza un modelo de respuesta a la intervención en tres piezas, unidas por el cribado trimestral:
+En la plataforma, Preleo no es solo el programa de aula. La sección «Sistemas de intervención › Preleo» organiza un modelo de respuesta a la intervención en tres niveles, unidos por el cribado trimestral y el seguimiento semanal:
 
-| Pieza | Para quién | Formato | Contenido |
+| Nivel | Para quién | Formato | Contenido en la plataforma |
 |---|---|---|---|
-| **Programa universal** | Toda la clase | Grupo, en el aula | Temporalización y programación de 3, 4 y 5 años, con fichas y canciones descargables |
-| **Programa de repaso** | Cada niño | Individual, una sesión semanal | Las semanas del programa universal (18 a los 3 años, 32 a los 4 y 32 a los 5), hechas por el niño con su propio usuario. Se aplica la semana *siguiente* a la trabajada en grupo, de modo que el tiempo, los aciertos y la eficiencia hacen de línea base y de medida semanal del progreso |
-| **Intensificación** | Niños con riesgo en el cribado o con respuesta insuficiente | Individual, diaria | Dos modalidades: sugerida y personalizable (abajo) |
+| **Nivel 1 · Universal** | Toda la clase | Grupo, en el aula | Programa universal: temporalización y programación de 3, 4 y 5 años, con fichas y canciones descargables |
+| **Nivel 2 · Grupos reducidos** | Niños con riesgo en el cribado o con respuesta insuficiente | Pequeño grupo | El contenido del programa universal, con más intensidad y apoyo |
+| **Nivel 3 · Intervención personalizada** | Niños que no responden lo suficiente al nivel 2 | Individual, diaria | Programa de intensificación, que el especialista personaliza a partir de las sugerencias del sistema (abajo) |
+
+En todos los niveles, el **programa de repaso** hace de seguimiento. Contiene las semanas del programa universal (18 a los 3 años, 32 a los 4 y 32 a los 5) y cada niño las hace solo, con su propio usuario, una vez por semana. Se aplica la semana *siguiente* a la trabajada en grupo, de modo que el tiempo, los aciertos y la eficiencia hacen de línea base y de medida semanal del progreso.
+
+**En CMCI** (curso 2026/27) se prueba el nivel 2: tres sesiones semanales en pequeño grupo con la semana actual del programa universal y una sesión individual de repaso con la semana siguiente. Los especialistas tienen además acceso al nivel 3 para personalizar la intervención.
 
 La plataforma tiene también, sin uso descrito todavía, una «Paleta Leeduca» por aula y el programa **Leetrea** para el aprendizaje de la lectura (universal y repaso), cuyos enlaces aún no llevan a ningún contenido.
 
-### Intensificación sugerida: 45 semanas prediseñadas
+### Nivel 3 (1): sugerencias del sistema, 45 semanas prediseñadas
 
 Cada semana es una sesión de la plataforma con cinco días (lunes a viernes) y un **patrón fijo de componentes** que se repite cada día en el mismo orden. Cambian el contenido y la dificultad. Se pueden aplicar la semana completa o solo el componente que el cribado señala.
 
@@ -113,9 +117,9 @@ Cada semana es una sesión de la plataforma con cinco días (lunes a viernes) y 
 
 Los tres bloques de 15 semanas siguen la misma progresión que el programa de aula de 3, 4 y 5 años. Lo propio de la intensificación es que trabaja **cada día** dos componentes que el aula no trabaja de forma sistemática: la velocidad de denominación (RAN) y la memoria verbal. Son los mismos dominios que evalúa el cribado, y el material de formación del equipo indica, prueba a prueba, en qué semanas se entrena cada debilidad (por ejemplo, rimas en la semana 1, identificar sílabas en la 20 y la 26, pares mínimos en las 35–45).
 
-### Intensificación personalizable: índice de actividades
+### Nivel 3 (2): personalización por el especialista
 
-Para perfiles muy focalizados, el docente o especialista elige el nivel de conciencia fonológica del niño y monta su propia secuencia:
+El especialista parte de la secuencia sugerida y la ajusta al perfil del niño: puede aplicar solo los componentes que el cribado señala o, para perfiles muy focalizados, elegir el nivel de conciencia fonológica y montar su propia secuencia con el índice de actividades:
 
 | Nivel | Bloques | Ejemplos |
 |---|---|---|
@@ -127,9 +131,9 @@ Cada bloque tiene 5 sesiones de 5 actividades, es decir, unas 2.100 actividades 
 
 ### Cómo se decide
 
-Según el material de formación del equipo, la intensificación se justifica con el cribado y la monitorización repetidos, no con un único dato. Se mantiene o se retira según la trayectoria, y un niño puede seguir con intensificación después de salir de la zona de riesgo si mantiene una diferencia funcional con su grupo. Lo mínimo que hay que registrar es la fecha de inicio, el motivo, la dosis y los componentes. Esto es justo lo que hace falta para estudiar la intensificación como dosis (ver [Cómo mejorar la aplicación y el seguimiento](fidelidad.qmd)).
+Según el material de formación del equipo, el paso a un nivel más intenso se justifica con el cribado y la monitorización repetidos, no con un único dato. Se mantiene o se retira según la trayectoria, y un niño puede seguir con apoyo después de salir de la zona de riesgo si mantiene una diferencia funcional con su grupo. Lo mínimo que hay que registrar es la fecha de inicio, el motivo, la dosis y los componentes. Esto es justo lo que hace falta para estudiar la intervención como dosis (ver [Cómo mejorar la aplicación y el seguimiento](fidelidad.qmd)).
 
-*Pendiente:* fijar la numeración de niveles. El material de formación llama a la intensificación «Nivel 2»; en otros documentos del grupo es el nivel 3.
+Las sugerencias actuales del sistema son una secuencia fija que el especialista adapta. Hacer que el sistema recomiende la sesión siguiente a partir de los datos de cada niño (cribado y repaso semanal) es el objetivo de [M25](../desarrollos/M25.qmd).
 
 ## Qué entrena Preleo y qué mide la plataforma
 
