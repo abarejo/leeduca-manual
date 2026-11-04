@@ -1100,6 +1100,7 @@ div.csl-indent {
   <li><a href="#qué-permite-un-diagnóstico-temprano" id="toc-qué-permite-un-diagnóstico-temprano" class="nav-link" data-scroll-target="#qué-permite-un-diagnóstico-temprano">¿Qué permite un diagnóstico temprano?</a></li>
   <li><a href="#resultados-de-la-segunda-fase" id="toc-resultados-de-la-segunda-fase" class="nav-link" data-scroll-target="#resultados-de-la-segunda-fase">Resultados de la segunda fase</a></li>
   </ul></li>
+  <li><a href="#los-cinco-niveles-de-certeza-en-los-dos-ciclos" id="toc-los-cinco-niveles-de-certeza-en-los-dos-ciclos" class="nav-link" data-scroll-target="#los-cinco-niveles-de-certeza-en-los-dos-ciclos">Los cinco niveles de certeza en los dos ciclos</a></li>
   <li><a href="#cómo-se-analiza" id="toc-cómo-se-analiza" class="nav-link" data-scroll-target="#cómo-se-analiza">Cómo se analiza</a></li>
   <li><a href="#figuras-previstas" id="toc-figuras-previstas" class="nav-link" data-scroll-target="#figuras-previstas">Figuras previstas</a></li>
   <li><a href="#esqueleto-del-artículo" id="toc-esqueleto-del-artículo" class="nav-link" data-scroll-target="#esqueleto-del-artículo">Esqueleto del artículo</a></li>
@@ -1635,6 +1636,98 @@ Tabla&nbsp;2: AUC en la cohorte que no se usó para ajustar el modelo (validaci�
 </ol>
 <p><strong>Lectura.</strong> Sin circularidad los AUC son moderados, pero tienen sentido teórico y se replican. El análisis factorial del capítulo 6 da la misma imagen desde la estructura: exactitud y fluidez son casi la misma habilidad a los 5–6 años (r = .94–.98) y se separan a los 7–8 (r = .74–.75).</p>
 </section>
+</section>
+<section id="los-cinco-niveles-de-certeza-en-los-dos-ciclos" class="level2">
+<h2 class="anchored" data-anchor-id="los-cinco-niveles-de-certeza-en-los-dos-ciclos">Los cinco niveles de certeza en los dos ciclos</h2>
+<p><em>Añadido el 04/11/2026 a petición de Juan Luis Luque. Script: <code>m26_niveles_v1.R</code>; tablas agregadas en <code>datos/agregados/M26/niveles_v1/</code>.</em></p>
+<p>¿Siguen los cinco niveles de certeza del manual (DL-A, DL-B, TR, INT y TE) el mismo patrón de los dos ciclos que los tres grupos de lectura a los 8 años? Los niveles originales se definen con la lectura de 6 a 11 años, de modo que en parte usan los mismos datos que la exactitud a 6–7 años. Por eso hay dos versiones:</p>
+<ul>
+<li><strong>A. Niveles originales</strong> (lectura de 6 a 11 años, cohortes 2010–2013). Es descriptiva: muestra cómo es la trayectoria de cada nivel.</li>
+<li><strong>B. Niveles recalculados solo con la lectura de 8 años en adelante</strong>, con las mismas reglas (cohortes 2010–2012). Es la prueba sin circularidad para lo que pasa antes de los 8 años. Coincide con el nivel original en el 90 % de los niños que tienen las dos etiquetas.</li>
+</ul>
+<p>Las predicciones se fijaron antes de ver los datos: DL-A dominaría tarde la exactitud y su efecto de longitud no bajaría; DL-B dominaría la exactitud cerca de TE, pero automatizaría despacio; TR se retrasaría al principio y convergería con TE hacia los 8 años; INT, sin predicción.</p>
+<div id="fig-m26-niveles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cuatro paneles de líneas por nivel de certeza: dominio de la exactitud y efecto de longitud, en dos versiones.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m26-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figuras/M26_niveles_dos_ciclos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura&nbsp;8: Los dos ciclos de la lectura con los cinco niveles de certeza. Izquierda: porcentaje acumulado que domina la exactitud (≥ 90 % en palabras y pseudopalabras bisílabas, mantenido; Kaplan-Meier; bandas IC 95 % por bootstrap). Derecha: tiempo por ítem de las trisílabas frente a las bisílabas (medias marginales de un modelo mixto con niño y colegio aleatorios, IC 95 %). Arriba, niveles originales; abajo, niveles con la lectura de 8+ años. El sombreado marca los momentos que se solapan con la definición de B. Solo se muestran celdas con al menos 10 niños."><img src="../figuras/M26_niveles_dos_ciclos.png" class="img-fluid figure-img" alt="Cuatro paneles de líneas por nivel de certeza: dominio de la exactitud y efecto de longitud, en dos versiones."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m26-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Los dos ciclos de la lectura con los cinco niveles de certeza. Izquierda: porcentaje acumulado que domina la exactitud (≥ 90 % en palabras y pseudopalabras bisílabas, mantenido; Kaplan-Meier; bandas IC 95 % por bootstrap). Derecha: tiempo por ítem de las trisílabas frente a las bisílabas (medias marginales de un modelo mixto con niño y colegio aleatorios, IC 95 %). Arriba, niveles originales; abajo, niveles con la lectura de 8+ años. El sombreado marca los momentos que se solapan con la definición de B. Solo se muestran celdas con al menos 10 niños.
+</figcaption>
+</figure>
+</div>
+<div id="tbl-m26-niveles" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m26-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;3: Resumen por nivel. n en la curva de dominio: A 108 / 235 / 383 / 93 / 1.276 (DL-A, DL-B, TR, INT, TE); B 17 / 87 / 156 / 46 / 569.
+</figcaption>
+<div aria-describedby="tbl-m26-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Momento en que la mitad domina la exactitud (A / B)</th>
+<th>% que la domina a 6.3 (A / B)</th>
+<th>Efecto de longitud a 8.3 (A)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TE</td>
+<td>6.1 / 6.2</td>
+<td>80 / 75</td>
+<td>1,05</td>
+</tr>
+<tr class="even">
+<td>TR</td>
+<td>7.1 / 7.1</td>
+<td>44 / 48</td>
+<td>1,20</td>
+</tr>
+<tr class="odd">
+<td>INT</td>
+<td>7.1 / 7.1</td>
+<td>25 / 42</td>
+<td>1,19</td>
+</tr>
+<tr class="even">
+<td>DL-B</td>
+<td>7.2 / 7.2</td>
+<td>10 / 23</td>
+<td>1,33</td>
+</tr>
+<tr class="odd">
+<td>DL-A</td>
+<td>después de 7.3 (39 % a 7.3) / n = 17</td>
+<td>2 / 6</td>
+<td>1,46</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Qué se ve</strong></p>
+<ol type="1">
+<li><strong>Los cinco niveles se ordenan en el ciclo de la exactitud.</strong> TE la domina a 6.1–6.2; TR e INT, a 7.1; DL-B, a 7.2; DL-A no llega a la mitad al final de 2.º. El orden se mantiene en la versión B, sin circularidad, salvo DL-A, que se queda con 17 niños y no permite conclusiones.</li>
+<li><strong>El efecto de longitud dibuja una sola trayectoria con distintos retrasos.</strong> El efecto sube cuando el niño ya lee con exactitud pero por partes, y baja cuando automatiza. En TE ya está bajando a 6.2 (de 1,32 a 1,05 a 8.3). TR e INT llegan al máximo a 7.2 y bajan hasta 1,20. DL-B llega al máximo a 7.3–8.1 y apenas baja (1,33 a 8.3). DL-A sigue subiendo a 8.3 (1,46). La interacción nivel × momento es clara en las dos versiones (A: χ²(24) = 700; B: χ²(19) = 251; p &lt; .001).</li>
+<li><strong>TR se comporta como se esperaba:</strong> empieza con retraso (44 % domina la exactitud a 6.3, frente al 80 % de TE), lo recupera casi del todo a 7.3 (95 % frente a 99 %) y su efecto de longitud empieza a bajar en 2.º. Es la «salida del riesgo» con un perfil propio.</li>
+<li><strong>DL-B no confirma la predicción.</strong> No es «exacto pero lento» a los 6 años: domina la exactitud casi un curso después que TE, como los leves de la segunda fase (7.1). Su rasgo propio aparece después: es exacto en 2.º, pero no automatiza.</li>
+<li><strong>INT se parece a TR</strong>, con algo más de retraso en la exactitud en la versión A.</li>
+</ol>
+<p><strong>Cautelas</strong></p>
+<ul>
+<li>El descenso de todos los niveles a 6.3 y el pico a 7.2 del efecto de longitud aparecen en todos los grupos a la vez: probablemente se deben a las listas de cada sesión. Hay que comparar los niveles dentro de cada momento, no la forma de la curva entre momentos.</li>
+<li>Los momentos de 8 años en adelante se solapan con la definición de la versión B (zona sombreada).</li>
+<li>DL-A e INT tienen pocos niños en la versión B; sus estimaciones son poco precisas.</li>
+</ul>
+<p><strong>Lectura.</strong> Los cinco niveles no son categorías arbitrarias: ocupan posiciones distintas en una misma secuencia de aprendizaje, con distintos retrasos. Primero se domina la exactitud y después aparece y se reduce el efecto de longitud. Esto respalda la propuesta de niveles del manual y da a cada nivel un contenido de desarrollo, que es lo que el informe puede comunicar.</p>
 </section>
 <section id="cómo-se-analiza" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-se-analiza">Cómo se analiza</h2>
