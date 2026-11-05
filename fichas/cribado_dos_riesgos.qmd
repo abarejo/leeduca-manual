@@ -1,0 +1,66 @@
+---
+title: "Cribado de dos riesgos: dislexia y lenguaje oral"
+---
+
+::: {.callout-note appearance="minimal"}
+**Estado:** propuesta en validación (05/11/2026), no una decisión. Describe el procedimiento; los resultados con los datos de la plataforma se publicarán cuando el estudio esté revisado. Complementa la [Propuesta de tareas por curso y trimestre](propuesta_bateria.qmd).
+:::
+
+## En pocas palabras
+
+El riesgo no debería ser una sola puntuación global, sino dos: **riesgo de dislexia** y **riesgo de trastorno del desarrollo del lenguaje (TDL)**, cada uno con sus pruebas. Todos los niños hacen un cribado breve; quien queda marcado completa la batería, y es entonces cuando se decide el perfil (dislexia, lenguaje oral o ambos) y la respuesta.
+
+## Por qué dos riesgos
+
+- **La comprensión lectora tiene dos componentes**, el reconocimiento de palabras y la comprensión del lenguaje oral [@hoover1990simple]. Los precursores del primero (letras, conciencia fonológica, RAN) no son los del segundo (vocabulario y gramática) [@storch2002oral; @hulme2015foundations].
+- **El TDL es frecuente y a menudo pasa desapercibido.** En los estudios poblacionales afecta a alrededor del 7 % de los niños al empezar la escolaridad [@tomblin1997prevalence; @norbury2016scales], y se asocia con más dificultades lectoras, sobre todo de comprensión.
+- **Dislexia y TDL se solapan**, pero no son lo mismo: un niño puede decodificar bien y comprender mal, o al revés. Separar los dos riesgos orienta mejor la intervención.
+
+## El circuito en dos fases
+
+```{mermaid}
+flowchart LR
+  A["Todo el alumnado<br/>pruebas clave"] --> B{"¿Por debajo<br/>del corte?"}
+  B -- no --> C["Enseñanza ordinaria<br/>(Nivel 1)"]
+  B -- sí --> D["Batería completa<br/>en la misma sesión"]
+  D --> E["Perfil dislexia<br/>Nivel 2 de lectura"]
+  D --> F["Perfil lenguaje oral<br/>refuerzo del lenguaje"]
+  D --> G["Ambos<br/>lectura y lenguaje"]
+```
+
+1. **Cribado universal.** Las pruebas clave de dislexia (conocimiento de letras, conciencia fonológica y RAN), más dos tareas breves de lenguaje oral donde el centro pueda atender lo que se detecte: una de **vocabulario** y otra de **gramática**.
+2. **Segunda fase.** Quien queda por debajo del corte en cualquiera de los dos riesgos completa la batería, con el lenguaje oral incluido, en la misma sesión siempre que sea posible. Es el modelo de cribado en dos fases [@compton2010gated].
+3. **Perfil y respuesta.** El perfil se asigna con la batería completa, no con el cribado.
+
+## Tareas de lenguaje oral para el cribado
+
+| Componente | Tarea | Por qué |
+|---|---|---|
+| Vocabulario | Vocabulario: definiciones (1705) | Es la tarea de lenguaje oral más fiable de la plataforma y la que mejor separa a los niños con lenguaje bajo |
+| Gramática | Ordenar frases (193) o recepción gramatical (1542) | Cubren la morfosintaxis, el segundo dominio que exigen los criterios de TDL |
+
+Las tareas de comprensión de frases y de vocabulario de opciones no se recomiendan para decisiones sobre un niño concreto, por su baja fiabilidad. Las de morfología tienen efecto techo a los 5 años.
+
+## Niveles de lenguaje oral
+
+Los niveles siguen la misma lógica que los de la dificultad lectora ([Cómo estimamos el riesgo](../riesgo.qmd)): una puntuación baja en una sola evaluación no basta, hace falta que se repita. Los cortes se toman de los grandes estudios poblacionales de TDL: −1,25 DT en EpiSLI [@tomblin1996system] y −1,5 DT en SCALES [@norbury2016scales]. La persistencia es la que pide el consenso CATALISE [@bishop2017catalise].
+
+| Nivel | Regla | Respuesta |
+|---|---|---|
+| **TL-A** | Vocabulario o gramática por debajo de −1,5 DT (≈ p7) en al menos dos cursos | Derivación a valoración logopédica |
+| **TL-B** | Lenguaje oral ≤ p25 en al menos dos cursos | Refuerzo del lenguaje en el aula (Nivel 2) y seguimiento |
+| **TR** | Lenguaje oral ≤ p25 en algún curso | Seguimiento en la evaluación siguiente |
+| **INT / TE** | Nunca ≤ p25 | Enseñanza ordinaria |
+
+## Cautelas
+
+- **Un nivel de la plataforma no es un diagnóstico de TDL.** El diagnóstico exige una valoración logopédica y la información del desarrollo, el contexto y el impacto funcional [@bishop2017catalise].
+- **No se etiqueta con una sola evaluación.** El lenguaje oral cambia mucho entre los 4 y los 6 años, y las tareas de la plataforma tienen pocos ítems.
+- **Ante un lenguaje oral bajo, conviene vigilar también la lectura**, porque los dos riesgos van a menudo juntos.
+- **Los cortes y las tareas pueden cambiar** cuando se publiquen los resultados de validación con los datos de la plataforma.
+
+## Preguntas abiertas
+
+- ¿Qué tarea de gramática se fija en todos los cursos para que el seguimiento compare lo mismo?
+- ¿Se incluye el lenguaje oral en el cribado de todos los centros o solo donde hay logopeda o maestra de Audición y Lenguaje?
+- ¿Cómo se registra en la plataforma la clave de las tareas de elección de imagen, para poder calcular su fiabilidad ítem a ítem?
