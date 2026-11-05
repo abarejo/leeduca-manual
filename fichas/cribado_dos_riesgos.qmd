@@ -36,7 +36,7 @@ flowchart LR
 
 | Componente | Tarea | Por qué |
 |---|---|---|
-| Vocabulario | Vocabulario: definiciones (1705) | Es la tarea de lenguaje oral más fiable de la plataforma y la que mejor separa a los niños con lenguaje bajo |
+| Vocabulario | Vocabulario: definiciones (1705) | Es la tarea de lenguaje oral con más ítems y más fiable de la plataforma |
 | Gramática | Ordenar frases (193) o recepción gramatical (1542) | Cubren la morfosintaxis, el segundo dominio que exigen los criterios de TDL |
 
 Las tareas de comprensión de frases y de vocabulario de opciones no se recomiendan para decisiones sobre un niño concreto, por su baja fiabilidad. Las de morfología tienen efecto techo a los 5 años.
