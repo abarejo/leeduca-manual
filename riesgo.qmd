@@ -50,7 +50,7 @@ tabla(E[, c("cohorte", "evaluables", "%DL-A", "%DL-B", "%TR", "%INT", "%TE")],
       c("Cohorte", "Niños con etiqueta", "DL-A", "DL-B", "TR", "INT", "TE"), digitos = 1)
 ```
 
-En el conjunto de las cohortes, el 15 % de los niños tiene una dificultad persistente (4 % grave y 11 % moderada). Otro 20 % pasa por una dificultad transitoria. Las proporciones son parecidas en los centros con y sin Preleo (15,6 % y 14,3 % de dificultad persistente). Esta comparación es descriptiva: no mide el efecto del programa, que se estudia con otro diseño (ver [Preleo en los datos](preleo/datos.qmd)).
+En el conjunto de las cohortes, el 15 % de los niños tiene una dificultad persistente (4 % grave y 11 % moderada). Otro 20 % pasa por una dificultad transitoria. Las proporciones son parecidas en los centros con y sin Preleo (15,6 % y 14,3 % de dificultad persistente). Esta comparación es descriptiva: no mide el efecto del programa, que se estudia con otro diseño.
 
 ## Por qué hace falta más de un curso
 

@@ -384,7 +384,7 @@ Primera medida a 6–7 años frente a baja comprensión posterior. Cohorte 2010.
 
 En velocidad en texto (forma 2034), los baremos continuos por edad se desvían de forma sistemática dentro del curso. Con cNORM por edad, el 22 % de los niños queda bajo el P10 a 6.3 y solo el 4 % a 7.3. Sobre los meses de enseñanza, el mismo método se queda entre el 8 y el 13 % en todos los momentos. La tabla por momento sigue siendo la referencia publicada; el modelo continuo sobre la enseñanza es el que se propone para fechas intermedias. Suelo: 8 % de ceros a 6.3.
 
-Detalle en el [estudio M3](../desarrollos/M3.qmd).
+Detalle en el estudio M3.
 :::
 
 ## 5. Uso en el aula y en el informe; pendientes

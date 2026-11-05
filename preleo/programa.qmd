@@ -131,13 +131,13 @@ Cada bloque tiene 5 sesiones de 5 actividades, es decir, unas 2.100 actividades 
 
 ### Cómo se decide
 
-Según el material de formación del equipo, el paso a un nivel más intenso se justifica con el cribado y la monitorización repetidos, no con un único dato. Se mantiene o se retira según la trayectoria, y un niño puede seguir con apoyo después de salir de la zona de riesgo si mantiene una diferencia funcional con su grupo. Lo mínimo que hay que registrar es la fecha de inicio, el motivo, la dosis y los componentes. Esto es justo lo que hace falta para estudiar la intervención como dosis (ver [Cómo mejorar la aplicación y el seguimiento](fidelidad.qmd)).
+Según el material de formación del equipo, el paso a un nivel más intenso se justifica con el cribado y la monitorización repetidos, no con un único dato. Se mantiene o se retira según la trayectoria, y un niño puede seguir con apoyo después de salir de la zona de riesgo si mantiene una diferencia funcional con su grupo. Lo mínimo que hay que registrar es la fecha de inicio, el motivo, la dosis y los componentes. Esto es justo lo que hace falta para estudiar la intervención como dosis (ver Cómo mejorar la aplicación y el seguimiento).
 
-Las sugerencias actuales del sistema son una secuencia fija que el especialista adapta. Hacer que el sistema recomiende la sesión siguiente a partir de los datos de cada niño (cribado y repaso semanal) es el objetivo de [M25](../desarrollos/M25.qmd).
+Las sugerencias actuales del sistema son una secuencia fija que el especialista adapta. Hacer que el sistema recomiende la sesión siguiente a partir de los datos de cada niño (cribado y repaso semanal) es una línea de trabajo del grupo.
 
 ## Qué entrena Preleo y qué mide la plataforma
 
-Varias actividades de Preleo ejercitan las mismas operaciones que evalúan las tareas de conciencia fonológica de la plataforma a los 4 y 5 años (contar, unir y quitar sílabas y fonemas, conocimiento de letras). Por eso, una diferencia en esas tareas al final de Infantil es en parte **transferencia cercana**. La prueba exigente del programa es la lectura de palabras, pseudopalabras, fluidez y comprensión a los 6 y 7 años, que el programa no entrena de forma directa. Esto se tiene en cuenta en los baremos (referencia preferente: centros sin Preleo) y en [Preleo en los datos](datos.qmd).
+Varias actividades de Preleo ejercitan las mismas operaciones que evalúan las tareas de conciencia fonológica de la plataforma a los 4 y 5 años (contar, unir y quitar sílabas y fonemas, conocimiento de letras). Por eso, una diferencia en esas tareas al final de Infantil es en parte **transferencia cercana**. La prueba exigente del programa es la lectura de palabras, pseudopalabras, fluidez y comprensión a los 6 y 7 años, que el programa no entrena de forma directa. Esto se tiene en cuenta en los baremos (referencia preferente: centros sin Preleo) y en los análisis del grupo.
 
 ## Antecedentes y estudios publicados
 
@@ -150,7 +150,7 @@ Estudios del grupo sobre sus efectos:
 - **Evaluación externa (curso 2014/15).** La Agencia Andaluza de Evaluación Educativa comparó 8 centros LEEDUCA con 8 centros de control de tamaño e índice socioeconómico parecidos. En 1.º de Primaria encontró más alumnado con lectura expresiva y mejor comprensión en los centros LEEDUCA [@sanchezgomez_cuadernos].
 - **Centros de nivel socioeconómico muy bajo.** En dos centros con Preleo durante 76 semanas (3, 4 y 5 años) frente a dos de control, con 56 y 63 niños, hubo mejoras en letras a los 5 años, en la ruta fonológica y luego en la visual en 1.º (d ≈ 0,44–0,58), y en velocidad y entonación del texto en 2.º (d ≈ 0,56–0,62). No hubo efecto en comprensión [@sanchezgomez2022proteger].
 - **Aulas ordinarias (22 colegios, de 4 a 7 años).** Mejor conciencia fonológica en el grupo con Preleo y efectos en la lectura uno y dos años después del programa [@sanchezgomez2023cf].
-- **Cohorte 2010 (20 colegios, de 5 a 7 años).** Ver [Preleo en los datos](datos.qmd) [@sanchezgomez2025].
+- **Cohorte 2010 (20 colegios, de 5 a 7 años).** Ver @sanchezgomez2025.
 
 Con datos de la plataforma, el grupo también ha estudiado perfiles de riesgo antes de leer. Con conciencia fonológica, denominación rápida, letras y memoria verbal a los 5 años (795 niños), solo el perfil de bajo rendimiento global corresponde a un doble déficit, y el 92,5 % de esos niños leía mal en 2.º [@flores2026dobledeficit].
 
@@ -162,4 +162,4 @@ El contenido de Preleo ha cambiado con los años. Esto importa al comparar cohor
 - **Cohorte 2011:** desde los 4 años y durante tres cursos.
 - **Versión actual:** los cinco bloques descritos arriba, de 3 a 5 años, con la temporalización de los dossiers. Los bloques de fluidez y comprensión se añadieron para reforzar los efectos sobre esos componentes de la lectura.
 
-*Pendiente:* fecha de edición de los dossiers y versión aplicada a cada cohorte y colegio; medida de la fidelidad de aplicación (ver [Preleo en los datos](datos.qmd)).
+*Pendiente:* fecha de edición de los dossiers y versión aplicada a cada cohorte y colegio; medida de la fidelidad de aplicación.

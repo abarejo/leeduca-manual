@@ -1,7 +1,0 @@
-﻿analisis,n_casos,aulas,marcados_docente,termino,estimacion,ic_inf,ic_sup,p_boot,OR_mixto,p_mixto
-4 años → lectura ≤ P25 a los 6 · apoyo familiar percibido,67,16,33,OR_LEEDUCA_por_DT,1.003,0.485,1.721,0.992,0.883,0.784
-4 años → lectura ≤ P25 a los 6 · apoyo familiar percibido,67,16,33,OR_contexto_por_DT,0.785,0.257,1.37,0.4,0.607,0.304
-7 años → lectura ≤ P25 a los 8 · apoyo familiar percibido,41,9,24,OR_LEEDUCA_por_DT,0.468,0.206,1.031,0.062,,
-7 años → lectura ≤ P25 a los 8 · apoyo familiar percibido,41,9,24,OR_contexto_por_DT,0.522,0.157,0.86,0.01,,
-7 años → lectura ≤ P25 a los 10 · apoyo familiar percibido,20,6,13,OR_LEEDUCA_por_DT,1.132,0.224,27.058,0.862,,
-7 años → lectura ≤ P25 a los 10 · apoyo familiar percibido,20,6,13,OR_contexto_por_DT,0.213,0,0.369,0.004,,

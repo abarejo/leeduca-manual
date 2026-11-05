@@ -157,7 +157,7 @@ ficha_auto <- function(TAREA) {
     if (length(suelo10)) out("**Efecto suelo.** En ", y_es(suelo10), " el P10 coincide con la peor puntuación posible",
                              if (length(suelo25)) paste0(" (en ", y_es(suelo25), ", también el P25)") else "",
                              ": muchos niños empatan en el mínimo y el baremo no distingue entre ellos. En esos momentos esta tarea no sirve para graduar la dificultad.")
-    out("Es un baremo por momento (curso × trimestre). Para fechas entre evaluaciones y momentos sin muestra normativa, el [estudio M3](../../desarrollos/M3.qmd) propone un baremo continuo sobre los **meses de enseñanza**, no sobre la edad, con la edad relativa dentro del curso como ajuste.")
+    out("Es un baremo por momento (curso × trimestre). Para fechas entre evaluaciones y momentos sin muestra normativa, el estudio M3 propone un baremo continuo sobre los **meses de enseñanza**, no sobre la edad, con la edad relativa dentro del curso como ajuste.")
     f1 <- file.path(rl, "figuras", paste0("Ficha_auto_", TAREA, "_F1_baremo.png")); if (file.exists(f1)) out("![Baremo provisional (centros sin Preleo).](../../figuras/Ficha_auto_", TAREA, "_F1_baremo.png){width=85%}")
   } else out("No hay momentos con al menos 100 niños de referencia.")
   if (ff && nrow(EQ)) {

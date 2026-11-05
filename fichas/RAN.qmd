@@ -306,7 +306,7 @@ La plataforma tiene «experimentos implícitos»: comparaciones que el diseño d
 
 En el RAN de objetos con fonema (1925), los métodos continuos son más estables que la tabla por momento (hasta un 30 % menos de variación del P10 entre dos mitades de la muestra), pero entre 5.2 y 6.2 no hay datos y el polinomio de cNORM se hunde en ese hueco. Hasta tener datos de 5.3–6.1, no se debe interpolar el baremo continuo en ese tramo. En el RAN no hay efecto suelo (los tiempos no se acumulan en el máximo).
 
-Detalle en el [estudio M3](../desarrollos/M3.qmd).
+Detalle en el estudio M3.
 :::
 
 ## 7. Pendientes e incidencias

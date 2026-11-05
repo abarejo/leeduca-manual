@@ -149,7 +149,7 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 
 TECLE no entró en la comparación de M3, porque cada cohorte se evaluó a una edad distinta (7.2 en 2013, 8.2 en 2012, 10.2 en 2010) y no se puede validar reservando una cohorte. Precisamente por eso es la tarea que más necesita un baremo continuo para cubrir los cursos intermedios: se hará cuando se añadan las cohortes 2014–2015 y los datos del servidor 2020–2026.
 
-Detalle en el [estudio M3](../desarrollos/M3.qmd).
+Detalle en el estudio M3.
 :::
 
 ## Otras versiones (en construcción)

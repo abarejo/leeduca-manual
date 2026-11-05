@@ -4,7 +4,6 @@ project:
     - apps/
     - datos/agregados/CATALOGO/
     - figuras/pantallas/
-    - borradores/
   output-dir: _book
 
 lang: es
@@ -191,37 +190,12 @@ book:
     - part: "Preleo"
       chapters:
         - preleo/programa.qmd
-        - preleo/datos.qmd
-        - preleo/control-calidad.qmd
-        - preleo/fidelidad.qmd
   appendices:
     - informe-aula.qmd
     - consultas.qmd
     - novedades.qmd
     - colaborar.qmd
     - referencias.qmd
-    # páginas de desarrollo de la Agenda: se generan pero no se ven en el índice (ver estilo.scss y colaborar.qmd)
-    - desarrollos/M3.qmd
-    - desarrollos/M4M7.qmd
-    - desarrollos/M5.qmd
-    - desarrollos/M10.qmd
-    - desarrollos/M11.qmd
-    - desarrollos/M12.qmd
-    - desarrollos/M8.qmd
-    - desarrollos/RADAR.qmd
-    - desarrollos/M18.qmd
-    - desarrollos/M19.qmd
-    - desarrollos/M20.qmd
-    - desarrollos/M22.qmd
-    - desarrollos/M23.qmd
-    - desarrollos/M24.qmd
-    - desarrollos/M25.qmd
-    - desarrollos/M26.qmd
-    - desarrollos/M27.qmd
-    - desarrollos/M28.qmd
-    - desarrollos/M29.qmd
-    - desarrollos/PRELEO_QC.qmd
-    - desarrollos/PRELEO_EFECTOS.qmd
 
 bibliography: referencias.bib
 

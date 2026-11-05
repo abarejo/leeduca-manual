@@ -21,16 +21,16 @@ n_nino <- if (nrow(P)) sum(grepl("niño", P$respuesta, ignore.case = TRUE)) else
 
 ## Mapa del capítulo
 
-| Apartado | Qué responde | Estado | Estudio que lo desarrolla |
-|---|---|---|---|
-| Para qué se diseñó · De dónde viene | Principios de diseño e historia, de DIS-ESP a la plataforma actual | Borrador; faltan las fechas del cambio de plataforma | — |
-| Cómo se aplica | Quién aplica, cómo se corrige y cuánto dura | Borrador: aplicación individual con evaluador en 50 de 63 actividades leídas | [M13](desarrollos/RADAR.qmd) (el evaluador como fuente de error) |
-| Cómo está organizada · Qué registra | Actividades, sesiones, registros, aciertos y tiempos ítem a ítem | Borrador | M2 (velocidad y exactitud ítem a ítem), [M15](desarrollos/RADAR.qmd) (respuestas sin esfuerzo) |
-| Qué evalúa · Sesiones y cohortes | Tareas por dominio y clase; momentos con datos por cohorte | Tablas calculadas con el catálogo | [M8](desarrollos/M8.qmd) (artículo de datos), [M16](desarrollos/RADAR.qmd) (escolarización frente a maduración) |
-| Versiones y formatos | Papel, tableta, 3 años, catalán y valenciano | Borrador; equivalencia hecha solo en TECLE | M6 (papel, plataforma y pandemia), [M22](desarrollos/M22.qmd) (fuera de Málaga) |
-| Calidad de los datos | Incidencias conocidas y cómo se tratan | Lista de incidencias y [detectores de incongruencias](preleo/control-calidad.qmd) | M15, [M26](desarrollos/M26.qmd) (incidencia de 8.2) |
+| Apartado | Qué responde | Estado |
+|---|---|---|
+| Para qué se diseñó · De dónde viene | Principios de diseño e historia, de DIS-ESP a la plataforma actual | Borrador; faltan las fechas del cambio de plataforma |
+| Cómo se aplica | Quién aplica, cómo se corrige y cuánto dura | Borrador: aplicación individual con evaluador en 50 de 63 actividades leídas |
+| Cómo está organizada · Qué registra | Actividades, sesiones, registros, aciertos y tiempos ítem a ítem | Borrador |
+| Qué evalúa · Sesiones y cohortes | Tareas por dominio y clase; momentos con datos por cohorte | Tablas calculadas con el catálogo |
+| Versiones y formatos | Papel, tableta, 3 años, catalán y valenciano | Borrador; equivalencia hecha solo en TECLE |
+| Calidad de los datos | Incidencias conocidas y cómo se tratan | Lista de incidencias y detectores de incongruencias |
 
-Los estudios con enlace ya tienen página con análisis; los demás están planteados en la [Agenda](agenda.qmd).
+Los análisis que desarrollan estos apartados están en el espacio interno del grupo (acceso restringido).
 
 
 ## Para qué se diseñó
@@ -167,7 +167,7 @@ Las cohortes no tienen todas los mismos momentos: las primeras empiezan a los 5 
 | **Colombia** | Uso clínico y escolar; TECLE con 3 minutos en lugar de 5 | Pendiente: ficha o anexo |
 | **Adultos** | Batería para estudiantes universitarios y adultos | Fuera del alcance de esta versión |
 
-Los datos actuales del servidor (desde octubre de 2023) incluyen ya más de 6.500 usuarios de unos 360 centros, dentro y fuera de Málaga. Servirán para ampliar las muestras y para los baremos de las nuevas versiones (ver el estudio M22 en la [Agenda](agenda.qmd)).
+Los datos actuales del servidor (desde octubre de 2023) incluyen ya más de 6.500 usuarios de unos 360 centros, dentro y fuera de Málaga. Servirán para ampliar las muestras y para los baremos de las nuevas versiones .
 
 ## La batería DIS-ESP
 

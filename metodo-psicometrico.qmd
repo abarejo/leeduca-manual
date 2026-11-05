@@ -17,16 +17,16 @@ n_alguna <- sum(!is.na(E$alfa_2021) | !is.na(E$estabilidad_rho))
 
 ## Mapa del capítulo
 
-| Apartado | Qué responde | Estado | Estudio que lo desarrolla |
-|---|---|---|---|
-| 5.1 Puntuaciones | Qué número representa a cada tarea y cuándo una sesión no es válida | Familias y medida principal definidas; detectores de sesiones anómalas en prueba | M2, M13, M15 |
-| 5.2 Fiabilidad | Cuánto error tiene cada puntuación | α de 2021 y estabilidad en parte de las tareas; ω y TRI pendientes | M2, M14 |
-| 5.3 Validez | Para qué sirve cada puntuación | Validez predictiva frente a la dificultad persistente; criterio externo Woodcock-Muñoz; estructura e invarianza pendientes | M1, M5, M6, M10, M17 |
-| 5.4 Baremación | Con quién se compara a un niño | Baremos empíricos por momento; continuos pendientes | M3, M4, M16, M22 |
-| 5.5 Cuánto cambio importa | Cuándo un avance es real e importante | Cambio fiable en letras y velocidad; anclas en desarrollo | M4+M7, M19, M25 |
-| 5.6 Equidad | Si la tarea mide igual en todos los grupos | Predicción diferencial en la ficha de letras; resto pendiente | M6, M22 |
+| Apartado | Qué responde | Estado |
+|---|---|---|
+| 5.1 Puntuaciones | Qué número representa a cada tarea y cuándo una sesión no es válida | Familias y medida principal definidas; detectores de sesiones anómalas en prueba |
+| 5.2 Fiabilidad | Cuánto error tiene cada puntuación | α de 2021 y estabilidad en parte de las tareas; ω y TRI pendientes |
+| 5.3 Validez | Para qué sirve cada puntuación | Validez predictiva frente a la dificultad persistente; criterio externo Woodcock-Muñoz; estructura e invarianza pendientes |
+| 5.4 Baremación | Con quién se compara a un niño | Baremos empíricos por momento; continuos pendientes |
+| 5.5 Cuánto cambio importa | Cuándo un avance es real e importante | Cambio fiable en letras y velocidad; anclas en desarrollo |
+| 5.6 Equidad | Si la tarea mide igual en todos los grupos | Predicción diferencial en la ficha de letras; resto pendiente |
 
-Los estudios con enlace en la Agenda ya tienen una página de desarrollo con análisis exploratorios; los demás están solo planteados.
+Los análisis que desarrollan estos apartados están en el espacio interno del grupo (acceso restringido).
 
 ## 5.1 Puntuaciones
 
@@ -38,7 +38,6 @@ Los estudios con enlace en la Agenda ya tienen una página de desarrollo con an�
 
 **Validez de la sesión.** Con los tiempos por ítem se puede detectar una aplicación anómala: tiempos a cero, unidades distintas, interrupciones, respuestas demasiado rápidas o resultados incongruentes con el propio niño en otros momentos. Ya hay un primer conjunto de reglas fijadas de antemano, probado en las tareas de denominación rápida. La propuesta es que cada puntuación vaya con una marca de **sesión fiable** o **revisar**.
 
-- **Desarrolla:** M2 (velocidad y exactitud ítem a ítem), M13 (el evaluador como fuente de error) y M15 (abandono y respuestas sin esfuerzo), en el [radar metodológico](desarrollos/RADAR.qmd).
 - **Falta:** extender los detectores a todas las tareas y decidir los umbrales.
 
 ## 5.2 Fiabilidad
@@ -55,7 +54,6 @@ Los estudios con enlace en la Agenda ya tienen una página de desarrollo con an�
 
 **Error típico y bandas.** Cada percentil se acompaña de su banda de confianza al 90 %, calculada con el error típico de medida. Con TRI, el error es **condicional**: más ancho en los extremos, donde se toman las decisiones de riesgo.
 
-- **Desarrolla:** M2 (modelos de tiempos de respuesta e ítems no alcanzados) y M14 (una escala común de decodificación de 4 a 11 años con TRI).
 - **Falta:** ω y TRI con las respuestas ítem a ítem de la plataforma nueva para todas las tareas de clase A y B; test-retest a corto plazo en las tareas de velocidad. Es lo que más clases de calidad puede cambiar.
 
 ## 5.3 Validez
@@ -63,17 +61,16 @@ Los estudios con enlace en la Agenda ya tienen una página de desarrollo con an�
 | Fuente de evidencia | Qué se hace | Estado |
 |---|---|---|
 | Contenido | Descripción de la tarea, ítems y consigna leídos de la plataforma; marco teórico breve por tarea | En las fichas piloto y en 18 marcos por dominio |
-| Estructura interna | Factores (precursores, decodificación, fluidez, comprensión) y redes por edad | Redes exploratorias por edad (M1); falta el análisis factorial confirmatorio |
-| Invarianza | Por sexo, formato (plataforma, papel, tableta), periodo y región | Equivalencia papel–plataforma de TECLE; resto pendiente (M6, M22) |
+| Estructura interna | Factores (precursores, decodificación, fluidez, comprensión) y redes por edad | Redes exploratorias por edad; falta el análisis factorial confirmatorio |
+| Invarianza | Por sexo, formato (plataforma, papel, tableta), periodo y región | Equivalencia papel–plataforma de TECLE; resto pendiente |
 | Convergente y criterio externo | Correlación con pruebas externas | Fluidez de Woodcock-Muñoz (ver [Validez frente a la batería Woodcock-Muñoz](criterio-woodcock.qmd)) |
 | Predictiva y diagnóstica | AUC, sensibilidad, especificidad y valores predictivos frente a la dificultad lectora persistente | Hecho con validación entre cohortes (ver [Cómo estimamos el riesgo](riesgo.qmd)) |
-| Consecuencias | Falsos positivos por grupo; efecto del informe en las decisiones | Pendiente (M19) |
+| Consecuencias | Falsos positivos por grupo; efecto del informe en las decisiones | Pendiente |
 
 **El criterio.** La dificultad lectora se define con toda la trayectoria del niño de 6 a 11 años, en niveles de certeza (persistente, transitoria, típica…), no con una sola evaluación. Así el criterio es más estable y se reduce el sesgo de espectro. Cuando el criterio contiene la propia tarea, el AUC se presenta solo como acuerdo, no como validez predictiva.
 
 **Más allá del punto de corte.** La propuesta del manual es dar probabilidades y no solo un corte: razones de verosimilitud por tramos de puntuación y probabilidad posterior según la prevalencia del centro. Los primeros análisis muestran que un modelo bayesiano bien calibrado supera al corte único y que multiplicar razones de verosimilitud sobrestima el riesgo cuando los indicadores están correlacionados.
 
-- **Desarrolla:** M5 (identificación bayesiana), M10 (perfiles de exactitud y de velocidad), M17 (una probabilidad de riesgo común para cualquier batería) y M1 (redes).
 - **Falta:** análisis factorial confirmatorio por edad, invarianza por sexo y formato, y acuerdo del grupo sobre los niveles de certeza y el umbral de dificultad grave (p10 frente a −1,5 DT).
 
 ## 5.4 Baremación
@@ -84,7 +81,6 @@ Los estudios con enlace en la Agenda ya tienen una página de desarrollo con an�
 
 **Normas continuas.** El objetivo es sustituir las tablas empíricas por normas continuas en edad (cNORM o GAMLSS), que suavizan los percentiles, permiten baremar a cualquier edad exacta y aprovechan todas las cohortes a la vez.
 
-- **Desarrolla:** M3 (normas continuas con datos longitudinales), M4 (percentiles de crecimiento), M16 (escolarización frente a maduración) y M22 (normas fuera de Málaga y para las versiones en catalán y valenciano).
 - **Falta:** normas continuas de las tareas de clase A, tablas aparte para centros con Preleo, y baremos de 3 años y de las versiones en otras lenguas.
 
 ## 5.5 Cuánto cambio importa
@@ -95,14 +91,12 @@ En un sistema de seguimiento, la pregunta clave no es solo dónde está un niño
 2. **Percentil de crecimiento:** cuánto ha progresado un niño frente a los que partían del mismo nivel.
 3. **Cambio mínimo relevante:** cuánto cambio importa, anclado en criterios externos (el pronóstico lector, el juicio docente, el paso de dificultad transitoria a persistente) [@anvari2021anclas].
 
-- **Desarrolla:** M4 y M7, que se trabajan juntos; M19 (probabilidad de éxito y cuántas palabras por minuto se ganan al mejorar cada habilidad) y M25 (seguimiento diario con actualización bayesiana).
 - **Falta:** cerrar las anclas y llevar los tres indicadores a las tareas de lectura de clase A.
 
 ## 5.6 Equidad
 
 Una tarea justa mide lo mismo y comete los mismos errores en todos los grupos. Se comprueba de dos formas: **funcionamiento diferencial** de los ítems y de las puntuaciones (sexo, nivel socioeconómico del centro, formato, región) y **predicción diferencial**, es decir, si un mismo punto de corte acierta igual en todos los grupos. En la ficha de letras ya se ha visto que, a igual puntuación, los niños de centros de nivel socioeconómico bajo tienen más riesgo; por eso no se ajusta el corte por nivel socioeconómico.
 
-- **Desarrolla:** M6 (papel, plataforma y pandemia) y M22 (dinámicas poblacionales).
 - **Falta:** tasas de falsos positivos por grupo en las tareas de cribado.
 
 ## Reproducibilidad

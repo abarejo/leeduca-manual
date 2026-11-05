@@ -7,7 +7,7 @@ Decisiones del grupo que afectan a cómo se calculan e interpretan las puntuacio
 | Decisión | Apoyo | Dónde |
 |---|---|---|
 | Los baremos usan como referencia a los niños de centros que no aplicaron Preleo a su cohorte (muestra de referencia normativa). | [U] Que la norma describa el desarrollo sin intervención | [Cómo se construye cada ficha](metodo.qmd) |
-| Un niño cuenta como Preleo solo si su colegio aplicó el programa a su cohorte entre los 4 y los 6 años. Que el colegio aplique Preleo en otros cursos no basta. | [U] | [Preleo en los datos](preleo/datos.qmd) |
+| Un niño cuenta como Preleo solo si su colegio aplicó el programa a su cohorte entre los 4 y los 6 años. Que el colegio aplique Preleo en otros cursos no basta. | [U] | Espacio interno del grupo |
 | Se usan todas las cohortes juntas como referencia, salvo que una cohorte se aparte más de 1 DT de las demás en una tarea; entonces usa su propia referencia. | [D] Diferencia mediana entre cohortes equivalentes d = 0,11 | Fichas |
 | Si en un momento no hay al menos 100 niños de la muestra de referencia, se usa a todos los niños y se indica en la tabla. | [U] | Ficha RAN (4.1) |
 

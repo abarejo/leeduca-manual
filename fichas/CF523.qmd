@@ -74,7 +74,7 @@ tabla(B[, c("mom", "N", "cohortes", "P5", "P10", "P16", "P25", "P50", "P75", "P9
 
 Contar sílabas es un recuento de 0 a 20 aciertos, así que GAMLSS necesita una distribución discreta (beta-binomial). Con ella es el mejor método fuera de muestra (error medio 1,4 puntos de percentil) y todos los métodos quedan a menos de 2,3 puntos del P10 nominal. Suelo: 4 % con cero aciertos a 4.1.
 
-Detalle en el [estudio M3](../desarrollos/M3.qmd).
+Detalle en el estudio M3.
 :::
 
 ## Estudios que abre
@@ -86,7 +86,7 @@ Detalle en el [estudio M3](../desarrollos/M3.qmd).
 | E3 | **Consistencia interna e ítems** | Metodológico | α, ω y dificultad de cada ítem: ¿hay palabras que no discriminan o que dependen del dialecto (sílabas con diptongos)? | Respuestas ítem a ítem de la plataforma nueva (2013–2015), pendientes de procesar. |
 | E4 | **Una o varias habilidades** | Teórico | ¿Replicamos la estructura de un factor general de Anthony et al. (2011) con las tareas de la plataforma? | Varias tareas de CF por momento. |
 | E5 | **Edad relativa** | Exploratorio | El efecto de la edad relativa a los 4 años (d ≈ 0,44) ¿explica parte del riesgo de los nacidos a final de año? | Edad en meses (§ efectos). |
-| E6 | **Comprobación de Preleo** | Prueba de hipótesis | Preleo trabaja la conciencia silábica a los 4 años: ¿mejora contar sílabas entre 4.1 y 5.1 en los colegios que lo aplican? | Cohorte 2011 (asignación v5 propuesta); ver «Preleo en los datos». |
+| E6 | **Comprobación de Preleo** | Prueba de hipótesis | Preleo trabaja la conciencia silábica a los 4 años: ¿mejora contar sílabas entre 4.1 y 5.1 en los colegios que lo aplican? | Cohorte 2011 (asignación v5 propuesta). Análisis en el espacio interno del grupo. |
 
 **Utilidad de cada resultado.**
 
