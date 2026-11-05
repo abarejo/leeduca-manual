@@ -37,7 +37,7 @@ flowchart LR
 | Componente | Tarea | Por qué |
 |---|---|---|
 | Vocabulario | Vocabulario: definiciones (1705) | Es la tarea de lenguaje oral con más ítems y más fiable de la plataforma |
-| Gramática | Recepción gramatical (1542) | Cubre la morfosintaxis, el segundo dominio que exigen los criterios de TDL. Tiene 22 ítems, se aplica desde los 4 años y está en la plataforma actual, así que puede repetirse en todos los cursos |
+| Gramática | Recepción gramatical (1542) | Cubre la morfosintaxis, el segundo dominio que exigen los criterios de TDL. Tiene 21 ítems (más uno de práctica), se aplica desde los 4 años y está en la plataforma actual, así que puede repetirse en todos los cursos |
 
 Juntas cubren las dos vertientes que pide CATALISE: vocabulario expresivo y gramática receptiva [@bishop2017catalise]. Ordenar frases (193) queda como alternativa de gramática a partir de los 6 años; tiene solo 5 ítems y techo.
 
