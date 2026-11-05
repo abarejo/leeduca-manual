@@ -3,7 +3,7 @@ title: "Cribado de dos riesgos: dislexia y lenguaje oral"
 ---
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** propuesta en validación (05/11/2026), no una decisión. Describe el procedimiento; los resultados con los datos de la plataforma se publicarán cuando el estudio esté revisado. Complementa la [Propuesta de tareas por curso y trimestre](propuesta_bateria.qmd).
+**Estado:** propuesta en validación (05/11/2026). Decidido: el lenguaje oral entra en el cribado de todos los centros y la tarea de gramática fija es la recepción gramatical. Describe el procedimiento; los resultados con los datos de la plataforma se publicarán cuando el estudio esté revisado. Complementa la [Propuesta de tareas por curso y trimestre](propuesta_bateria.qmd).
 :::
 
 ## En pocas palabras
@@ -28,7 +28,7 @@ flowchart LR
   D --> G["Ambos<br/>lectura y lenguaje"]
 ```
 
-1. **Cribado universal.** Las pruebas clave de dislexia (conocimiento de letras, conciencia fonológica y RAN), más dos tareas breves de lenguaje oral donde el centro pueda atender lo que se detecte: una de **vocabulario** y otra de **gramática**.
+1. **Cribado universal.** Las pruebas clave de dislexia (conocimiento de letras, conciencia fonológica y RAN), más dos tareas breves de lenguaje oral en todos los centros: una de **vocabulario** y otra de **gramática**. Mejor pocas tareas y bien medidas que muchas y mal.
 2. **Segunda fase.** Quien queda por debajo del corte en cualquiera de los dos riesgos completa la batería, con el lenguaje oral incluido, en la misma sesión siempre que sea posible. Es el modelo de cribado en dos fases [@compton2010gated].
 3. **Perfil y respuesta.** El perfil se asigna con la batería completa, no con el cribado.
 
@@ -37,7 +37,11 @@ flowchart LR
 | Componente | Tarea | Por qué |
 |---|---|---|
 | Vocabulario | Vocabulario: definiciones (1705) | Es la tarea de lenguaje oral con más ítems y más fiable de la plataforma |
-| Gramática | Ordenar frases (193) o recepción gramatical (1542) | Cubren la morfosintaxis, el segundo dominio que exigen los criterios de TDL |
+| Gramática | Recepción gramatical (1542) | Cubre la morfosintaxis, el segundo dominio que exigen los criterios de TDL. Tiene 22 ítems de dificultad creciente, se aplica desde los 4 años y está en la plataforma actual, así que puede repetirse en todos los cursos |
+
+Juntas cubren las dos vertientes que pide CATALISE: vocabulario expresivo y gramática receptiva [@bishop2017catalise]. Ordenar frases (193) queda como alternativa de gramática a partir de los 6 años; tiene solo 5 ítems y techo.
+
+**Las mismas tareas en todos los cursos.** El seguimiento solo compara lo mismo si las tareas no cambian de un curso a otro. Mientras se sustituyen las versiones antiguas, las puntuaciones se expresan en un indicador común (proporción de aciertos o aciertos por minuto) y en percentil dentro de cada edad y trimestre.
 
 Las tareas de comprensión de frases y de vocabulario de opciones no se recomiendan para decisiones sobre un niño concreto, por su baja fiabilidad. Las de morfología tienen efecto techo a los 5 años.
 
@@ -59,8 +63,6 @@ Los niveles siguen la misma lógica que los de la dificultad lectora ([Cómo est
 - **Ante un lenguaje oral bajo, conviene vigilar también la lectura**, porque los dos riesgos van a menudo juntos.
 - **Los cortes y las tareas pueden cambiar** cuando se publiquen los resultados de validación con los datos de la plataforma.
 
-## Preguntas abiertas
+## Pregunta abierta
 
-- ¿Qué tarea de gramática se fija en todos los cursos para que el seguimiento compare lo mismo?
-- ¿Se incluye el lenguaje oral en el cribado de todos los centros o solo donde hay logopeda o maestra de Audición y Lenguaje?
 - ¿Cómo se registra en la plataforma la clave de las tareas de elección de imagen, para poder calcular su fiabilidad ítem a ítem?
