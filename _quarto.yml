@@ -66,6 +66,7 @@ book:
         - fichas/auto/index.qmd
         - fichas/por_edad.qmd
         - fichas/propuesta_bateria.qmd
+        - fichas/cribado_dos_riesgos.qmd
     - part: "Fichas · Lectura"
       chapters:
         - fichas/LET.qmd
