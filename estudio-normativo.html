@@ -877,12 +877,38 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
- <span class="menu-text">Preleo</span></a>
+ <span class="menu-text">Prototipos de informe</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe-tramos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tramos del informe: niveles y zona «a vigilar»</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe-aula.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Prototipo de informe de aula</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe-familias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Prototipo de informe para familias</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Preleo</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preleo/programa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El programa Preleo</span></a>
@@ -892,17 +918,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
  <span class="menu-text">Apéndices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./informe-aula.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Prototipo de informe de aula</span></a>
+  <a href="./summary-en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical summary (English)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -942,6 +968,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#mapa-del-capítulo" id="toc-mapa-del-capítulo" class="nav-link active" data-scroll-target="#mapa-del-capítulo">Mapa del capítulo</a></li>
+  <li><a href="#sec-flujo-muestra" id="toc-sec-flujo-muestra" class="nav-link" data-scroll-target="#sec-flujo-muestra">Diagrama de flujo de la muestra</a></li>
   <li><a href="#cohortes-y-colegios" id="toc-cohortes-y-colegios" class="nav-link" data-scroll-target="#cohortes-y-colegios">4.1 Cohortes y colegios</a></li>
   <li><a href="#niños-por-momento" id="toc-niños-por-momento" class="nav-link" data-scroll-target="#niños-por-momento">4.2 Niños por momento</a></li>
   <li><a href="#seguimiento-y-pérdida-de-la-muestra" id="toc-seguimiento-y-pérdida-de-la-muestra" class="nav-link" data-scroll-target="#seguimiento-y-pérdida-de-la-muestra">4.3 Seguimiento y pérdida de la muestra</a></li>
@@ -1025,8 +1052,115 @@ ul.task-list li input[type="checkbox"] {
 <td>Qué se descarta y por qué</td>
 <td>Recuento de registros</td>
 </tr>
+<tr class="even">
+<td>Diagrama de flujo</td>
+<td>De los registros a la muestra de referencia</td>
+<td>Hecho (08/11/2026)</td>
+</tr>
 </tbody>
 </table>
+</section>
+<section id="sec-flujo-muestra" class="level2">
+<h2 class="anchored" data-anchor-id="sec-flujo-muestra">Diagrama de flujo de la muestra</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-diagrama-flujo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama de flujo con cuatro niveles: registros de la tabla larga y registros que se descartan; niños evaluados; niños del seguimiento trimestral frente a niños solo de las evaluaciones amplias; y, dentro del seguimiento, centros con y sin Preleo. Los niños de centros sin Preleo forman la muestra de referencia de los baremos.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagrama-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="estudio-normativo_files/figure-html/fig-diagrama-flujo-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;6.1: Diagrama de flujo de la muestra: de los registros exportados a la muestra de referencia de los baremos (seis cohortes, 2010–2015). Los recuentos de niños suman las cohortes; un mismo colegio puede estar en varias."><img src="estudio-normativo_files/figure-html/fig-diagrama-flujo-1.png" class="img-fluid figure-img" alt="Diagrama de flujo con cuatro niveles: registros de la tabla larga y registros que se descartan; niños evaluados; niños del seguimiento trimestral frente a niños solo de las evaluaciones amplias; y, dentro del seguimiento, centros con y sin Preleo. Los niños de centros sin Preleo forman la muestra de referencia de los baremos." width="864"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrama-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.1: Diagrama de flujo de la muestra: de los registros exportados a la muestra de referencia de los baremos (seis cohortes, 2010–2015). Los recuentos de niños suman las cohortes; un mismo colegio puede estar en varias.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-diagrama-flujo" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-diagrama-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6.1: Recuentos del diagrama de flujo por cohorte.
+</figcaption>
+<div aria-describedby="tbl-diagrama-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 22%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cohorte</th>
+<th style="text-align: right;">Niños evaluados</th>
+<th style="text-align: right;">Seguimiento trimestral</th>
+<th style="text-align: right;">Con Preleo</th>
+<th style="text-align: right;">Sin Preleo (referencia)</th>
+<th style="text-align: right;">Solo evaluaciones amplias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2010</td>
+<td style="text-align: right;">2.386</td>
+<td style="text-align: right;">1.163</td>
+<td style="text-align: right;">843</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">1.223</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: right;">2.321</td>
+<td style="text-align: right;">1.227</td>
+<td style="text-align: right;">1.227</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.094</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2012</td>
+<td style="text-align: right;">1.937</td>
+<td style="text-align: right;">461</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">461</td>
+<td style="text-align: right;">1.476</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2013</td>
+<td style="text-align: right;">2.091</td>
+<td style="text-align: right;">1.078</td>
+<td style="text-align: right;">299</td>
+<td style="text-align: right;">779</td>
+<td style="text-align: right;">1.013</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2014</td>
+<td style="text-align: right;">781</td>
+<td style="text-align: right;">512</td>
+<td style="text-align: right;">444</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">269</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2015</td>
+<td style="text-align: right;">762</td>
+<td style="text-align: right;">511</td>
+<td style="text-align: right;">511</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">251</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>El diagrama resume los apartados siguientes. Los registros perdidos se describen en 4.5; el seguimiento por edad, en 4.3; la condición Preleo, en 4.4. La muestra de referencia de los baremos es la de los centros sin Preleo (ver <a href="./decisiones.html">Decisiones metodológicas</a>). En las cohortes 2011 y 2015 todos los centros del seguimiento aplicaron Preleo, así que no aportan niños de referencia.</p>
+<p><strong>Cautela.</strong> La condición de 299 niños de 2013 que figuran con Preleo y de 68 de 2014 que figuran sin él está por revisar (ver 4.4). Hasta entonces, el diagrama los cuenta como figuran en la asignación v6.</p>
 </section>
 <section id="cohortes-y-colegios" class="level2">
 <h2 class="anchored" data-anchor-id="cohortes-y-colegios">4.1 Cohortes y colegios</h2>
@@ -1034,7 +1168,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="tbl-cohortes-n" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cohortes-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;6.1: Muestra por cohorte (año de nacimiento). Edad en meses en la primera evaluación de cada niño; ISE: índice socioeconómico del colegio, media de los niños.
+Tabla&nbsp;6.2: Muestra por cohorte (año de nacimiento). Edad en meses en la primera evaluación de cada niño; ISE: índice socioeconómico del colegio, media de los niños.
 </figcaption>
 <div aria-describedby="tbl-cohortes-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1153,10 +1287,10 @@ Tabla&nbsp;6.1: Muestra por cohorte (año de nacimiento). Edad en meses en la pr
 <div id="fig-linea-temporal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-linea-temporal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/infografias/linea_temporal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;6.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la evaluación de 2021/22 en tabletas, con tiempo límite."><img src="figuras/infografias/linea_temporal.png" class="img-fluid figure-img" alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22)."></a>
+<a href="figuras/infografias/linea_temporal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;6.2: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la evaluación de 2021/22 en tabletas, con tiempo límite."><img src="figuras/infografias/linea_temporal.png" class="img-fluid figure-img" alt="Infografía con seis filas (cohortes 2010 a 2015) y siete columnas (cursos 2015/16 a 2021/22)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linea-temporal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;6.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la evaluación de 2021/22 en tabletas, con tiempo límite.
+Figura&nbsp;6.2: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada cohorte, con qué diseño y con qué condición Preleo. Los puntos son los trimestres del seguimiento en la plataforma; en naranja, la evaluación en papel de febrero de 2021 (batería TECLE); en amarillo, la evaluación de 2021/22 en tabletas, con tiempo límite.
 </figcaption>
 </figure>
 </div>
@@ -1165,10 +1299,10 @@ Figura&nbsp;6.1: Línea temporal de la base LEEDUCA: cuándo se evaluó a cada c
 <div id="fig-mapa-momentos" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mapa-momentos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="estudio-normativo_files/figure-html/fig-mapa-momentos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;6.2: Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, en papel y sobre todo con pruebas de eficiencia, con muchos niños que no se habían evaluado antes."><img src="estudio-normativo_files/figure-html/fig-mapa-momentos-1.png" class="img-fluid figure-img" width="864"></a>
+<a href="estudio-normativo_files/figure-html/fig-mapa-momentos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;6.3: Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, en papel y sobre todo con pruebas de eficiencia, con muchos niños que no se habían evaluado antes."><img src="estudio-normativo_files/figure-html/fig-mapa-momentos-1.png" class="img-fluid figure-img" width="864"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mapa-momentos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;6.2: Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, en papel y sobre todo con pruebas de eficiencia, con muchos niños que no se habían evaluado antes.
+Figura&nbsp;6.3: Niños evaluados en cada momento (edad.trimestre) por cohorte. Los momentos con borde naranja son de los cursos 2020/21 y 2021/22: una sola evaluación por curso, en papel y sobre todo con pruebas de eficiencia, con muchos niños que no se habían evaluado antes.
 </figcaption>
 </figure>
 </div>
@@ -1177,7 +1311,7 @@ Figura&nbsp;6.2: Niños evaluados en cada momento (edad.trimestre) por cohorte. 
 <p>El mapa muestra dos diseños distintos dentro de la misma base:</p>
 <ul>
 <li><strong>Seguimiento trimestral (hasta 2019/20).</strong> Tres evaluaciones por curso desde los 4 años (cohortes 2011–2015) o los 5 (cohorte 2010), con entre 300 y 950 niños por momento y una pérdida gradual con la edad.</li>
-<li><strong>Evaluaciones amplias de 2020/21 y 2021/22</strong> (borde naranja). Una sola evaluación por curso, en febrero, con muchos niños nuevos. Tras la llegada de la pandemia se aplicaron <strong>versiones en papel</strong>, sobre todo de pruebas de eficiencia, de 2.º a 6.º de primaria (datos tabulados en <code>03_PAPEL_TABLETS_PANDEMIA</code>; los cuadernillos de TECLE, PEALE y sintaxis están en la carpeta del proyecto con Colombia). Son dos baterías distintas (<a href="#tbl-amplias" class="quarto-xref">Tabla&nbsp;<span>6.2</span></a>):
+<li><strong>Evaluaciones amplias de 2020/21 y 2021/22</strong> (borde naranja). Una sola evaluación por curso, en febrero, con muchos niños nuevos. Tras la llegada de la pandemia se aplicaron <strong>versiones en papel</strong>, sobre todo de pruebas de eficiencia, de 2.º a 6.º de primaria (datos tabulados en <code>03_PAPEL_TABLETS_PANDEMIA</code>; los cuadernillos de TECLE, PEALE y sintaxis están en la carpeta del proyecto con Colombia). Son dos baterías distintas (<a href="#tbl-amplias" class="quarto-xref">Tabla&nbsp;<span>6.3</span></a>):
 <ul>
 <li><strong>Febrero de 2021</strong>, con unos 1.300–1.560 niños por cohorte: la batería TECLE completa (TECLE, relaciones semánticas, sintaxis y vocabulario lector).</li>
 <li><strong>Curso 2021/22</strong>, con unos 260–470 niños por cohorte: comprensión de textos, Woodcock, decisión léxica, homógrafos, lectura comprensiva, velocidad lectora y matemáticas (y, en las cohortes 2014 y 2015, segmentación fonémica y letra inicial).</li>
@@ -1188,7 +1322,7 @@ Figura&nbsp;6.2: Niños evaluados en cada momento (edad.trimestre) por cohorte. 
 <div id="tbl-amplias" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-amplias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;6.2: Tareas de las evaluaciones amplias de 2020/21 y 2021/22 por cohorte y momento (niños evaluados; solo tareas con 10 niños o más).
+Tabla&nbsp;6.3: Tareas de las evaluaciones amplias de 2020/21 y 2021/22 por cohorte y momento (niños evaluados; solo tareas con 10 niños o más).
 </figcaption>
 <div aria-describedby="tbl-amplias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1296,10 +1430,10 @@ Tabla&nbsp;6.2: Tareas de las evaluaciones amplias de 2020/21 y 2021/22 por coho
 <div id="fig-flujo" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="estudio-normativo_files/figure-html/fig-flujo-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;6.3: Niños con al menos una evaluación a cada edad, por cohorte. Las barras de 8 años o más incluyen las evaluaciones amplias de 2020/21 y 2021/22."><img src="estudio-normativo_files/figure-html/fig-flujo-1.png" class="img-fluid figure-img" width="768"></a>
+<a href="estudio-normativo_files/figure-html/fig-flujo-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;6.4: Niños con al menos una evaluación a cada edad, por cohorte. Las barras de 8 años o más incluyen las evaluaciones amplias de 2020/21 y 2021/22."><img src="estudio-normativo_files/figure-html/fig-flujo-1.png" class="img-fluid figure-img" width="768"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;6.3: Niños con al menos una evaluación a cada edad, por cohorte. Las barras de 8 años o más incluyen las evaluaciones amplias de 2020/21 y 2021/22.
+Figura&nbsp;6.4: Niños con al menos una evaluación a cada edad, por cohorte. Las barras de 8 años o más incluyen las evaluaciones amplias de 2020/21 y 2021/22.
 </figcaption>
 </figure>
 </div>
@@ -1309,7 +1443,7 @@ Figura&nbsp;6.3: Niños con al menos una evaluación a cada edad, por cohorte. L
 <div id="tbl-flujo" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;6.3: Seguimiento por cohorte: niños evaluados a los 5 años y a los 8 o más, a los 6 y a los 8 o más, y número de momentos por niño (mediana y rango intercuartílico).
+Tabla&nbsp;6.4: Seguimiento por cohorte: niños evaluados a los 5 años y a los 8 o más, a los 6 y a los 8 o más, y número de momentos por niño (mediana y rango intercuartílico).
 </figcaption>
 <div aria-describedby="tbl-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1381,7 +1515,7 @@ Tabla&nbsp;6.3: Seguimiento por cohorte: niños evaluados a los 5 años y a los 
 <div id="tbl-preleo-n" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-preleo-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;6.4: Condición Preleo por cohorte según la asignación v6 (información de Auxiliadora Sánchez; solo para los niños del seguimiento trimestral): niños y colegios canónicos. «Desconocida»: niños que solo están en las evaluaciones de 2020/21 y 2021/22. Un colegio puede contar en más de una columna.
+Tabla&nbsp;6.5: Condición Preleo por cohorte según la asignación v6 (información de Auxiliadora Sánchez; solo para los niños del seguimiento trimestral): niños y colegios canónicos. «Desconocida»: niños que solo están en las evaluaciones de 2020/21 y 2021/22. Un colegio puede contar en más de una columna.
 </figcaption>
 <div aria-describedby="tbl-preleo-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1478,7 +1612,7 @@ Tabla&nbsp;6.4: Condición Preleo por cohorte según la asignación v6 (informac
 <div id="tbl-limpieza" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-limpieza-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;6.5: Registros de la tabla larga y motivos de pérdida por cohorte. Los registros de 8.2 se conservan y se marcan.
+Tabla&nbsp;6.6: Registros de la tabla larga y motivos de pérdida por cohorte. Los registros de 8.2 se conservan y se marcan.
 </figcaption>
 <div aria-describedby="tbl-limpieza-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
