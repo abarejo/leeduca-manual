@@ -58,7 +58,7 @@ La habilidad lectora se distribuye de forma continua. Dónde se pone el corte es
 
 ### La respuesta a la enseñanza
 
-La nueva definición de la International Dyslexia Association pone en el centro la **dificultad que persiste pese a una enseñanza adecuada** [@ida2025definicion; @catts2026definicion]. Ya antes se había mostrado que observar cómo responde un niño a una buena intervención temprana separa a los que tienen una dificultad persistente de los que solo habían tenido pocas oportunidades [@vellutino2008rti]. Los criterios clínicos del DSM-5-TR [@apa2022dsm5tr] y de la CIE-11 [@oms2019cie11] también exigen que la dificultad persista y que no se explique por otras causas. El detalle está en [Qué medimos a la luz de la nueva definición](definicion.qmd).
+La guía LEEDUCA de detección precoz ya planteaba la evaluación en tres momentos (predicción en Infantil, detección precoz en 1.º y diagnóstico desde 2.º) como alternativa a «esperar al fracaso» [@luque2022guia]. La nueva definición de la International Dyslexia Association pone en el centro la **dificultad que persiste pese a una enseñanza adecuada** [@ida2025definicion; @catts2026definicion]. Ya antes se había mostrado que observar cómo responde un niño a una buena intervención temprana separa a los que tienen una dificultad persistente de los que solo habían tenido pocas oportunidades [@vellutino2008rti]. Los criterios clínicos del DSM-5-TR [@apa2022dsm5tr] y de la CIE-11 [@oms2019cie11] también exigen que la dificultad persista y que no se explique por otras causas. El detalle está en [Qué medimos a la luz de la nueva definición](definicion.qmd).
 
 ## Del marco teórico a la plataforma
 

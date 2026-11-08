@@ -22,6 +22,7 @@ El prototipo de informe de aula usa estos tramos desde su [versión 2](apps/info
 
 - **Menos cambios de etiqueta por azar.** Con una prueba de fiabilidad .85, los niños cuya etiqueta cambia de una evaluación a otra sin haber cambiado bajan del 14 % al 6 % (ver [La zona «a vigilar»](avances.qmd#sec-vigilar)).
 - **Cada tramo lleva una acción.** El informe no solo clasifica: dice qué hacer y cuándo volver a mirar.
+- **Continúa la guía del grupo.** La guía LEEDUCA de detección precoz ya proponía juicios graduados de severidad con cortes en P10, P20 y P30 para las tareas de lectura de 1.º, en lugar de un único corte [@luque2022guia].
 - **Los tramos describen un trimestre; los niveles de certeza, una trayectoria.** Un niño en el tramo 4 un trimestre no «tiene dislexia». La dificultad persistente se define con toda la trayectoria de 6 a 11 años, con los niveles de certeza de [Cómo estimamos el riesgo](riesgo.qmd). El informe de un trimestre habla de **riesgo y de apoyo**, no de diagnóstico.
 - **La banda de error se ve.** Cada punto del informe lleva su margen de error. Si la banda de un niño cruza el límite de su tramo, el informe lo trata como el tramo vecino más favorable hasta la siguiente evaluación.
 
