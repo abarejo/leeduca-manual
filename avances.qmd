@@ -183,12 +183,12 @@ Las listas de lectura de palabras se diseñaron por número de sílabas. Pero la
 | Lista | Sílabas | Ítems con norma | Edad de adquisición media (años) |
 |---|---|---|---|
 | 1931 | 2 | 12 de 12 | 3,7 |
-| 1932 | 3 | 11 de 12 | 4,9 |
+| 1932 | 3 | 11 de 12 | 4,8 |
 | 1933 | 4 | 11 de 12 | 4,0 |
 
-*Edad de adquisición de Alonso et al. (2015) para los ítems de cada lista.*
+*Edad de adquisición de Alonso et al. (2015) para los ítems de cada lista. Para proteger la prueba, el manual da resúmenes de cada lista y no las palabras; la tabla por ítem está en el espacio interno del grupo.*
 
-La lista de cuatro sílabas tiene palabras que se aprenden **casi un año antes** que la de tres (*cumpleaños*, *teléfono*, *televisión*, *chocolate*). Por eso se lee casi tan rápido como la de tres sílabas, aunque sea más larga: no es un error de los datos, sino una propiedad de los ítems.
+La lista de cuatro sílabas tiene palabras que se aprenden **casi un año antes** que la de tres: más de la mitad se aprenden antes de los 4 años, frente a un tercio en la de tres sílabas. Por eso se lee casi tan rápido como la de tres sílabas, aunque sea más larga: no es un error de los datos, sino una propiedad de los ítems. Las fichas de las tres listas recogen ya estos resúmenes en un apartado «Propiedades de los ítems».
 
 **Qué implica para el manual.**
 
@@ -196,8 +196,10 @@ La lista de cuatro sílabas tiene palabras que se aprenden **casi un año antes*
 - Al construir listas nuevas o paralelas, conviene controlar la edad de adquisición y las vecinas ortográficas, además de las letras y las sílabas.
 - Las pseudopalabras no tienen edad de adquisición: su dificultad depende de la longitud y de cómo se montan las sílabas, y por eso miden mejor la descodificación.
 
-## Preguntas para el grupo
+## Decisiones y preguntas abiertas
 
-1. ¿Incluimos la animación del percentil que baila en los informes a familias, o solo en el manual?
-2. ¿Adoptamos una zona de amortiguación alrededor de P25 en los informes («a vigilar»)?
-3. ¿Añadimos la edad de adquisición y las vecinas a la ficha de cada ítem de las listas de lectura?
+| Pregunta | Estado |
+|---|---|
+| ¿Añadimos la edad de adquisición y las vecinas a la ficha de cada lista de lectura? | **Sí** (P. J. López-Pérez, 08/11/2026). Hecho en las fichas de palabras de 2, 3 y 4 sílabas, como resumen por lista. Falta: las formas antiguas y las palabras monosílabas. |
+| ¿Incluimos la animación del percentil que baila en los informes a familias? | **Sí** (P. J. López-Pérez, 08/11/2026). Se añade una versión breve, sin controles, al prototipo de informe para familias, para explicar por qué se da un intervalo y no un número. |
+| ¿Adoptamos una zona de amortiguación alrededor de P25 en los informes («a vigilar»)? | Abierta. |
