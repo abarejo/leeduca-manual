@@ -54,7 +54,7 @@ Los análisis que desarrollan estos apartados están en el espacio interno del g
 
 **Error típico y bandas.** Cada percentil se acompaña de su banda de confianza al 90 %, calculada con el error típico de medida. Con TRI, el error es **condicional**: más ancho en los extremos, donde se toman las decisiones de riesgo.
 
-**Lo que supone una fiabilidad de .85.** Un niño con nivel real en P20 puede aparecer fuera de riesgo en unas 4 de cada 10 evaluaciones. La simulación interactiva está en [El percentil que baila](avances.qmd#sec-baila).
+**Lo que supone una fiabilidad de .85.** Un niño con nivel real en P20 puede aparecer fuera de riesgo en unas 4 de cada 10 evaluaciones. La simulación interactiva está en [El percentil que baila](avances.qmd#sec-baila). Por eso los informes usan una zona **«a vigilar» entre P20 y P30**, en la que no se pone etiqueta hasta la evaluación siguiente (ver [La zona «a vigilar»](avances.qmd#sec-vigilar)).
 
 - **Falta:** ω y TRI con las respuestas ítem a ítem de la plataforma nueva para todas las tareas de clase A y B; test-retest a corto plazo en las tareas de velocidad. Es lo que más clases de calidad puede cambiar.
 
