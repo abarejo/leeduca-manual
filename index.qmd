@@ -1,7 +1,7 @@
 # Presentación {.unnumbered}
 
 ::: {.callout-warning}
-## Borrador de trabajo (versión 0.1)
+## Borrador de trabajo (actualizado el 08/11/2026)
 Este libro es el espacio de trabajo del grupo LEEDUCA para preparar el manual técnico de la plataforma. Su contenido está en revisión y puede cambiar. No lo cites todavía como versión definitiva.
 :::
 
@@ -25,9 +25,9 @@ Cada ficha tiene tres capas:
 2. **Las tablas completas**, al final de cada ficha. Se leen de los archivos de `datos/agregados/`, que contienen solo resultados agregados (medias, percentiles, correlaciones…), nunca datos de un niño.
 3. **El código**, en el repositorio de GitHub (botón de la barra lateral). Las tablas se calculan con scripts de R a partir de los datos completos, que por privacidad no salen del ordenador del proyecto. El libro se construye a partir de esas tablas, así que cualquiera puede reproducir sus figuras.
 
-Por ahora hay cinco **fichas piloto**: conocimiento de letras, velocidad lectora, denominación rápida (RAN), conciencia fonológica (contar sílabas) y TECLE. Son las tareas con las que se está fijando el diseño de todas las demás. Con ellas se ven la tríada clásica de predictores de la lectura (letras, conciencia fonológica y RAN) y dos medidas de lectura ya automatizada (la velocidad y la eficiencia lectora de TECLE). Las dos últimas son versiones cortas.
+Hay cinco **fichas piloto**, escritas a mano: conocimiento de letras, velocidad lectora, denominación rápida (RAN), conciencia fonológica (contar sílabas) y TECLE. Son el modelo de las demás. Además, las 98 tareas con datos suficientes tienen una **ficha automática** generada con el mismo guion, y hay fichas propias del juicio de rima, de la batería de 3 años y del cribado de dos riesgos. Con ellas se ven la tríada clásica de predictores de la lectura (letras, conciencia fonológica y RAN) y dos medidas de lectura ya automatizada (la velocidad y la eficiencia lectora de TECLE). Las dos últimas son versiones cortas.
 
-Todas las tareas de la plataforma, con sus códigos, sesiones y un párrafo para artículos en español e inglés, están en el **[Catálogo de tareas](catalogo.qmd)**. El plan completo del manual, con sus cuatro partes y su índice, está en **[Estructura del manual](estructura.qmd)**. Es una propuesta abierta a la revisión del grupo.
+Antes de las fichas, conviene leer [Presentación y uso responsable](uso-responsable.qmd) (para qué sirve la plataforma y para qué no) y el [Marco teórico](marco-teorico.qmd). Todas las tareas de la plataforma, con sus códigos, sesiones y un párrafo para artículos en español e inglés, están en el **[Catálogo de tareas](catalogo.qmd)**. El plan completo del manual, con sus cuatro partes y su índice, está en **[Estructura del manual](estructura.qmd)**. Es una propuesta abierta a la revisión del grupo.
 
 ## Cómo colaborar
 
@@ -54,4 +54,4 @@ La autoría definitiva se acordará antes de depositar la versión de consulta.
 
 ## Cómo citar este borrador
 
-Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez Moreno, M. y López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* (versión de trabajo 0.9). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/
+Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez Moreno, M. y López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* (borrador de trabajo, 8 de noviembre de 2026). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/

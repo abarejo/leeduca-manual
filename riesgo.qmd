@@ -6,7 +6,7 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador (octubre de 2026). Describe el criterio que usan las fichas y los análisis de predicción. El umbral del nivel más grave está pendiente de acordar (ver [Consultas](consultas.qmd)).
+**Estado:** borrador de octubre de 2026, actualizado el 08/11/2026 (zona «a vigilar» y embudo de dos puertas). Describe el criterio que usan las fichas y los análisis de predicción. El umbral del nivel más grave está pendiente de acordar (ver [Consultas](consultas.qmd)).
 :::
 
 Una sola puntuación baja en un trimestre no basta para hablar de dificultad lectora. Un niño puede tener un mal día, estar recién llegado o avanzar a otro ritmo, y alcanzar después a sus compañeros. Por eso el manual distingue entre **riesgo**, que se estima antes de leer, y **dificultad**, que solo se confirma cuando la lectura sigue baja durante varios cursos.

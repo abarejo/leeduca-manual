@@ -1,7 +1,7 @@
 # Estructura del manual (propuesta para revisar) {#sec-estructura}
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** propuesta del 14/10/2026, actualizada el 02/11/2026 con lo ya escrito en este libro (borradores de los capítulos 3, 5 y 6). **Se pide al grupo que la revise**: al final del capítulo están las preguntas abiertas, y cualquier comentario puede llegar por el [formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform) o por las otras vías de [Consultas y sugerencias](consultas.qmd).
+**Estado:** propuesta del 14/10/2026, actualizada el 08/11/2026 con lo ya escrito en este libro (borradores de los capítulos 1, 2, 3, 4, 5 y 6, y el capítulo «Del laboratorio al manual»). **Se pide al grupo que la revise**: al final del capítulo están las preguntas abiertas, y cualquier comentario puede llegar por el [formulario de sugerencias](https://docs.google.com/forms/d/e/1FAIpQLScH_9p-H91zfa-F4q6KJ_XS-Dr7MT2Yu84wsa4ZT97JvnHFww/viewform) o por las otras vías de [Consultas y sugerencias](consultas.qmd).
 :::
 
 ## Enfoque
@@ -148,16 +148,16 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 
 ## Estado y plan de trabajo
 
-| Bloque | Estado (02/11/2026) | Qué falta |
+| Bloque | Estado (08/11/2026) | Qué falta |
 |---|---|---|
 | Cap. 1–2 Fundamentos y marco teórico | **Borradores (08/11)**: [uso responsable](uso-responsable.qmd) (usos, niveles de usuario, aplicación, interpretación, ética y marco normativo) y [marco teórico](marco-teorico.qmd) (ortografía transparente, visión simple, precursores, dificultad lectora en español) | Consentimiento, comité de ética y formación de evaluadores; escritura; revisión del equipo |
 | Cap. 3 Plataforma | **Borrador completo (02/11)**: diseño, historia, arquitectura, tipos de tarea, medidas, cohortes y versiones | Fechas del cambio de plataforma; evaluadores por cohorte; escalas de DIS-ESP |
-| Cap. 4 Estudio normativo | **Borrador (02/11)**: cohortes, niños por momento, seguimiento, Preleo provisional y limpieza | Fuente de la condición Preleo; normalizar nombres de colegio; qué fueron las evaluaciones de 2020/21 y 2021/22 |
-| Cap. 5 Método | **Borrador completo (02/11)** | ω y TRI ítem a ítem; normas continuas; anclas del cambio mínimo relevante |
+| Cap. 4 Estudio normativo | **Borrador (02/11)**: cohortes, niños por momento, seguimiento y limpieza. **Resuelto:** fuente de la condición Preleo (02/11), nombres de colegio normalizados y qué fueron las evaluaciones de 2020/21 y 2021/22 | Diagrama de flujo de la muestra; si 2020/21 y 2021/22 se bareman aparte |
+| Cap. 5 Método | **Borrador completo (02/11)**, ampliado el 08/11: banda de error ilustrada con el [percentil que baila](avances.qmd#sec-baila), regresión a la media y [zona «a vigilar»](avances.qmd#sec-vigilar) | ω y TRI ítem a ítem; normas continuas; anclas del cambio mínimo relevante |
 | Cap. 6 Resultados globales | **Borrador (02/11)**: tabla de tareas A y estabilidad longitudinal | Análisis factorial confirmatorio e invarianza |
-| Cap. 7–18 Fichas | Cinco fichas piloto (letras, velocidad, RAN, contar sílabas y TECLE), rima, batería de 3 años y fichas automáticas de todas las tareas; 18 marcos teóricos por dominio | Ficha completa de las 32 tareas de clase A |
-| Cap. 19–21 Certeza, cribado e identificación | Capítulo de riesgo con los cinco niveles; AUC y cortes con validación cruzada | Acuerdo del equipo sobre los niveles; intervalos por bootstrap |
-| Cap. 22 Seguimiento | Cambio fiable en letras y velocidad; percentiles de crecimiento y cambio mínimo relevante en desarrollo; perfiles de éxito y seguimiento diario planteados | Cerrar las anclas y llevarlo a las tareas de lectura |
+| Cap. 7–18 Fichas | Cinco fichas piloto (letras, velocidad, RAN, contar sílabas y TECLE), rima, batería de 3 años, [cribado de dos riesgos](fichas/cribado_dos_riesgos.qmd) (05/11) y 98 fichas automáticas, por forma desde el 03/11, con aviso de efecto suelo y, en las listas de palabras, propiedades de los ítems (08/11); 18 marcos teóricos por dominio | Ficha completa de las 32 tareas de clase A; propiedades de los ítems de las formas antiguas |
+| Cap. 19–21 Certeza, cribado e identificación | Capítulo de riesgo con los cinco niveles; AUC y cortes con validación cruzada; [embudo de dos puertas](avances.qmd#sec-embudo) y zona «a vigilar» P20–P30 (decidida el 08/11) | Acuerdo del equipo sobre los niveles y el umbral grave; intervalos por bootstrap; simular el embudo con las cohortes |
+| Cap. 22 Seguimiento | Cambio fiable en letras y velocidad; percentiles de crecimiento y cambio mínimo relevante en desarrollo; perfiles de éxito y seguimiento diario planteados; [salir del riesgo y regresión a la media](avances.qmd#sec-salir) (08/11) | Cerrar las anclas y llevarlo a las tareas de lectura; llevar los tres tramos al prototipo de informe de aula |
 | Cap. 23 Preleo | Parte del libro con el programa y los efectos; auditoría de los datos, detectores de incongruencias y redes de cambio | Confirmar la exposición de la cohorte 2011 y el rigor de aplicación de 2013–2014 |
 | Cap. 24 Casos y EEG/fNIRS | Matrices EEG de 2010 y 2013 | Reasignar los grupos EEG con los niveles de certeza; casos anonimizados |
 | Anexos A–B Baremos y cortes | Baremos empíricos por momento y cohorte | Normas continuas que agrupen cohortes |
@@ -186,6 +186,8 @@ Lo que sigue son propuestas desde la psicometría para que el manual aporte algo
 10. **Equidad y funcionamiento diferencial.** Comprobar que cada tarea mide igual por sexo, nivel socioeconómico, formato y condición Preleo. Revisar también la tasa de falsos positivos por grupo: es parte de la validez de las consecuencias que piden los *Standards*.
 11. **Argumento de validez explícito.** Para cada tarea, qué interpretaciones y usos están respaldados y cuáles no (cribar, seguir, diagnosticar, investigar). Con el semáforo CET-R, el usuario lo vería de un vistazo.
 12. **Transparencia y reutilización.** Código abierto, datos agregados descargables, un catálogo de tareas con textos para artículos en español e inglés (ver el [Catálogo de tareas](catalogo.qmd)), versiones del manual con DOI y un plan de análisis registrado antes de los estudios confirmatorios.
+
+**Avance a 08/11/2026.** Ya están en marcha en el manual: la propuesta 1 (probabilidades y [embudo de dos puertas](avances.qmd#sec-embudo)), la 2 (bandas de error, con la animación del [percentil que baila](avances.qmd#sec-baila) y la [zona «a vigilar»](avances.qmd#sec-vigilar)), la 7 (informes en lenguaje de aula, con el [prototipo de informe](informe-aula.qmd)), la 9 en parte (equivalencia e igualación entre formas en las fichas automáticas) y la 12 (código abierto y textos para artículos en el [catálogo](catalogo.qmd)).
 
 ## Preguntas para el grupo
 

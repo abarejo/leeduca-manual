@@ -10,7 +10,7 @@ n_alguna <- sum(!is.na(E$alfa_2021) | !is.na(E$estabilidad_rho))
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** primer borrador (02/11/2026) del capítulo 5 del manual, para la reunión del grupo. Recoge en un solo sitio cómo se puntúa, cómo se estima la fiabilidad y la validez, cómo se barema y cómo se decide si un cambio importa. Cada apartado indica **qué está hecho**, **qué estudio de la [Agenda](agenda.qmd) lo desarrolla** y **qué falta**. El detalle de cómo se arma cada ficha está en [Cómo se construye cada ficha](metodo.qmd), y las decisiones ya tomadas, en [Decisiones metodológicas](decisiones.qmd).
+**Estado:** primer borrador (02/11/2026) del capítulo 5 del manual, ampliado el 08/11/2026 con la zona «a vigilar» y los enlaces a [Del laboratorio al manual](avances.qmd). Recoge en un solo sitio cómo se puntúa, cómo se estima la fiabilidad y la validez, cómo se barema y cómo se decide si un cambio importa. Cada apartado indica **qué está hecho**, **qué estudio de la [Agenda](agenda.qmd) lo desarrolla** y **qué falta**. El detalle de cómo se arma cada ficha está en [Cómo se construye cada ficha](metodo.qmd), y las decisiones ya tomadas, en [Decisiones metodológicas](decisiones.qmd).
 :::
 
 **En una frase.** Cada tarea se analiza con el método que corresponde a su forma de medir (no todas con α), cada puntuación se da con su margen de error, y cada uso que el manual propone (cribar, seguir, identificar) se apoya en una evidencia concreta [@aera2014; @kane2013].
@@ -20,10 +20,10 @@ n_alguna <- sum(!is.na(E$alfa_2021) | !is.na(E$estabilidad_rho))
 | Apartado | Qué responde | Estado |
 |---|---|---|
 | 5.1 Puntuaciones | Qué número representa a cada tarea y cuándo una sesión no es válida | Familias y medida principal definidas; detectores de sesiones anómalas en prueba |
-| 5.2 Fiabilidad | Cuánto error tiene cada puntuación | α de 2021 y estabilidad en parte de las tareas; ω y TRI pendientes |
+| 5.2 Fiabilidad | Cuánto error tiene cada puntuación | α de 2021 y estabilidad en parte de las tareas; banda de error y zona «a vigilar» P20–P30 (08/11); ω y TRI pendientes |
 | 5.3 Validez | Para qué sirve cada puntuación | Validez predictiva frente a la dificultad persistente; criterio externo Woodcock-Muñoz; estructura e invarianza pendientes |
-| 5.4 Baremación | Con quién se compara a un niño | Baremos empíricos por momento; continuos pendientes |
-| 5.5 Cuánto cambio importa | Cuándo un avance es real e importante | Cambio fiable en letras y velocidad; anclas en desarrollo |
+| 5.4 Baremación | Con quién se compara a un niño | Baremos empíricos por momento y por forma (03/11); primer análisis de normas continuas sobre meses de enseñanza en las fichas piloto; continuos definitivos pendientes |
+| 5.5 Cuánto cambio importa | Cuándo un avance es real e importante | Cambio fiable en letras y velocidad; regresión a la media cuantificada (08/11); anclas en desarrollo |
 | 5.6 Equidad | Si la tarea mide igual en todos los grupos | Predicción diferencial en la ficha de letras; resto pendiente |
 
 Los análisis que desarrollan estos apartados están en el espacio interno del grupo (acceso restringido).
