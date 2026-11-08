@@ -17,8 +17,65 @@ p_rdc <- sum(K1$N_con_magnitudes * K1$pct_riesgo_discalculia) / sum(K1$N_con_mag
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador del 21/10/2026. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo abre sus fichas: reúne lo que hay, la validez frente a un criterio posterior y lo que falta. Se apoya en el artículo publicado sobre la comorbilidad entre dislexia y discalculia con datos de la plataforma [@loredo2025prevalencia]. Guion del criterio: `scripts/R/criterio_matematicas.R`.
+**Estado:** borrador del 21/10/2026, con marco teórico añadido el 08/11/2026 a partir de los materiales docentes de P. J. López-Pérez. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo abre sus fichas: reúne lo que hay, la validez frente a un criterio posterior y lo que falta. Se apoya en el artículo publicado sobre la comorbilidad entre dislexia y discalculia con datos de la plataforma [@loredo2025prevalencia]. Guion del criterio: `scripts/R/criterio_matematicas.R`.
 :::
+
+## Marco teórico: aprender matemáticas y la discalculia {#sec-mate-marco}
+
+### Qué es la discalculia
+
+La discalculia del desarrollo es un trastorno del neurodesarrollo que afecta de forma específica y persistente al aprendizaje de las matemáticas, sobre todo a la comprensión de las cantidades, el conteo y el cálculo, pese a una escolarización adecuada y una inteligencia en la media. El DSM-5-TR la incluye como trastorno específico del aprendizaje con dificultad en las matemáticas [@apa2022dsm5tr], y la CIE-11 como trastorno del desarrollo del aprendizaje con dificultad en las matemáticas [@oms2019cie11]. Afecta a entre el 3 y el 7 % de los escolares, una proporción parecida a la de la dislexia, y sus consecuencias son al menos tan graves, aunque recibe mucha menos atención [@butterworth2011dyscalculia].
+
+Como la dislexia, es **dimensional**: es el extremo bajo de un continuo de habilidad, y los mismos genes que influyen en las diferencias normales en matemáticas influyen en el trastorno [@kovas2007genetic]. También **persiste** en la edad adulta si no se interviene.
+
+### El sentido numérico
+
+La base es el **sentido numérico**: la capacidad, presente ya en los bebés, de percibir y comparar cantidades de forma aproximada. Se ve en tres fenómenos:
+
+- **Subitización:** se perciben de un vistazo, sin contar, hasta tres o cuatro elementos.
+- **Efecto de la distancia:** es más fácil decidir cuál de dos números es mayor cuanto más separados están (8 frente a 2 es más fácil que 8 frente a 7).
+- **Línea numérica mental:** los números se representan en el espacio, de menor a mayor. Al principio esa línea está comprimida (las distancias entre números grandes parecen menores) y con la instrucción se vuelve lineal. La precisión al colocar números en una línea predice el rendimiento matemático posterior [@booth2006estimation].
+
+El modelo del **triple código** distingue tres formatos del número, con circuitos cerebrales en parte distintos: la **magnitud**, en el surco intraparietal de los dos hemisferios; el **código verbal** (las palabras-número y los hechos aritméticos memorizados), en el giro angular izquierdo; y el **código arábigo** (las cifras) [@dehaene2003parietal].
+
+### Cómo se desarrolla
+
+El modelo de von Aster y Shalev [-@vonaster2007number] describe cuatro pasos encadenados, cada uno apoyado en el anterior y con más demanda de memoria de trabajo:
+
+1. **Sistema de magnitud:** cantidades concretas, subitización y comparación (desde la infancia).
+2. **Sistema verbal:** contar con palabras-número, estrategias de conteo y recuperación de hechos (Infantil).
+3. **Sistema arábigo:** cifras, cálculo escrito (escuela).
+4. **Línea numérica mental:** ordinalidad, cálculo aproximado y razonamiento aritmético (escuela).
+
+Para **contar** bien hay que dominar cinco principios: correspondencia uno a uno, orden estable, cardinalidad (el último número dicho es el total), abstracción e irrelevancia del orden [@gelman1978number]. Con la práctica, el cálculo pasa de **contar todo** (2 + 3: «uno, dos, tres, cuatro, cinco») a **contar desde el mayor** («tres, cuatro, cinco»), a descomponer y, por último, a **recuperar** el resultado de memoria.
+
+### Qué falla en la discalculia
+
+Los niños con discalculia usan estrategias de cálculo inmaduras durante más tiempo y les cuesta recuperar los hechos aritméticos de memoria [@geary2004math]. Las dificultades se agrupan en cuatro ejes:
+
+- **Representación de la magnitud:** comparar cantidades y colocar números en la línea es más lento e impreciso. Para muchos autores es el déficit central, que se propaga a los pasos siguientes [@vonaster2007number; @butterworth2011dyscalculia].
+- **Conteo:** los principios se dominan más tarde y el conteo con los dedos se mantiene más tiempo.
+- **Memoria de hechos numéricos:** se automatizan pocos resultados, en parte porque los errores frecuentes dan pocas ocasiones de practicar el correcto.
+- **Memoria de trabajo y atención:** errores al mantener los números mientras se opera, y más errores cuantas más operaciones hay a la vez.
+
+Los subtipos propuestos (procedimental, de memoria semántica, visoespacial y de sentido numérico) no se han confirmado como categorías claramente separadas [@geary2004math]. Como en la dislexia, la explicación más aceptada es **multinivel**: factores genéticos, desarrollo del surco intraparietal y sus conexiones, déficit en la representación de las cantidades y, por último, dificultades en el cálculo y la resolución de problemas [@butterworth2011dyscalculia].
+
+### Dislexia y discalculia juntas
+
+Las dos dificultades coinciden más de lo que cabría esperar por azar. Comparten factores de riesgo, como la denominación rápida y la memoria verbal, que afectan a los hechos aritméticos memorizados en formato verbal, y cada una tiene además factores propios: la conciencia fonológica en la lectura y la representación de la magnitud en las matemáticas [@koponen2013counting]. Por eso un mismo cribado puede buscar las dos. Los datos de la plataforma sobre esta comorbilidad están más abajo.
+
+### De la teoría a la plataforma
+
+| Componente | Paso del modelo | Tareas de la plataforma | Qué mirar |
+|---|---|---|---|
+| Magnitud | 1 | Comparación de magnitudes con puntos y con cifras | Exactitud y tiempo; efecto de la distancia |
+| Secuencia verbal y conteo | 2 | Contar hacia delante y hacia atrás | Si se detiene o salta números; a qué decena llega |
+| Código arábigo | 3 | Leer números (código verbal y arábigo) | Errores de transcodificación (por ejemplo, «ciento cinco» como 1005) |
+| Línea numérica | 4 | Línea mental (1745; no es una tarea de comparación) | Precisión de la colocación |
+| Hechos y procedimientos | 2–4 | Sumas y restas de uno a tres dígitos, con tiempo limitado | Aciertos por minuto; tipo de estrategia (en la observación) |
+| Factores de dominio general | — | Denominación rápida, memoria verbal, atención | Si explican la dificultad junto a, o en lugar de, la magnitud |
+
+Como prueba externa para validar las tareas, la referencia más cercana es la batería **BERDE** (Batería para la Evaluación Rápida de la Discalculia Evolutiva) del Laboratorio de Cognición Numérica de la Universidad de Málaga, de 5 a 12 años, con módulos de representación de la cantidad, tareas verbales-numéricas, dictado de números y un cuestionario de ansiedad ante las matemáticas (ver más abajo «Qué falta»). Para la intervención, la evidencia apoya el trabajo intensivo y adaptado sobre la magnitud y su enlace con los símbolos, como en el programa *La carrera de los números* [@wilson2006numberrace].
 
 ## Qué mide la plataforma
 

@@ -75,7 +75,7 @@ La nueva definición de la International Dyslexia Association pone en el centro 
 ## Falta
 
 - Un apartado sobre la **escritura** (ortografía), que la nueva definición incluye y la plataforma apenas mide (ver [Qué medimos a la luz de la nueva definición](definicion.qmd)).
-- Un apartado sobre la **cognición numérica**, si el grupo decide que entra en este manual.
+- La **cognición numérica** tiene su propio marco teórico en [Cognición numérica](cognicion-numerica.qmd#sec-mate-marco).
 - Revisión del grupo y, en su caso, incorporar los trabajos del grupo cuando se publiquen.
 
 ## Preguntas para el grupo
