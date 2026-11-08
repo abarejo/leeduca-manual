@@ -11,6 +11,14 @@ Decisiones del grupo que afectan a cómo se calculan e interpretan las puntuacio
 | Se usan todas las cohortes juntas como referencia, salvo que una cohorte se aparte más de 1 DT de las demás en una tarea; entonces usa su propia referencia. | [D] Diferencia mediana entre cohortes equivalentes d = 0,11 | Fichas |
 | Si en un momento no hay al menos 100 niños de la muestra de referencia, se usa a todos los niños y se indica en la tabla. | [U] | Ficha RAN (4.1) |
 
+## Clasificación del riesgo
+
+| Decisión | Apoyo | Dónde |
+|---|---|---|
+| Los cinco niveles de certeza (DL-A, DL-B, TR, INT, TE) son la clasificación de referencia de la dificultad lectora. El umbral de la dificultad grave es P10, no −1,5 DT (08/11/2026). | [E] Definición de la IDA; modelo de riesgo acumulado y resiliencia. [U] Menos niños graves sin identificar | [Cómo estimamos el riesgo](riesgo.qmd#sec-por-que-niveles) |
+| La misma clasificación se propone para el lenguaje oral y las matemáticas, con las mismas reglas (propuesta del 08/11/2026). | [U] Comparabilidad entre dominios | [Cómo estimamos el riesgo](riesgo.qmd#sec-niveles-otros-dominios) |
+| Los informes de un trimestre usan cinco tramos, con una zona «a vigilar» entre P20 y P30 (08/11/2026). | [D] Simulación del error de medida | [Tramos del informe](informe-tramos.qmd) |
+
 ## Cómo se barema
 
 | Decisión | Apoyo | Dónde |

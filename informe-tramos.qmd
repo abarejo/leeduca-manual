@@ -1,0 +1,42 @@
+# Tramos del informe: niveles y zona «a vigilar» {#sec-informe-tramos}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** propuesta del 08/11/2026 para revisar en el grupo. Concilia la zona «a vigilar» (decidida el 08/11/2026) con los niveles de severidad del [prototipo de informe de aula](informe-aula.qmd).
+:::
+
+**En una frase.** El informe de un trimestre clasifica a cada niño en cinco tramos de percentil. Entre P20 y P30 no hay etiqueta, sino vigilancia, y la palabra «dificultad» se reserva para lo que persiste a lo largo de los cursos.
+
+## Los cinco tramos
+
+| Tramo | Percentil del trimestre | Qué dice el informe al docente | Qué dice a la familia | Qué se hace | % esperado en un aula típica |
+|---|---|---|---|---|---|
+| **4 · Muy por debajo** | P5 o menos | Muy por debajo de lo esperado para su curso y trimestre | Muy por debajo de lo habitual | Volver a medir pronto; apoyo intensivo; valorar derivación | 5 % |
+| **3 · Bastante por debajo** | P6 a P10 | Bastante por debajo | Bastante por debajo de lo habitual | Apoyo en grupo reducido; seguir cada pocas semanas | 5 % |
+| **2 · En riesgo** | P11 a P19 | Por debajo; en riesgo | Por debajo de lo habitual | Apoyo en el aula y seguimiento | 9 % |
+| **1 · A vigilar** | P20 a P30 | Cerca del límite; sin etiqueta | Cerca del límite de lo habitual | Mirar cómo avanza en la evaluación siguiente | 11 % |
+| **0 · Sin dificultad** | Más de P30 | Dentro de lo esperado | Dentro de lo habitual | Enseñanza ordinaria | 70 % |
+
+El prototipo de informe de aula usa estos tramos desde su [versión 2](apps/informe_aula_v2.html){target="_blank"}. Respecto a la versión 1, el tramo «leve» (P17–P25) desaparece: lo que estaba entre P11 y P19 pasa a «en riesgo» y lo que estaba entre P20 y P25 pasa a «a vigilar», junto con P26–P30.
+
+## Por qué así
+
+- **Menos cambios de etiqueta por azar.** Con una prueba de fiabilidad .85, los niños cuya etiqueta cambia de una evaluación a otra sin haber cambiado bajan del 14 % al 6 % (ver [La zona «a vigilar»](avances.qmd#sec-vigilar)).
+- **Cada tramo lleva una acción.** El informe no solo clasifica: dice qué hacer y cuándo volver a mirar.
+- **Los tramos describen un trimestre; los niveles de certeza, una trayectoria.** Un niño en el tramo 4 un trimestre no «tiene dislexia». La dificultad persistente se define con toda la trayectoria de 6 a 11 años, con los niveles de certeza de [Cómo estimamos el riesgo](riesgo.qmd). El informe de un trimestre habla de **riesgo y de apoyo**, no de diagnóstico.
+- **La banda de error se ve.** Cada punto del informe lleva su margen de error. Si la banda de un niño cruza el límite de su tramo, el informe lo trata como el tramo vecino más favorable hasta la siguiente evaluación.
+
+## Relación con los niveles de certeza
+
+| Tramo del trimestre | Niveles de certeza (toda la trayectoria) |
+|---|---|
+| 4 y 3 (P10 o menos) | Si se repite en al menos dos cursos y no supera P25 desde los 7 años, es **dificultad persistente grave** (DL-A) |
+| 2 y 1 (P11 a P30) | Puede acabar en dificultad persistente moderada (DL-B), transitoria (TR) o típica, según cómo avance |
+| 0 (más de P30) | Típico, salvo que caiga en cursos posteriores |
+
+Los niveles de certeza siguen usando P25 como corte de cada curso: la zona «a vigilar» cambia cómo se informa de un trimestre, no cómo se clasifica una trayectoria. Los niveles, su umbral de P10 para la dificultad grave y su justificación están en [Cómo estimamos el riesgo](riesgo.qmd).
+
+## Preguntas para el grupo
+
+1. ¿Os parecen bien los nombres de los tramos («muy por debajo», «bastante por debajo», «en riesgo», «a vigilar», «sin dificultad»)?
+2. ¿Aplicamos la regla de la banda (si cruza el límite, el tramo más favorable) o mostramos los dos tramos posibles?
+3. ¿Se usan los mismos tramos en las tareas de lenguaje oral y de matemáticas?

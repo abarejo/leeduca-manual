@@ -6,7 +6,7 @@ source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador de octubre de 2026, actualizado el 08/11/2026 (zona «a vigilar» y embudo de dos puertas). Describe el criterio que usan las fichas y los análisis de predicción. El umbral del nivel más grave está pendiente de acordar (ver [Consultas](consultas.qmd)).
+**Estado:** borrador de octubre de 2026, actualizado el 08/11/2026. **Decidido (08/11/2026):** los cinco niveles de certeza son la clasificación de referencia del manual, con P10 como umbral de la dificultad grave (DL-A). Describe el criterio que usan las fichas y los análisis de predicción.
 :::
 
 Una sola puntuación baja en un trimestre no basta para hablar de dificultad lectora. Un niño puede tener un mal día, estar recién llegado o avanzar a otro ritmo, y alcanzar después a sus compañeros. Por eso el manual distingue entre **riesgo**, que se estima antes de leer, y **dificultad**, que solo se confirma cuando la lectura sigue baja durante varios cursos.
@@ -142,8 +142,29 @@ El nivel de certeza resume toda la trayectoria lectora de un niño en una sola v
 
 **Cautela:** el nivel se construye con palabras, pseudopalabras y velocidad de texto. Por eso, comparar con él esas mismas tareas a partir de los 6 años es circular: mide acuerdo, no validez predictiva (ver la ficha de velocidad).
 
+## Por qué esta clasificación {#sec-por-que-niveles}
+
+**Decisión del grupo (08/11/2026).** El manual adopta los cinco niveles de certeza como clasificación de referencia de la dificultad lectora, con **P10** como umbral de la dificultad grave (DL-A), en lugar de −1,5 DT (≈ P7). Tres razones:
+
+- **Usa la trayectoria, no una foto.** La dificultad se define con varios cursos, como pide la definición de la IDA, que pone en el centro la dificultad que persiste pese a la enseñanza [@ida2025definicion]. Una evaluación aislada no basta.
+- **Separa la certeza de la gravedad.** Distinguir la dificultad persistente grave (DL-A), la persistente (DL-B) y la transitoria (TR) permite estudiar qué distingue a los niños que se recuperan de los que no, que es una pregunta teórica central de los modelos de riesgo acumulado y resiliencia [@catts2022riesgo].
+- **Es menos conservadora sin perder certeza.** Con P10 se deja a menos niños en dificultad grave sin identificar, y la exigencia de que se repita en al menos dos cursos y no supere P25 desde los 7 años mantiene la certeza.
+
+## La misma lógica para el lenguaje oral y las matemáticas (propuesta) {#sec-niveles-otros-dominios}
+
+La clasificación no depende de la lectura: solo pide una medida por curso, un corte y varios cursos evaluados. La propuesta es aplicarla igual a otros dos dominios:
+
+| Dominio | Medida por curso (propuesta) | Primeros cursos con datos | Para qué |
+|---|---|---|---|
+| **Lenguaje oral** | Vocabulario y recepción gramatical (ver el [cribado de dos riesgos](fichas/cribado_dos_riesgos.qmd)) | 4–5 años | Distinguir un lenguaje oral débil que persiste de uno que se recupera; separar el riesgo de dislexia del de trastorno del lenguaje |
+| **Matemáticas** | Tareas de aritmética y de magnitudes de cada curso (ver [Cognición numérica](cognicion-numerica.qmd)) | 5–8 años | Dificultad persistente en matemáticas y su coincidencia con la dificultad lectora |
+
+Para que los niveles sean comparables entre dominios, se usan las mismas reglas (P10 y P25, al menos dos cursos, uno desde los 7 años). Lo que hay que comprobar en cada dominio es que haya medidas suficientes en cada curso y que sean fiables.
+
+- **Falta:** calcular las etiquetas de lenguaje oral y de matemáticas con el mismo guion que las de lectura, y revisar qué tareas entran en cada curso.
+
 ## Pendiente
 
-- Umbral de DL-A: p10 frente a −1,5 DT.
+- Etiquetas de lenguaje oral y de matemáticas (ver la propuesta anterior).
 - Generar la versión 3 de las etiquetas sin la tarea 1887 y con la denominación rápida depurada.
 - Añadir la comprensión lectora como dimensión aparte (baja comprensión con decodificación normal).

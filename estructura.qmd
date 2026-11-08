@@ -117,7 +117,7 @@ Las mismas fichas, ordenadas por edad y con un núcleo mínimo propuesto para ca
 - **C.** Ítems y materiales de ejemplo.
 - **D.** Tareas de clase B y C: descripción y datos disponibles.
 - **E.** Diccionario de códigos de tarea y de sesión.
-- **F.** Modelo de informe para centros y familias (ver el [prototipo de informe de aula](informe-aula.qmd)).
+- **F.** Modelo de informe para centros y familias (ver la parte «Prototipos de informe»: [tramos](informe-tramos.qmd), [informe de aula](informe-aula.qmd) e [informe para familias](informe-familias.qmd)).
 - **G.** Fórmulas y código reproducible (R).
 - **H.** Glosario y referencias.
 
@@ -152,7 +152,7 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 |---|---|---|
 | Cap. 1–2 Fundamentos y marco teórico | **Borradores (08/11)**: [uso responsable](uso-responsable.qmd) (usos, niveles de usuario, aplicación, interpretación, ética y marco normativo) y [marco teórico](marco-teorico.qmd) (ortografía transparente, visión simple, precursores, dificultad lectora en español) | Consentimiento, comité de ética y formación de evaluadores; escritura; revisión del equipo |
 | Cap. 3 Plataforma | **Borrador completo (02/11)**: diseño, historia, arquitectura, tipos de tarea, medidas, cohortes y versiones | Fechas del cambio de plataforma; evaluadores por cohorte; escalas de DIS-ESP |
-| Cap. 4 Estudio normativo | **Borrador (02/11)**: cohortes, niños por momento, seguimiento y limpieza. **Resuelto:** fuente de la condición Preleo (02/11), nombres de colegio normalizados y qué fueron las evaluaciones de 2020/21 y 2021/22 | Diagrama de flujo de la muestra; si 2020/21 y 2021/22 se bareman aparte |
+| Cap. 4 Estudio normativo | **Borrador (02/11)**: cohortes, niños por momento, seguimiento y limpieza. **Resuelto:** fuente de la condición Preleo (02/11), nombres de colegio normalizados y qué fueron las evaluaciones de 2020/21 y 2021/22 | Si 2020/21 y 2021/22 se bareman aparte (el [diagrama de flujo de la muestra](estudio-normativo.qmd#sec-flujo-muestra) está hecho desde el 08/11) |
 | Cap. 5 Método | **Borrador completo (02/11)**, ampliado el 08/11: banda de error ilustrada con el [percentil que baila](avances.qmd#sec-baila), regresión a la media y [zona «a vigilar»](avances.qmd#sec-vigilar) | ω y TRI ítem a ítem; normas continuas; anclas del cambio mínimo relevante |
 | Cap. 6 Resultados globales | **Borrador (02/11)**: tabla de tareas A y estabilidad longitudinal | Análisis factorial confirmatorio e invarianza |
 | Cap. 7–18 Fichas | Cinco fichas piloto (letras, velocidad, RAN, contar sílabas y TECLE), rima, batería de 3 años, [cribado de dos riesgos](fichas/cribado_dos_riesgos.qmd) (05/11) y 98 fichas automáticas, por forma desde el 03/11, con aviso de efecto suelo y, en las listas de palabras, propiedades de los ítems (08/11); 18 marcos teóricos por dominio | Ficha completa de las 32 tareas de clase A; propiedades de los ítems de las formas antiguas |
@@ -192,10 +192,10 @@ Lo que sigue son propuestas desde la psicometría para que el manual aporte algo
 ## Preguntas para el grupo
 
 1. ¿Os parecen bien las **cuatro partes** y el orden de los capítulos? ¿Falta o sobra algo?
-2. ¿Se aceptan los **cinco niveles de certeza** y el umbral p10 para la dificultad grave? Los criterios clínicos más estrictos usan −1,5 DT, que equivale a p7.
-3. ¿La **cognición numérica** entra en este manual o va en uno propio?
-4. ¿El manual se publica en español con un **resumen técnico en inglés**?
-5. ¿Dónde va la **batería DIS-ESP** en papel: en el capítulo de la plataforma, como antecedente, o en un capítulo propio?
+2. ~~¿Se aceptan los **cinco niveles de certeza** y el umbral p10 para la dificultad grave?~~ **Decidido (08/11/2026):** sí, con P10, y se propone la misma clasificación para el lenguaje oral y las matemáticas (ver [Por qué esta clasificación](riesgo.qmd#sec-por-que-niveles)).
+3. ~~¿La **cognición numérica** entra en este manual o va en uno propio?~~ **Decidido (08/11/2026):** entra en este manual, en su propia parte de fichas, con un marco teórico ampliado.
+4. ~~¿El manual se publica en español con un **resumen técnico en inglés**?~~ **Decidido (08/11/2026):** se hará una versión en inglés poco a poco, empezando por lo que necesitan los revisores de los artículos.
+5. ~~¿Dónde va la **batería DIS-ESP** en papel?~~ **Decidido (08/11/2026):** en un capítulo propio, con sus pruebas y marcos teóricos. Las pruebas en papel quedan de uso libre.
 6. ¿Las **versiones de otros países y para adultos** (por ejemplo, TECLE con 3 minutos en Colombia) entran en las fichas o en un anexo?
 7. ¿Os sirve la **plantilla de diez apartados**, con «Estudios que abre» y «Pendientes»? ¿Qué cambiaríais?
 8. De las **doce propuestas** anteriores, ¿cuáles os parecen prioritarias para la primera versión del manual?

@@ -1,0 +1,108 @@
+# Prototipo de informe para familias {#sec-informe-familias}
+
+::: {.callout-warning appearance="minimal"}
+**Ejemplo inventado.** «Lucía» no existe: sus puntuaciones son ficticias, aunque verosímiles con los baremos de la plataforma, y la probabilidad es ilustrativa. Lo que se propone es el **formato**. Propuesta del 08/11/2026 para revisar en el grupo.
+:::
+
+**En una frase.** Una página que dice a la familia dónde está su hijo (con su margen), cómo avanza y qué se va a hacer, sin etiquetas diagnósticas y con una fecha para volver a mirarlo.
+
+## El informe
+
+```{=html}
+<style>
+.inf{border:1px solid #DCE7EE;border-radius:12px;padding:16px 18px;margin:1rem 0 1.4rem;background:#FBFAF7}
+.inf h3{margin:.1rem 0 .7rem;border:0}
+.tres{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.par{background:#fff;border:1px solid #E6E3DC;border-radius:10px;padding:10px 12px}
+.par .tit{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#888;font-weight:700}
+.par .val{font-size:1.02rem;margin:.2rem 0 .4rem}
+.termo{position:relative;height:16px;border-radius:8px;background:linear-gradient(90deg,#F9DCC4 0 20%,#FCEFC9 20% 30%,#E2EFF6 30% 100%);margin:8px 0 4px}
+.termo .gris{position:absolute;top:-3px;height:22px;background:rgba(136,136,136,.35);border-radius:4px}
+.termo .pto{position:absolute;top:-4px;width:4px;height:24px;background:#22223B;border-radius:2px}
+.escala{display:flex;justify-content:space-between;font-size:.7rem;color:#888}
+.iconos{display:grid;grid-template-columns:repeat(20,1fr);gap:2px;margin:6px 0}
+.iconos span{font-size:.72rem;line-height:1;text-align:center;color:#C9DFEB}
+.iconos span.si{color:#E57813}
+.accion{margin-top:12px;background:#FCF4E0;border-left:4px solid #F1B115;border-radius:6px;padding:8px 12px;font-size:.92rem}
+@media (max-width:640px){.iconos{grid-template-columns:repeat(10,1fr)}}
+</style>
+<div class="inf">
+  <h3>Lucía · 3.º de Infantil · evaluación de marzo</h3>
+  <div class="tres">
+    <div class="par">
+      <div class="tit">Dónde está</div>
+      <div class="val">Letras y sonidos: entre los <b>12 y los 30</b> de cada 100 niños de su edad. Está <b>cerca del límite</b>: lo vigilaremos.</div>
+      <div class="termo" aria-label="Percentil 18, margen de 12 a 30"><div class="gris" style="left:12%;width:18%"></div><div class="pto" style="left:18%"></div></div>
+      <div class="escala"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div>
+    </div>
+    <div class="par">
+      <div class="tit">Cómo avanza</div>
+      <div class="val">➚ Avanza <b>como la mayoría</b> de los niños que empezaron donde ella.</div>
+    </div>
+    <div class="par">
+      <div class="tit">Qué esperar</div>
+      <div class="val">De cada <b>100 niños</b> como Lucía, unos <b>22</b> necesitarán apoyo para leer en 1.º.</div>
+      <div class="iconos" id="fam-iconos" aria-label="22 de 100 iconos destacados"></div>
+    </div>
+  </div>
+  <div class="accion"><b>Qué vamos a hacer:</b> Lucía hará en clase actividades de sonidos y letras en un grupo pequeño durante 8 semanas. En casa ayuda jugar a rimas y a «¿por qué sonido empieza…?». Volveremos a mirarlo en mayo.</div>
+</div>
+<script>
+(function(){var c=document.getElementById("fam-iconos");if(!c)return;var h="";for(var i=0;i<100;i++){h+='<span class="'+(i<22?"si":"")+'">●</span>'}c.innerHTML=h;})();
+</script>
+```
+
+## ¿Por qué un intervalo y no un número?
+
+::: {.callout-note appearance="simple" icon=false}
+**Cómo leer esta animación.** Cada punto es un resultado que Lucía podría haber sacado hoy con la misma habilidad. La banda gris es donde caen 9 de cada 10. Por eso el informe da un margen («entre los 12 y los 30») y no un único número. Es la versión breve, sin controles, del [percentil que baila](avances.qmd#sec-baila).
+:::
+
+```{=html}
+<div id="fam-baila" style="--mar:#2689B7;--coral:#E57813;--tinta:#22223B;--gris:#8D8F99;background:#FBFAF7;border:1px solid #E6E3DC;border-radius:8px;padding:12px 14px;margin:1rem 0;font-family:inherit;color:#22223B">
+<div style="font-weight:700;font-size:1rem;margin-bottom:4px">¿Por qué te damos un intervalo y no un número?</div>
+<div style="font-size:.9rem;margin-bottom:6px">Si Lucía repitiera hoy la misma prueba, sin haber cambiado nada, no sacaría siempre lo mismo: un día se concentra más, otro menos. Estos son resultados que podría haber sacado.</div>
+<svg id="fam-svg" viewBox="0 0 640 120" role="img" aria-label="Animación: resultados posibles de Lucía, casi todos entre 12 y 30 de cada 100" style="width:100%;height:auto;display:block"></svg>
+<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.88rem;margin-top:4px"><button id="fam-play" style="border:1px solid #2689B7;background:#2689B7;color:#fff;border-radius:6px;padding:5px 12px;cursor:pointer">❚❚ Pausa</button><span>Resultado de esta vez: <b id="fam-v">–</b> de cada 100</span></div>
+<div style="font-size:.85rem;margin-top:6px"><b>Lo importante:</b> mirad la banda, no el punto. Si en la próxima evaluación sube o baja unos puntos dentro de la banda, no significa que haya cambiado. Lo que de verdad nos dice si avanza es cómo crece a lo largo del curso.</div>
+<script>
+(function(){
+const NS="http://www.w3.org/2000/svg",svg=document.getElementById("fam-svg"),X0=30,X1=610,x=p=>X0+(X1-X0)*p/100;
+function el(t,a,par){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(par||svg).appendChild(e);return e}
+function pnorm(z){const t=1/(1+.2316419*Math.abs(z)),d=.3989423*Math.exp(-z*z/2),p=d*t*(.3193815+t*(-.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return z>0?1-p:p}
+function rnorm(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+el("line",{x1:X0,x2:X1,y1:70,y2:70,stroke:"#E6E3DC","stroke-width":8,"stroke-linecap":"round"});
+el("rect",{x:x(12),y:58,width:x(30)-x(12),height:24,rx:6,fill:"#8D8F99","fill-opacity":.28});
+el("text",{x:(x(12)+x(30))/2,y:50,"text-anchor":"middle","font-size":12,fill:"#22223B"}).textContent="9 de cada 10 resultados";
+for(const p of [0,25,50,75,100])el("text",{x:x(p),y:105,"text-anchor":"middle","font-size":12,fill:"#8D8F99"}).textContent=p;
+el("text",{x:X1,y:22,"text-anchor":"end","font-size":11,fill:"#8D8F99"}).textContent="de cada 100 niños de su edad";
+const gh=el("g",{}),dot=el("circle",{cy:70,r:9,fill:"#2689B7",stroke:"#fff","stroke-width":2});
+const M=-.85,SD=.198;let timer=null;
+function frame(){const o=Math.max(1,Math.min(99,Math.round(100*pnorm(M+SD*rnorm()))));dot.setAttribute("cx",x(o));
+ el("circle",{cx:x(o),cy:70,r:4,fill:"#2689B7","fill-opacity":.2},gh);while(gh.childNodes.length>60)gh.removeChild(gh.firstChild);
+ document.getElementById("fam-v").textContent=o}
+const btn=document.getElementById("fam-play");
+function start(){frame();timer=setInterval(frame,900);btn.textContent="❚❚ Pausa"}
+function stop(){clearInterval(timer);timer=null;btn.textContent="▶ Reproducir"}
+btn.onclick=()=>timer?stop():start();
+const quieto=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+for(let i=0;i<25;i++)frame(); if(quieto)stop(); else start();
+})();
+</script>
+</div>
+```
+
+## Por qué este formato
+
+1. **Recuentos, no porcentajes abstractos.** «De cada 100 niños como Lucía, 22…» se entiende mejor que «probabilidad 0,22».
+2. **La incertidumbre se ve.** El margen evita sacar conclusiones de un mal día.
+3. **Tramos con acción.** Lucía está en P18, en el tramo «en riesgo», pero su margen llega a la zona «a vigilar». Por la regla de la banda, el informe la trata como «cerca del límite» y propone apoyo ligero y una fecha para volver a mirar (ver [Tramos del informe](informe-tramos.qmd)).
+4. **Sin etiquetas diagnósticas.** El informe habla de riesgo y de apoyo, no de dislexia.
+5. **Siempre una acción y una fecha.** Un informe que no cambia lo que se hace no sirve.
+
+Lo que se dice a una familia y cómo se le comunica está en [Presentación y uso responsable](uso-responsable.qmd).
+
+## Preguntas para el grupo
+
+1. ¿Incluimos la probabilidad («22 de cada 100») en el informe a familias, o solo en el del especialista?
+2. ¿La animación se queda en la versión en línea del informe y, en papel, una imagen fija con los puntos?
