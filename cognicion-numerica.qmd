@@ -17,7 +17,7 @@ p_rdc <- sum(K1$N_con_magnitudes * K1$pct_riesgo_discalculia) / sum(K1$N_con_mag
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** borrador del 21/10/2026, con marco teórico añadido el 08/11/2026 a partir de los materiales docentes de P. J. López-Pérez. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo abre sus fichas: reúne lo que hay, la validez frente a un criterio posterior y lo que falta. Se apoya en el artículo publicado sobre la comorbilidad entre dislexia y discalculia con datos de la plataforma [@loredo2025prevalencia]. Guion del criterio: `scripts/R/criterio_matematicas.R`.
+**Estado:** borrador del 21/10/2026, con marco teórico añadido el 08/11/2026 a partir de los materiales docentes de la asignatura de J. L. Luque Vilaseca (Intervención logopédica en los trastornos del lenguaje escrito y la discalculia, Universidad de Málaga), que compartió con P. J. López-Pérez junto con buena parte de la documentación de la plataforma y de Preleo. El grupo decidió incluir las tareas de matemáticas en el manual. Este capítulo abre sus fichas: reúne lo que hay, la validez frente a un criterio posterior y lo que falta. Se apoya en el artículo publicado sobre la comorbilidad entre dislexia y discalculia con datos de la plataforma [@loredo2025prevalencia]. Guion del criterio: `scripts/R/criterio_matematicas.R`.
 :::
 
 ## Marco teórico: aprender matemáticas y la discalculia {#sec-mate-marco}
