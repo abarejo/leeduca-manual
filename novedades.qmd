@@ -4,6 +4,7 @@ Una línea por cambio, de lo más reciente a lo más antiguo. El historial compl
 
 | Fecha | Pieza | Cambio |
 |---|---|---|
+| 08/11/2026 | Nuevo capítulo: Del laboratorio al manual | Cuatro avances de los estudios internos que cambian cómo se interpreta una puntuación: el percentil que baila (animación interactiva con la fiabilidad elegida), las salidas del riesgo por regresión a la media (simulación reproducible), el embudo de dos puertas para el cribado y la edad de adquisición de los ítems de las listas de lectura de palabras. Enlazado desde 5.2, 5.5 y el cribado universal. Sin resultados de estudios en preparación. |
 | 03/11/2026 | Fichas | Fichas automáticas regeneradas con `ficha_generica_v3.R`: cada forma (código) tiene sus descriptivos, su baremo y su panel en la figura; nueva sección «Formas: ¿se pueden unir?» con la equivalencia entre formas y la igualación lineal cuando las hicieron los mismos niños (25 tareas con varias formas; 18 con escalas distintas; 11 igualables). Validez y efectos sobre puntuaciones tipificadas dentro de forma × momento; condición Preleo v6. |
 | 03/11/2026 | Fichas | Las fichas automáticas avisan del efecto suelo (P10 igual a la peor puntuación posible: 17 de 98 tareas) y remiten al baremo continuo sobre meses de enseñanza. Las cinco fichas piloto incluyen el resultado de M3 para su tarea. |
 | 03/11/2026 | Presentación | Autoría provisional ampliada: Ricardo Cruz Arándiga (ingeniero de la plataforma) y María Rodríguez pasan a ser coautores. |
