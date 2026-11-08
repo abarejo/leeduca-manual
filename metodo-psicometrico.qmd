@@ -40,7 +40,7 @@ Los análisis que desarrollan estos apartados están en el espacio interno del g
 
 - **Falta:** extender los detectores a todas las tareas y decidir los umbrales.
 
-## 5.2 Fiabilidad
+## 5.2 Fiabilidad {#sec-fiabilidad}
 
 **El método depende de la familia.** La consistencia interna (α, ω) solo tiene sentido en tareas de precisión sin tiempo limitado. En las tareas de velocidad, α sobrestima la fiabilidad, y lo adecuado es el test-retest o las formas paralelas.
 
@@ -53,6 +53,8 @@ Los análisis que desarrollan estos apartados están en el espacio interno del g
 **Qué hay hoy.** De las `r nrow(E)` tareas de evaluación del catálogo, `r n_alfa` tienen α de 2021 y `r n_rho` tienen estabilidad entre aplicaciones sucesivas (ρ); `r n_alguna` tienen al menos uno de los dos y `r nrow(E) - n_alguna` no tienen ningún dato de fiabilidad todavía. La estabilidad mezcla error de medida y cambio real, así que es una cota inferior.
 
 **Error típico y bandas.** Cada percentil se acompaña de su banda de confianza al 90 %, calculada con el error típico de medida. Con TRI, el error es **condicional**: más ancho en los extremos, donde se toman las decisiones de riesgo.
+
+**Lo que supone una fiabilidad de .85.** Un niño con nivel real en P20 puede aparecer fuera de riesgo en unas 4 de cada 10 evaluaciones. La simulación interactiva está en [El percentil que baila](avances.qmd#sec-baila).
 
 - **Falta:** ω y TRI con las respuestas ítem a ítem de la plataforma nueva para todas las tareas de clase A y B; test-retest a corto plazo en las tareas de velocidad. Es lo que más clases de calidad puede cambiar.
 
@@ -83,13 +85,15 @@ Los análisis que desarrollan estos apartados están en el espacio interno del g
 
 - **Falta:** normas continuas de las tareas de clase A, tablas aparte para centros con Preleo, y baremos de 3 años y de las versiones en otras lenguas.
 
-## 5.5 Cuánto cambio importa
+## 5.5 Cuánto cambio importa {#sec-cambio-importa}
 
 En un sistema de seguimiento, la pregunta clave no es solo dónde está un niño, sino **si ha avanzado de verdad** y **si ese avance importa**. El manual responde con tres indicadores complementarios:
 
 1. **Índice de cambio fiable:** si la diferencia entre dos evaluaciones supera lo que cabe esperar por el error de medida. Ya está en las fichas de letras y velocidad.
 2. **Percentil de crecimiento:** cuánto ha progresado un niño frente a los que partían del mismo nivel.
 3. **Cambio mínimo relevante:** cuánto cambio importa, anclado en criterios externos (el pronóstico lector, el juicio docente, el paso de dificultad transitoria a persistente) [@anvari2021anclas].
+
+**Cuidado con la regresión a la media.** Entre los niños marcados en riesgo, una parte «sale» en la evaluación siguiente solo por el error de medida: con fiabilidad .85, más de uno de cada cuatro sin haber cambiado (ver [Salir del riesgo no siempre es mejorar](avances.qmd#sec-salir)). Por eso una salida del riesgo se confirma con otra evaluación.
 
 - **Falta:** cerrar las anclas y llevar los tres indicadores a las tareas de lectura de clase A.
 

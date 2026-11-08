@@ -187,6 +187,7 @@ book:
     - part: "Investigar con la plataforma"
       chapters:
         - investigacion.qmd
+        - avances.qmd
         - agenda.qmd
     - part: "Preleo"
       chapters:

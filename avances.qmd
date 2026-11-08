@@ -1,0 +1,203 @@
+# Del laboratorio al manual: avances psicométricos {#sec-avances}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** borrador del 08/11/2026 para revisar en el grupo. Recoge cuatro ideas de los estudios internos del laboratorio que cambian **cómo se interpreta** una puntuación de la plataforma. Solo incluye simulaciones, normas publicadas y resultados que el manual ya da en otros capítulos; los resultados de los estudios en preparación se añadirán cuando se publiquen.
+:::
+
+**En una frase.** Una puntuación de la plataforma es una estimación con error, la dificultad de una lista depende de qué palabras lleva y no solo de cuántas sílabas tienen, y decidir sobre un niño pide más de una mirada.
+
+| Idea | Qué cambia en el uso de la plataforma | Dónde se aplica |
+|---|---|---|
+| [El percentil que baila](#sec-baila) | Un percentil se lee con su banda, no como un número fijo | [5.2 Fiabilidad](metodo-psicometrico.qmd#sec-fiabilidad) |
+| [Salir del riesgo no siempre es mejorar](#sec-salir) | Una salida del riesgo se confirma con otra evaluación | [5.5 Cuánto cambio importa](metodo-psicometrico.qmd#sec-cambio-importa) |
+| [El embudo de dos puertas](#sec-embudo) | La segunda mirada usa información distinta de la primera | [El cribado universal](riesgo.qmd#sec-cribado) |
+| [Qué hace difícil una lista de palabras](#sec-listas) | Las formas de una tarea se comparan por sus ítems, no solo por su longitud | Fichas de lectura de palabras |
+
+## El percentil que baila {#sec-baila}
+
+Una prueba con fiabilidad .85 se considera buena. Aun así, un niño cuyo nivel **real** está en el percentil 20 puede obtener, en evaluaciones sucesivas, percentiles muy distintos sin haber cambiado. La animación lo simula: la línea discontinua es su nivel real, que no se mueve, y cada círculo es lo que vería el docente en un trimestre. Los círculos se vuelven rojos cuando caen por debajo de P25.
+
+::: {.callout-note appearance="simple" icon=false}
+**Cómo leer esta animación.** No son datos de ningún niño: es una simulación con la fiabilidad que se elija. Pulsa reproducir. Con fiabilidad .85, el mismo niño aparece fuera de riesgo en unas 4 de cada 10 evaluaciones. Sube la fiabilidad a .95 y los círculos apenas se mueven; bájala a .70 y saltan. La técnica de mostrar resultados posibles uno tras otro, en lugar de una barra de error, es de Hullman et al. [-@hullman2015hops].
+:::
+
+```{=html}
+<div id="hops-leeduca" class="hops-box">
+<style>
+#hops-leeduca{--mar:#008FA3;--coral:#D64545;--tinta:#22223B;--gris:#8D8F99;--papel:#FBFAF7;--rejilla:#E6E3DC;font-family:inherit;color:var(--tinta);background:var(--papel);border:1px solid var(--rejilla);border-radius:8px;padding:14px 14px 10px;margin:1rem 0}
+#hops-leeduca .ctrl{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;font-size:.9rem;margin-bottom:8px}
+#hops-leeduca label{display:flex;flex-direction:column;gap:2px;min-width:180px}
+#hops-leeduca input[type=range]{width:100%;accent-color:var(--mar)}
+#hops-leeduca button{border:1px solid var(--mar);background:var(--mar);color:#fff;border-radius:6px;padding:6px 14px;font-size:.9rem;cursor:pointer}
+#hops-leeduca button.sec{background:#fff;color:var(--mar)}
+#hops-leeduca svg{width:100%;height:auto;display:block}
+#hops-leeduca .tally{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.88rem;margin-top:6px}
+#hops-leeduca .tally b{font-size:1.05rem}
+#hops-leeduca .nota{font-size:.78rem;color:var(--gris);margin-top:6px}
+</style>
+<div class="ctrl">
+  <button id="hops-play">▶ Reproducir</button>
+  <button id="hops-reset" class="sec">Reiniciar</button>
+  <label>Nivel real del niño: <span><b id="hops-pv">P20</b> (no cambia en todo el curso)</span><input id="hops-p" type="range" min="2" max="60" step="1" value="20"></label>
+  <label>Fiabilidad de la prueba: <span><b id="hops-rv">.85</b> <span id="hops-rtxt">(listas de palabras, un trimestre)</span></span><input id="hops-r" type="range" min="0.60" max="0.97" step="0.01" value="0.85"></label>
+  <label>Velocidad<input id="hops-v" type="range" min="1" max="8" step="1" value="3"></label>
+</div>
+<svg id="hops-svg" viewBox="0 0 720 250" role="img" aria-label="Animación: percentil observado de un niño en tres evaluaciones"></svg>
+<div class="tally">
+  <span>Evaluaciones simuladas: <b id="hops-n">0</b></span>
+  <span>Parece en riesgo (&lt; P25) en <b id="hops-riesgo">–</b> de las evaluaciones</span>
+  <span>Entre dos trimestres parece cambiar 15 puntos o más en <b id="hops-salto">–</b> de las veces</span>
+</div>
+<div class="nota">Simulación: puntuación observada = nivel real + error de medida, con la fiabilidad elegida. El nivel real del niño es el mismo en los tres trimestres; todo lo que se mueve es error. Idea: «resultados hipotéticos animados» (Hullman, Resnick y Adar, 2015).</div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id), svg=$("hops-svg"), NS="http://www.w3.org/2000/svg";
+  const W=720,X0=105,X1=700,ROWS=[{y:70,t:"1.er trimestre"},{y:130,t:"2.º trimestre"},{y:190,t:"3.er trimestre"}];
+  const x=p=>X0+(X1-X0)*p/100;
+  // normal: CDF (Zelen y Severo) e inversa (Acklam)
+  function pnorm(z){const t=1/(1+.2316419*Math.abs(z)),d=.3989423*Math.exp(-z*z/2),p=d*t*(.3193815+t*(-.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return z>0?1-p:p}
+  function qnorm(p){const a=[-39.69683028665376,220.9460984245205,-275.9285104469687,138.357751867269,-30.66479806614716,2.506628277459239],b=[-54.47609879822406,161.5858368580409,-155.6989798598866,66.80131188771972,-13.28068155288572],c=[-.007784894002430293,-.3223964580411365,-2.400758277161838,-2.549732539343734,4.374664141464968,2.938163982698783],d=[.007784695709041462,.3224671290700398,2.445134137142996,3.754408661907416],pl=.02425;let q,r;
+    if(p<pl){q=Math.sqrt(-2*Math.log(p));return(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}
+    if(p>1-pl){q=Math.sqrt(-2*Math.log(1-p));return-(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}
+    q=p-.5;r=q*q;return(((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q/(((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1)}
+  function rnorm(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+  function el(t,a,parent){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(parent||svg).appendChild(e);return e}
+  // fondo
+  el("rect",{x:X0,y:35,width:x(25)-X0,height:185,fill:"#D64545","fill-opacity":.08});
+  el("text",{x:(X0+x(25))/2,y:30,"text-anchor":"middle","font-size":11,fill:"#D64545"}).textContent="zona de riesgo (< P25)";
+  for(const p of [0,10,25,50,75,90,100]){el("line",{x1:x(p),x2:x(p),y1:40,y2:220,stroke:"#E6E3DC"});el("text",{x:x(p),y:238,"text-anchor":"middle","font-size":11,fill:"#8D8F99"}).textContent="P"+p}
+  ROWS.forEach(r=>{el("line",{x1:X0,x2:X1,y1:r.y,y2:r.y,stroke:"#E6E3DC"});el("text",{x:X0-8,y:r.y+4,"text-anchor":"end","font-size":11,fill:"#22223B"}).textContent=r.t});
+  const ghosts=el("g",{}), lines=el("g",{});
+  const real=el("line",{y1:40,y2:220,stroke:"#22223B","stroke-width":2,"stroke-dasharray":"5 4"});
+  const realT=el("text",{y:52,"font-size":11,fill:"#22223B"});
+  const conn=el("polyline",{fill:"none",stroke:"#22223B","stroke-opacity":.35,"stroke-width":1.5});
+  const dots=ROWS.map(r=>el("circle",{cy:r.y,r:9,fill:"#008FA3",stroke:"#fff","stroke-width":2}));
+  const labs=ROWS.map(r=>el("text",{y:r.y-14,"text-anchor":"middle","font-size":12,"font-weight":"bold",fill:"#22223B"}));
+  let n=0,nr=0,ns=0,np=0,timer=null;
+  function params(){const p=+$("hops-p").value/100,r=+$("hops-r").value;return{p,r,T:qnorm(p)}}
+  function rtxt(r){return r>=.93?"(una prueba muy fiable)":r>=.84?"(listas de palabras, un trimestre)":r>=.75?"(velocidad en texto)":"(una prueba corta o poco fiable)"}
+  function setReal(){const{p}=params();real.setAttribute("x1",x(p*100));real.setAttribute("x2",x(p*100));realT.setAttribute("x",x(p*100)+5);realT.textContent="nivel real: P"+Math.round(p*100);$("hops-pv").textContent="P"+Math.round(p*100);$("hops-rv").textContent=(+$("hops-r").value).toFixed(2).replace(/^0/,"");$("hops-rtxt").textContent=rtxt(+$("hops-r").value)}
+  function frame(){const{r,T}=params();const obs=ROWS.map(()=>Math.max(1,Math.min(99,Math.round(100*pnorm(Math.sqrt(r)*T+Math.sqrt(1-r)*rnorm())))));
+    obs.forEach((o,i)=>{dots[i].setAttribute("cx",x(o));dots[i].setAttribute("fill",o<25?"#D64545":"#008FA3");labs[i].setAttribute("x",x(o));labs[i].textContent="P"+Math.round(o);
+      el("circle",{cx:x(o),cy:ROWS[i].y,r:3,fill:o<25?"#D64545":"#008FA3","fill-opacity":.18},ghosts);if(o<25)nr++});
+    conn.setAttribute("points",obs.map((o,i)=>x(o)+","+ROWS[i].y).join(" "));
+    n+=3;np+=2;ns+=(Math.abs(obs[1]-obs[0])>=15)+(Math.abs(obs[2]-obs[1])>=15);
+    while(ghosts.childNodes.length>600)ghosts.removeChild(ghosts.firstChild);
+    $("hops-n").textContent=n;$("hops-riesgo").textContent=Math.round(100*nr/n)+" %";$("hops-salto").textContent=Math.round(100*ns/np)+" %"}
+  function reset(){n=nr=ns=np=0;while(ghosts.firstChild)ghosts.removeChild(ghosts.firstChild);["hops-n","hops-riesgo","hops-salto"].forEach((k,i)=>$(k).textContent=i?"–":"0");setReal()}
+  function play(){if(timer){clearInterval(timer);timer=null;$("hops-play").textContent="▶ Reproducir";return}
+    frame();timer=setInterval(frame,1400/+$("hops-v").value);$("hops-play").textContent="❚❚ Pausa"}
+  $("hops-play").onclick=play;$("hops-reset").onclick=reset;
+  ["hops-p","hops-r"].forEach(k=>$(k).oninput=()=>{reset()});
+  $("hops-v").oninput=()=>{if(timer){clearInterval(timer);timer=setInterval(frame,1400/+$("hops-v").value)}};
+  reset();frame();n=nr=ns=np=0;while(ghosts.firstChild)ghosts.removeChild(ghosts.firstChild);
+})();
+</script>
+</div>
+
+```
+
+
+**Qué implica para el manual.**
+
+- Cada percentil se da con su **banda al 90 %** (ver [5.2 Fiabilidad](metodo-psicometrico.qmd#sec-fiabilidad)). La banda es lo que el docente debe ver, no el punto.
+- Cerca del corte, una sola evaluación no basta para decidir. Las **zonas de amortiguación** alrededor del corte (por ejemplo, P20–P30 como «a vigilar») reducen mucho las clasificaciones cambiantes [@psyridou2020estabilidad].
+- Mejorar la fiabilidad de las tareas de clase A (ω y TRI con las respuestas ítem a ítem) es la forma más directa de que el percentil baile menos.
+
+## Salir del riesgo no siempre es mejorar {#sec-salir}
+
+Cuando se selecciona a los niños que puntúan bajo, parte de su puntuación baja es mala suerte en ese día. En la evaluación siguiente, esa mala suerte no se repite y la puntuación sube, aunque el niño no haya cambiado: es la **regresión a la media**. Hace treinta años ya se vio que una parte importante de las «remisiones» de la dificultad lectora era un artefacto del error de medida [@fergusson1996remision].
+
+La tabla es una simulación: niños cuyo nivel real **no cambia**, evaluados dos veces con la misma prueba. Se marca «en riesgo» a los que quedan por debajo de P25 en la primera evaluación.
+
+| Fiabilidad de la prueba | De los marcados en riesgo, % que «sale» en la segunda evaluación sin haber cambiado | De los marcados, % que de verdad está por debajo de P25 |
+|---|---|---|
+| .70 | 40 % | 71 % |
+| .80 | 32 % | 77 % |
+| .85 | 28 % | 80 % |
+| .90 | 23 % | 84 % |
+| .95 | 16 % | 89 % |
+
+*Simulación con dos millones de casos simulados; guion reproducible en `analisis/avances/simulacion_salida_riesgo.py`.*
+
+Entre cursos, el nivel real sí cambia y la correlación entre evaluaciones es menor que la fiabilidad, así que las salidas por azar son aún más frecuentes. En Infantil, donde las tareas son más cortas, la proporción puede acercarse a la mitad de los niños marcados.
+
+**Qué implica para el manual.**
+
+- Una **salida del riesgo** se celebra con prudencia y se **confirma** con la evaluación siguiente.
+- Para saber si un apoyo funciona, se compara a los niños apoyados con niños de nivel inicial parecido sin apoyo, no con su propia puntuación anterior. Si no, cualquier intervención parecerá eficaz.
+- Los **niveles de certeza** del capítulo [Cómo estimamos el riesgo](riesgo.qmd), que usan toda la trayectoria y no una evaluación, ya protegen contra este efecto.
+
+## El embudo de dos puertas {#sec-embudo}
+
+La literatura y los datos de la plataforma coinciden en un esquema de dos fases (ver [El cribado universal](riesgo.qmd#sec-cribado)):
+
+- **Primera puerta**, para todos y barata: letras y conciencia fonológica a los 5 años dan un AUC de .82, validado dejando fuera cada cohorte. El modelo da una **probabilidad** y está bien calibrado: cuando dice «30 %», acierta más o menos el 30 % de las veces.
+- **Segunda puerta**, solo para quien queda cerca del corte: información **distinta** de la primera. Repetir una tarea muy parecida apenas reduce los falsos positivos [@vannorman2019gated]. Ayudan más el ritmo de crecimiento en las sesiones siguientes [@compton2010gated], el juicio de la maestra con una escala de habilidades concretas y, a los 5 años, el lenguaje oral, que separa la dificultad lectora del trastorno del lenguaje.
+
+::: {.callout-note appearance="simple" icon=false}
+**Cómo leer este esquema.** No son datos: es la propuesta de procedimiento. Arriba entran todos los niños de una edad. La primera puerta da una probabilidad. Los que quedan en la **zona gris** reciben una segunda mirada antes de cualquier etiqueta. Abajo, las tres salidas posibles. La flecha discontinua son los niños con probabilidad baja desde el principio.
+:::
+
+```{=html}
+<figure style="margin:1rem 0">
+<svg viewBox="0 0 760 360" role="img" aria-label="Esquema del embudo de dos puertas: cribado universal con probabilidad calibrada, zona gris con segunda mirada y decisión" style="width:100%;height:auto;font-family:inherit">
+<defs><marker id="fd-man" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#22223B"/></marker></defs>
+<rect x="0" y="0" width="760" height="360" fill="#FBFAF7" rx="10"/>
+<path d="M60,20 L700,20 L560,110 L200,110 Z" fill="#E3F3F5" stroke="#008FA3" stroke-width="2"/>
+<text x="380" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#006C7A">1.ª puerta · todos los niños (5 años)</text>
+<text x="380" y="66" text-anchor="middle" font-size="12" fill="#22223B">letras + conciencia fonológica → probabilidad calibrada</text>
+<text x="380" y="86" text-anchor="middle" font-size="11" fill="#8D8F99">AUC .82 · bien calibrada · a los 4 años, .73</text>
+<path d="M200,110 L560,110 L500,190 L260,190 Z" fill="#F7F1E3" stroke="#B07A10" stroke-width="2"/>
+<text x="380" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#8A5F0C">Zona gris · segunda mirada</text>
+<text x="380" y="155" text-anchor="middle" font-size="12" fill="#22223B">información distinta: maestra · ritmo de crecimiento · lenguaje</text>
+<text x="380" y="175" text-anchor="middle" font-size="11" fill="#8D8F99">cada fuente aporta algo nuevo</text>
+<rect x="40" y="235" width="200" height="88" rx="10" fill="#FBE9E9" stroke="#D64545" stroke-width="2"/>
+<text x="140" y="262" text-anchor="middle" font-size="13.5" font-weight="700" fill="#A93333">Apoyo ya</text>
+<text x="140" y="282" text-anchor="middle" font-size="12" fill="#22223B">probabilidad alta</text>
+<text x="140" y="300" text-anchor="middle" font-size="12" fill="#22223B">en las dos puertas</text>
+<rect x="280" y="235" width="200" height="88" rx="10" fill="#F7F1E3" stroke="#B07A10" stroke-width="2"/>
+<text x="380" y="262" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8A5F0C">Seguimiento</text>
+<text x="380" y="282" text-anchor="middle" font-size="12" fill="#22223B">se mira el ritmo, no el nivel</text>
+<text x="380" y="300" text-anchor="middle" font-size="11" fill="#8D8F99">parte de las salidas es ruido</text>
+<rect x="520" y="235" width="200" height="88" rx="10" fill="#E3F3F5" stroke="#008FA3" stroke-width="2"/>
+<text x="620" y="262" text-anchor="middle" font-size="13.5" font-weight="700" fill="#006C7A">Sin etiqueta</text>
+<text x="620" y="282" text-anchor="middle" font-size="12" fill="#22223B">probabilidad baja</text>
+<text x="620" y="300" text-anchor="middle" font-size="12" fill="#22223B">siguiente cribado</text>
+<path d="M330,190 C300,210 200,215 150,233" fill="none" stroke="#22223B" stroke-width="1.6" marker-end="url(#fd-man)"/>
+<path d="M380,190 L380,233" stroke="#22223B" stroke-width="1.6" marker-end="url(#fd-man)"/>
+<path d="M600,62 C700,120 680,190 630,233" fill="none" stroke="#22223B" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#fd-man)"/>
+<text x="690" y="150" font-size="11" fill="#008FA3">baja ya en</text><text x="690" y="164" font-size="11" fill="#008FA3">la 1.ª puerta</text>
+<text x="380" y="348" text-anchor="middle" font-size="11" fill="#8D8F99">Cada trimestre, los del seguimiento vuelven a entrar: el riesgo es una probabilidad que se actualiza, no una etiqueta.</text>
+</svg>
+<figcaption style="font-size:.85rem;color:#8D8F99">Esquema, no datos. Propuesta pendiente de poner a prueba con los datos de la plataforma.</figcaption>
+</figure>
+```
+
+- **Falta:** simular el embudo con las cohortes 2010–2015 y comparar su beneficio neto (casos encontrados frente a falsos positivos) con el de un solo corte.
+
+## Qué hace difícil una lista de palabras {#sec-listas}
+
+Las listas de lectura de palabras se diseñaron por número de sílabas. Pero la longitud no es lo único que hace difícil una palabra para un niño. Con normas publicadas del español se puede describir cada ítem por su **edad de adquisición** (a qué edad se aprende la palabra oralmente) [@alonso2015aoa] y por su número de **vecinas ortográficas** (palabras que se escriben casi igual). En los estudios internos del laboratorio, la edad de adquisición explica qué palabras se leen más despacio de lo que les toca por su longitud mejor que la frecuencia en textos de adultos.
+
+| Lista | Sílabas | Ítems con norma | Edad de adquisición media (años) |
+|---|---|---|---|
+| 1931 | 2 | 12 de 12 | 3,7 |
+| 1932 | 3 | 11 de 12 | 4,9 |
+| 1933 | 4 | 11 de 12 | 4,0 |
+
+*Edad de adquisición de Alonso et al. (2015) para los ítems de cada lista.*
+
+La lista de cuatro sílabas tiene palabras que se aprenden **casi un año antes** que la de tres (*cumpleaños*, *teléfono*, *televisión*, *chocolate*). Por eso se lee casi tan rápido como la de tres sílabas, aunque sea más larga: no es un error de los datos, sino una propiedad de los ítems.
+
+**Qué implica para el manual.**
+
+- Las formas y listas de una tarea se comparan por las **propiedades de sus ítems**, no solo por su longitud. Es necesario para igualarlas (ver la sección «Formas: ¿se pueden unir?» de las fichas automáticas).
+- Al construir listas nuevas o paralelas, conviene controlar la edad de adquisición y las vecinas ortográficas, además de las letras y las sílabas.
+- Las pseudopalabras no tienen edad de adquisición: su dificultad depende de la longitud y de cómo se montan las sílabas, y por eso miden mejor la descodificación.
+
+## Preguntas para el grupo
+
+1. ¿Incluimos la animación del percentil que baila en los informes a familias, o solo en el manual?
+2. ¿Adoptamos una zona de amortiguación alrededor de P25 en los informes («a vigilar»)?
+3. ¿Añadimos la edad de adquisición y las vecinas a la ficha de cada ítem de las listas de lectura?
