@@ -169,6 +169,18 @@ ficha_auto <- function(TAREA) {
     print(tabla(EQ[, c("mom", "forma_1", "forma_2", "grupos", "d_2_menos_1", "razon_DT", "veredicto", "r", "igualacion")],
                 c("Momento", "Forma 1", "Forma 2", "Comparación", "d (2 − 1)", "Razón de DT", "Veredicto", "r entre formas", "Igualación"), digitos = 2)); cat("\n\n")
   }
+  # ---- propiedades de los ítems (08/11/2026; decisión de PJ López: edad de adquisición y vecinas en las listas de lectura) ----
+  PI <- lee("7_Propiedades_items")
+  if (nrow(PI)) {
+    out("## Propiedades de los ítems")
+    out("Además de su longitud, cada palabra de la lista se describe por su **edad de adquisición** (a qué edad se aprende oralmente; normas de Alonso et al., 2015) y por sus **vecinas ortográficas** (palabras que se escriben casi igual; EsPal). Una palabra que se aprende pronto o que tiene muchas vecinas se lee más deprisa de lo que le toca por su longitud (ver [Qué hace difícil una lista de palabras](../../avances.qmd#sec-listas)). Para proteger la prueba, aquí solo se dan resúmenes de la lista, no las palabras.")
+    PI$aoa_rango <- paste0(num_es(PI$aoa_min, 1), "–", num_es(PI$aoa_max, 1))
+    PI$cob <- paste(PI$items_con_aoa, "de", PI$items)
+    PI$forma <- as.character(PI$forma)
+    print(tabla(PI[, c("forma", "letras_media", "cob", "aoa_media", "aoa_rango", "pct_aoa_hasta_4", "vecinas_media", "pct_sin_vecinas")],
+                c("Forma", "Letras (media)", "Ítems con norma", "Edad de adquisición (media, años)", "Rango", "% aprendidas hasta los 4 años", "Vecinas (media)", "% sin vecinas"), digitos = 1)); cat("\n\n")
+    out("Las otras formas de la tarea se describirán cuando estén verificados sus ítems.")
+  }
   # ---- efectos ----
   if (nrow(EF)) { out("## Variables que la afectan")
     print(tabla(EF[, c("variable", "mom", "n", "efecto", "p")], c("Variable", "Momento", "n", "Efecto", "p"), digitos = 3)); cat("\n\n") }
