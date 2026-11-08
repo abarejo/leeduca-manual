@@ -1,0 +1,75 @@
+# La batería DIS-ESP: el origen en papel de la plataforma {#sec-dis-esp}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primer borrador (08/11/2026) para revisar con M. S. Carrillo. Se basa en los cuadernillos y las instrucciones de la batería (Universidad de Murcia) y en su estudio de validación publicado [@carrillo2009fonologicas]. **Por confirmar con M. S. Carrillo:** autoría y fecha de cada prueba, cómo citarla y si los cuadernillos se pueden publicar en este libro para su uso libre.
+:::
+
+**En una frase.** DIS-ESP es una batería en papel para evaluar la dislexia en dos fases (un cribado colectivo de la eficiencia lectora y una evaluación individual de los mecanismos de lectura y de la fonología), creada en la Universidad de Murcia por M. S. Carrillo y J. Alegría. Muchas de sus pruebas pasaron, casi sin cambios, a la plataforma LEEDUCA.
+
+## De dónde viene
+
+La batería DIS-ESP (batería para la evaluación de las dificultades específicas de la lectoescritura) la desarrolló el grupo de investigación DILEMA de M. S. Carrillo, en la Universidad de Murcia, con J. Alegría (Universidad Libre de Bruselas) y otros investigadores españoles, belgas y franceses. Nació para la investigación y se pensó también como instrumento de diagnóstico para los equipos de orientación. El grupo LEEDUCA la aplicó en papel en Málaga entre 2007 y 2012, antes de llevarla a la plataforma en línea (ver [La plataforma LEEDUCA](plataforma.qmd)).
+
+Su procedimiento en dos fases es el antecedente directo de la plataforma. Con él se estudió la prevalencia de la dislexia en todos los colegios de un municipio de Murcia [@carrillo2011prevalencia] (ver [El cribado universal](riesgo.qmd#sec-cribado)).
+
+## Fundamento teórico
+
+La batería parte de cuatro ideas [@carrillo2009fonologicas]:
+
+1. **Lo específico de la lectura es reconocer las palabras escritas.** Comprender un texto exige también vocabulario y sintaxis, pero eso no es específico de la lectura: si falta, falla también la comprensión oral [@gough1986decoding]. La dislexia se busca, por tanto, en los mecanismos de identificación de las palabras.
+2. **Hay dos mecanismos de identificación.** El **fonológico** convierte las letras en sonidos y se ve en la lectura de pseudopalabras. El **ortográfico** reconoce la palabra por su forma escrita, almacenada en el léxico ortográfico. En español no hay palabras irregulares con las que medirlo, así que la batería lo evalúa con palabras que contienen **grafías inconsistentes** (b/v, g/j, h): decidir cuál de dos formas está bien escrita, o escribirla al dictado, solo es posible si se ha guardado su forma escrita.
+3. **El motor del aprendizaje es fonológico.** Para aprender a leer hay que tomar conciencia de la estructura fonológica de la lengua. La conciencia silábica precede a la lectura y la fonémica se desarrolla con ella; su relación con la lectura es causal según los estudios longitudinales y de entrenamiento.
+4. **La fonología tiene varias dimensiones.** Además de la conciencia fonológica, cuentan la discriminación de los sonidos, el acceso a las representaciones fonológicas de las palabras y su recuperación, y la memoria de trabajo. Sus déficits no son específicos de la lectura y suelen ser leves en el habla diaria, pero pueden explicar por qué un niño no aprende a leer.
+
+## Las pruebas
+
+| Prueba | Qué evalúa | Cómo es | Aplicación | Pasó a la plataforma como |
+|---|---|---|---|---|
+| **Eficiencia lectora** (TECLE) | Nivel lector: exactitud y rapidez en la lectura de frases | 64 frases a las que les falta la última palabra; se elige entre cuatro opciones (la correcta, otra palabra parecida y dos pseudopalabras parecidas visual o fonológicamente); 5 minutos | Colectiva | [TECLE](fichas/TECLE.qmd) (1930) |
+| **Decisión ortográfica** | Léxico ortográfico | Pares de palabra y pseudohomófono con b/v, g/j o h (*bien*–*vien*); se rodea la bien escrita; dos partes | Colectiva | [Decisión ortográfica](fichas/auto/LEC_DECISION_ORTOGRAFICA.qmd) (1937, 2039) |
+| **Dictado** | Léxico ortográfico en la escritura | 34 frases; se escribe solo la última palabra; se puntúan los 40 grafemas inconsistentes | Colectiva | — |
+| **Lectura de palabras** | Identificación de palabras escritas | 36 palabras frecuentes en tres listas de 12 (2, 3 y 4 sílabas; de 4 a 12 grafemas); exactitud, tipo de error y tiempo | Individual | [Lectura de palabras](fichas/auto/LEC_PAL_2sil.qmd) (1931–1933) |
+| **Lectura de pseudopalabras** | Mecanismo fonológico | 36 pseudopalabras formadas recombinando las sílabas de las palabras de cada lista, en la misma posición | Individual | [Lectura de pseudopalabras](fichas/auto/LEC_PSEUDO_2sil.qmd) (1934–1936) |
+| **Repetición de secuencias silábicas** | Percepción y memoria fonológica | Dos partes de 15 ítems (sílabas CV y CVC), en bloques de 1 a 5 sílabas, grabados | Individual | [Memoria verbal CV](fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV.qmd) y [CVC](fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5.qmd) |
+| **Identificación de fonemas** | Conciencia fonémica | ¿Está el fonema en la sílaba? 69 sílabas CVC y CCVC; fonemas oclusivos, fricativos, nasales y líquidos en distintas posiciones, con ítems vocálicos de control | Individual | [Identificación de fonemas](fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.qmd) |
+| **Supresión de sílabas y de fonemas** | Conciencia silábica y fonémica | 24 pseudopalabras trisílabas (se quita la sílaba que se indica) y 31 monosílabos (se quita el fonema que se indica); estímulos y respuestas no son palabras | Individual | [Supresión de sílabas](fichas/auto/CF_SUPRESION_SILABAS_TP.qmd) y [de fonemas](fichas/auto/CF_SUPRESION_FONEMAS_TP.qmd) |
+| **Denominación rápida de dibujos** | Acceso y recuperación de las representaciones fonológicas | Cuatro láminas de 18 dibujos: nombres cortos o largos, dibujos variados o repetidos; tiempo por lámina | Individual | [Denominación rápida de objetos](fichas/auto/RAN_OBJETOS_VARIADOS_CORTOS.qmd) (variados y repetidos, cortos y largos) |
+| **Fluidez verbal** | Búsqueda en el léxico fonológico | 30 segundos por criterio: semántico (animales, ropa) y fonémico (palabras que empiecen por /s/ y por /p/) | Individual | [Fluidez fonológica](fichas/auto/L_ORAL_FON_FLUIDEZ_FONOLOGICA.qmd) y fluidez semántica |
+| **Pares mínimos** | Discriminación fonética | 24 pares de sílabas que difieren en sonoridad, punto o modo de articulación y 25 pares iguales, grabados; ¿iguales o diferentes? | Individual | [Pares mínimos](fichas/auto/L_ORAL_PERCEP_PARES_MINIMOS.qmd) |
+
+Las listas de lectura de palabras y pseudopalabras de la plataforma son las de DIS-ESP. Por eso sus fichas comparten estructura: tres longitudes, 12 ítems por lista y pseudopalabras construidas con las mismas sílabas que las palabras (ver [Qué hace difícil una lista de palabras](avances.qmd#sec-listas)).
+
+## El procedimiento en dos fases
+
+**Primera fase: cribado colectivo.** Toda la clase hace la prueba de eficiencia lectora. En el estudio de validación se usó un **doble criterio** para no confundir la dislexia con las condiciones del centro: el niño tenía que quedar por debajo de la media menos 1 DT de su clase y curso en su colegio, y también por debajo de la media menos 1 DT de todos los niños de su curso [@carrillo2009fonologicas]. En el estudio de prevalencia, el corte fue la media menos 1,5 DT [@carrillo2011prevalencia].
+
+**Segunda fase: evaluación individual.** Los niños señalados hacen el resto de las pruebas, que buscan **la causa próxima** del problema: qué mecanismo de identificación falla (fonológico, ortográfico o ambos) y qué aspecto de la fonología está afectado.
+
+**El módulo de diagnóstico.** La batería compara cada resultado con dos grupos de referencia:
+
+- **Por edad cronológica:** niños de la misma edad (en el baremo de prácticas, 9 años).
+- **Por nivel lector:** niños más pequeños que leen al mismo nivel (en el baremo de prácticas, 7 años).
+
+Un déficit que aparece frente a los niños de la misma edad pero no frente a los del mismo nivel lector indica un **retraso**; uno que aparece también frente a los del mismo nivel lector indica un **funcionamiento distinto**. Con esta comparación, el módulo propone un perfil (fonológico, superficial o mixto). La investigación posterior ha mostrado que los subtipos dependen mucho del grupo de comparación, y que con controles de nivel lector aparecen bastantes menos [@carrillo2008subtipos; @sprengercharolles2011subtipos] (ver [Marco teórico](marco-teorico.qmd)).
+
+## Lo que mostró su validación
+
+En el estudio de validación participaron 71 escolares con retraso lector específico y 80 normolectores de las mismas aulas, de 2.º a 6.º de primaria [@carrillo2009fonologicas]:
+
+- **Los disléxicos rindieron peor en todas las pruebas**, tanto en las de lectura y escritura como en todas las fonológicas.
+- **El retraso en lectura y ortografía crece con los cursos.** Los disléxicos no alcanzaban hasta 5.º o 6.º el nivel de eficiencia lectora de los normolectores de 2.º.
+- **Lentos e imprecisos a la vez.** En palabras y pseudopalabras, los más lentos eran también los que más fallaban. Por eso la batería propuso un índice único: aciertos por segundo. La plataforma usa medidas de eficiencia del mismo tipo.
+- **La denominación revela un problema de acceso.** La repetición de los dibujos ayudaba más a los disléxicos y la longitud de los nombres les perjudicaba más, lo que apunta a dificultades para recuperar y producir las formas fonológicas.
+- **La fluidez verbal dependía de la denominación.** Al controlar la velocidad de denominación, la diferencia en fluidez desaparecía.
+
+## Uso de las pruebas en papel
+
+El grupo ha decidido que las pruebas en papel de DIS-ESP sean de **uso libre**. Antes de publicarlas aquí hay que confirmar con su autora la versión definitiva de cada cuadernillo y cómo citarla. **TECLE** no se incluye: es una prueba publicada y se cita, pero no se reproduce.
+
+La batería se aplicó también en Colombia, con TECLE en 3 minutos en lugar de 5. Esos resultados se incorporarán en una versión posterior.
+
+## Preguntas para el grupo
+
+1. ¿Publicamos los cuadernillos (salvo TECLE) como anexo descargable, con licencia de uso libre?
+2. ¿Incluimos el baremo de prácticas del módulo de diagnóstico, o solo su lógica?
+3. ¿Recuperamos el dictado en la plataforma, que hoy solo tiene dictado de letras?

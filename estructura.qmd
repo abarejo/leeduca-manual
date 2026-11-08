@@ -56,7 +56,7 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
    - Tipos de tarea, formatos de respuesta y medidas registradas, con respuestas y tiempos ítem a ítem.
    - Sesiones y calendario: tres evaluaciones por curso.
    - Aplicación individual con evaluador, con excepciones colectivas y autoaplicadas; versiones en papel, tableta, 3 años, catalán y valenciano.
-   - Antecedente en papel: la batería DIS-ESP (11 escalas, 2007–2012).
+   - Antecedente en papel: la batería DIS-ESP (2007–2012), en capítulo propio (borrador: [La batería DIS-ESP](dis-esp.qmd)).
 4. **Estudio normativo** (borrador: [Estudio normativo](estudio-normativo.qmd)).
    - Cohortes 2009–2016 y colegios participantes.
    - Número de niños por cohorte y momento.
@@ -195,7 +195,7 @@ Lo que sigue son propuestas desde la psicometría para que el manual aporte algo
 2. ~~¿Se aceptan los **cinco niveles de certeza** y el umbral p10 para la dificultad grave?~~ **Decidido (08/11/2026):** sí, con P10, y se propone la misma clasificación para el lenguaje oral y las matemáticas (ver [Por qué esta clasificación](riesgo.qmd#sec-por-que-niveles)).
 3. ~~¿La **cognición numérica** entra en este manual o va en uno propio?~~ **Decidido (08/11/2026):** entra en este manual, en su propia parte de fichas, con un marco teórico ampliado.
 4. ~~¿El manual se publica en español con un **resumen técnico en inglés**?~~ **Decidido (08/11/2026):** se hará una versión en inglés poco a poco, empezando por lo que necesitan los revisores de los artículos.
-5. ~~¿Dónde va la **batería DIS-ESP** en papel?~~ **Decidido (08/11/2026):** en un capítulo propio, con sus pruebas y marcos teóricos. Las pruebas en papel quedan de uso libre.
+5. ~~¿Dónde va la **batería DIS-ESP** en papel?~~ **Decidido (08/11/2026):** en un capítulo propio, con sus pruebas y marcos teóricos ([borrador](dis-esp.qmd)). Las pruebas en papel quedan de uso libre.
 6. ¿Las **versiones de otros países y para adultos** (por ejemplo, TECLE con 3 minutos en Colombia) entran en las fichas o en un anexo?
 7. ¿Os sirve la **plantilla de diez apartados**, con «Estudios que abre» y «Pendientes»? ¿Qué cambiaríais?
 8. De las **doce propuestas** anteriores, ¿cuáles os parecen prioritarias para la primera versión del manual?
