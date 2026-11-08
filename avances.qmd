@@ -101,7 +101,29 @@ Una prueba con fiabilidad .85 se considera buena. Aun así, un niño cuyo nivel 
 **Qué implica para el manual.**
 
 - Cada percentil se da con su **banda al 90 %** (ver [5.2 Fiabilidad](metodo-psicometrico.qmd#sec-fiabilidad)). La banda es lo que el docente debe ver, no el punto.
-- Cerca del corte, una sola evaluación no basta para decidir. Las **zonas de amortiguación** alrededor del corte (por ejemplo, P20–P30 como «a vigilar») reducen mucho las clasificaciones cambiantes [@psyridou2020estabilidad].
+- Cerca del corte, una sola evaluación no basta para decidir. Por eso el manual adopta una **zona «a vigilar»** alrededor del corte (ver más abajo).
+
+### La zona «a vigilar»: P20–P30 {#sec-vigilar}
+
+**Decisión del grupo (08/11/2026).** Los informes no usan un único corte en P25. Usan tres tramos:
+
+- **En riesgo:** por debajo de P20.
+- **A vigilar:** entre P20 y P30. No se pone etiqueta: se mira cómo avanza en la evaluación siguiente.
+- **Sin riesgo:** por encima de P30.
+
+Las zonas de amortiguación alrededor del corte reducen mucho las clasificaciones que cambian de una evaluación a otra solo por el error de medida [@psyridou2020estabilidad]. La simulación lo cuantifica con niños cuyo nivel real **no cambia**, evaluados dos veces:
+
+| Fiabilidad | Con un solo corte (P25): niños cuya etiqueta cambia | Con la zona «a vigilar»: niños que pasan de «en riesgo» a «sin riesgo» o al revés | De los marcados «en riesgo», % que de verdad está bajo P25 (corte único / con zona) |
+|---|---|---|---|
+| .70 | 20 % | 11 % | 71 % / 77 % |
+| .85 | 14 % | 6 % | 80 % / 87 % |
+| .95 | 8 % | 2 % | 89 % / 96 % |
+
+*Simulación con dos millones de casos; guion `analisis/avances/simulacion_salida_riesgo.py`. En la zona «a vigilar» queda 1 de cada 10 niños.*
+
+Con fiabilidad .85, los cambios de etiqueta que solo son ruido bajan a menos de la mitad, y la etiqueta «en riesgo» acierta más. El precio es que 1 de cada 10 niños queda «a vigilar» y necesita una segunda mirada, que es justo lo que propone [el embudo de dos puertas](#sec-embudo).
+
+- **Falta:** llevar los tres tramos al [prototipo de informe de aula](informe-aula.qmd), cuyos niveles de severidad usan todavía P25 como límite del nivel «leve», y decidir cómo convive la zona con esos niveles (por ejemplo, P20–P25 como «leve, a vigilar»).
 - Mejorar la fiabilidad de las tareas de clase A (ω y TRI con las respuestas ítem a ítem) es la forma más directa de que el percentil baile menos.
 
 ## Salir del riesgo no siempre es mejorar {#sec-salir}
@@ -202,4 +224,4 @@ La lista de cuatro sílabas tiene palabras que se aprenden **casi un año antes*
 |---|---|
 | ¿Añadimos la edad de adquisición y las vecinas a la ficha de cada lista de lectura? | **Sí** (P. J. López-Pérez, 08/11/2026). Hecho en las fichas de palabras de 2, 3 y 4 sílabas, como resumen por lista. Falta: las formas antiguas y las palabras monosílabas. |
 | ¿Incluimos la animación del percentil que baila en los informes a familias? | **Sí** (P. J. López-Pérez, 08/11/2026). Se añade una versión breve, sin controles, al prototipo de informe para familias, para explicar por qué se da un intervalo y no un número. |
-| ¿Adoptamos una zona de amortiguación alrededor de P25 en los informes («a vigilar»)? | Abierta. |
+| ¿Adoptamos una zona de amortiguación alrededor de P25 en los informes («a vigilar»)? | **Sí** (P. J. López-Pérez, 08/11/2026): «a vigilar» entre P20 y P30 (ver [La zona «a vigilar»](#sec-vigilar)). |
