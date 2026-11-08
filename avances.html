@@ -948,7 +948,10 @@ div.csl-indent {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#sec-baila" id="toc-sec-baila" class="nav-link active" data-scroll-target="#sec-baila">El percentil que baila</a></li>
+  <li><a href="#sec-baila" id="toc-sec-baila" class="nav-link active" data-scroll-target="#sec-baila">El percentil que baila</a>
+  <ul class="collapse">
+  <li><a href="#sec-vigilar" id="toc-sec-vigilar" class="nav-link" data-scroll-target="#sec-vigilar">La zona «a vigilar»: P20–P30</a></li>
+  </ul></li>
   <li><a href="#sec-salir" id="toc-sec-salir" class="nav-link" data-scroll-target="#sec-salir">Salir del riesgo no siempre es mejorar</a></li>
   <li><a href="#sec-embudo" id="toc-sec-embudo" class="nav-link" data-scroll-target="#sec-embudo">El embudo de dos puertas</a></li>
   <li><a href="#sec-listas" id="toc-sec-listas" class="nav-link" data-scroll-target="#sec-listas">Qué hace difícil una lista de palabras</a></li>
@@ -1109,9 +1112,60 @@ div.csl-indent {
 <p><strong>Qué implica para el manual.</strong></p>
 <ul>
 <li>Cada percentil se da con su <strong>banda al 90 %</strong> (ver <a href="./metodo-psicometrico.html#sec-fiabilidad">5.2 Fiabilidad</a>). La banda es lo que el docente debe ver, no el punto.</li>
-<li>Cerca del corte, una sola evaluación no basta para decidir. Las <strong>zonas de amortiguación</strong> alrededor del corte (por ejemplo, P20–P30 como «a vigilar») reducen mucho las clasificaciones cambiantes <span class="citation" data-cites="psyridou2020estabilidad">(<a href="referencias.html#ref-psyridou2020estabilidad" role="doc-biblioref">Psyridou et&nbsp;al. 2020</a>)</span>.</li>
+<li>Cerca del corte, una sola evaluación no basta para decidir. Por eso el manual adopta una <strong>zona «a vigilar»</strong> alrededor del corte (ver más abajo).</li>
+</ul>
+<section id="sec-vigilar" class="level3">
+<h3 class="anchored" data-anchor-id="sec-vigilar">La zona «a vigilar»: P20–P30</h3>
+<p><strong>Decisión del grupo (08/11/2026).</strong> Los informes no usan un único corte en P25. Usan tres tramos:</p>
+<ul>
+<li><strong>En riesgo:</strong> por debajo de P20.</li>
+<li><strong>A vigilar:</strong> entre P20 y P30. No se pone etiqueta: se mira cómo avanza en la evaluación siguiente.</li>
+<li><strong>Sin riesgo:</strong> por encima de P30.</li>
+</ul>
+<p>Las zonas de amortiguación alrededor del corte reducen mucho las clasificaciones que cambian de una evaluación a otra solo por el error de medida <span class="citation" data-cites="psyridou2020estabilidad">(<a href="referencias.html#ref-psyridou2020estabilidad" role="doc-biblioref">Psyridou et&nbsp;al. 2020</a>)</span>. La simulación lo cuantifica con niños cuyo nivel real <strong>no cambia</strong>, evaluados dos veces:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fiabilidad</th>
+<th>Con un solo corte (P25): niños cuya etiqueta cambia</th>
+<th>Con la zona «a vigilar»: niños que pasan de «en riesgo» a «sin riesgo» o al revés</th>
+<th>De los marcados «en riesgo», % que de verdad está bajo P25 (corte único / con zona)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.70</td>
+<td>20 %</td>
+<td>11 %</td>
+<td>71 % / 77 %</td>
+</tr>
+<tr class="even">
+<td>.85</td>
+<td>14 %</td>
+<td>6 %</td>
+<td>80 % / 87 %</td>
+</tr>
+<tr class="odd">
+<td>.95</td>
+<td>8 %</td>
+<td>2 %</td>
+<td>89 % / 96 %</td>
+</tr>
+</tbody>
+</table>
+<p><em>Simulación con dos millones de casos; guion <code>analisis/avances/simulacion_salida_riesgo.py</code>. En la zona «a vigilar» queda 1 de cada 10 niños.</em></p>
+<p>Con fiabilidad .85, los cambios de etiqueta que solo son ruido bajan a menos de la mitad, y la etiqueta «en riesgo» acierta más. El precio es que 1 de cada 10 niños queda «a vigilar» y necesita una segunda mirada, que es justo lo que propone <a href="#sec-embudo">el embudo de dos puertas</a>.</p>
+<ul>
+<li><strong>Falta:</strong> llevar los tres tramos al <a href="./informe-aula.html">prototipo de informe de aula</a>, cuyos niveles de severidad usan todavía P25 como límite del nivel «leve», y decidir cómo convive la zona con esos niveles (por ejemplo, P20–P25 como «leve, a vigilar»).</li>
 <li>Mejorar la fiabilidad de las tareas de clase A (ω y TRI con las respuestas ítem a ítem) es la forma más directa de que el percentil baile menos.</li>
 </ul>
+</section>
 </section>
 <section id="sec-salir" class="level2">
 <h2 class="anchored" data-anchor-id="sec-salir">Salir del riesgo no siempre es mejorar</h2>
@@ -1265,10 +1319,6 @@ div.csl-indent {
 <section id="decisiones-y-preguntas-abiertas" class="level2">
 <h2 class="anchored" data-anchor-id="decisiones-y-preguntas-abiertas">Decisiones y preguntas abiertas</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Pregunta</th>
@@ -1286,7 +1336,7 @@ div.csl-indent {
 </tr>
 <tr class="odd">
 <td>¿Adoptamos una zona de amortiguación alrededor de P25 en los informes («a vigilar»)?</td>
-<td>Abierta.</td>
+<td><strong>Sí</strong> (P. J. López-Pérez, 08/11/2026): «a vigilar» entre P20 y P30 (ver <a href="#sec-vigilar">La zona «a vigilar»</a>).</td>
 </tr>
 </tbody>
 </table>
