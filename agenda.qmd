@@ -5,5 +5,5 @@ Los datos de la plataforma no solo sirven para el manual. Tienen tres rasgos poc
 ::: {.callout-note appearance="minimal"}
 La agenda y los análisis en curso están en el **espacio interno del grupo**, con acceso restringido. Lo que se aprende en ellos entra en este manual cuando está revisado o publicado.
 
-Si quieres colaborar con el grupo o proponer un estudio con los datos de la plataforma, escribe a Juan Luis Luque Vilaseca o a Pedro Javier López-Pérez (Universidad de Málaga).
+Si quieres colaborar con el grupo o proponer un estudio con los datos de la plataforma, escribe a Juan Luis Luque Vilaseca, director del grupo LEEDUCA (Universidad de Málaga).
 :::
