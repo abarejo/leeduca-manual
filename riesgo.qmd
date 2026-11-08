@@ -129,6 +129,18 @@ La plataforma convierte ese procedimiento en algo continuo: la primera fase se r
 - **La sensibilidad suele quedarse corta.** Un metaanálisis de 30 estudios con cribados adaptativos por ordenador encuentra una especificidad de .83 y una sensibilidad de .77, por debajo del .80 que se recomienda para un cribado universal [@shen2026cat]. Los cortes calculados con datos locales mejoran la sensibilidad a costa de la especificidad.
 - **Repetir o añadir una segunda fase reduce los falsos positivos.** Añadir un seguimiento corto del progreso o una evaluación dinámica redujo los falsos positivos en 1.º [@compton2010gated]. Una segunda fase solo con los niños que no superan la primera aumenta la especificidad, pero puede bajar la sensibilidad [@klingbeil2017multivariate]. Funciona mejor si la segunda medida aporta información distinta de la primera: dos medidas muy correlacionadas apenas reducen los falsos positivos [@vannorman2019gated].
 
+### La guía LEEDUCA de detección precoz
+
+La guía del grupo para maestras de audición y lenguaje, Infantil y Primaria [@luque2022guia] ordena la evaluación en tres momentos, cada uno con su objetivo:
+
+1. **Predicción o valoración del riesgo**, en Infantil, antes de la enseñanza formal de la lectura.
+2. **Detección precoz**, en el primer año de aprendizaje de la lectura (1.º de Primaria), con **al menos tres evaluaciones** a todos los niños, porque una medición puntual no basta.
+3. **Evaluación psicopedagógica y diagnóstico**, a partir de 2.º, en lugar de «esperar al fracaso».
+
+Para valorar el riesgo propone cuatro criterios, cada uno con un juicio de riesgo leve, moderado o grave: el **riesgo familiar** (con anamnesis y el cuestionario ATLAS), el **lenguaje oral** (primero la tríada fonológica: conciencia fonológica, denominación rápida y memoria verbal; después los componentes semántico, gramatical y prosódico), las **hipótesis visuales** y la **comorbilidad** con otros trastornos del neurodesarrollo (TDL, TDAH, discalculia y trastorno de la coordinación). Para la detección precoz, la evaluación directa de la lectura (ruta fonológica, ruta visual, velocidad y comprensión) **prevalece** como criterio para intensificar la enseñanza, aunque los demás criterios no confirmen el riesgo, y se gradúa con cortes en P10, P20 y P30.
+
+La plataforma y este manual recogen esa lógica: evaluación universal y repetida, varios indicadores en lugar de uno, la lectura directa como criterio principal desde 1.º y juicios graduados (ver [Tramos del informe](informe-tramos.qmd)). Lo que el manual añade es la estimación con datos: probabilidades calibradas, niveles de certeza y una zona «a vigilar».
+
 ### Dónde encaja la plataforma
 
 - **Precisión comparable.** El modelo de 5 años (AUC .82, validado dejando cada cohorte fuera) está en el rango de los cribados publicados en español.
