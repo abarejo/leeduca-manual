@@ -45,6 +45,8 @@ book:
     - part: "Cómo está hecho el manual"
       chapters:
         - estructura.qmd
+        - uso-responsable.qmd
+        - marco-teorico.qmd
         - definicion.qmd
         - plataforma.qmd
         - estudio-normativo.qmd

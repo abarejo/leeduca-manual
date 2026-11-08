@@ -1,0 +1,85 @@
+# Marco teórico: aprender a leer en español y por qué medimos lo que medimos {#sec-marco-teorico}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primer borrador (08/11/2026) del capítulo 2 del manual, para revisar en el grupo. Da el marco común a todas las fichas. Cada ficha añade después un marco breve de su dominio (por ejemplo, el de [conocimiento de letras](fichas/LET.qmd) o el de [denominación rápida](fichas/RAN.qmd)), y la definición de la dislexia se trata con detalle en [Qué medimos a la luz de la nueva definición](definicion.qmd). Solo cita trabajos publicados.
+:::
+
+**En una frase.** En español, casi todos los niños aprenden a descodificar en el primer curso; lo que separa a los buenos lectores de los que tienen dificultades es, sobre todo, **la velocidad con la que llegan a leer de forma automática**, y eso se puede anticipar desde Infantil con unos pocos precursores.
+
+## Aprender a leer en una ortografía transparente
+
+En español, cada letra o grupo de letras se pronuncia casi siempre igual. Esta **transparencia** cambia el curso del aprendizaje frente al inglés:
+
+- **La descodificación se domina pronto.** En un estudio con 13 ortografías europeas, los niños de lenguas transparentes, como el español, leían correctamente más del 90 % de las palabras y pseudopalabras sencillas al final del primer curso; los de inglés, menos del 40 % [@seymour2003foundation]. La **exactitud** deja enseguida de distinguir a unos niños de otros.
+- **Lo que queda es la fluidez.** Después de dominar el código, el niño tiene que leer cada vez más deprisa y con menos esfuerzo. En una ortografía transparente, las diferencias individuales están sobre todo en la **velocidad** y son muy estables: quien lee despacio en 1.º suele seguir leyendo despacio años después [@landerl2008fluency].
+- **El lector se enseña a sí mismo.** Cada vez que el niño descodifica una palabra, guarda algo de su forma escrita. Con unas pocas exposiciones, la palabra pasa a reconocerse de un vistazo [@share1995phonological]. Por eso la descodificación es la puerta del léxico ortográfico, y no una etapa que se abandona [@ehri2005learning].
+- **El tamaño de la unidad cambia.** Al principio se lee letra a letra; con la práctica, el niño usa unidades mayores (sílabas, morfemas, palabras enteras) [@ziegler2005grain]. Por eso el efecto de la longitud de la palabra es grande al principio y se reduce con los años, y es mayor en los niños con dificultades [@zoccolotti2005length; @davies2007spanish].
+- **Automatizar libera recursos.** Cuando la descodificación es automática, la atención queda libre para comprender [@laberge1974automatic]. El que lee despacio lee menos, y el que lee menos se queda más atrás: las diferencias tienden a crecer con los años [@stanovich1986matthew].
+
+**Qué implica para la plataforma.** Hay que medir la **velocidad** además de la exactitud, y hacerlo varias veces por curso, porque el cambio entre los 5 y los 8 años es muy rápido. Las **palabras** reflejan el léxico ortográfico ya construido y las **pseudopalabras**, la descodificación pura. La dificultad de una palabra no depende solo de su longitud: también de cuándo se aprende oralmente y de cuántas palabras se le parecen [@alonso2015aoa] (ver [Qué hace difícil una lista de palabras](avances.qmd#sec-listas)).
+
+## De descodificar a comprender
+
+La **visión simple de la lectura** propone que la comprensión lectora es el producto de dos habilidades: la descodificación y la comprensión del lenguaje oral [@gough1986decoding; @hoover1990simple]. Si falla cualquiera de las dos, falla la comprensión. Al principio pesa más la descodificación; con los años, cuando la descodificación ya es automática, pesa cada vez más el lenguaje oral: vocabulario, gramática y conocimiento del mundo [@storch2002oral; @lervag2018comprehension].
+
+**Qué implica para la plataforma.** La comprensión lectora no se puede interpretar sin saber cómo descodifica el niño. Un niño que comprende mal porque lee despacio necesita una ayuda distinta de la de uno que lee bien pero no entiende. Por eso la plataforma mide por separado la descodificación, la velocidad, la comprensión y el lenguaje oral, y el manual propone tratar la comprensión como una dimensión aparte (ver [Cómo estimamos el riesgo](riesgo.qmd)).
+
+## Los precursores: qué se puede medir antes de leer
+
+Antes de que el niño lea, varias habilidades anticipan cómo aprenderá. Los mismos predictores funcionan en ortografías transparentes y opacas, aunque su peso cambia con la edad y con la lengua [@caravolas2013growth; @landerl2013predictors].
+
+| Precursor | Qué es | Por qué predice | Dónde está en el manual |
+|---|---|---|---|
+| **Conocimiento de letras** | Nombre y sonido de las letras | Es la base de las correspondencias entre letras y sonidos y refleja la exposición a lo escrito [@foulin2005letter] | [Conocimiento de letras](fichas/LET.qmd) |
+| **Conciencia fonológica** | Darse cuenta de los sonidos de las palabras y manipularlos: sílabas, rimas y fonemas | Permite segmentar y unir sonidos, que es lo que pide la descodificación; predice sobre todo la exactitud inicial [@landerl2019pa] | [Conciencia fonológica](conciencia-fonologica.qmd) |
+| **Denominación rápida (RAN)** | Nombrar lo más deprisa posible una serie de colores, objetos, números o letras | Refleja la rapidez para conectar lo visual con lo fonológico; predice sobre todo la fluidez [@norton2012ran; @landerl2019pa] | [Denominación rápida](fichas/RAN.qmd) |
+| **Memoria verbal a corto plazo** | Repetir series de palabras o sílabas | Sostiene los sonidos mientras se descodifica | Fichas de memoria verbal |
+| **Lenguaje oral** | Vocabulario, morfología, sintaxis y comprensión oral | Es la otra mitad de la comprensión lectora [@storch2002oral] | Fichas de lenguaje oral |
+
+En general, la conciencia fonológica pesa más al principio del aprendizaje y la denominación rápida gana peso cuando la lectura ya depende de la velocidad [@landerl2019pa]. En los datos de la plataforma, con letras y conciencia fonológica a los 5 años se anticipa la dificultad persistente con un área bajo la curva de .82 (ver [Cómo estimamos el riesgo](riesgo.qmd)).
+
+## La dificultad lectora en español
+
+### Sobre todo, lentitud
+
+En las ortografías transparentes, la dislexia se manifiesta sobre todo como **lectura lenta y laboriosa**, con relativamente pocos errores. Los niños españoles con dislexia leen con una exactitud cercana a la de sus compañeros, pero mucho más despacio, y el efecto de la longitud de la palabra es mayor en ellos [@serrano2008speed; @davies2007spanish]. Un niño puede leer «bien» si solo se cuentan los errores y tener, sin embargo, una dificultad seria. Por eso la plataforma mide el tiempo de cada ítem y no solo los aciertos.
+
+### Sobre todo, un retraso
+
+Cuando se compara a los niños con dislexia con niños más pequeños que leen al mismo nivel, sus perfiles se parecen mucho: en español, la dislexia se comporta más como un **retraso** que como un desarrollo distinto [@davies2007spanish]. Los «subtipos» clásicos (fonológico y superficial) dependen mucho del método y del grupo de comparación. Con controles de la misma edad aparecen muchos; con controles de nivel lector, muchos menos [@carrillo2008subtipos; @sprengercharolles2011subtipos].
+
+### Varios factores, no una sola causa
+
+La dislexia no se explica por un único déficit. Es el resultado de varios factores de riesgo (fonológicos, de velocidad de procesamiento, de lenguaje oral, familiares y ambientales) que se suman y que pueden compensarse con factores de protección [@pennington2006multiple; @catts2017multifactorial]. El **modelo de riesgo acumulado y resiliencia** saca de ahí una consecuencia práctica: el riesgo se estima mejor sumando indicadores que buscando uno solo, y se expresa como una probabilidad [@catts2022riesgo]. El déficit fonológico es frecuente, pero no explica todos los casos: algunos niños tienen sobre todo un problema de velocidad, que se ve en la denominación rápida [@wimmer2000double].
+
+### Un continuo, no una categoría
+
+La habilidad lectora se distribuye de forma continua. Dónde se pone el corte es una decisión, y la prevalencia depende de esa decisión: con criterios distintos, la misma población da cifras distintas [@wagner2020prevalence]. En español, los estudios con criterios psicométricos dan entre el 2 % y el 12 %, según el criterio y la población [@cubilla2024prevalencia; @cuadro2017prevalencia; @carrillo2011prevalencia].
+
+### La respuesta a la enseñanza
+
+La nueva definición de la International Dyslexia Association pone en el centro la **dificultad que persiste pese a una enseñanza adecuada** [@ida2025definicion; @catts2026definicion]. Ya antes se había mostrado que observar cómo responde un niño a una buena intervención temprana separa a los que tienen una dificultad persistente de los que solo habían tenido pocas oportunidades [@vellutino2008rti]. Los criterios clínicos del DSM-5-TR [@apa2022dsm5tr] y de la CIE-11 [@oms2019cie11] también exigen que la dificultad persista y que no se explique por otras causas. El detalle está en [Qué medimos a la luz de la nueva definición](definicion.qmd).
+
+## Del marco teórico a la plataforma
+
+| Lo que dice la teoría | Cómo lo recoge la plataforma | Capítulo |
+|---|---|---|
+| La descodificación se domina pronto; la diferencia está en la velocidad | Tiempos ítem a ítem; palabras por minuto; tareas de lectura con y sin límite de tiempo | [La plataforma](plataforma.qmd), [Velocidad lectora](fichas/VEL.qmd) |
+| El cambio entre los 5 y los 8 años es muy rápido | Tres evaluaciones por curso; baremos por trimestre | [Baremo por curso o por trimestre](baremos-trimestre.qmd) |
+| Pocos precursores anticipan buena parte del riesgo | Letras, conciencia fonológica y denominación rápida desde los 3–4 años | [Cómo estimamos el riesgo](riesgo.qmd) |
+| El riesgo es la suma de varios factores y se expresa mejor como probabilidad | Probabilidad de riesgo calibrada; embudo de dos puertas | [Del laboratorio al manual](avances.qmd#sec-embudo) |
+| La dificultad es un continuo y el corte es una decisión | Niveles de certeza; zona «a vigilar» entre P20 y P30 | [Cómo estimamos el riesgo](riesgo.qmd), [La zona «a vigilar»](avances.qmd#sec-vigilar) |
+| Lo que define la dislexia es la persistencia pese a la enseñanza | Seguimiento del progreso; cambio fiable; trayectoria de 6 a 11 años | [5.5 Cuánto cambio importa](metodo-psicometrico.qmd#sec-cambio-importa) |
+| La comprensión depende de la descodificación y del lenguaje oral | Medidas separadas de descodificación, comprensión y lenguaje oral | Fichas de comprensión y de lenguaje oral |
+
+## Falta
+
+- Un apartado sobre la **escritura** (ortografía), que la nueva definición incluye y la plataforma apenas mide (ver [Qué medimos a la luz de la nueva definición](definicion.qmd)).
+- Un apartado sobre la **cognición numérica**, si el grupo decide que entra en este manual.
+- Revisión del grupo y, en su caso, incorporar los trabajos del grupo cuando se publiquen.
+
+## Preguntas para el grupo
+
+1. ¿Falta algún modelo teórico que el grupo considere central (por ejemplo, el de doble ruta)?
+2. ¿Incluimos aquí el desarrollo de la **escritura**, o en un capítulo propio cuando la plataforma la mida?
+3. ¿El nivel de detalle es el adecuado para los destinatarios (docentes, orientadores, logopedas y clínicos)?

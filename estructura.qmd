@@ -35,7 +35,7 @@ Cada tarea tiene una ficha estandarizada, y hay un capítulo propio sobre los **
 - Directrices de la ITC sobre el uso de los tests.
 - DSM-5-TR y CIE-11 para la definición clínica de la dislexia (trastorno específico del aprendizaje).
 
-Falta completar estas referencias con las ediciones exactas.
+Las ediciones exactas y el uso que el manual hace de cada documento están en [Presentación y uso responsable](uso-responsable.qmd#sec-marco-normativo).
 
 ## Índice comentado
 
@@ -45,8 +45,8 @@ El manual tiene 24 capítulos en cuatro partes, más ocho anexos. Las fichas de 
 
 ### Parte I. Fundamentos
 
-1. **Presentación y uso responsable.** Para qué sirve y para qué no, cualificación del usuario, ética, protección de datos y consentimiento.
-2. **Marco teórico.**
+1. **Presentación y uso responsable** (borrador: [Presentación y uso responsable](uso-responsable.qmd)). Para qué sirve y para qué no, cualificación del usuario, ética, protección de datos y consentimiento.
+2. **Marco teórico** (borrador: [Marco teórico](marco-teorico.qmd); la definición de la dislexia, en [Qué medimos a la luz de la nueva definición](definicion.qmd)).
    - Aprender a leer en una ortografía transparente: decodificación, fluidez y comprensión (visión simple de la lectura).
    - Precursores: conciencia fonológica, conocimiento alfabético, denominación rápida, memoria verbal y lenguaje oral.
    - Dislexia y trastorno específico del aprendizaje: DSM-5-TR, CIE-11, respuesta a la intervención y riesgo familiar. Cómo ha cambiado el concepto de dislexia y por qué su prevalencia depende del corte elegido [@wagner2020prevalence].
@@ -150,7 +150,7 @@ Las fichas piloto de este libro ya siguen casi todos estos apartados. Además, c
 
 | Bloque | Estado (02/11/2026) | Qué falta |
 |---|---|---|
-| Cap. 1–2 Fundamentos y marco teórico | Partes en el borrador del Manual técnico 8 y en el marco psicométrico | Actualizar con DSM-5-TR, CIE-11 y la literatura en español; redacción por el equipo |
+| Cap. 1–2 Fundamentos y marco teórico | **Borradores (08/11)**: [uso responsable](uso-responsable.qmd) (usos, niveles de usuario, aplicación, interpretación, ética y marco normativo) y [marco teórico](marco-teorico.qmd) (ortografía transparente, visión simple, precursores, dificultad lectora en español) | Consentimiento, comité de ética y formación de evaluadores; escritura; revisión del equipo |
 | Cap. 3 Plataforma | **Borrador completo (02/11)**: diseño, historia, arquitectura, tipos de tarea, medidas, cohortes y versiones | Fechas del cambio de plataforma; evaluadores por cohorte; escalas de DIS-ESP |
 | Cap. 4 Estudio normativo | **Borrador (02/11)**: cohortes, niños por momento, seguimiento, Preleo provisional y limpieza | Fuente de la condición Preleo; normalizar nombres de colegio; qué fueron las evaluaciones de 2020/21 y 2021/22 |
 | Cap. 5 Método | **Borrador completo (02/11)** | ω y TRI ítem a ítem; normas continuas; anclas del cambio mínimo relevante |
