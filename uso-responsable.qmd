@@ -1,0 +1,110 @@
+# Presentación y uso responsable {#sec-uso-responsable}
+
+::: {.callout-note appearance="minimal"}
+**Estado:** primer borrador (08/11/2026) del capítulo 1 del manual, para revisar en el grupo. Sigue lo que piden los modelos de evaluación de tests (CET-R y EFPA) y las directrices internacionales sobre el uso de los tests. Los puntos marcados **«Por confirmar»** necesitan un dato del equipo (procedimiento de consentimiento, comité de ética, formación de los evaluadores) antes de la versión de consulta.
+:::
+
+**En una frase.** La plataforma LEEDUCA sirve para **detectar pronto, seguir el progreso y decidir apoyos** en el aula. No sirve, por sí sola, para diagnosticar, y sus puntuaciones se interpretan siempre con su margen de error, por profesionales con la formación adecuada y respetando los derechos de los niños y sus familias.
+
+## Qué es la plataforma
+
+LEEDUCA es una batería de evaluación en línea de la lectura y de sus precursores para niños de 3 a 11 años. Se aplica en el colegio, tres veces por curso, con tareas breves de conocimiento de letras, conciencia fonológica, denominación rápida, lectura de palabras, pseudopalabras y textos, comprensión, lenguaje oral, cognición numérica y funciones ejecutivas. La plataforma presenta los estímulos, registra las respuestas y los tiempos ítem a ítem, y genera informes. Su historia y su funcionamiento están en [La plataforma LEEDUCA](plataforma.qmd).
+
+Este manual es su **documentación técnica**: describe cada tarea, la muestra con la que se ha estudiado, su fiabilidad y validez, sus baremos y los límites de cada puntuación. Sigue la lógica de los *Standards for Educational and Psychological Testing* [@aera2014]: no se valida una prueba en abstracto, sino **cada uso que se propone** de sus puntuaciones, con la evidencia que lo respalda [@kane2013].
+
+## Para qué sirve y para qué no
+
+| Uso | ¿Respaldado? | En qué se apoya | Dónde está la evidencia |
+|---|---|---|---|
+| **Cribado universal** del riesgo de dificultad lectora en Infantil y 1.º | **Sí**, como probabilidad de riesgo, no como etiqueta | Validez predictiva frente a la dificultad persistente, con validación entre cohortes | [Cómo estimamos el riesgo](riesgo.qmd) |
+| **Seguimiento del progreso** a lo largo del curso | **Sí**, con el índice de cambio fiable y la zona «a vigilar» | Tres evaluaciones por curso; baremos por trimestre | [5.5 Cuánto cambio importa](metodo-psicometrico.qmd#sec-cambio-importa), [Baremo por curso o por trimestre](baremos-trimestre.qmd) |
+| **Decidir apoyos** en el aula (niveles de intervención) | **Sí**, junto con el juicio del docente y la respuesta a la enseñanza | Embudo de dos puertas | [Del laboratorio al manual](avances.qmd#sec-embudo) |
+| **Orientar** una evaluación especializada (qué mirar después) | **Sí**, como perfil de partida | Fichas por tarea; perfiles de exactitud y velocidad | Fichas de tareas |
+| **Investigación** con datos agregados o seudonimizados | **Sí**, con acuerdo de uso | Tabla larga verificada; niveles de acceso | [Investigar con los datos de la plataforma](investigacion.qmd) |
+| **Diagnóstico** clínico de dislexia o de trastorno del lenguaje | **No por sí sola** | El diagnóstico exige historia, evaluación individual y criterios clínicos (DSM-5-TR, CIE-11) y la persistencia pese a una buena enseñanza | [Qué medimos a la luz de la nueva definición](definicion.qmd) |
+| **Clasificar** a un niño con consecuencias académicas (repetir curso, cambiar de grupo) | **No** | Las puntuaciones tienen error y están pensadas para ayudar, no para seleccionar | — |
+| **Comparar o clasificar colegios o docentes** | **No** | Los resultados de un centro dependen de su alumnado y de su contexto; el manual no ofrece normas de centro | [Límites y calidad de los datos](limites.qmd) |
+| **Detectar TDAH** con las tareas de atención de Infantil | **No** | No hay evidencia de validez para ese uso | Fichas de atención y funciones ejecutivas |
+
+Las tareas de **clase A** tienen fiabilidad, validez y baremos suficientes para usos individuales. Las de **clase B** sirven con cautelas y las de **clase C** solo para investigación o descripción (ver [Clases de calidad](limites.qmd#sec-clases)). La clase de cada tarea aparece en la cabecera de su ficha.
+
+## Quién puede usarla
+
+Las directrices internacionales piden que quien interpreta una prueba tenga la formación que exige el uso que hace de ella [@itc2001uso; @muniz2015directrices]. El manual propone tres niveles:
+
+| Nivel | Quién | Qué puede hacer | Formación mínima propuesta |
+|---|---|---|---|
+| **1 · Aplicación y aula** | Docentes, maestros de audición y lenguaje y de pedagogía terapéutica, evaluadores formados | Aplicar las sesiones; leer el informe de aula; organizar apoyos de nivel 1 y 2 | Formación en la aplicación de la plataforma y en la lectura del informe (bandas de error, zona «a vigilar») |
+| **2 · Interpretación individual** | Orientadores, logopedas, psicólogos educativos y clínicos | Interpretar perfiles individuales; comunicar resultados a las familias; decidir derivaciones y apoyos de nivel 3 | Titulación en Psicología, Psicopedagogía o Logopedia, con formación en evaluación psicométrica y en dificultades del aprendizaje |
+| **3 · Investigación** | Investigadores con un proyecto aprobado | Analizar datos seudonimizados con acuerdo de uso | Formación en métodos cuantitativos; compromiso de uso de datos |
+
+- **Por confirmar:** contenido y duración de la formación de los evaluadores en cada cohorte, y si la plataforma registra quién aplicó cada sesión.
+
+## Aplicar bien
+
+La validez de una puntuación empieza en la aplicación. Las directrices sobre pruebas por ordenador e internet [@itc2006internet] y la experiencia de la plataforma llevan a estas condiciones:
+
+- **Lugar.** Un espacio tranquilo del colegio, sin otros niños mirando, con un ordenador revisado y **auriculares** para las tareas con estímulos grabados.
+- **Modo.** La mayoría de las tareas son **individuales con evaluador**: el evaluador sigue la consigna de la plataforma, no ayuda ni da pistas y marca la respuesta tal como la da el niño. Las tareas colectivas o autoaplicadas se indican en su ficha.
+- **Momento.** Dentro de la ventana de cada trimestre, para que el baremo de ese momento sea el adecuado.
+- **Incidencias.** Si un niño se cansa, se distrae o hay un fallo técnico, se anota y la sesión se marca para revisar. Los detectores de sesiones anómalas ayudan a encontrarlas (ver [5.1 Puntuaciones](metodo-psicometrico.qmd)).
+- **Adaptaciones.** Un niño con déficit sensorial o motor, o que está aprendiendo español, puede necesitar adaptaciones. Si se cambia la aplicación, la puntuación ya no es comparable con el baremo, y así se indica en el informe.
+
+## Interpretar bien
+
+1. **Una puntuación es una estimación con error.** Cada percentil se lee con su banda de confianza. Un mismo niño puede puntuar distinto en dos evaluaciones sin haber cambiado (ver [El percentil que baila](avances.qmd#sec-baila)).
+2. **Cerca del corte, se vigila.** Entre P20 y P30 no se pone etiqueta: se mira cómo avanza en la evaluación siguiente (ver [La zona «a vigilar»](avances.qmd#sec-vigilar)).
+3. **El riesgo es una probabilidad, no un diagnóstico.** «De cada 100 niños con este perfil, unos 22 tendrán dificultades» se entiende mejor y engaña menos que «en riesgo».
+4. **Una sola tarea no basta.** La decisión se apoya en el perfil, en el juicio del docente y en la respuesta a la enseñanza.
+5. **El contexto importa.** Antes de interpretar un resultado bajo, se descarta lo que no es lectura: poca escolarización, una lengua materna distinta, problemas de audición o de visión, una mala sesión.
+6. **El avance cuenta tanto como el nivel.** Un niño por debajo de la media que crece más de lo esperado está respondiendo a la enseñanza.
+
+## Comunicar a las familias
+
+Las familias tienen derecho a una información **comprensible y útil**. El informe para familias propuesto da tres cosas: dónde está el niño (con su intervalo), cómo avanza y qué se va a hacer, con una fecha para volver a mirarlo. Evita etiquetas diagnósticas, explica que el resultado de un día puede variar y propone actividades sencillas para casa. Un resultado preocupante se comunica en persona, por el tutor o el orientador, y no solo por escrito.
+
+## Ética y protección de datos
+
+La plataforma trata datos de menores, que tienen una protección reforzada. El tratamiento se rige por el Reglamento general de protección de datos [@rgpd2016] y por la Ley Orgánica 3/2018 [@lopdgdd2018]. Los principios que sigue el manual:
+
+- **Finalidad.** Los datos se recogen para evaluar y apoyar el aprendizaje de la lectura en el colegio. Su uso en investigación requiere el consentimiento de las familias para ese fin y la aprobación ética correspondiente.
+- **Minimización y seudonimización.** El manual y sus análisis usan un identificador seudonimizado. Los nombres, los números de identificación del alumno y los nombres de los docentes no salen de la carpeta del proyecto, en la Universidad de Málaga. Los docentes aparecen siempre seudonimizados.
+- **Solo datos agregados en público.** Este libro publica medias, percentiles y correlaciones, nunca datos de un niño. Ninguna tabla permite identificar a un alumno, una clase o un docente.
+- **Acceso por niveles.** Abierto (este libro), bajo acuerdo de uso (tabla larga seudonimizada) y restringido (exportaciones originales). Ver [Investigar con los datos de la plataforma](investigacion.qmd).
+- **Por confirmar:** procedimiento de consentimiento informado de las familias en cada cohorte; comité de ética que aprobó el proyecto y su referencia; responsable del tratamiento y plazo de conservación de los datos.
+
+## Seguridad de la prueba
+
+Las tareas pierden valor si sus ítems circulan. Por eso el manual **no reproduce las listas completas** de lectura ni los ítems de las tareas: las capturas muestran como mucho el ejemplo o los dos primeros ítems, y las propiedades de los ítems se dan resumidas por lista. Los baremos de pruebas comerciales usadas como criterio (por ejemplo, Woodcock-Muñoz, PROLEC-R o EDICOLE) no se reproducen; solo se citan [@muniz2015directrices].
+
+## Equidad
+
+Una prueba justa mide lo mismo en todos los grupos y comete los mismos errores en todos ellos. El manual comprueba, tarea a tarea, si una puntuación funciona igual por sexo, nivel socioeconómico del centro, formato (plataforma, papel o tableta) y periodo (antes y después de la pandemia), y si un mismo corte acierta igual en todos los grupos (ver [5.6 Equidad](metodo-psicometrico.qmd)). Mientras no se compruebe, los resultados de niños que están aprendiendo español y de las versiones en catalán y valenciano se interpretan con cautela.
+
+## Marco normativo {#sec-marco-normativo}
+
+| Documento | Para qué lo usa el manual |
+|---|---|
+| *Standards for Educational and Psychological Testing*, edición de 2014 [@aera2014] | Argumento de validez, fiabilidad, baremos, equidad y documentación |
+| Cuestionario para la Evaluación de los Tests, revisado (CET-R) [@hernandez2016cetr] | Semáforo de calidad de cada ficha |
+| Modelo de evaluación de tests de la EFPA, revisión de 2013 [@evers2013efpa] | Estructura de la documentación técnica |
+| Directrices internacionales para el uso de los tests [@itc2001uso] y nuevas directrices de la ITC [@muniz2015directrices] | Cualificación del usuario, investigación, control de calidad y seguridad |
+| Directrices de la ITC sobre tests por ordenador e internet [@itc2006internet] | Aplicación en línea, registro y seguridad de los datos |
+| COSMIN [@mokkink2010cosmin] | Terminología y criterios de las propiedades de medida |
+| DSM-5-TR [@apa2022dsm5tr] y CIE-11 [@oms2019cie11] | Definición clínica del trastorno específico del aprendizaje con dificultad en la lectura |
+| Definición de dislexia de la IDA de 2025 [@ida2025definicion] | Qué mide la plataforma y qué no (ver [Qué medimos a la luz de la nueva definición](definicion.qmd)) |
+| Reglamento general de protección de datos [@rgpd2016] y Ley Orgánica 3/2018 [@lopdgdd2018] | Tratamiento de los datos de los niños |
+
+## Cómo está organizado este manual
+
+- **Cómo está hecho el manual:** fundamentos (este capítulo y el [marco teórico](marco-teorico.qmd)), la plataforma, el estudio normativo y el método psicométrico.
+- **Catálogo y fichas de tareas:** una ficha por tarea, agrupadas por dominio, con su clase de calidad.
+- **Investigar con la plataforma:** cómo pedir los datos y los avances que vienen de los estudios del grupo.
+- **Preleo:** el programa de intervención que se aplicó en parte de los colegios.
+
+## Preguntas para el grupo
+
+1. ¿Os parecen bien los **tres niveles de usuario** y la formación mínima propuesta?
+2. ¿Cuál fue el **procedimiento de consentimiento** en cada cohorte y qué **comité de ética** lo aprobó?
+3. ¿Añadimos un **curso breve para evaluadores** (con certificado) como requisito del nivel 1?
+4. ¿Quién es el **responsable del tratamiento** de los datos: la Universidad de Málaga, cada colegio o ambos?
