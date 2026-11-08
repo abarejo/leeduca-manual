@@ -123,7 +123,7 @@ Las zonas de amortiguación alrededor del corte reducen mucho las clasificacione
 
 Con fiabilidad .85, los cambios de etiqueta que solo son ruido bajan a menos de la mitad, y la etiqueta «en riesgo» acierta más. El precio es que 1 de cada 10 niños queda «a vigilar» y necesita una segunda mirada, que es justo lo que propone [el embudo de dos puertas](#sec-embudo).
 
-- **Falta:** llevar los tres tramos al [prototipo de informe de aula](informe-aula.qmd), cuyos niveles de severidad usan todavía P25 como límite del nivel «leve», y decidir cómo convive la zona con esos niveles (por ejemplo, P20–P25 como «leve, a vigilar»).
+- **Hecho (08/11/2026):** el [prototipo de informe de aula](informe-aula.qmd) tiene una versión 2 con los tramos, y [Tramos del informe](informe-tramos.qmd) explica cómo conviven la zona y los niveles de severidad.
 - Mejorar la fiabilidad de las tareas de clase A (ω y TRI con las respuestas ítem a ítem) es la forma más directa de que el percentil baile menos.
 
 ## Salir del riesgo no siempre es mejorar {#sec-salir}

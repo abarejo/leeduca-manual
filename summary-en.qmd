@@ -1,0 +1,39 @@
+# Technical summary (English) {#sec-summary-en .unnumbered}
+
+::: {.callout-note appearance="minimal"}
+**Status:** first version (8 November 2026). The group has decided to build an English version of the manual step by step, starting with what reviewers of our articles need. This page summarises the platform and the psychometric approach; the full chapters are in Spanish for now.
+:::
+
+## The LEEDUCA platform
+
+LEEDUCA is an online assessment platform for reading and its precursors in children aged 3 to 11, developed by the LEEDUCA research group at the University of Málaga (Spain). It grew out of the paper-based DIS-ESP battery (M. S. Carrillo and J. Alegría), which proposed a two-stage assessment of dyslexia in a transparent orthography [@carrillo2011prevalencia]. The platform is used in schools **three times per school year** (autumn, winter and spring). Most tasks are administered **individually by a trained examiner** at a computer; the platform presents the stimuli, records responses and **item-level response times**, and produces reports.
+
+Domains covered: letter knowledge, phonological awareness, rapid automatized naming (RAN), verbal short-term memory, word and pseudoword reading, text reading fluency, reading comprehension, oral language (vocabulary, morphosyntax, comprehension), numerical cognition and executive functions.
+
+## Normative sample
+
+The normative study uses six birth cohorts (2010–2015) assessed in schools of the province of Málaga: **10,278 children** (31 to 72 schools per cohort). Of these, 4,952 were followed term by term until 2019/20; the remainder were assessed only in the broad assessments of 2020/21 (paper) and 2021/22 (tablets). Part of the schools applied **Preleo**, a classroom programme for oral language and early literacy. Norms use children from schools **without Preleo** as the reference group (1,628 children in term-by-term follow-up); when a time point has fewer than 100 reference children, all children are used and this is flagged. A flow diagram is given in [Estudio normativo](estudio-normativo.qmd#sec-flujo-muestra).
+
+## Psychometric approach
+
+- **Scores by task family.** Tasks are grouped into seven families according to how they measure (accuracy, RAN, oral reading fluency, timed efficiency, timed decision, span, comprehension). The family determines the main score and the reliability method.
+- **Reliability.** Internal consistency (α, ω) only for untimed accuracy tasks; test–retest and parallel forms for speeded tasks. Every percentile is reported with a 90 % confidence band.
+- **Validity.** Content (items and instructions read from the platform), internal structure (exploratory factor and network analyses by age), external criterion (Woodcock-Muñoz fluency), and predictive and diagnostic validity against **persistent reading difficulty**, with cross-validation leaving one cohort out. Precursors at age 5 (phonological awareness, letter knowledge and RAN) predict persistent difficulty with an AUC of .82 (.73 at age 4); letters and phonological awareness carry most of the weight.
+- **Norms by school term.** Because children change fast between 4 and 7, norms are given by school year **and term**; continuous norms are under development.
+- **Quality classes.** Each task is classed A (sufficient reliability, validity and norms for individual use), B (use with caution) or C (research or description only). There are 32 class A tasks; 98 tasks have an automatically generated technical sheet.
+
+## Risk classification
+
+Reading difficulty is defined from the child's whole trajectory between 6 and 11 years, not from a single assessment, in five **certainty levels**: persistent severe difficulty (DL-A: ≤ P10 in at least two school years and ≤ P25 in all years from age 7), persistent difficulty (DL-B), transient difficulty (TR), intermediate (INT) and typical stable (TE). The same logic is proposed for oral language and mathematics. Term reports use five bands with a **watch zone between P20 and P30**, where no label is given until the next assessment; in simulations with reliability .85, this halves label changes due to measurement error alone (from 14 % to 6 %).
+
+## Intended uses
+
+Supported: universal screening (as a probability of risk), progress monitoring, planning classroom support, and research with pseudonymised data. Not supported: clinical diagnosis on its own, high-stakes decisions about individual children, and comparison of schools or teachers. See [Presentación y uso responsable](uso-responsable.qmd).
+
+## Open science
+
+The manual is a reproducible web book. All figures and tables are computed with R scripts from aggregated data published in the repository; individual data remain at the University of Málaga. Licence: CC BY 4.0.
+
+## How to cite
+
+Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez Moreno, M., & López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* [Technical manual of the LEEDUCA platform] (working draft, 8 November 2026). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/

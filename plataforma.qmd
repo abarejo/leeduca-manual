@@ -154,7 +154,7 @@ tabla(T)
 
 Las cohortes no tienen todas los mismos momentos: las primeras empiezan a los 5 años, las de 2014 y 2015 pierden momentos por la pandemia, y algunas sesiones de los archivos de cohorte están incompletas. Por eso los baremos se calculan por tarea y momento con todas las cohortes que tienen ese momento, tomando como referencia los niños de centros sin Preleo (ver [Baremo por curso o por trimestre](baremos-trimestre.qmd)).
 
-**Pendiente:** número de niños y de colegios por cohorte y momento con datos válidos, y diagrama de flujo de la muestra. Va en el capítulo 4 (Estudio normativo).
+El número de niños y de colegios por cohorte y momento y el [diagrama de flujo de la muestra](estudio-normativo.qmd#sec-flujo-muestra) están en el capítulo 4 (Estudio normativo).
 
 ## Versiones y formatos
 

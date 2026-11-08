@@ -29,6 +29,52 @@ miles <- function(x) format(x, big.mark = ".", decimal.mark = ",", trim = TRUE)
 | 4.3 Seguimiento y pérdida | Cuántos niños se siguen de un curso a otro | Flujo por edad |
 | 4.4 Condición Preleo y nivel socioeconómico | En qué colegios se aplicó el programa | Tabla provisional |
 | 4.5 Limpieza y datos perdidos | Qué se descarta y por qué | Recuento de registros |
+| Diagrama de flujo | De los registros a la muestra de referencia | Hecho (08/11/2026) |
+
+## Diagrama de flujo de la muestra {#sec-flujo-muestra}
+
+```{r}
+#| label: fig-diagrama-flujo
+#| fig-cap: "Diagrama de flujo de la muestra: de los registros exportados a la muestra de referencia de los baremos (seis cohortes, 2010–2015). Los recuentos de niños suman las cohortes; un mismo colegio puede estar en varias."
+#| fig-alt: "Diagrama de flujo con cuatro niveles: registros de la tabla larga y registros que se descartan; niños evaluados; niños del seguimiento trimestral frente a niños solo de las evaluaciones amplias; y, dentro del seguimiento, centros con y sin Preleo. Los niños de centros sin Preleo forman la muestra de referencia de los baremos."
+#| fig-width: 9
+#| fig-height: 5.6
+reg <- sum(N5$registros); nonum <- sum(N5$no_numericos); t0 <- sum(N5$tiempos_cero, na.rm = TRUE); sined <- sum(N5$sin_edad)
+nin <- sum(N0$ninos); amp <- sum(N4$ninos_desconocida); con <- sum(N4$ninos_CON); sin <- sum(N4$ninos_SIN); seg <- con + sin
+caja <- function(x, y, w, h, titulo, texto, col) list(
+  annotate("rect", xmin = x - w / 2, xmax = x + w / 2, ymin = y - h / 2, ymax = y + h / 2, fill = "white", colour = col, linewidth = 1),
+  annotate("text", x = x, y = y + h / 2 - .32, label = titulo, fontface = "bold", size = 3.6, colour = PAL_GRUPO[["tinta"]]),
+  annotate("text", x = x, y = y - .18, label = texto, size = 3.1, colour = PAL_GRUPO[["tinta"]], lineheight = .95))
+flecha <- function(x1, y1, x2, y2) annotate("segment", x = x1, y = y1, xend = x2, yend = y2, colour = PAL_GRUPO[["gris"]],
+                                             arrow = grid::arrow(length = grid::unit(.18, "cm"), type = "closed"))
+ggplot() + xlim(0, 12) + ylim(1.5, 12.4) + theme_void() +
+  caja(4, 11.4, 6, 1.7, "Tabla larga verificada (v2)", paste0(miles(reg), " registros de niño, sesión y medida\n6 cohortes (nacidos de 2010 a 2015)"), PAL_GRUPO[["azul"]]) +
+  caja(9.6, 11.4, 4.4, 1.9, "Se tratan como perdidos", paste0(miles(nonum), " no numéricos (tareas no aplicadas)\n", miles(t0), " o más con tiempo 0\n", miles(sined), " sin edad asignada"), PAL_GRUPO[["gris"]]) +
+  flecha(7, 11.4, 7.4, 11.4) +
+  caja(4, 8.7, 6, 1.5, "Niños evaluados", paste0(miles(nin), " niños de 31 a 72 colegios por cohorte"), PAL_GRUPO[["azul"]]) +
+  flecha(4, 10.55, 4, 9.45) +
+  caja(2.6, 5.9, 4.6, 1.7, "Seguimiento trimestral (hasta 2019/20)", paste0(miles(seg), " niños\ncon condición Preleo conocida"), PAL_GRUPO[["azul"]]) +
+  caja(8.9, 5.9, 5.2, 1.7, "Solo evaluaciones amplias", paste0(miles(amp), " niños (2020/21 y 2021/22)\ncondición Preleo desconocida;\nbaremo aparte por decidir"), PAL_GRUPO[["naranja"]]) +
+  flecha(3.2, 7.95, 2.6, 6.75) + flecha(4.8, 7.95, 8.6, 6.75) +
+  caja(1.7, 2.6, 3.2, 1.6, "Centros con Preleo", paste0(miles(con), " niños\ntablas aparte y\nanálisis de efectos"), PAL_GRUPO[["verde_osc"]]) +
+  caja(5.4, 2.6, 3.6, 1.6, "Centros sin Preleo", paste0(miles(sin), " niños\nmuestra de referencia\nde los baremos"), PAL_GRUPO[["verde_osc"]]) +
+  flecha(2.2, 5.05, 1.7, 3.4) + flecha(3, 5.05, 5.2, 3.4) +
+  annotate("text", x = 9.2, y = 2.6, size = 2.9, colour = PAL_GRUPO[["gris"]], lineheight = .95, hjust = .5,
+           label = "Si un momento tiene menos de 100 niños\nde referencia, el baremo usa a todos\nlos niños de ese momento y lo indica")
+```
+
+```{r}
+#| label: tbl-diagrama-flujo
+#| tbl-cap: "Recuentos del diagrama de flujo por cohorte."
+tf <- data.frame(Cohorte = N0$cohorte, `Niños evaluados` = miles(N0$ninos),
+                 `Seguimiento trimestral` = miles(N4$ninos_CON + N4$ninos_SIN), `Con Preleo` = miles(N4$ninos_CON),
+                 `Sin Preleo (referencia)` = miles(N4$ninos_SIN), `Solo evaluaciones amplias` = miles(N4$ninos_desconocida), check.names = FALSE)
+knitr::kable(tf, align = c("l", rep("r", 5)))
+```
+
+El diagrama resume los apartados siguientes. Los registros perdidos se describen en 4.5; el seguimiento por edad, en 4.3; la condición Preleo, en 4.4. La muestra de referencia de los baremos es la de los centros sin Preleo (ver [Decisiones metodológicas](decisiones.qmd)). En las cohortes 2011 y 2015 todos los centros del seguimiento aplicaron Preleo, así que no aportan niños de referencia.
+
+**Cautela.** La condición de 299 niños de 2013 que figuran con Preleo y de 68 de 2014 que figuran sin él está por revisar (ver 4.4). Hasta entonces, el diagrama los cuenta como figuran en la asignación v6.
 
 ## 4.1 Cohortes y colegios
 

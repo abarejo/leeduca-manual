@@ -191,11 +191,16 @@ book:
         - investigacion.qmd
         - avances.qmd
         - agenda.qmd
+    - part: "Prototipos de informe"
+      chapters:
+        - informe-tramos.qmd
+        - informe-aula.qmd
+        - informe-familias.qmd
     - part: "Preleo"
       chapters:
         - preleo/programa.qmd
   appendices:
-    - informe-aula.qmd
+    - summary-en.qmd
     - consultas.qmd
     - novedades.qmd
     - colaborar.qmd
