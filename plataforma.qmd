@@ -160,7 +160,7 @@ El número de niños y de colegios por cohorte y momento y el [diagrama de flujo
 
 | Versión | Qué es | Situación en el manual |
 |---|---|---|
-| **Papel** | DIS-ESP (2007–2012) y TECLE en papel en 2020/21 | TECLE: equivalencia papel–plataforma ya estudiada (ver [TECLE](fichas/TECLE.qmd)). DIS-ESP: pendiente de decidir dónde va |
+| **Papel** | DIS-ESP (2007–2012) y TECLE en papel en 2020/21 | TECLE: equivalencia papel–plataforma ya estudiada (ver [TECLE](fichas/TECLE.qmd)). DIS-ESP: capítulo propio ([La batería DIS-ESP](dis-esp.qmd)) |
 | **Tableta** | Sesiones de 2021/22 (p. ej., la 948), colectivas: decisión léxica, homógrafos, matemáticas | Se tratan como tareas distintas de las de lectura en voz alta |
 | **3 años** | Batería propia desde 2023/24 (sesiones 988–992) | Inventario en [Batería de 3 años](fichas/TRES_ANIOS.qmd); sin baremo todavía |
 | **Catalán y valenciano** | Las mismas tareas, en centros de Baleares y de la Comunidad Valenciana | Necesitan baremo propio |
@@ -173,7 +173,7 @@ Los datos actuales del servidor (desde octubre de 2023) incluyen ya más de 6.50
 
 DIS-ESP es el antecedente directo de la plataforma: muchas tareas de LEEDUCA vienen de ella y conservan su código de proyecto en la plataforma. En el catálogo hay `r sum(grepl("DIS-ESP", C$bateria))` tareas de DIS-ESP, `r sum(C$bateria == "LEEDUCA y DIS-ESP", na.rm = TRUE)` de ellas compartidas con LEEDUCA. Entre las de DIS-ESP están TECLE, la denominación rápida de objetos en lámina y varias tareas de lectura y ortografía.
 
-**Pendiente** (con Marisol Carrillo): la lista de las 11 escalas, cuáles se pasaron a la plataforma y con qué cambios, y los baremos en papel que se conservan.
+Las pruebas, su fundamento, el procedimiento en dos fases y cuáles pasaron a la plataforma están en el capítulo propio [La batería DIS-ESP](dis-esp.qmd) (08/11/2026). **Pendiente** (con Marisol Carrillo): qué cambió en cada prueba al pasarla a la plataforma y los baremos en papel que se conservan.
 
 ## Calidad de los datos: lo que hay que saber
 
@@ -192,5 +192,5 @@ Todas están en la hoja de incidencias del diccionario maestro, y cada ficha rec
 1. **Aplicación individual o colectiva.** El índice decía «aplicación colectiva en el aula». Por la configuración de las actividades, la mayoría de las tareas de las cohortes son individuales con evaluador. ¿Lo describimos así, con las excepciones colectivas y autoaplicadas?
 2. **Fechas.** ¿Cuándo exactamente se pasó de la plataforma antigua a la nueva y cuándo empezaron las versiones en catalán y valenciano?
 3. **Evaluadores.** ¿Quién aplicó en cada cohorte (maestros de AL, logopedas, estudiantes en prácticas, equipos de orientación)? ¿Se guarda en algún sitio?
-4. **DIS-ESP.** ¿Va aquí, como antecedente, o en un capítulo propio?
+4. ~~**DIS-ESP.** ¿Va aquí, como antecedente, o en un capítulo propio?~~ **Decidido (08/11/2026):** capítulo propio, [La batería DIS-ESP](dis-esp.qmd).
 5. **Capturas.** ¿Usamos en este capítulo una captura por tipo de tarea, de 2026, en lugar de las de 2018?
