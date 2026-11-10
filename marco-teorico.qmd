@@ -1,7 +1,7 @@
 # Marco teórico: aprender a leer en español y por qué medimos lo que medimos {#sec-marco-teorico}
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** primer borrador (08/11/2026) del capítulo 2 del manual, para revisar en el grupo. Da el marco común a todas las fichas. Cada ficha añade después un marco breve de su dominio (por ejemplo, el de [conocimiento de letras](fichas/LET.qmd) o el de [denominación rápida](fichas/RAN.qmd)), y la definición de la dislexia se trata con detalle en [Qué medimos a la luz de la nueva definición](definicion.qmd). Solo cita trabajos publicados.
+**Estado:** segundo borrador (10/11/2026; añade el apartado de escritura) del capítulo 2 del manual, para revisar en el grupo. Da el marco común a todas las fichas. Cada ficha añade después un marco breve de su dominio (por ejemplo, el de [conocimiento de letras](fichas/LET.qmd) o el de [denominación rápida](fichas/RAN.qmd)), y la definición de la dislexia se trata con detalle en [Qué medimos a la luz de la nueva definición](definicion.qmd). Solo cita trabajos publicados.
 :::
 
 **En una frase.** En español, casi todos los niños aprenden a descodificar en el primer curso; lo que separa a los buenos lectores de los que tienen dificultades es, sobre todo, **la velocidad con la que llegan a leer de forma automática**, y eso se puede anticipar desde Infantil con unos pocos precursores.
@@ -23,6 +23,29 @@ En español, cada letra o grupo de letras se pronuncia casi siempre igual. Esta 
 La **visión simple de la lectura** propone que la comprensión lectora es el producto de dos habilidades: la descodificación y la comprensión del lenguaje oral [@gough1986decoding; @hoover1990simple]. Si falla cualquiera de las dos, falla la comprensión. Al principio pesa más la descodificación; con los años, cuando la descodificación ya es automática, pesa cada vez más el lenguaje oral: vocabulario, gramática y conocimiento del mundo [@storch2002oral; @lervag2018comprehension].
 
 **Qué implica para la plataforma.** La comprensión lectora no se puede interpretar sin saber cómo descodifica el niño. Un niño que comprende mal porque lee despacio necesita una ayuda distinta de la de uno que lee bien pero no entiende. Por eso la plataforma mide por separado la descodificación, la velocidad, la comprensión y el lenguaje oral, y el manual propone tratar la comprensión como una dimensión aparte (ver [Cómo estimamos el riesgo](riesgo.qmd)).
+
+## Escribir palabras: el mismo código en sentido contrario {#sec-escritura}
+
+Leer y escribir palabras se apoyan en el mismo conocimiento: las correspondencias entre letras y sonidos y las formas escritas guardadas en el léxico ortográfico. Pero no cuestan lo mismo. Para leer basta con **reconocer** la palabra; para escribirla hay que **recuperar** todas sus letras, en orden. Una representación que basta para leer una palabra puede no bastar para escribirla bien [@perfetti1997spelling].
+
+- **El español es más transparente para leer que para escribir.** Casi cada letra se lee de una sola manera, pero varios sonidos se escriben de más de una: /b/ con *b* o *v*, /x/ con *j* o con *g* ante *e* e *i*, /ʝ/ con *ll* o *y*, y la *h* no suena. Unas grafías dependen de una regla de contexto (*c*/*qu*, *g*/*gu*, *r*/*rr*); otras, solo de conocer la palabra. En una muestra de 1.045 niños de 2.º a 6.º, la ortografía de estas palabras no se dominaba hasta 4.º o 5.º, y los errores más frecuentes eran los de *b*/*v*, *h* y *c*/*s*/*z*/*x* [@jimenez2008arbitraria].
+- **La ortografía de las palabras se aprende leyendo.** Cada palabra bien descodificada deja una huella de su forma escrita [@share1995phonological]. En español, ese léxico ortográfico se forma **antes** que en francés: el efecto de la frecuencia de la palabra en la escritura, que indica que su forma está guardada, aparece antes en los niños españoles que en los franceses [@carrillo2013spelling]. Los mecanismos de escritura son los mismos en todas las ortografías alfabéticas; en español se adquieren más deprisa [@alegria2014escritura]. Desde 2.º, los niños también usan regularidades que no son de ninguna palabra concreta: eligen *b* o *v* según lo frecuente que es cada combinación con la vocal siguiente (al principio de palabra, *vi* es más frecuente que *bi*, y *bu* más que *vu*) [@carrillo2014bigram].
+- **Los precursores son los mismos.** La conciencia fonémica, el conocimiento de las letras y la denominación rápida predicen tanto la lectura como la escritura de palabras, en español y en otras ortografías alfabéticas [@caravolas2012common].
+- **Leer y escribir pueden fallar por separado.** En una muestra representativa de 2.029 niños de habla alemana, otra ortografía transparente, el 7 % tenía un déficit aislado en lectura y el 6 %, un déficit aislado en escritura [@moll2009double]. Estos perfiles se mantienen en parte a lo largo de la primaria [@moll2020stability]. Un cribado que solo mira la lectura no ve a los niños cuya dificultad está sobre todo en la escritura. Por eso la nueva definición de la IDA incluye la ortografía [@ida2025definicion].
+- **Enseñar ortografía también ayuda a leer.** En un metaanálisis de 53 estudios, la enseñanza explícita de la ortografía mejoró la escritura de palabras y, además, la conciencia fonológica y la lectura [@graham2014spelling].
+
+**Una nota sobre el habla de Málaga.** Con el seseo o el ceceo, *s*, *c* (ante *e* e *i*) y *z* representan un mismo sonido para muchos niños. Para ellos, el español tiene una inconsistencia más al escribir. El estudio de Tenerife, también zona de seseo, encontró muchos errores de *c*/*s*/*z* en el dictado [@jimenez2008arbitraria], pero no comparó variedades. Es una hipótesis que el manual tendría que comprobar antes de baremar un dictado: los errores de *c*/*s*/*z* de un niño seseante no significan lo mismo que los de un niño que distingue los dos sonidos.
+
+**Qué implica para la plataforma.** Hoy la plataforma mide **la entrada al código escrito** y **el reconocimiento ortográfico**, pero no la escritura de palabras:
+
+| Tarea | Qué pide | Edades | Clase | Qué mide de la escritura |
+|---|---|---|---|---|
+| Dictado de letras (1864) | Escribir la letra del primer sonido del nombre de un dibujo | 5–6 años (cohortes 2010 y 2011) | C | Correspondencia entre sonido y letra |
+| [Identificar la letra inicial](fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.qmd) (1884, 4047) | Elegir entre cuatro letras la del primer sonido | 5–7 años | A | Lo mismo, pero reconociendo la letra en vez de escribirla |
+| [Decisión ortográfica](fichas/auto/LEC_DECISION_ORTOGRAFICA.qmd) (1937, 2039) | Elegir la forma bien escrita entre una palabra y un pseudohomófono (*bien*–*vien*) | 6–8 años (cohortes 2010 y 2011) | A | Léxico ortográfico, reconociéndolo: es una tarea de lectura |
+| Dictado de DIS-ESP (papel, sin pasar a la plataforma) | Escribir la última palabra de 34 frases; se puntúan 40 grafías inconsistentes | 2.º a 6.º | — | Léxico ortográfico, recuperándolo (ver [La batería DIS-ESP](dis-esp.qmd)) |
+
+Lo que falta es un **dictado de palabras y pseudopalabras** con baremo. Las pseudopalabras medirían la conversión de sonidos en letras; las palabras con grafías inconsistentes, de frecuencia alta y baja, medirían el léxico ortográfico, como en DIS-ESP y en @carrillo2013spelling. Con él, el informe podría separar a los niños que leen y escriben mal de los que fallan solo en una de las dos (ver [Qué medimos a la luz de la nueva definición](definicion.qmd)).
 
 ## Los precursores: qué se puede medir antes de leer
 
@@ -54,7 +77,7 @@ La dislexia no se explica por un único déficit. Es el resultado de varios fact
 
 ### Un continuo, no una categoría
 
-La habilidad lectora se distribuye de forma continua. Dónde se pone el corte es una decisión, y la prevalencia depende de esa decisión: con criterios distintos, la misma población da cifras distintas [@wagner2020prevalence]. En español, los estudios con criterios psicométricos dan entre el 2 % y el 12 %, según el criterio y la población [@cubilla2024prevalencia; @cuadro2017prevalencia; @carrillo2011prevalencia].
+La habilidad lectora se distribuye de forma continua. Dónde se pone el corte es una decisión, y la prevalencia depende de esa decisión: con criterios distintos, la misma población da cifras distintas [@wagner2020prevalence]. En español, los estudios con criterios psicométricos dan entre el 2 % y el 12 %, según el criterio y la población [@jimenez2009prevalencia; @cubilla2024prevalencia; @cuadro2017prevalencia; @carrillo2011prevalencia].
 
 ### La respuesta a la enseñanza
 
@@ -71,15 +94,16 @@ La guía LEEDUCA de detección precoz ya planteaba la evaluación en tres moment
 | La dificultad es un continuo y el corte es una decisión | Niveles de certeza; zona «a vigilar» entre P20 y P30 | [Cómo estimamos el riesgo](riesgo.qmd), [La zona «a vigilar»](avances.qmd#sec-vigilar) |
 | Lo que define la dislexia es la persistencia pese a la enseñanza | Seguimiento del progreso; cambio fiable; trayectoria de 6 a 11 años | [5.5 Cuánto cambio importa](metodo-psicometrico.qmd#sec-cambio-importa) |
 | La comprensión depende de la descodificación y del lenguaje oral | Medidas separadas de descodificación, comprensión y lenguaje oral | Fichas de comprensión y de lenguaje oral |
+| Escribir es más difícil que leer y puede fallar por separado | Solo dictado de letras, letra inicial y decisión ortográfica; **falta un dictado de palabras y pseudopalabras** | [Escribir palabras](#sec-escritura), [Qué medimos a la luz de la nueva definición](definicion.qmd) |
 
 ## Falta
 
-- Un apartado sobre la **escritura** (ortografía), que la nueva definición incluye y la plataforma apenas mide (ver [Qué medimos a la luz de la nueva definición](definicion.qmd)).
+- La **morfología**: la nueva definición de la IDA le da un papel junto a la fonología, y este capítulo apenas la trata.
 - La **cognición numérica** tiene su propio marco teórico en [Cognición numérica](cognicion-numerica.qmd#sec-mate-marco).
 - Revisión del grupo y, en su caso, incorporar los trabajos del grupo cuando se publiquen.
 
 ## Preguntas para el grupo
 
 1. ¿Falta algún modelo teórico que el grupo considere central (por ejemplo, el de doble ruta)?
-2. ¿Incluimos aquí el desarrollo de la **escritura**, o en un capítulo propio cuando la plataforma la mida?
+2. ¿Proponemos para la versión 1.0 un **dictado de palabras y pseudopalabras** a partir del dictado de DIS-ESP? ¿Y cómo tratamos el **seseo y el ceceo** al puntuarlo? (Pregunta para Marisol).
 3. ¿El nivel de detalle es el adecuado para los destinatarios (docentes, orientadores, logopedas y clínicos)?
