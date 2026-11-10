@@ -1,7 +1,7 @@
 # Presentación y uso responsable {#sec-uso-responsable}
 
 ::: {.callout-note appearance="minimal"}
-**Estado:** primer borrador (08/11/2026) del capítulo 1 del manual, para revisar en el grupo. Sigue lo que piden los modelos de evaluación de tests (CET-R y EFPA) y las directrices internacionales sobre el uso de los tests. Los puntos marcados **«Por confirmar»** necesitan un dato del equipo (procedimiento de consentimiento, comité de ética, formación de los evaluadores) antes de la versión de consulta.
+**Estado:** segundo borrador (10/11/2026) del capítulo 1 del manual, para revisar en el grupo. Sigue lo que piden los modelos de evaluación de tests (CET-R y EFPA) y las directrices internacionales sobre el uso de los tests. Los puntos marcados **«Por confirmar»** necesitan un dato del equipo (procedimiento de consentimiento, comité de ética, formación de los evaluadores) antes de la versión de consulta.
 :::
 
 **En una frase.** La plataforma LEEDUCA sirve para **detectar pronto, seguir el progreso y decidir apoyos** en el aula. No sirve, por sí sola, para diagnosticar, y sus puntuaciones se interpretan siempre con su margen de error, por profesionales con la formación adecuada y respetando los derechos de los niños y sus familias.
@@ -25,6 +25,7 @@ Este manual es su **documentación técnica**: describe cada tarea, la muestra c
 | **Clasificar** a un niño con consecuencias académicas (repetir curso, cambiar de grupo) | **No** | Las puntuaciones tienen error y están pensadas para ayudar, no para seleccionar | — |
 | **Comparar o clasificar colegios o docentes** | **No** | Los resultados de un centro dependen de su alumnado y de su contexto; el manual no ofrece normas de centro | [Límites y calidad de los datos](limites.qmd) |
 | **Detectar TDAH** con las tareas de atención de Infantil | **No** | No hay evidencia de validez para ese uso | Fichas de atención y funciones ejecutivas |
+| **Evaluar la escritura** (ortografía) | **No, por ahora** | La plataforma solo tiene dictado de letras, letra inicial y decisión ortográfica; no hay dictado de palabras con baremo | [Escribir palabras](marco-teorico.qmd#sec-escritura) |
 
 Las tareas de **clase A** tienen fiabilidad, validez y baremos suficientes para usos individuales. Las de **clase B** sirven con cautelas y las de **clase C** solo para investigación o descripción (ver [Clases de calidad](limites.qmd#sec-clases)). La clase de cada tarea aparece en la cabecera de su ficha.
 
@@ -54,7 +55,7 @@ La validez de una puntuación empieza en la aplicación. Las directrices sobre p
 
 1. **Una puntuación es una estimación con error.** Cada percentil se lee con su banda de confianza. Un mismo niño puede puntuar distinto en dos evaluaciones sin haber cambiado (ver [El percentil que baila](avances.qmd#sec-baila)).
 2. **Cerca del corte, se vigila.** Entre P20 y P30 no se pone etiqueta: se mira cómo avanza en la evaluación siguiente (ver [La zona «a vigilar»](avances.qmd#sec-vigilar)).
-3. **El riesgo es una probabilidad, no un diagnóstico.** «De cada 100 niños con este perfil, unos 22 tendrán dificultades» se entiende mejor y engaña menos que «en riesgo».
+3. **El riesgo es una probabilidad, no un diagnóstico.** Una frase como «de cada 100 niños con este perfil, unos 22 tendrán dificultades» se entiende mejor y engaña menos que «en riesgo».
 4. **Una sola tarea no basta.** La decisión se apoya en el perfil, en el juicio del docente y en la respuesta a la enseñanza.
 5. **El contexto importa.** Antes de interpretar un resultado bajo, se descarta lo que no es lectura: poca escolarización, una lengua materna distinta, problemas de audición o de visión, una mala sesión.
 6. **El avance cuenta tanto como el nivel.** Un niño por debajo de la media que crece más de lo esperado está respondiendo a la enseñanza.
@@ -79,7 +80,7 @@ Las tareas pierden valor si sus ítems circulan. Por eso el manual **no reproduc
 
 ## Equidad
 
-Una prueba justa mide lo mismo en todos los grupos y comete los mismos errores en todos ellos. El manual comprueba, tarea a tarea, si una puntuación funciona igual por sexo, nivel socioeconómico del centro, formato (plataforma, papel o tableta) y periodo (antes y después de la pandemia), y si un mismo corte acierta igual en todos los grupos (ver [5.6 Equidad](metodo-psicometrico.qmd)). Mientras no se compruebe, los resultados de niños que están aprendiendo español y de las versiones en catalán y valenciano se interpretan con cautela.
+Una prueba justa mide lo mismo en todos los grupos y comete los mismos errores en todos ellos. El manual comprueba, tarea a tarea, si una puntuación funciona igual por sexo, nivel socioeconómico del centro, formato (plataforma, papel o tableta) y periodo (antes y después de la pandemia), y si un mismo corte acierta igual en todos los grupos (ver [5.6 Equidad](metodo-psicometrico.qmd)). Mientras no se compruebe, los resultados de niños que están aprendiendo español y de las versiones en catalán y valenciano se interpretan con cautela. Lo mismo vale para la **variedad dialectal** en las tareas fonológicas y de escritura: con el seseo o el ceceo, frecuentes en Málaga, algunas respuestas pueden no significar lo mismo que en un niño que distingue /s/ y /θ/ (ver [Escribir palabras](marco-teorico.qmd#sec-escritura)).
 
 ## Marco normativo {#sec-marco-normativo}
 
@@ -97,10 +98,12 @@ Una prueba justa mide lo mismo en todos los grupos y comete los mismos errores e
 
 ## Cómo está organizado este manual
 
-- **Cómo está hecho el manual:** fundamentos (este capítulo y el [marco teórico](marco-teorico.qmd)), la plataforma, el estudio normativo y el método psicométrico.
-- **Catálogo y fichas de tareas:** una ficha por tarea, agrupadas por dominio, con su clase de calidad.
+- **Cómo está hecho el manual:** fundamentos (este capítulo, el [marco teórico](marco-teorico.qmd) y la [nueva definición de la dislexia](definicion.qmd)), la plataforma y su antecedente, [la batería DIS-ESP](dis-esp.qmd), el estudio normativo, el método psicométrico y [cómo estimamos el riesgo](riesgo.qmd).
+- **Catálogo y fichas de tareas:** una ficha por tarea, agrupadas por dominio (lectura, procesamiento fonológico, cognición numérica, lenguaje oral y atención), con su clase de calidad.
 - **Investigar con la plataforma:** cómo pedir los datos y los avances que vienen de los estudios del grupo.
+- **Prototipos de informe:** propuestas de [informe por tramos](informe-tramos.qmd), [de aula](informe-aula.qmd) y [para familias](informe-familias.qmd).
 - **Preleo:** el programa de intervención que se aplicó en parte de los colegios.
+- **Technical summary:** un [resumen en inglés](summary-en.qmd) para revisores.
 
 ## Preguntas para el grupo
 
