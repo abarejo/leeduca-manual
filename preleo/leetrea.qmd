@@ -1,0 +1,56 @@
+---
+title: "El programa Leetrea"
+subtitle: "Programa de lectura de 6 a 8 años · en construcción"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+LB <- leer("LEETREA_v1", "LB"); LU <- leer("LEETREA_v1", "LU"); LC <- leer("LEETREA_v1", "LC")
+tot <- LC[LC$curso == "6–11", ]
+```
+
+::: {.callout-warning appearance="minimal"}
+**Apartado en construcción** (12/11/2026). Leetrea está terminado y en fase de pruebas. Este apartado reúne lo que ya se puede decir con el catálogo de actividades de la plataforma y la base de datos completa; la descripción del programa la completará su equipo.
+:::
+
+## Qué es
+
+Leetrea es el programa del grupo LEEDUCA para **trabajar la lectura de 6 a 8 años** (1.º a 3.º de Primaria). Continúa a [Preleo](programa.qmd), que trabaja los precursores en Educación Infantil, y, como él, está alojado en la plataforma LEEDUCA, junto a las pruebas de evaluación.
+
+- **Cribado.** Las pruebas de la plataforma de **6 a 11 años** forman parte del cribado de Leetrea. Por eso las fichas de lectura, velocidad y comprensión de este manual son también la base técnica del programa.
+- **Niveles.** En la plataforma, Leetrea tiene una parte **universal** (para toda la clase) y otra de **repaso** (para los niños que lo necesitan), igual que Preleo.
+
+## Qué se trabaja
+
+El catálogo de actividades de la plataforma (22/10/2026) tiene `r sum(as.numeric(LB$actividades))` actividades de Leetrea, que se agrupan así:
+
+```{r}
+tabla(LB, c("Bloque", "Actividades"),
+      pie = "Actividades de Leetrea en el catálogo web de la plataforma (22/10/2026), agrupadas por el prefijo de su nombre. Agrupación provisional, pendiente de revisar con el equipo del programa.")
+```
+
+- **Código alfabético:** letras y sonidos, sílabas y palabras, con actividades como «Letras que hablan», «Construye la sílaba», «Monto palabras» o «Dictado extraterrestre».
+- **Reconocimiento de palabras y morfología:** lectura de palabras y una «Morfoteca» para identificar, clasificar, emparejar, construir y explicar morfemas.
+- **Fluidez y prosodia:** de sintagmas base a sintagmas crecientes, signos de puntuación, teatro y poesías y canciones.
+- **Comprensión y vocabulario:** refraseos, anáforas, inferencias locales, elaborativas y de integración, macrorreglas, ideas principales, esquemas y vocabulario.
+
+## Estado de los datos
+
+```{r}
+tabla(LU, c("Dato", "N"), pie = "Catálogo web (22/10/2026) y base de datos completa exportada por Ricardo Cruz (10/11/2026).")
+```
+
+Como corresponde a un programa en fase de pruebas, la base de datos aún no registra aplicaciones de Leetrea. En cambio, el **cribado ya tiene datos**: desde 2021, `r num_es(as.numeric(tot$ninos), 0)` niños de 6 a 11 años de `r tot$centros` centros han hecho `r tot$pruebas` pruebas distintas de evaluación en castellano.
+
+```{r}
+LC2 <- LC; LC2[c("ninos", "centros", "pruebas", "aplicaciones")] <- lapply(LC2[c("ninos", "centros", "pruebas", "aplicaciones")], as.numeric)
+tabla(LC2, c("Curso (edad)", "Niños", "Centros", "Pruebas distintas", "Aplicaciones"),
+      pie = "Pruebas de evaluación en castellano en los cursos de 6 a 11 años desde el curso 2021/22 (primera aplicación de cada niño, prueba, curso escolar y trimestre). Curso = edad aproximada (6 = 1.º de Primaria). La fila 6–11 cuenta niños y centros distintos, no la suma.")
+```
+
+## Pendientes
+
+- Descripción del programa por su equipo: objetivos, secuencia, duración, quién lo aplica y cómo se decide el paso de universal a repaso.
+- Qué pruebas y qué cortes forman el cribado de Leetrea, con su ficha en este manual.
+- Cuando se registren aplicaciones: uso por centro y curso, y relación entre dosis y progreso lector, como en Preleo.

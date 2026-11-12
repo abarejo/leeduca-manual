@@ -103,7 +103,7 @@ En todos los niveles, el **programa de repaso** hace de seguimiento. Contiene la
 
 **En CMCI** (curso 2026/27) se prueba el nivel 2: tres sesiones semanales en pequeño grupo con la semana actual del programa universal y una sesión individual de repaso con la semana siguiente. Los especialistas tienen además acceso al nivel 3 para personalizar la intervención.
 
-La plataforma tiene también, sin uso descrito todavía, una «Paleta Leeduca» por aula y el programa **Leetrea** para el aprendizaje de la lectura (universal y repaso), cuyos enlaces aún no llevan a ningún contenido.
+La plataforma tiene también, sin uso descrito todavía, una «Paleta Leeduca» por aula y el programa **Leetrea** para el aprendizaje de la lectura de 6 a 8 años (universal y repaso), terminado y en fase de pruebas (ver [El programa Leetrea](leetrea.qmd)).
 
 ### Nivel 3 (1): sugerencias del sistema, 45 semanas prediseñadas
 

@@ -42,7 +42,7 @@ La plataforma responde a un problema práctico: evaluar a **todo** el alumnado d
 3. **Dificultad creciente.** Las tareas se ordenan por dificultad dentro del curso y entre cursos, para evitar el efecto techo y distinguir también a los niños que están cerca de la media, no solo a los que tienen un retraso claro.
 4. **Aplicación sencilla.** La presentación de los estímulos, el registro y la corrección los hace la plataforma. Así se reducen las diferencias entre evaluadores y la evaluación la puede hacer personal del centro con una formación breve.
 
-Además de evaluar, la plataforma aloja los **programas de intervención** del grupo: Preleo (universal, intensificación, repaso) y Leetrea. Este manual trata solo la parte de evaluación; la intervención aparece cuando afecta a la interpretación de las puntuaciones (ver [El programa Preleo](preleo/programa.qmd)).
+Además de evaluar, la plataforma aloja los **programas de intervención** del grupo: Preleo (universal, intensificación, repaso), para Educación Infantil, y Leetrea, para la lectura de 6 a 8 años, cuyo cribado son las pruebas de 6 a 11 años. Este manual trata sobre todo la parte de evaluación; la intervención aparece cuando afecta a la interpretación de las puntuaciones (ver [El programa Preleo](preleo/programa.qmd) y [El programa Leetrea](preleo/leetrea.qmd)).
 
 ## De dónde viene
 

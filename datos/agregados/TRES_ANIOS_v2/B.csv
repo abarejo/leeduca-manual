@@ -1,0 +1,17 @@
+Prueba,tarea,bateria_3a,momento,N,centros,items,practica,puntuacion,M,DT,Md,max_obs,pct_suelo,pct_techo,alfa,aviso
+12332,Categorización 1,sí,3.2,879,47,3.0,1,ítems,2.48,0.87,3.0,3,5.92,67.58,0.65,
+12332,Categorización 1,sí,3.3,153,7,3.0,1,ítems,2.78,0.58,3.0,3,1.96,84.97,0.62,
+12510,Categorización 2,sí,3.3,808,44,6.0,1,ítems,3.55,1.32,4.0,6,2.72,7.55,0.58,
+11794,Comprensión de conceptos,sí,3.2,879,47,21.0,0,ítems,15.97,3.45,17.0,21,0.23,3.75,0.79,
+11794,Comprensión de conceptos,sí,3.3,1018,49,21.0,0,ítems,17.22,3.01,18.0,21,0.1,7.76,0.77,
+11795,Juicio de rima,sí,3.2,926,52,10.0,0,ítems,4.83,3.2,5.0,10,15.55,11.34,0.85,
+11795,Juicio de rima,sí,3.3,1072,52,10.0,0,ítems,6.08,3.07,6.0,10,7.28,21.27,0.84,
+11256,Repetición de pseudopalabras 1,sí,3.2,927,48,9.0,0,ítems,7.95,1.61,9.0,9,0.32,56.42,0.75,para tras 4 errores seguidos: α inflada
+11256,Repetición de pseudopalabras 1,sí,3.3,150,5,9.0,0,ítems,8.25,1.58,9.0,9,1.33,70.0,0.83,para tras 4 errores seguidos: α inflada
+12509,Repetición de pseudopalabras 2,sí,3.3,858,45,15.0,0,ítems,13.04,2.69,14.0,15,0.47,40.44,0.84,para tras 4 errores seguidos: α inflada
+12166,Segmentar en sílabas (sí/no),sí,3.2,918,47,,0,aciertos del servidor (respuestas sin codificar),5.06,2.51,5.0,9,5.88,,,
+12166,Segmentar en sílabas (sí/no),sí,3.3,993,52,,0,aciertos del servidor (respuestas sin codificar),5.78,2.31,6.0,9,3.42,,,
+217,Morfología de género (palabras),no,3.2,843,47,5.0,0,ítems,3.05,1.74,3.0,5,12.34,28.59,0.76,
+217,Morfología de género (palabras),no,3.3,186,5,5.0,0,ítems,3.48,1.66,4.0,5,9.68,36.02,0.78,
+2092,Morfología de número (palabras),no,3.3,870,46,,0,aciertos del servidor (respuestas sin codificar),7.56,2.13,7.0,12,0.11,,,
+2129,Pares mínimos (percepción),no,3.3,851,44,,0,aciertos del servidor (respuestas sin codificar),7.96,2.84,8.0,14,1.06,,,

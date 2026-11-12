@@ -197,9 +197,10 @@ book:
         - informe-tramos.qmd
         - informe-aula.qmd
         - informe-familias.qmd
-    - part: "Preleo"
+    - part: "Programas de intervención"
       chapters:
         - preleo/programa.qmd
+        - preleo/leetrea.qmd
   appendices:
     - summary-en.qmd
     - consultas.qmd
