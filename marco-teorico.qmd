@@ -160,7 +160,7 @@ La guía LEEDUCA de detección precoz ya planteaba la evaluación en tres moment
 
 ## Falta
 
-- La **morfología** ya tiene su apartado ([La morfología](#sec-morfologia)). Falta una tarea de morfología derivativa y escrita, y decidir cómo citar la tesis de María Rodríguez-Moreno hasta que esté defendida.
+- La **morfología** ya tiene su apartado ([La morfología](#sec-morfologia)). Falta una tarea de morfología derivativa y escrita. La tesis de María Rodríguez-Moreno se cita como tesis depositada; es la única excepción al criterio de citar solo trabajos publicados.
 - La **cognición numérica** tiene su propio marco teórico en [Cognición numérica](cognicion-numerica.qmd#sec-mate-marco).
 - Revisión del grupo y, en su caso, incorporar los trabajos del grupo cuando se publiquen.
 
@@ -170,4 +170,3 @@ La guía LEEDUCA de detección precoz ya planteaba la evaluación en tres moment
 2. ¿Proponemos para la versión 1.0 un **dictado de palabras y pseudopalabras** a partir del dictado de DIS-ESP? ¿Y cómo tratamos el **seseo y el ceceo** al puntuarlo? (Pregunta para Marisol).
 3. ¿El nivel de detalle es el adecuado para los destinatarios (docentes, orientadores, logopedas y clínicos)?
 4. ¿Proponemos para la versión 1.0 una tarea de **morfología derivativa** (oral a los 5–6 años y escrita desde 2.º)? ¿Y pasamos las tareas de morfología flexiva al bloque de lenguaje oral del cribado, en vez de tratarlas como indicador de una causa de la dislexia?
-5. La tesis de María Rodríguez-Moreno está depositada pero no defendida. ¿La citamos ya (con su permiso) o esperamos a la defensa, según el criterio de citar solo trabajos publicados?
