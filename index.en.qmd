@@ -25,6 +25,8 @@ The platform and this manual grew out of the **DIS-ESP battery**, created by Mar
 | [What we measure in light of the new definition of dyslexia](definicion.en.qmd) | Translated from the Spanish version of November 27, 2026 |
 | [The LEEDUCA platform](plataforma.en.qmd) · [Normative study](estudio-normativo.en.qmd) | Translated (November 27, 2026) |
 | [Psychometric method](metodo-psicometrico.en.qmd) · [Overall results](resultados-globales.en.qmd) · [How we estimate risk and reading difficulty](riesgo.en.qmd) · [Limitations and data quality](limites.en.qmd) | Translated (November 27, 2026) |
+| [How each task sheet is built](metodo.en.qmd) · [Methodological decisions](decisiones.en.qmd) | Translated (November 27, 2026) |
+| [The Preleo program](preleo/programa.en.qmd) · [The Leetrea program](preleo/leetrea.en.qmd) | Translated (November 27, 2026) |
 | [Task catalog](catalogo.en.qmd) | Translated; instructions and constructs not yet translated are shown in Spanish |
 | [Reading speed in words per minute](fichas/VEL.en.qmd) (pilot task sheet) | Translated (November 27, 2026) |
 | [Class A task sheets](fichas/auto/index.en.qmd) | Generated in English from the same data and script |

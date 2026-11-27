@@ -72,7 +72,7 @@ tf <- data.frame(Cohort = N0$cohorte, `Children assessed` = miles(N0$ninos),
 knitr::kable(tf, align = c("l", rep("r", 5)))
 ```
 
-The diagram summarizes the following sections. Missing records are described in 4.5; follow-up by age in 4.3; the Preleo condition in 4.4. The reference sample for the norms is that of the non-Preleo schools (see [Methodological decisions](https://abarejo.github.io/leeduca-manual/decisiones.html) (*in Spanish*)). In the 2011 and 2015 cohorts all schools in the follow-up implemented Preleo, so they contribute no reference children.
+The diagram summarizes the following sections. Missing records are described in 4.5; follow-up by age in 4.3; the Preleo condition in 4.4. The reference sample for the norms is that of the non-Preleo schools (see [Methodological decisions](decisiones.en.qmd)). In the 2011 and 2015 cohorts all schools in the follow-up implemented Preleo, so they contribute no reference children.
 
 **Caution.** The condition of 299 children from 2013 recorded as Preleo and 68 from 2014 recorded as non-Preleo is under review (see 4.4). Until then, the diagram counts them as recorded in assignment v6.
 

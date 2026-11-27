@@ -1,0 +1,49 @@
+# How each task sheet is built
+
+::: {.callout-note appearance="minimal"}
+*Translated from the Spanish version of November 27, 2026.*
+:::
+
+Task sheets follow the *Standards for Educational and Psychological Testing* [@aera2014] and the argument-based approach to validity [@kane2013]: each use proposed for a score (identifying risk, monitoring progress, comparing with norms) must be backed by specific evidence.
+
+## Sections of a task sheet
+
+| Section | What it contains |
+|---|---|
+| Description | What the child does, items, forms, task and session codes, main measure |
+| Theoretical framework | What the task measures and what the literature says about its value |
+| Sample | N by measure, time point and cohort; Preleo condition; schools; platform; data cleaning |
+| Descriptive statistics | Mean, SD, percentiles, skewness, floor and ceiling effects |
+| Reliability | Test–retest and agreement between terms (Bland-Altman), alternate forms, internal consistency (α/ω) when item-level responses are available, reliable change |
+| Validity | Concurrent, discriminant, predictive (AUC against later reading difficulty) and incremental |
+| Norms | Percentiles by time point in the reference sample; precision of the percentile |
+| Variables that influence scores | Relative age, school socioeconomic index (SES), sex, Preleo, school; differential prediction |
+| Studies it opens up | Methodological, theoretical and applied questions the task makes it possible to answer |
+| Pending issues | Data errors found and what is missing |
+
+## What backs each proposal
+
+When a task sheet proposes a use or a decision, it states what it rests on:
+
+- **[E] Published evidence:** peer-reviewed studies that support the measure or the criterion.
+- **[D] Our own data:** analyses of the LEEDUCA data shown in the task sheet.
+- **[U] Utility criterion:** a proposal by the group based on its clinical, educational or research value, still without direct evidence.
+
+## Reference sample and Preleo
+
+Preleo is a prevention program that some schools delivered in preschool. So that the norms describe development without intervention, the main reference is the **normative reference sample**: children from schools that did not deliver Preleo to their cohort. In analyses of the program's effect, the terms **Preleo group** and **comparison group** are used. "Control group" is not used because schools were not randomly assigned. Tables show the internal codes SIN (non-Preleo) and CON (Preleo).
+
+## The innovations
+
+Besides the classical indicators, task sheets include analyses designed for the real use of the platform:
+
+- **Agreement between terms and reliable change:** how much a child has to change to claim that they have really improved.
+- **Precision of the percentile:** the band within which a child's percentile lies with 90% confidence.
+- **Age in months:** whether it is better to norm by exact age and not only by school year and term (see [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*)).
+- **Validity without circularity:** when the reading difficulty criterion contains the measure itself, another criterion is sought.
+- **Differential prediction:** whether the same cut-off works equally well for boys and girls or for schools of different socioeconomic status.
+- **Understandable units:** for example, words per minute and the minutes a child takes to read 1,000 words.
+
+## Reproducibility {#reproducibilidad}
+
+Computation is done in two layers. On the project's computer, R scripts read the complete data and produce aggregated tables. The script `analisis/exportar_agregados.R` transfers those tables to the book and checks that none of them identifies a child, a teacher or a school. The book is built only from those tables.

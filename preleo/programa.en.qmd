@@ -1,0 +1,165 @@
+# The Preleo program
+
+::: {.callout-note appearance="minimal"}
+**Status:** draft v2 (November 3, 2026). Description based on the activity booklets for ages 4 and 5, the curriculum plans by age and by block, and @sanchezgomez2025. Pending review by the Preleo team. *Translated from the Spanish version of November 27, 2026. Activity names are translated literally; the materials themselves are in Spanish.*
+:::
+
+## What it is
+
+Preleo is a **universal prevention** program for reading difficulties, designed by the LEEDUCA group at the University of Málaga. It is delivered to the whole class in preschool, before difficulties appear, and not only to children at risk. It starts from a well-established idea: learning to read without difficulty requires a solid foundation in oral language and, above all, in phonological awareness. In Spanish, a language with an almost transparent orthography, syllabic and phonemic awareness are moderately related to word reading, pseudoword reading and comprehension [@miguez2022].
+
+It has five features:
+
+- **It is delivered by the teachers themselves** in the regular classroom, in daily sessions of 10 to 30 minutes depending on age and activity.
+- **Brief training and ongoing support:** teachers receive short initial training and remote follow-up that helps them adapt the activities to their group.
+- **It is sequenced week by week:** each school year has a 29-week schedule (October to May) that states which activity from each block corresponds to each week.
+- **It is linked to the LEEDUCA platform:** the assessment each term shows how each child is progressing and who needs more support, as in response to intervention (RTI) models.
+- **It fits the curriculum:** each block comes with a plan that relates it to the objectives, content, assessment criteria and standards of the Andalusian preschool and primary curriculum.
+
+## Materials
+
+| Material | Content |
+|---|---|
+| **Booklet for age 4** | 29-week schedule and 109 activity sheets: phonological awareness (47), vocabulary (22), comprehension (29) and fluency (11) |
+| **Booklet for age 5** | 29-week schedule and 174 activity sheets: phonological awareness (22), alphabetic principle (54), vocabulary (20), comprehension (55) and fluency (23) |
+| **Plans by age** (3, 4 and 5) | For each activity: block, objectives, content, assessment criterion and learning standard |
+| **Plans by block** (phonological awareness, alphabetic principle and fluency; vocabulary; comprehension) | Relation to the Andalusian curriculum: Order of August 5, 2008 (preschool) and Order of March 17, 2015 (primary), key competences and standards |
+
+For age 3 there is a plan and a schedule (in the platform's download area), but no booklet of activity sheets among the materials reviewed.
+
+### What an activity sheet looks like
+
+All activity sheets follow the same template, designed so that a teacher without specific training can deliver them:
+
+1. **Content, assessment criterion and learning standard**, taken from the plan.
+2. **Hands on · How do we do it?:** aim of the activity and step-by-step procedure, with a script of what the teacher says and a worked example.
+3. **Materials:** lists of items (words, syllables, sentences, pseudowords) and picture cards, which teachers can replace with others from their own class.
+4. **Theoretical rationale for the activity:** a short text explaining why it is done (for example, how vocabulary is organized into semantic categories, how gender and verb inflections are acquired in Spanish, or what verbal fluency measures).
+
+Example (age 4, "How many words are there?"): the teacher builds sentences with name cards and action pictograms ("María eats"), the class "reads" them and counts how many words they have. It starts with two-word sentences with proper names and moves on to three words and then to sentences with determiners and prepositions.
+
+## Structure
+
+The current version is organized into five blocks worked on in parallel every week.
+
+| Block | What is worked on |
+|---|---|
+| Phonological awareness | Rhymes; lexical and syntactic awareness (counting the words in a sentence, words within words, compound words); syllabic awareness (identifying the initial, middle and final syllable; counting, blending, deleting, adding, substituting and reversing syllables; stressed syllable); phonemic awareness (counting and segmenting phonemes; blending, deleting and substituting the initial and final phoneme; phoneme synthesis). Manipulations produce both words and pseudowords |
+| Alphabetic principle (age 5) | A **sound of the week**: identifying whether a word begins or ends with it, discriminating it from similar sounds (phonological contrast) and associating it with its letter. At the end of the year, blending sounds and letters to read words of 3, 4 and 5 phonemes |
+| Vocabulary | Semantic fields and categories, relations between words (part of, generalization, similarities and differences, opposites, function, features), compound words and word families. At age 5, also morphosyntax: gender and number agreement (also with pseudowords), conjugation by person and tense, idioms, and detecting ill-formed sentences |
+| Oral comprehension | Inferences from picture cards (age 4: "The detective game", "The nosy lion"); at age 5, short oral texts with different types of questions, sentence comprehension depending on word order ("Trick sentences") and gendered pronouns ("Lola's game") |
+| Fluency | **Verbal fluency and rapid naming**, not reading fluency: quickly naming pictures from a semantic field, or words that begin with the syllable or sound of the week (a traditional Spanish word game), and, at age 5, rapid naming of the letters already learned |
+
+Some vocabulary activities also work on **cognitive flexibility** (switching criteria, for example "profession or means of communication?").
+
+### Progression by age
+
+| Age | Phonological awareness | Other blocks |
+|---|---|---|
+| 3 | Listening and rhymes; lexical and syntactic awareness with support (songs) | Vocabulary by categories; inferences from picture cards ("The owl game"), spatial concepts; fluent naming of pictures |
+| 4 | 2 weeks of syntactic awareness and 27 of syllabic awareness | Vocabulary and semantic relations; inferences from picture cards; rapid naming |
+| 5 | 4 weeks of syllabic awareness and 25 of phonemic awareness | Alphabetic principle; morphosyntax; comprehension of oral texts; rapid naming of words and letters |
+
+### The weekly sequence
+
+**Age 4.** After two weeks of syntactic awareness ("How many words are there?", "Breaking words", with songs), the year moves through **three-week cycles per consonant**: P, L, S, M, T, N, D, F and J. In each cycle the initial, final and middle syllable with that consonant are worked on, a song ("The monosyllable") is sung and children do rapid naming of words beginning with it; the third week closes with the word game. In parallel, each week adds a syllable operation, from easier to harder:
+
+| Weeks | Syllable operation |
+|---|---|
+| 3–5 | Counting syllables with claps; blending syllables; stressed syllable ("The loudest clap") |
+| 6–12 | Substituting the initial syllable; blending the first syllable (into a word and into a pseudoword); substituting the final syllable |
+| 13–20 | Blending the last syllable (word and pseudoword); word chains; deleting the last syllable (word and pseudoword); syllable puzzle |
+| 21–29 | Deleting the first syllable (word and pseudoword); "Dancing syllables"; reversing syllables; adding and deleting the middle syllable |
+
+Comprehension: "The detective game" (weeks 1–23) and "The nosy lion" (24–29).
+
+**Age 5.** Phonological awareness moves from the syllable to the phoneme, and the alphabetic principle advances **one sound per week** (two for the hardest ones):
+
+| Weeks | Phonological awareness | Sound of the week |
+|---|---|---|
+| 1–4 | Blending and deleting the initial and final syllable | A, O, U, E |
+| 5–11 | Counting sounds (2–3, 4, 5); saying the sounds of a word (2 to 5) | I, M, L, S, N, Ñ, D |
+| 12–19 | Blending and deleting the first sound (word and pseudoword); substituting the initial phoneme | J, F, P, T, Z/C (2 weeks), G (2 weeks) |
+| 20–27 | Blending and deleting the last sound (word and pseudoword); substituting the final phoneme | LL/Y, B/V, CH, R/RR (2 weeks each) |
+| 28–29 | Phoneme synthesis ("What am I saying?") | C/Q/K |
+
+From week 22, sounds and letters are blended to read words of 3, 4 and 5 phonemes, and the year ends with "The tree" (word, syllable, phoneme and letter). Comprehension: two oral texts per week (weeks 1–25), one plus "Trick sentences" in weeks 26–27, and "Lola's game" (28–29). Fluency: rapid naming of words with the sound of the week and, every other week from week 17, of the letters already learned.
+
+### Dose
+
+Each school year consists of 29 weeks of daily delivery, with 4 blocks per week at age 4 and 5 at age 5. Neither the booklets nor the plans set the minutes per block: the published reference is 10 to 30 minutes per session [@sanchezgomez2025].
+
+## Intervention tiers on the platform
+
+On the platform, Preleo is not only the classroom program. The section "Intervention systems › Preleo" organizes a three-tier response to intervention model, linked by screening each term and weekly monitoring:
+
+| Tier | For whom | Format | Content on the platform |
+|---|---|---|---|
+| **Tier 1 · Universal** | The whole class | Group, in the classroom | Universal program: schedule and plans for ages 3, 4 and 5, with downloadable activity sheets and songs |
+| **Tier 2 · Small groups** | Children at risk in the screening or with insufficient response | Small group | The content of the universal program, with more intensity and support |
+| **Tier 3 · Individualized intervention** | Children who do not respond sufficiently to tier 2 | Individual, daily | Intensification program, which the specialist individualizes from the system's suggestions (below) |
+
+At all tiers, the **review program** serves as monitoring. It contains the weeks of the universal program (18 at age 3, 32 at age 4 and 32 at age 5), and each child completes them alone, with their own user account, once a week. It is delivered the week *after* the one worked on in the group, so that time, accuracy and efficiency serve as a baseline and as a weekly measure of progress.
+
+**At CMCI** (Barranquilla, Colombia; school year 2026/27), tier 2 is being piloted: three weekly small-group sessions with the current week of the universal program and one individual review session with the following week. Specialists also have access to tier 3 to individualize the intervention.
+
+The platform also includes, with no described use yet, a "LEEDUCA palette" per classroom, and the **Leetrea** program for learning to read at ages 6 to 8 (universal and review), completed and in the testing phase (see [The Leetrea program](leetrea.en.qmd)).
+
+### Tier 3 (1): system suggestions, 45 predesigned weeks
+
+Each week is a platform session with five days (Monday to Friday) and a **fixed pattern of components** repeated every day in the same order. Content and difficulty change. The whole week can be delivered, or only the component flagged by the screening.
+
+| Weeks | Activities per day | Phonological awareness | Other components, every day |
+|---|---|---|---|
+| 1–15 | 5 | Rhymes, segmenting and counting syllables | RAN of objects; verbal memory (repeating syllables or pseudowords, recalling words); vocabulary or inferences, on alternate days; gender and number morphology |
+| 16–30 | 6 (9 in weeks 21 and 27) | Review in weeks 16 to 19; then initial and final syllable by consonant; blending, deleting and substituting syllables | RAN; verbal memory; vocabulary; comprehension (inferences from picture cards, spatial concepts, oral comprehension); morphosyntax |
+| 31–45 | 7 | Syllable review in weeks 31 to 34; then phonemes: counting, saying, identifying, blending, deleting and substituting | As in the previous block, plus **phonological discrimination** (minimal pairs, phoneme-by-phoneme contrast) |
+
+The three 15-week blocks follow the same progression as the classroom program for ages 3, 4 and 5. What is specific to intensification is that it works **every day** on two components that the classroom does not work on systematically: naming speed (RAN) and verbal memory. These are the same domains the screening assesses, and the team's training material indicates, test by test, in which weeks each weakness is trained (for example, rhymes in week 1, syllable identification in weeks 20 and 26, minimal pairs in weeks 35–45).
+
+### Tier 3 (2): individualization by the specialist
+
+The specialist starts from the suggested sequence and adjusts it to the child's profile: they can deliver only the components flagged by the screening or, for very focused profiles, choose the level of phonological awareness and build their own sequence from the activity index:
+
+| Level | Blocks | Examples |
+|---|---|---|
+| Lexical awareness | 5 | Rhyme, adding and subtracting words, word length, counting words |
+| Syllabic awareness | 40 | Identifying the initial and final syllable with 15 consonants; counting, blending, omitting, adding and substituting syllables; stressed syllable |
+| Phonemic awareness | 40 | Identifying the initial (21) and final (10) phoneme; counting, segmenting and blending phonemes; adding, omitting and substituting phonemes; discrimination |
+
+Each block has 5 sessions of 5 activities, that is, about 2,100 activities in total.
+
+### How decisions are made
+
+According to the team's training material, moving to a more intensive tier is justified by repeated screening and monitoring, not by a single data point. Support is maintained or withdrawn according to the trajectory, and a child may continue with support after leaving the risk zone if a functional gap with their group remains. The minimum to record is the start date, the reason, the dose and the components. This is exactly what is needed to study the intervention as a dose.
+
+The system's current suggestions are a fixed sequence that the specialist adapts. Having the system recommend the next session from each child's data (screening and weekly review) is one of the group's lines of work.
+
+## What Preleo trains and what the platform measures
+
+Several Preleo activities practice the same operations assessed by the platform's phonological awareness tasks at ages 4 and 5 (counting, blending and deleting syllables and phonemes, letter knowledge). A difference on those tasks at the end of preschool is therefore partly **near transfer**. The demanding test of the program is word reading, pseudoword reading, fluency and comprehension at ages 6 and 7, which the program does not train directly. This is taken into account in the norms (preferred reference: non-Preleo schools) and in the group's analyses.
+
+## Background and published studies
+
+Preleo grew out of the prevention phase of the LEEDUCA Project, implemented in public schools in the province of Málaga since 2013 [@sanchezgomez_cuadernos]. In its first versions, the phonological awareness work relied on MACOFON, a program developed by teachers and speech-language therapists, and was organized into 69 weeks of training. Its theoretical basis is the simple view of reading: decoding and comprehension, supported by phonological awareness and oral language (vocabulary, morphosyntax and comprehension).
+
+It must be understood in context. In a survey of 840 preschool and 876 primary teachers from across Spain, most preferred whole-word methods, attributed phonological awareness to maturity and motivation, and showed limited knowledge of how children learn to read [@gimenez2023opiniones]. Preleo aims to bring evidence-based instruction to the regular classroom and give teachers a systematic tool.
+
+The group's studies of its effects:
+
+- **External evaluation (2014/15 school year).** The Andalusian Agency for Educational Evaluation compared 8 LEEDUCA schools with 8 control schools of similar size and socioeconomic index. In Grade 1 it found more children with expressive reading and better comprehension in the LEEDUCA schools [@sanchezgomez_cuadernos].
+- **Schools of very low socioeconomic status.** In two schools with Preleo for 76 weeks (ages 3, 4 and 5) compared with two control schools, with 56 and 63 children, there were improvements in letters at age 5, in the phonological route and then the visual route in Grade 1 (d ≈ 0.44–0.58), and in text speed and intonation in Grade 2 (d ≈ 0.56–0.62). There was no effect on comprehension [@sanchezgomez2022proteger].
+- **Regular classrooms (22 schools, ages 4 to 7).** Better phonological awareness in the Preleo group and effects on reading one and two years after the program [@sanchezgomez2023cf].
+- **2010 cohort (20 schools, ages 5 to 7).** See @sanchezgomez2025.
+
+Using platform data, the group has also studied risk profiles before reading. With phonological awareness, rapid naming, letters and verbal memory at age 5 (795 children), only the profile of globally low performance corresponds to a double deficit, and 92.5% of those children read poorly in Grade 2 [@flores2026dobledeficit].
+
+## Versions delivered
+
+Preleo's content has changed over the years. This matters when comparing cohorts:
+
+- **School year 2015/16 (2010 cohort, age 5):** only syllabic awareness (10 weeks) and phonemic awareness (19 weeks), from October to May, in the final year of preschool [@sanchezgomez2025]. This is a different distribution from the current version at age 5 (4 weeks of syllables and 25 of phonemes).
+- **2011 cohort:** from age 4 and over three school years.
+- **Current version:** the five blocks described above, from age 3 to 5, with the schedule in the booklets. The fluency and comprehension blocks were added to strengthen the effects on those components of reading.
+
+*Pending:* edition date of the booklets and the version delivered to each cohort and school; measurement of implementation fidelity.

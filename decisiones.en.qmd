@@ -1,0 +1,52 @@
+# Methodological decisions
+
+::: {.callout-note appearance="minimal"}
+*Translated from the Spanish version of November 27, 2026.*
+:::
+
+Group decisions that affect how the manual's scores are computed and interpreted. Each one states what it rests on ([E] published evidence, [D] our own data, [U] utility criterion) and where it is developed. Pending decisions are in [Questions and suggestions](https://abarejo.github.io/leeduca-manual/consultas.html) (*in Spanish*).
+
+## Reference sample and Preleo
+
+| Decision | Support | Where |
+|---|---|---|
+| Norms use as reference the children from schools that did not deliver Preleo to their cohort (normative reference sample). | [U] So that the norm describes development without intervention | [How each task sheet is built](metodo.en.qmd) |
+| A child counts as Preleo only if their school delivered the program to their cohort between ages 4 and 6. A school delivering Preleo to other school years is not enough. | [U] | Group's internal workspace |
+| All cohorts are pooled as the reference, unless a cohort departs by more than 1 SD from the others on a task; it then uses its own reference. | [D] Median difference between equivalent cohorts d = 0.11 | Task sheets |
+| If a time point has fewer than 100 children from the reference sample, all children are used and this is indicated in the table. | [U] | RAN task sheet (4.1) |
+
+## Risk classification
+
+| Decision | Support | Where |
+|---|---|---|
+| The five certainty levels (DL-A, DL-B, TR, INT, TE) are the reference classification of reading difficulty. The threshold for severe difficulty is P10, not −1.5 SD (November 8, 2026). | [E] IDA definition; cumulative risk and resilience model. [U] Fewer severe cases left unidentified | [How we estimate risk](riesgo.en.qmd#sec-por-que-niveles) |
+| The same classification is proposed for oral language and mathematics, with the same rules (proposal of November 8, 2026). | [U] Comparability across domains | [How we estimate risk](riesgo.en.qmd#sec-niveles-otros-dominios) |
+| Reports for one term use five bands, with a watch zone between P20 and P30 (November 8, 2026). | [D] Simulation of measurement error | [Report bands](https://abarejo.github.io/leeduca-manual/informe-tramos.html) (*in Spanish*) |
+
+## How norms are built
+
+| Decision | Support | Where |
+|---|---|---|
+| Norm by school year and term, at least up to age 7. | [D] With norms by school year, 22–24% of children are flagged in the first term | [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*) |
+| From age 4 to 6, refine by age in months. | [D] Reclassifies 2–10% of children at P16 | Letters task sheet |
+| Do not adjust the risk cut-off for the school's socioeconomic index (SES); the SES-based percentile is given only as context. | [D] At the same score, children from low-SES schools are at greater risk: a separate cut-off would hide real risk | Letters task sheet |
+| Report the percentile with its confidence band and do not classify on the basis of a single task. | [D] Standard error of measurement | Task sheets |
+| To speak of a child improving or worsening, use the reliable change index, not the difference between two terms. | [E] [D] | Letters and speed task sheets |
+
+## Validity and units
+
+| Decision | Support | Where |
+|---|---|---|
+| Reading difficulty criterion: longitudinal label from age 6 to 11 (persistent vs. transient). | [U] | Task sheets |
+| When the criterion contains the measure itself, the AUC is presented only as agreement, not as predictive validity, and another criterion is sought. | [U] | Speed task sheet |
+| Express reading speed in words per minute and in minutes to read 1,000 words. | [U] A unit teachers understand, comparable with the literature | Speed task sheet |
+| EDICOLE "reading for comprehension" is a rereading: it is not compared with published silent reading. | [D] Same text; information from the team | Speed task sheet |
+| EDICOLE texts from the new platform (from 2018/19) are not used until their times are checked. | [D] Forms A and B correlate .40–.50 vs. .86–.90 | Speed task sheet |
+
+## Data
+
+| Decision | Support | Where |
+|---|---|---|
+| Dates of birth read in all formats (text, ISO and Excel dates). | [D] A reading error lost 24–42% of dates in 2010–2014; corrected on October 19, 2026 | Letters task sheet |
+| All computations are done with reproducible scripts; the book publishes only aggregated tables. | [U] | [How this book is maintained](https://abarejo.github.io/leeduca-manual/colaborar.html) (*in Spanish*) |
+| Data issues (sessions with constant values, mislabeled codes…) are documented in the task sheet and excluded with a stated reason. | [U] | Data cleaning sections |
