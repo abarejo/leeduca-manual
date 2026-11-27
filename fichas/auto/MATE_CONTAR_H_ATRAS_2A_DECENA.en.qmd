@@ -1,0 +1,16 @@
+---
+title: "Counting backwards (11–20)"
+subtitle: "Automatically generated task sheet · MATE_CONTAR_H_ATRAS_2A_DECENA"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto_en.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto_en("MATE_CONTAR_H_ATRAS_2A_DECENA")
+```

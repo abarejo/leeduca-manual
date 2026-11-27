@@ -1,0 +1,76 @@
+# Limitations and data quality {#sec-limites}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+Ce <- C[C$estado == "evaluación", ]
+tc <- table(factor(C$clase, levels = c("A", "B", "C")))
+```
+
+::: {.callout-note appearance="minimal"}
+**Status:** critical review of October 21, 2026, written from a psychometric standpoint for discussion within the group. It is not a judgment of the work done: over more than ten years, the platform has gathered data that almost no other group has. But a credible technical manual must state clearly what those data allow and what they do not. *Translated from the Spanish version of November 27, 2026.*
+:::
+
+## Starting point
+
+The platform was not born with a measurement plan. Tasks were created, changed and withdrawn according to the needs of each school year. Measuring was preferred over not measuring, and that is enormously valuable: there is longitudinal follow-up of thousands of children from age 4, three times per school year. In exchange, there are problems that cannot be fixed afterwards and others that can. This chapter separates them and says what has been done about each.
+
+## What limits the data and what has been done
+
+| Problem | Why it matters | What has been done | What is missing |
+|---|---|---|---|
+| **Different batteries by cohort.** Each cohort did different tasks at different time points (`r nrow(C)` tasks with `r length(unique(unlist(strsplit(C$codigos, " "))))` codes). | Differences between tasks are confounded with differences between cohorts. | Standardization within cohort and session; equivalence between cohorts before pooling for norms; pairwise analyses. | Formal equating between versions and cohorts. |
+| **Many versions of the same task.** Changes in items, timing or format under the same name. | A score does not mean the same in two sessions. | Master dictionary with canonical tasks; warnings in the catalog when stability is implausible. | Record each version with its date and items. |
+| **Few items and ceiling effects** in many precursors. | Low reliability at the extremes, exactly where decisions are made. | Reliability by task and quality traffic light; preference for school-year scores, which average terms. | Item response theory to see where each task measures well. |
+| **How time is recorded.** It is the time of the last response, not the duration; some times were multiplied by 1,000. | Speed measures may confuse slowness with giving up. | Correction of ×1,000 times; plausible-time filters; time is not prorated. | Record start, end and time per item in all tasks. |
+| **Scoring by the examiner** (correct or incorrect with the mouse) in reading and rapid naming. | Examiner error is part of the score, and it has never been measured. | — | Double scoring in a subsample (recordings) to estimate inter-rater agreement. |
+| **Unverified answer keys.** TECLE has five items with a wrongly recorded key. | Systematic errors invisible in the totals. | Item-by-item check against the option chosen; rescoring. | An automatic key check for all choice tasks. |
+| **Manual matrices** with columns shifted by spreadsheet lookups and incomplete sessions. | Published results that may not be reproducible. | Single long table; verification against the raw exports; audit of the Preleo data. | Every new analysis comes from the long table. |
+| **Non-random assignment of Preleo**, by school, with uneven fidelity. | The effect of the program is confounded with school and socioeconomic status. | Multilevel models, baselines, analysis plan fixed before seeing results. | Acknowledge that it is a quasi-experimental design and say so. |
+| **Sample of volunteer schools** in Málaga, with non-random attrition. | Norms describe those schools, not the population. | Reference in non-Preleo schools; SES index by school. | Weighting by SES and, for version 1.0, a planned contrast sample. |
+| **Criterion built with the same tasks.** The persistent difficulty label uses word reading, pseudoword reading and speed. | The validity of those tasks against the label is circular. | Flagged in each task sheet; non-circular criteria (later comprehension, diagnosis recorded in the regional education information system, Séneca). | Alternative label without each task (leave one out at a time). |
+
+## Critique of our own analyses
+
+The analyses in this book also have limitations, and it is better to state them before reviewers do:
+
+- **Cut-offs have been chosen and evaluated on the same data.** Cross-validation across cohorts reduces overfitting, but an external sample is needed.
+- **Stability is not reliability.** It mixes measurement error and real change; over one year, it is a lower bound.
+- **The 2021 α values do not document the sample** (cohort, session) or the treatment of unreached items.
+- **The structure by age combines different cohorts pair by pair** of tasks. It is exploratory; the confirmatory analysis must be done by cohort, with the same children.
+- **The publication texts in the catalog are generated automatically.** They serve as drafts, not as final text.
+
+## Quality classes of each task {#sec-clases}
+
+So that the manual is honest without discarding valuable data, each task is assigned a **quality class** with fixed, public rules, computed automatically in the catalog:
+
+- **Reliability traffic light.** **Green** if α ≥ .80 (only in tasks without a time limit) or stability ρ ≥ .60. **Amber** if α ≥ .70 or ρ ≥ .40. **Red** if there are data but they fall short. **No data** if there is neither α nor stability.
+- **Sample traffic light.** **Green** with at least 500 children in one session and two cohorts; **amber** with at least 200; **red** with fewer.
+- **Continuity traffic light.** **Green** with three or more sessions; **amber** with two; **red** with one.
+- **Class A:** reliability and sample in green, no warnings. Included in the manual with a full task sheet and norms.
+- **Class B:** reliability at least amber, or with a pending warning (for example, a key to be corrected). Task sheet with caveats; provisional norms.
+- **Class C:** red reliability or no data, small sample, or experimental task. Goes to appendix D, with a description and the available data, without norms.
+
+```{r}
+#| label: tbl-clases
+#| tbl-cap: "Tasks by quality class and family (all catalog tasks)."
+T <- as.data.frame.matrix(table(factor(C$familia, levels = LETTERS[1:7]), factor(C$clase, levels = c("A", "B", "C"))))
+T <- data.frame(Family = c("A · Accuracy", "B · Rapid naming", "C · Oral reading fluency", "D · Time-limited efficiency",
+                           "E · Decision with response time", "F · Span and memory", "G · Comprehension"), T, check.names = FALSE)
+names(T)[2:4] <- paste("Class", names(T)[2:4])
+tabla(T)
+```
+
+There are currently `r tc[["A"]]` class A tasks, `r tc[["B"]]` class B and `r tc[["C"]]` class C. A task being in class C does not mean it is a poor task. Often it only means that **there are no data to know**: for example, most rapid naming tasks have neither α nor two consecutive administrations to the same children. The class will change as reliability is computed from the item-level responses.
+
+## Recommendations for what is measured from now on
+
+1. **A measurement plan before each school year:** which construct, with which task, how many items, at which time points, with which validity criterion.
+2. **Closed, dated versions:** any change in items, timing or format creates a new version with its own code.
+3. **Always record item by item**, with the option chosen and the time of each response, and the start and end of the task.
+4. **Automatic checks** of keys, times and ranges when each session closes, before computing anything.
+5. **Parallel forms and short retest** (2–4 weeks) in a subsample, for the reliability of speeded tasks.
+6. **Double scoring** of a recorded subsample, for inter-rater agreement.
+7. **A preregistered analysis plan** before confirmatory studies, as has already been done with Preleo.
+8. **A single source of truth:** the master dictionary and the long table. No hand-copied matrices.

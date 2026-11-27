@@ -1,0 +1,40 @@
+# Class A task sheets {#sec-fichas-auto}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+rl <- raiz_libro()
+C <- utils::read.csv(file.path(rl, "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+A <- C[C$clase == "A" & file.exists(file.path(rl, "fichas", "auto", paste0(C$tarea_canonica, ".en.qmd"))), ]
+lee <- function(t, h) { f <- file.path(rl, "datos", "agregados", paste0("AUTO_", t), paste0(h, ".csv")); if (file.exists(f)) leer(paste0("AUTO_", t), h) else data.frame() }
+mx <- function(v) if (length(v) && any(is.finite(v))) max(v, na.rm = TRUE) else NA
+DOM <- c(HFON = "Phonological skills", LECTURA = "Reading", L_ORAL = "Oral language", ESCRITURA = "Spelling and writing", MATE = "Numerical cognition",
+         HVIS = "Visual-attentional skills", F_EJEC = "Executive functions")
+FAM <- c(A = "Accuracy", B = "Rapid naming", C = "Oral reading fluency", D = "Time-limited efficiency", E = "Decision with response time", F = "Span and memory", G = "Comprehension")
+R <- do.call(rbind, lapply(A$tarea_canonica, function(t) {
+  ct <- A[A$tarea_canonica == t, ]; FI <- lee(t, "0_Ficha"); MU <- lee(t, "1_Muestra"); ES <- lee(t, "3_Fiabilidad_estabilidad")
+  VE <- lee(t, "4b_Validez_frente_etiqueta"); BC <- lee(t, "4c_Baja_comprension_posterior")
+  data.frame(dom = ct$dominio, Task = sprintf("[%s](%s.en.qmd)", ct$name_en, t), Family = FAM[[ct$familia]], Ages = ct$edades,
+             N = if (nrow(MU)) sum(MU$N) else NA, `Stability ρ` = if (nrow(ES)) median(ES$rho) else NA, `α (2021)` = ct$alfa_2021,
+             `AUC: persistent difficulty` = mx(VE$AUC), `AUC: later comprehension` = mx(BC$AUC),
+             circ = isTRUE(as.logical(FI$circular_con_etiqueta)), check.names = FALSE)
+}))
+R$`AUC: persistent difficulty` <- ifelse(is.na(R$`AUC: persistent difficulty`), "—", paste0(sub("^0", "", sprintf("%.2f", R$`AUC: persistent difficulty`)), ifelse(R$circ, "*", "")))
+R <- R[order(match(R$dom, names(DOM)), R$Family, R$Task), ]
+```
+
+The task sheets in this part of the English edition cover the `r nrow(R)` **class A** tasks of the catalog ([rules](../../limites.en.qmd#sec-clases)): the tasks with enough reliability and sample size for norms. They are generated automatically with the same script as the Spanish ones, so the figures are identical. Each one includes the shared theoretical framework of its construct, the sample, descriptive statistics, reliability, validity, provisional norms, the variables that affect scores and a paragraph for publications.
+
+The hand-written **pilot task sheet** translated so far is [Reading speed in words per minute](../VEL.en.qmd). The other pilot sheets (letter knowledge, rapid naming, syllable counting, TECLE) and the class B and C sheets are available in the [Spanish version](https://abarejo.github.io/leeduca-manual/fichas/auto/index.html).
+
+```{r}
+#| output: asis
+for (d in intersect(names(DOM), unique(R$dom))) {
+  cat("\n\n## ", DOM[[d]], "\n\n", sep = "")
+  T <- R[R$dom == d, setdiff(names(R), c("dom", "circ"))]; rownames(T) <- NULL
+  print(tabla(T, digitos = 2))
+}
+```
+
+\* Circular: the persistent difficulty label is built with this task, so the AUC shows agreement, not prediction.

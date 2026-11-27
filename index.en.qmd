@@ -23,9 +23,13 @@ The platform and this manual grew out of the **DIS-ESP battery**, created by Mar
 |---|---|
 | [Technical summary](summary-en.qmd) | Written in English (November 8, 2026) |
 | [What we measure in light of the new definition of dyslexia](definicion.en.qmd) | Translated from the Spanish version of November 27, 2026 |
+| [The LEEDUCA platform](plataforma.en.qmd) · [Normative study](estudio-normativo.en.qmd) | Translated (November 27, 2026) |
+| [Psychometric method](metodo-psicometrico.en.qmd) · [Overall results](resultados-globales.en.qmd) · [How we estimate risk and reading difficulty](riesgo.en.qmd) · [Limitations and data quality](limites.en.qmd) | Translated (November 27, 2026) |
+| [Task catalog](catalogo.en.qmd) | Translated; instructions and constructs not yet translated are shown in Spanish |
+| [Reading speed in words per minute](fichas/VEL.en.qmd) (pilot task sheet) | Translated (November 27, 2026) |
+| [Class A task sheets](fichas/auto/index.en.qmd) | Generated in English from the same data and script |
 | [Glossary (Spanish–English)](glosario.en.qmd) | November 27, 2026 |
-| The platform; Normative study; Psychometric method; Overall results; Risk and reading difficulty; Limitations; Task catalog; class A task sheets | Next (first layer of the translation) |
-| Theoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Woodcock criterion; Norms; Task grouping; Decisions | Later (second layer) |
+| Theoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Woodcock criterion; Norms; Task grouping; Decisions; the other pilot task sheets | Next (second layer) |
 
 Links to chapters that are not translated yet point to the Spanish pages and are marked *(in Spanish)*. All figures and numbers are computed by the same code in both languages, so the two versions always report the same results.
 

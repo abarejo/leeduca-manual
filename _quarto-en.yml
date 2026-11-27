@@ -39,6 +39,63 @@ book:
     - part: "Foundations"
       chapters:
         - definicion.en.qmd
+    - part: "The platform and the sample"
+      chapters:
+        - plataforma.en.qmd
+        - estudio-normativo.en.qmd
+    - part: "Psychometrics"
+      chapters:
+        - metodo-psicometrico.en.qmd
+        - resultados-globales.en.qmd
+        - riesgo.en.qmd
+        - limites.en.qmd
+    - part: "Tasks"
+      chapters:
+        - catalogo.en.qmd
+        - fichas/auto/index.en.qmd
+    - part: "Task sheets · Reading"
+      chapters:
+        - fichas/VEL.en.qmd
+        - fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.en.qmd
+        - fichas/auto/LEC_LECT_COMPRENSIVA.en.qmd
+        - fichas/auto/LEC_LETRAS.en.qmd
+        - fichas/auto/LEC_PAL_1sil.en.qmd
+        - fichas/auto/LEC_PAL_2sil.en.qmd
+        - fichas/auto/LEC_PAL_3sil.en.qmd
+        - fichas/auto/LEC_PAL_4sil.en.qmd
+        - fichas/auto/LEC_PSEUDO_2sil.en.qmd
+        - fichas/auto/LEC_PSEUDO_3sil.en.qmd
+        - fichas/auto/LEC_PSEUDO_4sil.en.qmd
+        - fichas/auto/LEC_SILABAS_COMPLEJA.en.qmd
+        - fichas/auto/LEC_SILABAS_SIMPLE.en.qmd
+        - fichas/auto/LEC_VEL_TEXTO.en.qmd
+        - fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.en.qmd
+        - fichas/auto/LEC_DECISION_ORTOGRAFICA.en.qmd
+    - part: "Task sheets · Phonological skills"
+      chapters:
+        - fichas/auto/CF_CONTAR_SILABAS.en.qmd
+        - fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.qmd
+        - fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd
+        - fichas/auto/CF_SEGMENTACION_FONEMICA.en.qmd
+        - fichas/auto/CF_SUPRESION_FONEMAS_TP.en.qmd
+        - fichas/auto/CF_SUPRESION_FONEMA_FINAL.en.qmd
+        - fichas/auto/CF_SUPRESION_FONEMA_INICIAL.en.qmd
+        - fichas/auto/CF_SUPRESION_SILABAS_TP.en.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_FINAL.en.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_INICIAL.en.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.en.qmd
+    - part: "Task sheets · Oral language"
+      chapters:
+        - fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.en.qmd
+    - part: "Task sheets · Numerical cognition"
+      chapters:
+        - fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.en.qmd
+        - fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.en.qmd
+        - fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.en.qmd
+        - fichas/auto/MATE_ET_VERB_ARABIGOS.en.qmd
+    - part: "Task sheets · Executive functions"
+      chapters:
+        - fichas/auto/F_EJEC_INH_INHIBICION.en.qmd
   appendices:
     - glosario.en.qmd
     - referencias.en.qmd

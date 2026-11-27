@@ -1,0 +1,16 @@
+---
+title: "Letter knowledge"
+subtitle: "Automatically generated task sheet · LEC_LETRAS"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto_en.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto_en("LEC_LETRAS")
+```

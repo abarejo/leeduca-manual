@@ -30,8 +30,12 @@ GitHub Actions genera los dos y publica el inglés en `https://abarejo.github.io
 
 | Capa | Capítulos | Estado |
 |---|---|---|
-| 1 (revisores y colaboradores) | Presentación, Technical summary, Definición, Plataforma, Estudio normativo, Método psicométrico, Resultados globales, Riesgo, Límites, Catálogo, fichas de clase A | Presentación, summary y Definición hechos (27/11/2026) |
-| 2 | Marco teórico, DIS-ESP, Conciencia fonológica, Cognición numérica, Woodcock, Baremos, Agrupación, Decisiones | Pendiente |
+| 1 (revisores y colaboradores) | Presentación, Technical summary, Definición, Plataforma, Estudio normativo, Método psicométrico, Resultados globales, Riesgo, Límites, Catálogo, ficha de velocidad (VEL) y fichas de clase A | **Hecha** (27/11/2026) |
+| 2 | Marco teórico, DIS-ESP, Conciencia fonológica, Cognición numérica, Woodcock, Baremos, Agrupación, Decisiones, resto de fichas piloto (LET, RAN, CF523, TECLE), fichas de clase B y C | Pendiente |
 | No se traduce | Novedades, Avances, Agenda, Consultas, Colaborar, Estructura | — |
 
-Las fichas automáticas no se traducen a mano: se traducirán la plantilla de `R/ficha_auto.R` y los nombres de tarea del diccionario (ya hay nombres en inglés revisados en `catalogo_tareas_meta_v1.csv`).
+Las fichas automáticas no se traducen a mano: `R/ficha_auto_en.R` es la versión inglesa de `R/ficha_auto.R` (mismos datos, textos en inglés) y cada ficha tiene su `fichas/auto/<TAREA>.en.qmd`. Los marcos teóricos compartidos están en `fichas/marcos/<id>.en.md` (traducidos: los siete de las tareas de clase A). **Si se cambia `ficha_auto.R`, hay que trasladar el cambio a `ficha_auto_en.R`.**
+
+**Qué no se traduce en esta capa** (se muestra en español y marcado): las consignas y constructos del catálogo que no tienen versión inglesa, la configuración leída de la plataforma, los nombres de hoja y columna de las tablas completas y los rótulos de las figuras guardadas como imagen (PNG). Las secciones «Preguntas para el grupo» son internas y no se traducen.
+
+**Enlaces:** después de añadir o traducir un capítulo, ejecutar `python3 traduccion/enlaces_en.py`, que apunta cada enlace a la versión inglesa si existe y, si no, a la española con la marca *(in Spanish)*.
