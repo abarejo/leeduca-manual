@@ -1,0 +1,9 @@
+Vocabulary is knowledge of word meanings. The platform measures it in two ways: **orally**, when the child explains the meaning of a word they hear, and **through reading**, when they choose, among three written words, the one with a similar meaning. In the simple view of reading, vocabulary is part of language comprehension, the component that does not depend on reading [@hoover1990simple].
+
+**What the evidence says:**
+
+- **Preschool oral language predicts reading comprehension years later.** Comprehension at age 8½ is explained by word reading at 5 and by language at 3½, in children at family risk of dyslexia and in the rest [@hulme2015foundations]. Language in the broad sense (vocabulary, grammar, inference) predicts it better than vocabulary alone [@lervag2018comprehension].
+- **Written vocabulary is not only language.** Vocabulary tasks also capture variance from decoding, because the meaning, written form and phonology of each word are connected [@protopapas2013vocabulary].
+- **The relation is reciprocal.** Reading more expands vocabulary, and a larger vocabulary makes it easier to read new words [@killingly2024reciprocal]. In the first school years the code (letters and phonological awareness) weighs more; later, word reading and comprehension separate [@storch2002oral].
+
+**What our data show.** Vocabulary through reading predicts low Woodcock-Muñoz reading fluency almost as well as the reading tasks (median AUC .75), but it is not very stable between terms (ρ = .43). Oral vocabulary at ages 4 and 5 has good internal consistency (α = .82) and predicts less (median AUC .63, maximum .71). This is to be expected: its main role is in comprehension, not fluency. It is also one of the best predictors of arithmetic at ages 10–11 ([Numerical cognition](https://abarejo.github.io/leeduca-manual/cognicion-numerica.html#sec-mate-criterio), *in Spanish*).

@@ -73,7 +73,3 @@ As for the cut-off, the definition does not set one: it leaves the decision to p
 ## A study opened up by the definition
 
 @catts2026definicion note that, in transparent orthographies such as Hebrew or Arabic, there are two subtypes of dyslexia. Children with poor rapid naming in preschool become slow but accurate readers. Those with phonological and morphological difficulties end up slow and inaccurate.
-
-## For the group's working document
-
-Comments on the draft ask for concrete examples of what to do when an instrument is not available. The LEEDUCA data make it possible to **quantify how much is lost with each alternative**. For example, end-of-preschool screening with a single letter task versus a full battery, or reading a word list for one minute versus a standardized fluency test. In addition, norms in words correct per minute by school year and term could be published openly. Any school would then have a reference for brief classroom measures, which is exactly the alternative the document proposes when an instrument is missing. Regarding conflicts of interest, the cleanest option is to cite peer-reviewed published results rather than the platform as a product.

@@ -24,7 +24,7 @@ leer <- function(ficha, hoja) {
 # (27/11/2026) En los capítulos en inglés (archivos *.en.qmd) se usa punto decimal y coma de miles.
 libro_en_ingles <- function() {
   f <- tryCatch(knitr::current_input(), error = function(e) NULL)
-  !is.null(f) && grepl("\\.en\\.(qmd|Rmd|md)$", f)
+  !is.null(f) && grepl("\\.en\\.(qmd|Rmd|md|rmarkdown|knit\\.md)$", f, ignore.case = TRUE)
 }
 num_es <- function(x, d = 2) {
   if (libro_en_ingles()) return(formatC(x, format = "f", digits = d, big.mark = ",", decimal.mark = "."))
@@ -45,6 +45,10 @@ tabla <- function(df, nombres = NULL, digitos = 2, pie = NULL) {
 # Todas las tablas de una ficha, plegadas, para quien quiera el detalle completo
 tablas_completas <- function(ficha) {
   dir <- file.path(raiz_libro(), "datos", "agregados", ficha)
+  if (libro_en_ingles() && !isTRUE(getOption("leeduca.aviso_tablas"))) {
+    cat("\n\n*These tables are printed as produced by the analysis scripts; sheet and column names are in Spanish (see the [glossary](/glosario.en.qmd)).*\n\n")
+    options(leeduca.aviso_tablas = TRUE)
+  }
   for (f in sort(list.files(dir, pattern = "\\.csv$"))) {
     h <- sub("\\.csv$", "", f); if (!nrow(leer(ficha, h))) next
     cat("\n\n<details><summary>", gsub("_", " ", h), " <code>datos/agregados/", ficha, "/", f, "</code></summary>\n\n", sep = "")
@@ -99,8 +103,10 @@ tabla_rango <- function(D, grupo = NULL, d = 1, posible = NULL) {
   D <- as.data.frame(D); D <- D[is.finite(D$minimo), ]
   out <- data.frame(D[, c(grupo, "mom", "N")], habitual = rango_txt(D$P1, D$P99, d), observado = rango_txt(D$minimo, D$maximo, d), check.names = FALSE)
   if (!is.null(posible)) out$posible <- posible
-  out$aviso <- ifelse(extremo(D) %in% TRUE, "valor extremo: revisar", "")
-  nm <- c(if (!is.null(grupo)) c(medida = "Medida", forma = "Forma")[grupo] %||% grupo, "Momento", "N", "Rango habitual (P1–P99)", "Mín.–máx.", if (!is.null(posible)) "Rango posible", "Aviso")
+  en <- libro_en_ingles()
+  out$aviso <- ifelse(extremo(D) %in% TRUE, if (en) "extreme value: check" else "valor extremo: revisar", "")
+  nm <- if (en) c(if (!is.null(grupo)) c(medida = "Measure", forma = "Form")[grupo] %||% grupo, "Time point", "N", "Usual range (P1–P99)", "Min.–max.", if (!is.null(posible)) "Possible range", "Warning")
+        else c(if (!is.null(grupo)) c(medida = "Medida", forma = "Forma")[grupo] %||% grupo, "Momento", "N", "Rango habitual (P1–P99)", "Mín.–máx.", if (!is.null(posible)) "Rango posible", "Aviso")
   tabla(out, unname(nm), digitos = d)
 }
 `%||%` <- function(a, b) if (is.null(a) || all(is.na(a))) b else a
@@ -112,8 +118,9 @@ fig_rango <- function(D, grupo = NULL, unidad = "Puntuación") {
     geom_linerange(aes(ymin = P1, ymax = P99), colour = PAL[["mar"]], linewidth = 3.2, alpha = .45) +
     geom_point(aes(y = Md), colour = PAL[["tinta"]], size = 2) +
     geom_point(data = D[D$ext, ], aes(y = maximo), shape = 4, colour = PAL[["coral"]], size = 2.6, stroke = 1.1) +
-    labs(x = "Momento (edad.trimestre)", y = unidad,
-         caption = "Banda: rango habitual (P1–P99). Línea fina: mínimo–máximo. Punto: mediana. Aspa roja: valor extremo que conviene revisar.") +
+    labs(x = if (libro_en_ingles()) "Time point (age.term)" else "Momento (edad.trimestre)", y = unidad,
+         caption = if (libro_en_ingles()) "Band: usual range (P1–P99). Thin line: minimum–maximum. Dot: median. Red cross: extreme value worth checking."
+                   else "Banda: rango habitual (P1–P99). Línea fina: mínimo–máximo. Punto: mediana. Aspa roja: valor extremo que conviene revisar.") +
     tema_leeduca() + theme(plot.caption = element_text(colour = PAL[["gris"]], hjust = 0, size = 8))
   if (!is.null(grupo)) p <- p + facet_wrap(stats::as.formula(paste("~", grupo)), scales = "free", ncol = 2)
   p
@@ -132,15 +139,19 @@ plataforma_tabla <- function(codigos = NULL, tarea = NULL) {
   if (!is.null(tarea)) P <- P[P$tarea_canonica %in% tarea, ]
   if (!is.null(codigos)) P <- P[P$codigo %in% as.character(codigos), ]
   if (!nrow(P)) return(invisible(FALSE))
+  en <- libro_en_ingles()
+  if (en) cat("The platform is the reference: what the activity actually presents is what is measured. Configuration read from the activity itself on ",
+      P$extraido[1], " (without modifying it). Cell contents are in Spanish.\n\n", sep = "") else
   cat("La plataforma es la referencia: lo que reproduce la actividad es lo que se mide. Configuración leída de la propia actividad el ",
       P$extraido[1], " (sin modificarla).\n\n", sep = "")
   rownames(P) <- NULL; T <- P[, c("codigo", "nombre_corto", "presentacion", "n_items", "items_practica", "ejemplos", "tiempo", "orden", "puntuacion", "momentos_etiqueta")]
-  print(tabla(T, c("Código", "Nombre en la plataforma", "Presentación", "Ítems de prueba", "Ítems de práctica", "Ejemplos de ítems", "Límite de tiempo",
+  print(tabla(T, if (en) c("Code", "Name on the platform", "Presentation", "Test items", "Practice items", "Example items", "Time limit",
+                   "Order", "Scoring", "Age.term (label 3)") else c("Código", "Nombre en la plataforma", "Presentación", "Ítems de prueba", "Ítems de práctica", "Ejemplos de ítems", "Límite de tiempo",
                    "Orden", "Puntuación", "Edad.trimestre (etiqueta 3)"), digitos = 0))
   cat("\n\n")
   inc <- P[nzchar(P$incidencia), ]
-  if (nrow(inc)) { cat("**Diferencias con el diccionario o las instrucciones:**\n\n"); cat(paste0("- **", inc$codigo, ".** ", inc$incidencia, collapse = "\n"), "\n\n") }
-  cat("*Edad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.*\n\n")
+  if (nrow(inc)) { cat(if (en) "**Differences from the dictionary or the instructions (in Spanish):**\n\n" else "**Diferencias con el diccionario o las instrucciones:**\n\n"); cat(paste0("- **", inc$codigo, ".** ", inc$incidencia, collapse = "\n"), "\n\n") }
+  cat(if (en) "*Age.term: provisional reading of the activity's label 3 (3rd digit = age, 4th = term; 0 = annual), to be confirmed with the engineer.*\n\n" else "*Edad.trimestre: lectura provisional de la etiqueta 3 de la actividad (3.ª cifra = edad, 4.ª = trimestre; 0 = anual), pendiente de confirmar con el ingeniero.*\n\n")
   invisible(TRUE)
 }
 
@@ -153,11 +164,12 @@ plataforma_capturas <- function(codigos, pre = "", ncol = 3) {
   if (!length(codigos)) return(invisible(FALSE))
   P <- plataforma_actividades(); nom <- setNames(P$nombre_corto, P$codigo)
   lab <- ifelse(codigos %in% names(nom), paste0(codigos, " · ", trimws(nom[codigos])), codigos)
-  cat("**Así se ve en la plataforma** (primer ítem o ejemplo; captura de 2026). ")
-  if (any(codigos %in% c("1931", "1932", "1933", "1934", "1935", "1936"))) cat("En las listas de lectura solo se muestran los dos primeros ítems.")
+  en <- libro_en_ingles()
+  cat(if (en) "**How it looks on the platform** (first item or example; 2026 screenshot; the interface is in Spanish). " else "**Así se ve en la plataforma** (primer ítem o ejemplo; captura de 2026). ")
+  if (any(codigos %in% c("1931", "1932", "1933", "1934", "1935", "1936"))) cat(if (en) "For the reading lists only the first two items are shown." else "En las listas de lectura solo se muestran los dos primeros ítems.")
   cat("\n\n")
   cat(sprintf("::: {layout-ncol=%d}\n", min(ncol, length(codigos))))
   w <- if (length(codigos) == 1) " width=\"40%\"" else ""
-  cat(paste0("![", lab, "](", pre, "figuras/plataforma/", codigos, ".jpg){.lightbox", w, " fig-alt=\"Captura de la actividad ", codigos, "\"}", collapse = "\n\n"))
+  cat(paste0("![", lab, "](", pre, "figuras/plataforma/", codigos, ".jpg){.lightbox", w, " fig-alt=\"", if (en) "Screenshot of activity " else "Captura de la actividad ", codigos, "\"}", collapse = "\n\n"))
   cat("\n:::\n\n"); invisible(TRUE)
 }

@@ -1,0 +1,156 @@
+# Overall results {#sec-resultados-globales}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+dir_cat <- file.path(raiz_libro(), "datos", "agregados", "CATALOGO")
+C <- utils::read.csv(file.path(dir_cat, "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+ES <- utils::read.csv(file.path(dir_cat, "Estabilidad.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+FAM <- c(A = "Accuracy", B = "Rapid naming", C = "Oral reading fluency", D = "Time-limited efficiency",
+         E = "Decision with response time", F = "Span and memory", G = "Comprehension")
+f2 <- function(x) ifelse(is.na(x), "—", sub("^(-?)0", "\\1", sprintf("%.2f", x)))
+rango <- function(e) { e <- suppressWarnings(as.numeric(strsplit(as.character(e), ", ")[[1]])); e <- e[!is.na(e)]; if (!length(e)) "—" else if (length(e) == 1) as.character(e) else paste0(min(e), "–", max(e)) }
+A <- C[C$clase == "A", ]
+nombre_en <- function(d) ifelse(!is.na(d$name_en) & nzchar(d$name_en), d$name_en, d$tarea)
+```
+
+::: {.callout-note appearance="minimal"}
+**Status:** first draft (November 2, 2026) of chapter 6 of the manual. For now it brings together the **summary table of class A tasks** and **longitudinal stability**, computed from the aggregated catalog tables, together with a first confirmatory factor analysis by age. Invariance is **pending**, and the chapter says how it will be done. *Translated from the Spanish version of November 27, 2026.*
+:::
+
+**In one sentence.** This chapter gives the overall picture that does not fit in any single task sheet: which tasks currently have sufficient quality, how much the differences between children persist from one term to the next and from one school year to the next, and how skills are organized at each age.
+
+## Chapter map
+
+| Section | What it answers | Status |
+|---|---|---|
+| 6.1 Class A tasks | Which tasks currently have sufficient quality for a full task sheet | Table of the class A tasks |
+| 6.2 Longitudinal stability | How much the differences between children persist | Stability by family and by interval between assessments |
+| 6.3 Structure of skills | How skills are organized at each age | Exploratory networks by age; confirmatory factor analysis by age (November 2): accuracy and fluency separate from age 7 |
+| 6.4 Invariance | Whether tasks measure the same by sex, format and period | TECLE paper–platform and differential prediction in letters; the rest pending |
+
+The analyses behind these sections are in the group's internal workspace (restricted access).
+
+## 6.1 Class A tasks
+
+There are currently `r nrow(A)` class A tasks: enough reliability and sample size, with no pending warnings (criteria in [Limitations and data quality](limites.en.qmd#sec-clases)). These are the tasks that will have a full task sheet and norms in the first version of the manual.
+
+```{r}
+#| label: tbl-tareas-a
+#| tbl-cap: "Class A tasks: family, ages, sample and available reliability."
+T <- data.frame(
+  Task = nombre_en(A),
+  Family = FAM[A$familia],
+  Ages = vapply(A$edades, rango, ""),
+  Cohorts = vapply(A$cohortes, function(x) { k <- sort(as.integer(strsplit(as.character(x), ", ")[[1]])); if (length(k) > 1 && all(diff(k) == 1)) paste0(k[1], "–", k[length(k)]) else paste(k, collapse = ", ") }, ""),
+  Sessions = A$n_sesiones,
+  `Max. N per session` = format(A$N_max_sesion, big.mark = ","),
+  `α (2021)` = f2(A$alfa_2021),
+  `Stability ρ` = f2(A$estabilidad_rho),
+  check.names = FALSE)
+T <- T[order(T$Family, T$Task), ]; rownames(T) <- NULL
+tabla(T, pie = "α: 2021 internal consistency from item responses (in time-limited tasks it overestimates reliability). Stability: rank correlation between successive administrations to the same children (median over pairs 12 months apart or less). — = no data.")
+```
+
+```{r}
+#| include: false
+nA_fam <- table(factor(A$familia, levels = names(FAM)))
+```
+
+What the table shows:
+
+- **Accuracy and reading fluency tasks predominate.** Of the `r nrow(A)` tasks, `r nA_fam[["A"]]` are accuracy tasks and `r nA_fam[["C"]]` oral reading fluency tasks. Rapid naming, which is key in the risk model, does not yet reach class A in any of its forms: it does not lack quality, it lacks the data to check it (it has no α, and the same form is rarely repeated with the same children).
+- **One class A task needs revision before use:** inhibition has a very high α, but its measure is on hold until the way it is scored is reviewed. Classes are computed with automatic rules, and the group can correct them.
+- **Available reliability is uneven.** Several class A tasks rely only on stability or only on the 2021 α. Computing ω from the item responses of the new platform will complete the column (see [Psychometric method](metodo-psicometrico.en.qmd)).
+
+## 6.2 Longitudinal stability
+
+Stability tells us how much the rank order of children is maintained between two assessments. It depends on the reliability of the task and on how much children change in between, so it decreases as assessments get further apart.
+
+```{r}
+#| label: tbl-estabilidad-familia
+#| tbl-cap: "Stability (median ρ) by task family and interval between assessments."
+ES$familia <- C$familia[match(ES$tarea_canonica, C$tarea_canonica)]
+ES$sep <- cut(ES$meses, c(0, 4, 8, 12, Inf), labels = c("≤ 4 months", "5–8 months", "9–12 months", "> 12 months"))
+ES <- ES[!is.na(ES$familia), ]
+M <- tapply(ES$r, list(factor(ES$familia, levels = names(FAM)), ES$sep), median)
+Np <- tapply(ES$r, list(factor(ES$familia, levels = names(FAM))), length)
+T <- data.frame(Family = FAM[rownames(M)], `Session pairs` = as.integer(Np[rownames(M)]), check.names = FALSE)
+T <- cbind(T, as.data.frame(apply(M, 2, f2), stringsAsFactors = FALSE))
+T <- T[!is.na(T$`Session pairs`), ]; rownames(T) <- NULL
+tabla(T, pie = sprintf("Rank correlation between two administrations of the same task to the same children, in %d session pairs from %d tasks (2010–2015 cohorts). — = no pairs with that interval.", nrow(ES), length(unique(ES$tarea_canonica))))
+```
+
+```{r}
+#| label: fig-estabilidad
+#| fig-cap: "Median stability between two administrations of the same task by the number of months between them, by task family (only families with 10 or more session pairs). Grey dots are the session pairs."
+#| fig-height: 4.4
+#| fig-width: 7.5
+library(ggplot2)
+ES$Familia <- factor(FAM[ES$familia], levels = FAM)
+mid <- c("≤ 4 months" = 3, "5–8 months" = 6.5, "9–12 months" = 10.5, "> 12 months" = 18)
+fams <- names(which(table(ES$Familia) >= 10))
+D <- aggregate(r ~ Familia + sep, data = ES[ES$Familia %in% fams, ], FUN = median)
+D$x <- mid[as.character(D$sep)]
+ggplot() +
+  geom_hline(yintercept = c(.4, .6), linetype = "dotted", colour = "grey55") +
+  geom_jitter(data = transform(ES, xm = mid[as.character(sep)]), aes(xm, r), colour = "grey75", size = 1.2, alpha = .6, width = .5, height = 0) +
+  geom_line(data = D, aes(x, r, colour = Familia), linewidth = .9) +
+  geom_point(data = D, aes(x, r, colour = Familia), size = 2.4) +
+  scale_x_continuous("Months between the two administrations", breaks = mid, labels = names(mid)) +
+  scale_y_continuous("Stability (ρ)", limits = c(-.1, 1), breaks = seq(0, 1, .2)) +
+  guides(colour = guide_legend(nrow = 2)) +
+  theme_minimal(base_size = 11) + theme(legend.position = "bottom", legend.title = element_blank(), panel.grid.minor = element_blank())
+```
+
+What it shows:
+
+- **Reading fluency is the most stable measure within the school year**: between terms (≤ 4 months) its median stability is around .76, compared with .51 for accuracy tasks, and it stays above .60 up to 12 months. This is consistent with reading speed being the best indicator for monitoring in a transparent orthography.
+- **Beyond one year, stability drops in all families.** Part of this is real change, and part is that the "same" task changes its list or text between school years. This must be checked before interpreting long-term stability.
+- **Preschool accuracy tasks are less stable**, partly because of ceiling effects and few items, and partly because children change a lot at those ages. The dotted lines mark the traffic-light thresholds (.40 and .60).
+- **Stability of the difficulty label is high in the first school years and lower later.** Of the children below the 10th percentile at age 6, 89% are still below the 25th at age 7; starting from the 25th percentile, 78%. From age 7 to 8 these figures drop to 66% and 51%. That is why the manual defines difficulty using the whole trajectory and not a single assessment (see [How we estimate risk](riesgo.en.qmd)).
+
+## 6.3 Structure of skills
+
+**What is available.** An exploratory network analysis by age (Gaussian graphical models) shows how tasks are organized at ages 4, 5, 6 and 7 and how the network becomes denser as children learn to read (see [How tasks are grouped](https://abarejo.github.io/leeduca-manual/agrupacion.html) (*in Spanish*)).
+
+**Confirmatory factor analysis by age (November 2, 2026).** With `cap6_estructura_cfa_v1.R`, three models were fitted at each age from 4 to 8 with the class A tasks of the **term-by-term follow-up** (without the paper or tablet assessments): a general factor; the factors expected by the manual with at least two indicators (M2: phonological awareness, alphabetic knowledge, decoding accuracy and fluency; comprehension and vocabulary did not reach two indicators); and the same model with accuracy and fluency merged. Indicators are normal scores within cohort and session, averaged per child over the school year (lavaan, MLR with full information).
+
+```{r}
+#| label: tbl-cfa
+#| tbl-cap: "Fit of the factor models by age. Robust CFI and RMSEA; SRMR. At age 4 there are only three phonological awareness indicators (saturated model), and at age 5 the limited joint coverage of some tasks makes the robust indices unstable: they are given for guidance only."
+d6 <- file.path(raiz_libro(), "datos", "agregados", "CAP6")
+F1 <- utils::read.csv(file.path(d6, "F1_ajuste.csv"), encoding = "UTF-8", check.names = FALSE); names(F1)[1] <- "edad"
+F1 <- F1[F1$edad >= 5, ]
+nomm <- c(M1_un_factor = "M1 · one factor", M2_esperado = "M2 · expected factors", M3_DEC_FLU_unidos = "M3 · accuracy and fluency merged")
+tf <- data.frame(Age = F1$edad, Model = nomm[F1$modelo], Factors = F1$factores, Indicators = F1$indicadores, `Children` = format(F1$n, big.mark = ","),
+                 CFI = num_es(F1$cfi.robust, 3), RMSEA = num_es(F1$rmsea.robust, 3), SRMR = num_es(F1$srmr, 3), BIC = format(round(F1$bic), big.mark = ","), check.names = FALSE)
+knitr::kable(tf, row.names = FALSE, align = c("l", "l", rep("r", 7)))
+```
+
+```{r}
+#| label: fig-dec-flu
+#| fig-cap: "Correlation of the decoding accuracy factor with fluency and with phonological awareness (model M2) by age. Accuracy and fluency are almost the same skill at ages 5 and 6 and separate from age 7. Bars are ±2 standard errors."
+#| fig-width: 6.5
+#| fig-height: 3.4
+F3 <- utils::read.csv(file.path(d6, "F3_correlaciones.csv"), encoding = "UTF-8", check.names = FALSE); names(F3)[1] <- "edad"
+cc <- F3[F3$modelo == "M2_esperado" & ((F3$factor_1 == "DEC" & F3$factor_2 == "FLU") | (F3$factor_1 == "DEC" & F3$factor_2 == "FON")), ]
+cc$par <- ifelse(cc$factor_2 == "FLU", "Accuracy – fluency", "Accuracy – phonological awareness")
+ggplot(cc, aes(factor(edad), r, colour = par, group = par, shape = par)) +
+  geom_line(linewidth = 1.1) + geom_point(size = 3) + geom_errorbar(aes(ymin = r - 2 * ee, ymax = r + 2 * ee), width = .08) +
+  scale_colour_manual(values = c(`Accuracy – fluency` = PAL_GRUPO[["azul"]], `Accuracy – phonological awareness` = PAL_GRUPO[["naranja"]])) +
+  scale_y_continuous(limits = c(.4, 1), breaks = seq(.4, 1, .1)) +
+  labs(x = "Age (years)", y = "Correlation between factors") + tema_grupo(10)
+```
+
+**What they show.** From age 6, the model with the expected factors fits clearly better than a general factor (at age 6, CFI .94 vs. .84; at ages 7 and 8, .93–.94 vs. .77–.80), with an RMSEA that is still somewhat high (.09–.10) and should improve when comprehension and other tasks are added. Loadings are high: accuracy .62–.95, fluency .65–.94, phonological awareness .64–.87.
+
+The most interesting result is the relation between **accuracy and fluency**. At ages 5 and 6 their factors correlate .98 and .94: they are practically the same skill, because reading accurately and reading quickly still go together. At ages 7 and 8 the correlation drops to .75 and .74, and separating them improves fit considerably (CFI .93 vs. .80 if merged). Once most children read accurately, the differences between them lie in automatization. Phonological awareness also becomes less tied to reading with age (with accuracy, from .82 at age 6 to .66–.69 at ages 7–8; with fluency, from .75 to .56).
+
+**Pending.** Add comprehension, vocabulary and rapid naming when they have enough indicators; repeat by cohort and test invariance across ages.
+
+## 6.4 Invariance
+
+**What is available.** TECLE paper–platform equivalence, with its conversion to a common scale (see [TECLE](https://abarejo.github.io/leeduca-manual/fichas/TECLE.html) (*in Spanish*)), and differential prediction by sex and socioeconomic status in the letters task sheet.
+
+**Pending.** Measurement invariance by sex, format (platform, paper, tablet) and period (before and after the pandemic) for the class A tasks.
