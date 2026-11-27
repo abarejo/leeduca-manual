@@ -21,7 +21,15 @@ leer <- function(ficha, hoja) {
 }
 
 # Números con coma decimal y punto de miles, como en el resto del manual
-num_es <- function(x, d = 2) formatC(x, format = "f", digits = d, big.mark = ".", decimal.mark = ",")
+# (27/11/2026) En los capítulos en inglés (archivos *.en.qmd) se usa punto decimal y coma de miles.
+libro_en_ingles <- function() {
+  f <- tryCatch(knitr::current_input(), error = function(e) NULL)
+  !is.null(f) && grepl("\\.en\\.(qmd|Rmd|md)$", f)
+}
+num_es <- function(x, d = 2) {
+  if (libro_en_ingles()) return(formatC(x, format = "f", digits = d, big.mark = ",", decimal.mark = "."))
+  formatC(x, format = "f", digits = d, big.mark = ".", decimal.mark = ",")
+}
 
 # Tabla para el libro: redondea, usa coma decimal y renombra columnas si se pide
 tabla <- function(df, nombres = NULL, digitos = 2, pie = NULL) {

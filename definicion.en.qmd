@@ -1,0 +1,79 @@
+# What we measure in light of the new definition of dyslexia {#sec-definicion}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+n_dom <- function(d, cl = c("A", "B", "C")) sum(C$dominio == d & C$clase %in% cl)
+```
+
+::: {.callout-note appearance="minimal"}
+**Status:** draft of October 21, 2026, for discussion within the group. It builds on J. L. Luque's working document on the new IDA definition and the proactive strategy. The definition and its rationale follow the IDA's presentation article [@catts2026definicion]. *Translated from the Spanish version of November 27, 2026.*
+:::
+
+## The 2025 definition
+
+In October 2025 the International Dyslexia Association (IDA) adopted a new definition of dyslexia [@ida2025definicion]. It is the first major revision since the 2002 definition [@lyon2003definicion]. It was approved by the IDA Board of Directors after a process of almost two years: an 18-member steering committee, a 74-member advisory committee, a special issue of *Annals of Dyslexia* and more than 3,000 public comments. @catts2026definicion explain its rationale, component by component, and give guidance for applying it. At almost the same time, an international expert panel reached another consensus definition through the Delphi method [@carroll2025delphi].
+
+The definition has six blocks:
+
+1. **What it is and where the difficulty lies.** It is a specific learning difficulty in **word reading and/or spelling**. It affects accuracy, speed or both, and **varies with the orthography** of the language.
+2. **Continuum and persistence.** The difficulties occur **along a continuum of severity** and **persist despite instruction that is effective for peers**.
+3. **Causes.** They are complex: combinations of genetic, neurobiological and environmental influences that interact over development.
+4. **Cognitive processes.** Phonological and morphological difficulties are **common but not universal**, and **early oral language weakness** often foreshadows literacy problems.
+5. **Secondary consequences.** Reading comprehension, less reading experience and, with it, less growth in language, knowledge and written expression. Psychological well-being and employment may also be affected.
+6. **Prevention.** Identification and targeted instruction matter at any age, but support **before and during the first years of schooling** is especially effective.
+
+Compared with the 2002 definition, the idea of what is "unexpected in relation to other cognitive abilities", which led to the IQ discrepancy, disappears. The continuum, the comparison with peers who receive the same instruction and the value of early support come in. "Neurobiological origin" as the single cause also disappears and becomes one of several interacting influences.
+
+**IDA and Delphi: agreement on the essentials, with nuances.** The Delphi study rated 55 statements with an 80% agreement threshold. Consensus was reached on 42, which were summarized in nine core statements [@carroll2025delphi]. The two definitions agree on the essentials: a difficulty in accurate and fluent word reading and spelling, present across the whole range of intellectual ability, with multiple causes and a central role for phonological processing. They differ in scope. The Delphi definition includes working memory, processing speed, orthographic processing and comorbidities. The IDA definition focuses on language (phonology, morphology, early oral language) and gives more weight to response to instruction, to the orthography of the language and to early identification. According to @catts2026definicion, these are differences of emphasis and purpose, not disagreements about the nature of dyslexia. The group's working document reads these changes as **a shift from a reactive logic ("wait to fail") to a proactive one**: prevent, screen everyone, identify early and follow each child over time.
+
+## What the platform does with each statement
+
+In practice, the LEEDUCA platform is one way of putting that proactive logic into action: it assesses all pupils in participating schools three times per school year, from age 3, and compares each child with peers of the same age and school term. The table sets each statement of the definition against what the platform and the manual do today, and against what is missing.
+
+| Statement of the definition | What the platform or the manual does today | What is missing |
+|---|---|---|
+| Difficulty in **word reading** | Word and pseudoword lists from age 5 to 11, with accuracy and time; the criterion for persistent difficulty is built from them ([How we estimate risk](https://abarejo.github.io/leeduca-manual/riesgo.html), *in Spanish*). | — |
+| … **and/or in spelling** | There is only a letter dictation task (class C) and orthographic decision, which is a reading task. | **Word spelling is not measured.** This is the most important gap with respect to the new definition: a word and pseudoword dictation task with norms is needed. |
+| **Accuracy, speed or both**, depending on the orthography | In Spanish, accuracy reaches ceiling early (89–94% of children read all 12 words correctly at ages 7–8) and the differences lie in speed. This is why the manual expresses reading as words correct per minute ([reading speed task sheet](https://abarejo.github.io/leeduca-manual/fichas/VEL.html), *in Spanish*). | Separate the "slow but accurate" and "slow and inaccurate" profiles in the report. |
+| **Continuum of severity** | Percentiles instead of categories, five certainty levels and error margins for every score. | Report the probability of persistent difficulty, not only the level [@wagner2022bayes]. |
+| **Persists despite instruction that is effective for peers** | Persistent difficulty requires being below the cut-off in at least two school years. The reference is children of the same age and school term. | The platform does not know whether instruction was effective. **Proposal:** also report the child's position within their classroom and the classroom's position against the reference. If the whole classroom is low, the problem probably lies in instruction, not in the child. This is the alternative proposed by @catts2026definicion when a school's instruction is poor: compare with classmates who receive the same instruction. |
+| Genetic, neurobiological and environmental **causes** | School SES index, family risk (2010 cohort) and EEG and fNIRS data in subsamples. | Family risk in all cohorts. |
+| **Phonological and morphological** difficulties, common but **not universal** | `r n_dom("HFON")` phonological skills tasks (`r n_dom("HFON", "A")` in class A). Morphology only in oral form and with small samples (classes B and C). No single task is enough for identification: precursors are used to monitor risk, not as a diagnosis. | Written morphology (derivation, inflection) from age 8. |
+| **Early oral language** foreshadows the difficulties | `r n_dom("L_ORAL")` oral language tasks, but only `r n_dom("L_ORAL", "A")` in class A. In our data, oral language adds little to letters, phonological awareness and RAN in predicting reading difficulty. | A good-quality measure of vocabulary and oral comprehension at ages 4–5. The small added value may be due to the measure, not the construct. |
+| **Secondary consequences**: comprehension, knowledge, writing | Reading comprehension is used as a non-circular validity criterion. | Written expression. |
+| **Psychological well-being** | Not measured. | A brief measure of reading anxiety and reading self-concept from Grade 2. |
+| **Early support** is especially effective | Screening from age 3; Preleo as universal instruction in preschool ([Preleo](https://abarejo.github.io/leeduca-manual/preleo/programa.html), *in Spanish*). | Separate universal instruction from supplementary intervention in the data. |
+| IQ **not** required (the discrepancy disappears) | Task sheets do not use nonverbal reasoning for identification. | — |
+
+## What our data say about the definition
+
+Several statements of the definition can be tested with the platform data. These results also feed into the group's working document:
+
+- **The continuum shows up in stability.** Of the children at or below the 25th percentile at age 6, only half are still there at age 8. Near the cut-off, classification changes a great deal from one school year to the next. This is the argument against relying on a single school year or a single cut-off.
+- **The dual discrepancy (low level and low growth relative to peers) is not very stable** in our data (κ = .12). Response to instruction is a necessary criterion, but measured with only two points it carries a lot of error. Three or more measurements and the reliable change threshold are needed ([reading speed task sheet](https://abarejo.github.io/leeduca-manual/fichas/VEL.html), *in Spanish*).
+- **Precursors are useful for monitoring at age 4 and for screening at age 5.** At age 4 the AUC against persistent difficulty is .73; at age 5, .82; with Grade 1 reading, .83–.85.
+- **A modest instrument may be enough.** At the end of preschool, letter knowledge alone (AUC .82) predicts practically as well as the combination of phonological awareness, letters and RAN (.82 with cross-cohort validation). A short word list with the cut-off "reads no word" identifies 74% of future cases and raises no alarm for 82% of the children who will not have difficulties.
+- **A transparent orthography shifts the problem to speed**, as the definition states. From age 7 the word list no longer discriminates by accuracy, only by time.
+- **Floor effect at the start.** At the beginning of learning, children accumulate at the lower end of the distribution [@catts2026definicion]. In our data, between 29% and 44% of 5-year-olds read no word or pseudoword. That is why at that age the useful cut-off is "reads none", not a percentile.
+- **Precursors lose weight once the child can read.** For @catts2026definicion, cognitive correlates are useful for prognosis, not for diagnosis, and explain less unique variance as reading develops. In our data, at age 5 only early reading adds something to letters, phonological awareness and RAN. Oral language, number, memory and executive functions add almost nothing.
+- **The school SES index should neither exclude nor change the cut-off.** The definition stresses that an environmental risk does not rule out dyslexia. Our data show that, with the same letter score, children from low-SES schools are at greater risk. Even so, the manual proposes not adjusting the cut-off by SES: the SES-based percentile is given only as context, so that no child who needs support is left without it.
+
+As for the cut-off, the definition does not set one: it leaves the decision to professionals. Some authors speak of one child in five and others of 5–10% [@catts2026definicion]. In our cohorts, persistent difficulty affects 15% of children (4% at the strictest level, DL-A, and 11% in DL-B). The five certainty levels make it possible to choose the cut-off according to the intended use.
+
+## Changes we propose for the manual
+
+1. **Theoretical framework (chapter 2 of the outline).** Start from the 2025 definition [@catts2026definicion] and the Delphi consensus, with their differences in scope.
+2. **Language.** Speak of "risk" at ages 4–5, "provisional difficulty" at age 6 and "persistent difficulty" from ages 7–8, as the risk chapter already does. Reserve "dyslexia" for diagnosis, which the platform does not make.
+3. **Comparison with peers.** Add to the classroom report the child's position within the classroom and the classroom's position against the reference.
+4. **New tasks for version 1.0:** word and pseudoword dictation, a good-quality oral language measure at ages 4–5, written morphology and a brief measure of reading well-being.
+5. **Probability instead of a label.** Report the probability of persistent difficulty with its interval, consistent with the continuum.
+
+## A study opened up by the definition
+
+@catts2026definicion note that, in transparent orthographies such as Hebrew or Arabic, there are two subtypes of dyslexia. Children with poor rapid naming in preschool become slow but accurate readers. Those with phonological and morphological difficulties end up slow and inaccurate.
+
+## For the group's working document
+
+Comments on the draft ask for concrete examples of what to do when an instrument is not available. The LEEDUCA data make it possible to **quantify how much is lost with each alternative**. For example, end-of-preschool screening with a single letter task versus a full battery, or reading a word list for one minute versus a standardized fluency test. In addition, norms in words correct per minute by school year and term could be published openly. Any school would then have a reference for brief classroom measures, which is exactly the alternative the document proposes when an instrument is missing. Regarding conflicts of interest, the cleanest option is to cite peer-reviewed published results rather than the platform as a product.

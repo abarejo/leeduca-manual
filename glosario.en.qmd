@@ -1,0 +1,22 @@
+# Glossary (Spanish–English) {#sec-glossary .unnumbered}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+G <- utils::read.csv(file.path(raiz_libro(), "traduccion", "glosario_es_en.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+areas <- c("Escuela y muestra" = "School and sample", "Plataforma" = "Platform", "Medidas" = "Measures",
+           "Psicometría" = "Psychometrics", "Riesgo" = "Risk and reading difficulty", "Intervención" = "Intervention")
+```
+
+This glossary fixes how the manual's Spanish terms are rendered in English. Every term in the table is always translated the same way. It also helps readers who move between the English edition, the [Spanish version](https://abarejo.github.io/leeduca-manual/) and the platform's own reports, which are in Spanish. The list is kept in `traduccion/glosario_es_en.csv` in the repository.
+
+**School system.** In Spain, *Educación Infantil* (preschool) covers ages 3 to 5 and primary school starts at age 6. Systematic reading instruction begins in Grade 1. The school year has three terms (autumn, winter, spring). A *time point* such as 5.2 means age 5, winter term.
+
+```{r}
+#| results: asis
+for (a in names(areas)) {
+  cat("\n\n## ", areas[[a]], "\n\n", sep = "")
+  t <- G[G$area == a, c("es", "en", "nota")]
+  print(knitr::kable(t, col.names = c("Spanish", "English", "Note"), row.names = FALSE))
+}
+```
