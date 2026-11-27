@@ -46,9 +46,15 @@ book:
     - part: "Psychometrics"
       chapters:
         - metodo-psicometrico.en.qmd
+        - metodo.en.qmd
+        - decisiones.en.qmd
         - resultados-globales.en.qmd
         - riesgo.en.qmd
         - limites.en.qmd
+    - part: "Intervention programs"
+      chapters:
+        - preleo/programa.en.qmd
+        - preleo/leetrea.en.qmd
     - part: "Tasks"
       chapters:
         - catalogo.en.qmd

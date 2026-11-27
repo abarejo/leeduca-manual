@@ -18,5 +18,12 @@ for f in files:
             return f"[{text}]({posixpath.relpath(en, base)}{anc})"
         return f"[{text}]({URL}{path[:-4]}.html{anc}) (*in Spanish*)"
     s2 = pat.sub(rep, s)
+    # Enlaces que ya apuntaban a la web española: si el capítulo ya tiene versión inglesa, se cambian por el .en.qmd
+    def rep_abs(m):
+        text, path, anc = m.group(1), m.group(2), m.group(3) or ""
+        en = path + ".en.qmd"
+        if not os.path.exists(en) or "spanish" in text.lower() or "español" in text.lower(): return m.group(0)  # enlaces deliberados a la versión española
+        return f"[{text}]({posixpath.relpath(en, base)}{anc})"
+    s2 = re.sub(r"\[([^\]]+)\]\(" + re.escape(URL) + r"([^)#\s]+?)\.html(#[^)\s]*)?\)(?:\s*\(\*in Spanish\*\)|,\s*\*in Spanish\*|\s*\*\(in Spanish\)\*)?", rep_abs, s2)
     if s2 != s:
         open(f, "w", encoding="utf-8").write(s2); print("updated", f)

@@ -41,7 +41,7 @@ The platform answers a practical problem: assessing **all** children in a school
 3. **Increasing difficulty.** Tasks are ordered by difficulty within and across school years, to avoid ceiling effects and to discriminate among children near the mean, not only those with a clear delay.
 4. **Simple administration.** Stimulus presentation, recording and scoring are done by the platform. This reduces differences between examiners and allows school staff to administer the assessment after brief training.
 
-Besides assessment, the platform hosts the group's **intervention programs**: Preleo (universal, intensification and review) for preschool, and Leetrea, for reading at ages 6 to 8, whose screening is made up of the tasks for ages 6 to 11. This manual deals mainly with assessment; intervention appears where it affects the interpretation of scores (see [The Preleo program](https://abarejo.github.io/leeduca-manual/preleo/programa.html) (*in Spanish*) and [The Leetrea program](https://abarejo.github.io/leeduca-manual/preleo/leetrea.html) (*in Spanish*)).
+Besides assessment, the platform hosts the group's **intervention programs**: Preleo (universal, intensification and review) for preschool, and Leetrea, for reading at ages 6 to 8, whose screening is made up of the tasks for ages 6 to 11. This manual deals mainly with assessment; intervention appears where it affects the interpretation of scores (see [The Preleo program](preleo/programa.en.qmd) and [The Leetrea program](preleo/leetrea.en.qmd)).
 
 ## Where it comes from
 
@@ -110,7 +110,7 @@ Activities are built with a small number of presentation **engines**. The engine
 | **Per item** | No | Response (correct or incorrect) and time for each item |
 | **Other** | — | Date and time, session, term, number of words in text tasks |
 
-Item-level data are what make possible what this manual adds to the previous ones: internal consistency with ω, item response models, session validity indicators and response time models (see [How each task sheet is built](https://abarejo.github.io/leeduca-manual/metodo.html) (*in Spanish*)).
+Item-level data are what make possible what this manual adds to the previous ones: internal consistency with ω, item response models, session validity indicators and response time models (see [How each task sheet is built](metodo.en.qmd)).
 
 With these measures, each task is summarized in a **main measure** according to its family: correct responses in accuracy tasks, stimuli per second in rapid naming, words per minute in reading fluency, and so on. In the manual all of them are presented so that **higher is better** (see [How tasks are grouped](https://abarejo.github.io/leeduca-manual/agrupacion.html#sec-familias) (*in Spanish*)).
 

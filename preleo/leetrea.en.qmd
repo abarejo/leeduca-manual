@@ -1,0 +1,66 @@
+---
+title: "The Leetrea program"
+subtitle: "Reading program for ages 6 to 8 · under construction"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+LB <- leer("LEETREA_v1", "LB"); LU <- leer("LEETREA_v1", "LU"); LC <- leer("LEETREA_v1", "LC")
+tot <- LC[LC$curso == "6–11", ]
+BLOQ <- c("Comprensión lectora y vocabulario" = "Reading comprehension and vocabulary",
+          "Código alfabético: letras, sílabas y palabras" = "Alphabetic code: letters, syllables and words",
+          "Fluidez y prosodia" = "Fluency and prosody", "Morfología (Morfoteca)" = "Morphology (Morfoteca)",
+          "Plataforma anterior (IN_: universal y repaso)" = "Previous platform (IN_: universal and review)",
+          "Reconocimiento de palabras" = "Word recognition")
+DATO <- c("Actividades Leetrea en el catálogo web (22/10/2026)" = "Leetrea activities in the web catalog (October 22, 2026)",
+          "Aplicaciones registradas en la BBDD (10/11/2026)" = "Administrations recorded in the database (November 10, 2026)",
+          "Niños con alguna actividad Leetrea" = "Children with any Leetrea activity")
+tr <- function(x, m) ifelse(x %in% names(m), m[as.character(x)], x)
+LB$bloque <- tr(LB$bloque, BLOQ); LU$dato <- tr(LU$dato, DATO)
+```
+
+::: {.callout-warning appearance="minimal"}
+**Section under construction** (November 12, 2026). Leetrea is completed and in the testing phase. This section brings together what can already be said from the platform's activity catalog and the full database; the program team will complete the description of the program. *Translated from the Spanish version of November 27, 2026.*
+:::
+
+## What it is
+
+Leetrea is the LEEDUCA group's program for **working on reading at ages 6 to 8** (Grades 1 to 3). It follows on from [Preleo](programa.en.qmd), which works on the precursors in preschool, and, like Preleo, it is hosted on the LEEDUCA platform, alongside the assessment tasks.
+
+- **Screening.** The platform's tasks for **ages 6 to 11** are part of the Leetrea screening. The reading, speed and comprehension task sheets in this manual are therefore also the technical basis of the program.
+- **Tiers.** On the platform, Leetrea has a **universal** part (for the whole class) and a **review** part (for the children who need it), like Preleo.
+
+## What is worked on
+
+The platform's activity catalog (October 22, 2026) contains `r sum(as.numeric(LB$actividades))` Leetrea activities, grouped as follows:
+
+```{r}
+tabla(LB, c("Block", "Activities"),
+      pie = "Leetrea activities in the platform's web catalog (October 22, 2026), grouped by the prefix of their name. Provisional grouping, to be reviewed with the program team.")
+```
+
+- **Alphabetic code:** letters and sounds, syllables and words, with activities such as "Letters that speak", "Build the syllable", "I put words together" or "Alien dictation".
+- **Word recognition and morphology:** word reading and a "Morfoteca" (morphology library) to identify, classify, match, build and explain morphemes.
+- **Fluency and prosody:** from basic phrases to growing phrases, punctuation marks, theater, and poems and songs.
+- **Comprehension and vocabulary:** rephrasing, anaphora, local, elaborative and integrative inferences, macrorules, main ideas, outlines and vocabulary.
+
+## Status of the data
+
+```{r}
+tabla(LU, c("Item", "N"), pie = "Web catalog (October 22, 2026) and full database exported by Ricardo Cruz (November 10, 2026).")
+```
+
+As befits a program in the testing phase, the database does not yet record administrations of Leetrea. The **screening, on the other hand, already has data**: since 2021, `r num_es(as.numeric(tot$ninos), 0)` children aged 6 to 11 from `r tot$centros` schools have taken `r tot$pruebas` different assessment tasks in Spanish.
+
+```{r}
+LC2 <- LC; LC2[c("ninos", "centros", "pruebas", "aplicaciones")] <- lapply(LC2[c("ninos", "centros", "pruebas", "aplicaciones")], as.numeric)
+tabla(LC2, c("School year (age)", "Children", "Schools", "Different tasks", "Administrations"),
+      pie = "Assessment tasks in Spanish in the school years for ages 6 to 11 since 2021/22 (first administration for each child, task, school year and term). School year = approximate age (6 = Grade 1). The 6–11 row counts distinct children and schools, not the sum.")
+```
+
+## Pending
+
+- Description of the program by its team: objectives, sequence, duration, who delivers it and how the move from universal to review is decided.
+- Which tasks and cut-offs make up the Leetrea screening, with their task sheet in this manual.
+- Once administrations are recorded: use by school and school year, and the relation between dose and reading progress, as for Preleo.

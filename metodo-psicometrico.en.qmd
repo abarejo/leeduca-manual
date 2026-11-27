@@ -10,7 +10,7 @@ n_alguna <- sum(!is.na(E$alfa_2021) | !is.na(E$estabilidad_rho))
 ```
 
 ::: {.callout-note appearance="minimal"}
-**Status:** first draft (November 2, 2026) of chapter 5 of the manual, expanded on November 8, 2026 with the watch zone and links to [From the lab to the manual](https://abarejo.github.io/leeduca-manual/avances.html) (*in Spanish*). It brings together in one place how tasks are scored, how reliability and validity are estimated, how norms are built and how to decide whether a change matters. Each section states **what is done**, **which study on the group's [research agenda](https://abarejo.github.io/leeduca-manual/agenda.html) (*in Spanish*) develops it** and **what is missing**. How each task sheet is put together is described in [How each task sheet is built](https://abarejo.github.io/leeduca-manual/metodo.html) (*in Spanish*), and decisions already taken in [Methodological decisions](https://abarejo.github.io/leeduca-manual/decisiones.html) (*in Spanish*). *Translated from the Spanish version of November 27, 2026.*
+**Status:** first draft (November 2, 2026) of chapter 5 of the manual, expanded on November 8, 2026 with the watch zone and links to [From the lab to the manual](https://abarejo.github.io/leeduca-manual/avances.html) (*in Spanish*). It brings together in one place how tasks are scored, how reliability and validity are estimated, how norms are built and how to decide whether a change matters. Each section states **what is done**, **which study on the group's [research agenda](https://abarejo.github.io/leeduca-manual/agenda.html) (*in Spanish*) develops it** and **what is missing**. How each task sheet is put together is described in [How each task sheet is built](metodo.en.qmd), and decisions already taken in [Methodological decisions](decisiones.en.qmd). *Translated from the Spanish version of November 27, 2026.*
 :::
 
 **In one sentence.** Each task is analyzed with the method that fits the way it measures (not all with α), each score is reported with its margin of error, and each use the manual proposes (screening, monitoring, identification) rests on specific evidence [@aera2014; @kane2013].
@@ -77,7 +77,7 @@ The analyses behind these sections are in the group's internal workspace (restri
 
 ## 5.4 Norms
 
-**The reference sample.** Norms describe development without intervention: the reference is the children from schools that did not implement Preleo with their cohort. All equivalent cohorts are pooled, unless one departs by more than 1 SD (see [Methodological decisions](https://abarejo.github.io/leeduca-manual/decisiones.html) (*in Spanish*)).
+**The reference sample.** Norms describe development without intervention: the reference is the children from schools that did not implement Preleo with their cohort. All equivalent cohorts are pooled, unless one departs by more than 1 SD (see [Methodological decisions](decisiones.en.qmd)).
 
 **By time point, not only by school year.** With three assessments per school year, a single norm per school year flags almost a quarter of the children as "at risk" in the first term. That is why norms are built by school year and term, and from age 4 to 6 they are refined by age in months (see [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*)).
 
@@ -105,4 +105,4 @@ A fair task measures the same thing and makes the same errors in all groups. Thi
 
 ## Reproducibility
 
-All computations are done with R scripts on the project's computer, which read the complete data and export only aggregated tables. The book is built from those tables, and the code is in the repository. Before confirmatory studies, the analysis plan is preregistered (see [How each task sheet is built](https://abarejo.github.io/leeduca-manual/metodo.html#reproducibilidad) (*in Spanish*)).
+All computations are done with R scripts on the project's computer, which read the complete data and export only aggregated tables. The book is built from those tables, and the code is in the repository. Before confirmatory studies, the analysis plan is preregistered (see [How each task sheet is built](metodo.en.qmd#reproducibilidad)).

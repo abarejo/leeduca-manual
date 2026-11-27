@@ -30,7 +30,7 @@ GitHub Actions genera los dos y publica el inglés en `https://abarejo.github.io
 
 | Capa | Capítulos | Estado |
 |---|---|---|
-| 1 (revisores y colaboradores) | Presentación, Technical summary, Definición, Plataforma, Estudio normativo, Método psicométrico, Resultados globales, Riesgo, Límites, Catálogo, ficha de velocidad (VEL) y fichas de clase A | **Hecha** (27/11/2026) |
+| 1 (revisores y colaboradores) | Presentación, Technical summary, Definición, Plataforma, Estudio normativo, Método psicométrico, Resultados globales, Riesgo, Límites, Catálogo, ficha de velocidad (VEL), fichas de clase A, Cómo se construye cada ficha, Decisiones metodológicas, Preleo y Leetrea | **Hecha** (27/11/2026) |
 | 2 | Marco teórico, DIS-ESP, Conciencia fonológica, Cognición numérica, Woodcock, Baremos, Agrupación, Decisiones, resto de fichas piloto (LET, RAN, CF523, TECLE), fichas de clase B y C | Pendiente |
 | No se traduce | Novedades, Avances, Agenda, Consultas, Colaborar, Estructura | — |
 
