@@ -1,9 +1,9 @@
 project:
   type: book
   resources:
-    - apps/
-    - datos/agregados/CATALOGO/
-    - figuras/pantallas/
+    - /apps/
+    - /datos/agregados/CATALOGO/
+    - /figuras/pantallas/
 
 
 profile:
