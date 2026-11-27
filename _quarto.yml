@@ -35,6 +35,8 @@ format:
     # borrador: que los buscadores no indexen la web (quitar al publicar la versión 1.0)
     include-in-header:
       text: '<meta name="robots" content="noindex, nofollow">'
+    # selector de idioma con banderas (27/11/2026)
+    include-after-body: _includes/idioma.html
 
 execute:
   echo: false
