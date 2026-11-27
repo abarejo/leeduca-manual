@@ -1,0 +1,317 @@
+[
+  {
+    "objectID": "index.en.html",
+    "href": "index.en.html",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "",
+    "text": "Preface\nThe LEEDUCA/PRELEO platform assesses children aged 3 to 11 in schools in Málaga (Spain) online, three times per school year (3-year-olds since 2023/24). It covers letter knowledge, phonological awareness, rapid automatized naming, word and text reading, reading comprehension, oral language, mathematics and executive functions. Since 2014 it has gathered data from several birth cohorts, named by their year of birth (2010, 2011, 2012…).\nThe manual describes every task on the platform with the same structure: what it measures and how it is administered, the sample it has been studied in, its reliability and validity, how its scores are interpreted (norms), and which variables affect them. It is written for three kinds of readers:",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#origins",
+    "href": "index.en.html#origins",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "Origins",
+    "text": "Origins\nThe platform and this manual grew out of the DIS-ESP battery, created by María Soledad Carrillo (University of Murcia, a member of the group) and Jesús Alegría (Université Libre de Bruxelles). DIS-ESP proposed a two-stage assessment of dyslexia: group screening of reading efficiency with TECLE and, for the children it flagged, an assessment of the two reading mechanisms, phonological and orthographic (Carrillo Gallego et al. 2011). The LEEDUCA group promoted it in Málaga on paper (2007–2012) and then moved it to an online platform, which added the early literacy precursors from age 4 and assessment three times per school year.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#what-is-available-in-english",
+    "href": "index.en.html#what-is-available-in-english",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "What is available in English",
+    "text": "What is available in English\n\n\n\nChapter\nStatus\n\n\n\n\nTechnical summary\nWritten in English (November 8, 2026)\n\n\nWhat we measure in light of the new definition of dyslexia\nTranslated from the Spanish version of November 27, 2026\n\n\nGlossary (Spanish–English)\nNovember 27, 2026\n\n\nThe platform; Normative study; Psychometric method; Overall results; Risk and reading difficulty; Limitations; Task catalog; class A task sheets\nNext (first layer of the translation)\n\n\nTheoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Woodcock criterion; Norms; Task grouping; Decisions\nLater (second layer)\n\n\n\nLinks to chapters that are not translated yet point to the Spanish pages and are marked (in Spanish). All figures and numbers are computed by the same code in both languages, so the two versions always report the same results.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#how-to-read-this-book",
+    "href": "index.en.html#how-to-read-this-book",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "How to read this book",
+    "text": "How to read this book\nEach task sheet has three layers:\n\nThe text, with the results and what they mean.\nThe full tables, at the end of each sheet. They are read from the files in datos/agregados/, which contain only aggregated results (means, percentiles, correlations…), never data from an individual child.\nThe code, in the GitHub repository (button in the sidebar). Tables are computed with R scripts from the complete data, which for privacy reasons never leave the project’s computer. The book is built from those tables, so anyone can reproduce its figures.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#privacy",
+    "href": "index.en.html#privacy",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "Privacy",
+    "text": "Privacy\nThis book contains only aggregated data. Pupils’ names and identification numbers, teachers’ names and individual data stay in the project folder at the University of Málaga. Teachers always appear under pseudonyms. Norms of commercial tests used for comparison (PROLEC-R, EDICOLE) are not reproduced, only cited.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#authorship",
+    "href": "index.en.html#authorship",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "Authorship",
+    "text": "Authorship\nProvisional author order, to be confirmed:\n\nJuan Luis Luque Vilaseca (Department of Developmental and Educational Psychology, University of Málaga).\nAuxiliadora Sánchez Gómez (Department of Developmental and Educational Psychology, University of Málaga).\nMarisol Carrillo Gallego (Department of Developmental and Educational Psychology, University of Murcia).\nAlmudena Giménez de la Peña (Department of Basic Psychology, University of Málaga).\nAmanda Flores Marín (Department of Basic Psychology, University of Málaga).\nRicardo Cruz Arándiga (LEEDUCA Research Group, University of Málaga).\nMaría Rodríguez Moreno (Department of Developmental and Educational Psychology, University of Málaga).\nPedro Javier López-Pérez (Department of Developmental and Educational Psychology, University of Málaga).\n\nFinal authorship will be agreed before the consultation version is deposited.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#how-to-cite-this-draft",
+    "href": "index.en.html#how-to-cite-this-draft",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "How to cite this draft",
+    "text": "How to cite this draft\nLuque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez Moreno, M., & López-Pérez, P. J. (2026). Manual técnico de la plataforma LEEDUCA [LEEDUCA platform technical manual] (working draft, English edition in progress). University of Málaga. https://abarejo.github.io/leeduca-manual/en/",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.en.html#contact",
+    "href": "index.en.html#contact",
+    "title": "LEEDUCA Platform Technical Manual",
+    "section": "Contact",
+    "text": "Contact\nFor research collaboration, please contact the director of the LEEDUCA group, Juan Luis Luque (University of Málaga).\n\n\n\n\nCarrillo Gallego, María Soledad, Jesús Alegría Iscoa, Pilar Miranda López, and Noelia Sánchez Pérez. 2011. “Evaluación de La Dislexia En La Escuela Primaria: Prevalencia En Español.” Escritos de Psicología 4 (2): 35–44. https://doi.org/10.5231/psy.writ.2011.1407.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "summary-en.html",
+    "href": "summary-en.html",
+    "title": "Technical summary (English)",
+    "section": "",
+    "text": "The LEEDUCA platform\nLEEDUCA is an online assessment platform for reading and its precursors in children aged 3 to 11, developed by the LEEDUCA research group at the University of Málaga (Spain). It grew out of the paper-based DIS-ESP battery (M. S. Carrillo and J. Alegría), which proposed a two-stage assessment of dyslexia in a transparent orthography (Carrillo Gallego et al. 2011). The platform is used in schools three times per school year (autumn, winter and spring). Most tasks are administered individually by a trained examiner at a computer; the platform presents the stimuli, records responses and item-level response times, and produces reports.\nDomains covered: letter knowledge, phonological awareness, rapid automatized naming (RAN), verbal short-term memory, word and pseudoword reading, text reading fluency, reading comprehension, oral language (vocabulary, morphosyntax, comprehension), numerical cognition and executive functions.",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "summary-en.html#normative-sample",
+    "href": "summary-en.html#normative-sample",
+    "title": "Technical summary (English)",
+    "section": "Normative sample",
+    "text": "Normative sample\nThe normative study uses six birth cohorts (2010–2015) assessed in schools of the province of Málaga: 10,278 children (31 to 72 schools per cohort). Of these, 4,952 were followed term by term until 2019/20; the remainder were assessed only in the broad assessments of 2020/21 (paper) and 2021/22 (tablets). Part of the schools applied Preleo, a classroom program for oral language and early literacy. Norms use children from schools without Preleo as the reference group (1,628 children in term-by-term follow-up); when a time point has fewer than 100 reference children, all children are used and this is flagged. A flow diagram is given in Normative study (in Spanish).",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "summary-en.html#psychometric-approach",
+    "href": "summary-en.html#psychometric-approach",
+    "title": "Technical summary (English)",
+    "section": "Psychometric approach",
+    "text": "Psychometric approach\n\nScores by task family. Tasks are grouped into seven families according to how they measure (accuracy, RAN, oral reading fluency, timed efficiency, timed decision, span, comprehension). The family determines the main score and the reliability method.\nReliability. Internal consistency (α, ω) only for untimed accuracy tasks; test–retest and parallel forms for speeded tasks. Every percentile is reported with a 90 % confidence band.\nValidity. Content (items and instructions read from the platform), internal structure (exploratory factor and network analyses by age), external criterion (Woodcock-Muñoz fluency), and predictive and diagnostic validity against persistent reading difficulty, with cross-validation leaving one cohort out. Precursors at age 5 (phonological awareness, letter knowledge and RAN) predict persistent difficulty with an AUC of .82 (.73 at age 4); letters and phonological awareness carry most of the weight.\nNorms by school term. Because children change fast between 4 and 7, norms are given by school year and term; continuous norms are under development.\nQuality classes. Each task is classed A (sufficient reliability, validity and norms for individual use), B (use with caution) or C (research or description only). There are 32 class A tasks; 98 tasks have an automatically generated technical sheet.",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "summary-en.html#risk-classification",
+    "href": "summary-en.html#risk-classification",
+    "title": "Technical summary (English)",
+    "section": "Risk classification",
+    "text": "Risk classification\nReading difficulty is defined from the child’s whole trajectory between 6 and 11 years, not from a single assessment, in five certainty levels: severe persistent reading difficulty (DL-A: ≤ P10 in at least two school years and ≤ P25 in all years from age 7), persistent reading difficulty (DL-B), transient difficulty (TR), intermediate (INT) and stable typical (TE). The same logic is proposed for oral language and mathematics. Term reports use five bands with a watch zone between P20 and P30, where no label is given until the next assessment; in simulations with reliability .85, this halves label changes due to measurement error alone (from 14 % to 6 %).",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "summary-en.html#intended-uses",
+    "href": "summary-en.html#intended-uses",
+    "title": "Technical summary (English)",
+    "section": "Intended uses",
+    "text": "Intended uses\nSupported: universal screening (as a probability of risk), progress monitoring, planning classroom support, and research with pseudonymized data. Not supported: clinical diagnosis on its own, high-stakes decisions about individual children, and comparison of schools or teachers. See Presentation and responsible use (in Spanish).",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "summary-en.html#open-science",
+    "href": "summary-en.html#open-science",
+    "title": "Technical summary (English)",
+    "section": "Open science",
+    "text": "Open science\nThe manual is a reproducible web book. All figures and tables are computed with R scripts from aggregated data published in the repository; individual data remain at the University of Málaga. License: CC BY 4.0.",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "summary-en.html#how-to-cite",
+    "href": "summary-en.html#how-to-cite",
+    "title": "Technical summary (English)",
+    "section": "How to cite",
+    "text": "How to cite\nLuque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez Moreno, M., & López-Pérez, P. J. (2026). Manual técnico de la plataforma LEEDUCA [Technical manual of the LEEDUCA platform] (working draft, 8 November 2026). Universidad de Málaga. https://abarejo.github.io/leeduca-manual/\n\n\n\n\nCarrillo Gallego, María Soledad, Jesús Alegría Iscoa, Pilar Miranda López, and Noelia Sánchez Pérez. 2011. “Evaluación de La Dislexia En La Escuela Primaria: Prevalencia En Español.” Escritos de Psicología 4 (2): 35–44. https://doi.org/10.5231/psy.writ.2011.1407.",
+    "crumbs": [
+      "Technical summary (English)"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html",
+    "href": "definicion.en.html",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "",
+    "text": "The 2025 definition\nIn October 2025 the International Dyslexia Association (IDA) adopted a new definition of dyslexia (International Dyslexia Association 2025). It is the first major revision since the 2002 definition (Lyon, Shaywitz, and Shaywitz 2003). It was approved by the IDA Board of Directors after a process of almost two years: an 18-member steering committee, a 74-member advisory committee, a special issue of Annals of Dyslexia and more than 3,000 public comments. Catts, Haynes, and Joshi (2026) explain its rationale, component by component, and give guidance for applying it. At almost the same time, an international expert panel reached another consensus definition through the Delphi method (Carroll et al. 2025).\nThe definition has six blocks:\nCompared with the 2002 definition, the idea of what is “unexpected in relation to other cognitive abilities”, which led to the IQ discrepancy, disappears. The continuum, the comparison with peers who receive the same instruction and the value of early support come in. “Neurobiological origin” as the single cause also disappears and becomes one of several interacting influences.\nIDA and Delphi: agreement on the essentials, with nuances. The Delphi study rated 55 statements with an 80% agreement threshold. Consensus was reached on 42, which were summarized in nine core statements (Carroll et al. 2025). The two definitions agree on the essentials: a difficulty in accurate and fluent word reading and spelling, present across the whole range of intellectual ability, with multiple causes and a central role for phonological processing. They differ in scope. The Delphi definition includes working memory, processing speed, orthographic processing and comorbidities. The IDA definition focuses on language (phonology, morphology, early oral language) and gives more weight to response to instruction, to the orthography of the language and to early identification. According to Catts, Haynes, and Joshi (2026), these are differences of emphasis and purpose, not disagreements about the nature of dyslexia. The group’s working document reads these changes as a shift from a reactive logic (“wait to fail”) to a proactive one: prevent, screen everyone, identify early and follow each child over time.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html#the-2025-definition",
+    "href": "definicion.en.html#the-2025-definition",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "",
+    "text": "What it is and where the difficulty lies. It is a specific learning difficulty in word reading and/or spelling. It affects accuracy, speed or both, and varies with the orthography of the language.\nContinuum and persistence. The difficulties occur along a continuum of severity and persist despite instruction that is effective for peers.\nCauses. They are complex: combinations of genetic, neurobiological and environmental influences that interact over development.\nCognitive processes. Phonological and morphological difficulties are common but not universal, and early oral language weakness often foreshadows literacy problems.\nSecondary consequences. Reading comprehension, less reading experience and, with it, less growth in language, knowledge and written expression. Psychological well-being and employment may also be affected.\nPrevention. Identification and targeted instruction matter at any age, but support before and during the first years of schooling is especially effective.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html#what-the-platform-does-with-each-statement",
+    "href": "definicion.en.html#what-the-platform-does-with-each-statement",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "What the platform does with each statement",
+    "text": "What the platform does with each statement\nIn practice, the LEEDUCA platform is one way of putting that proactive logic into action: it assesses all pupils in participating schools three times per school year, from age 3, and compares each child with peers of the same age and school term. The table sets each statement of the definition against what the platform and the manual do today, and against what is missing.\n\n\n\nStatement of the definition\nWhat the platform or the manual does today\nWhat is missing\n\n\n\n\nDifficulty in word reading\nWord and pseudoword lists from age 5 to 11, with accuracy and time; the criterion for persistent difficulty is built from them (How we estimate risk, in Spanish).\n—\n\n\n… and/or in spelling\nThere is only a letter dictation task (class C) and orthographic decision, which is a reading task.\nWord spelling is not measured. This is the most important gap with respect to the new definition: a word and pseudoword dictation task with norms is needed.\n\n\nAccuracy, speed or both, depending on the orthography\nIn Spanish, accuracy reaches ceiling early (89–94% of children read all 12 words correctly at ages 7–8) and the differences lie in speed. This is why the manual expresses reading as words correct per minute (reading speed task sheet, in Spanish).\nSeparate the “slow but accurate” and “slow and inaccurate” profiles in the report.\n\n\nContinuum of severity\nPercentiles instead of categories, five certainty levels and error margins for every score.\nReport the probability of persistent difficulty, not only the level (Wagner et al. 2023).\n\n\nPersists despite instruction that is effective for peers\nPersistent difficulty requires being below the cut-off in at least two school years. The reference is children of the same age and school term.\nThe platform does not know whether instruction was effective. Proposal: also report the child’s position within their classroom and the classroom’s position against the reference. If the whole classroom is low, the problem probably lies in instruction, not in the child. This is the alternative proposed by Catts, Haynes, and Joshi (2026) when a school’s instruction is poor: compare with classmates who receive the same instruction.\n\n\nGenetic, neurobiological and environmental causes\nSchool SES index, family risk (2010 cohort) and EEG and fNIRS data in subsamples.\nFamily risk in all cohorts.\n\n\nPhonological and morphological difficulties, common but not universal\n34 phonological skills tasks (11 in class A). Morphology only in oral form and with small samples (classes B and C). No single task is enough for identification: precursors are used to monitor risk, not as a diagnosis.\nWritten morphology (derivation, inflection) from age 8.\n\n\nEarly oral language foreshadows the difficulties\n22 oral language tasks, but only 1 in class A. In our data, oral language adds little to letters, phonological awareness and RAN in predicting reading difficulty.\nA good-quality measure of vocabulary and oral comprehension at ages 4–5. The small added value may be due to the measure, not the construct.\n\n\nSecondary consequences: comprehension, knowledge, writing\nReading comprehension is used as a non-circular validity criterion.\nWritten expression.\n\n\nPsychological well-being\nNot measured.\nA brief measure of reading anxiety and reading self-concept from Grade 2.\n\n\nEarly support is especially effective\nScreening from age 3; Preleo as universal instruction in preschool (Preleo, in Spanish).\nSeparate universal instruction from supplementary intervention in the data.\n\n\nIQ not required (the discrepancy disappears)\nTask sheets do not use nonverbal reasoning for identification.\n—",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html#what-our-data-say-about-the-definition",
+    "href": "definicion.en.html#what-our-data-say-about-the-definition",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "What our data say about the definition",
+    "text": "What our data say about the definition\nSeveral statements of the definition can be tested with the platform data. These results also feed into the group’s working document:\n\nThe continuum shows up in stability. Of the children at or below the 25th percentile at age 6, only half are still there at age 8. Near the cut-off, classification changes a great deal from one school year to the next. This is the argument against relying on a single school year or a single cut-off.\nThe dual discrepancy (low level and low growth relative to peers) is not very stable in our data (κ = .12). Response to instruction is a necessary criterion, but measured with only two points it carries a lot of error. Three or more measurements and the reliable change threshold are needed (reading speed task sheet, in Spanish).\nPrecursors are useful for monitoring at age 4 and for screening at age 5. At age 4 the AUC against persistent difficulty is .73; at age 5, .82; with Grade 1 reading, .83–.85.\nA modest instrument may be enough. At the end of preschool, letter knowledge alone (AUC .82) predicts practically as well as the combination of phonological awareness, letters and RAN (.82 with cross-cohort validation). A short word list with the cut-off “reads no word” identifies 74% of future cases and raises no alarm for 82% of the children who will not have difficulties.\nA transparent orthography shifts the problem to speed, as the definition states. From age 7 the word list no longer discriminates by accuracy, only by time.\nFloor effect at the start. At the beginning of learning, children accumulate at the lower end of the distribution (Catts, Haynes, and Joshi 2026). In our data, between 29% and 44% of 5-year-olds read no word or pseudoword. That is why at that age the useful cut-off is “reads none”, not a percentile.\nPrecursors lose weight once the child can read. For Catts, Haynes, and Joshi (2026), cognitive correlates are useful for prognosis, not for diagnosis, and explain less unique variance as reading develops. In our data, at age 5 only early reading adds something to letters, phonological awareness and RAN. Oral language, number, memory and executive functions add almost nothing.\nThe school SES index should neither exclude nor change the cut-off. The definition stresses that an environmental risk does not rule out dyslexia. Our data show that, with the same letter score, children from low-SES schools are at greater risk. Even so, the manual proposes not adjusting the cut-off by SES: the SES-based percentile is given only as context, so that no child who needs support is left without it.\n\nAs for the cut-off, the definition does not set one: it leaves the decision to professionals. Some authors speak of one child in five and others of 5–10% (Catts, Haynes, and Joshi 2026). In our cohorts, persistent difficulty affects 15% of children (4% at the strictest level, DL-A, and 11% in DL-B). The five certainty levels make it possible to choose the cut-off according to the intended use.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html#changes-we-propose-for-the-manual",
+    "href": "definicion.en.html#changes-we-propose-for-the-manual",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "Changes we propose for the manual",
+    "text": "Changes we propose for the manual\n\nTheoretical framework (chapter 2 of the outline). Start from the 2025 definition (Catts, Haynes, and Joshi 2026) and the Delphi consensus, with their differences in scope.\nLanguage. Speak of “risk” at ages 4–5, “provisional difficulty” at age 6 and “persistent difficulty” from ages 7–8, as the risk chapter already does. Reserve “dyslexia” for diagnosis, which the platform does not make.\nComparison with peers. Add to the classroom report the child’s position within the classroom and the classroom’s position against the reference.\nNew tasks for version 1.0: word and pseudoword dictation, a good-quality oral language measure at ages 4–5, written morphology and a brief measure of reading well-being.\nProbability instead of a label. Report the probability of persistent difficulty with its interval, consistent with the continuum.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html#a-study-opened-up-by-the-definition",
+    "href": "definicion.en.html#a-study-opened-up-by-the-definition",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "A study opened up by the definition",
+    "text": "A study opened up by the definition\nCatts, Haynes, and Joshi (2026) note that, in transparent orthographies such as Hebrew or Arabic, there are two subtypes of dyslexia. Children with poor rapid naming in preschool become slow but accurate readers. Those with phonological and morphological difficulties end up slow and inaccurate.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "definicion.en.html#for-the-groups-working-document",
+    "href": "definicion.en.html#for-the-groups-working-document",
+    "title": "What we measure in light of the new definition of dyslexia",
+    "section": "For the group’s working document",
+    "text": "For the group’s working document\nComments on the draft ask for concrete examples of what to do when an instrument is not available. The LEEDUCA data make it possible to quantify how much is lost with each alternative. For example, end-of-preschool screening with a single letter task versus a full battery, or reading a word list for one minute versus a standardized fluency test. In addition, norms in words correct per minute by school year and term could be published openly. Any school would then have a reference for brief classroom measures, which is exactly the alternative the document proposes when an instrument is missing. Regarding conflicts of interest, the cleanest option is to cite peer-reviewed published results rather than the platform as a product.\n\n\n\n\nCarroll, Julia M., Cathy Holden, Philip Kirby, Paul A. Thompson, Margaret J. Snowling, and Dyslexia Delphi Panel. 2025. “Toward a Consensus on Dyslexia: Findings from a Delphi Study.” Journal of Child Psychology and Psychiatry 66 (7): 1065–76. https://doi.org/10.1111/jcpp.14123.\n\n\nCatts, Hugh W., Charles W. Haynes, and R. Malatesha Joshi. 2026. “Defining Dyslexia: 2025 Revision.” Annals of Dyslexia. https://doi.org/10.1007/s11881-026-00363-4.\n\n\nInternational Dyslexia Association. 2025. “Definition of Dyslexia (2025 Dyslexia Definition Project).” https://dyslexiaida.org/.\n\n\nLyon, G. Reid, Sally E. Shaywitz, and Bennett A. Shaywitz. 2003. “A Definition of Dyslexia.” Annals of Dyslexia 53: 1–14. https://doi.org/10.1007/s11881-003-0001-9.\n\n\nWagner, Richard K., Jerad H. Moxley, Christopher Schatschneider, and Fotena A. Zirps. 2023. “A Bayesian Probabilistic Framework for Identification of Individuals with Dyslexia.” Scientific Studies of Reading. https://doi.org/10.1080/10888438.2022.2118057.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What we measure in light of the new definition of dyslexia</span>"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html",
+    "href": "glosario.en.html",
+    "title": "Glossary (Spanish–English)",
+    "section": "",
+    "text": "School and sample\nThis glossary fixes how the manual’s Spanish terms are rendered in English. Every term in the table is always translated the same way. It also helps readers who move between the English edition, the Spanish version and the platform’s own reports, which are in Spanish. The list is kept in traduccion/glosario_es_en.csv in the repository.\nSchool system. In Spain, Educación Infantil (preschool) covers ages 3 to 5 and primary school starts at age 6. Systematic reading instruction begins in Grade 1. The school year has three terms (autumn, winter, spring). A time point such as 5.2 means age 5, winter term.",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html#school-and-sample",
+    "href": "glosario.en.html#school-and-sample",
+    "title": "Glossary (Spanish–English)",
+    "section": "",
+    "text": "Spanish\nEnglish\nNote\n\n\n\n\ncohorte (2010; 2011…)\nbirth cohort (2010; 2011…)\nCohorts are named by year of birth.\n\n\ncurso (escolar)\nschool year\n\n\n\ntrimestre\nschool term\nThree per school year: autumn (1), winter (2), spring (3).\n\n\nmomento (edad.trimestre; p. ej. 5.2)\ntime point (age.term; e.g. 5.2)\n5.2 = age 5; winter term.\n\n\nEducación Infantil (3; 4 y 5 años)\npreschool (ages 3; 4 and 5)\nSpanish Educación Infantil; age 5 is roughly US kindergarten.\n\n\n1.º; 2.º… de Primaria\nGrade 1; Grade 2… (primary school)\nGrade 1 = age 6–7. Formal reading instruction becomes systematic in Grade 1.\n\n\ncolegio; centro\nschool\n\n\n\naula\nclassroom\n\n\n\ndocente; maestro/a\nteacher\n\n\n\norientador/a\nschool psychologist (educational counselor)\nSpanish school-based guidance professional.\n\n\nISE (índice socioeconómico del centro)\nschool SES index\nSchool-level index; never used to change a child’s cut-off.\n\n\nseguimiento trimestral\nterm-by-term follow-up\n\n\n\nevaluaciones amplias (2020/21 y 2021/22)\nbroad assessments (2020/21 and 2021/22)\nSingle assessment per year during and after the pandemic (paper; then tablets).\n\n\nmuestra de referencia normativa\nnormative reference sample\nChildren from schools without Preleo.\n\n\ncentros con / sin Preleo\nPreleo / non-Preleo schools\n\n\n\nriesgo familiar\nfamily risk (of dyslexia)",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html#platform",
+    "href": "glosario.en.html#platform",
+    "title": "Glossary (Spanish–English)",
+    "section": "Platform",
+    "text": "Platform\n\n\n\n\n\n\n\n\nSpanish\nEnglish\nNote\n\n\n\n\nplataforma LEEDUCA\nLEEDUCA platform\nKeep the name.\n\n\ntarea\ntask\n\n\n\nsesión (código de 3 cifras)\nsession (three-digit code)\n\n\n\ncódigo de tarea\ntask code\n\n\n\nítem\nitem\n\n\n\naplicador/a; evaluador/a\nexaminer\n\n\n\naplicación individual\nindividually administered\n\n\n\naplicación colectiva\ngroup-administered\n\n\n\nficha (de tarea)\ntask sheet\nTechnical description of one task in the manual.\n\n\nficha piloto\npilot task sheet\nHand-written model sheets.\n\n\nficha automática\nautomatically generated task sheet\n\n\n\ncatálogo de tareas\ntask catalog\n\n\n\nfamilia de tareas\ntask family\nSeven families by how the task measures.\n\n\nclase de calidad (A; B; C)\nquality class (A; B; C)\nA = individual use; B = use with caution; C = research only.\n\n\ninforme de aula\nclassroom report\n\n\n\ninforme para familias\nfamily report",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html#measures",
+    "href": "glosario.en.html#measures",
+    "title": "Glossary (Spanish–English)",
+    "section": "Measures",
+    "text": "Measures\n\n\n\n\n\n\n\n\nSpanish\nEnglish\nNote\n\n\n\n\nconocimiento de letras\nletter knowledge\n\n\n\nconciencia fonológica\nphonological awareness\n\n\n\ndenominación rápida (RAN)\nrapid automatized naming (RAN)\n\n\n\nmemoria verbal a corto plazo\nverbal short-term memory\n\n\n\nlectura de palabras\nword reading\n\n\n\nlectura de pseudopalabras\npseudoword reading\nUse pseudoword (not nonword) throughout.\n\n\ndescodificación\ndecoding\n\n\n\nexactitud\naccuracy\n\n\n\nvelocidad lectora\nreading speed\n\n\n\npalabras correctas por minuto\nwords correct per minute (WCPM)\n\n\n\nfluidez lectora\nreading fluency\n\n\n\neficiencia lectora (TECLE)\nreading efficiency (TECLE)\nAccuracy within a time limit.\n\n\ndecisión ortográfica\northographic decision\n\n\n\ndictado\ndictation (spelling to dictation)\n\n\n\nescritura (ortografía)\nspelling\nIn the IDA definition, «spelling»; not «orthography».\n\n\ncomprensión lectora\nreading comprehension\n\n\n\nlenguaje oral\noral language\n\n\n\nvocabulario\nvocabulary\n\n\n\nmorfosintaxis\nmorphosyntax\n\n\n\nconciencia morfológica\nmorphological awareness\n\n\n\ncognición numérica\nnumerical cognition\n\n\n\nfunciones ejecutivas\nexecutive functions\n\n\n\nprecursores (de la lectura)\nearly literacy precursors\nLetter knowledge, phonological awareness and RAN.\n\n\njuicio de rima\nrhyme judgment",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html#psychometrics",
+    "href": "glosario.en.html#psychometrics",
+    "title": "Glossary (Spanish–English)",
+    "section": "Psychometrics",
+    "text": "Psychometrics\n\n\n\n\n\n\n\n\nSpanish\nEnglish\nNote\n\n\n\n\nbaremo; baremos\nnorms; norm tables\n\n\n\nbaremos por trimestre\nterm-based norms\n\n\n\nbaremos continuos\ncontinuous norms\n\n\n\npercentil (p25; P10)\npercentile (25th percentile; P10)\nWrite P10 / P25 in tables.\n\n\npunto de corte\ncut-off (score)\n\n\n\nbanda de confianza del 90 %\n90% confidence band\n\n\n\nfiabilidad test-retest\ntest–retest reliability\n\n\n\nformas paralelas\nparallel forms\n\n\n\nconsistencia interna (α; ω)\ninternal consistency (α; ω)\n\n\n\nvalidez de contenido\ncontent validity\n\n\n\nestructura interna\ninternal structure\n\n\n\nvalidez de criterio externo\nexternal criterion validity\n\n\n\nvalidez concurrente\nconcurrent validity\n\n\n\nvalidez predictiva\npredictive validity\n\n\n\nvalidez diagnóstica\ndiagnostic validity (classification accuracy)\n\n\n\nvalidación cruzada dejando fuera una cohorte\nleave-one-cohort-out cross-validation\n\n\n\ncambio fiable\nreliable change\n\n\n\nefecto suelo / techo\nfloor / ceiling effect\n\n\n\nfalso positivo / falso negativo\nfalse positive / false negative",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html#risk-and-reading-difficulty",
+    "href": "glosario.en.html#risk-and-reading-difficulty",
+    "title": "Glossary (Spanish–English)",
+    "section": "Risk and reading difficulty",
+    "text": "Risk and reading difficulty\n\n\n\n\n\n\n\n\nSpanish\nEnglish\nNote\n\n\n\n\nriesgo\nrisk\nUsed at ages 4–5.\n\n\ndificultad provisional\nprovisional difficulty\nUsed at age 6.\n\n\ndificultad confirmada\nconfirmed difficulty\n\n\n\ndificultad lectora persistente\npersistent reading difficulty\nFrom age 7–8; needs at least two school years below the cut-off.\n\n\nniveles de certeza\ncertainty levels\nFive levels.\n\n\nDL-A: dificultad persistente grave\nDL-A: severe persistent reading difficulty\n≤ P10 in at least two school years and ≤ P25 in all years from age 7.\n\n\nDL-B: dificultad persistente\nDL-B: persistent reading difficulty\n\n\n\nTR: dificultad transitoria\nTR: transient difficulty\n\n\n\nINT: intermedio\nINT: intermediate\n\n\n\nTE: típico estable\nTE: stable typical\n\n\n\nzona «a vigilar» (P20–P30)\nwatch zone (P20–P30)\nNo label is given until the next assessment.\n\n\nvigilar\nmonitor\n\n\n\ncribar; cribado universal\nscreen; universal screening\n\n\n\ndetección precoz\nearly identification\n\n\n\ntrayectoria\ntrajectory\n\n\n\n«lento pero exacto» / «lento e inexacto»\n“slow but accurate” / “slow and inaccurate”\nReader profiles.\n\n\ndoble discrepancia\ndual discrepancy\nLow level and low growth relative to peers.\n\n\nrespuesta a la intervención (RTI)\nresponse to intervention (RTI)\n\n\n\ndislexia\ndyslexia\nReserved for diagnosis, which the platform does not make.\n\n\ntrastorno del desarrollo del lenguaje (TDL)\ndevelopmental language disorder (DLD)\n\n\n\ndiscalculia\ndyscalculia",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "glosario.en.html#intervention",
+    "href": "glosario.en.html#intervention",
+    "title": "Glossary (Spanish–English)",
+    "section": "Intervention",
+    "text": "Intervention\n\n\n\n\n\n\n\n\nSpanish\nEnglish\nNote\n\n\n\n\nPreleo\nPreleo\nClassroom program for oral language and early literacy, delivered by teachers in preschool. Keep the name.\n\n\nLeetrea\nLeetrea\nGroup program for reading at ages 6–8. Keep the name.\n\n\nenseñanza universal\nuniversal (Tier 1) instruction\n\n\n\nintervención suplementaria\nsupplementary intervention\n\n\n\nfidelidad de aplicación\nimplementation fidelity",
+    "crumbs": [
+      "Appendices",
+      "Glossary (Spanish–English)"
+    ]
+  },
+  {
+    "objectID": "referencias.en.html",
+    "href": "referencias.en.html",
+    "title": "References",
+    "section": "",
+    "text": "Carrillo Gallego, María Soledad, Jesús Alegría Iscoa, Pilar Miranda\nLópez, and Noelia Sánchez Pérez. 2011. “Evaluación de La Dislexia\nEn La Escuela Primaria: Prevalencia En Español.” Escritos de\nPsicología 4 (2): 35–44. https://doi.org/10.5231/psy.writ.2011.1407.\n\n\nCarroll, Julia M., Cathy Holden, Philip Kirby, Paul A. Thompson,\nMargaret J. Snowling, and Dyslexia Delphi Panel. 2025. “Toward a\nConsensus on Dyslexia: Findings from a Delphi\nStudy.” Journal of Child Psychology and Psychiatry 66\n(7): 1065–76. https://doi.org/10.1111/jcpp.14123.\n\n\nCatts, Hugh W., Charles W. Haynes, and R. Malatesha Joshi. 2026.\n“Defining Dyslexia: 2025 Revision.” Annals of\nDyslexia. https://doi.org/10.1007/s11881-026-00363-4.\n\n\nInternational Dyslexia Association. 2025. “Definition of Dyslexia\n(2025 Dyslexia Definition Project).” https://dyslexiaida.org/.\n\n\nLyon, G. Reid, Sally E. Shaywitz, and Bennett A. Shaywitz. 2003.\n“A Definition of Dyslexia.” Annals of Dyslexia 53:\n1–14. https://doi.org/10.1007/s11881-003-0001-9.\n\n\nWagner, Richard K., Jerad H. Moxley, Christopher Schatschneider, and\nFotena A. Zirps. 2023. “A Bayesian Probabilistic Framework for\nIdentification of Individuals with Dyslexia.” Scientific\nStudies of Reading. https://doi.org/10.1080/10888438.2022.2118057.",
+    "crumbs": [
+      "Appendices",
+      "References"
+    ]
+  }
+]

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<title>Informe de aula LEEDUCA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Maquetación: hoja de informe a una columna (máx. 960 px), del resumen del aula al detalle por niño y a la ficha para la familia. */
+:root {
+  --papel: #FBFAF7; --hoja: #FFFFFF; --tinta: #22223B; --tinta-2: #4A4A63; --gris: #6E707A; --rejilla: #E6E3DC;
+  --mar: #008FA3; --mar-suave: #D7EEF1; --coral: #D64545; --coral-suave: #F8DEDC; --ocre: #B07A10; --ocre-suave: #F4E8CC;
+  --anil: #5E4FA2; --anil-suave: #E6E2F3; --nivel0: #EEF1EE;
+  --f-titulo: "Literata", Georgia, "Times New Roman", serif;
+  --f-texto: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --papel: #16161F; --hoja: #1E1E2A; --tinta: #ECEAF2; --tinta-2: #C4C2D0; --gris: #9A9CA8; --rejilla: #34344A;
+  --mar: #2FB3C6; --mar-suave: #11343A; --coral: #EF6B6B; --coral-suave: #43201F; --ocre: #D9A440; --ocre-suave: #3A2E14;
+  --anil: #9D8FE0; --anil-suave: #2A2546; --nivel0: #22262A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --papel: #16161F; --hoja: #1E1E2A; --tinta: #ECEAF2; --tinta-2: #C4C2D0; --gris: #9A9CA8; --rejilla: #34344A;
+  --mar: #2FB3C6; --mar-suave: #11343A; --coral: #EF6B6B; --coral-suave: #43201F; --ocre: #D9A440; --ocre-suave: #3A2E14;
+  --anil: #9D8FE0; --anil-suave: #2A2546; --nivel0: #22262A; color-scheme: dark }
+body { background: var(--papel); color: var(--tinta); font-family: var(--f-texto); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 48px; }
+.hoja { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3 { font-family: var(--f-titulo); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; }
+h2 { font-size: 1.35rem; font-weight: 600; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p { margin: 0; max-width: 68ch; }
+.etiqueta { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); font-weight: 700; }
+.num { font-variant-numeric: tabular-nums; }
+.aviso { display: flex; gap: 12px; align-items: flex-start; background: var(--anil-suave); border-radius: var(--r); padding: 12px 16px; font-size: .92rem; }
+.aviso b { color: var(--anil); }
+header.cab { display: flex; flex-direction: column; gap: 10px; padding-bottom: 18px; border-bottom: 1px solid var(--rejilla); }
+.cab-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--tinta-2); font-size: .95rem; }
+section { display: flex; flex-direction: column; gap: 14px; }
+.sub { color: var(--tinta-2); }
+.resumen { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.dato { background: var(--hoja); border: 1px solid var(--rejilla); border-radius: var(--r); padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.dato .v { font-family: var(--f-titulo); font-size: 1.9rem; font-weight: 700; line-height: 1.1; }
+.dato .d { font-size: .86rem; color: var(--tinta-2); }
+.lienzo { background: var(--hoja); border: 1px solid var(--rejilla); border-radius: var(--r); padding: 14px; position: relative; overflow-x: auto; }
+svg { display: block; width: 100%; height: auto; }
+svg text { font-family: var(--f-texto); fill: var(--tinta-2); font-size: 12px; }
+.leyenda { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .84rem; color: var(--tinta-2); }
+.leyenda span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+.n0 { fill: var(--nivel0); } .n1 { fill: var(--ocre-suave); } .n2 { fill: var(--ocre); fill-opacity: .45; } .n3 { fill: var(--coral-suave); } .n4 { fill: var(--coral); fill-opacity: .55; }
+.b0 { background: var(--nivel0); } .b1 { background: var(--ocre-suave); } .b2 { background: color-mix(in srgb, var(--ocre) 45%, var(--hoja)); } .b3 { background: var(--coral-suave); } .b4 { background: color-mix(in srgb, var(--coral) 55%, var(--hoja)); }
+.punto { fill: var(--tinta); stroke: var(--hoja); stroke-width: 2; cursor: pointer; }
+.punto.sel { fill: var(--mar); }
+.bigote { stroke: var(--tinta); stroke-width: 1.4; opacity: .45; }
+.ref { stroke: var(--tinta-2); stroke-width: 1; stroke-dasharray: 3 3; }
+.tip { position: absolute; pointer-events: none; background: var(--tinta); color: var(--papel); font-size: .82rem; padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -110%); }
+.tabla-env { overflow-x: auto; border: 1px solid var(--rejilla); border-radius: var(--r); background: var(--hoja); }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--rejilla); white-space: nowrap; }
+th { font-size: .76rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gris); font-weight: 700; }
+tbody tr { cursor: pointer; }
+tbody tr:hover, tbody tr.sel { background: var(--mar-suave); }
+td.r, th.r { text-align: right; }
+.chip { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .8rem; font-weight: 700; color: var(--tinta); }
+.cambio-mas { color: var(--mar); font-weight: 700; } .cambio-menos { color: var(--coral); font-weight: 700; }
+.controles { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; background: var(--hoja); border: 1px solid var(--rejilla); border-radius: var(--r); padding: 12px 16px; }
+.controles label { font-weight: 700; font-size: .92rem; }
+input[type=range] { width: min(280px, 100%); accent-color: var(--mar); }
+select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--rejilla); background: var(--hoja); color: var(--tinta); }
+.seg { display: inline-flex; border: 1px solid var(--rejilla); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: .9rem; background: var(--hoja); color: var(--tinta-2); border: 0; padding: 6px 12px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--mar); color: #fff; }
+button:focus-visible, select:focus-visible, input:focus-visible, tr:focus-visible { outline: 3px solid var(--anil); outline-offset: 2px; }
+.metafora { font-family: var(--f-titulo); font-size: 1.15rem; line-height: 1.45; max-width: 60ch; }
+.metafora b { color: var(--coral); }
+.dos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.familia { background: var(--hoja); border: 1px solid var(--rejilla); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.familia .grande { font-family: var(--f-titulo); font-size: 2.6rem; font-weight: 700; line-height: 1; }
+.familia ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.limites { background: var(--hoja); border: 1px dashed var(--gris); border-radius: var(--r); padding: 16px 20px; }
+.limites ul { margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; max-width: 75ch; }
+.panel { margin: 0; background: var(--hoja); border: 1px solid var(--rejilla); border-radius: var(--r); padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.panel figcaption { font-size: .92rem; color: var(--tinta-2); }
+.panel figcaption b { color: var(--tinta); font-family: var(--f-titulo); font-size: 1.02rem; display: block; margin-bottom: 2px; }
+.nota { font-size: .86rem; color: var(--tinta-2); }
+.ok { fill: var(--gris); } .mas { fill: var(--mar); } .menos { fill: var(--coral); }
+.banda { fill: var(--rejilla); }
+footer { font-size: .82rem; color: var(--gris); border-top: 1px solid var(--rejilla); padding-top: 14px; display: flex; flex-direction: column; gap: 4px; }
+@media (prefers-reduced-motion: no-preference) { .punto { transition: r .15s; } }
+</style>
+
+<div class="hoja">
+  <div class="aviso" role="note"><b>Prototipo</b><span>Los 24 alumnos son simulados a partir del baremo SIN Preleo de LEEDUCA. Ningún dato corresponde a un niño real. Sirve para discutir el diseño del informe con el equipo, el ingeniero y algunos docentes.</span></div>
+
+  <header class="cab">
+    <span class="etiqueta">LEEDUCA · Informe de aula</span>
+    <h1>Velocidad lectora de 2.º B</h1>
+    <div class="cab-meta">
+      <span>2.º de primaria · 2.º trimestre (febrero)</span>
+      <span>Tarea: lectura de un texto breve en voz alta</span>
+      <span>Referencia: niños de 2.º sin Preleo, mismo trimestre (N = 465)</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="t-resumen">
+    <h2 id="t-resumen">El aula de un vistazo</h2>
+    <div class="resumen" id="resumen"></div>
+  </section>
+
+  <section aria-labelledby="t-pano">
+    <h2 id="t-pano">Panorámica</h2>
+    <div class="dos">
+      <figure class="panel">
+        <figcaption><b>¿Cuántos niños hay en cada nivel?</b> Comparado con lo que se esperaría en un aula típica del mismo curso y trimestre.</figcaption>
+        <svg id="niveles" role="img" aria-label="Porcentaje del aula en cada nivel frente al esperado"></svg>
+        <p class="nota" id="niveles-nota"></p>
+      </figure>
+      <figure class="panel">
+        <figcaption><b>¿Quién avanza como se espera?</b> Cambio de cada niño desde noviembre. La banda gris es lo que cabe esperar contando el error de medida.</figcaption>
+        <svg id="avance" role="img" aria-label="Cambio de cada alumno desde noviembre frente a la banda esperada"></svg>
+        <p class="nota" id="avance-nota"></p>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-mapa">
+    <h2 id="t-mapa">Dónde está cada niño</h2>
+    <p class="sub">Cada punto es un alumno, en palabras leídas por minuto. El fondo marca los niveles del baremo. La línea fina alrededor de cada punto es el margen de error de una sola medición (90 %): un niño cerca de un límite puede estar a cualquier lado.</p>
+    <div class="lienzo" id="mapa-env"><svg id="mapa" role="img" aria-label="Distribución de la velocidad lectora del aula sobre los niveles del baremo"></svg><div class="tip" id="tip" hidden></div></div>
+    <div class="leyenda" id="leyenda"></div>
+    <p class="nota">El número tras cada nivel es cuántos niños del aula hay en él.</p>
+  </section>
+
+  <section aria-labelledby="t-tabla">
+    <h2 id="t-tabla">Alumno por alumno</h2>
+    <p class="sub">El cambio desde el 1.er trimestre se compara con lo que avanza un niño típico en un trimestre (unas 12 palabras por minuto). Solo se marca un cambio cuando se aleja de lo esperado más de 29 ppm, porque por debajo de eso la diferencia puede deberse al azar de la medición. Pulse una fila para ver la ficha de la familia.</p>
+    <div class="tabla-env"><table>
+      <thead><tr><th>Alumno</th><th class="r">ppm feb.</th><th class="r">Percentil</th><th>Nivel</th><th class="r">ppm nov.</th><th class="r">Cambio</th><th>Lectura del cambio</th></tr></thead>
+      <tbody id="filas"></tbody>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="t-tiempo">
+    <h2 id="t-tiempo">Cuánto tiempo le cuesta leer a cada uno</h2>
+    <p class="sub">Calculado con la velocidad de cada niño. Ajuste cuántas palabras se leen al día en clase entre enunciados, fichas y textos; el valor de partida es una suposición que conviene medir en cada aula.</p>
+    <div class="controles">
+      <label for="palabras">Palabras al día: <span class="num" id="palabras-v">1.500</span></label>
+      <input type="range" id="palabras" min="300" max="4000" step="100" value="1500">
+      <div class="seg" role="group" aria-label="Tipo de lectura">
+        <button type="button" id="modo-sil" aria-pressed="true">Para comprender</button>
+        <button type="button" id="modo-alta" aria-pressed="false">En voz alta</button>
+      </div>
+    </div>
+    <div class="lienzo"><svg id="tiempos" role="img" aria-label="Minutos diarios de lectura por alumno"></svg></div>
+    <p class="metafora" id="metafora"></p>
+  </section>
+
+  <section aria-labelledby="t-familia">
+    <h2 id="t-familia">Ficha para la familia</h2>
+    <div class="controles"><label for="alumno">Alumno</label><select id="alumno"></select></div>
+    <div class="dos">
+      <article class="familia" id="familia"></article>
+      <article class="familia" id="casa">
+        <h3>Qué puede ayudar en casa</h3>
+        <ul>
+          <li>Diez minutos de lectura compartida casi todos los días: un adulto lee una línea y el niño la siguiente.</li>
+          <li>Releer el mismo texto corto dos o tres veces. La segunda lectura sale más fluida y eso le da confianza.</li>
+          <li>Elegir textos que le gusten y le resulten fáciles. La velocidad crece leyendo mucho, no con prisa.</li>
+          <li>Evitar cronometrarle o compararle con hermanos o compañeros.</li>
+        </ul>
+        <p class="sub">Si el colegio propone una valoración más completa, la velocidad es solo una de las piezas: también cuentan la precisión, la comprensión y el lenguaje oral.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="limites" aria-labelledby="t-limites">
+    <h3 id="t-limites">Lo que este informe no dice</h3>
+    <ul>
+      <li>No es un diagnóstico. Un nivel bajo en una sola medición indica que conviene observar y volver a medir.</li>
+      <li>El progreso de un niño en un solo trimestre casi nunca se distingue del error de medida. Se ve mejor a lo largo del curso, con tres o más mediciones.</li>
+      <li>La referencia son niños de colegios de Málaga evaluados en 2.º entre los cursos 2017-18 y 2019-20 sin el programa Preleo. Aún no se ajusta por la edad en meses ni por el nivel socioeconómico del centro.</li>
+      <li>Los tiempos de lectura de texto de la plataforma nueva están en revisión: las dos versiones del texto (A y B) no dan exactamente lo mismo.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>LEEDUCA · Universidad de Málaga · prototipo v1, 19/10/2026. Baremo: velocidad_lectora_v1 (referencia SIN Preleo, cohortes 2010 y 2012).</span>
+    <span>Error de medida: ETM = DT·√(1−r), con la fiabilidad entre trimestres (r ≈ .80). Cambio fiable al 90 %: índice de Jacobson-Truax con corrección por ganancia media.</span>
+  </footer>
+</div>
+
+<script>
+const D = {
+  baremo: { alta: {5:29.4,10:38.5,25:56.9,50:77.3,75:96.3,90:114.7,95:127.4}, sil: {5:43.8,10:55.2,25:72.4,50:93.4,75:113.1,90:130.7,95:144.3} },
+  dt_alta: 29.9, r_tt: .795, rc90: 29.3, ganancia: 12.3, adulto: { alta: 183, sil: 238 },
+  alumnos: [["A01",40,52,83],["A02",23,8,9],["A03",102,122,135],["A04",84,77,71],["A05",85,102,112],["A06",12,35,60],["A07",47,73,116],["A08",97,99,101],["A09",86,66,100],["A10",93,96,127],["A11",55,81,105],["A12",67,89,91],["A13",60,40,64],["A14",88,104,123],["A15",90,110,93],["A16",58,52,65],["A17",74,99,103],["A18",49,20,70],["A19",53,88,110],["A20",52,34,47],["A21",64,73,103],["A22",35,39,57],["A23",103,112,122],["A24",64,50,72]]
+    .map(([codigo, nov, feb, sil]) => ({ codigo, nov, feb, sil }))
+};
+const NIVELES = [
+  { n: 4, hasta: 5, txt: "muy severa", fam: "muy por debajo de lo habitual" },
+  { n: 3, hasta: 10, txt: "severa", fam: "bastante por debajo de lo habitual" },
+  { n: 2, hasta: 16, txt: "moderada", fam: "por debajo de lo habitual" },
+  { n: 1, hasta: 25, txt: "leve", fam: "algo por debajo de lo habitual" },
+  { n: 0, hasta: 99, txt: "sin dificultad", fam: "dentro de lo habitual" }
+];
+const ETM = D.dt_alta * Math.sqrt(1 - D.r_tt), MARGEN = 1.645 * ETM;
+
+function percentil(ppm, q) {
+  const ps = [0, 5, 10, 25, 50, 75, 90, 95, 99];
+  const vs = [0, q[5], q[10], q[25], q[50], q[75], q[90], q[95], q[95] + (q[95] - q[90])];
+  if (ppm >= vs[vs.length - 1]) return 99;
+  for (let i = 1; i < vs.length; i++) if (ppm <= vs[i]) return Math.max(1, Math.round(ps[i - 1] + (ppm - vs[i - 1]) / (vs[i] - vs[i - 1]) * (ps[i] - ps[i - 1])));
+  return 99;
+}
+const nivel = p => NIVELES.find(l => p <= l.hasta);
+const fmt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const mins = m => m < 60 ? `${fmt(m)} min` : `${Math.floor(m / 60)} h ${fmt(m % 60)} min`;
+D.alumnos.forEach(a => {
+  a.p = percentil(a.feb, D.baremo.alta); a.niv = nivel(a.p);
+  a.cambio = a.feb - a.nov; const dev = a.cambio - D.ganancia;
+  a.lectura = dev > D.rc90 ? "avanza más de lo esperado" : dev < -D.rc90 ? "avanza menos de lo esperado" : "dentro de lo esperado";
+});
+let sel = "A13";
+
+/* resumen */
+const ord = [...D.alumnos].map(a => a.feb).sort((x, y) => x - y), med = (ord[11] + ord[12]) / 2;
+const nBajo = D.alumnos.filter(a => a.niv.n >= 3).length, nVig = D.alumnos.filter(a => a.niv.n >= 1 && a.niv.n <= 2).length;
+const nMenos = D.alumnos.filter(a => a.lectura.includes("menos")).length;
+document.getElementById("resumen").innerHTML = [
+  [`${fmt(med)} ppm`, "Mediana del aula", `La del grupo de referencia es ${fmt(D.baremo.alta[50])} ppm.`],
+  [`${nBajo} de 24`, "En percentil 10 o menos", "Conviene volver a medir y observar la lectura en clase."],
+  [`${nVig} de 24`, "Entre los percentiles 11 y 25", "Zona de vigilancia: seguir en el próximo trimestre."],
+  [`${nMenos} de 24`, "Avanzan menos de lo esperado", "Cambio desde noviembre que supera el margen de error."]
+].map(([v, e, d]) => `<div class="dato"><span class="etiqueta">${e}</span><span class="v num">${v}</span><span class="d">${d}</span></div>`).join("");
+
+/* mapa del aula */
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, at, padre) => { const e = document.createElementNS(NS, t); for (const k in at) e.setAttribute(k, at[k]); if (padre) padre.appendChild(e); return e; };
+function dibujarMapa() {
+  const svg = document.getElementById("mapa"); svg.innerHTML = "";
+  const W = 900, H = 230, x0 = 40, x1 = W - 20, max = 160, X = v => x0 + (Math.min(v, max) / max) * (x1 - x0);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const q = D.baremo.alta, limites = [[0, q[5], 4], [q[5], q[10], 3], [q[10], percentilInv(16), 2], [percentilInv(16), q[25], 1], [q[25], max, 0]];
+  limites.forEach(([a, b, n]) => {
+    el("rect", { x: X(a), y: 20, width: X(b) - X(a), height: 160, class: `n${n}` }, svg);
+  });
+  [[q[10], "P10"], [q[25], "P25"], [q[50], "P50"], [q[75], "P75"], [q[90], "P90"]].forEach(([v, t]) => {
+    el("line", { x1: X(v), x2: X(v), y1: 14, y2: 186, class: "ref" }, svg); el("text", { x: X(v), y: 11, "text-anchor": "middle" }, svg).textContent = t;
+  });
+  for (let v = 0; v <= max; v += 20) { el("text", { x: X(v), y: 204, "text-anchor": "middle", class: "num" }, svg).textContent = v; }
+  el("text", { x: (x0 + x1) / 2, y: 224, "text-anchor": "middle" }, svg).textContent = "palabras por minuto (febrero)";
+  const ordenados = [...D.alumnos].sort((a, b) => a.feb - b.feb), filasY = [50, 80, 110, 140, 165];
+  const ocup = filasY.map(() => -1e9);
+  const tip = document.getElementById("tip"), env = document.getElementById("mapa-env");
+  ordenados.forEach(a => {
+    const cx = X(a.feb); let k = ocup.findIndex(u => cx - u > 22); if (k < 0) k = ocup.indexOf(Math.min(...ocup)); ocup[k] = cx; const cy = filasY[k];
+    el("line", { x1: X(Math.max(0, a.feb - MARGEN)), x2: X(a.feb + MARGEN), y1: cy, y2: cy, class: "bigote" }, svg);
+    const c = el("circle", { cx, cy, r: a.codigo === sel ? 9 : 7, class: "punto" + (a.codigo === sel ? " sel" : ""), tabindex: 0 }, svg);
+    const mostrar = () => { const bb = svg.getBoundingClientRect(), eb = env.getBoundingClientRect(); tip.hidden = false;
+      tip.textContent = `${a.codigo} · ${a.feb} ppm · percentil ${a.p} · ${a.niv.txt}`;
+      tip.style.left = (bb.left - eb.left + env.scrollLeft + cx / W * bb.width) + "px"; tip.style.top = (bb.top - eb.top + cy / H * bb.height) + "px"; };
+    c.addEventListener("mouseenter", mostrar); c.addEventListener("focus", mostrar);
+    c.addEventListener("mouseleave", () => tip.hidden = true); c.addEventListener("blur", () => tip.hidden = true);
+    c.addEventListener("click", () => elegir(a.codigo));
+  });
+}
+function percentilInv(p) { let lo = 0, hi = 200; for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; percentil(m, D.baremo.alta) < p ? lo = m : hi = m; } return (lo + hi) / 2; }
+document.getElementById("leyenda").innerHTML = NIVELES.slice().reverse().map(l => { const k = D.alumnos.filter(a => a.niv.n === l.n).length; return `<span><i class="sw b${l.n}"></i>${l.n === 0 ? "Sin dificultad (> P25)" : `Nivel ${l.n}: ${l.txt} (≤ P${l.hasta})`} · <b>${k}</b></span>`; }).join("");
+
+/* tabla */
+function dibujarTabla() {
+  document.getElementById("filas").innerHTML = [...D.alumnos].sort((a, b) => a.feb - b.feb).map(a => `<tr data-c="${a.codigo}" tabindex="0" class="${a.codigo === sel ? "sel" : ""}">
+    <td><b>${a.codigo}</b></td><td class="r num">${a.feb}</td><td class="r num">${a.p}</td>
+    <td><span class="chip b${a.niv.n}">${a.niv.n === 0 ? "—" : a.niv.n + " · " + a.niv.txt}</span></td>
+    <td class="r num">${a.nov}</td><td class="r num">${a.cambio > 0 ? "+" : ""}${a.cambio}</td>
+    <td class="${a.lectura.includes("más") ? "cambio-mas" : a.lectura.includes("menos") ? "cambio-menos" : ""}">${a.lectura}</td></tr>`).join("");
+  document.querySelectorAll("#filas tr").forEach(tr => { tr.addEventListener("click", () => elegir(tr.dataset.c)); tr.addEventListener("keydown", e => { if (e.key === "Enter") elegir(tr.dataset.c); }); });
+}
+
+/* tiempo */
+let modo = "sil";
+function dibujarTiempos() {
+  const palabras = +document.getElementById("palabras").value; document.getElementById("palabras-v").textContent = fmt(palabras);
+  const v = a => modo === "sil" ? a.sil : a.feb, adulto = D.adulto[modo], mediana = D.baremo[modo][50];
+  const filas = [...D.alumnos].map(a => ({ a, m: palabras / Math.max(v(a), 5) })).sort((x, y) => y.m - x.m);
+  const svg = document.getElementById("tiempos"); svg.innerHTML = "";
+  const W = 900, fila = 22, top = 26, H = top + filas.length * fila + 30, x0 = 60, x1 = W - 70;
+  const max = Math.max(...filas.map(f => f.m)) * 1.05, X = m => x0 + m / max * (x1 - x0);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const tA = palabras / adulto, tM = palabras / mediana;
+  el("line", { x1: X(tA), x2: X(tA), y1: top - 8, y2: H - 26, class: "ref" }, svg);
+  el("text", { x: X(tA) + 4, y: top - 12 }, svg).textContent = `adulto: ${mins(Math.round(tA))}`;
+  el("line", { x1: X(tM), x2: X(tM), y1: top - 8, y2: H - 26, class: "ref" }, svg);
+  el("text", { x: X(tM) + 4, y: H - 12 }, svg).textContent = `niño típico de 2.º: ${mins(Math.round(tM))}`;
+  filas.forEach(({ a, m }, i) => {
+    const y = top + i * fila, s = a.codigo === sel;
+    el("text", { x: x0 - 8, y: y + 14, "text-anchor": "end", style: s ? "font-weight:700;fill:var(--tinta)" : "" }, svg).textContent = a.codigo;
+    const r = el("rect", { x: x0, y: y + 3, width: Math.max(2, X(m) - x0), height: fila - 7, rx: 3, style: `fill:${s ? "var(--mar)" : m > tM * 1.5 ? "var(--coral)" : "var(--gris)"};fill-opacity:${s ? 1 : .55};cursor:pointer` }, svg);
+    r.addEventListener("click", () => elegir(a.codigo));
+    el("text", { x: X(m) + 6, y: y + 14, class: "num" }, svg).textContent = mins(Math.round(m));
+  });
+  const a = D.alumnos.find(x => x.codigo === sel), ta = palabras / Math.max(v(a), 5), mult = adulto / Math.max(v(a), 5);
+  document.getElementById("metafora").innerHTML = `Con ${fmt(palabras)} palabras al día, ${a.codigo} necesita <b>${mins(Math.round(ta))}</b> solo para leerlas; un compañero típico, ${mins(Math.round(tM))}. ` +
+    `Lo que a un adulto le cuesta 10 minutos, a ${a.codigo} le cuesta <b>${mins(Math.round(10 * mult))}</b>. A la semana son ${mins(Math.round(ta * 5))} de lectura, ` +
+    `${ta > tM ? `${mins(Math.round((ta - tM) * 5))} más que un compañero típico` : "algo menos que un compañero típico"}.`;
+}
+document.getElementById("palabras").addEventListener("input", dibujarTiempos);
+[["modo-sil", "sil"], ["modo-alta", "alta"]].forEach(([id, m]) => document.getElementById(id).addEventListener("click", () => {
+  modo = m; document.getElementById("modo-sil").setAttribute("aria-pressed", m === "sil"); document.getElementById("modo-alta").setAttribute("aria-pressed", m === "alta"); dibujarTiempos(); }));
+
+/* familia */
+const selA = document.getElementById("alumno");
+selA.innerHTML = D.alumnos.map(a => `<option value="${a.codigo}">${a.codigo}</option>`).join("");
+selA.addEventListener("change", () => elegir(selA.value));
+function dibujarFamilia() {
+  const a = D.alumnos.find(x => x.codigo === sel), pl = Math.max(1, Math.round(percentil(Math.max(0, a.feb - MARGEN), D.baremo.alta))), ph = Math.min(99, percentil(a.feb + MARGEN, D.baremo.alta));
+  const mins300 = Math.round(300 / Math.max(a.feb, 5) * 10) / 10;
+  document.getElementById("familia").innerHTML = `
+    <span class="etiqueta">Alumno ${a.codigo} · 2.º de primaria · febrero</span>
+    <div><span class="grande num">${a.feb}</span> <span>palabras por minuto leyendo en voz alta</span></div>
+    <p>Lee más rápido que ${a.p} de cada 100 niños de su curso en esta época del año. Su velocidad está <b>${a.niv.fam}</b>. Por el margen de error de una sola prueba, su posición real puede estar entre ${pl} y ${ph} de cada 100.</p>
+    <p>Desde noviembre ha pasado de ${a.nov} a ${a.feb} palabras por minuto (${a.cambio > 0 ? "+" : ""}${a.cambio}). ${a.lectura === "dentro de lo esperado" ? "Es un cambio parecido al de la mayoría de los niños." : a.lectura.includes("más") ? "Ha avanzado más que la mayoría de los niños en este tiempo." : "Ha avanzado menos que la mayoría; el colegio volverá a medirlo el próximo trimestre."}</p>
+    <p>Para hacerse una idea: una página de cuento de unas 300 palabras le lleva unos ${String(mins300).replace(".", ",")} minutos.</p>`;
+  selA.value = sel;
+}
+/* panorámica: niveles del aula frente a lo esperado */
+function dibujarNiveles() {
+  const svg = document.getElementById("niveles"); svg.innerHTML = "";
+  const W = 460, H = 150, x0 = 78, x1 = W - 24, Xs = v => x0 + v / 100 * (x1 - x0);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const esperado = { 4: 5, 3: 5, 2: 6, 1: 9, 0: 75 }, n = D.alumnos.length;
+  const aula = {}; [4, 3, 2, 1, 0].forEach(k => aula[k] = 100 * D.alumnos.filter(a => a.niv.n === k).length / n);
+  [["Aula", aula, 30], ["Esperado", esperado, 82]].forEach(([et, dist, y]) => {
+    el("text", { x: x0 - 8, y: y + 22, "text-anchor": "end", style: "font-weight:700;fill:var(--tinta)" }, svg).textContent = et;
+    let acc = 0;
+    [4, 3, 2, 1, 0].forEach(k => {
+      const w = Xs(acc + dist[k]) - Xs(acc);
+      if (w > 0) {
+        const r = el("rect", { x: Xs(acc), y, width: Math.max(w - 2, 0), height: 36, rx: 3, class: `n${k}` }, svg);
+        el("title", {}, r).textContent = `${et}: ${Math.round(dist[k])} % en ${k === 0 ? "sin dificultad" : "nivel " + k}`;
+        if (w > 26) el("text", { x: Xs(acc) + w / 2 - 1, y: y + 23, "text-anchor": "middle", class: "num", style: "fill:var(--tinta);font-weight:700" }, svg).textContent = `${Math.round(dist[k])} %`;
+      }
+      acc += dist[k];
+    });
+  });
+  [0, 25, 50, 75, 100].forEach(v => el("text", { x: Xs(v), y: 140, "text-anchor": "middle", class: "num" }, svg).textContent = v + " %");
+  const b = D.alumnos.filter(a => a.niv.n >= 3).length, e = (n * .10).toFixed(1).replace(".", ",");
+  document.getElementById("niveles-nota").textContent = `${b} niños en los niveles 3–4 (percentil 10 o menos); en un aula típica de ${n} serían unos ${e}. ` +
+    (b > n * .10 * 2 ? "Es más del doble de lo esperable: conviene revisar la lectura en el aula, no solo a cada niño." : "Está dentro de lo esperable para un aula de este tamaño.");
+}
+/* panorámica: avance desde noviembre frente a la banda esperada */
+function dibujarAvance() {
+  const svg = document.getElementById("avance"); svg.innerHTML = "";
+  const W = 460, H = 230, x0 = 46, x1 = W - 12, y0 = 14, y1 = H - 36, xmax = 140, ymin = -50, ymax = 60;
+  const X = v => x0 + Math.min(v, xmax) / xmax * (x1 - x0), Y = v => y1 - (Math.max(ymin, Math.min(v, ymax)) - ymin) / (ymax - ymin) * (y1 - y0);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  el("rect", { x: x0, y: Y(D.ganancia + D.rc90), width: x1 - x0, height: Y(D.ganancia - D.rc90) - Y(D.ganancia + D.rc90), class: "banda" }, svg);
+  el("line", { x1: x0, x2: x1, y1: Y(D.ganancia), y2: Y(D.ganancia), class: "ref" }, svg);
+  el("line", { x1: x0, x2: x1, y1: Y(0), y2: Y(0), style: "stroke:var(--gris);stroke-width:1" }, svg);
+  el("text", { x: x1 - 4, y: Y(D.ganancia) - 5, "text-anchor": "end" }, svg).textContent = `avance típico: +${fmt(D.ganancia)}`;
+  el("text", { x: x1 - 4, y: Y(D.ganancia + D.rc90) + 13, "text-anchor": "end" }, svg).textContent = "dentro de lo esperado";
+  [-40, -20, 0, 20, 40, 60].forEach(v => el("text", { x: x0 - 6, y: Y(v) + 4, "text-anchor": "end", class: "num" }, svg).textContent = (v > 0 ? "+" : "") + v);
+  [0, 40, 80, 120].forEach(v => el("text", { x: X(v), y: y1 + 16, "text-anchor": "middle", class: "num" }, svg).textContent = v);
+  el("text", { x: (x0 + x1) / 2, y: H - 4, "text-anchor": "middle" }, svg).textContent = "ppm en noviembre";
+  D.alumnos.forEach(a => {
+    const cl = a.lectura.includes("más") ? "mas" : a.lectura.includes("menos") ? "menos" : "ok";
+    const c = el("circle", { cx: X(a.nov), cy: Y(a.cambio), r: a.codigo === sel ? 7 : 5, class: cl, style: `stroke:var(--hoja);stroke-width:1.5;cursor:pointer${a.codigo === sel ? ";stroke:var(--tinta);stroke-width:2" : ""}` }, svg);
+    el("title", {}, c).textContent = `${a.codigo}: de ${a.nov} a ${a.feb} ppm (${a.cambio > 0 ? "+" : ""}${a.cambio}) · ${a.lectura}`;
+    c.addEventListener("click", () => elegir(a.codigo));
+  });
+  const mas = D.alumnos.filter(a => a.lectura.includes("más")).length, menos = D.alumnos.filter(a => a.lectura.includes("menos")).length;
+  document.getElementById("avance-nota").innerHTML = `<b style="color:var(--coral)">${menos}</b> avanzan menos de lo esperado y <b style="color:var(--mar)">${mas}</b> más; ` +
+    `los otros ${D.alumnos.length - mas - menos} están dentro de la banda. Un solo trimestre es poco para juzgar a un niño: la banda es ancha (±${fmt(D.rc90)} ppm).`;
+}
+function elegir(c) { sel = c; dibujarNiveles(); dibujarAvance(); dibujarMapa(); dibujarTabla(); dibujarTiempos(); dibujarFamilia(); }
+elegir(sel);
+window.addEventListener("resize", () => document.getElementById("tip").hidden = true);
+</script>
+
+</body>
+</html>
