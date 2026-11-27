@@ -1,0 +1,2593 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Initial phoneme isolation – LEEDUCA Platform Technical Manual</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../fichas/auto/CF_SEGMENTACION_FONEMICA.en.html" rel="next">
+<link href="../../fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e01e92ab3eea49296e7f9c1c28bd1566.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../fichas/auto/CF_CONTAR_SILABAS.en.html">Task sheets · Phonological skills</a></li><li class="breadcrumb-item"><a href="../../fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.html"><span class="chapter-title">Initial phoneme isolation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">LEEDUCA Platform Technical Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://abarejo.github.io/leeduca-manual/" title="Versión en español (completa)" class="quarto-navigation-tool px-1" aria-label="Versión en español (completa)"><i class="bi bi-translate"></i></a>
+    <a href="https://github.com/abarejo/leeduca-manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../summary-en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical summary (English)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../definicion.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What we measure in light of the new definition of dyslexia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">The platform and the sample</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plataforma.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The LEEDUCA platform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../estudio-normativo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Normative study</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Psychometrics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../metodo-psicometrico.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Psychometric method</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../resultados-globales.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overall results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../riesgo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">How we estimate risk and reading difficulty</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../limites.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Limitations and data quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tasks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../catalogo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Task catalog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/index.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Class A task sheets</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Reading</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/VEL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading speed in words per minute</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial letter identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_LECT_COMPRENSIVA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading for comprehension (second reading)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_LETRAS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Letter knowledge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PAL_1sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: one syllable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PAL_2sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: two syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PAL_3sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: three syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PAL_4sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: four syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PSEUDO_2sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: two syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PSEUDO_3sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: three syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_PSEUDO_4sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: four syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_SILABAS_COMPLEJA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Complex syllable reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_SILABAS_SIMPLE.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple syllable reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_VEL_TEXTO.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Text reading rate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading vocabulary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/LEC_DECISION_ORTOGRAFICA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orthographic decision</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Task sheets · Phonological skills</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_CONTAR_SILABAS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllable counting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final phoneme isolation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Initial phoneme isolation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SEGMENTACION_FONEMICA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phoneme segmentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_FONEMAS_TP.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phoneme deletion (all positions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_FONEMA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final phoneme deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_FONEMA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial phoneme deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_SILABAS_TP.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllable deletion (all positions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_SILABA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final syllable deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_SILABA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial syllable deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Deletion of the syllable /xa/</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Oral language</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vocabulary: definitions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Numerical cognition</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting backwards (1–10)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting backwards (11–20)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting forwards (11–20)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/MATE_ET_VERB_ARABIGOS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arabic numeral naming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Executive functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../fichas/auto/F_EJEC_INH_INHIBICION.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inhibition</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glosario.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary (Spanish–English)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../referencias.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#how-it-is-programmed-on-the-platform" id="toc-how-it-is-programmed-on-the-platform" class="nav-link" data-scroll-target="#how-it-is-programmed-on-the-platform">How it is programmed on the platform</a></li>
+  <li><a href="#theoretical-framework" id="toc-theoretical-framework" class="nav-link" data-scroll-target="#theoretical-framework">Theoretical framework</a></li>
+  <li><a href="#sample-and-descriptive-statistics" id="toc-sample-and-descriptive-statistics" class="nav-link" data-scroll-target="#sample-and-descriptive-statistics">Sample and descriptive statistics</a></li>
+  <li><a href="#reliability" id="toc-reliability" class="nav-link" data-scroll-target="#reliability">Reliability</a></li>
+  <li><a href="#validity" id="toc-validity" class="nav-link" data-scroll-target="#validity">Validity</a></li>
+  <li><a href="#provisional-norms" id="toc-provisional-norms" class="nav-link" data-scroll-target="#provisional-norms">Provisional norms</a>
+  <ul class="collapse">
+  <li><a href="#forms-can-they-be-pooled" id="toc-forms-can-they-be-pooled" class="nav-link" data-scroll-target="#forms-can-they-be-pooled">Forms: can they be pooled?</a></li>
+  </ul></li>
+  <li><a href="#variables-that-affect-it" id="toc-variables-that-affect-it" class="nav-link" data-scroll-target="#variables-that-affect-it">Variables that affect it</a></li>
+  <li><a href="#for-publications" id="toc-for-publications" class="nav-link" data-scroll-target="#for-publications">For publications</a></li>
+  <li><a href="#pending-issues" id="toc-pending-issues" class="nav-link" data-scroll-target="#pending-issues">Pending issues</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../fichas/auto/CF_CONTAR_SILABAS.en.html">Task sheets · Phonological skills</a></li><li class="breadcrumb-item"><a href="../../fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.html"><span class="chapter-title">Initial phoneme isolation</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Initial phoneme isolation</span></h1>
+<p class="subtitle lead">Automatically generated task sheet · CF_IDENTIFICACION_FONEMA_INICIAL</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Automatically generated task sheet</strong> (A · Accuracy; quality class A). Generated on November 27, 2026 with <code>scripts/R/ficha_generica_v3.R --tarea CF_IDENTIFICACION_FONEMA_INICIAL</code>. Figures come from the data; the theoretical framework is shared by the tasks of the same construct. <strong>Interpretation and team review are missing.</strong> Spanish name: <em>Identificación del fonema inicial</em>. <a href="https://abarejo.github.io/leeduca-manual/fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.html">Spanish version</a>.</p>
+</div>
+</div>
+</div>
+<p><strong>In one sentence.</strong> Initial phoneme isolation, from age 5 to 6 (1,981 administrations in 4 cohorts; 2 forms). Stability across time points ρ = .27. AUC .56–.78 against persistent reading difficulty.</p>
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Codes</td>
+<td>1675 1896</td>
+</tr>
+<tr class="even">
+<td>Battery</td>
+<td>LEEDUCA</td>
+</tr>
+<tr class="odd">
+<td>Format</td>
+<td>forced choice</td>
+</tr>
+<tr class="even">
+<td>Items</td>
+<td>11 (1896); 20 (1675) according to the platform</td>
+</tr>
+<tr class="odd">
+<td>Task family</td>
+<td>A · Accuracy</td>
+</tr>
+<tr class="even">
+<td>Score</td>
+<td>Correct responses</td>
+</tr>
+<tr class="odd">
+<td>Instructions (platform)</td>
+<td>The child says the initial sound in the CVC o CCVC syllables pronounced by the experimenter.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-it-is-programmed-on-the-platform" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-is-programmed-on-the-platform">How it is programmed on the platform</h2>
+<p>The platform is the reference: what the activity actually presents is what is measured. Configuration read from the activity itself on 23/10/2026 (without modifying it). Cell contents are in Spanish.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 15%">
+<col style="width: 34%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Code</th>
+<th style="text-align: left;">Name on the platform</th>
+<th style="text-align: left;">Presentation</th>
+<th style="text-align: right;">Test items</th>
+<th style="text-align: right;">Practice items</th>
+<th style="text-align: left;">Example items</th>
+<th style="text-align: left;">Time limit</th>
+<th style="text-align: left;">Order</th>
+<th style="text-align: left;">Scoring</th>
+<th style="text-align: right;">Age.term (label 3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1896</td>
+<td style="text-align: left;">Identificar fonemas</td>
+<td style="text-align: left;">Un estímulo por pantalla; el evaluador marca acierto o error</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">fijo</td>
+<td style="text-align: left;">Aciertos</td>
+<td style="text-align: right;">5.1, 6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1675</td>
+<td style="text-align: left;">Identificar fonema Inicial</td>
+<td style="text-align: left;">Un dibujo o lámina por pantalla</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">fijo</td>
+<td style="text-align: left;">Aciertos</td>
+<td style="text-align: right;">5, 6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Differences from the dictionary or the instructions (in Spanish):</strong></p>
+<ul>
+<li><strong>1896.</strong> 11 sílabas CVC/CCVC; las instrucciones hablan de 10.</li>
+<li><strong>1675.</strong> 4 ejemplos + 20 dibujos.</li>
+</ul>
+<p><em>Age.term: provisional reading of the activity’s label 3 (3rd digit = age, 4th = term; 0 = annual), to be confirmed with the engineer.</em></p>
+<p><strong>How it looks on the platform</strong> (first item or example; 2026 screenshot; the interface is in Spanish).</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../figuras/plataforma/1675.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="1675 · Identificar fonema Inicial"><img src="../../figuras/plataforma/1675.jpg" class="img-fluid figure-img" alt="Screenshot of activity 1675"></a></p>
+<figcaption>1675 · Identificar fonema Inicial</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../figuras/plataforma/1896.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="1896 · Identificar fonemas"><img src="../../figuras/plataforma/1896.jpg" class="img-fluid figure-img" alt="Screenshot of activity 1896"></a></p>
+<figcaption>1896 · Identificar fonemas</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="theoretical-framework" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-framework">Theoretical framework</h2>
+<p>Phonological awareness is the ability to reflect on and manipulate the sounds of speech. The platform’s tasks cover a continuum of difficulty:</p>
+<ul>
+<li>by <strong>unit</strong>: syllable or phoneme;</li>
+<li>by <strong>operation</strong>: counting, identifying, segmenting or deleting;</li>
+<li>by <strong>position</strong>: initial, final or any.</li>
+</ul>
+<p>The “all positions” version mixes items and is the most demanding.</p>
+<p><strong>What the evidence says:</strong></p>
+<ul>
+<li><strong>Phonemes and manipulation are what most distinguish dyslexia.</strong> In 2,252 children from six European languages, phoneme deletion and RAN were the strongest concurrent predictors of dyslexia <span class="citation" data-cites="landerl2013predictors">(<a href="../../referencias.en.html#ref-landerl2013predictors" role="doc-biblioref">Landerl et al. 2013</a>)</span>. In consistent orthographies, children with dyslexia perform below even younger readers of the same reading level on phoneme manipulation tasks, but not on syllable tasks <span class="citation" data-cites="parrila2020rlmatch">(<a href="../../referencias.en.html#ref-parrila2020rlmatch" role="doc-biblioref">Parrila et al. 2020</a>)</span>.</li>
+<li><strong>In Spanish, phonological awareness develops in stages</strong>, from the syllable to the phoneme. Phonemic awareness builds on learning to read and at the same time drives it: the relation is reciprocal <span class="citation" data-cites="denton2000pa">(<a href="../../referencias.en.html#ref-denton2000pa" role="doc-biblioref">Denton et al. 2000</a>)</span>. Phonological awareness predicts above all the reading of complex syllables <span class="citation" data-cites="martinez2020silabica">(<a href="../../referencias.en.html#ref-martinez2020silabica" role="doc-biblioref">Martínez and Goikoetxea 2020</a>)</span>.</li>
+<li><strong>Its predictive value is universal, but changes with age.</strong> Phonemic awareness, letters and RAN predict reading growth equally in Spanish, Czech and English <span class="citation" data-cites="caravolas2013growth">(<a href="../../referencias.en.html#ref-caravolas2013growth" role="doc-biblioref">Caravolas et al. 2013</a>)</span>. Its relation with fluency, however, is more complex and depends on task and age, whereas RAN predicts fluency in all languages <span class="citation" data-cites="landerl2019pa">(<a href="../../referencias.en.html#ref-landerl2019pa" role="doc-biblioref">Landerl et al. 2019</a>)</span>. This is what <span class="citation" data-cites="catts2026definicion">Catts, Haynes, and Joshi (<a href="../../referencias.en.html#ref-catts2026definicion" role="doc-biblioref">2026</a>)</span> lead us to expect: precursors are useful for early prognosis and lose weight once there is reading to measure.</li>
+</ul>
+<p>The pilot task sheets develop this framework in more detail: <a href="https://abarejo.github.io/leeduca-manual/fichas/CF523.html">syllable counting</a> and <a href="https://abarejo.github.io/leeduca-manual/fichas/RAN.html">rapid naming</a> (<em>in Spanish</em>).</p>
+<p><strong>What our data show.</strong> The pattern matches the literature:</p>
+<ul>
+<li><strong>What predicts best.</strong> Deletion tasks in all positions are those that best predict low Woodcock-Muñoz fluency (median AUC .72–.73, up to .81).</li>
+<li><strong>In between.</strong> The other deletion and identification tasks (.63–.68).</li>
+<li><strong>What predicts least.</strong> Phoneme segmentation and syllable counting (.60–.62).</li>
+<li><strong>Consistency and stability.</strong> Internal consistency is good (α = .82–.94), but stability between terms is low (ρ = .27–.41). Many tasks were given in only one or two sessions, and children change quickly at these ages. For an individual decision, the result should be confirmed at two time points.</li>
+</ul>
+</section>
+<section id="sample-and-descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="sample-and-descriptive-statistics">Sample and descriptive statistics</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 16%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Time point</th>
+<th style="text-align: right;">Form</th>
+<th style="text-align: right;">Cohort</th>
+<th style="text-align: right;">Session</th>
+<th style="text-align: left;">School year</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Non-Preleo</th>
+<th style="text-align: right;">Preleo</th>
+<th style="text-align: right;">Schools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: left;">2015/16</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: left;">2016/17</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">629</td>
+<td style="text-align: left;">2018/19</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">907</td>
+<td style="text-align: left;">2019/20</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">152</td>
+<td style="text-align: left;">2016/17</td>
+<td style="text-align: right;">919</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">655</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">898</td>
+<td style="text-align: left;">2019/20</td>
+<td style="text-align: right;">558</td>
+<td style="text-align: right;">398</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">35</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 13%">
+<col style="width: 4%">
+<col style="width: 20%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Form</th>
+<th style="text-align: right;">Time point</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Cohorts</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">SD</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Skewness</th>
+<th style="text-align: right;">% floor</th>
+<th style="text-align: right;">% ceiling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">2010, 2013, 2014</td>
+<td style="text-align: right;">6.06</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-0.39</td>
+<td style="text-align: right;">5.17</td>
+<td style="text-align: right;">4.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">661</td>
+<td style="text-align: right;">2010, 2013</td>
+<td style="text-align: right;">8.95</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">-1.64</td>
+<td style="text-align: right;">3.93</td>
+<td style="text-align: right;">50.83</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Score range</strong> (non-Preleo group, in correct responses). The usual range goes from P1 to P99 (98% of the children). The minimum–maximum is the one observed after cleaning; the possible range is 0–11 correct responses.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 14%">
+<col style="width: 5%">
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 20%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Form</th>
+<th style="text-align: right;">Time point</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: left;">Usual range (P1–P99)</th>
+<th style="text-align: left;">Min.–max.</th>
+<th style="text-align: left;">Possible range</th>
+<th style="text-align: right;">Warning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: left;">0–11</td>
+<td style="text-align: left;">0–11</td>
+<td style="text-align: left;">0–11</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">661</td>
+<td style="text-align: left;">0–11</td>
+<td style="text-align: left;">0–11</td>
+<td style="text-align: left;">0–11</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reliability" class="level2">
+<h2 class="anchored" data-anchor-id="reliability">Reliability</h2>
+<p>Stability across time points in the same children: ρ from .27 (median .27, 1 pairs of time points). Internal consistency in the 2021 analyses: α = .92.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Cohort</th>
+<th style="text-align: right;">From</th>
+<th style="text-align: right;">To</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">r</th>
+<th style="text-align: right;">ρ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">132</td>
+<td style="text-align: right;">0.27</td>
+<td style="text-align: right;">0.27</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="validity" class="level2">
+<h2 class="anchored" data-anchor-id="validity">Validity</h2>
+<p><strong>Concurrent.</strong> With other tasks in its own domain (Phonological awareness), r = .23–.70. Outside its domain, the highest relation is with: Oral morphosyntax (5.2, r = .26); Word and text reading (6.1, r = .56).</p>
+<p><strong>Against reading difficulty and comprehension.</strong> Against persistent difficulty, AUC .56–.78. Against poor comprehension one or two school years later (non-circular criterion), AUC .56–.61.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../figuras/Ficha_auto_CF_IDENTIFICACION_FONEMA_INICIAL_F2_validez.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Validity: AUC with 95% confidence interval (labels in Spanish)."><img src="../../figuras/Ficha_auto_CF_IDENTIFICACION_FONEMA_INICIAL_F2_validez.png" class="img-fluid figure-img" style="width:85.0%" alt="Validity: AUC with 95% confidence interval (labels in Spanish)."></a></p>
+<figcaption>Validity: AUC with 95% confidence interval (labels in Spanish).</figcaption>
+</figure>
+</div>
+<p><strong>Against an external criterion, years later.</strong> Against low Woodcock-Muñoz reading fluency in 2021/22 (<a href="https://abarejo.github.io/leeduca-manual/criterio-woodcock.html">chapter</a>, <em>in Spanish</em>), AUC .63–.63 (2 time points; 430–654 children).</p>
+</section>
+<section id="provisional-norms" class="level2">
+<h2 class="anchored" data-anchor-id="provisional-norms">Provisional norms</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 16%">
+<col style="width: 6%">
+<col style="width: 26%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Form</th>
+<th style="text-align: right;">Time point</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Cohorts</th>
+<th style="text-align: right;">P5</th>
+<th style="text-align: right;">P10</th>
+<th style="text-align: right;">P16</th>
+<th style="text-align: right;">P25</th>
+<th style="text-align: right;">P50</th>
+<th style="text-align: right;">P75</th>
+<th style="text-align: right;">P90</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">2010, 2013, 2014</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4.8</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">661</td>
+<td style="text-align: right;">2010, 2013</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+</tr>
+</tbody>
+</table>
+<p>Each form (platform code) has its own norms, because the forms need not measure on the same scale.</p>
+<p>These are norms by time point (school year × term). For dates between assessments and time points without a normative sample, study M3 proposes continuous norms on <strong>months of instruction</strong>, not on age, with relative age within the school year as an adjustment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../figuras/Ficha_auto_CF_IDENTIFICACION_FONEMA_INICIAL_F1_baremo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Provisional norms (non-Preleo schools; labels in Spanish)."><img src="../../figuras/Ficha_auto_CF_IDENTIFICACION_FONEMA_INICIAL_F1_baremo.png" class="img-fluid figure-img" style="width:85.0%" alt="Provisional norms (non-Preleo schools; labels in Spanish)."></a></p>
+<figcaption>Provisional norms (non-Preleo schools; labels in Spanish).</figcaption>
+</figure>
+</div>
+<section id="forms-can-they-be-pooled" class="level3">
+<h3 class="anchored" data-anchor-id="forms-can-they-be-pooled">Forms: can they be pooled?</h3>
+<p>Forms given at the same time point are compared. They are considered <strong>equivalent</strong> if the mean difference is smaller than 0.20 SD and the SD ratio is between 0.80 and 1.25. If the same children took them, <strong>linear equating</strong> is also computed, which puts the second form on the scale of the first, together with the correlation between forms (parallel-forms reliability). If the groups differ, the difference mixes form and cohort.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 17%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Time point</th>
+<th style="text-align: right;">Form 1</th>
+<th style="text-align: right;">Form 2</th>
+<th style="text-align: left;">Comparison</th>
+<th style="text-align: right;">d (2 − 1)</th>
+<th style="text-align: right;">SD ratio</th>
+<th style="text-align: left;">Verdict</th>
+<th style="text-align: left;">r between forms</th>
+<th style="text-align: left;">Equating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">different groups</td>
+<td style="text-align: right;">-0.09</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">equivalent</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="variables-that-affect-it" class="level2">
+<h2 class="anchored" data-anchor-id="variables-that-affect-it">Variables that affect it</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 15%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: right;">Time point</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Effect</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">School SES (ρ)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">491</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.683</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sex (d girl − boy; coding under review)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">485</td>
+<td style="text-align: right;">0.066</td>
+<td style="text-align: right;">0.467</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Relative age (ρ with age in months)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">486</td>
+<td style="text-align: right;">0.040</td>
+<td style="text-align: right;">0.384</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">School (ICC)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">0.038</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">School SES (ρ)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,477</td>
+<td style="text-align: right;">0.144</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sex (d girl − boy; coding under review)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,473</td>
+<td style="text-align: right;">-0.015</td>
+<td style="text-align: right;">0.769</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Relative age (ρ with age in months)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,474</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.642</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">School (ICC)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,477</td>
+<td style="text-align: right;">0.160</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="for-publications" class="level2">
+<h2 class="anchored" data-anchor-id="for-publications">For publications</h2>
+<p>The LEEDUCA platform task “Initial phoneme isolation” (codes 1675 and 1896; LEEDUCA battery) assesses phonemic awareness (initial phoneme isolation). The child selects a response among the options presented on the screen. It comprises 11 items. The time limit is 120 seconds. It is administered individually on a computer at school. In the 2010, 2011, 2013 and 2014 cohorts it was administered in 6 sessions, from 5 to 6 years of age. The main outcome is the number of correct responses. In our data (2021 analyses), internal consistency was α = .92 (N = 1,546, 11 items). Stability across successive administrations (median interval of 8 months) was ρ = .43 (median of 2 session pairs; range .40–.47). Stability across time points was ρ = .27. Against later poor reading comprehension, AUC = .56–.61.</p>
+</section>
+<section id="pending-issues" class="level2">
+<h2 class="anchored" data-anchor-id="pending-issues">Pending issues</h2>
+<ul>
+<li>Ceiling effect at 6.1 (form 1896) (more than 15% of children with the maximum score).</li>
+<li>The task has 2 forms; in 0 of 1 comparisons they have different scales. Norms are given by form (see “Forms”).</li>
+<li>La puntuación máxima observada (24) supera el número de ítems (11): puede que se puntúen los ítems de ejemplo, que haya una versión con más ítems o un error de datos. Comprobar antes de describir la tarea y distinguir ítems de prueba y de ejemplo. <em>(Spanish)</em></li>
+<li>Write the interpretation; review with the team.</li>
+</ul>
+<details>
+<summary>
+Full tables <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/</code>
+</summary>
+<p><em>These tables are printed as produced by the analysis scripts; sheet and column names are in Spanish (see the <a href="../../glosario.en.html">glossary</a>).</em></p>
+<details>
+<summary>
+0 Ficha <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/0_Ficha.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 26%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">tarea_canonica</th>
+<th style="text-align: left;">tarea</th>
+<th style="text-align: left;">familia</th>
+<th style="text-align: left;">puntuacion</th>
+<th style="text-align: right;">codigos</th>
+<th style="text-align: left;">clase</th>
+<th style="text-align: right;">items</th>
+<th style="text-align: left;">circular_con_etiqueta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CF_IDENTIFICACION_FONEMA_INICIAL</td>
+<td style="text-align: left;">Identificación del fonema inicial</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">Aciertos</td>
+<td style="text-align: right;">1675 1896</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+0 Limpieza <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/0_Limpieza.csv</code>
+</summary>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">cohorte</th>
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">forma</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">sin aciertos válidos</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">sin aciertos válidos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">sin aciertos válidos</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">638</td>
+<td style="text-align: left;">más aciertos que ítems (11)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">701</td>
+<td style="text-align: left;">más aciertos que ítems (11)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">580</td>
+<td style="text-align: left;">más aciertos que ítems (11)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">307</td>
+<td style="text-align: left;">más aciertos que ítems (11)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+1 Muestra <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/1_Muestra.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 10%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">cohorte</th>
+<th style="text-align: right;">sesion</th>
+<th style="text-align: left;">curso_escolar</th>
+<th style="text-align: left;">plataforma</th>
+<th style="text-align: right;">forma</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">SIN</th>
+<th style="text-align: right;">CON</th>
+<th style="text-align: right;">colegios</th>
+<th style="text-align: right;">pct_con_ISE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: left;">2015/16</td>
+<td style="text-align: left;">antigua</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: left;">2016/17</td>
+<td style="text-align: left;">antigua</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">99</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">629</td>
+<td style="text-align: left;">2018/19</td>
+<td style="text-align: left;">nueva</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">907</td>
+<td style="text-align: left;">2019/20</td>
+<td style="text-align: left;">nueva</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">83</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">152</td>
+<td style="text-align: left;">2016/17</td>
+<td style="text-align: left;">antigua</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">919</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">655</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">898</td>
+<td style="text-align: left;">2019/20</td>
+<td style="text-align: left;">nueva</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">558</td>
+<td style="text-align: right;">398</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+2 Descriptivos SIN <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/2_Descriptivos_SIN.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 17%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 3%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">forma</th>
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">cohortes</th>
+<th style="text-align: right;">M</th>
+<th style="text-align: right;">DT</th>
+<th style="text-align: right;">Md</th>
+<th style="text-align: right;">asimetria</th>
+<th style="text-align: right;">minimo</th>
+<th style="text-align: right;">P1</th>
+<th style="text-align: right;">P99</th>
+<th style="text-align: right;">maximo</th>
+<th style="text-align: right;">pct_suelo</th>
+<th style="text-align: right;">pct_techo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">2010, 2013, 2014</td>
+<td style="text-align: right;">6.06</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-0.39</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5.17</td>
+<td style="text-align: right;">4.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">661</td>
+<td style="text-align: right;">2010, 2013</td>
+<td style="text-align: right;">8.95</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">-1.64</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3.93</td>
+<td style="text-align: right;">50.83</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+2b Descriptivos por cohorte <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/2b_Descriptivos_por_cohorte.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 3%">
+<col style="width: 8%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">forma</th>
+<th style="text-align: right;">cohorte</th>
+<th style="text-align: left;">plataforma</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">cohortes</th>
+<th style="text-align: right;">M</th>
+<th style="text-align: right;">DT</th>
+<th style="text-align: right;">Md</th>
+<th style="text-align: right;">asimetria</th>
+<th style="text-align: right;">minimo</th>
+<th style="text-align: right;">P1</th>
+<th style="text-align: right;">P99</th>
+<th style="text-align: right;">maximo</th>
+<th style="text-align: right;">pct_suelo</th>
+<th style="text-align: right;">pct_techo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">antigua</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">6.38</td>
+<td style="text-align: right;">3.16</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-0.42</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5.30</td>
+<td style="text-align: right;">9.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: left;">nueva</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">6.82</td>
+<td style="text-align: right;">3.21</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">-0.53</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.88</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">1.12</td>
+<td style="text-align: right;">11.24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">2014</td>
+<td style="text-align: left;">nueva</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">8.06</td>
+<td style="text-align: right;">2.71</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.71</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">1.39</td>
+<td style="text-align: right;">20.83</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: left;">antigua</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">6.59</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-0.45</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5.21</td>
+<td style="text-align: right;">11.46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">antigua</td>
+<td style="text-align: right;">919</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">9.09</td>
+<td style="text-align: right;">3.03</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">-1.79</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">4.24</td>
+<td style="text-align: right;">52.34</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: left;">nueva</td>
+<td style="text-align: right;">558</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">9.02</td>
+<td style="text-align: right;">3.31</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">-1.70</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5.02</td>
+<td style="text-align: right;">56.81</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+3 Fiabilidad estabilidad <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/3_Fiabilidad_estabilidad.csv</code>
+</summary>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">cohorte</th>
+<th style="text-align: right;">desde</th>
+<th style="text-align: right;">hasta</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">r</th>
+<th style="text-align: right;">rho</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">132</td>
+<td style="text-align: right;">0.27</td>
+<td style="text-align: right;">0.27</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+4a Validez concurrente <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/4a_Validez_concurrente.csv</code>
+</summary>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">mom</th>
+<th style="text-align: left;">dominio</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">r</th>
+<th style="text-align: right;">rho</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Morfosintaxis oral</td>
+<td style="text-align: right;">415</td>
+<td style="text-align: right;">0.26</td>
+<td style="text-align: right;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Vocabulario y comprensión oral</td>
+<td style="text-align: right;">342</td>
+<td style="text-align: right;">0.26</td>
+<td style="text-align: right;">0.19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Conciencia fonológica</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: right;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Conocimiento de letras</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">0.13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Denominación rápida (RAN)</td>
+<td style="text-align: right;">281</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Lectura de palabras y texto</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">-0.11</td>
+<td style="text-align: right;">-0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Conciencia fonológica</td>
+<td style="text-align: right;">1,477</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">0.64</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Lectura de palabras y texto</td>
+<td style="text-align: right;">1,474</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Conocimiento de letras</td>
+<td style="text-align: right;">1,475</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.52</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Morfosintaxis oral</td>
+<td style="text-align: right;">1,469</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">0.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Memoria verbal</td>
+<td style="text-align: right;">918</td>
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.28</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Vocabulario y comprensión oral</td>
+<td style="text-align: right;">1,474</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Denominación rápida (RAN)</td>
+<td style="text-align: right;">919</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">0.26</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+4b Validez frente etiqueta <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/4b_Validez_frente_etiqueta.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">casos</th>
+<th style="text-align: right;">AUC</th>
+<th style="text-align: right;">IC_inf</th>
+<th style="text-align: right;">IC_sup</th>
+<th style="text-align: right;">sens_p25</th>
+<th style="text-align: right;">esp_p25</th>
+<th style="text-align: left;">lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">278</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.64</td>
+<td style="text-align: right;">0.26</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: left;">Predictiva o concurrente (la etiqueta no usa esta tarea)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,123</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.88</td>
+<td style="text-align: left;">Predictiva o concurrente (la etiqueta no usa esta tarea)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+4c Baja comprension posterior <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/4c_Baja_comprension_posterior.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 52%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">desde</th>
+<th style="text-align: left;">criterio</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">casos</th>
+<th style="text-align: right;">AUC</th>
+<th style="text-align: right;">IC_inf</th>
+<th style="text-align: right;">IC_sup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Baja comprensión (≤ p25) a los 6 años</td>
+<td style="text-align: right;">272</td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">0.65</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">Baja comprensión (≤ p25) a los 7 años</td>
+<td style="text-align: right;">232</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Baja comprensión (≤ p25) a los 7 años</td>
+<td style="text-align: right;">773</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.66</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">Baja comprensión (≤ p25) a los 8 años</td>
+<td style="text-align: right;">661</td>
+<td style="text-align: right;">163</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">0.62</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+5 Baremo SIN <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/5_Baremo_SIN.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 29%">
+<col style="width: 4%">
+<col style="width: 18%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">forma</th>
+<th style="text-align: right;">mom</th>
+<th style="text-align: left;">referencia</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">cohortes</th>
+<th style="text-align: right;">P5</th>
+<th style="text-align: right;">P10</th>
+<th style="text-align: right;">P16</th>
+<th style="text-align: right;">P25</th>
+<th style="text-align: right;">P50</th>
+<th style="text-align: right;">P75</th>
+<th style="text-align: right;">P90</th>
+<th style="text-align: right;">P95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1675</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">SIN Preleo</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">2010, 2013, 2014</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.80</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: left;">todos (sin SIN suficiente)</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4.80</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: left;">SIN Preleo</td>
+<td style="text-align: right;">661</td>
+<td style="text-align: right;">2010, 2013</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+5b Equivalencia formas <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/5b_Equivalencia_formas.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">forma_1</th>
+<th style="text-align: right;">forma_2</th>
+<th style="text-align: left;">referencia</th>
+<th style="text-align: right;">n_1</th>
+<th style="text-align: right;">n_2</th>
+<th style="text-align: right;">cohortes_1</th>
+<th style="text-align: right;">cohortes_2</th>
+<th style="text-align: right;">M_1</th>
+<th style="text-align: right;">M_2</th>
+<th style="text-align: right;">DT_1</th>
+<th style="text-align: right;">DT_2</th>
+<th style="text-align: right;">d_2_menos_1</th>
+<th style="text-align: right;">razon_DT</th>
+<th style="text-align: right;">mismos_ninos</th>
+<th style="text-align: left;">veredicto</th>
+<th style="text-align: right;">n_igualacion</th>
+<th style="text-align: left;">r_entre_formas</th>
+<th style="text-align: left;">pendiente</th>
+<th style="text-align: left;">intercepto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">1,675</td>
+<td style="text-align: right;">2,012</td>
+<td style="text-align: left;">todos</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">2010, 2013, 2014</td>
+<td style="text-align: right;">2,011</td>
+<td style="text-align: right;">6.89</td>
+<td style="text-align: right;">6.59</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">3.14</td>
+<td style="text-align: right;">-0.09</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">equivalentes</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+6 Efectos variables <code>datos/agregados/AUTO_CF_IDENTIFICACION_FONEMA_INICIAL/6_Efectos_variables.csv</code>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 68%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">variable</th>
+<th style="text-align: right;">mom</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">efecto</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ISE del centro (ρ)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">491</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.68</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo (d niña − niño; codificación en revisión)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">485</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.47</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Edad relativa (ρ con la edad en meses)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">486</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Colegio (CCI)</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ISE del centro (ρ)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,477</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo (d niña − niño; codificación en revisión)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,473</td>
+<td style="text-align: right;">-0.01</td>
+<td style="text-align: right;">0.77</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Edad relativa (ρ con la edad en meses)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,474</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Colegio (CCI)</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">1,477</td>
+<td style="text-align: right;">0.16</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-caravolas2013growth" class="csl-entry" role="listitem">
+Caravolas, Markéta, Arne Lervåg, Sylvia Defior, Gabriela Seidlová Málková, and Charles Hulme. 2013. <span>“Different Patterns, but Equivalent Predictors, of Growth in Reading in Consistent and Inconsistent Orthographies.”</span> <em>Psychological Science</em> 24 (8): 1398–1407. <a href="https://doi.org/10.1177/0956797612473122">https://doi.org/10.1177/0956797612473122</a>.
+</div>
+<div id="ref-catts2026definicion" class="csl-entry" role="listitem">
+Catts, Hugh W., Charles W. Haynes, and R. Malatesha Joshi. 2026. <span>“Defining Dyslexia: 2025 Revision.”</span> <em>Annals of Dyslexia</em>. <a href="https://doi.org/10.1007/s11881-026-00363-4">https://doi.org/10.1007/s11881-026-00363-4</a>.
+</div>
+<div id="ref-denton2000pa" class="csl-entry" role="listitem">
+Denton, Carolyn A., Jan E. Hasbrouck, Laurie R. Weaver, and Cynthia A. Riccio. 2000. <span>“What Do We Know about Phonological Awareness in <span>Spanish</span>?”</span> <em>Reading Psychology</em> 21 (4): 335–52. <a href="https://doi.org/10.1080/027027100750061958">https://doi.org/10.1080/027027100750061958</a>.
+</div>
+<div id="ref-landerl2019pa" class="csl-entry" role="listitem">
+Landerl, Karin, H. Harald Freudenthaler, Moritz Heene, Peter F. de Jong, Alain Desrochers, George Manolitsis, Rauno Parrila, and George K. Georgiou. 2019. <span>“Phonological Awareness and Rapid Automatized Naming as Longitudinal Predictors of Reading in Five Alphabetic Orthographies with Varying Degrees of Consistency.”</span> <em>Scientific Studies of Reading</em> 23 (3): 220–34. <a href="https://doi.org/10.1080/10888438.2018.1510936">https://doi.org/10.1080/10888438.2018.1510936</a>.
+</div>
+<div id="ref-landerl2013predictors" class="csl-entry" role="listitem">
+Landerl, Karin, Franck Ramus, Kristina Moll, et al. 2013. <span>“Predictors of Developmental Dyslexia in <span>European</span> Orthographies with Varying Complexity.”</span> <em>Journal of Child Psychology and Psychiatry</em> 54 (6): 686–94. <a href="https://doi.org/10.1111/jcpp.12029">https://doi.org/10.1111/jcpp.12029</a>.
+</div>
+<div id="ref-martinez2020silabica" class="csl-entry" role="listitem">
+Martínez, Naroa, and Edurne Goikoetxea. 2020. <span>“Los Predictores de La Lectura y Escritura de Palabras Varían En Función de La Estructura Silábica En Español.”</span> <em>Psicología Educativa</em> 26.
+</div>
+<div id="ref-parrila2020rlmatch" class="csl-entry" role="listitem">
+Parrila, Rauno, Dean Dudley, Shuang Song, and George K. Georgiou. 2020. <span>“A Meta-Analysis of Reading-Level Match Dyslexia Studies in Consistent Alphabetic Orthographies.”</span> <em>Annals of Dyslexia</em> 70 (1): 1–26. <a href="https://doi.org/10.1007/s11881-019-00187-5">https://doi.org/10.1007/s11881-019-00187-5</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.html" class="pagination-link" aria-label="Final phoneme isolation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Final phoneme isolation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../fichas/auto/CF_SEGMENTACION_FONEMICA.en.html" class="pagination-link" aria-label="Phoneme segmentation">
+        <span class="nav-page-text"><span class="chapter-title">Phoneme segmentation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

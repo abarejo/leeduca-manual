@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>How we estimate risk and reading difficulty – LEEDUCA Platform Technical Manual</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./limites.en.html" rel="next">
+<link href="./resultados-globales.en.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e01e92ab3eea49296e7f9c1c28bd1566.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./metodo-psicometrico.en.html">Psychometrics</a></li><li class="breadcrumb-item"><a href="./riesgo.en.html"><span class="chapter-title">How we estimate risk and reading difficulty</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LEEDUCA Platform Technical Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://abarejo.github.io/leeduca-manual/" title="Versión en español (completa)" class="quarto-navigation-tool px-1" aria-label="Versión en español (completa)"><i class="bi bi-translate"></i></a>
+    <a href="https://github.com/abarejo/leeduca-manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary-en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical summary (English)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./definicion.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What we measure in light of the new definition of dyslexia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">The platform and the sample</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./plataforma.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The LEEDUCA platform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estudio-normativo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Normative study</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Psychometrics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metodo-psicometrico.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Psychometric method</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resultados-globales.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overall results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./riesgo.en.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">How we estimate risk and reading difficulty</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limites.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Limitations and data quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tasks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./catalogo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Task catalog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/index.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Class A task sheets</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Reading</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/VEL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading speed in words per minute</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial letter identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_LECT_COMPRENSIVA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading for comprehension (second reading)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_LETRAS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Letter knowledge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_1sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: one syllable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_2sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: two syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_3sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: three syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_4sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: four syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PSEUDO_2sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: two syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PSEUDO_3sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: three syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PSEUDO_4sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: four syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_SILABAS_COMPLEJA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Complex syllable reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_SILABAS_SIMPLE.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple syllable reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_VEL_TEXTO.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Text reading rate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading vocabulary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_DECISION_ORTOGRAFICA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orthographic decision</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Phonological skills</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_CONTAR_SILABAS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllable counting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final phoneme isolation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial phoneme isolation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SEGMENTACION_FONEMICA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phoneme segmentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_FONEMAS_TP.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phoneme deletion (all positions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_FONEMA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final phoneme deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_FONEMA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial phoneme deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABAS_TP.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllable deletion (all positions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final syllable deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial syllable deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Deletion of the syllable /xa/</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Oral language</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vocabulary: definitions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Numerical cognition</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting backwards (1–10)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting backwards (11–20)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting forwards (11–20)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_ET_VERB_ARABIGOS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arabic numeral naming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Executive functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/F_EJEC_INH_INHIBICION.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inhibition</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glosario.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary (Spanish–English)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./referencias.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reading-in-each-school-year" id="toc-reading-in-each-school-year" class="nav-link active" data-scroll-target="#reading-in-each-school-year">Reading in each school year</a></li>
+  <li><a href="#five-certainty-levels" id="toc-five-certainty-levels" class="nav-link" data-scroll-target="#five-certainty-levels">Five certainty levels</a></li>
+  <li><a href="#why-more-than-one-school-year-is-needed" id="toc-why-more-than-one-school-year-is-needed" class="nav-link" data-scroll-target="#why-more-than-one-school-year-is-needed">Why more than one school year is needed</a></li>
+  <li><a href="#what-is-said-at-each-age" id="toc-what-is-said-at-each-age" class="nav-link" data-scroll-target="#what-is-said-at-each-age">What is said at each age</a></li>
+  <li><a href="#how-well-the-precursors-predict" id="toc-how-well-the-precursors-predict" class="nav-link" data-scroll-target="#how-well-the-precursors-predict">How well the precursors predict</a></li>
+  <li><a href="#sec-cribado" id="toc-sec-cribado" class="nav-link" data-scroll-target="#sec-cribado">Universal screening: what the evidence says and where the platform fits</a>
+  <ul class="collapse">
+  <li><a href="#how-many-children-prevalence-depends-on-the-criterion" id="toc-how-many-children-prevalence-depends-on-the-criterion" class="nav-link" data-scroll-target="#how-many-children-prevalence-depends-on-the-criterion">How many children: prevalence depends on the criterion</a></li>
+  <li><a href="#the-precedent-dis-esps-two-stage-screening" id="toc-the-precedent-dis-esps-two-stage-screening" class="nav-link" data-scroll-target="#the-precedent-dis-esps-two-stage-screening">The precedent: DIS-ESP’s two-stage screening</a></li>
+  <li><a href="#what-accuracy-to-expect-from-screening" id="toc-what-accuracy-to-expect-from-screening" class="nav-link" data-scroll-target="#what-accuracy-to-expect-from-screening">What accuracy to expect from screening</a></li>
+  <li><a href="#the-leeduca-early-identification-guide" id="toc-the-leeduca-early-identification-guide" class="nav-link" data-scroll-target="#the-leeduca-early-identification-guide">The LEEDUCA early identification guide</a></li>
+  <li><a href="#where-the-platform-fits" id="toc-where-the-platform-fits" class="nav-link" data-scroll-target="#where-the-platform-fits">Where the platform fits</a></li>
+  </ul></li>
+  <li><a href="#why-this-variable-is-useful-in-other-analyses" id="toc-why-this-variable-is-useful-in-other-analyses" class="nav-link" data-scroll-target="#why-this-variable-is-useful-in-other-analyses">Why this variable is useful in other analyses</a></li>
+  <li><a href="#sec-por-que-niveles" id="toc-sec-por-que-niveles" class="nav-link" data-scroll-target="#sec-por-que-niveles">Why this classification</a></li>
+  <li><a href="#sec-niveles-otros-dominios" id="toc-sec-niveles-otros-dominios" class="nav-link" data-scroll-target="#sec-niveles-otros-dominios">The same logic for oral language and mathematics (proposal)</a></li>
+  <li><a href="#pending" id="toc-pending" class="nav-link" data-scroll-target="#pending">Pending</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/riesgo.en.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/riesgo.en.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./metodo-psicometrico.en.html">Psychometrics</a></li><li class="breadcrumb-item"><a href="./riesgo.en.html"><span class="chapter-title">How we estimate risk and reading difficulty</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">How we estimate risk and reading difficulty</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Status:</strong> draft of October 2026, updated November 8, 2026. <strong>Decided (November 8, 2026):</strong> the five certainty levels are the manual’s reference classification, with P10 as the threshold for severe difficulty (DL-A). This chapter describes the criterion used by the task sheets and the prediction analyses. <em>Translated from the Spanish version of November 27, 2026.</em></p>
+</div>
+</div>
+</div>
+<p>A single low score in one term is not enough to speak of reading difficulty. A child may have a bad day, have just arrived, or progress at a different pace and later catch up with their peers. That is why the manual distinguishes between <strong>risk</strong>, which is estimated before children read, and <strong>difficulty</strong>, which is only confirmed when reading remains low over several school years.</p>
+<p>Two ideas from the literature support this approach:</p>
+<ul>
+<li><strong>Dyslexia has no single prevalence.</strong> Reading is continuously distributed, so prevalence depends on the severity cut-off chosen. Moreover, among poor readers there are more children whose reading is consistent with the rest of their achievement than children with dyslexia <span class="citation" data-cites="wagner2020prevalence">(<a href="referencias.en.html#ref-wagner2020prevalence" role="doc-biblioref">Wagner et al. 2020</a>)</span>. That is why several certainty levels are used rather than a single cut-off.</li>
+<li><strong>Screening works better when it is repeated.</strong> In preschool, a brief battery of letters, phonological awareness and rapid naming predicts end-of-Grade-1 reading well. If progress in letter knowledge is also monitored during the year, prediction improves <span class="citation" data-cites="catts2015rti">(<a href="referencias.en.html#ref-catts2015rti" role="doc-biblioref">Catts et al. 2015</a>)</span>. This is the logic of assessing three times per school year.</li>
+</ul>
+<section id="reading-in-each-school-year" class="level2">
+<h2 class="anchored" data-anchor-id="reading-in-each-school-year">Reading in each school year</h2>
+<p>From age 6, reading in each school year combines two components:</p>
+<ul>
+<li><strong>Decoding:</strong> word and pseudoword reading.</li>
+<li><strong>Fluency:</strong> text reading speed.</li>
+</ul>
+<p>Each component is expressed as a percentile against the <strong>normative reference sample</strong>: children from non-Preleo schools in all cohorts (2010–2013). Reading for the school year is the mean of the two.</p>
+<p>Cohorts are pooled because they are equivalent: for the same task and time point, the median difference between a cohort and the pooled reference is d = 0.11. If a cohort departs by more than 1 SD from the others, or its spread is more than three times larger or smaller (a change in task version or an export error), it uses its own reference, and this is recorded.</p>
+</section>
+<section id="five-certainty-levels" class="level2">
+<h2 class="anchored" data-anchor-id="five-certainty-levels">Five certainty levels</h2>
+<p>Using reading in the school years from age 6 to 11, each child is assigned one of five levels. At least two school years must have been assessed, one of them from age 7 onward.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>What it means</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DL-A</strong> · Severe persistent reading difficulty</td>
+<td>Reading stays very low year after year</td>
+<td>≤ P10 in at least two school years and ≤ P25 in all years from age 7</td>
+</tr>
+<tr class="even">
+<td><strong>DL-B</strong> · Persistent reading difficulty</td>
+<td>Reading stays low in most school years</td>
+<td>≤ P25 in at least two school years and in at least half of them</td>
+</tr>
+<tr class="odd">
+<td><strong>TR</strong> · Transient difficulty</td>
+<td>Low in some school year, but not sustained</td>
+<td>≤ P25 in some school year</td>
+</tr>
+<tr class="even">
+<td><strong>INT</strong> · Intermediate</td>
+<td>Never low, but in the lower part of the average</td>
+<td>Never ≤ P25 and mean percentile &lt; 40</td>
+</tr>
+<tr class="odd">
+<td><strong>TE</strong> · Stable typical</td>
+<td>Reading at or above the average in all school years</td>
+<td>Never ≤ P25 and mean percentile ≥ 40</td>
+</tr>
+</tbody>
+</table>
+<p>DL-A and DL-B together make up <strong>persistent difficulty</strong>: the criterion against which the predictive validity of the tasks is studied. DL-A versus TE makes up the <strong>certainty sample</strong>, with the clearest cases at both extremes. It is used to check whether a task discriminates well when there is no doubt about the classification.</p>
+<div class="cell">
+<div id="tbl-niveles" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.1: Certainty levels by cohort (% of children with a label).
+</figcaption>
+<div aria-describedby="tbl-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cohort</th>
+<th style="text-align: right;">Children with a label</th>
+<th style="text-align: right;">DL-A</th>
+<th style="text-align: right;">DL-B</th>
+<th style="text-align: right;">TR</th>
+<th style="text-align: right;">INT</th>
+<th style="text-align: right;">TE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2010</td>
+<td style="text-align: right;">1,007</td>
+<td style="text-align: right;">6.2</td>
+<td style="text-align: right;">9.7</td>
+<td style="text-align: right;">15.9</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">62.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: right;">755</td>
+<td style="text-align: right;">4.4</td>
+<td style="text-align: right;">12.6</td>
+<td style="text-align: right;">24.6</td>
+<td style="text-align: right;">4.2</td>
+<td style="text-align: right;">54.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2012</td>
+<td style="text-align: right;">491</td>
+<td style="text-align: right;">1.8</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">18.3</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">60.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2013</td>
+<td style="text-align: right;">501</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">11.2</td>
+<td style="text-align: right;">24.2</td>
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">57.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">All</td>
+<td style="text-align: right;">2,754</td>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">20.2</td>
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">59.1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Across cohorts, 15% of children have a persistent difficulty (4% severe and 11% moderate). Another 20% go through a transient difficulty. The proportions are similar in Preleo and non-Preleo schools (15.6% and 14.3% persistent difficulty). This comparison is descriptive: it does not measure the effect of the program, which is studied with a different design.</p>
+</section>
+<section id="why-more-than-one-school-year-is-needed" class="level2">
+<h2 class="anchored" data-anchor-id="why-more-than-one-school-year-is-needed">Why more than one school year is needed</h2>
+<p>A child who reads poorly in one school year is quite likely to keep reading poorly the next, but not all do. The lower the score and the closer the two school years, the more stable it is.</p>
+<div class="cell">
+<div id="tbl-estabilidad" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-estabilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.2: Of the children below a cut-off in one school year, % who remain ≤ P25 in a later school year, compared with the rest (all cohorts).
+</figcaption>
+<div aria-describedby="tbl-estabilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 23%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">From (age)</th>
+<th style="text-align: right;">To (age)</th>
+<th style="text-align: left;">Initial cut-off</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">% remaining ≤ P25</th>
+<th style="text-align: right;">% of the rest ≤ P25</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">≤ p10</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">89.0</td>
+<td style="text-align: right;">19.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">≤ p25</td>
+<td style="text-align: right;">283</td>
+<td style="text-align: right;">77.7</td>
+<td style="text-align: right;">14.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">≤ p10</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">69.6</td>
+<td style="text-align: right;">13.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">≤ p25</td>
+<td style="text-align: right;">178</td>
+<td style="text-align: right;">49.4</td>
+<td style="text-align: right;">11.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">≤ p10</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">65.6</td>
+<td style="text-align: right;">11.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">≤ p25</td>
+<td style="text-align: right;">315</td>
+<td style="text-align: right;">51.4</td>
+<td style="text-align: right;">6.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">≤ p10</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">60.0</td>
+<td style="text-align: right;">19.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">≤ p25</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">54.5</td>
+<td style="text-align: right;">14.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">≤ p10</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">33.9</td>
+<td style="text-align: right;">6.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">≤ p25</td>
+<td style="text-align: right;">126</td>
+<td style="text-align: right;">22.2</td>
+<td style="text-align: right;">5.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">≤ p10</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">63.0</td>
+<td style="text-align: right;">18.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">≤ p25</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">52.3</td>
+<td style="text-align: right;">12.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Of the children below P10 at age 6, almost 9 in 10 are still below P25 at age 7. But at age 8 only 7 in 10 remain. One low school year is a serious signal, and even so it is not enough for a diagnosis.</p>
+</section>
+<section id="what-is-said-at-each-age" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-said-at-each-age">What is said at each age</h2>
+<p>The same logic sets the language of the report according to age:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What can be said</th>
+<th>Based on</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4–5</td>
+<td><strong>Risk</strong> (low, moderate or high)</td>
+<td>Precursors: phonological awareness, letters and rapid naming</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>Provisional difficulty</strong></td>
+<td>Grade 1 reading below P25 or P10</td>
+</tr>
+<tr class="odd">
+<td>7–8</td>
+<td><strong>Confirmed difficulty</strong></td>
+<td>≤ P10 at ages 7–8, repeated in the following school year</td>
+</tr>
+<tr class="even">
+<td>6–11 (retrospective)</td>
+<td><strong>Certainty level</strong> (DL-A … TE)</td>
+<td>The whole reading trajectory; this is the research criterion</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-well-the-precursors-predict" class="level2">
+<h2 class="anchored" data-anchor-id="how-well-the-precursors-predict">How well the precursors predict</h2>
+<p>With the precursors at age 5 (phonological awareness, letters and rapid naming), persistent difficulty is predicted with an area under the curve of .82, validated by leaving each cohort out. At age 4 it is .73, and with both school years together, .83. Letters and phonological awareness carry most of the weight; rapid naming adds nothing at age 5.</p>
+<p>At age 4 the precursors are useful for <strong>monitoring</strong>, not for <strong>screening</strong>. At age 5 they already allow support to be prioritized, always as risk and not as a diagnosis. Details are in each task sheet and in a prediction article in preparation.</p>
+</section>
+<section id="sec-cribado" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cribado">Universal screening: what the evidence says and where the platform fits</h2>
+<section id="how-many-children-prevalence-depends-on-the-criterion" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-children-prevalence-depends-on-the-criterion">How many children: prevalence depends on the criterion</h3>
+<p>Figures for dyslexia in Spanish vary widely, and the main reason is the criterion used to identify it:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Population</th>
+<th>Criterion</th>
+<th>Prevalence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Meta-analysis in Spanish <span class="citation" data-cites="cubilla2024prevalencia">(<a href="referencias.en.html#ref-cubilla2024prevalencia" role="doc-biblioref">Cubilla-Bonnetier 2024</a>)</span></td>
+<td>16 studies</td>
+<td>Variable</td>
+<td>7.5% (5.2–10.9), with large heterogeneity</td>
+</tr>
+<tr class="even">
+<td>Worldwide meta-analysis <span class="citation" data-cites="yang2022prevalence">(<a href="referencias.en.html#ref-yang2022prevalence" role="doc-biblioref">Yang et al. 2022</a>)</span></td>
+<td>Primary school</td>
+<td>Variable</td>
+<td>7.1%; similar in transparent and opaque orthographies</td>
+</tr>
+<tr class="odd">
+<td>Uruguay <span class="citation" data-cites="cuadro2017prevalencia">(<a href="referencias.en.html#ref-cuadro2017prevalencia" role="doc-biblioref">Cuadro, von Hagen, and Costa Ball 2017</a>)</span></td>
+<td>1,408 schoolchildren</td>
+<td>Several procedures on the same sample</td>
+<td>2.2–5.3% depending on the procedure</td>
+</tr>
+<tr class="even">
+<td>Molina de Segura, Murcia <span class="citation" data-cites="carrillo2011prevalencia">(<a href="referencias.en.html#ref-carrillo2011prevalencia" role="doc-biblioref">Carrillo Gallego et al. 2011</a>)</span></td>
+<td>1,894 children in Grades 2, 4 and 6 (all schools in the municipality)</td>
+<td>Two stages: group TECLE (−1.5 SD) and confirmation with words, pseudowords and spelling</td>
+<td>11.8% (Grade 2: 15.2%; Grade 4: 9.3%; Grade 6: 10.9%)</td>
+</tr>
+<tr class="odd">
+<td>Canary Islands <span class="citation" data-cites="jimenez2009prevalencia">(<a href="referencias.en.html#ref-jimenez2009prevalencia" role="doc-biblioref">Jiménez et al. 2009</a>)</span></td>
+<td>Primary school</td>
+<td>Teacher nomination and confirmation with PROLEC (bottom 25%)</td>
+<td>8.6% (3.2% reading only; 5.4% reading and spelling)</td>
+</tr>
+<tr class="even">
+<td>Andalusia <span class="citation" data-cites="villegas2023andalucia">(<a href="referencias.en.html#ref-villegas2023andalucia" role="doc-biblioref">Villegas Lirola 2023</a>)</span></td>
+<td>944,118 schoolchildren</td>
+<td>Administrative diagnosis</td>
+<td>1.24%; diagnosis at around age 10</td>
+</tr>
+<tr class="odd">
+<td>Málaga, LEEDUCA <span class="citation" data-cites="loredo2025prevalencia">(<a href="referencias.en.html#ref-loredo2025prevalencia" role="doc-biblioref">Loredo et al. 2025</a>)</span></td>
+<td>691, Grades 5–6</td>
+<td>−1 SD in lexical decision and fluency</td>
+<td>8.5% at risk</td>
+</tr>
+<tr class="even">
+<td>Canary Islands <span class="citation" data-cites="garcia2013comprension">(<a href="referencias.en.html#ref-garcia2013comprension" role="doc-biblioref">García et al. 2013</a>)</span></td>
+<td>Grade 2 to Year 10</td>
+<td>Text comprehension</td>
+<td>20.2% with comprehension problems; 6.7% poor comprehenders</td>
+</tr>
+</tbody>
+</table>
+<p>Four takeaways for the manual:</p>
+<ul>
+<li><strong>There is no single “true” prevalence.</strong> Reading is continuously distributed, so the figure depends on the cut-off <span class="citation" data-cites="wagner2020prevalence">(<a href="referencias.en.html#ref-wagner2020prevalence" role="doc-biblioref">Wagner et al. 2020</a>)</span>. That is why the platform does not report a prevalence, but certainty levels with their percentage in each cohort.</li>
+<li><strong>With psychometric criteria, the figure in primary school is around 9–12%.</strong> This is what results from a first group stage and an individual confirmation <span class="citation" data-cites="carrillo2011prevalencia jimenez2009prevalencia">(<a href="referencias.en.html#ref-carrillo2011prevalencia" role="doc-biblioref">Carrillo Gallego et al. 2011</a>; <a href="referencias.en.html#ref-jimenez2009prevalencia" role="doc-biblioref">Jiménez et al. 2009</a>)</span>.</li>
+<li><strong>Schools identify late and too little.</strong> Andalusia’s 1.24%, diagnosed at around age 10, against an expected 5–8%, points to underdiagnosis. Identification in preschool and Grade 1 is exactly what the platform can contribute.</li>
+<li><strong>Comprehension is a different problem.</strong> A substantial share of poor comprehenders have no decoding difficulty. This is the reason for adding comprehension as a separate dimension (see “Pending”).</li>
+</ul>
+</section>
+<section id="the-precedent-dis-esps-two-stage-screening" class="level3">
+<h3 class="anchored" data-anchor-id="the-precedent-dis-esps-two-stage-screening">The precedent: DIS-ESP’s two-stage screening</h3>
+<p>The Molina de Segura study <span class="citation" data-cites="carrillo2011prevalencia">(<a href="referencias.en.html#ref-carrillo2011prevalencia" role="doc-biblioref">Carrillo Gallego et al. 2011</a>)</span> is the platform’s direct antecedent. M. S. Carrillo and J. Alegría, authors of the DIS-ESP battery, applied a <strong>sequential procedure</strong> to all primary school children in one municipality:</p>
+<ol type="1">
+<li><strong>First stage.</strong> Group TECLE in the classroom. The cut-off (mean − 1.5 SD of typical readers) is equivalent to a delay of about two school years. It flagged 12.5% of the children, compared with the 6.7% that would be expected if reading were normally distributed. This indicates that the distribution has a heavier lower tail, where readers with dyslexia are concentrated.</li>
+<li><strong>Second stage.</strong> Word and pseudoword reading and spelling tests (dictation of words with inconsistent spellings and orthographic decision) to look for the proximal cause. Of the flagged children, 96% had a deficit in the phonological mechanism, the orthographic one or both. 77% had both.</li>
+</ol>
+<p>Three results from that study reappear in the platform data:</p>
+<ul>
+<li><strong>Delay in Grade 2 is partly transient.</strong> In Grade 2, 18% of delayed readers had only an orthographic problem (5% in Grade 6), and a quarter read pseudowords well. The authors expected many of them to recover with more practice. This is what the platform captures with the TR level (transient difficulty) as opposed to DL-A and DL-B.</li>
+<li><strong>Around 10% keep the difficulty</strong> in Grades 4 and 6, many without reaching even a Grade 2 reading level.</li>
+<li><strong>Figures depend on the procedure.</strong> With the same approach, 8.6% was found in the Canary Islands <span class="citation" data-cites="jimenez2009prevalencia">(<a href="referencias.en.html#ref-jimenez2009prevalencia" role="doc-biblioref">Jiménez et al. 2009</a>)</span>, but the first selection was made by teachers (27.9% of the sample) and the cut-off was the bottom 25% on PROLEC.</li>
+</ul>
+<p>The platform turns that procedure into a continuous one: the first stage is repeated three times per school year from age 3, and the second (words, pseudowords, orthographic decision) is already in the same battery.</p>
+</section>
+<section id="what-accuracy-to-expect-from-screening" class="level3">
+<h3 class="anchored" data-anchor-id="what-accuracy-to-expect-from-screening">What accuracy to expect from screening</h3>
+<ul>
+<li><strong>In Spanish there are screeners with good accuracy in preschool.</strong> A set of curriculum-based measures in the final year of preschool reached an AUC of .83 in autumn and of .94–.97 in winter and spring. Phonemic awareness and knowledge of letter–sound correspondences were the best single measures <span class="citation" data-cites="gutierrez2020cbm">(<a href="referencias.en.html#ref-gutierrez2020cbm" role="doc-biblioref">Gutiérrez et al. 2020</a>)</span>. Lexiland, a tablet-based screener for 5-year-olds, identified 90% of those who would have difficulties at the end of Grade 1, with a specificity of 76% <span class="citation" data-cites="zugarramurdi2022lexiland">(<a href="referencias.en.html#ref-zugarramurdi2022lexiland" role="doc-biblioref">Zugarramurdi et al. 2022</a>)</span>. In Catalan, Prelectocat provides cut-offs at age 5 <span class="citation" data-cites="lopezsala2025prelectocat">(<a href="referencias.en.html#ref-lopezsala2025prelectocat" role="doc-biblioref">López-Sala et al. 2025</a>)</span>.</li>
+<li><strong>Sensitivity tends to fall short.</strong> A meta-analysis of 30 studies of computer-adaptive screeners finds a specificity of .83 and a sensitivity of .77, below the .80 recommended for universal screening <span class="citation" data-cites="shen2026cat">(<a href="referencias.en.html#ref-shen2026cat" role="doc-biblioref">Shen et al. 2026</a>)</span>. Cut-offs computed with local data improve sensitivity at the cost of specificity.</li>
+<li><strong>Repeating or adding a second stage reduces false positives.</strong> Adding brief progress monitoring or a dynamic assessment reduced false positives in Grade 1 <span class="citation" data-cites="compton2010gated">(<a href="referencias.en.html#ref-compton2010gated" role="doc-biblioref">Compton et al. 2010</a>)</span>. A second stage only with children who do not pass the first increases specificity, but may lower sensitivity <span class="citation" data-cites="klingbeil2017multivariate">(<a href="referencias.en.html#ref-klingbeil2017multivariate" role="doc-biblioref">Klingbeil et al. 2017</a>)</span>. It works better if the second measure adds information different from the first: two highly correlated measures barely reduce false positives <span class="citation" data-cites="vannorman2019gated">(<a href="referencias.en.html#ref-vannorman2019gated" role="doc-biblioref">Van Norman et al. 2019</a>)</span>.</li>
+</ul>
+</section>
+<section id="the-leeduca-early-identification-guide" class="level3">
+<h3 class="anchored" data-anchor-id="the-leeduca-early-identification-guide">The LEEDUCA early identification guide</h3>
+<p>The group’s guide for speech and language teachers and preschool and primary teachers <span class="citation" data-cites="luque2022guia">(<a href="referencias.en.html#ref-luque2022guia" role="doc-biblioref">Luque 2022</a>)</span> organizes assessment in three moments, each with its own aim:</p>
+<ol type="1">
+<li><strong>Prediction or risk assessment</strong>, in preschool, before formal reading instruction.</li>
+<li><strong>Early identification</strong>, in the first year of learning to read (Grade 1), with <strong>at least three assessments</strong> of all children, because a single measurement is not enough.</li>
+<li><strong>Psychoeducational assessment and diagnosis</strong>, from Grade 2, instead of “waiting to fail”.</li>
+</ol>
+<p>To assess risk, it proposes four criteria, each with a judgment of mild, moderate or severe risk: <strong>family risk</strong> (with a case history and the ATLAS questionnaire), <strong>oral language</strong> (first the phonological triad: phonological awareness, rapid naming and verbal memory; then the semantic, grammatical and prosodic components), <strong>visual hypotheses</strong> and <strong>comorbidity</strong> with other neurodevelopmental disorders (DLD, ADHD, dyscalculia and developmental coordination disorder). For early identification, direct assessment of reading (phonological route, visual route, speed and comprehension) <strong>takes precedence</strong> as the criterion for intensifying instruction, even if the other criteria do not confirm the risk, and it is graded with cut-offs at P10, P20 and P30.</p>
+<p>The platform and this manual follow that logic: universal and repeated assessment, several indicators rather than one, direct reading as the main criterion from Grade 1, and graded judgments (see <a href="https://abarejo.github.io/leeduca-manual/informe-tramos.html">Report bands</a> (<em>in Spanish</em>)). What the manual adds is estimation with data: calibrated probabilities, certainty levels and a watch zone.</p>
+</section>
+<section id="where-the-platform-fits" class="level3">
+<h3 class="anchored" data-anchor-id="where-the-platform-fits">Where the platform fits</h3>
+<ul>
+<li><strong>Comparable accuracy.</strong> The age-5 model (AUC .82, validated by leaving each cohort out) is within the range of published screeners in Spanish.</li>
+<li><strong>Monitoring is already built in.</strong> Three assessments per school year are equivalent to the second stage or the progress monitoring recommended in the literature. No published screener in Spanish has that monitoring at this scale.</li>
+<li><strong>A two-gate procedure.</strong> The scheme and its rationale are in <a href="https://abarejo.github.io/leeduca-manual/avances.html#sec-embudo">The two-gate funnel</a> (<em>in Spanish</em>).</li>
+<li><strong>Proposed study.</strong> Use the platform data to simulate two-stage screening: a first stage with letters and phonological awareness, and a second with the least correlated task (for example, RAN or change between terms). Compute sensitivity and specificity against persistent difficulty and against Woodcock-Muñoz.</li>
+</ul>
+</section>
+</section>
+<section id="why-this-variable-is-useful-in-other-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-variable-is-useful-in-other-analyses">Why this variable is useful in other analyses</h2>
+<p>The certainty level summarizes a child’s whole reading trajectory in a single variable, built with fixed rules and the same reference for all cohorts. It can therefore also serve as an outcome in other studies; for example, to compare the proportion of persistent difficulty between schools with and without a program, or to describe which severity group children with a given risk profile end up in.</p>
+<p><strong>Caution:</strong> the level is built from words, pseudowords and text speed. Comparing those same tasks against it from age 6 is therefore circular: it measures agreement, not predictive validity (see the reading speed task sheet).</p>
+</section>
+<section id="sec-por-que-niveles" class="level2">
+<h2 class="anchored" data-anchor-id="sec-por-que-niveles">Why this classification</h2>
+<p><strong>Group decision (November 8, 2026).</strong> The manual adopts the five certainty levels as the reference classification of reading difficulty, with <strong>P10</strong> as the threshold for severe difficulty (DL-A), instead of −1.5 SD (≈ P7). Three reasons:</p>
+<ul>
+<li><strong>It uses the trajectory, not a snapshot.</strong> Difficulty is defined over several school years, as the IDA definition requires by placing at its center difficulty that persists despite instruction <span class="citation" data-cites="ida2025definicion">(<a href="referencias.en.html#ref-ida2025definicion" role="doc-biblioref">International Dyslexia Association 2025</a>)</span>. A single assessment is not enough.</li>
+<li><strong>It separates certainty from severity.</strong> Distinguishing severe persistent (DL-A), persistent (DL-B) and transient (TR) difficulty makes it possible to study what distinguishes children who recover from those who do not, which is a central theoretical question for cumulative risk and resilience models <span class="citation" data-cites="catts2022riesgo">(<a href="referencias.en.html#ref-catts2022riesgo" role="doc-biblioref">Catts and Petscher 2022</a>)</span>.</li>
+<li><strong>It is less conservative without losing certainty.</strong> With P10, fewer children with severe difficulty go unidentified, and the requirement that it be repeated in at least two school years and not exceed P25 from age 7 preserves certainty.</li>
+</ul>
+</section>
+<section id="sec-niveles-otros-dominios" class="level2">
+<h2 class="anchored" data-anchor-id="sec-niveles-otros-dominios">The same logic for oral language and mathematics (proposal)</h2>
+<p>The classification does not depend on reading: it only requires one measure per school year, a cut-off and several assessed school years. The proposal is to apply it in the same way to two other domains:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Measure per school year (proposed)</th>
+<th>First school years with data</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Oral language</strong></td>
+<td>Vocabulary and grammatical comprehension (see <a href="https://abarejo.github.io/leeduca-manual/fichas/cribado_dos_riesgos.html">Screening two risks</a> (<em>in Spanish</em>))</td>
+<td>Ages 4–5</td>
+<td>Distinguish weak oral language that persists from weak oral language that recovers; separate the risk of dyslexia from that of language disorder</td>
+</tr>
+<tr class="even">
+<td><strong>Mathematics</strong></td>
+<td>Arithmetic and magnitude tasks in each school year (see <a href="https://abarejo.github.io/leeduca-manual/cognicion-numerica.html">Numerical cognition</a> (<em>in Spanish</em>))</td>
+<td>Ages 5–8</td>
+<td>Persistent difficulty in mathematics and its co-occurrence with reading difficulty</td>
+</tr>
+</tbody>
+</table>
+<p>For the levels to be comparable across domains, the same rules are used (P10 and P25, at least two school years, one from age 7). What must be checked in each domain is that there are enough measures in each school year and that they are reliable.</p>
+<ul>
+<li><strong>Missing:</strong> compute the oral language and mathematics labels with the same script as the reading labels, and review which tasks enter each school year.</li>
+</ul>
+</section>
+<section id="pending" class="level2">
+<h2 class="anchored" data-anchor-id="pending">Pending</h2>
+<ul>
+<li>Oral language and mathematics labels (see the proposal above).</li>
+<li>Generate version 3 of the labels without task 1887 and with the cleaned rapid naming data.</li>
+<li>Add reading comprehension as a separate dimension (poor comprehension with typical decoding).</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-carrillo2011prevalencia" class="csl-entry" role="listitem">
+Carrillo Gallego, María Soledad, Jesús Alegría Iscoa, Pilar Miranda López, and Noelia Sánchez Pérez. 2011. <span>“Evaluación de La Dislexia En La Escuela Primaria: Prevalencia En Español.”</span> <em>Escritos de Psicología</em> 4 (2): 35–44. <a href="https://doi.org/10.5231/psy.writ.2011.1407">https://doi.org/10.5231/psy.writ.2011.1407</a>.
+</div>
+<div id="ref-catts2015rti" class="csl-entry" role="listitem">
+Catts, Hugh W., Diane Corcoran Nielsen, Mindy Sittner Bridges, Yi Syuan Liu, and Daniel E. Bontempo. 2015. <span>“Early Identification of Reading Disabilities Within an <span>RTI</span> Framework.”</span> <em>Journal of Learning Disabilities</em> 48 (3): 281–97. <a href="https://doi.org/10.1177/0022219413498115">https://doi.org/10.1177/0022219413498115</a>.
+</div>
+<div id="ref-catts2022riesgo" class="csl-entry" role="listitem">
+Catts, Hugh W., and Yaacov Petscher. 2022. <span>“A Cumulative Risk and Resilience Model of Dyslexia.”</span> <em>Journal of Learning Disabilities</em> 55 (3): 171–84. <a href="https://doi.org/10.1177/00222194211037062">https://doi.org/10.1177/00222194211037062</a>.
+</div>
+<div id="ref-compton2010gated" class="csl-entry" role="listitem">
+Compton, Donald L., Douglas Fuchs, Lynn S. Fuchs, Bobette Bouton, Jennifer K. Gilbert, Laura A. Barquero, Eunsoo Cho, and Robert C. Crouch. 2010. <span>“Selecting at-Risk First-Grade Readers for Early Intervention: Eliminating False Positives and Exploring the Promise of a Two-Stage Gated Screening Process.”</span> <em>Journal of Educational Psychology</em> 102 (2): 327–40. <a href="https://doi.org/10.1037/a0018448">https://doi.org/10.1037/a0018448</a>.
+</div>
+<div id="ref-cuadro2017prevalencia" class="csl-entry" role="listitem">
+Cuadro, Ariel, Alexa von Hagen, and Daniel Costa Ball. 2017. <span>“Procedural Differences in the Calculation of the Prevalence of Reading Difficulties in <span>Spanish</span>-Speaking School Children.”</span> <em>Estudios de Psicología</em> 38. <a href="https://doi.org/10.1080/02109395.2016.1268388">https://doi.org/10.1080/02109395.2016.1268388</a>.
+</div>
+<div id="ref-cubilla2024prevalencia" class="csl-entry" role="listitem">
+Cubilla-Bonnetier, Daniel. 2024. <span>“Prevalencia de Dislexia Del Desarrollo En Español: Un Metaanálisis.”</span> <em>Revista Argentina de Ciencias Del Comportamiento</em> 16. <a href="https://doi.org/10.32348/1852.4206.v16.n3.38343">https://doi.org/10.32348/1852.4206.v16.n3.38343</a>.
+</div>
+<div id="ref-garcia2013comprension" class="csl-entry" role="listitem">
+García, Eduardo, Juan E. Jiménez, Desirée González, and Elisabeth Jiménez-Suárez. 2013. <span>“Problemas de Comprensión En El Alumnado de Educación Primaria y Educación Secundaria Obligatoria: Un Estudio de Prevalencia En Español.”</span> <em>European Journal of Investigation in Health, Psychology and Education</em> 3 (2). <a href="https://doi.org/10.1989/ejihpe.v3i2.28">https://doi.org/10.1989/ejihpe.v3i2.28</a>.
+</div>
+<div id="ref-gutierrez2020cbm" class="csl-entry" role="listitem">
+Gutiérrez, Nuria, Juan E. Jiménez, Sara C. de León, and Rocío C. Seoane. 2020. <span>“Assessing Foundational Reading Skills in Kindergarten: A Curriculum-Based Measurement in <span>Spanish</span>.”</span> <em>Journal of Learning Disabilities</em> 53. <a href="https://doi.org/10.1177/0022219419893649">https://doi.org/10.1177/0022219419893649</a>.
+</div>
+<div id="ref-ida2025definicion" class="csl-entry" role="listitem">
+International Dyslexia Association. 2025. <span>“Definition of Dyslexia (2025 Dyslexia Definition Project).”</span> <a href="https://dyslexiaida.org/" class="uri">https://dyslexiaida.org/</a>.
+</div>
+<div id="ref-jimenez2009prevalencia" class="csl-entry" role="listitem">
+Jiménez, Juan E., Remedios Guzmán, Cristina Rodríguez, and Ceferino Artiles. 2009. <span>“Prevalencia de Las Dificultades Específicas de Aprendizaje: La Dislexia En Español.”</span> <em>Anales de Psicología</em> 25 (1): 78–85.
+</div>
+<div id="ref-klingbeil2017multivariate" class="csl-entry" role="listitem">
+Klingbeil, David A., Peter M. Nelson, Ethan R. Van Norman, and Chris Birr. 2017. <span>“Diagnostic Accuracy of Multivariate Universal Screening Procedures for Reading in Upper Elementary Grades.”</span> <em>Remedial and Special Education</em>. <a href="https://doi.org/10.1177/0741932517697446">https://doi.org/10.1177/0741932517697446</a>.
+</div>
+<div id="ref-lopezsala2025prelectocat" class="csl-entry" role="listitem">
+López-Sala, Anna, Mari Aguilera, Nadia Ahufinger, Cristina Martínez-García, Roser Colomé-Roura, Ismael Perálvarez, Sol Balsells, Daniel Cuadras, and Llorenç Andreu. 2025. <span>“Prelectocat. Prueba de Cribado En Catalán Para Detectar Tempranamente Dificultades Lectoras En La Infancia.”</span> <em>Ocnos</em> 24. <a href="https://doi.org/10.18239/ocnos_2025.24.2.496">https://doi.org/10.18239/ocnos_2025.24.2.496</a>.
+</div>
+<div id="ref-loredo2025prevalencia" class="csl-entry" role="listitem">
+Loredo, Mariana, Juan L. Luque, Almudena Giménez, and P. Javier López-Pérez. 2025. <span>“Prevalence of Risk for Dyslexia, Risk for Dyscalculia, and Their Comorbidity in <span>Spanish</span> Primary Education: Gender Difference and Socioeconomic Status.”</span> <em>Frontiers in Psychology</em> 16: 1664437. <a href="https://doi.org/10.3389/fpsyg.2025.1664437">https://doi.org/10.3389/fpsyg.2025.1664437</a>.
+</div>
+<div id="ref-luque2022guia" class="csl-entry" role="listitem">
+Luque, Juan Luis. 2022. <span>“Guía Para La Predicción, Detección Temprana y Diagnóstico de Las Dificultades de Aprendizaje de La Lectura.”</span> Proyecto LEEDUCA, Universidad de Málaga, con maestras de Audición y Lenguaje, Infantil y Primaria de la Consejería de Educación de la Junta de Andalucía.
+</div>
+<div id="ref-shen2026cat" class="csl-entry" role="listitem">
+Shen, Linling, Yixian Huang, Zixuan Ma, Man Chen, Chi Ma, and Nathan H. Clemens. 2026. <span>“How Accurate Are Computer-Adaptive Reading Screeners? A Systematic Review and Meta-Analysis of Validity and Classification Accuracy.”</span> <em>School Psychology Review</em>. <a href="https://doi.org/10.1080/2372966x.2026.2633597">https://doi.org/10.1080/2372966x.2026.2633597</a>.
+</div>
+<div id="ref-vannorman2019gated" class="csl-entry" role="listitem">
+Van Norman, Ethan R., Peter M. Nelson, David A. Klingbeil, Damien C. Cormier, and Adam J. Lekwa. 2019. <span>“Gated Screening Frameworks for Academic Concerns: The Influence of Redundant Information on Diagnostic Accuracy Outcomes.”</span> <em>Contemporary School Psychology</em> 23. <a href="https://doi.org/10.1007/s40688-018-0183-0">https://doi.org/10.1007/s40688-018-0183-0</a>.
+</div>
+<div id="ref-villegas2023andalucia" class="csl-entry" role="listitem">
+Villegas Lirola, Francisco. 2023. <span>“Prevalencia y Preferencias Vocacionales Del Alumnado Con Trastorno Del Aprendizaje de La Lectura (Dislexia Del Desarrollo) En Andalucía (España).”</span> <em>Revista CENTRA de Ciencias Sociales</em>. <a href="https://doi.org/10.54790/rccs.53">https://doi.org/10.54790/rccs.53</a>.
+</div>
+<div id="ref-wagner2020prevalence" class="csl-entry" role="listitem">
+Wagner, Richard K., Fotena A. Zirps, Ashley A. Edwards, Sarah G. Wood, Rachel E. Joyner, Betsy J. Becker, Guangyun Liu, and Bethany Beal. 2020. <span>“The Prevalence of Dyslexia: A New Approach to Its Estimation.”</span> <em>Journal of Learning Disabilities</em> 53 (5): 354–65. <a href="https://doi.org/10.1177/0022219420920377">https://doi.org/10.1177/0022219420920377</a>.
+</div>
+<div id="ref-yang2022prevalence" class="csl-entry" role="listitem">
+Yang, Ling, Chunbo Li, Xiumei Li, Manman Zhai, Qingqing An, You Zhang, Jing Zhao, and Xuchu Weng. 2022. <span>“Prevalence of Developmental Dyslexia in Primary School Children: A Systematic Review and Meta-Analysis.”</span> <em>Brain Sciences</em> 12 (2): 240. <a href="https://doi.org/10.3390/brainsci12020240">https://doi.org/10.3390/brainsci12020240</a>.
+</div>
+<div id="ref-zugarramurdi2022lexiland" class="csl-entry" role="listitem">
+Zugarramurdi, Camila, Lucía Fernández, Marie Lallier, Manuel Carreiras, and Juan C. Valle-Lisboa. 2022. <span>“Lexiland: A Tablet-Based Universal Screener for Reading Difficulties in the School Context.”</span> <em>Journal of Educational Computing Research</em> 60. <a href="https://doi.org/10.1177/07356331221074300">https://doi.org/10.1177/07356331221074300</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./resultados-globales.en.html" class="pagination-link" aria-label="Overall results">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Overall results</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./limites.en.html" class="pagination-link" aria-label="Limitations and data quality">
+        <span class="nav-page-text"><span class="chapter-title">Limitations and data quality</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/riesgo.en.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/riesgo.en.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
