@@ -1,0 +1,44 @@
+# English version (profile "en"): quarto render --profile en
+# Only translated chapters are listed. See traduccion/LEEME.md.
+project:
+  output-dir: _book/en
+
+lang: en
+
+book:
+  title: "LEEDUCA Platform Technical Manual"
+  subtitle: "Assessment and monitoring of early literacy from age 3 to 11"
+  author:
+    - name: "Juan Luis Luque Vilaseca"
+      affiliation: "Department of Developmental and Educational Psychology, University of Málaga"
+    - name: "Auxiliadora Sánchez Gómez"
+      affiliation: "Department of Developmental and Educational Psychology, University of Málaga"
+    - name: "Marisol Carrillo Gallego"
+      affiliation: "Department of Developmental and Educational Psychology, University of Murcia"
+    - name: "Almudena Giménez de la Peña"
+      affiliation: "Department of Basic Psychology, University of Málaga"
+    - name: "Amanda Flores Marín"
+      affiliation: "Department of Basic Psychology, University of Málaga"
+    - name: "Ricardo Cruz Arándiga"
+      affiliation: "LEEDUCA Research Group, University of Málaga"
+    - name: "María Rodríguez Moreno"
+      affiliation: "Department of Developmental and Educational Psychology, University of Málaga"
+    - name: "Pedro Javier López-Pérez"
+      affiliation: "Department of Developmental and Educational Psychology, University of Málaga"
+  date: today
+  date-format: "MMMM D, YYYY"
+  sidebar:
+    collapse-level: 1
+    tools:
+      - icon: translate
+        href: https://abarejo.github.io/leeduca-manual/
+        text: "Versión en español (completa)"
+  chapters:
+    - index.en.qmd
+    - summary-en.qmd
+    - part: "Foundations"
+      chapters:
+        - definicion.en.qmd
+  appendices:
+    - glosario.en.qmd
+    - referencias.en.qmd

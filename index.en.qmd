@@ -1,0 +1,65 @@
+# Preface {.unnumbered}
+
+::: {.callout-warning}
+## Working draft — English edition in progress (November 27, 2026)
+This book is the LEEDUCA group's workspace for the technical manual of the platform. Its content is under review and may change. Please do not cite it yet as a final version. The **[Spanish version](https://abarejo.github.io/leeduca-manual/)** is the reference and is more complete; this English edition is being built chapter by chapter, starting with what reviewers of our articles and international colleagues need.
+:::
+
+The LEEDUCA/PRELEO platform assesses children aged 3 to 11 in schools in Málaga (Spain) online, three times per school year (3-year-olds since 2023/24). It covers letter knowledge, phonological awareness, rapid automatized naming, word and text reading, reading comprehension, oral language, mathematics and executive functions. Since 2014 it has gathered data from several birth cohorts, named by their year of birth (2010, 2011, 2012…).
+
+The manual describes every task on the platform with the same structure: what it measures and how it is administered, the sample it has been studied in, its reliability and validity, how its scores are interpreted (norms), and which variables affect them. It is written for three kinds of readers:
+
+- **Teachers and school psychologists**, who use the platform's reports and need to know how far a score can be trusted.
+- **Clinicians**, who compare LEEDUCA with other tests and need well-justified norms and cut-off scores.
+- **Researchers and reviewers**, who want to check every figure.
+
+## Origins
+
+The platform and this manual grew out of the **DIS-ESP battery**, created by María Soledad Carrillo (University of Murcia, a member of the group) and Jesús Alegría (Université Libre de Bruxelles). DIS-ESP proposed a two-stage assessment of dyslexia: group screening of reading efficiency with TECLE and, for the children it flagged, an assessment of the two reading mechanisms, phonological and orthographic [@carrillo2011prevalencia]. The LEEDUCA group promoted it in Málaga on paper (2007–2012) and then moved it to an online platform, which added the early literacy precursors from age 4 and assessment three times per school year.
+
+## What is available in English
+
+| Chapter | Status |
+|---|---|
+| [Technical summary](summary-en.qmd) | Written in English (November 8, 2026) |
+| [What we measure in light of the new definition of dyslexia](definicion.en.qmd) | Translated from the Spanish version of November 27, 2026 |
+| [Glossary (Spanish–English)](glosario.en.qmd) | November 27, 2026 |
+| The platform; Normative study; Psychometric method; Overall results; Risk and reading difficulty; Limitations; Task catalog; class A task sheets | Next (first layer of the translation) |
+| Theoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Woodcock criterion; Norms; Task grouping; Decisions | Later (second layer) |
+
+Links to chapters that are not translated yet point to the Spanish pages and are marked *(in Spanish)*. All figures and numbers are computed by the same code in both languages, so the two versions always report the same results.
+
+## How to read this book
+
+Each task sheet has three layers:
+
+1. **The text**, with the results and what they mean.
+2. **The full tables**, at the end of each sheet. They are read from the files in `datos/agregados/`, which contain only aggregated results (means, percentiles, correlations…), never data from an individual child.
+3. **The code**, in the GitHub repository (button in the sidebar). Tables are computed with R scripts from the complete data, which for privacy reasons never leave the project's computer. The book is built from those tables, so anyone can reproduce its figures.
+
+## Privacy
+
+This book contains only aggregated data. Pupils' names and identification numbers, teachers' names and individual data stay in the project folder at the University of Málaga. Teachers always appear under pseudonyms. Norms of commercial tests used for comparison (PROLEC-R, EDICOLE) are not reproduced, only cited.
+
+## Authorship
+
+Provisional author order, to be confirmed:
+
+1. Juan Luis Luque Vilaseca (Department of Developmental and Educational Psychology, University of Málaga).
+2. Auxiliadora Sánchez Gómez (Department of Developmental and Educational Psychology, University of Málaga).
+3. Marisol Carrillo Gallego (Department of Developmental and Educational Psychology, University of Murcia).
+4. Almudena Giménez de la Peña (Department of Basic Psychology, University of Málaga).
+5. Amanda Flores Marín (Department of Basic Psychology, University of Málaga).
+6. Ricardo Cruz Arándiga (LEEDUCA Research Group, University of Málaga).
+7. María Rodríguez Moreno (Department of Developmental and Educational Psychology, University of Málaga).
+8. Pedro Javier López-Pérez (Department of Developmental and Educational Psychology, University of Málaga).
+
+Final authorship will be agreed before the consultation version is deposited.
+
+## How to cite this draft
+
+Luque Vilaseca, J. L., Sánchez Gómez, A., Carrillo Gallego, M., Giménez de la Peña, A., Flores Marín, A., Cruz Arándiga, R., Rodríguez Moreno, M., & López-Pérez, P. J. (2026). *Manual técnico de la plataforma LEEDUCA* [LEEDUCA platform technical manual] (working draft, English edition in progress). University of Málaga. https://abarejo.github.io/leeduca-manual/en/
+
+## Contact
+
+For research collaboration, please contact the director of the LEEDUCA group, Juan Luis Luque (University of Málaga).

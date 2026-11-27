@@ -1,7 +1,7 @@
 # Technical summary (English) {#sec-summary-en .unnumbered}
 
 ::: {.callout-note appearance="minimal"}
-**Status:** first version (8 November 2026). The group has decided to build an English version of the manual step by step, starting with what reviewers of our articles need. This page summarises the platform and the psychometric approach; the full chapters are in Spanish for now.
+**Status:** first version (8 November 2026). The group has decided to build an English version of the manual step by step, starting with what reviewers of our articles need. This page summarizes the platform and the psychometric approach. The English edition of the full manual is being built chapter by chapter ([English edition](https://abarejo.github.io/leeduca-manual/en/)); the complete chapters are in Spanish for now. *Revised November 27, 2026 (American spelling and terms aligned with the glossary).*
 :::
 
 ## The LEEDUCA platform
@@ -12,7 +12,7 @@ Domains covered: letter knowledge, phonological awareness, rapid automatized nam
 
 ## Normative sample
 
-The normative study uses six birth cohorts (2010–2015) assessed in schools of the province of Málaga: **10,278 children** (31 to 72 schools per cohort). Of these, 4,952 were followed term by term until 2019/20; the remainder were assessed only in the broad assessments of 2020/21 (paper) and 2021/22 (tablets). Part of the schools applied **Preleo**, a classroom programme for oral language and early literacy. Norms use children from schools **without Preleo** as the reference group (1,628 children in term-by-term follow-up); when a time point has fewer than 100 reference children, all children are used and this is flagged. A flow diagram is given in [Estudio normativo](estudio-normativo.qmd#sec-flujo-muestra).
+The normative study uses six birth cohorts (2010–2015) assessed in schools of the province of Málaga: **10,278 children** (31 to 72 schools per cohort). Of these, 4,952 were followed term by term until 2019/20; the remainder were assessed only in the broad assessments of 2020/21 (paper) and 2021/22 (tablets). Part of the schools applied **Preleo**, a classroom program for oral language and early literacy. Norms use children from schools **without Preleo** as the reference group (1,628 children in term-by-term follow-up); when a time point has fewer than 100 reference children, all children are used and this is flagged. A flow diagram is given in [Normative study](https://abarejo.github.io/leeduca-manual/estudio-normativo.html#sec-flujo-muestra) (*in Spanish*).
 
 ## Psychometric approach
 
@@ -24,15 +24,15 @@ The normative study uses six birth cohorts (2010–2015) assessed in schools of 
 
 ## Risk classification
 
-Reading difficulty is defined from the child's whole trajectory between 6 and 11 years, not from a single assessment, in five **certainty levels**: persistent severe difficulty (DL-A: ≤ P10 in at least two school years and ≤ P25 in all years from age 7), persistent difficulty (DL-B), transient difficulty (TR), intermediate (INT) and typical stable (TE). The same logic is proposed for oral language and mathematics. Term reports use five bands with a **watch zone between P20 and P30**, where no label is given until the next assessment; in simulations with reliability .85, this halves label changes due to measurement error alone (from 14 % to 6 %).
+Reading difficulty is defined from the child's whole trajectory between 6 and 11 years, not from a single assessment, in five **certainty levels**: severe persistent reading difficulty (DL-A: ≤ P10 in at least two school years and ≤ P25 in all years from age 7), persistent reading difficulty (DL-B), transient difficulty (TR), intermediate (INT) and stable typical (TE). The same logic is proposed for oral language and mathematics. Term reports use five bands with a **watch zone between P20 and P30**, where no label is given until the next assessment; in simulations with reliability .85, this halves label changes due to measurement error alone (from 14 % to 6 %).
 
 ## Intended uses
 
-Supported: universal screening (as a probability of risk), progress monitoring, planning classroom support, and research with pseudonymised data. Not supported: clinical diagnosis on its own, high-stakes decisions about individual children, and comparison of schools or teachers. See [Presentación y uso responsable](uso-responsable.qmd).
+Supported: universal screening (as a probability of risk), progress monitoring, planning classroom support, and research with pseudonymized data. Not supported: clinical diagnosis on its own, high-stakes decisions about individual children, and comparison of schools or teachers. See [Presentation and responsible use](https://abarejo.github.io/leeduca-manual/uso-responsable.html) (*in Spanish*).
 
 ## Open science
 
-The manual is a reproducible web book. All figures and tables are computed with R scripts from aggregated data published in the repository; individual data remain at the University of Málaga. Licence: CC BY 4.0.
+The manual is a reproducible web book. All figures and tables are computed with R scripts from aggregated data published in the repository; individual data remain at the University of Málaga. License: CC BY 4.0.
 
 ## How to cite
 

@@ -27,9 +27,15 @@ jobs:
             any::ggplot2
             any::knitr
             any::rmarkdown
-      - name: Generar y publicar en GitHub Pages
+      # 27/11/2026: el libro tiene dos versiones. Primero el español (borra _book/) y después el inglés (_book/en/).
+      - name: Generar la versión en español
+        run: quarto render
+      - name: Generar la versión en inglés
+        run: quarto render --profile en
+      - name: Publicar en GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
