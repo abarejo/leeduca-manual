@@ -21,13 +21,13 @@ Group decisions that affect how the manual's scores are computed and interpreted
 |---|---|---|
 | The five certainty levels (DL-A, DL-B, TR, INT, TE) are the reference classification of reading difficulty. The threshold for severe difficulty is P10, not −1.5 SD (November 8, 2026). | [E] IDA definition; cumulative risk and resilience model. [U] Fewer severe cases left unidentified | [How we estimate risk](riesgo.en.qmd#sec-por-que-niveles) |
 | The same classification is proposed for oral language and mathematics, with the same rules (proposal of November 8, 2026). | [U] Comparability across domains | [How we estimate risk](riesgo.en.qmd#sec-niveles-otros-dominios) |
-| Reports for one term use five bands, with a watch zone between P20 and P30 (November 8, 2026). | [D] Simulation of measurement error | [Report bands](https://abarejo.github.io/leeduca-manual/informe-tramos.html) (*in Spanish*) |
+| Reports for one term use five bands, with a watch zone between P20 and P30 (November 8, 2026). | [D] Simulation of measurement error | [Report bands](informe-tramos.en.qmd) |
 
 ## How norms are built
 
 | Decision | Support | Where |
 |---|---|---|
-| Norm by school year and term, at least up to age 7. | [D] With norms by school year, 22–24% of children are flagged in the first term | [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*) |
+| Norm by school year and term, at least up to age 7. | [D] With norms by school year, 22–24% of children are flagged in the first term | [Norms by school year or by term](baremos-trimestre.en.qmd) |
 | From age 4 to 6, refine by age in months. | [D] Reclassifies 2–10% of children at P16 | Letters task sheet |
 | Do not adjust the risk cut-off for the school's socioeconomic index (SES); the SES-based percentile is given only as context. | [D] At the same score, children from low-SES schools are at greater risk: a separate cut-off would hide real risk | Letters task sheet |
 | Report the percentile with its confidence band and do not classify on the basis of a single task. | [D] Standard error of measurement | Task sheets |

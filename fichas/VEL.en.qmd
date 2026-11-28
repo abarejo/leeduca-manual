@@ -293,7 +293,7 @@ fig_rango(DV, grupo = "medida", unidad = "Words correct per minute")
 
 There are `r nx` time points with an extreme value. The clearest case is isolated words at 6.2: the maximum is 217 WCPM, more than three times P99 (65 WCPM). No 6-year-old reads twelve words like that: it is almost certainly a timing error that the current filter (more than 250 WCPM) lets through. **Proposal:** set plausibility limits by age, for example the time point's P99 plus 3 SD, and check those cases in the raw data before reporting the range as a property of the test (new data issue).
 
-The range by cohort also showed very low values in the 2021/22 sessions (948–950). **This has now been clarified:** those codes (10680–10686, 10757 and 10758) are not reading lists aloud but a **group lexical decision task on tablets** ("is this a word?"), which the dictionary had assigned to these tasks by mistake. It has been corrected; see [Validity against an external criterion](https://abarejo.github.io/leeduca-manual/criterio-woodcock.html) (*in Spanish*). In the full tables, the range for all measures is in sheet `2_Descriptivos_SIN`.
+The range by cohort also showed very low values in the 2021/22 sessions (948–950). **This has now been clarified:** those codes (10680–10686, 10757 and 10758) are not reading lists aloud but a **group lexical decision task on tablets** ("is this a word?"), which the dictionary had assigned to these tasks by mistake. It has been corrected; see [Validity against an external criterion](../criterio-woodcock.en.qmd). In the full tables, the range for all measures is in sheet `2_Descriptivos_SIN`.
 
 ### Reliability
 

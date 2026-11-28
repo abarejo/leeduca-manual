@@ -1,0 +1,106 @@
+# Presentation and responsible use {#sec-uso-responsable}
+
+::: {.callout-note appearance="minimal"}
+**Status:** second draft (November 10, 2026) of chapter 1 of the manual, for review by the group. It follows what test evaluation models (CET-R and EFPA) and the international guidelines on test use require. Points marked **"To be confirmed"** need information from the team (consent procedure, ethics committee, examiner training) before the consultation version. *Translated from the Spanish version of November 28, 2026.*
+:::
+
+**In one sentence.** The LEEDUCA platform is for **early identification, monitoring progress and deciding on support** in the classroom. It is not, on its own, for diagnosis, and its scores are always interpreted with their margin of error, by professionals with appropriate training and with respect for the rights of children and their families.
+
+## What the platform is
+
+LEEDUCA is an online assessment battery of reading and its precursors for children aged 3 to 11. It is administered at school, three times per school year, with brief tasks of letter knowledge, phonological awareness, rapid naming, word, pseudoword and text reading, comprehension, oral language, numerical cognition and executive functions. The platform presents the stimuli, records responses and times item by item, and generates reports. Its history and how it works are described in [The LEEDUCA platform](plataforma.en.qmd).
+
+This manual is its **technical documentation**: it describes each task, the sample in which it has been studied, its reliability and validity, its norms and the limits of each score. It follows the logic of the *Standards for Educational and Psychological Testing* [@aera2014]: a test is not validated in the abstract, but **each proposed use** of its scores, with the evidence that supports it [@kane2013].
+
+## What it is for and what it is not for
+
+| Use | Supported? | What it rests on | Where the evidence is |
+|---|---|---|---|
+| **Universal screening** for risk of reading difficulty in preschool and Grade 1 | **Yes**, as a probability of risk, not as a label | Predictive validity against persistent difficulty, with cross-cohort validation | [How we estimate risk](riesgo.en.qmd) |
+| **Monitoring progress** throughout the school year | **Yes**, with the reliable change index and the watch zone | Three assessments per school year; norms by term | [5.5 How much change matters](metodo-psicometrico.en.qmd#sec-cambio-importa), [Norms by school year or by term](baremos-trimestre.en.qmd) |
+| **Deciding on support** in the classroom (intervention tiers) | **Yes**, together with the teacher's judgment and response to instruction | Two-gate funnel | [From the lab to the manual](https://abarejo.github.io/leeduca-manual/avances.html#sec-embudo) (*in Spanish*) |
+| **Guiding** a specialist assessment (what to look at next) | **Yes**, as a starting profile | Task sheets; accuracy and speed profiles | Task sheets |
+| **Research** with aggregated or pseudonymized data | **Yes**, with a data use agreement | Verified long table; access levels | [Research with the platform data](https://abarejo.github.io/leeduca-manual/investigacion.html) (*in Spanish*) |
+| Clinical **diagnosis** of dyslexia or language disorder | **Not on its own** | Diagnosis requires a case history, individual assessment and clinical criteria (DSM-5-TR, ICD-11) and persistence despite good instruction | [What we measure in light of the new definition](definicion.en.qmd) |
+| **Classifying** a child with academic consequences (repeating a year, changing group) | **No** | Scores have error and are designed to help, not to select | — |
+| **Comparing or ranking schools or teachers** | **No** | A school's results depend on its students and context; the manual does not offer school norms | [Limitations and data quality](limites.en.qmd) |
+| **Detecting ADHD** with the preschool attention tasks | **No** | There is no validity evidence for that use | Attention and executive function task sheets |
+| **Assessing spelling** | **Not for now** | The platform only has letter dictation, initial letter and orthographic decision; there is no normed word dictation | [Spelling words](https://abarejo.github.io/leeduca-manual/marco-teorico.html#sec-escritura) (*in Spanish*) |
+
+**Class A** tasks have enough reliability, validity and norms for individual uses. **Class B** tasks can be used with caution and **class C** tasks only for research or description (see [Quality classes](limites.en.qmd#sec-clases)). The class of each task appears at the top of its task sheet.
+
+## Who can use it
+
+International guidelines require that whoever interprets a test have the training required by the use made of it [@itc2001uso; @muniz2015directrices]. The manual proposes three levels:
+
+| Level | Who | What they can do | Proposed minimum training |
+|---|---|---|---|
+| **1 · Administration and classroom** | Teachers, speech and language teachers, special education teachers, trained examiners | Administer the sessions; read the classroom report; organize tier 1 and 2 support | Training in administering the platform and reading the report (error bands, watch zone) |
+| **2 · Individual interpretation** | School psychologists, speech-language therapists, educational and clinical psychologists | Interpret individual profiles; communicate results to families; decide on referrals and tier 3 support | Degree in Psychology, Educational Psychology or Speech-Language Therapy, with training in psychometric assessment and learning difficulties |
+| **3 · Research** | Researchers with an approved project | Analyze pseudonymized data with a data use agreement | Training in quantitative methods; data use commitment |
+
+- **To be confirmed:** content and duration of the examiners' training in each cohort, and whether the platform records who administered each session.
+
+## Administering well
+
+The validity of a score starts with its administration. The guidelines on computer-based and internet testing [@itc2006internet] and the experience with the platform lead to these conditions:
+
+- **Place.** A quiet space in the school, without other children watching, with a checked computer and **headphones** for tasks with recorded stimuli.
+- **Mode.** Most tasks are **individual with an examiner**: the examiner follows the platform's instruction, does not help or give hints, and marks the response exactly as the child gives it. Group or self-administered tasks are indicated in their task sheet.
+- **Timing.** Within the window for each term, so that the norms for that time point are appropriate.
+- **Incidents.** If a child gets tired or distracted, or there is a technical failure, it is noted and the session is flagged for review. Detectors of anomalous sessions help to find them (see [5.1 Scores](metodo-psicometrico.en.qmd)).
+- **Accommodations.** A child with a sensory or motor impairment, or who is learning Spanish, may need accommodations. If the administration is changed, the score is no longer comparable with the norms, and the report says so.
+
+## Interpreting well
+
+1. **A score is an estimate with error.** Each percentile is read with its confidence band. The same child can score differently in two assessments without having changed (see [The dancing percentile](https://abarejo.github.io/leeduca-manual/avances.html#sec-baila) (*in Spanish*)).
+2. **Near the cut-off, monitor.** Between P20 and P30 no label is given: the child's progress is checked at the next assessment (see [The watch zone](https://abarejo.github.io/leeduca-manual/avances.html#sec-vigilar) (*in Spanish*)).
+3. **Risk is a probability, not a diagnosis.** A sentence such as "of every 100 children with this profile, about 22 will have difficulties" is better understood and less misleading than "at risk".
+4. **A single task is not enough.** The decision rests on the profile, the teacher's judgment and the response to instruction.
+5. **Context matters.** Before interpreting a low result, what is not reading is ruled out: little schooling, a different home language, hearing or vision problems, a bad session.
+6. **Progress counts as much as level.** A child below the average who grows more than expected is responding to instruction.
+
+## Communicating with families
+
+Families have the right to **understandable and useful** information. The proposed family report gives three things: where the child stands (with its interval), how the child is progressing and what is going to be done, with a date to look again. It avoids diagnostic labels, explains that a result on a given day can vary and suggests simple activities for home. A worrying result is communicated in person, by the class teacher or the school psychologist, and not only in writing.
+
+## Ethics and data protection
+
+The platform processes data from minors, who have reinforced protection. Processing is governed by the General Data Protection Regulation [@rgpd2016] and the Spanish Organic Law 3/2018 [@lopdgdd2018]. The principles the manual follows:
+
+- **Purpose.** Data are collected to assess and support reading development at school. Their use in research requires families' consent for that purpose and the corresponding ethics approval.
+- **Minimization and pseudonymization.** The manual and its analyses use a pseudonymized identifier. Names, pupil identification numbers and teachers' names do not leave the project folder at the University of Málaga. Teachers always appear under pseudonyms.
+- **Only aggregated data in public.** This book publishes means, percentiles and correlations, never data from a single child. No table allows a pupil, a class or a teacher to be identified.
+- **Tiered access.** Open (this book), under a data use agreement (pseudonymized long table) and restricted (original exports). See [Research with the platform data](https://abarejo.github.io/leeduca-manual/investigacion.html) (*in Spanish*).
+- **To be confirmed:** families' informed consent procedure in each cohort; the ethics committee that approved the project and its reference; data controller and data retention period.
+
+## Test security
+
+Tasks lose value if their items circulate. That is why the manual **does not reproduce the full reading lists** or the task items: screenshots show at most the example or the first two items, and item properties are summarized by list. Norms of commercial tests used as criteria (for example, Woodcock-Muñoz, PROLEC-R or EDICOLE) are not reproduced; they are only cited [@muniz2015directrices].
+
+## Fairness
+
+A fair test measures the same thing and makes the same errors in all groups. The manual checks, task by task, whether a score works the same by sex, school socioeconomic status, format (platform, paper or tablet) and period (before and after the pandemic), and whether the same cut-off is equally accurate in all groups (see [5.6 Fairness](metodo-psicometrico.en.qmd)). Until this is checked, results for children who are learning Spanish and for the Catalan and Valencian versions are interpreted with caution. The same applies to **dialectal variation** in the phonological and spelling tasks: with *seseo* or *ceceo* (merging /s/ and /θ/), common in Málaga, some responses may not mean the same as in a child who distinguishes /s/ and /θ/ (see [Spelling words](https://abarejo.github.io/leeduca-manual/marco-teorico.html#sec-escritura) (*in Spanish*)).
+
+## Regulatory framework {#sec-marco-normativo}
+
+| Document | What the manual uses it for |
+|---|---|
+| *Standards for Educational and Psychological Testing*, 2014 edition [@aera2014] | Validity argument, reliability, norms, fairness and documentation |
+| Revised Test Evaluation Questionnaire (CET-R) [@hernandez2016cetr] | Quality traffic light for each task sheet |
+| EFPA test review model, 2013 revision [@evers2013efpa] | Structure of the technical documentation |
+| International Guidelines for Test Use [@itc2001uso] and new ITC guidelines [@muniz2015directrices] | User qualification, research, quality control and security |
+| ITC Guidelines on Computer-Based and Internet-Delivered Testing [@itc2006internet] | Online administration, recording and data security |
+| COSMIN [@mokkink2010cosmin] | Terminology and criteria for measurement properties |
+| DSM-5-TR [@apa2022dsm5tr] and ICD-11 [@oms2019cie11] | Clinical definition of specific learning disorder with impairment in reading |
+| IDA definition of dyslexia, 2025 [@ida2025definicion] | What the platform measures and what it does not (see [What we measure in light of the new definition](definicion.en.qmd)) |
+| General Data Protection Regulation [@rgpd2016] and Spanish Organic Law 3/2018 [@lopdgdd2018] | Processing of children's data |
+
+## How this manual is organized
+
+- **How the manual is built:** foundations (this chapter, the [theoretical framework](https://abarejo.github.io/leeduca-manual/marco-teorico.html) (*in Spanish*) and the [new definition of dyslexia](definicion.en.qmd)), the platform and its antecedent, [the DIS-ESP battery](https://abarejo.github.io/leeduca-manual/dis-esp.html) (*in Spanish*), the normative study, the psychometric method and [how we estimate risk](riesgo.en.qmd).
+- **Task catalog and task sheets:** one task sheet per task, grouped by domain (reading, phonological processing, numerical cognition, oral language and attention), with its quality class.
+- **Research with the platform:** how to request the data and the advances coming from the group's studies.
+- **Report prototypes:** proposals for a [report by bands](informe-tramos.en.qmd), a [classroom report](https://abarejo.github.io/leeduca-manual/informe-aula.html) (*in Spanish*) and a [family report](https://abarejo.github.io/leeduca-manual/informe-familias.html) (*in Spanish*).
+- **Preleo:** the intervention program delivered in some of the schools.
+- **Technical summary:** a [summary in English](summary-en.qmd) for reviewers.

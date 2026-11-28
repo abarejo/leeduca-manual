@@ -1,0 +1,37 @@
+# Report bands: levels and the watch zone {#sec-informe-tramos}
+
+::: {.callout-note appearance="minimal"}
+**Status:** proposal of November 8, 2026, for review by the group. It reconciles the watch zone (decided on November 8, 2026) with the severity levels of the [classroom report prototype](https://abarejo.github.io/leeduca-manual/informe-aula.html) (*in Spanish*). *Translated from the Spanish version of November 28, 2026.*
+:::
+
+**In one sentence.** The report for one term places each child in one of five percentile bands. Between P20 and P30 there is no label but monitoring, and the word "difficulty" is reserved for what persists across school years.
+
+## The five bands
+
+| Band | Percentile for the term | What the report says to the teacher | What it says to the family | What is done | % expected in a typical classroom |
+|---|---|---|---|---|---|
+| **4 · Far below** | P5 or below | Far below what is expected for their school year and term | Far below what is usual | Measure again soon; intensive support; consider referral | 5% |
+| **3 · Well below** | P6 to P10 | Well below | Well below what is usual | Small-group support; monitor every few weeks | 5% |
+| **2 · At risk** | P11 to P19 | Below; at risk | Below what is usual | Classroom support and monitoring | 9% |
+| **1 · Watch** | P20 to P30 | Close to the limit; no label | Close to the limit of what is usual | Look at how the child progresses at the next assessment | 11% |
+| **0 · No difficulty** | Above P30 | Within what is expected | Within what is usual | Regular instruction | 70% |
+
+The classroom report prototype uses these bands from its [version 2](apps/informe_aula_v2.html){target="_blank"} (in Spanish). Compared with version 1, the "mild" band (P17–P25) disappears: what was between P11 and P19 becomes "at risk", and what was between P20 and P25 becomes "watch", together with P26–P30.
+
+## Why this way
+
+- **Fewer label changes due to chance.** With a test of reliability .85, the proportion of children whose label changes from one assessment to the next without their having changed drops from 14% to 6% (see [The watch zone](https://abarejo.github.io/leeduca-manual/avances.html#sec-vigilar) (*in Spanish*)).
+- **Each band carries an action.** The report does not only classify: it says what to do and when to look again.
+- **It continues the group's guide.** The LEEDUCA early identification guide already proposed graded severity judgments with cut-offs at P10, P20 and P30 for the Grade 1 reading tasks, instead of a single cut-off [@luque2022guia].
+- **Bands describe a term; certainty levels describe a trajectory.** A child in band 4 for one term does not "have dyslexia". Persistent difficulty is defined with the whole trajectory from age 6 to 11, with the certainty levels of [How we estimate risk](riesgo.en.qmd). The report for a term speaks of **risk and support**, not diagnosis.
+- **The error band is visible.** Each point in the report carries its margin of error. If a child's band crosses the limit of their reporting band, the report treats it as the more favorable neighboring band until the next assessment.
+
+## Relation with the certainty levels
+
+| Band for the term | Certainty levels (whole trajectory) |
+|---|---|
+| 4 and 3 (P10 or below) | If repeated in at least two school years and not above P25 from age 7, it is **severe persistent difficulty** (DL-A) |
+| 2 and 1 (P11 to P30) | May end up as moderate persistent difficulty (DL-B), transient (TR) or typical, depending on progress |
+| 0 (above P30) | Typical, unless the child falls in later school years |
+
+The certainty levels still use P25 as the cut-off for each school year: the watch zone changes how a term is reported, not how a trajectory is classified. The levels, their P10 threshold for severe difficulty and their rationale are in [How we estimate risk](riesgo.en.qmd).

@@ -39,7 +39,7 @@ Besides the classical indicators, task sheets include analyses designed for the 
 
 - **Agreement between terms and reliable change:** how much a child has to change to claim that they have really improved.
 - **Precision of the percentile:** the band within which a child's percentile lies with 90% confidence.
-- **Age in months:** whether it is better to norm by exact age and not only by school year and term (see [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*)).
+- **Age in months:** whether it is better to norm by exact age and not only by school year and term (see [Norms by school year or by term](baremos-trimestre.en.qmd)).
 - **Validity without circularity:** when the reading difficulty criterion contains the measure itself, another criterion is sought.
 - **Differential prediction:** whether the same cut-off works equally well for boys and girls or for schools of different socioeconomic status.
 - **Understandable units:** for example, words per minute and the minutes a child takes to read 1,000 words.

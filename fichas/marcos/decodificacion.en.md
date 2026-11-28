@@ -7,5 +7,5 @@ Reading syllables, words and pseudowords aloud measures **written word recogniti
 **What our data show.** These are the most reliable and valid tasks on the platform:
 
 - **Reliability.** Stability between terms of ρ = .65 to .81, and 2021 α between .73 and .97.
-- **External validity.** They predict low Woodcock-Muñoz reading fluency years later with a median AUC of .72 to .77 ([chapter](https://abarejo.github.io/leeduca-manual/criterio-woodcock.html), *in Spanish*). The longer lists (three- and four-syllable words) predict best.
-- **Delay or deviance.** Comparing pseudowords with words among children of the same reading level separates delay from deviance ([Norms by reading level](https://abarejo.github.io/leeduca-manual/baremo-nivel-lector.html), *in Spanish*).
+- **External validity.** They predict low Woodcock-Muñoz reading fluency years later with a median AUC of .72 to .77 ([chapter](../../criterio-woodcock.en.qmd)). The longer lists (three- and four-syllable words) predict best.
+- **Delay or deviance.** Comparing pseudowords with words among children of the same reading level separates delay from deviance ([Norms by reading level](../../baremo-nivel-lector.en.qmd)).
