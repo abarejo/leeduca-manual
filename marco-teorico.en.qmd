@@ -1,0 +1,166 @@
+# Theoretical framework: learning to read in Spanish and why we measure what we measure {#sec-marco-teorico}
+
+::: {.callout-note appearance="minimal"}
+**Status:** third draft (November 24, 2026; adds the section on morphology; the section on spelling was added on November 10) of chapter 2 of the manual, for review by the group. It provides the common framework for all task sheets. Each task sheet then adds a brief framework for its domain (for example, those for [letter knowledge](fichas/LET.en.qmd) or [rapid naming](fichas/RAN.en.qmd)), and the definition of dyslexia is discussed in detail in [What we measure in light of the new definition](definicion.en.qmd). Only published work is cited. *Translated from the Spanish version of November 28, 2026. Spanish examples are kept in italics, with an English gloss where needed.*
+:::
+
+**In one sentence.** In Spanish, almost all children learn to decode in their first school year; what separates good readers from those with difficulties is, above all, **how quickly they come to read automatically**, and this can be anticipated from preschool with a few precursors.
+
+## Learning to read in a transparent orthography
+
+In Spanish, each letter or group of letters is almost always pronounced the same way. This **transparency** changes the course of learning compared with English:
+
+- **Decoding is mastered early.** In a study of 13 European orthographies, children learning transparent languages such as Spanish read more than 90% of simple words and pseudowords correctly at the end of their first school year; children learning English, less than 40% [@seymour2003foundation]. **Accuracy** quickly stops distinguishing children from one another.
+- **What remains is fluency.** After mastering the code, the child has to read faster and with less effort. In a transparent orthography, individual differences lie mainly in **speed** and are very stable: those who read slowly in Grade 1 usually still read slowly years later [@landerl2008fluency].
+- **The reader teaches themselves.** Each time a child decodes a word, something of its written form is stored. After a few exposures, the word is recognized at a glance [@share1995phonological]. That is why decoding is the gateway to the orthographic lexicon, not a stage that is left behind [@ehri2005learning].
+- **The size of the unit changes.** At first, reading is letter by letter; with practice, the child uses larger units (syllables, morphemes, whole words) [@ziegler2005grain]. That is why the word length effect is large at first and decreases over the years, and is larger in children with difficulties [@zoccolotti2005length; @davies2007spanish].
+- **Automatization frees resources.** When decoding is automatic, attention is free for comprehension [@laberge1974automatic]. Those who read slowly read less, and those who read less fall further behind: differences tend to grow over the years [@stanovich1986matthew].
+
+**What it implies for the platform.** **Speed** must be measured as well as accuracy, and several times per school year, because change between ages 5 and 8 is very fast. **Words** reflect the orthographic lexicon already built and **pseudowords**, pure decoding. The difficulty of a word does not depend only on its length, but also on when it is learned orally and how many words resemble it [@alonso2015aoa] (see [What makes a word list difficult](https://abarejo.github.io/leeduca-manual/avances.html#sec-listas) (*in Spanish*)).
+
+## From decoding to comprehension
+
+The **simple view of reading** proposes that reading comprehension is the product of two skills: decoding and oral language comprehension [@gough1986decoding; @hoover1990simple]. If either fails, comprehension fails. At first decoding weighs more; over the years, once decoding is automatic, oral language weighs more and more: vocabulary, grammar and world knowledge [@storch2002oral; @lervag2018comprehension].
+
+**What it implies for the platform.** Reading comprehension cannot be interpreted without knowing how the child decodes. A child who understands poorly because they read slowly needs different help from one who reads well but does not understand. That is why the platform measures decoding, speed, comprehension and oral language separately, and the manual proposes treating comprehension as a separate dimension (see [How we estimate risk](riesgo.en.qmd)).
+
+## Spelling words: the same code in the opposite direction {#sec-escritura}
+
+Reading and spelling words rely on the same knowledge: the correspondences between letters and sounds and the written forms stored in the orthographic lexicon. But they are not equally hard. To read, it is enough to **recognize** the word; to spell it, all its letters must be **retrieved**, in order. A representation that is enough to read a word may not be enough to spell it correctly [@perfetti1997spelling].
+
+- **Spanish is more transparent for reading than for spelling.** Almost every letter is read in only one way, but several sounds can be written in more than one: /b/ with *b* or *v*, /x/ with *j* or with *g* before *e* and *i*, /ʝ/ with *ll* or *y*, and *h* is silent. Some spellings depend on a context rule (*c*/*qu*, *g*/*gu*, *r*/*rr*); others only on knowing the word. In a sample of 1,045 children in Grades 2 to 6, the spelling of these words was not mastered until Grade 4 or 5, and the most frequent errors involved *b*/*v*, *h* and *c*/*s*/*z*/*x* [@jimenez2008arbitraria].
+- **Word spelling is learned through reading.** Each correctly decoded word leaves a trace of its written form [@share1995phonological]. In Spanish, this orthographic lexicon forms **earlier** than in French: the effect of word frequency on spelling, which indicates that the word's form is stored, appears earlier in Spanish children than in French children [@carrillo2013spelling]. Spelling mechanisms are the same in all alphabetic orthographies; in Spanish they are acquired faster [@alegria2014escritura]. From Grade 2, children also use regularities that do not belong to any particular word: they choose *b* or *v* according to how frequent each combination with the following vowel is (at the start of a word, *vi* is more frequent than *bi*, and *bu* more than *vu*) [@carrillo2014bigram].
+- **The precursors are the same.** Phonemic awareness, letter knowledge and rapid naming predict both word reading and word spelling, in Spanish and in other alphabetic orthographies [@caravolas2012common].
+- **Reading and spelling can fail separately.** In a representative sample of 2,029 German-speaking children, another transparent orthography, 7% had an isolated reading deficit and 6% an isolated spelling deficit [@moll2009double]. These profiles partly persist throughout primary school [@moll2020stability]. A screening that only looks at reading misses children whose difficulty lies mainly in spelling. That is why the new IDA definition includes spelling [@ida2025definicion].
+- **Teaching spelling also helps reading.** In a meta-analysis of 53 studies, explicit spelling instruction improved word spelling and, in addition, phonological awareness and reading [@graham2014spelling].
+
+**A note on the speech of Málaga.** With *seseo* or *ceceo*, *s*, *c* (before *e* and *i*) and *z* represent the same sound for many children. For them, Spanish has one more inconsistency in spelling. The Tenerife study, also an area of *seseo*, found many *c*/*s*/*z* errors in dictation [@jimenez2008arbitraria], but did not compare varieties. It is a hypothesis the manual would need to test before norming a dictation task: *c*/*s*/*z* errors by a child with *seseo* do not mean the same as those by a child who distinguishes the two sounds.
+
+**What it implies for the platform.** Today the platform measures **entry into the written code** and **orthographic recognition**, but not word spelling:
+
+| Task | What it requires | Ages | Class | What it measures of spelling |
+|---|---|---|---|---|
+| Letter dictation (1864) | Write the letter of the first sound of a picture's name | 5–6 (2010 and 2011 cohorts) | C | Sound–letter correspondence |
+| [Identify the initial letter](fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.en.qmd) (1884, 4047) | Choose, among four letters, the one for the first sound | 5–7 | A | The same, but recognizing the letter instead of writing it |
+| [Orthographic decision](fichas/auto/LEC_DECISION_ORTOGRAFICA.en.qmd) (1937, 2039) | Choose the correctly spelled form between a word and a pseudohomophone (*bien*–*vien*) | 6–8 (2010 and 2011 cohorts) | A | Orthographic lexicon, by recognition: it is a reading task |
+| DIS-ESP dictation (paper, not moved to the platform) | Write the last word of 34 sentences; 40 inconsistent spellings are scored | Grades 2 to 6 | — | Orthographic lexicon, by retrieval (see [The DIS-ESP battery](dis-esp.en.qmd)) |
+
+What is missing is a normed **dictation of words and pseudowords**. Pseudowords would measure sound-to-letter conversion; words with inconsistent spellings, of high and low frequency, would measure the orthographic lexicon, as in DIS-ESP and in @carrillo2013spelling. With it, the report could separate children who read and spell poorly from those who fail in only one of the two (see [What we measure in light of the new definition](definicion.en.qmd)).
+
+## Morphology: meaning within the word {#sec-morfologia}
+
+**Morphemes** are the smallest units with meaning: the root *pan* (bread) in *panadero* (baker) and *empanada*, the suffix *-ero* that forms occupations, the plural *-s* or the feminine *-a*. Spanish has a rich morphology in the two senses that matter here:
+
+- **Inflectional:** gender and number in nouns, adjectives and determiners, which must also agree (*las casas blancas*, the white houses), and a verb conjugation with many forms (*canto, cantaba, cantaré, cante*).
+- **Derivational:** prefixes and suffixes that form new words from a base (*leer → lector, lectura, releer, ilegible*; read → reader, reading, reread, illegible).
+
+**Morphological awareness** is the ability to notice that structure and use it: recognizing that *panadero* contains *pan*, forming the plural of an invented word, or working out what *despeinable* means without ever having heard it.
+
+### Why the IDA places it next to phonology
+
+The new IDA definition states that underlying difficulties in **phonological and morphological** processing are common but not universal, and that early oral language weakness often foreshadows problems with reading and spelling [@ida2025definicion; @catts2026definicion]. The committee included morphology to underline its role in reading and spelling across languages and writing systems. In the prior consultation, a quarter of the participants did not want a definition limited to the "phonological component", because it left out other language difficulties such as morphological awareness. The British definition, on the other hand, only raises phonological processing to that category [@carroll2025delphi] (see [What we measure in light of the new definition](definicion.en.qmd)).
+
+The empirical basis is broad:
+
+- **Morphology is related to everything that is read and written.** A meta-analysis of 232 articles and almost 50,000 participants in 17 languages found moderate correlations of morphological awareness with phonological awareness (*r* = .41), vocabulary (.50), word reading (.49), spelling (.48), text fluency (.53) and comprehension (.54) [@lee2022morfologia]. Longitudinal studies confirm that the relation holds over time [@manolitsis2019reciprocal].
+- **It links sound, written form and meaning.** A morpheme is represented in both speech and writing, and it carries a meaning. That is why morphological knowledge can help in several ways: to recognize words more efficiently and to comprehend, because it allows the meaning and grammatical function of unknown words to be inferred [@bowers2010meta]. Morphology has thus been proposed to act as a "glue" that binds the three aspects of each word [@kirby2017binding].
+- **It still matters in the higher grades.** In 126 Canadian children followed from Grade 3 to Grade 5, morphological awareness, rapid naming and phonological awareness each contributed to word reading, speed and comprehension, controlling for verbal and nonverbal ability. They also explained how much each child improved between those grades beyond what their Grade 3 level predicted. Morphology weighed most in comprehension [@kirby2025grade5]. Its improvement between Grades 3 and 5 also translated into better reading, so it is not a trait fixed at the start of primary school.
+- **Children with dyslexia have lower morphological awareness than peers of the same age,** with a large effect (*g* = 1.11 in 40 studies), of the same size as for phonological awareness or rapid naming. But **they do not have lower morphological awareness than younger children of the same reading level** (*g* = −0.08) [@georgiou2022morfologia]. The authors conclude that morphological awareness is not a central causal feature of dyslexia; one possible explanation is that it develops through reading, and those who read less develop it less. This fits with what the manual says about dyslexia in Spanish as a **delay rather than a deviance** [@davies2007spanish] and with the IDA's "common but not universal".
+
+### Morphology in a transparent orthography
+
+In English, morphology helps with pronunciation: *heal* and *health* share a root even though the vowel sounds different. In Spanish this is hardly needed, because letter-to-sound conversion rules are enough to read almost any word aloud. That is why the role of morphology **shifts**:
+
+- **It weighs less in reading accuracy.** The relation between morphological awareness and word reading is weaker in transparent orthographies (*r* = .38) than in opaque ones (.52) [@lee2022morfologia].
+- **It weighs in speed.** In Argentine children in Grades 2 to 6, words with morphological structure were read faster, but not with fewer errors, in all grades [@dalessio2018naming]. This is to be expected if the morpheme is one of the **large units** the reader increasingly uses while automatizing [@ziegler2005grain]. And, in a transparent orthography, the difficulty lies mainly in speed (see [Above all, slowness](#sobre-todo-lentitud)).
+- **It weighs in comprehension.** In Grade 4, morphological awareness predicted reading comprehension directly and not through decoding, unlike in English [@dalessio2019morphological]. Morphology gives access to the meaning and grammatical function of new words.
+- **It weighs in spelling.** Many of the inconsistent spellings of Spanish are kept within a word family (*vaca, vaquero, vaquería*; *hacer, deshacer, rehacer*), and some depend on a morpheme (the imperfect past *-aba* is always spelled with *b*). Knowing that two words share a root is a clue to spelling them correctly.
+- **It also weighs at the start.** In pointed Hebrew, a very transparent orthography, morphological awareness measured in preschool predicted reading accuracy and fluency in the middle of Grade 1, even controlling for phonemic awareness [@cohenmimran2022morphological].
+
+**Readers with dyslexia in Spanish.** Spanish children with dyslexia aged 7 to 10 read words and pseudowords with morphological structure better than simple ones: they use the morpheme as a unit larger than the letter to get around their decoding difficulty [@suarezcoalla2013morfologia]. But they take less advantage of it than their peers: in a lexical decision task, only typical readers of the same age benefited from a frequent root [@lazaro2013morfologia]. In adolescents with dyslexia, recognizing the root is a compensatory strategy when reading words and texts [@elbro1996compensation]. In university students with dyslexia, morphological awareness can be preserved even though phonological awareness remains low, and the larger that gap, the better they read [@cavalli2017dissociation]. Both results point to morphology as a **compensation route**. It is the kind of strength the IDA asks to be identified and used.
+
+### Before reading: inflectional morphology, vocabulary and phonological awareness
+
+In preschool, the morphology that can be measured is mainly **inflectional and oral**: forming the plural or the feminine, or recognizing the correct form. Its relation with reading runs through oral language and through phonological awareness itself.
+
+- **The lexical restructuring hypothesis.** As vocabulary grows, the child needs increasingly detailed representations of words to tell them apart. That pressure pushes toward smaller units, such as syllables and phonemes, and prepares phonological awareness [@metsala1998reestructuracion].
+- **Morphology as a link.** The doctoral thesis of María Rodríguez-Moreno, supervised in the LEEDUCA group, extends that hypothesis with tasks from the platform itself [@rodriguezmoreno2026tesis]. It proposes that vocabulary opens **two routes** to phonological awareness. One is **direct**: more words require finer representations. The other is **indirect**: the more words a child knows, the more examples they have to discover that certain sound changes go together with changes in meaning (*gato–gatos*, cat–cats; *alto–alta*, tall masc.–fem.; *salta–saltó*, jumps–jumped). Noticing those changing parts would make the internal structure of the word more accessible and prepare the conscious analysis of its sounds.
+  - **Cross-sectional study** (452 children from 30 schools in Málaga, mean age 4;11). Verbal inflectional morphology explained unique variance in syllable and rhyme awareness, beyond vocabulary, age, socioeconomic status, verbal memory and minimal-pair discrimination. The indirect effect of vocabulary through morphology was positive in all models.
+  - **Longitudinal study** (291 children, five assessments over 15 months, from 3;2 to 4;3 years). Early vocabulary predicted later gender, number and verb tense. Gender (at 4;1) and number (at 4;2) predicted final phonological awareness, controlling for the initial level. The indirect effect of vocabulary through gender was small but significant: β = .077 for syllables and .050 for rhymes.
+  - **The relations run in both directions.** In the cross-sectional study, the reverse order, with syllable awareness in the middle, also fit the data. In the longitudinal study, an exploratory route appeared from early syllable awareness to later vocabulary, through morphology. The thesis itself warns that its studies are observational: it remains to be shown, with an intervention, that working on inflection improves phonological awareness.
+
+- **An early indicator of language risk.** In children at family risk of dyslexia, inflection at age 2 already predicted language at age 5; in controls it did not until 3;6 [@lyytinen2004inflexiones]. In Spanish, preschoolers with developmental language disorder (DLD) use grammatical morphology worse than peers of the same age and younger children of the same language level, especially **adjective agreement** and **object clitics** [@bedore2001spanish]. In Spanish–English bilingual children aged 4 to 6, accuracy on verbs and the subjunctive distinguished children with DLD well [@castillaearls2021dld]. For the platform, low inflectional morphology at ages 3–5 is above all a sign about oral language (see [Screening for two risks](fichas/cribado_dos_riesgos.en.qmd)).
+
+### Teaching morphology
+
+Explicit morphology instruction improves literacy. In 30 studies in English, the mean effect was *d* = 0.32; it was larger for decoding (0.59) and phonological awareness (0.48), and not significant for comprehension or fluency [@goodwin2013meta]. It especially benefits struggling readers and works better combined with the rest of reading instruction [@bowers2010meta]. Almost all studies are in English, so the effect size in Spanish remains to be tested. Preleo already includes compound words and word families in its vocabulary block (see [Preleo](preleo/programa.en.qmd)), and its effectiveness when delivered by teachers themselves in preschool is documented [@sanchezgomez2025]. María's thesis proposes a further step in preschool: choosing words and situations in which the sound change matters for understanding the message (a picture with one cat or several; *el niño alto* and *la niña alta*, the tall boy and the tall girl; *hoy salta* and *ayer saltó*, today he jumps and yesterday he jumped). Then gradually moving from use to noticing which part of the word stays and which changes [@rodriguezmoreno2026tesis]. It is an applied hypothesis that the thesis proposes to test with a trial comparing two versions of the program.
+
+**What it implies for the platform.** Today the platform only measures **oral inflectional morphology** in preschool and at the start of Grade 1. It does not measure derivational or written morphology, which are the ones most related to fluency, comprehension and spelling from Grade 2:
+
+| Task | What it requires | Ages | Class | Known limitations |
+|---|---|---|---|---|
+| [Gender morphology, words](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL.html) (*in Spanish*) (217) | Complete a sentence with the right gender (*Juan es alto y María también es…*, Juan is tall and María is also…); 5 items, production | 3–5 | C | Few items and a strong ceiling effect (29–36% maximum scores at age 3; 54–72% at ages 4–5) |
+| [Number morphology, words](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL.html) (*in Spanish*) (2092, 222) | Hear a sentence and point to the picture with one or with several (*Miran la tele*, they watch TV); comprehension | 3–5 | B | The same name covers a receptive version (2092) and a production version (222) that need to be separated |
+| [Gender morphology, pseudowords](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL.html) (*in Spanish*) (194) | Gender of invented words | 6 | C | — |
+| [Number morphology, pseudowords](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL.html) (*in Spanish*) (196) | Plural of invented words | 6 | C | Floor effect: between 20% and 27% of children get none right |
+| [Verb tense morphology](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL.html) (*in Spanish*) (219) | Complete a sentence with the verb in the requested person and tense (*Ella mañana…* → *nadará*, tomorrow she… → will swim); 6 items, production | 4–6 | C | Few items; in the 2010 cohort, a single session |
+
+These tasks originated in the block of **language hypotheses and comorbidity with DLD**, and that is where they fit best: as part of the oral language component of screening, not as an indicator of a morphological cause of dyslexia. The pseudoword tasks are the closest to morphological awareness, because the child cannot rely on a memorized form.
+
+What is missing is a **derivational morphology** task, oral in preschool and written in primary school, to follow children in the grades in which morphology weighs most in comprehension [@kirby2025grade5]: forming derived words (*pan → panadero*), breaking them down, or deciding between pseudowords with and without a real suffix. The diagnostic summary chart used by the group already records derivational and inflectional morphology, and it considers a morphological cause in the child's profile, but today there is no platform task to fill in the derivational box. With it, the manual could identify children with a morphological difficulty and also those for whom it is a **strength**.
+
+## The precursors: what can be measured before reading
+
+Before children read, several skills anticipate how they will learn. The same predictors work in transparent and opaque orthographies, although their weight changes with age and language [@caravolas2013growth; @landerl2013predictors].
+
+| Precursor | What it is | Why it predicts | Where it is in the manual |
+|---|---|---|---|
+| **Letter knowledge** | Letter names and sounds | It is the basis of letter–sound correspondences and reflects exposure to print [@foulin2005letter] | [Letter knowledge](fichas/LET.en.qmd) |
+| **Phonological awareness** | Noticing and manipulating the sounds of words: syllables, rhymes and phonemes | It allows sounds to be segmented and blended, which is what decoding requires; it mainly predicts early accuracy [@landerl2019pa] | [Phonological awareness](conciencia-fonologica.en.qmd) |
+| **Rapid automatized naming (RAN)** | Naming a series of colors, objects, digits or letters as fast as possible | It reflects how fast visual and phonological information are connected; it mainly predicts fluency [@norton2012ran; @landerl2019pa] | [Rapid naming](fichas/RAN.en.qmd) |
+| **Verbal short-term memory** | Repeating series of words or syllables | It holds sounds while decoding | Verbal memory task sheets |
+| **Oral language** | Vocabulary, morphology, syntax and oral comprehension | It is the other half of reading comprehension [@storch2002oral] | Oral language task sheets |
+
+In general, phonological awareness weighs more at the start of learning and rapid naming gains weight once reading depends on speed [@landerl2019pa]. In the platform data, letters and phonological awareness at age 5 anticipate persistent difficulty with an area under the curve of .82 (see [How we estimate risk](riesgo.en.qmd)).
+
+## Reading difficulty in Spanish
+
+### Above all, slowness {#sobre-todo-lentitud}
+
+In transparent orthographies, dyslexia shows mainly as **slow and laborious reading**, with relatively few errors. Spanish children with dyslexia read with accuracy close to that of their peers, but much more slowly, and the word length effect is larger in them [@serrano2008speed; @davies2007spanish]. A child can read "well" if only errors are counted and still have a serious difficulty. That is why the platform measures the time for each item and not only correct responses.
+
+### Above all, a delay
+
+When children with dyslexia are compared with younger children who read at the same level, their profiles are very similar: in Spanish, dyslexia behaves more like a **delay** than a different development [@davies2007spanish]. The classic "subtypes" (phonological and surface) depend heavily on the method and the comparison group. With age-matched controls many appear; with reading-level controls, far fewer [@carrillo2008subtipos; @sprengercharolles2011subtipos].
+
+### Several factors, not a single cause
+
+Dyslexia is not explained by a single deficit. It results from several risk factors (phonological, processing speed, oral language, familial and environmental) that add up and can be offset by protective factors [@pennington2006multiple; @catts2017multifactorial]. The **cumulative risk and resilience model** draws a practical consequence from this: risk is better estimated by adding indicators than by looking for a single one, and it is expressed as a probability [@catts2022riesgo]. The phonological deficit is common but does not explain all cases: some children have mainly a speed problem, which shows in rapid naming [@wimmer2000double].
+
+### A continuum, not a category
+
+Reading ability is continuously distributed. Where the cut-off is placed is a decision, and prevalence depends on that decision: with different criteria, the same population yields different figures [@wagner2020prevalence]. In Spanish, studies with psychometric criteria report between 2% and 12%, depending on the criterion and population [@jimenez2009prevalencia; @cubilla2024prevalencia; @cuadro2017prevalencia; @carrillo2011prevalencia].
+
+### Response to instruction
+
+The LEEDUCA early identification guide already proposed assessment at three moments (prediction in preschool, early identification in Grade 1 and diagnosis from Grade 2) as an alternative to "waiting to fail" [@luque2022guia]. The new definition of the International Dyslexia Association places at its center **difficulty that persists despite adequate instruction** [@ida2025definicion; @catts2026definicion]. It had already been shown that observing how a child responds to good early intervention separates those with a persistent difficulty from those who had simply had few opportunities [@vellutino2008rti]. The clinical criteria of the DSM-5-TR [@apa2022dsm5tr] and ICD-11 [@oms2019cie11] also require that the difficulty persist and not be explained by other causes. Details are in [What we measure in light of the new definition](definicion.en.qmd).
+
+## From the theoretical framework to the platform
+
+| What theory says | How the platform captures it | Chapter |
+|---|---|---|
+| Decoding is mastered early; the difference lies in speed | Item-level times; words per minute; reading tasks with and without a time limit | [The platform](plataforma.en.qmd), [Reading speed](fichas/VEL.en.qmd) |
+| Change between ages 5 and 8 is very fast | Three assessments per school year; norms by term | [Norms by school year or by term](baremos-trimestre.en.qmd) |
+| A few precursors anticipate a good part of the risk | Letters, phonological awareness and rapid naming from ages 3–4 | [How we estimate risk](riesgo.en.qmd) |
+| Risk is the sum of several factors and is better expressed as a probability | Calibrated probability of risk; two-gate funnel | [From the lab to the manual](https://abarejo.github.io/leeduca-manual/avances.html#sec-embudo) (*in Spanish*) |
+| Difficulty is a continuum and the cut-off is a decision | Certainty levels; watch zone between P20 and P30 | [How we estimate risk](riesgo.en.qmd), [The watch zone](https://abarejo.github.io/leeduca-manual/avances.html#sec-vigilar) (*in Spanish*) |
+| What defines dyslexia is persistence despite instruction | Progress monitoring; reliable change; trajectory from age 6 to 11 | [5.5 How much change matters](metodo-psicometrico.en.qmd#sec-cambio-importa) |
+| Comprehension depends on decoding and oral language | Separate measures of decoding, comprehension and oral language | Comprehension and oral language task sheets |
+| Spelling is harder than reading and can fail separately | Only letter dictation, initial letter and orthographic decision; **a word and pseudoword dictation is missing** | [Spelling words](#sec-escritura), [What we measure in light of the new definition](definicion.en.qmd) |
+| Morphology is common but not universal among the underlying difficulties; in Spanish it weighs more in speed, comprehension and spelling than in accuracy | Oral inflectional morphology from age 3 to 6 (gender, number, tense), mostly class C; **derivational and written morphology are missing** | [Morphology](#sec-morfologia), [Screening for two risks](fichas/cribado_dos_riesgos.en.qmd) |
+
+## Still missing
+
+- **Morphology** now has its own section ([Morphology](#sec-morfologia)). A derivational and written morphology task is missing. María Rodríguez-Moreno's thesis is cited as a deposited thesis; it is the only exception to the criterion of citing only published work.
+- **Numerical cognition** has its own theoretical framework in [Numerical cognition](cognicion-numerica.en.qmd#sec-mate-marco).
+- Review by the group and, where appropriate, incorporation of the group's work once it is published.

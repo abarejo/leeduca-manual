@@ -15,7 +15,7 @@ n_eval <- sum(C$estado == "evaluación")
 
 This catalog brings together in one place the `r nrow(C)` platform tasks of the 2010–2015 cohorts (`r n_eval` assessment tasks; the rest are experimental or under review). For each task it states what it measures, how it is administered, the codes it has in the data, the sessions and ages in which it was given, the measures it records and its psychometric properties. Each one includes a **paragraph ready for the instruments section of an article, in Spanish and in English**.
 
-**How to use it.** Search by name, code or construct, or filter by domain or by [task family](https://abarejo.github.io/leeduca-manual/agrupacion.html#sec-familias) (the measurement model the tasks share; *in Spanish*). Click on a task to see its summary sheet. The "Copy" buttons copy the paragraph to the clipboard. The full table can be downloaded: [Catalogo.csv](datos/agregados/CATALOGO/Catalogo.csv) (one row per task) and [Sesiones.csv](datos/agregados/CATALOGO/Sesiones.csv) (one row per task, cohort and session).
+**How to use it.** Search by name, code or construct, or filter by domain or by [task family](agrupacion.en.qmd#sec-familias) (the measurement model the tasks share; *in Spanish*). Click on a task to see its summary sheet. The "Copy" buttons copy the paragraph to the clipboard. The full table can be downloaded: [Catalogo.csv](datos/agregados/CATALOGO/Catalogo.csv) (one row per task) and [Sesiones.csv](datos/agregados/CATALOGO/Sesiones.csv) (one row per task, cohort and session).
 
 **What each field means.**
 

@@ -112,7 +112,7 @@ Activities are built with a small number of presentation **engines**. The engine
 
 Item-level data are what make possible what this manual adds to the previous ones: internal consistency with ω, item response models, session validity indicators and response time models (see [How each task sheet is built](metodo.en.qmd)).
 
-With these measures, each task is summarized in a **main measure** according to its family: correct responses in accuracy tasks, stimuli per second in rapid naming, words per minute in reading fluency, and so on. In the manual all of them are presented so that **higher is better** (see [How tasks are grouped](https://abarejo.github.io/leeduca-manual/agrupacion.html#sec-familias) (*in Spanish*)).
+With these measures, each task is summarized in a **main measure** according to its family: correct responses in accuracy tasks, stimuli per second in rapid naming, words per minute in reading fluency, and so on. In the manual all of them are presented so that **higher is better** (see [How tasks are grouped](agrupacion.en.qmd#sec-familias)).
 
 ## What it assesses
 
@@ -131,7 +131,7 @@ rownames(T) <- NULL
 tabla(T)
 ```
 
-Batteries change with age. At ages 4 and 5 the **precursors** predominate (letter knowledge, phonological awareness, rapid naming, verbal memory and oral language); from age 6, **reading** of syllables, words, pseudowords and texts, fluency and comprehension. The composition of each battery by age is in [How tasks are grouped](https://abarejo.github.io/leeduca-manual/agrupacion.html) (*in Spanish*) and, with a proposed minimum core, in [Tasks by age](https://abarejo.github.io/leeduca-manual/fichas/por_edad.html) (*in Spanish*).
+Batteries change with age. At ages 4 and 5 the **precursors** predominate (letter knowledge, phonological awareness, rapid naming, verbal memory and oral language); from age 6, **reading** of syllables, words, pseudowords and texts, fluency and comprehension. The composition of each battery by age is in [How tasks are grouped](agrupacion.en.qmd) and, with a proposed minimum core, in [Tasks by age](fichas/por_edad.en.qmd).
 
 ## Sessions and cohorts
 
@@ -159,7 +159,7 @@ The number of children and schools by cohort and time point and the [sample flow
 
 | Version | What it is | Status in the manual |
 |---|---|---|
-| **Paper** | DIS-ESP (2007–2012) and TECLE on paper in 2020/21 | TECLE: paper–platform equivalence already studied (see [TECLE](fichas/TECLE.en.qmd)). DIS-ESP: own chapter ([The DIS-ESP battery](https://abarejo.github.io/leeduca-manual/dis-esp.html) (*in Spanish*)) |
+| **Paper** | DIS-ESP (2007–2012) and TECLE on paper in 2020/21 | TECLE: paper–platform equivalence already studied (see [TECLE](fichas/TECLE.en.qmd)). DIS-ESP: own chapter ([The DIS-ESP battery](dis-esp.en.qmd)) |
 | **Tablet** | 2021/22 sessions (e.g., 948), group-administered: lexical decision, homographs, mathematics | Treated as tasks distinct from reading aloud |
 | **Age 3** | Own battery since 2023/24 (sessions 988–992) | Inventory in [Battery for age 3](https://abarejo.github.io/leeduca-manual/fichas/TRES_ANIOS.html) (*in Spanish*); no norms yet |
 | **Catalan and Valencian** | The same tasks, in schools in the Balearic Islands and the Valencian Community | Need their own norms |
@@ -172,7 +172,7 @@ The current server data (since October 2023) already include more than 6,500 use
 
 DIS-ESP is the direct antecedent of the platform: many LEEDUCA tasks come from it and keep their project code on the platform. The catalog has `r sum(grepl("DIS-ESP", C$bateria))` DIS-ESP tasks, `r sum(C$bateria == "LEEDUCA y DIS-ESP", na.rm = TRUE)` of them shared with LEEDUCA. Among the DIS-ESP tasks are TECLE, rapid naming of objects on a card and several reading and spelling tasks.
 
-The tests, their rationale, the two-stage procedure and which of them moved to the platform are described in the chapter [The DIS-ESP battery](https://abarejo.github.io/leeduca-manual/dis-esp.html) (*in Spanish*) (November 8, 2026). **Pending** (with Marisol Carrillo): what changed in each test when it moved to the platform, and the paper norms that are still available.
+The tests, their rationale, the two-stage procedure and which of them moved to the platform are described in the chapter [The DIS-ESP battery](dis-esp.en.qmd) (November 8, 2026). **Pending** (with Marisol Carrillo): what changed in each test when it moved to the platform, and the paper norms that are still available.
 
 ## Data quality: what you need to know
 

@@ -30,7 +30,7 @@ The analyses behind these sections are in the group's internal workspace (restri
 
 ## 5.1 Scores
 
-**One main measure per task, according to its family.** Tasks are grouped into seven families according to how they measure: accuracy, rapid naming, oral reading fluency, time-limited efficiency, decision with response time, span and memory, and comprehension. The family determines the main measure, its transformation and the reliability method (see [How tasks are grouped](https://abarejo.github.io/leeduca-manual/agrupacion.html#sec-familias) (*in Spanish*)).
+**One main measure per task, according to its family.** Tasks are grouped into seven families according to how they measure: accuracy, rapid naming, oral reading fluency, time-limited efficiency, decision with response time, span and memory, and comprehension. The family determines the main measure, its transformation and the reliability method (see [How tasks are grouped](agrupacion.en.qmd#sec-familias)).
 
 **Higher is better.** In the manual all scores are presented so that a high value is good and a low percentile indicates difficulty. Times are converted into rates (stimuli per second, words per minute).
 

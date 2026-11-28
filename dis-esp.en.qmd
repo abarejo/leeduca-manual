@@ -1,0 +1,69 @@
+# The DIS-ESP battery: the paper origin of the platform {#sec-dis-esp}
+
+::: {.callout-note appearance="minimal"}
+**Status:** first draft (November 8, 2026), to be reviewed with M. S. Carrillo. It is based on the battery's booklets and instructions (University of Murcia) and on its published validation study [@carrillo2009fonologicas]. **To be confirmed with M. S. Carrillo:** authorship and date of each test, how to cite it, and whether the booklets can be published in this book for free use. *Translated from the Spanish version of November 28, 2026. Spanish examples are kept in italics.*
+:::
+
+**In one sentence.** DIS-ESP is a paper battery for assessing dyslexia in two stages (group screening of reading efficiency, then an individual assessment of the reading mechanisms and of phonology), created at the University of Murcia by M. S. Carrillo and J. Alegría. Many of its tests moved, almost unchanged, to the LEEDUCA platform.
+
+## Where it comes from
+
+The DIS-ESP battery (a battery for assessing specific reading and spelling difficulties) was developed by M. S. Carrillo's DILEMA research group at the University of Murcia, with J. Alegría (Université Libre de Bruxelles) and other Spanish, Belgian and French researchers. It was created for research and was also designed as a diagnostic instrument for school guidance teams. The LEEDUCA group administered it on paper in Málaga between 2007 and 2012, before moving it to the online platform (see [The LEEDUCA platform](plataforma.en.qmd)).
+
+Its two-stage procedure is the direct antecedent of the platform. It was used to study the prevalence of dyslexia in all the schools of a municipality in Murcia [@carrillo2011prevalencia] (see [Universal screening](riesgo.en.qmd#sec-cribado)).
+
+## Theoretical basis
+
+The battery starts from four ideas [@carrillo2009fonologicas]:
+
+1. **What is specific to reading is recognizing written words.** Understanding a text also requires vocabulary and syntax, but that is not specific to reading: if it is missing, oral comprehension fails too [@gough1986decoding]. Dyslexia is therefore sought in the mechanisms of word identification.
+2. **There are two identification mechanisms.** The **phonological** mechanism converts letters into sounds and shows in pseudoword reading. The **orthographic** mechanism recognizes the word by its written form, stored in the orthographic lexicon. Spanish has no irregular words with which to measure it, so the battery assesses it with words containing **inconsistent spellings** (b/v, g/j, h): deciding which of two forms is correctly spelled, or writing it to dictation, is only possible if its written form has been stored.
+3. **The engine of learning is phonological.** Learning to read requires becoming aware of the phonological structure of the language. Syllabic awareness precedes reading and phonemic awareness develops with it; according to longitudinal and training studies, its relation with reading is causal.
+4. **Phonology has several dimensions.** Besides phonological awareness, speech sound discrimination, access to and retrieval of the phonological representations of words, and working memory all count. Their deficits are not specific to reading and are usually mild in everyday speech, but they can explain why a child does not learn to read.
+
+## The tests
+
+| Test | What it assesses | What it is like | Administration | Moved to the platform as |
+|---|---|---|---|---|
+| **Reading efficiency** (TECLE) | Reading level: accuracy and speed in sentence reading | 64 sentences missing their last word; the child chooses among four options (the correct word, a similar word and two visually or phonologically similar pseudowords); 5 minutes | Group | [TECLE](fichas/TECLE.en.qmd) (1930) |
+| **Orthographic decision** | Orthographic lexicon | Pairs of a word and a pseudohomophone with b/v, g/j or h (*bien*–*vien*); the correctly spelled one is circled; two parts | Group | [Orthographic decision](fichas/auto/LEC_DECISION_ORTOGRAFICA.en.qmd) (1937, 2039) |
+| **Dictation** | Orthographic lexicon in spelling | 34 sentences; only the last word is written; the 40 inconsistent graphemes are scored | Group | — |
+| **Word reading** | Written word identification | 36 frequent words in three lists of 12 (2, 3 and 4 syllables; 4 to 12 graphemes); accuracy, error type and time | Individual | [Word reading](fichas/auto/LEC_PAL_2sil.en.qmd) (1931–1933) |
+| **Pseudoword reading** | Phonological mechanism | 36 pseudowords formed by recombining the syllables of the words in each list, in the same position | Individual | [Pseudoword reading](fichas/auto/LEC_PSEUDO_2sil.en.qmd) (1934–1936) |
+| **Syllable sequence repetition** | Phonological perception and memory | Two parts of 15 items (CV and CVC syllables), in blocks of 1 to 5 syllables, recorded | Individual | [Verbal memory CV](https://abarejo.github.io/leeduca-manual/fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV.html) (*in Spanish*) and [CVC](https://abarejo.github.io/leeduca-manual/fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5.html) (*in Spanish*) |
+| **Phoneme identification** | Phonemic awareness | Is the phoneme in the syllable? 69 CVC and CCVC syllables; stop, fricative, nasal and liquid phonemes in different positions, with vowel control items | Individual | [Phoneme identification](fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd) |
+| **Syllable and phoneme deletion** | Syllabic and phonemic awareness | 24 three-syllable pseudowords (the indicated syllable is removed) and 31 monosyllables (the indicated phoneme is removed); neither stimuli nor responses are words | Individual | [Syllable deletion](fichas/auto/CF_SUPRESION_SILABAS_TP.en.qmd) and [phoneme deletion](fichas/auto/CF_SUPRESION_FONEMAS_TP.en.qmd) |
+| **Rapid naming of pictures** | Access to and retrieval of phonological representations | Four cards of 18 pictures: short or long names, varied or repeated pictures; time per card | Individual | [Rapid naming of objects](https://abarejo.github.io/leeduca-manual/fichas/auto/RAN_OBJETOS_VARIADOS_CORTOS.html) (*in Spanish*) (varied and repeated, short and long) |
+| **Verbal fluency** | Search in the phonological lexicon | 30 seconds per criterion: semantic (animals, clothes) and phonemic (words beginning with /s/ and /p/) | Individual | [Phonological fluency](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_FON_FLUIDEZ_FONOLOGICA.html) (*in Spanish*) and semantic fluency |
+| **Minimal pairs** | Phonetic discrimination | 24 pairs of syllables differing in voicing, place or manner of articulation and 25 identical pairs, recorded; same or different? | Individual | [Minimal pairs](https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_PERCEP_PARES_MINIMOS.html) (*in Spanish*) |
+
+The platform's word and pseudoword reading lists are those of DIS-ESP. That is why their task sheets share a structure: three lengths, 12 items per list and pseudowords built from the same syllables as the words (see [What makes a word list difficult](https://abarejo.github.io/leeduca-manual/avances.html#sec-listas) (*in Spanish*)).
+
+## The two-stage procedure
+
+**First stage: group screening.** The whole class takes the reading efficiency test. In the validation study a **double criterion** was used so as not to confuse dyslexia with school conditions: the child had to be below the mean minus 1 SD of their class and grade in their school, and also below the mean minus 1 SD of all children in their grade [@carrillo2009fonologicas]. In the prevalence study, the cut-off was the mean minus 1.5 SD [@carrillo2011prevalencia].
+
+**Second stage: individual assessment.** The flagged children take the rest of the tests, which look for **the proximal cause** of the problem: which identification mechanism fails (phonological, orthographic or both) and which aspect of phonology is affected.
+
+**The diagnostic module.** The battery compares each result with two reference groups:
+
+- **By chronological age:** children of the same age (in the practice norms, age 9).
+- **By reading level:** younger children who read at the same level (in the practice norms, age 7).
+
+A deficit that appears relative to children of the same age but not relative to those of the same reading level indicates a **delay**; one that also appears relative to those of the same reading level indicates **different functioning**. With this comparison, the module proposes a profile (phonological, surface or mixed). Later research has shown that subtypes depend heavily on the comparison group, and that far fewer appear with reading-level controls [@carrillo2008subtipos; @sprengercharolles2011subtipos] (see [Theoretical framework](marco-teorico.en.qmd)).
+
+## What its validation showed
+
+The validation study included 71 schoolchildren with specific reading delay and 80 typical readers from the same classrooms, in Grades 2 to 6 [@carrillo2009fonologicas]:
+
+- **Children with dyslexia performed worse on all tests**, both the reading and spelling tests and all the phonological ones.
+- **The delay in reading and spelling grows across grades.** Children with dyslexia did not reach the reading efficiency of Grade 2 typical readers until Grade 5 or 6.
+- **Slow and inaccurate at the same time.** In words and pseudowords, the slowest were also those who made the most errors. That is why the battery proposed a single index: correct responses per second. The platform uses efficiency measures of the same kind.
+- **Naming reveals an access problem.** Repetition of the pictures helped children with dyslexia more and name length hurt them more, which points to difficulties in retrieving and producing phonological forms.
+- **Verbal fluency depended on naming.** When naming speed was controlled, the difference in fluency disappeared.
+
+## Use of the paper tests
+
+The group has decided that the DIS-ESP paper tests will be **free to use**. Before publishing them here, the final version of each booklet and how to cite it must be confirmed with their author. **TECLE** is not included: it is a published test and is cited, but not reproduced.
+
+The battery was also administered in Colombia, with TECLE in 3 minutes instead of 5. Those results will be incorporated in a later version.

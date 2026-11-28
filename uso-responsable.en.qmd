@@ -25,7 +25,7 @@ This manual is its **technical documentation**: it describes each task, the samp
 | **Classifying** a child with academic consequences (repeating a year, changing group) | **No** | Scores have error and are designed to help, not to select | — |
 | **Comparing or ranking schools or teachers** | **No** | A school's results depend on its students and context; the manual does not offer school norms | [Limitations and data quality](limites.en.qmd) |
 | **Detecting ADHD** with the preschool attention tasks | **No** | There is no validity evidence for that use | Attention and executive function task sheets |
-| **Assessing spelling** | **Not for now** | The platform only has letter dictation, initial letter and orthographic decision; there is no normed word dictation | [Spelling words](https://abarejo.github.io/leeduca-manual/marco-teorico.html#sec-escritura) (*in Spanish*) |
+| **Assessing spelling** | **Not for now** | The platform only has letter dictation, initial letter and orthographic decision; there is no normed word dictation | [Spelling words](marco-teorico.en.qmd#sec-escritura) |
 
 **Class A** tasks have enough reliability, validity and norms for individual uses. **Class B** tasks can be used with caution and **class C** tasks only for research or description (see [Quality classes](limites.en.qmd#sec-clases)). The class of each task appears at the top of its task sheet.
 
@@ -80,7 +80,7 @@ Tasks lose value if their items circulate. That is why the manual **does not rep
 
 ## Fairness
 
-A fair test measures the same thing and makes the same errors in all groups. The manual checks, task by task, whether a score works the same by sex, school socioeconomic status, format (platform, paper or tablet) and period (before and after the pandemic), and whether the same cut-off is equally accurate in all groups (see [5.6 Fairness](metodo-psicometrico.en.qmd)). Until this is checked, results for children who are learning Spanish and for the Catalan and Valencian versions are interpreted with caution. The same applies to **dialectal variation** in the phonological and spelling tasks: with *seseo* or *ceceo* (merging /s/ and /θ/), common in Málaga, some responses may not mean the same as in a child who distinguishes /s/ and /θ/ (see [Spelling words](https://abarejo.github.io/leeduca-manual/marco-teorico.html#sec-escritura) (*in Spanish*)).
+A fair test measures the same thing and makes the same errors in all groups. The manual checks, task by task, whether a score works the same by sex, school socioeconomic status, format (platform, paper or tablet) and period (before and after the pandemic), and whether the same cut-off is equally accurate in all groups (see [5.6 Fairness](metodo-psicometrico.en.qmd)). Until this is checked, results for children who are learning Spanish and for the Catalan and Valencian versions are interpreted with caution. The same applies to **dialectal variation** in the phonological and spelling tasks: with *seseo* or *ceceo* (merging /s/ and /θ/), common in Málaga, some responses may not mean the same as in a child who distinguishes /s/ and /θ/ (see [Spelling words](marco-teorico.en.qmd#sec-escritura)).
 
 ## Regulatory framework {#sec-marco-normativo}
 
@@ -98,7 +98,7 @@ A fair test measures the same thing and makes the same errors in all groups. The
 
 ## How this manual is organized
 
-- **How the manual is built:** foundations (this chapter, the [theoretical framework](https://abarejo.github.io/leeduca-manual/marco-teorico.html) (*in Spanish*) and the [new definition of dyslexia](definicion.en.qmd)), the platform and its antecedent, [the DIS-ESP battery](https://abarejo.github.io/leeduca-manual/dis-esp.html) (*in Spanish*), the normative study, the psychometric method and [how we estimate risk](riesgo.en.qmd).
+- **How the manual is built:** foundations (this chapter, the [theoretical framework](marco-teorico.en.qmd) and the [new definition of dyslexia](definicion.en.qmd)), the platform and its antecedent, [the DIS-ESP battery](dis-esp.en.qmd), the normative study, the psychometric method and [how we estimate risk](riesgo.en.qmd).
 - **Task catalog and task sheets:** one task sheet per task, grouped by domain (reading, phonological processing, numerical cognition, oral language and attention), with its quality class.
 - **Research with the platform:** how to request the data and the advances coming from the group's studies.
 - **Report prototypes:** proposals for a [report by bands](informe-tramos.en.qmd), a [classroom report](https://abarejo.github.io/leeduca-manual/informe-aula.html) (*in Spanish*) and a [family report](https://abarejo.github.io/leeduca-manual/informe-familias.html) (*in Spanish*).

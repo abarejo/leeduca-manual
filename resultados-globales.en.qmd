@@ -112,7 +112,7 @@ What it shows:
 
 ## 6.3 Structure of skills
 
-**What is available.** An exploratory network analysis by age (Gaussian graphical models) shows how tasks are organized at ages 4, 5, 6 and 7 and how the network becomes denser as children learn to read (see [How tasks are grouped](https://abarejo.github.io/leeduca-manual/agrupacion.html) (*in Spanish*)).
+**What is available.** An exploratory network analysis by age (Gaussian graphical models) shows how tasks are organized at ages 4, 5, 6 and 7 and how the network becomes denser as children learn to read (see [How tasks are grouped](agrupacion.en.qmd)).
 
 **Confirmatory factor analysis by age (November 2, 2026).** With `cap6_estructura_cfa_v1.R`, three models were fitted at each age from 4 to 8 with the class A tasks of the **term-by-term follow-up** (without the paper or tablet assessments): a general factor; the factors expected by the manual with at least two indicators (M2: phonological awareness, alphabetic knowledge, decoding accuracy and fluency; comprehension and vocabulary did not reach two indicators); and the same model with accuracy and fluency merged. Indicators are normal scores within cohort and session, averaged per child over the school year (lavaan, MLR with full information).
 

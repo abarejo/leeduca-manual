@@ -1,0 +1,187 @@
+# Phonological awareness: what makes a task difficult and how to read a failure {#sec-cf-dificultad}
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "R", "libro.R"))
+C <- utils::read.csv(file.path(raiz_libro(), "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+CF <- C[startsWith(C$tarea_canonica, "CF_") & C$tarea_canonica != "CF_NUMEROS_LAMINA" & is.finite(C$n_items), ]
+CF$tarea <- ifelse(!is.na(CF$name_en) & nzchar(CF$name_en), CF$name_en, CF$tarea)
+# features of each task (unit, operation, position, response and chance)
+rasgo <- function(t) {
+  unidad <- if (grepl("FONEM", t)) "Phoneme" else "Syllable"
+  oper <- if (grepl("EMPAREJA", t)) "Match" else if (grepl("IDENTIFICACION", t)) "Isolate" else if (grepl("CONTAR|SEGMENTACION", t)) "Count / segment" else if (grepl("SINTESIS", t)) "Blend" else "Delete"
+  pos <- if (grepl("INICIAL", t)) "Initial" else if (grepl("FINAL", t)) "Final" else if (grepl("TP|TODAS", t)) "Any" else "—"
+  resp <- if (grepl("EMPAREJA", t)) "Point to a picture" else if (grepl("CONTAR|SEGMENTACION", t)) "Say a number" else "Say sounds or words"
+  azar <- if (grepl("EMPAREJA", t)) 1 / 3 else 0
+  data.frame(tarea_canonica = t, unidad, oper, pos, resp, azar)
+}
+R0 <- do.call(rbind, lapply(CF$tarea_canonica, rasgo))
+R0 <- merge(R0, CF[, c("tarea_canonica", "tarea", "n_items", "formato")], by = "tarea_canonica")
+# proportion correct by task and time point (all cohorts, weighted by N), corrected for chance in matching
+P <- do.call(rbind, lapply(R0$tarea_canonica, function(t) {
+  b <- leer(paste0("AUTO_", t), "2b_Descriptivos_por_cohorte"); if (!nrow(b)) return(NULL)
+  r <- R0[R0$tarea_canonica == t, ]
+  do.call(rbind, lapply(split(b, b$mom), function(g) data.frame(tarea_canonica = t, mom = g$mom[1], N = sum(g$N),
+    cohortes = paste(sort(unique(g$cohorte)), collapse = ", "), p_bruta = sum(g$M * g$N) / sum(g$N) / r$n_items,
+    suelo = sum(g$pct_suelo * g$N) / sum(g$N), techo = sum(g$pct_techo * g$N) / sum(g$N))))
+}))
+P <- merge(P, R0, by = "tarea_canonica")
+P <- P[P$N >= 100, ]
+P$p <- pmax(0, (P$p_bruta - P$azar) / (1 - P$azar))
+pv <- function(t, m, col = "p") { x <- P[[col]][P$tarea_canonica == t & P$mom == m]; if (length(x)) x else NA }
+f2 <- function(x) formatC(100 * x, format = "f", digits = 0)
+```
+
+::: {.callout-note appearance="minimal"}
+**Status:** draft of November 2, 2026. This chapter opens the phonological processing task sheets. It integrates the theoretical framework of the manual on speech sound disorders coordinated by A. Sánchez Gómez (with M. Rodríguez and P. J. López-Pérez), which grew out of the course *Speech-language intervention in childhood speech disorders* (University of Málaga) and is in preparation for publication [@sanchezgomez2026tsh]. The citation is provisional and will be updated when it is published. The framework focuses on the phonological system, not on individual sounds. The data are the descriptive statistics of the automatic task sheets: all cohorts, weighted by the number of children, at time points with at least 100 children. *Translated from the Spanish version of November 28, 2026. Spanish examples are kept in italics.*
+:::
+
+## Why start with speech
+
+All of the platform's phonological awareness tasks ask the child to reflect on the sounds of words they hear, and almost all ask them to **respond by speaking**. That is why, before interpreting a score, it helps to keep in mind how the phonological system of a child aged 4 to 7 is organized. The manual by Sánchez Gómez et al. [-@sanchezgomez2026tsh] summarizes it in three ideas that apply equally to phonological awareness.
+
+**1. The child learns contrasts, not sounds.** A phoneme has no value in itself, but through the oppositions it establishes with others: *pala*/*bala* (voicing), *tapa*/*capa* (place of articulation), *bala*/*mala* (manner: oral versus nasal). Development consists of incorporating oppositions into the system. When a child says *tasa* for *casa*, the problem is not the sound /k/ but that the /k/–/t/ opposition is not yet operational in their system [@bosch2004evaluacion; @sanchezgomez2026tsh].
+
+**2. Speech goes through several levels.** There is speech perception, phonological representation, planning and programming, and motor execution. The same surface error can arise at any of them, and the levels interact.
+
+**3. From symptom to mechanism.** The manual distinguishes three levels of analysis, in line with models that separate symptoms, processes and causes [@sanchezgomez2026tsh]:
+
+- the **surface** level: what the child says (*what does the child say?*);
+- the **proximal** level: the system processes that may be failing (*what is failing?*);
+- the **distal** level: originating factors, such as genetic, neurological or environmental ones (*why?*).
+
+Classifying is not attaching a label, but inferring the mechanism from the child's productions.
+
+Applied to the platform, **a score on a phonological awareness task is a surface-level datum**. What the manual wants to estimate lies at the proximal level: whether the child accesses the units of speech (syllables, phonemes) and can operate on them. Three factors come in between, which this chapter tries to separate:
+
+1. how difficult the task itself is;
+2. the child's own speech;
+3. their dialect.
+
+## Five dimensions of difficulty
+
+Research on phonological awareness, in English and in Spanish, agrees that the difficulty of a task depends mainly on five features [@carrillo1994development; @jimenez2000metalinguistic; @anthony2003phonological; @anthony2004nature; @anthony2011spanish; @defior2004crosslinguistic]. The platform makes it possible to see four of them with its own data.
+
+```{r}
+#| label: tbl-cf-dimensiones
+#| tbl-cap: "The platform's phonological awareness tasks according to the five dimensions of difficulty."
+#| echo: false
+d <- R0[order(R0$unidad != "Syllable", match(R0$oper, c("Count / segment", "Match", "Isolate", "Blend", "Delete")), R0$pos), ]
+knitr::kable(data.frame(Task = d$tarea, Unit = d$unidad, Operation = d$oper, Position = d$pos, `Child's response` = d$resp,
+                        Items = d$n_items, check.names = FALSE), align = "lllllr")
+```
+
+**① The unit: syllable before phoneme.** The syllable is a unit the child perceives naturally in speech. The phoneme, on the other hand, is an abstraction largely built while learning to read, all the more so in a transparent orthography like Spanish [@carrillo1994development; @ziegler2005grain].
+
+**② The operation: recognizing before manipulating.** From least to most demanding, the operations are:
+
+- detecting or matching (do they start the same?);
+- isolating (what sound does it start with?);
+- counting, segmenting and blending;
+- deleting (what is left if I remove…?).
+
+Deletion requires holding the word in memory, removing a part and putting the rest back together [@anthony2003phonological].
+
+**③ Position.** In the English-language literature, the beginning of a word is usually easier to isolate than the end. On the platform, the effect of position **depends on the operation**:
+
+- **For matching and isolating,** the beginning is easier.
+- **For deleting,** removing the end is easier, because what remains keeps the beginning of the word and is often another word (*patada* → *pata*).
+
+**④ Structure and type of sound.** Difficulty is influenced by:
+
+- complex syllables (CCV, CVC) versus simple ones (CV);
+- consonant clusters;
+- late-acquired phonemes (/r/, /ɾ/, /θ/, clusters with a liquid);
+- stop consonants, which cannot be prolonged, versus continuants (/s/, /f/, /m/), which are easier to isolate.
+
+With the item-level data from the new platform (`_res`) this effect can be estimated item by item (see [what is missing](#sec-cf-falta)).
+
+**⑤ Response mode and lexical support.**
+
+- **Response mode.** Pointing to a picture does not require speaking. Saying the initial phoneme, the remaining word or the resulting syllable does, and there phonological awareness and the child's speech become mixed (see below).
+- **Lexical support.** Operating on known words is easier than on pseudowords (the "all positions" tasks at ages 7–8 use pseudowords).
+- **Memory.** Long words add memory load.
+
+## What the platform data show
+
+```{r}
+#| label: fig-cf-dificultad
+#| fig-cap: "Proportion correct for each phonological awareness task by time point (all cohorts, weighted by N; time points with at least 100 children). For matching, chance (1 in 3) is discounted. Color: unit; shape: operation."
+#| fig-width: 9.5
+#| fig-height: 5.6
+#| echo: false
+P$etq <- ifelse(P$mom == ave(P$mom, P$tarea_canonica, FUN = max), P$tarea, NA)
+P$momf <- factor(P$mom, levels = sort(unique(P$mom)))
+ggplot(P, aes(momf, 100 * p, colour = unidad, group = tarea_canonica)) +
+  geom_line(linewidth = .6, alpha = .7) +
+  geom_point(aes(shape = oper), size = 2.6, stroke = .9, fill = "white") +
+  ggrepel::geom_text_repel(aes(label = etq), size = 2.8, nudge_x = .35, direction = "y", hjust = 0, segment.colour = PAL_GRUPO[["rejilla"]],
+                           min.segment.length = 0, na.rm = TRUE, show.legend = FALSE, max.overlaps = 30) +
+  scale_colour_manual(values = c("Syllable" = PAL_GRUPO[["azul"]], "Phoneme" = PAL_GRUPO[["naranja"]]), name = "Unit") +
+  scale_shape_manual(values = c("Match" = 21, "Isolate" = 24, "Count / segment" = 22, "Blend" = 23, "Delete" = 16), name = "Operation") +
+  scale_x_discrete(expand = expansion(add = c(.4, 2.6))) +
+  scale_y_continuous(limits = c(0, 100)) +
+  labs(x = "Time point (age.term)", y = "% correct (matching: above chance)") +
+  tema_grupo(10) + theme(legend.position = "top", legend.box = "vertical")
+```
+
+```{r}
+#| label: tbl-cf-contrastes
+#| tbl-cap: "Difficulty contrasts at the same assessment time point (% correct; for matching, above chance). Cohorts and items do not always coincide: these are descriptive comparisons, not tests."
+#| echo: false
+K <- data.frame(
+  Dimension = c("Unit", "Unit", "Unit", "Operation", "Operation", "Position when matching", "Position when matching", "Position when isolating", "Position when deleting syllables", "Position when deleting syllables", "Position when deleting phonemes", "Position when deleting phonemes"),
+  mom = c("7.1", "8.1", "8.2", "5.2", "6.1", "4.2", "5.1", "6.1", "4.2", "4.3", "5.2", "5.3"),
+  A = c("CF_SUPRESION_SILABAS_TP", "CF_SUPRESION_SILABAS_TP", "CF_SUPRESION_SILABAS_TP", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_EMPAREJA_SILABA_INICIAL", "CF_EMPAREJA_SILABA_INICIAL", "CF_IDENTIFICACION_FONEMA_INICIAL", "CF_SUPRESION_SILABA_INICIAL", "CF_SUPRESION_SILABA_INICIAL", "CF_SUPRESION_FONEMA_INICIAL", "CF_SUPRESION_FONEMA_INICIAL"),
+  B = c("CF_SUPRESION_FONEMAS_TP", "CF_SUPRESION_FONEMAS_TP", "CF_SUPRESION_FONEMAS_TP", "CF_SUPRESION_FONEMA_INICIAL", "CF_SINTESIS_FONEMICA", "CF_EMPAREJA_SILABA_FINAL", "CF_EMPAREJA_SILABA_FINAL", "CF_IDENTIFICACION_FONEMA_FINAL", "CF_SUPRESION_SILABA_FINAL", "CF_SUPRESION_SILABA_FINAL", "CF_SUPRESION_FONEMA_FINAL", "CF_SUPRESION_FONEMA_FINAL"))
+nom <- setNames(R0$tarea, R0$tarea_canonica)
+K$pa <- mapply(pv, K$A, K$mom); K$pb <- mapply(pv, K$B, K$mom)
+K <- K[is.finite(K$pa) & is.finite(K$pb), ]
+knitr::kable(data.frame(Dimension = K$Dimension, `Time point` = K$mom, `Task A` = nom[K$A], `% A` = f2(K$pa), `Task B` = nom[K$B], `% B` = f2(K$pb),
+                        `A − B` = sprintf("%+.0f", 100 * (K$pa - K$pb)), check.names = FALSE), align = "lllrlrr", row.names = FALSE)
+```
+
+What can be seen, with the caveat that each task has its own items and not always the same cohorts:
+
+- **Unit.** At ages 4–5, deleting an initial syllable is already within reach for half of the items (`r f2(pv("CF_SUPRESION_SILABA_INICIAL", "5.1"))`% at 5.1), whereas deleting the initial phoneme stays at `r f2(pv("CF_SUPRESION_FONEMA_INICIAL", "5.2"))`% at 5.2. At ages 7–8, once reading has been acquired, the gap between syllable and phoneme almost disappears in the pseudoword tasks (`r f2(pv("CF_SUPRESION_SILABAS_TP", "8.2"))`% vs. `r f2(pv("CF_SUPRESION_FONEMAS_TP", "8.2"))`% at 8.2). This is what the idea that phonemic awareness is largely built while learning to read in a transparent orthography predicts.
+- **Operation.** In the same term (5.2), isolating the initial phoneme (`r f2(pv("CF_IDENTIFICACION_FONEMA_INICIAL", "5.2"))`%) is much easier than deleting it (`r f2(pv("CF_SUPRESION_FONEMA_INICIAL", "5.2"))`%).
+- **Position.** Matching by the initial syllable is easier than by the final one, once chance is discounted (`r f2(pv("CF_EMPAREJA_SILABA_INICIAL", "4.2"))`% vs. `r f2(pv("CF_EMPAREJA_SILABA_FINAL", "4.2"))`% at 4.2), and isolating the initial phoneme is easier than the final one (`r f2(pv("CF_IDENTIFICACION_FONEMA_INICIAL", "6.1"))`% vs. `r f2(pv("CF_IDENTIFICACION_FONEMA_FINAL", "6.1"))`% at 6.1). With **deletion** the opposite happens: removing the **final** syllable or phoneme is easier than removing the initial one.
+- **Floors.** The manipulation tasks have many children with zero correct just when they are introduced. Deleting the initial phoneme at age 5 has `r f2(pv("CF_SUPRESION_FONEMA_INICIAL", "5.2", "suelo") / 100)`% of children at zero. Deleting the initial syllable at 4.2 has `r f2(pv("CF_SUPRESION_SILABA_INICIAL", "4.2", "suelo") / 100)`%. This fits the idea from the teaching manual that a unit or contrast is either operational or not: many children do not yet "see" the phoneme as a unit, rather than simply having low ability. That is why, at these ages, a zero is better read as "not yet accessible" than as one more percentile, and we propose that the norms and the [risk classification](riesgo.en.qmd) treat it that way.
+
+## How to read a failure: phonological awareness, speech or dialect? {#sec-cf-leer-fallo}
+
+In most tasks the child **responds by speaking**: they say the initial phoneme, the remaining word or the resulting syllable, and the examiner judges whether the response is correct. Two sources of error that are not phonological awareness appear there.
+
+**1. The child's own speech.** At ages 4–5, many children still show developmental simplification processes:
+
+- fronting: *casa* → *tasa*;
+- cluster reduction: *plato* → *pato*;
+- liquid simplification: *perro* → *pelo*;
+- final consonant deletion: *sol* → *so*.
+
+Some also have a speech sound disorder (SSD). If a child is asked to remove /p/ from *plato* and answers *ato* instead of *lato*, they may have performed the deletion correctly on **their own** representation of the word (*pato*). In the levels model, the failure lies in speech (representation, planning or execution) and not in phonological awareness.
+
+**2. Dialect.** In the speech of Málaga the following are common:
+
+- *seseo* or *ceceo*, which neutralize /s/–/θ/;
+- aspiration or loss of syllable-final /s/ (*los niños* → [loh niño]);
+- neutralization of syllable-final /r/ and /l/;
+- loss of intervocalic /d/.
+
+These features affect the items that ask the child to **isolate or delete a final phoneme**, or that contain those sounds. A child who aspirates final /s/ does not "hear" an /s/ to remove in their own pronunciation.
+
+**What we do in the manual:**
+
+- **Scoring rule.** A response is accepted as correct if it is consistent with how the child pronounces the word (their dialect and speech processes), provided the requested operation has been carried out correctly. This should be stated in the instructions of each task sheet and in examiner training.
+- **Compare formats.** If a child fails the tasks that require speaking but matches syllables well (where they only point to a picture), the profile points more to speech than to phonological awareness. Conversely, also failing the matching task suggests a difficulty in perception or representation. We propose that the phonological processing task sheets include this in their interpretation section.
+- **Flag speech.** A child with a known SSD, or with simplification processes beyond what is expected for their age, should be flagged on the platform (questionnaire for the teacher or the school's speech-language therapist). Their phonological awareness profile can then be read with that information, and its effect can be studied in research.
+- **Review items.** Items whose correct response depends on a sound affected by dialect (/s/ and /θ/, final /s/, final /r/ and /l/) or on a late-acquired sound need to be located, and it should be studied whether they work worse (see below).
+
+**Why it matters beyond assessment.** Children with SSD that persists beyond ages 5–6, especially if accompanied by language difficulties, are at higher risk of reading difficulties. This is the "critical age hypothesis" [@bishop1990prospective; @pennington2009relations]. Speech, phonological awareness and reading share the same basis: the quality of phonological representations. A low phonological awareness score in a child with SSD is therefore not a "false positive" to be discarded, but a signal to be interpreted with the speech-language therapist.
+
+## What is missing {#sec-cf-falta}
+
+1. **Within-child contrasts.** Compare tasks of different unit, operation and position in the same children and in the same term, with an item model (Rasch or explanatory IRT) that estimates the effect of each dimension. It would replace the descriptive comparisons in this chapter. It can be done with the long table and, for the new platform, with the item-level responses (`_res`).
+2. **Item features.** Code each item by syllable structure, type of phoneme (continuant or stop; early or late acquisition), length, frequency and dialect sensitivity (final /s/, /θ/, final liquids), and estimate how much of the difficulty they explain.
+3. **Receptive versus productive profile.** Build an indicator comparing the tasks in which the child points (matching) with those that require saying sounds, and study whether it separates children with SSD from children at reading risk.
+4. **Speech on the platform.** A brief speech record (or a teacher questionnaire) at ages 4 and 5 would make it possible to separate, in analysis, the speech component from the phonological awareness component, following the levels model of the teaching manual.
