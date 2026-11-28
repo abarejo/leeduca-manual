@@ -1,0 +1,341 @@
+---
+title: "Rapid automatized naming (RAN)"
+subtitle: "Digits, colors and objects · discrete format"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "fichas_RAN.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+**Status:** pilot task sheet. Draft of October 19, 2026. Figures in the text come from the analyses of October 19; the full tables at the end are read from `datos/agregados/RAN*` and update automatically when the data are regenerated. *Translated from the Spanish version of November 28, 2026.*
+:::
+
+**Main finding.** In the same children and in the same session, digit RAN predicts persistent reading difficulty better than color RAN: AUC 0.76 vs. 0.70 at age 4 (p = .046) and 0.74 vs. 0.67 at age 5 (p = .014, DeLong test for paired curves). At age 4, digit RAN adds information to phonological awareness and letters (OR = 2.0 per SD; +0.03 in AUC with cross-validation). At age 5 it no longer adds anything.
+
+**Consequence for article L2.** The RAN composite used by the certainty labels and by L2 averages all RAN tasks at each time point, including versions with a different scoring format. It predicts considerably worse than digit RAN alone (AUC 0.65 and 0.62; p ≤ .001). This explains, at least in part, why RAN "added nothing" in L2. The age-4 model of L2 must be rerun with digit RAN.
+
+Task sheet generated with `scripts/R/ficha_RAN.R` (output `DIAGNOSTICO/R/ficha_RAN_R_v1.xlsx`), with the same structure as the letters and reading speed pilot sheets. Aggregated data; non-Preleo reference except where indicated.
+
+## 1. Task description
+
+The child names aloud, as fast as possible, very familiar stimuli that appear on the screen **one at a time** (discrete format). The examiner presses the left mouse button if the response is correct and the right one if it is wrong; pressing brings up the next stimulus. The platform records correct responses, errors and total time.
+
+| Variant | Code | Stimuli | Items | Time points |
+| --- | --- | --- | --- | --- |
+| Digits (alphanumeric) | 1054 (age 4), 1053 (age 5) | digits 1–4 | 20 | 4.1, 5.1 |
+| Colors (non-alphanumeric) | 528 | red, blue, green, yellow | 20 | 4.1, 4.3, 5.1 |
+| Objects (non-alphanumeric) | 1922 | hen, scissors, heart, pacifier, ball | 25 | 4.1, 5.1, 6.1 |
+
+**Main measure:** efficiency, in items named correctly per minute (correct × 60 / time). It is the same unit as in the letters task sheet and the words per minute of the reading speed task sheet, and it captures speed and accuracy at once. Total time is also given for comparison with the literature.
+
+**Discrete versus card format.** Classic RAN is administered on a card: all stimuli at once, named serially by the child. The platform version presents one stimulus at a time, and the time includes the examiner's key press. This is an important difference when interpreting results (section 1 bis).
+
+**Not part of this task sheet:**
+
+- The card versions of colors and objects in sessions 181, 186, 187, 894 and 906 (codes 2093 and 2094). As we checked on the platform (October 22, 2026), 2093 is a 5 × 5 card of circles that the examiner closes with a single click at the end: **the only valid measure is total time**, and the "correct responses" (0–2) are not informative. In 2023–2026 it was administered to about 960 4-year-olds, so it will be normed by time in its own task sheet.
+- The versions in sessions 153 and 154 (codes 528, 529, 530 and 532 in the 2012 cohort): they have the same value for all children, a known export error.
+- RAN of letters on a card (5431), which had been mislabeled as letter knowledge.
+
+### How it is programmed on the platform {.unnumbered}
+
+```{r}
+#| results: asis
+plataforma_tabla(codigos = c(1054, 528, 2093, 1922))
+plataforma_capturas(c(1054, 528, 2093, 1922), pre = "../")
+```
+
+## 1 bis. Theoretical framework
+
+Rapid automatized naming (RAN) measures how fast a child retrieves and articulates the names of very familiar stimuli. With phonological awareness and letter knowledge it forms the classic triad of reading predictors. The double-deficit hypothesis (Wolf & Bowers, 1999) proposed that slow RAN is a core of dyslexia distinct from the phonological deficit, and that children with both deficits have the most severe difficulties. Maryanne Wolf also created RAS, a version that alternates letters, digits and colors and adds flexibility in name retrieval (Wolf, *Reader, Come Home*).
+
+What the evidence says:
+
+- **It predicts beyond phonological awareness.** In a meta-analysis of RAN before primary school (60 samples, 10,513 children), RAN is related to later reading with r = −.38 and contributes uniquely after controlling for phonological awareness (semipartial r = −.25) ([McWeeny et al., 2022](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/rrq.467)).
+- **Alphanumeric better than non-alphanumeric.** RAN of digits and letters predicts more than RAN of colors or objects ([McWeeny et al., 2022](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/rrq.467); [Chen et al., 2021](https://link.springer.com/article/10.1007/s11145-021-10160-7)). In Spanish schoolchildren in Grades 2 to 6, RAN tasks form two factors, alphanumeric and non-alphanumeric ([Rodríguez et al., 2015](https://www.tandfonline.com/doi/full/10.1080/10888438.2015.1025271)).
+- **Discrete versus card format.** In Grade 1, card RAN is more closely related to reading than discrete RAN ([de Jong, 2011](https://www.tandfonline.com/doi/full/10.1080/10888438.2010.485624)). The card requires chaining stimuli, which resembles reading a line of text. The discrete format mainly measures retrieval of each stimulus's name.
+
+What our data say:
+
+- With the discrete format, digit RAN predicts reading difficulty with an AUC of 0.74–0.76, close to what letters and phonological awareness achieve at these ages.
+- It is confirmed that alphanumeric RAN predicts better than non-alphanumeric RAN, and moreover in the same children, which is uncommon in the literature.
+- At age 4, digits and colors share only 34% of their variance (r = .58–.60). There is a common naming-speed component and another specific to each type of stimulus.
+- At age 4, naming the digits 1–4 also requires knowing them: four in ten children (41%) make some error (a mean of 2.3 errors in 20 items; for colors, 29% and 1.2). Part of its predictive power may come from that symbol knowledge, as with letters.
+
+References: Chen et al. (2021), *Reading and Writing*, doi:10.1007/s11145-021-10160-7; de Jong (2011), *Scientific Studies of Reading*, doi:10.1080/10888438.2010.485624; McWeeny et al. (2022), *Reading Research Quarterly*, doi:10.1002/rrq.467; Rodríguez et al. (2015), *Scientific Studies of Reading*, doi:10.1080/10888438.2015.1025271; Wolf & Bowers (1999), *Journal of Educational Psychology*, 91(3). Located with SciSpace; volumes and pages still to be checked.
+
+## 2. Sample
+
+One row per variant, time point and cohort. All data come from the first administration at each time point (session shown) and have already been cleaned (see below).
+
+| Variant (code) | Time point | Cohort | Session | Platform | N | Non-Preleo | Preleo | Schools | % with SES | % with age | % girls |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Colors (528) | 4.1 | 2011 | 67 | old | 900 | 0 | 900 | 34 | 100 | 91 | 48 |
+| Colors (528) | 4.1 | 2014 | 625 | new | 441 | 47 | 394 | 20 | 82 | 84 | 51 |
+| Colors (528) | 4.3 | 2012 | 158 | old | 382 | 378 | 0 | 17 | 70 | 99 | 48 |
+| Colors (528) | 5.1 | 2010 | 66 | old | 929 | 259 | 668 | 36 | 100 | 91 | 47 |
+| Digits (1054) | 4.1 | 2011 | 67 | old | 898 | 0 | 898 | 34 | 100 | 91 | 48 |
+| Digits (1054) | 4.1 | 2014 | 625 | new | 436 | 47 | 389 | 20 | 82 | 84 | 51 |
+| Digits (1053) | 5.1 | 2010 | 66 | old | 934 | 260 | 672 | 36 | 100 | 91 | 47 |
+| Objects (1922) | 6.1 | 2010 | 152 | old | 906 | 262 | 643 | 34 | 100 | 100 | 46 |
+
+Non-Preleo and Preleo: schools without and with Preleo (06\_PRELEO\_COLEGIOS). Age: % of children with a valid date of birth, needed for relative age.
+
+**Sample limitations.**
+
+- **4.1 does not have a large enough non-Preleo group.** The 2011 cohort is entirely Preleo and 2014 has only 47 non-Preleo children. The 4.1 norms use all children and say so in the table.
+- **Each time point depends on one or two cohorts.** When cohorts are added, what appears to be specific to an age here may change.
+- **2012 at 4.3:** only 70% of children have SES data.
+
+**Data cleaning.** The following were excluded:
+
+| Reason | Cases | Where |
+| --- | --- | --- |
+| Sessions 153 and 154: constant values, the task recorded no data | 1,290 | objects 2011 at 5.1 (901) and 2012 at 4.1 (388); colors 2012 at 4.1 (1) |
+| Missing time or under 5 s, or no correct responses | 135 | all variants; at most 32 children in colors 2011 |
+| Efficiency above 120 items per minute (impossible) | 1 | objects 2010 at 6.1 |
+| Card versions 2093 and 2094 (0–2 correct: recording failure) | all | not analyzed |
+| Session 5431 | all | not analyzed |
+
+Loss due to invalid data is about 1–4% in the valid sessions. Sessions 153 and 154 leave the 2011 and 2012 cohorts without object RAN.
+
+## 3. Descriptive statistics and reliability
+
+### 3.1 Descriptive statistics (non-Preleo group)
+
+Efficiency = correct responses per minute. The 4.1 row has only 47 non-Preleo children (2014 cohort); it is shown for guidance.
+
+| Variant | Time point | N | M | SD | Mdn | P10–P90 | Skewness | Time Mdn (s) | Errors M | % error-free |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Colors | 4.1 | 47 | 31.7 | 11.8 | 31.8 | 14.6–45.7 | −0.16 | 37.3 | 1.13 | 77 |
+| Digits | 4.1 | 47 | 26.6 | 16.4 | 27.1 | 3.2–48.3 | −0.14 | 41.7 | 4.36 | 51 |
+| Colors | 4.3 | 378 | 37.6 | 10.5 | 38.7 | 23.7–50.2 | −0.48 | 30.7 | 0.80 | 76 |
+| Colors | 5.1 | 259 | 42.8 | 9.8 | 44.3 | 29.3–54.6 | −0.33 | 27.1 | 0.26 | 89 |
+| Digits | 5.1 | 260 | 44.2 | 11.3 | 45.6 | 30.6–56.5 | −0.75 | 26.0 | 0.77 | 74 |
+| Objects | 6.1 | 262 | 42.2 | 9.4 | 42.5 | 29.1–54.3 | 0.04 | 34.9 | 0.26 | 87 |
+
+What it shows:
+
+- **Speed increases between ages 4 and 5:** colors goes from about 32–39 to 43 items per minute.
+- **No ceiling or floor effect** in efficiency. Distributions are almost symmetrical; digits at 5.1 has a tail toward low values (skewness −0.75).
+- **At age 4, digits also measures knowledge of the digits.** With all children at 4.1, 41% make some error with digits (a mean of 2.3 in 20 items) compared with 29% with colors (1.2). At 5.1, errors are already rare. So at 4.1, efficiency (correct per minute) mixes speed and knowledge. Both components should be reported separately (§ 6, E2).
+- **Objects is slower** than colors and digits despite being a year later: it has 25 items and the names are longer.
+
+### 3.2 Reliability
+
+The discrete format has no independent items that would allow a classical α: the measure is a single total speed. Reliability is therefore estimated here in two other ways.
+
+| Type | Cohort | Time point(s) | n | r | ρ | Reliability of the composite (Spearman-Brown) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Alternate forms: digits and colors in the same session | 2011 | 4.1 | 883 | 0.59 | 0.59 | 0.74 |
+| Alternate forms: digits and colors in the same session | 2014 | 4.1 | 432 | 0.58 | 0.57 | 0.73 |
+| Alternate forms: digits and colors in the same session | 2010 | 5.1 | 923 | 0.60 | 0.60 | 0.75 |
+| Stability: colors at 5.1 → objects at 6.1 | 2010 | 5.1 → 6.1 | 772 | 0.29 | 0.31 | — |
+| Stability: digits at 5.1 → objects at 6.1 | 2010 | 5.1 → 6.1 | 775 | 0.29 | 0.29 | — |
+
+How to read it:
+
+- **The correlation between digits and colors (0.58–0.60) is a lower bound of the reliability** of each. The two tasks share naming speed, but not the type of stimulus. A naming-speed index averaging the two would have a reliability of 0.73–0.75, acceptable for research and somewhat low for individual decisions.
+- **One-year stability is low (0.29–0.31).** It is not test–retest: the type of stimulus (objects), the number of items and the age all change. It is a very conservative lower bound.
+- **A proper test–retest is missing.** RAN is not repeated with the same stimuli in two terms of the same cohort.
+- **α/ω can be estimated with the new platform data.** The 2014 cohort has item-level times (\_di); with them the internal consistency of naming times can be computed (pending, § 7).
+
+**Practical implication.** With a reliability of 0.6 to 0.75, a single RAN score is not enough to classify a child. It serves as one more indicator within the profile (with letters and phonological awareness) and for monitoring the group.
+
+## 4. Validity
+
+### 4.1 Concurrent validity
+
+| Variant | Time point | Compared with | n | r | ρ |
+| --- | --- | --- | --- | --- | --- |
+| Colors | 4.1 | Phonological awareness | 1,340 | 0.32 | 0.32 |
+| Digits | 4.1 | Phonological awareness | 1,333 | 0.37 | 0.37 |
+| Digits | 4.1 | RAN colors (same session) | 1,315 | 0.58 | 0.58 |
+| Colors | 4.3 | Phonological awareness | 381 | 0.23 | 0.25 |
+| Colors | 5.1 | Phonological awareness | 928 | 0.31 | 0.31 |
+| Digits | 5.1 | Phonological awareness | 933 | 0.43 | 0.41 |
+| Digits | 5.1 | RAN colors (same session) | 923 | 0.60 | 0.60 |
+| Objects | 6.1 | Letter knowledge | 906 | 0.40 | 0.42 |
+| Objects | 6.1 | Syllable and word reading | 906 | 0.37 | 0.38 |
+| Objects | 6.1 | Phonological awareness | 906 | 0.30 | 0.32 |
+| Objects | 6.1 | Vocabulary | 906 | 0.16 | 0.17 |
+
+This is the expected pattern. RAN is moderately related to phonological awareness (0.23–0.43) without being confounded with it. Digits shares more with phonological awareness than colors: another sign that at these ages knowing the symbols is part of the task. The relation with vocabulary is low (0.16): RAN does not mainly measure the lexicon (discriminant validity).
+
+### 4.2 Predictive validity
+
+Criterion: persistent reading difficulty in primary school, the same as in the letters and speed task sheets. Cases are between 12% and 17% of each sample.
+
+```{r}
+#| label: fig-ran-validez
+#| fig-cap: "Predictive validity of RAN: AUC with 95% CI by variant and time point. The grey X is the RAN composite used by L2."
+#| fig-width: 8
+#| fig-height: 4
+fig_ran_validez()
+```
+
+| Variant | Time point | Cohort | n | Cases | AUC (95% CI) | Sens. / spec. with P16 | Sens. / spec. with P25 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Digits | 4.1 | 2011 | 491 | 81 | **0.76** (0.70–0.81) | 0.38 / 0.89 | 0.59 / 0.82 |
+| Colors | 4.1 | 2011 | 497 | 83 | 0.71 (0.64–0.77) | 0.37 / 0.87 | 0.53 / 0.80 |
+| Colors | 4.3 | 2012 | 220 | 38 | 0.61 (0.52–0.69) | 0.18 / 0.84 | 0.32 / 0.79 |
+| Digits | 5.1 | 2010 | 716 | 89 | **0.74** (0.68–0.79) | 0.27 / 0.92 | 0.44 / 0.84 |
+| Colors | 5.1 | 2010 | 711 | 88 | 0.66 (0.61–0.72) | 0.19 / 0.89 | 0.30 / 0.82 |
+| Objects | 6.1 | 2010 | 795 | 114 | 0.65 (0.59–0.71) | 0.32 / 0.88 | 0.43 / 0.79 |
+
+AUC CI by bootstrap (1,000 resamples).
+
+How to read it:
+
+- **On its own, RAN is not enough for detection.** With P16, specificity is high (0.84–0.92) but sensitivity is low (0.18–0.38): it flags few of the children who will later have difficulties. With P25, more than half are detected with digits at 4.1. RAN is useful as part of a profile, not as an isolated screen.
+- **Color RAN at 4.3 (2012 cohort) predicts poorly.** It may be due to the cohort, the small sample (38 cases) or the session. With a single cohort it cannot be known.
+
+### 4.3 Digits versus colors in the same children
+
+This is the most informative analysis in the task sheet. The comparison is made in the same children, in the same session and with the same criterion. This rules out the sample or time-point differences that usually complicate these comparisons in the literature.
+
+| Cohort | Time point | n | Cases | AUC digits | AUC colors | Difference | p (DeLong) | AUC certainty RAN composite v2 | p (digits vs. composite) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2011 | 4.1 | 489 | 80 | 0.76 | 0.70 | +0.06 | .046 | 0.65 | .001 |
+| 2010 | 5.1 | 708 | 88 | 0.74 | 0.67 | +0.07 | .014 | 0.62 | < .001 |
+
+- **Digit RAN predicts better than color RAN** at ages 4 and 5. This agrees with McWeeny et al. (2022) and Chen et al. (2021).
+- **The RAN composite of the certainty model (v2) predicts worse than digit RAN alone.** The composite mixes variants that are noisy or invalid here (sessions 153/154, card versions). **For article L2: the age-4 model must be rerun with cleaned digit RAN.**
+
+### 4.4 Incremental validity: does it add anything to phonological awareness and letters?
+
+Logistic regression with phonological awareness and letter knowledge (PA + LET), then adding RAN. AUC is computed with cross-validation (5 folds, 10 repetitions).
+
+| Variant | Time point | n | Cases | OR per 1 SD of RAN | p (likelihood ratio) | AUC PA + LET | AUC PA + LET + RAN | ΔAUC |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Digits | 4.1 | 431 | 75 | **1.97** | < .001 | 0.749 | 0.778 | **+0.029** |
+| Colors | 4.1 | 435 | 76 | 1.38 | .021 | 0.757 | 0.765 | +0.008 |
+| Digits | 5.1 | 645 | 73 | 1.16 | .418 | 0.813 | 0.811 | −0.002 |
+| Colors | 5.1 | 640 | 72 | 1.01 | .942 | 0.815 | 0.813 | −0.001 |
+
+- **At age 4, digit RAN adds information** to phonological awareness and letters: for each SD slower, the risk almost doubles.
+- **At age 5 it no longer adds anything.** Letters and phonological awareness reach an AUC of 0.81 and capture what RAN contributed.
+- **Clinical reading:** digit RAN is most useful in the second year of preschool (age 4), when letter knowledge still varies little between children. Part of that advantage may come from knowing the digits (§ 3.1); study E2 (§ 6) is designed to separate the two components.
+
+## 5. Norms and influencing variables
+
+### 5.1 Norms
+
+Efficiency (correct responses per minute). Reference: the non-Preleo group when it has at least 100 children; otherwise all children (4.1, flagged).
+
+```{r}
+#| label: fig-ran-baremos
+#| fig-cap: "RAN norms: P10–P90, P25–P75, median (dot) and P16 (red dash)."
+#| fig-width: 8
+#| fig-height: 3.6
+fig_ran_baremos()
+```
+
+| Variant | Time point | Reference | N | P5 | P10 | **P16** | P25 | P50 | P75 | P90 | Time P50 (s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Digits | 4.1 | all (non-Preleo group too small) | 1,334 | 6.8 | 12.4 | **18.1** | 25.5 | 35.5 | 42.0 | 46.7 | 32.7 |
+| Colors | 4.1 | all (non-Preleo group too small) | 1,341 | 13.6 | 18.2 | **22.7** | 26.8 | 34.1 | 39.8 | 45.2 | 34.6 |
+| Colors | 4.3 | non-Preleo | 378 | 18.5 | 23.7 | **27.6** | 31.3 | 38.6 | 44.9 | 50.2 | 30.7 |
+| Colors | 5.1 | non-Preleo | 259 | 26.2 | 29.3 | **32.6** | 35.9 | 44.3 | 49.9 | 54.6 | 27.1 |
+| Digits | 5.1 | non-Preleo | 260 | 25.7 | 30.6 | **33.8** | 38.4 | 45.6 | 51.0 | 56.5 | 26.0 |
+| Objects | 6.1 | non-Preleo | 262 | 25.7 | 29.1 | **33.3** | 36.6 | 42.5 | 47.7 | 54.3 | 34.9 |
+
+- **4.1 is normed with all children**, almost all from Preleo schools. If Preleo improves RAN at that age, the norms are somewhat demanding (see the Preleo effect below). They are provisional until there is a non-Preleo cohort at age 4.
+- **The 5.1 and 6.1 norms are based on about 260 children from a single cohort (2010).** Extreme percentiles (P5) are not very precise.
+
+### 5.2 Influencing variables
+
+| Variable | Colors 4.1 | Digits 4.1 | Colors 4.3 | Colors 5.1 | Digits 5.1 | Objects 6.1 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Relative age (d: 1st half of year − 2nd) | **0.42** | **0.41** | 0.35 | 0.30 | 0.28 | 0.04 |
+| School SES (d high − low) | 0.24 | 0.25 | −0.24 | 0.19 | 0.27 | 0.13 |
+| Sex (d girl − boy) | 0.03 | 0.01 | 0.00 | −0.10 | 0.00 | −0.01 |
+| Preleo (d Preleo − non-Preleo) | 0.21 (2014) | **0.67** (2014) | — | 0.03 (2010) | 0.05 (2010) | 0.06 (2010) |
+| School (ICC) | 0.14 | 0.09 | 0.09 | 0.08 | 0.11 | 0.06 |
+
+Medium or large effects in bold.
+
+What it shows:
+
+- **Relative age is the variable with the most weight at age 4** (d ≈ 0.4; ρ = 0.22 with age in months). It drops to 0.3 at age 5 and disappears at age 6. As with letters, a child born late in the year may look slow just because they are younger. Recommendation: at age 4, interpret with age in months (as in the letters task sheet).
+- **SES weighs little** (d ≈ 0.2) and has no consistent direction (negative at 4.3).
+- **There are no differences between girls and boys.**
+- **Preleo does not change RAN in 2010.** In 2014, the d of 0.67 for digits is based on 47 non-Preleo children from few schools. It may be a school effect rather than a Preleo effect; it cannot be interpreted.
+- **School explains little** (ICC 0.06–0.14): the variation is mainly between children.
+
+### 5.3 Differential prediction (digits, 4.1 and 5.1 together)
+
+Does it predict equally well in all groups? The intercept and slope of the logistic regression are compared between groups (n = 1,207; 170 cases).
+
+| Variable | Group | AUC | p intercept | p slope |
+| --- | --- | --- | --- | --- |
+| Sex | Girl | 0.72 | .94 | .069 |
+| Sex | Boy | 0.78 |  |  |
+| SES | Low (1–3) | 0.74 | .17 | .39 |
+| SES | Medium (4–6) | 0.72 |  |  |
+| SES | High (7–10) | 0.78 |  |  |
+
+There is no prediction bias by SES or sex: the same cut-offs work for all groups. In boys the AUC is somewhat higher (p = .069): this should be monitored in other cohorts.
+
+## 6. Studies it opens up
+
+The platform contains "implicit experiments": comparisons that the design of the sessions makes possible without having been planned. Each study shows its type and what is already available.
+
+| # | Study | Type | Question | What is already available |
+| --- | --- | --- | --- | --- |
+| E1 | **L2 with cleaned RAN** | Hypothesis test | Does the age-4 model of L2 improve if the RAN composite is replaced by cleaned digit RAN? | AUC 0.76 vs. 0.65 for the composite (§ 4.3). The full model still needs to be rerun. |
+| E2 | **Speed versus symbol knowledge** | Theoretical | At age 4, does digit RAN predict because of naming speed or because of knowing the digits? Correct responses and time per correct response are separated. | Correct responses and time per child (2011, 2014). |
+| E3 | **Alphanumeric versus non-alphanumeric** | Implicit experiment | Same session, same children, two types of stimulus. Does the advantage of digits hold in two-factor models (Rodríguez et al., 2015)? | 2,200 children with both variants (§ 4.3). |
+| E4 | **Discrete versus card** | Methodological | Does the card format predict more, as de Jong (2011) found? | Card versions 2093/2094 exist, but their data are not valid. It can be proposed for the new platform. |
+| E5 | **RAS (alternating letters, digits and colors)** | Hypothesis test | Does alternation (flexibility, control) add anything to simple RAN, as Wolf proposes? | No data. Proposal for a new task. |
+| E6 | **Item-level times** | Methodological | α/ω of naming times; time curve across the task (fatigue, learning); items that fail most. | New platform, 2014 cohort (\_di, \_res). |
+| E7 | **Relative age and RAN** | Exploratory | Does the effect of relative age on RAN (d ≈ 0.4 at age 4) explain part of the overidentification of children born late in the year? | Effects by time point (§ 5.2); same logic as the letters task sheet. |
+| E8 | **Double deficit in Spanish** | Theoretical | Do children with slow RAN and low phonological awareness have the worst prognosis (Wolf & Bowers, 1999)? | RAN, phonological awareness and reading criterion in the same children (2010, 2011). |
+| E9 | **The triad** | Theoretical and applied | Letters, phonological awareness and RAN: how much each contributes by age. At age 4 RAN contributes; at age 5 it does not (§ 4.4). | Incremental validity in this task sheet; letters and speed task sheets. |
+
+**Utility of each result.**
+
+- **Scientific:** E2, E3, E8 and E9 test theoretical hypotheses with large samples in a transparent language.
+- **Educational:** digit RAN at age 4 is brief and does not require being able to read. It helps guide classroom support before reading problems appear.
+- **Clinical:** in a profile with phonological awareness and letters, slow RAN at age 4 almost doubles the risk. At age 5 it is descriptive information, not an added predictor.
+
+::: {.callout-note}
+## Continuous norms and floor effect (study M3, November 3, 2026)
+
+For object RAN with phoneme (1925), continuous methods are more stable than the table by time point (up to 30% less variation in P10 between two halves of the sample), but there are no data between 5.2 and 6.2 and the cNORM polynomial collapses in that gap. Until there are data for 5.3–6.1, the continuous norms should not be interpolated in that range. RAN has no floor effect (times do not pile up at the maximum).
+
+Details in study M3.
+:::
+
+## 7. Pending issues and data issues
+
+**Data issues** (added to the Issues sheet of the dictionary):
+
+- Sessions 153 and 154: object RAN (1922) has constant values in 2011 (5.1) and 2012 (4.1). No valid data.
+- Card versions 2093 and 2094: 0–2 correct responses for almost all children. Recording failure.
+- Session 5431: excluded.
+- The certainty RAN composite v2 includes invalid or noisy variants.
+
+**Pending:**
+
+- [ ] Rerun the age-4 model of L2 with cleaned digit RAN (E1).
+- [ ] Rebuild the certainty RAN composite (v3) with valid variants only.
+- [ ] Compute α/ω with the 2014 item-level times (E6).
+- [ ] Separate correct responses and time per correct response for digits at 4.1 (E2).
+- [ ] Norms for 4.1 with a large enough non-Preleo group (new cohorts).
+- [ ] Check whether there is RAN in cohorts after 2014 and in the paper or tablet administrations (2020–2022).
+- [ ] Ask the engineer what the card versions and sessions 153/154 record.
+- [ ] Check volumes and pages of the references.
+
+**Reproducibility.** Everything comes from `scripts/R/ficha_RAN.R` (output `DIAGNOSTICO/R/ficha_RAN_R_v1.xlsx` and figures `Ficha_RAN_F1` and `F2`). Aggregated data only; the intermediate `.rds` contains pupil IDs and does not leave the project folder.
+
+## Full tables {.unnumbered}
+
+All the aggregated tables for this task sheet, as produced by the analysis scripts. Click on each one to expand it.
+
+```{r}
+#| results: asis
+tablas_completas("RAN")
+```

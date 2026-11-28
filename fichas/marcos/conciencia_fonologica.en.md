@@ -12,7 +12,7 @@ The "all positions" version mixes items and is the most demanding.
 - **In Spanish, phonological awareness develops in stages**, from the syllable to the phoneme. Phonemic awareness builds on learning to read and at the same time drives it: the relation is reciprocal [@denton2000pa]. Phonological awareness predicts above all the reading of complex syllables [@martinez2020silabica].
 - **Its predictive value is universal, but changes with age.** Phonemic awareness, letters and RAN predict reading growth equally in Spanish, Czech and English [@caravolas2013growth]. Its relation with fluency, however, is more complex and depends on task and age, whereas RAN predicts fluency in all languages [@landerl2019pa]. This is what @catts2026definicion lead us to expect: precursors are useful for early prognosis and lose weight once there is reading to measure.
 
-The pilot task sheets develop this framework in more detail: [syllable counting](https://abarejo.github.io/leeduca-manual/fichas/CF523.html) and [rapid naming](https://abarejo.github.io/leeduca-manual/fichas/RAN.html) (*in Spanish*).
+The pilot task sheets develop this framework in more detail: [syllable counting](../CF523.en.qmd) and [rapid naming](../RAN.en.qmd).
 
 **What our data show.** The pattern matches the literature:
 

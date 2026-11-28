@@ -62,6 +62,8 @@ book:
     - part: "Task sheets · Reading"
       chapters:
         - fichas/VEL.en.qmd
+        - fichas/LET.en.qmd
+        - fichas/TECLE.en.qmd
         - fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.en.qmd
         - fichas/auto/LEC_LECT_COMPRENSIVA.en.qmd
         - fichas/auto/LEC_LETRAS.en.qmd
@@ -79,6 +81,8 @@ book:
         - fichas/auto/LEC_DECISION_ORTOGRAFICA.en.qmd
     - part: "Task sheets · Phonological skills"
       chapters:
+        - fichas/CF523.en.qmd
+        - fichas/RAN.en.qmd
         - fichas/auto/CF_CONTAR_SILABAS.en.qmd
         - fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.qmd
         - fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.qmd

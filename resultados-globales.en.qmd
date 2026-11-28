@@ -151,6 +151,6 @@ The most interesting result is the relation between **accuracy and fluency**. At
 
 ## 6.4 Invariance
 
-**What is available.** TECLE paper–platform equivalence, with its conversion to a common scale (see [TECLE](https://abarejo.github.io/leeduca-manual/fichas/TECLE.html) (*in Spanish*)), and differential prediction by sex and socioeconomic status in the letters task sheet.
+**What is available.** TECLE paper–platform equivalence, with its conversion to a common scale (see [TECLE](fichas/TECLE.en.qmd)), and differential prediction by sex and socioeconomic status in the letters task sheet.
 
 **Pending.** Measurement invariance by sex, format (platform, paper, tablet) and period (before and after the pandemic) for the class A tasks.

@@ -28,10 +28,10 @@ The platform and this manual grew out of the **DIS-ESP battery**, created by Mar
 | [How each task sheet is built](metodo.en.qmd) · [Methodological decisions](decisiones.en.qmd) | Translated (November 27, 2026) |
 | [The Preleo program](preleo/programa.en.qmd) · [The Leetrea program](preleo/leetrea.en.qmd) | Translated (November 27, 2026) |
 | [Task catalog](catalogo.en.qmd) | Translated; instructions and constructs not yet translated are shown in Spanish |
-| [Reading speed in words per minute](fichas/VEL.en.qmd) (pilot task sheet) | Translated (November 27, 2026) |
+| Pilot task sheets: [Reading speed](fichas/VEL.en.qmd) · [Letter knowledge](fichas/LET.en.qmd) · [TECLE](fichas/TECLE.en.qmd) · [Syllable counting](fichas/CF523.en.qmd) · [Rapid automatized naming](fichas/RAN.en.qmd) | Translated (November 27–28, 2026) |
 | [Class A task sheets](fichas/auto/index.en.qmd) | Generated in English from the same data and script |
 | [Glossary (Spanish–English)](glosario.en.qmd) | November 27, 2026 |
-| Theoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Woodcock criterion; Norms; Task grouping; Decisions; the other pilot task sheets | Next (second layer) |
+| Theoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Woodcock criterion; Norms; Task grouping; Decisions | Next (second layer, in progress) |
 
 Links to chapters that are not translated yet point to the Spanish pages and are marked *(in Spanish)*. All figures and numbers are computed by the same code in both languages, so the two versions always report the same results.
 
