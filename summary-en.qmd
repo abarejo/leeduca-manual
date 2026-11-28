@@ -12,7 +12,7 @@ Domains covered: letter knowledge, phonological awareness, rapid automatized nam
 
 ## Normative sample
 
-The normative study uses six birth cohorts (2010–2015) assessed in schools of the province of Málaga: **10,278 children** (31 to 72 schools per cohort). Of these, 4,952 were followed term by term until 2019/20; the remainder were assessed only in the broad assessments of 2020/21 (paper) and 2021/22 (tablets). Part of the schools applied **Preleo**, a classroom program for oral language and early literacy. Norms use children from schools **without Preleo** as the reference group (1,628 children in term-by-term follow-up); when a time point has fewer than 100 reference children, all children are used and this is flagged. A flow diagram is given in [Normative study](https://abarejo.github.io/leeduca-manual/estudio-normativo.html#sec-flujo-muestra) (*in Spanish*).
+The normative study uses six birth cohorts (2010–2015) assessed in schools of the province of Málaga: **10,278 children** (31 to 72 schools per cohort). Of these, 4,952 were followed term by term until 2019/20; the remainder were assessed only in the broad assessments of 2020/21 (paper) and 2021/22 (tablets). Part of the schools applied **Preleo**, a classroom program for oral language and early literacy. Norms use children from schools **without Preleo** as the reference group (1,628 children in term-by-term follow-up); when a time point has fewer than 100 reference children, all children are used and this is flagged. A flow diagram is given in [Normative study](https://abarejo.github.io/leeduca-manual/en/estudio-normativo.en.html#sec-flujo-muestra).
 
 ## Psychometric approach
 
@@ -28,7 +28,7 @@ Reading difficulty is defined from the child's whole trajectory between 6 and 11
 
 ## Intended uses
 
-Supported: universal screening (as a probability of risk), progress monitoring, planning classroom support, and research with pseudonymized data. Not supported: clinical diagnosis on its own, high-stakes decisions about individual children, and comparison of schools or teachers. See [Presentation and responsible use](https://abarejo.github.io/leeduca-manual/uso-responsable.html) (*in Spanish*).
+Supported: universal screening (as a probability of risk), progress monitoring, planning classroom support, and research with pseudonymized data. Not supported: clinical diagnosis on its own, high-stakes decisions about individual children, and comparison of schools or teachers. See [Presentation and responsible use](https://abarejo.github.io/leeduca-manual/en/uso-responsable.en.html).
 
 ## Open science
 

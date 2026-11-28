@@ -139,7 +139,7 @@ The group's guide for speech and language teachers and preschool and primary tea
 
 To assess risk, it proposes four criteria, each with a judgment of mild, moderate or severe risk: **family risk** (with a case history and the ATLAS questionnaire), **oral language** (first the phonological triad: phonological awareness, rapid naming and verbal memory; then the semantic, grammatical and prosodic components), **visual hypotheses** and **comorbidity** with other neurodevelopmental disorders (DLD, ADHD, dyscalculia and developmental coordination disorder). For early identification, direct assessment of reading (phonological route, visual route, speed and comprehension) **takes precedence** as the criterion for intensifying instruction, even if the other criteria do not confirm the risk, and it is graded with cut-offs at P10, P20 and P30.
 
-The platform and this manual follow that logic: universal and repeated assessment, several indicators rather than one, direct reading as the main criterion from Grade 1, and graded judgments (see [Report bands](https://abarejo.github.io/leeduca-manual/informe-tramos.html) (*in Spanish*)). What the manual adds is estimation with data: calibrated probabilities, certainty levels and a watch zone.
+The platform and this manual follow that logic: universal and repeated assessment, several indicators rather than one, direct reading as the main criterion from Grade 1, and graded judgments (see [Report bands](informe-tramos.en.qmd)). What the manual adds is estimation with data: calibrated probabilities, certainty levels and a watch zone.
 
 ### Where the platform fits
 

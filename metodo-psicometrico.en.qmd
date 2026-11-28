@@ -34,7 +34,7 @@ The analyses behind these sections are in the group's internal workspace (restri
 
 **Higher is better.** In the manual all scores are presented so that a high value is good and a low percentile indicates difficulty. Times are converted into rates (stimuli per second, words per minute).
 
-**Understandable units.** Where possible, the score is also given in a unit a teacher understands: words per minute, minutes to read 1,000 words, or "reads like a child of…" (see [Norms by reading level](https://abarejo.github.io/leeduca-manual/baremo-nivel-lector.html) (*in Spanish*)).
+**Understandable units.** Where possible, the score is also given in a unit a teacher understands: words per minute, minutes to read 1,000 words, or "reads like a child of…" (see [Norms by reading level](baremo-nivel-lector.en.qmd)).
 
 **Session validity.** Item-level times make it possible to detect an anomalous administration: times of zero, different units, interruptions, responses that are too fast, or results inconsistent with the same child at other time points. A first set of rules fixed in advance has been tested on the rapid naming tasks. The proposal is that each score carry a **reliable session** or **check** flag.
 
@@ -65,7 +65,7 @@ The analyses behind these sections are in the group's internal workspace (restri
 | Content | Description of the task, items and instructions read from the platform; brief theoretical framework per task | In the pilot task sheets and in 18 frameworks by domain |
 | Internal structure | Factors (precursors, decoding, fluency, comprehension) and networks by age | Exploratory networks by age; confirmatory factor analysis missing |
 | Invariance | By sex, format (platform, paper, tablet), period and region | TECLE paper–platform equivalence; the rest pending |
-| Convergent and external criterion | Correlation with external tests | Woodcock-Muñoz fluency (see [Validity against the Woodcock-Muñoz battery](https://abarejo.github.io/leeduca-manual/criterio-woodcock.html) (*in Spanish*)) |
+| Convergent and external criterion | Correlation with external tests | Woodcock-Muñoz fluency (see [Validity against the Woodcock-Muñoz battery](criterio-woodcock.en.qmd)) |
 | Predictive and diagnostic | AUC, sensitivity, specificity and predictive values against persistent reading difficulty | Done with cross-cohort validation (see [How we estimate risk](riesgo.en.qmd)) |
 | Consequences | False positives by group; effect of the report on decisions | Pending |
 
@@ -79,7 +79,7 @@ The analyses behind these sections are in the group's internal workspace (restri
 
 **The reference sample.** Norms describe development without intervention: the reference is the children from schools that did not implement Preleo with their cohort. All equivalent cohorts are pooled, unless one departs by more than 1 SD (see [Methodological decisions](decisiones.en.qmd)).
 
-**By time point, not only by school year.** With three assessments per school year, a single norm per school year flags almost a quarter of the children as "at risk" in the first term. That is why norms are built by school year and term, and from age 4 to 6 they are refined by age in months (see [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*)).
+**By time point, not only by school year.** With three assessments per school year, a single norm per school year flags almost a quarter of the children as "at risk" in the first term. That is why norms are built by school year and term, and from age 4 to 6 they are refined by age in months (see [Norms by school year or by term](baremos-trimestre.en.qmd)).
 
 **Continuous norms.** The aim is to replace the empirical tables with continuous norms by age (cNORM or GAMLSS), which smooth the percentiles, allow norming at any exact age and use all cohorts at once.
 

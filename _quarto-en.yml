@@ -38,6 +38,7 @@ book:
     - summary-en.qmd
     - part: "Foundations"
       chapters:
+        - uso-responsable.en.qmd
         - definicion.en.qmd
     - part: "The platform and the sample"
       chapters:
@@ -50,7 +51,13 @@ book:
         - decisiones.en.qmd
         - resultados-globales.en.qmd
         - riesgo.en.qmd
+        - baremos-trimestre.en.qmd
+        - baremo-nivel-lector.en.qmd
+        - criterio-woodcock.en.qmd
         - limites.en.qmd
+    - part: "Report prototypes"
+      chapters:
+        - informe-tramos.en.qmd
     - part: "Intervention programs"
       chapters:
         - preleo/programa.en.qmd

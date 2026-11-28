@@ -50,7 +50,7 @@ Besides assessment, the platform hosts the group's **intervention programs**: Pr
 | **DIS-ESP on paper** | 2007–2012 | Carrillo and Alegría's battery, with 11 scales, administered on paper in Málaga. Group screening with TECLE and individual assessment of the phonological and orthographic routes [@carrillo2011prevalencia]. |
 | **Old platform** | until 2017 | First cohorts (2010–2012). Adds the precursors from age 4 and the three assessments per school year. Records accuracy, errors, time and efficiency per task. |
 | **New platform** | from 2017/18 | Also records the response and the time of **each item**. This is what makes it possible to compute α, ω and item response models. |
-| **Pandemic** | 2020–2022 | Some assessments are done on paper or with tablets, sometimes in groups and without an external examiner (see [Validity against the Woodcock-Muñoz battery](https://abarejo.github.io/leeduca-manual/criterio-woodcock.html) (*in Spanish*)). |
+| **Pandemic** | 2020–2022 | Some assessments are done on paper or with tablets, sometimes in groups and without an external examiner (see [Validity against the Woodcock-Muñoz battery](criterio-woodcock.en.qmd)). |
 | **Age 3 and new versions** | from 2023/24 | Own battery for age 3, Catalan and Valencian versions, and use in schools in other Spanish regions and in Colombia. |
 
 **Pending:** exact dates of the platform change and of the versions, known to the platform's engineering team.
@@ -151,7 +151,7 @@ T <- do.call(rbind, lapply(co, function(k) {
 tabla(T)
 ```
 
-Not all cohorts have the same time points: the first ones start at age 5, the 2014 and 2015 cohorts lose time points because of the pandemic, and some sessions in the cohort files are incomplete. That is why norms are computed by task and time point with all the cohorts that have that time point, taking as reference the children from schools without Preleo (see [Norms by school year or by term](https://abarejo.github.io/leeduca-manual/baremos-trimestre.html) (*in Spanish*)).
+Not all cohorts have the same time points: the first ones start at age 5, the 2014 and 2015 cohorts lose time points because of the pandemic, and some sessions in the cohort files are incomplete. That is why norms are computed by task and time point with all the cohorts that have that time point, taking as reference the children from schools without Preleo (see [Norms by school year or by term](baremos-trimestre.en.qmd)).
 
 The number of children and schools by cohort and time point and the [sample flow diagram](estudio-normativo.en.qmd#sec-flujo-muestra) are in chapter 4 (Normative study).
 
