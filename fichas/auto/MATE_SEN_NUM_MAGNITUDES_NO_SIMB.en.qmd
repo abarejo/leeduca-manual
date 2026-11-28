@@ -1,0 +1,16 @@
+---
+title: "Nonsymbolic magnitude comparison"
+subtitle: "Automatically generated task sheet · MATE_SEN_NUM_MAGNITUDES_NO_SIMB"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto_en.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto_en("MATE_SEN_NUM_MAGNITUDES_NO_SIMB")
+```

@@ -91,6 +91,17 @@ book:
         - fichas/auto/LEC_VEL_TEXTO.en.qmd
         - fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.en.qmd
         - fichas/auto/LEC_DECISION_ORTOGRAFICA.en.qmd
+        - fichas/auto/LEC_DECLEX_PAL_1sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PAL_2sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PAL_3sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PAL_4sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_1sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_2sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_3sil.en.qmd
+        - fichas/auto/LEC_DECLEX_PSEUDO_4sil.en.qmd
+        - fichas/auto/LEC_HOMOGRAFOS.en.qmd
+        - fichas/auto/LEC_PSEUDO_1sil.en.qmd
+        - fichas/auto/LEC_SILABAS_MEDIA.en.qmd
     - part: "Task sheets · Phonological skills"
       chapters:
         - conciencia-fonologica.en.qmd
@@ -107,9 +118,42 @@ book:
         - fichas/auto/CF_SUPRESION_SILABA_FINAL.en.qmd
         - fichas/auto/CF_SUPRESION_SILABA_INICIAL.en.qmd
         - fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.en.qmd
+        - fichas/auto/CF_EMPAREJA_SILABA_FINAL.en.qmd
+        - fichas/auto/CF_EMPAREJA_SILABA_INICIAL.en.qmd
+        - fichas/auto/CF_SINTESIS_FONEMICA.en.qmd
+        - fichas/auto/CF_SUPRESION_SILABA_INICIAL_Y_FINAL.en.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL.en.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV.en.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CORTO_PLAZO_COMPLETA.en.qmd
+        - fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5.en.qmd
+        - fichas/auto/RAN_OBJETOS_CONTROL.en.qmd
+        - fichas/auto/RAN_OBJETOS_FONEMA.en.qmd
+        - fichas/auto/RAN_OBJETOS_REPETIDOS_CORTOS.en.qmd
+        - fichas/auto/RAN_OBJETOS_REPETIDOS_LARGOS.en.qmd
+        - fichas/auto/RAN_OBJETOS_SILABA.en.qmd
+        - fichas/auto/RAN_OBJETOS_VARIADOS_CORTOS.en.qmd
+        - fichas/auto/RAN_OBJETOS_VARIADOS_LARGOS.en.qmd
     - part: "Task sheets · Oral language"
       chapters:
         - fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.en.qmd
+        - fichas/auto/L_ORAL_FON_FLUIDEZ_FONOLOGICA.en.qmd
+        - fichas/auto/L_ORAL_FON_PARES_MINIMOS.en.qmd
+        - fichas/auto/L_ORAL_FON_PC_DISCRIMINA.en.qmd
+        - fichas/auto/L_ORAL_FON_PC_DISCRIMINA_II.en.qmd
+        - fichas/auto/L_ORAL_FON_PC_IDENTIFICA.en.qmd
+        - fichas/auto/L_ORAL_FON_PC_IDENTIFICA_II.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PAL.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_GENERO_PSEUDOPAL.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PAL.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_NUMERO_PSEUDOPAL.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_MORFOLOGIA_TIEMPO_PAL.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_ORDENAR_FRASES.en.qmd
+        - fichas/auto/L_ORAL_MF_STX_RECEPCION_GRAMATICAL.en.qmd
+        - fichas/auto/L_ORAL_PERCEP_PARES_MINIMOS.en.qmd
+        - fichas/auto/L_ORAL_PROSODIA_ACENTO_DE_PALABRAS.en.qmd
+        - fichas/auto/L_ORAL_PROSODIA_ACENTO_PSEUDOP.en.qmd
+        - fichas/auto/L_ORAL_SEM_COMPRENSION_NCP.en.qmd
+        - fichas/auto/L_ORAL_SEM_VOCABULARIO_OPCIONES.en.qmd
     - part: "Task sheets · Numerical cognition"
       chapters:
         - cognicion-numerica.en.qmd
@@ -117,9 +161,33 @@ book:
         - fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.en.qmd
         - fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.en.qmd
         - fichas/auto/MATE_ET_VERB_ARABIGOS.en.qmd
+        - fichas/auto/MATE_ARITMETIC_RESTA_1_DIGITO.en.qmd
+        - fichas/auto/MATE_ARITMETIC_RESTA_2_DIGITOS.en.qmd
+        - fichas/auto/MATE_ARITMETIC_SUMA_1_DIGITO.en.qmd
+        - fichas/auto/MATE_ARITMETIC_SUMA_2_DIGITOS.en.qmd
+        - fichas/auto/MATE_ARITMETIC_SUMA_Y_RESTA_2_DIGITOS.en.qmd
+        - fichas/auto/MATE_ARITM_SUMA_RESTA_2_DIGITOS.en.qmd
+        - fichas/auto/MATE_ARIT_CONTEO_1_10.en.qmd
+        - fichas/auto/MATE_CONTAR_H_DELANTE_1O_DECENA.en.qmd
+        - fichas/auto/MATE_SEN_NUM_MAGNITUDES_NO_SIMB.en.qmd
+        - fichas/auto/MATE_SEN_NUM_MAGNITUDES_SIMBOLICAS.en.qmd
     - part: "Task sheets · Executive functions"
       chapters:
+        - fichas/auto/F_EJEC_ATENCIÓN_ATENCION_SOSTENIDA.en.qmd
         - fichas/auto/F_EJEC_INH_INHIBICION.en.qmd
+    - part: "Task sheets · Visual-attentional skills"
+      chapters:
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_1.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_2.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_3.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_LETRAS_4.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_NUMEROS_5.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_NUMEROS_LETRAS_2_3.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_1.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_2.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_3.en.qmd
+        - fichas/auto/HVIS_CAP_VAten_SIMBOLOS_4.en.qmd
+        - fichas/auto/HVIS_OR_ESP_BUSQUEDA_SERIAL.en.qmd
   appendices:
     - glosario.en.qmd
     - referencias.en.qmd

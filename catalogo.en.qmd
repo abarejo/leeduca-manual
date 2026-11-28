@@ -37,6 +37,8 @@ PANT <- c("imágenes en pantalla" = "formato_imagenes.png", "lectura en voz alta
 FICHA <- c(LEC_LETRAS = "fichas/LET.en.html", LEC_VEL_TEXTO = "fichas/VEL.en.html", RAN_NUMEROS = "fichas/RAN.en.html",
            RAN_COLORES = "fichas/RAN.en.html", RAN_OBJETOS_CONTROL = "fichas/RAN.en.html",
            CF_CONTAR_SILABAS = "fichas/CF523.en.html", LEC_TECLE = "fichas/TECLE.en.html")
+AUTO_EN <- sub("\\.en\\.qmd$", "", list.files(file.path(raiz_libro(), "fichas", "auto"), "\\.en\\.qmd$")); AUTO_EN <- setdiff(AUTO_EN, c("index", names(FICHA)))
+FICHA <- c(FICHA, setNames(paste0("fichas/auto/", AUTO_EN, ".en.html"), AUTO_EN))
 ESTADO <- c("evaluación" = "assessment", experimental = "experimental", revisar = "under review", papel = "paper")
 SEM <- c(verde = "green", "ámbar" = "amber", rojo = "red", "sin datos" = "no data")
 MED <- c(aciertos = "correct responses", tiempo = "time", eficiencia = "efficiency", puntuacion = "score")
