@@ -3,6 +3,9 @@
 # reconstruyen a partir de los CSV publicados: cualquiera puede reproducirlas.
 
 COLV <- c("Números" = PAL[["anil"]], "Colores" = PAL[["coral"]], "Objetos" = PAL[["ocre"]], "Compuesto RAN de L2" = PAL[["gris"]])
+# (28/11/2026) Rótulos en inglés en fichas/RAN.en.qmd
+RAN_EN <- c("Números" = "Digits", "Colores" = "Colors", "Objetos" = "Objects", "Compuesto RAN de L2" = "L2 RAN composite")
+ran_leyenda <- function() function(x) if (libro_en_ingles()) unname(RAN_EN[x]) else x
 
 fig_ran_validez <- function() {
   pv <- leer("RAN", "4b_Validez_predictiva")
@@ -17,8 +20,8 @@ fig_ran_validez <- function() {
     geom_hline(yintercept = .5, colour = PAL[["gris"]], linetype = "dotted") +
     geom_pointrange(data = fa[fa$variante != "Compuesto RAN de L2", ], aes(ymin = IC_inf, ymax = IC_sup), position = position_dodge(.55), size = .4, na.rm = TRUE) +
     geom_point(data = fa[fa$variante == "Compuesto RAN de L2", ], position = position_dodge(.55), shape = 4, size = 3, stroke = 1.2) +
-    scale_colour_manual(values = COLV, drop = TRUE) + coord_cartesian(ylim = c(.45, .85)) +
-    labs(x = "Momento (cohortes)", y = "AUC (IC 95 %)") + tema_leeduca()
+    scale_colour_manual(values = COLV, labels = ran_leyenda(), drop = TRUE) + coord_cartesian(ylim = c(.45, .85)) +
+    labs(x = if (libro_en_ingles()) "Time point (cohorts)" else "Momento (cohortes)", y = if (libro_en_ingles()) "AUC (95% CI)" else "AUC (IC 95 %)") + tema_leeduca()
 }
 
 fig_ran_baremos <- function() {
@@ -30,6 +33,7 @@ fig_ran_baremos <- function() {
     geom_linerange(aes(ymin = P25, ymax = P75), linewidth = 3, alpha = .6, position = d) +
     geom_point(size = 2.2, position = d, colour = PAL[["tinta"]]) +
     geom_point(aes(y = P16), shape = 95, size = 7, position = d, colour = PAL[["coral"]]) +
-    scale_colour_manual(values = COLV, drop = TRUE) +
-    labs(x = "Momento (edad.trimestre)", y = "Ítems correctos por minuto") + tema_leeduca()
+    scale_colour_manual(values = COLV, labels = ran_leyenda(), drop = TRUE) +
+    labs(x = if (libro_en_ingles()) "Time point (age.term)" else "Momento (edad.trimestre)",
+         y = if (libro_en_ingles()) "Correct items per minute" else "Ítems correctos por minuto") + tema_leeduca()
 }

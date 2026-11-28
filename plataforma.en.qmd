@@ -159,7 +159,7 @@ The number of children and schools by cohort and time point and the [sample flow
 
 | Version | What it is | Status in the manual |
 |---|---|---|
-| **Paper** | DIS-ESP (2007–2012) and TECLE on paper in 2020/21 | TECLE: paper–platform equivalence already studied (see [TECLE](https://abarejo.github.io/leeduca-manual/fichas/TECLE.html) (*in Spanish*)). DIS-ESP: own chapter ([The DIS-ESP battery](https://abarejo.github.io/leeduca-manual/dis-esp.html) (*in Spanish*)) |
+| **Paper** | DIS-ESP (2007–2012) and TECLE on paper in 2020/21 | TECLE: paper–platform equivalence already studied (see [TECLE](fichas/TECLE.en.qmd)). DIS-ESP: own chapter ([The DIS-ESP battery](https://abarejo.github.io/leeduca-manual/dis-esp.html) (*in Spanish*)) |
 | **Tablet** | 2021/22 sessions (e.g., 948), group-administered: lexical decision, homographs, mathematics | Treated as tasks distinct from reading aloud |
 | **Age 3** | Own battery since 2023/24 (sessions 988–992) | Inventory in [Battery for age 3](https://abarejo.github.io/leeduca-manual/fichas/TRES_ANIOS.html) (*in Spanish*); no norms yet |
 | **Catalan and Valencian** | The same tasks, in schools in the Balearic Islands and the Valencian Community | Need their own norms |

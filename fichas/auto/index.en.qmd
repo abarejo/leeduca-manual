@@ -26,7 +26,7 @@ R <- R[order(match(R$dom, names(DOM)), R$Family, R$Task), ]
 
 The task sheets in this part of the English edition cover the `r nrow(R)` **class A** tasks of the catalog ([rules](../../limites.en.qmd#sec-clases)): the tasks with enough reliability and sample size for norms. They are generated automatically with the same script as the Spanish ones, so the figures are identical. Each one includes the shared theoretical framework of its construct, the sample, descriptive statistics, reliability, validity, provisional norms, the variables that affect scores and a paragraph for publications.
 
-The hand-written **pilot task sheet** translated so far is [Reading speed in words per minute](../VEL.en.qmd). The other pilot sheets (letter knowledge, rapid naming, syllable counting, TECLE) and the class B and C sheets are available in the [Spanish version](https://abarejo.github.io/leeduca-manual/fichas/auto/index.html).
+The hand-written **pilot task sheets** go further than the automatic ones (theoretical framework, rigor analyses, studies they open up): [Reading speed in words per minute](../VEL.en.qmd), [Letter knowledge](../LET.en.qmd), [TECLE](../TECLE.en.qmd), [Syllable counting](../CF523.en.qmd) and [Rapid automatized naming](../RAN.en.qmd). The class B and C sheets are available in the [Spanish version](https://abarejo.github.io/leeduca-manual/fichas/auto/index.html).
 
 ```{r}
 #| output: asis

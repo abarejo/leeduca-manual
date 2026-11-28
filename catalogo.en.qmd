@@ -34,9 +34,9 @@ FAM <- c(A = "A · Accuracy", B = "B · Rapid naming", C = "C · Oral reading fl
 PANT <- c("imágenes en pantalla" = "formato_imagenes.png", "lectura en voz alta de una lista" = "formato_lista.png",
           "denominación rápida de una serie" = "formato_ran.png", "elección entre opciones" = "formato_decision.png")
 # Translated task sheets link to the English page; the rest to the Spanish one.
-FICHA <- c(LEC_LETRAS = paste0(URL_ES, "fichas/LET.html"), LEC_VEL_TEXTO = "fichas/VEL.en.html", RAN_NUMEROS = paste0(URL_ES, "fichas/RAN.html"),
-           RAN_COLORES = paste0(URL_ES, "fichas/RAN.html"), RAN_OBJETOS_CONTROL = paste0(URL_ES, "fichas/RAN.html"),
-           CF_CONTAR_SILABAS = paste0(URL_ES, "fichas/CF523.html"), LEC_TECLE = paste0(URL_ES, "fichas/TECLE.html"))
+FICHA <- c(LEC_LETRAS = "fichas/LET.en.html", LEC_VEL_TEXTO = "fichas/VEL.en.html", RAN_NUMEROS = "fichas/RAN.en.html",
+           RAN_COLORES = "fichas/RAN.en.html", RAN_OBJETOS_CONTROL = "fichas/RAN.en.html",
+           CF_CONTAR_SILABAS = "fichas/CF523.en.html", LEC_TECLE = "fichas/TECLE.en.html")
 ESTADO <- c("evaluación" = "assessment", experimental = "experimental", revisar = "under review", papel = "paper")
 SEM <- c(verde = "green", "ámbar" = "amber", rojo = "red", "sin datos" = "no data")
 MED <- c(aciertos = "correct responses", tiempo = "time", eficiencia = "efficiency", puntuacion = "score")
