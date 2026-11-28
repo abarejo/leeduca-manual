@@ -1,0 +1,16 @@
+---
+title: "Rapid automatized naming: repeated long objects"
+subtitle: "Automatically generated task sheet · RAN_OBJETOS_REPETIDOS_LARGOS"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "libro.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto.R"))
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "..", "R", "ficha_auto_en.R"))
+```
+
+```{r}
+#| results: asis
+ficha_auto_en("RAN_OBJETOS_REPETIDOS_LARGOS")
+```
