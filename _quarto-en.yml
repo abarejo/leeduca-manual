@@ -39,16 +39,19 @@ book:
     - part: "Foundations"
       chapters:
         - uso-responsable.en.qmd
+        - marco-teorico.en.qmd
         - definicion.en.qmd
     - part: "The platform and the sample"
       chapters:
         - plataforma.en.qmd
+        - dis-esp.en.qmd
         - estudio-normativo.en.qmd
     - part: "Psychometrics"
       chapters:
         - metodo-psicometrico.en.qmd
         - metodo.en.qmd
         - decisiones.en.qmd
+        - agrupacion.en.qmd
         - resultados-globales.en.qmd
         - riesgo.en.qmd
         - baremos-trimestre.en.qmd
@@ -65,6 +68,8 @@ book:
     - part: "Tasks"
       chapters:
         - catalogo.en.qmd
+        - fichas/por_edad.en.qmd
+        - fichas/cribado_dos_riesgos.en.qmd
         - fichas/auto/index.en.qmd
     - part: "Task sheets · Reading"
       chapters:
@@ -88,6 +93,7 @@ book:
         - fichas/auto/LEC_DECISION_ORTOGRAFICA.en.qmd
     - part: "Task sheets · Phonological skills"
       chapters:
+        - conciencia-fonologica.en.qmd
         - fichas/CF523.en.qmd
         - fichas/RAN.en.qmd
         - fichas/auto/CF_CONTAR_SILABAS.en.qmd
@@ -106,6 +112,7 @@ book:
         - fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.en.qmd
     - part: "Task sheets · Numerical cognition"
       chapters:
+        - cognicion-numerica.en.qmd
         - fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.en.qmd
         - fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.en.qmd
         - fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.en.qmd

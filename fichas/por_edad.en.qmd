@@ -1,0 +1,98 @@
+---
+title: "Tasks by age"
+---
+
+```{r}
+#| include: false
+source(file.path(dirname(knitr::current_input(dir = TRUE)), "..", "R", "libro.R"))
+rl <- raiz_libro()
+C <- utils::read.csv(file.path(rl, "datos", "agregados", "CATALOGO", "Catalogo.csv"), encoding = "UTF-8", check.names = FALSE, stringsAsFactors = FALSE)
+C <- C[C$estado == "evaluación", ]
+B <- leer("RIMA_3A", "B")
+URL_ES <- "https://abarejo.github.io/leeduca-manual/fichas/"
+# task sheets: English version if it exists, otherwise the Spanish one
+auto_en <- sub("\\.en\\.qmd$", "", list.files(file.path(rl, "fichas", "auto"), "\\.en\\.qmd$")); auto_en <- setdiff(auto_en, "index")
+auto_es <- setdiff(sub("\\.qmd$", "", list.files(file.path(rl, "fichas", "auto"), "^[^.]+\\.qmd$")), "index")
+PIL <- c(LEC_LETRAS = "LET.en.qmd", RAN_NUMEROS = "RAN.en.qmd", RAN_COLORES = "RAN.en.qmd", RAN_OBJETOS_CONTROL = "RAN.en.qmd", CF_CONTAR_SILABAS = "CF523.en.qmd",
+         LEC_VEL_TEXTO = "VEL.en.qmd", LEC_TECLE = "TECLE.en.qmd")
+enlace <- function(t, nombre) ifelse(t %in% names(PIL), sprintf("[%s](%s)", nombre, PIL[t]),
+                              ifelse(t %in% auto_en, sprintf("[%s](auto/%s.en.qmd)", nombre, t),
+                              ifelse(t %in% auto_es, sprintf("[%s](%sauto/%s.html) (ES)", nombre, URL_ES, t), nombre)))
+DOM <- c(LECTURA = "Reading", HFON = "Phonological processing", RAN = "Phonological processing", HVIS = "Visual-attentional", L_ORAL = "Oral language",
+         MATE = "Numerical cognition", F_EJEC = "Executive functions", INTELIGENCIA = "Reasoning", ESCRITURA = "Spelling and writing")
+EDADES <- 3:11
+nombre <- ifelse(!is.na(C$name_en) & nzchar(C$name_en), C$name_en, C$tarea)
+M <- data.frame(dominio = DOM[C$dominio], tarea = enlace(C$tarea_canonica, nombre), clase = C$clase, stringsAsFactors = FALSE)
+eds <- lapply(strsplit(as.character(C$edades), ",\\s*"), as.integer)
+# age 3 from the 2023–2026 server data (≥ 100 children)
+cods3 <- unique(B$Prueba[B$N >= 100])
+tiene3 <- vapply(seq_len(nrow(C)), function(i) any(cods3 %in% strsplit(as.character(C$codigos[i]), " ")[[1]]), TRUE)
+for (e in EDADES) M[[as.character(e)]] <- vapply(seq_len(nrow(C)), function(i) if (e %in% eds[[i]] || (e == 3 && tiene3[i])) c(A = "●", B = "◐", C = "○")[[C$clase[i]]] else "", "")
+M <- M[order(M$dominio, -rowSums(M[, as.character(EDADES)] != ""), M$tarea), ]; rownames(M) <- NULL
+NUEVAS <- data.frame(dominio = c("Phonological processing", "Oral language", "Oral language", "Oral language", "Phonological processing"),
+                     tarea = c("[Rhyme judgment (11795)](https://abarejo.github.io/leeduca-manual/fichas/RIMA.html) (ES)", "Concept comprehension (11794)", "Categorization (12332, 12510)",
+                               "Pseudoword repetition (11256, 12509)", "Syllable segmentation (12166)"),
+                     edades = c("3–5", "3–4", "3", "3", "3–4"))
+```
+
+::: {.callout-note appearance="minimal"}
+*Translated from the Spanish version of November 28, 2026. Links marked (ES) go to task sheets that are only available in Spanish for now.*
+:::
+
+The task sheets are grouped by domain, but often the question is a different one: **what can be assessed at a given age**. This page orders the tasks by age and proposes a minimum core for each age, with its actual duration on the platform.
+
+## Which tasks exist at each age
+
+● class A (full task sheet) · ◐ class B · ○ class C ([what each class means](../limites.en.qmd#sec-clases)). Ages at which the task was administered in the 2010–2015 cohorts; the age-3 column adds the tasks administered to 100 or more children in 2023–2026.
+
+```{r}
+tabla(M[, c("dominio", "tarea", as.character(EDADES))], c("Domain", "Task", paste("Age", EDADES)), digitos = 0)
+```
+
+**New tasks from 2023–2026** (not yet in the catalog of the 2010–2015 cohorts; see [Battery for age 3](https://abarejo.github.io/leeduca-manual/fichas/TRES_ANIOS.html), *in Spanish*):
+
+```{r}
+tabla(NUEVAS, c("Domain", "Task", "Ages"), digitos = 0)
+```
+
+## Minimum core by age (proposal)
+
+For each age, the tasks that best combine **validity** (they predict reading difficulty or later fluency), **reliability** and **brevity**, according to the task sheets in this manual. It is a proposal for the team, not a closed battery; the version by school year and term, with its rationale, is in [Proposed tasks by school year and term](https://abarejo.github.io/leeduca-manual/fichas/propuesta_bateria.html) (*in Spanish*). Duration = median time of the task on the platform (2023–2026), not counting instructions or task changes.
+
+| Age | Task (code) | Duration | Why |
+|---|---|---|---|
+| **Age 3** | Concept comprehension (11794) | 2.3 min | 21 items, α ≈ .80, no floor or ceiling |
+| | Vocabulary: multiple choice (124) | 1.9 min | Oral language; continued at ages 4 and 5 |
+| | Verbal memory (2095) | 1.4 min | Same task from age 3 to 6: allows change to be followed |
+| | Syllable segmentation (12166) | 0.9 min | Syllabic precursor; links with syllable counting at age 4 |
+| | Rhyme judgment (11795) | 1.0 min | Only to describe groups: low stability |
+| | *Approximate total* | *≈ 8 min* | No predictive validity yet at this age |
+| **Age 4** | Syllable counting (523) | 2.6 min | Class A syllabic precursor |
+| | Initial syllable deletion (1551) | 2.6 min | Syllabic awareness; AUC .60–.67 |
+| | Letter knowledge, uppercase (535) | 1.3 min | The best single predictor in preschool |
+| | Digit RAN (1054) | ≈ 1 min | Predicts better than colors (AUC .76 at 4.1) |
+| | Vocabulary (124) and verbal memory (2095) | 3.3 min | Oral language and phonological memory |
+| | *Approximate total* | *≈ 11 min* | At age 4 it serves to **monitor**, not to screen (composite AUC .73) |
+| **Age 5** | Letter knowledge (67) | 1.0 min | AUC .82 at 5.3 against persistent difficulty |
+| | Initial phoneme identification (1896) | 1.3 min | Emerging phonemic awareness |
+| | Final syllable deletion (1834) | 2.1 min | Syllabic awareness, class A |
+| | Digit RAN (1053) | ≈ 1 min | Speed of lexical access |
+| | Simple syllable reading (2263) | 1.0 min | Early reading adds to the precursors |
+| | Verbal memory (2095) | 1.4 min | Continuity with ages 3 and 4 |
+| | *Approximate total* | *≈ 8 min* | Precursors at age 5: AUC ≈ .80 |
+| **Age 6** | Letter knowledge (67) | 1.0 min | Still discriminates at 6.1 |
+| | Two-syllable words and pseudowords (1931, 1934) | 1.2 min | Decoding; AUC .85 at 6.1 |
+| | Text reading speed and comprehension (2034, 2041) | 3.0 min | Fluency and comprehension of the same text |
+| | Orthographic decision (1937) | 2.6 min | Orthographic processing |
+| | *Approximate total* | *≈ 8 min* | |
+| **Age 7** | Two- and three-syllable words and pseudowords (1931, 1932, 1934, 1935) | 2.0 min | Decoding, the most stable measure (ρ ≈ .66) |
+| | Text reading speed and comprehension (2034, 2041) | 3.0 min | Fluency and comprehension |
+| | TECLE (1930) | 5.0 min | Reading efficiency; basis of two-stage screening |
+| | Orthographic decision (1937) | 2.5 min | Orthographic processing |
+| | *Approximate total* | *≈ 12 min* | |
+
+: Proposed minimum core by age. {.striped}
+
+**To follow the same children from age 3 to 7**, it is advisable to keep one task per construct with the same form at every age possible: verbal memory (2095) from 3 to 6, syllable counting or segmentation from 3 to 5, letters from 4 to 6 and digit RAN from 4 to 5. Tasks that change form (letters 535 and 67, syllable segmentation and counting) are not interchangeable: they must be compared through their percentile, not the raw score.
+
+**Timed tasks.** RAN, letters (67), simple syllables and TECLE are done against the clock. If the assessment is combined with physiological or stress measures, the start and end of each task should be recorded, because timed tasks are more activating.

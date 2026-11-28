@@ -168,8 +168,8 @@ The classification does not depend on reading: it only requires one measure per 
 
 | Domain | Measure per school year (proposed) | First school years with data | Purpose |
 |---|---|---|---|
-| **Oral language** | Vocabulary and grammatical comprehension (see [Screening two risks](https://abarejo.github.io/leeduca-manual/fichas/cribado_dos_riesgos.html) (*in Spanish*)) | Ages 4–5 | Distinguish weak oral language that persists from weak oral language that recovers; separate the risk of dyslexia from that of language disorder |
-| **Mathematics** | Arithmetic and magnitude tasks in each school year (see [Numerical cognition](https://abarejo.github.io/leeduca-manual/cognicion-numerica.html) (*in Spanish*)) | Ages 5–8 | Persistent difficulty in mathematics and its co-occurrence with reading difficulty |
+| **Oral language** | Vocabulary and grammatical comprehension (see [Screening two risks](fichas/cribado_dos_riesgos.en.qmd)) | Ages 4–5 | Distinguish weak oral language that persists from weak oral language that recovers; separate the risk of dyslexia from that of language disorder |
+| **Mathematics** | Arithmetic and magnitude tasks in each school year (see [Numerical cognition](cognicion-numerica.en.qmd)) | Ages 5–8 | Persistent difficulty in mathematics and its co-occurrence with reading difficulty |
 
 For the levels to be comparable across domains, the same rules are used (P10 and P25, at least two school years, one from age 7). What must be checked in each domain is that there are enough measures in each school year and that they are reliable.
 

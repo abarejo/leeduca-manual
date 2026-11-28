@@ -1,0 +1,64 @@
+---
+title: "Screening for two risks: dyslexia and oral language"
+---
+
+::: {.callout-note appearance="minimal"}
+**Status:** proposal under validation (November 5, 2026). Decided: oral language is included in the screening of all schools, and the fixed grammar task is grammatical reception. It describes the procedure; results with the platform data will be published once the study has been reviewed. It complements the [Proposed tasks by school year and term](https://abarejo.github.io/leeduca-manual/fichas/propuesta_bateria.html) (*in Spanish*). *Translated from the Spanish version of November 28, 2026.*
+:::
+
+## In brief
+
+Risk should not be a single overall score, but two: **risk of dyslexia** and **risk of developmental language disorder (DLD)**, each with its own tests. All children take a brief screening; those who are flagged complete the battery, and that is when the profile (dyslexia, oral language or both) and the response are decided.
+
+## Why two risks
+
+- **Reading comprehension has two components**, word recognition and oral language comprehension [@hoover1990simple]. The precursors of the first (letters, phonological awareness, RAN) are not those of the second (vocabulary and grammar) [@storch2002oral; @hulme2015foundations].
+- **DLD is common and often goes unnoticed.** In population studies it affects about 7% of children at school entry [@tomblin1997prevalence; @norbury2016scales], and it is associated with more reading difficulties, especially in comprehension.
+- **Dyslexia and DLD overlap**, but they are not the same: a child may decode well and understand poorly, or the reverse. Separating the two risks guides intervention better.
+
+## The two-stage circuit
+
+```{mermaid}
+flowchart LR
+  A["All students<br/>key tests"] --> B{"Below<br/>the cut-off?"}
+  B -- no --> C["Regular instruction<br/>(Tier 1)"]
+  B -- yes --> D["Full battery<br/>in the same session"]
+  D --> E["Dyslexia profile<br/>Tier 2 reading"]
+  D --> F["Oral language profile<br/>language support"]
+  D --> G["Both<br/>reading and language"]
+```
+
+1. **Universal screening.** The key dyslexia tests (letter knowledge, phonological awareness and RAN), plus two brief oral language tasks in all schools: one for **vocabulary** and one for **grammar**. Better a few well-measured tasks than many poorly measured ones.
+2. **Second stage.** Those below the cut-off for either risk complete the battery, including oral language, in the same session whenever possible. This is the two-stage screening model [@compton2010gated].
+3. **Profile and response.** The profile is assigned with the full battery, not with the screening.
+
+## Oral language tasks for screening
+
+| Component | Task | Why |
+|---|---|---|
+| Vocabulary | Vocabulary: definitions (1705) | It is the platform's oral language task with the most items and the highest reliability |
+| Grammar | Grammatical reception (1542) | It covers morphosyntax, the second domain required by DLD criteria. It has 21 items (plus one practice item), is administered from age 4 and is on the current platform, so it can be repeated in every school year |
+
+Together they cover the two aspects required by CATALISE: expressive vocabulary and receptive grammar [@bishop2017catalise]. Sentence ordering (193) remains an alternative grammar task from age 6; it has only 5 items and a ceiling.
+
+**The same tasks in every school year.** Monitoring only compares like with like if the tasks do not change from one school year to the next. While the old versions are being replaced, scores are expressed in a common indicator (proportion correct or correct per minute) and as a percentile within each age and term.
+
+The sentence comprehension and multiple-choice vocabulary tasks are not recommended for decisions about an individual child, because of their low reliability. The morphology tasks have a ceiling effect at age 5.
+
+## Oral language levels
+
+The levels follow the same logic as those for reading difficulty ([How we estimate risk](../riesgo.en.qmd)): a low score in a single assessment is not enough; it must be repeated. The cut-offs are taken from the large population studies of DLD: −1.25 SD in EpiSLI [@tomblin1996system] and −1.5 SD in SCALES [@norbury2016scales]. Persistence is what the CATALISE consensus requires [@bishop2017catalise].
+
+| Level | Rule | Response |
+|---|---|---|
+| **TL-A** | Vocabulary or grammar below −1.5 SD (≈ P7) in at least two school years | Referral for speech-language assessment |
+| **TL-B** | Oral language ≤ P25 in at least two school years | Classroom language support (Tier 2) and monitoring |
+| **TR** | Oral language ≤ P25 in some school year | Monitoring at the next assessment |
+| **INT / TE** | Never ≤ P25 | Regular instruction |
+
+## Caveats
+
+- **A platform level is not a diagnosis of DLD.** Diagnosis requires a speech-language assessment and information on development, context and functional impact [@bishop2017catalise].
+- **No labeling based on a single assessment.** Oral language changes a great deal between ages 4 and 6, and the platform's tasks have few items.
+- **When oral language is low, reading should also be monitored**, because the two risks often go together.
+- **Cut-offs and tasks may change** once the validation results with the platform data are published.

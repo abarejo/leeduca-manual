@@ -32,7 +32,8 @@ The platform and this manual grew out of the **DIS-ESP battery**, created by Mar
 | [Class A task sheets](fichas/auto/index.en.qmd) | Generated in English from the same data and script |
 | [Presentation and responsible use](uso-responsable.en.qmd) · [Norms by school year or by term](baremos-trimestre.en.qmd) · [Norms by reading level](baremo-nivel-lector.en.qmd) · [Woodcock-Muñoz criterion](criterio-woodcock.en.qmd) · [Report bands](informe-tramos.en.qmd) | Translated (November 28, 2026) |
 | [Glossary (Spanish–English)](glosario.en.qmd) | November 27, 2026 |
-| Theoretical framework; DIS-ESP; Phonological awareness; Numerical cognition; Task grouping; Tasks by age; class B and C task sheets | Next (second layer, in progress) |
+| [Theoretical framework](marco-teorico.en.qmd) · [The DIS-ESP battery](dis-esp.en.qmd) · [How tasks are grouped](agrupacion.en.qmd) · [Phonological awareness](conciencia-fonologica.en.qmd) · [Numerical cognition](cognicion-numerica.en.qmd) · [Tasks by age](fichas/por_edad.en.qmd) · [Screening for two risks](fichas/cribado_dos_riesgos.en.qmd) | Translated (November 28, 2026) |
+| Class B and C task sheets | Next (second layer, in progress) |
 
 Links to chapters that are not translated yet point to the Spanish pages and are marked *(in Spanish)*. All figures and numbers are computed by the same code in both languages, so the two versions always report the same results.
 
