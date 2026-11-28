@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The DIS-ESP battery: the paper origin of the platform – LEEDUCA Platform Technical Manual</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./estudio-normativo.en.html" rel="next">
+<link href="./plataforma.en.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e01e92ab3eea49296e7f9c1c28bd1566.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./plataforma.en.html">The platform and the sample</a></li><li class="breadcrumb-item"><a href="./dis-esp.en.html"><span class="chapter-title">The DIS-ESP battery: the paper origin of the platform</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LEEDUCA Platform Technical Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://abarejo.github.io/leeduca-manual/" title="Versión en español (completa)" class="quarto-navigation-tool px-1" aria-label="Versión en español (completa)"><i class="bi bi-translate"></i></a>
+    <a href="https://github.com/abarejo/leeduca-manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary-en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical summary (English)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./uso-responsable.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Presentation and responsible use</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./marco-teorico.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Theoretical framework: learning to read in Spanish and why we measure what we measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./definicion.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What we measure in light of the new definition of dyslexia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">The platform and the sample</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./plataforma.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The LEEDUCA platform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dis-esp.en.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">The DIS-ESP battery: the paper origin of the platform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estudio-normativo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Normative study</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Psychometrics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metodo-psicometrico.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Psychometric method</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metodo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">How each task sheet is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./decisiones.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Methodological decisions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./agrupacion.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">How tasks are grouped</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resultados-globales.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overall results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./riesgo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">How we estimate risk and reading difficulty</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./baremos-trimestre.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Norms by school year or by term</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./baremo-nivel-lector.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Norms by reading level</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./criterio-woodcock.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Validity against an external criterion: Woodcock-Muñoz reading fluency</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limites.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Limitations and data quality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Report prototypes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe-tramos.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Report bands: levels and the watch zone</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Intervention programs</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preleo/programa.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The Preleo program</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preleo/leetrea.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The Leetrea program</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tasks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./catalogo.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Task catalog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/por_edad.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tasks by age</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/cribado_dos_riesgos.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Screening for two risks: dyslexia and oral language</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/index.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Class A task sheets</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Reading</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/VEL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading speed in words per minute</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/LET.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Letter knowledge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/TECLE.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TECLE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LECTURA_RF_ESCRIBIR_LETRA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial letter identification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_LECT_COMPRENSIVA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading for comprehension (second reading)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_LETRAS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Letter knowledge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_1sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: one syllable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_2sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: two syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_3sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: three syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PAL_4sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Word reading: four syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PSEUDO_2sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: two syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PSEUDO_3sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: three syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_PSEUDO_4sil.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pseudoword reading: four syllables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_SILABAS_COMPLEJA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Complex syllable reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_SILABAS_SIMPLE.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple syllable reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_VEL_TEXTO.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Text reading rate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LECTURA_DECODIFIC_VOCABULARIO.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading vocabulary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/LEC_DECISION_ORTOGRAFICA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orthographic decision</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Phonological skills</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conciencia-fonologica.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phonological awareness: what makes a task difficult and how to read a failure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/CF523.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phonological awareness: syllable counting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/RAN.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Rapid automatized naming (RAN)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_CONTAR_SILABAS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllable counting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_IDENTIFICACION_FONEMA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final phoneme isolation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial phoneme isolation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SEGMENTACION_FONEMICA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phoneme segmentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_FONEMAS_TP.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phoneme deletion (all positions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_FONEMA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final phoneme deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_FONEMA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial phoneme deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABAS_TP.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllable deletion (all positions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABA_FINAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final syllable deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABA_INICIAL.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Initial syllable deletion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/CF_SUPRESION_SILABA_JA_TODAS_POSIC.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Deletion of the syllable /xa/</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Oral language</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/L_ORAL_SEM_VOCABULARIO_DEFINICIONES.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vocabulary: definitions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Numerical cognition</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cognicion-numerica.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Numerical cognition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_CONTAR_H_ATRAS_1O_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting backwards (1–10)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_CONTAR_H_ATRAS_2A_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting backwards (11–20)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_CONTAR_H_DELANTE_2A_DECENA.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Counting forwards (11–20)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/MATE_ET_VERB_ARABIGOS.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arabic numeral naming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Task sheets · Executive functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas/auto/F_EJEC_INH_INHIBICION.en.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inhibition</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glosario.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary (Spanish–English)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./referencias.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#where-it-comes-from" id="toc-where-it-comes-from" class="nav-link active" data-scroll-target="#where-it-comes-from">Where it comes from</a></li>
+  <li><a href="#theoretical-basis" id="toc-theoretical-basis" class="nav-link" data-scroll-target="#theoretical-basis">Theoretical basis</a></li>
+  <li><a href="#the-tests" id="toc-the-tests" class="nav-link" data-scroll-target="#the-tests">The tests</a></li>
+  <li><a href="#the-two-stage-procedure" id="toc-the-two-stage-procedure" class="nav-link" data-scroll-target="#the-two-stage-procedure">The two-stage procedure</a></li>
+  <li><a href="#what-its-validation-showed" id="toc-what-its-validation-showed" class="nav-link" data-scroll-target="#what-its-validation-showed">What its validation showed</a></li>
+  <li><a href="#use-of-the-paper-tests" id="toc-use-of-the-paper-tests" class="nav-link" data-scroll-target="#use-of-the-paper-tests">Use of the paper tests</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/dis-esp.en.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/dis-esp.en.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./plataforma.en.html">The platform and the sample</a></li><li class="breadcrumb-item"><a href="./dis-esp.en.html"><span class="chapter-title">The DIS-ESP battery: the paper origin of the platform</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-dis-esp" class="quarto-section-identifier"><span class="chapter-title">The DIS-ESP battery: the paper origin of the platform</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Status:</strong> first draft (November 8, 2026), to be reviewed with M. S. Carrillo. It is based on the battery’s booklets and instructions (University of Murcia) and on its published validation study <span class="citation" data-cites="carrillo2009fonologicas">(<a href="referencias.en.html#ref-carrillo2009fonologicas" role="doc-biblioref">Carrillo Gallego and Alegría Iscoa 2009</a>)</span>. <strong>To be confirmed with M. S. Carrillo:</strong> authorship and date of each test, how to cite it, and whether the booklets can be published in this book for free use. <em>Translated from the Spanish version of November 28, 2026. Spanish examples are kept in italics.</em></p>
+</div>
+</div>
+</div>
+<p><strong>In one sentence.</strong> DIS-ESP is a paper battery for assessing dyslexia in two stages (group screening of reading efficiency, then an individual assessment of the reading mechanisms and of phonology), created at the University of Murcia by M. S. Carrillo and J. Alegría. Many of its tests moved, almost unchanged, to the LEEDUCA platform.</p>
+<section id="where-it-comes-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-it-comes-from">Where it comes from</h2>
+<p>The DIS-ESP battery (a battery for assessing specific reading and spelling difficulties) was developed by M. S. Carrillo’s DILEMA research group at the University of Murcia, with J. Alegría (Université Libre de Bruxelles) and other Spanish, Belgian and French researchers. It was created for research and was also designed as a diagnostic instrument for school guidance teams. The LEEDUCA group administered it on paper in Málaga between 2007 and 2012, before moving it to the online platform (see <a href="./plataforma.en.html">The LEEDUCA platform</a>).</p>
+<p>Its two-stage procedure is the direct antecedent of the platform. It was used to study the prevalence of dyslexia in all the schools of a municipality in Murcia <span class="citation" data-cites="carrillo2011prevalencia">(<a href="referencias.en.html#ref-carrillo2011prevalencia" role="doc-biblioref">Carrillo Gallego et al. 2011</a>)</span> (see <a href="./riesgo.en.html#sec-cribado">Universal screening</a>).</p>
+</section>
+<section id="theoretical-basis" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-basis">Theoretical basis</h2>
+<p>The battery starts from four ideas <span class="citation" data-cites="carrillo2009fonologicas">(<a href="referencias.en.html#ref-carrillo2009fonologicas" role="doc-biblioref">Carrillo Gallego and Alegría Iscoa 2009</a>)</span>:</p>
+<ol type="1">
+<li><strong>What is specific to reading is recognizing written words.</strong> Understanding a text also requires vocabulary and syntax, but that is not specific to reading: if it is missing, oral comprehension fails too <span class="citation" data-cites="gough1986decoding">(<a href="referencias.en.html#ref-gough1986decoding" role="doc-biblioref">Gough and Tunmer 1986</a>)</span>. Dyslexia is therefore sought in the mechanisms of word identification.</li>
+<li><strong>There are two identification mechanisms.</strong> The <strong>phonological</strong> mechanism converts letters into sounds and shows in pseudoword reading. The <strong>orthographic</strong> mechanism recognizes the word by its written form, stored in the orthographic lexicon. Spanish has no irregular words with which to measure it, so the battery assesses it with words containing <strong>inconsistent spellings</strong> (b/v, g/j, h): deciding which of two forms is correctly spelled, or writing it to dictation, is only possible if its written form has been stored.</li>
+<li><strong>The engine of learning is phonological.</strong> Learning to read requires becoming aware of the phonological structure of the language. Syllabic awareness precedes reading and phonemic awareness develops with it; according to longitudinal and training studies, its relation with reading is causal.</li>
+<li><strong>Phonology has several dimensions.</strong> Besides phonological awareness, speech sound discrimination, access to and retrieval of the phonological representations of words, and working memory all count. Their deficits are not specific to reading and are usually mild in everyday speech, but they can explain why a child does not learn to read.</li>
+</ol>
+</section>
+<section id="the-tests" class="level2">
+<h2 class="anchored" data-anchor-id="the-tests">The tests</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>What it assesses</th>
+<th>What it is like</th>
+<th>Administration</th>
+<th>Moved to the platform as</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Reading efficiency</strong> (TECLE)</td>
+<td>Reading level: accuracy and speed in sentence reading</td>
+<td>64 sentences missing their last word; the child chooses among four options (the correct word, a similar word and two visually or phonologically similar pseudowords); 5 minutes</td>
+<td>Group</td>
+<td><a href="./fichas/TECLE.en.html">TECLE</a> (1930)</td>
+</tr>
+<tr class="even">
+<td><strong>Orthographic decision</strong></td>
+<td>Orthographic lexicon</td>
+<td>Pairs of a word and a pseudohomophone with b/v, g/j or h (<em>bien</em>–<em>vien</em>); the correctly spelled one is circled; two parts</td>
+<td>Group</td>
+<td><a href="./fichas/auto/LEC_DECISION_ORTOGRAFICA.en.html">Orthographic decision</a> (1937, 2039)</td>
+</tr>
+<tr class="odd">
+<td><strong>Dictation</strong></td>
+<td>Orthographic lexicon in spelling</td>
+<td>34 sentences; only the last word is written; the 40 inconsistent graphemes are scored</td>
+<td>Group</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><strong>Word reading</strong></td>
+<td>Written word identification</td>
+<td>36 frequent words in three lists of 12 (2, 3 and 4 syllables; 4 to 12 graphemes); accuracy, error type and time</td>
+<td>Individual</td>
+<td><a href="./fichas/auto/LEC_PAL_2sil.en.html">Word reading</a> (1931–1933)</td>
+</tr>
+<tr class="odd">
+<td><strong>Pseudoword reading</strong></td>
+<td>Phonological mechanism</td>
+<td>36 pseudowords formed by recombining the syllables of the words in each list, in the same position</td>
+<td>Individual</td>
+<td><a href="./fichas/auto/LEC_PSEUDO_2sil.en.html">Pseudoword reading</a> (1934–1936)</td>
+</tr>
+<tr class="even">
+<td><strong>Syllable sequence repetition</strong></td>
+<td>Phonological perception and memory</td>
+<td>Two parts of 15 items (CV and CVC syllables), in blocks of 1 to 5 syllables, recorded</td>
+<td>Individual</td>
+<td><a href="https://abarejo.github.io/leeduca-manual/fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_1_4_CV.html">Verbal memory CV</a> (<em>in Spanish</em>) and <a href="https://abarejo.github.io/leeduca-manual/fichas/auto/HFON_MEMVERB_MEMORIA_VERBAL_CVC_1_5.html">CVC</a> (<em>in Spanish</em>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Phoneme identification</strong></td>
+<td>Phonemic awareness</td>
+<td>Is the phoneme in the syllable? 69 CVC and CCVC syllables; stop, fricative, nasal and liquid phonemes in different positions, with vowel control items</td>
+<td>Individual</td>
+<td><a href="./fichas/auto/CF_IDENTIFICACION_FONEMA_INICIAL.en.html">Phoneme identification</a></td>
+</tr>
+<tr class="even">
+<td><strong>Syllable and phoneme deletion</strong></td>
+<td>Syllabic and phonemic awareness</td>
+<td>24 three-syllable pseudowords (the indicated syllable is removed) and 31 monosyllables (the indicated phoneme is removed); neither stimuli nor responses are words</td>
+<td>Individual</td>
+<td><a href="./fichas/auto/CF_SUPRESION_SILABAS_TP.en.html">Syllable deletion</a> and <a href="./fichas/auto/CF_SUPRESION_FONEMAS_TP.en.html">phoneme deletion</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Rapid naming of pictures</strong></td>
+<td>Access to and retrieval of phonological representations</td>
+<td>Four cards of 18 pictures: short or long names, varied or repeated pictures; time per card</td>
+<td>Individual</td>
+<td><a href="https://abarejo.github.io/leeduca-manual/fichas/auto/RAN_OBJETOS_VARIADOS_CORTOS.html">Rapid naming of objects</a> (<em>in Spanish</em>) (varied and repeated, short and long)</td>
+</tr>
+<tr class="even">
+<td><strong>Verbal fluency</strong></td>
+<td>Search in the phonological lexicon</td>
+<td>30 seconds per criterion: semantic (animals, clothes) and phonemic (words beginning with /s/ and /p/)</td>
+<td>Individual</td>
+<td><a href="https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_FON_FLUIDEZ_FONOLOGICA.html">Phonological fluency</a> (<em>in Spanish</em>) and semantic fluency</td>
+</tr>
+<tr class="odd">
+<td><strong>Minimal pairs</strong></td>
+<td>Phonetic discrimination</td>
+<td>24 pairs of syllables differing in voicing, place or manner of articulation and 25 identical pairs, recorded; same or different?</td>
+<td>Individual</td>
+<td><a href="https://abarejo.github.io/leeduca-manual/fichas/auto/L_ORAL_PERCEP_PARES_MINIMOS.html">Minimal pairs</a> (<em>in Spanish</em>)</td>
+</tr>
+</tbody>
+</table>
+<p>The platform’s word and pseudoword reading lists are those of DIS-ESP. That is why their task sheets share a structure: three lengths, 12 items per list and pseudowords built from the same syllables as the words (see <a href="https://abarejo.github.io/leeduca-manual/avances.html#sec-listas">What makes a word list difficult</a> (<em>in Spanish</em>)).</p>
+</section>
+<section id="the-two-stage-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-stage-procedure">The two-stage procedure</h2>
+<p><strong>First stage: group screening.</strong> The whole class takes the reading efficiency test. In the validation study a <strong>double criterion</strong> was used so as not to confuse dyslexia with school conditions: the child had to be below the mean minus 1 SD of their class and grade in their school, and also below the mean minus 1 SD of all children in their grade <span class="citation" data-cites="carrillo2009fonologicas">(<a href="referencias.en.html#ref-carrillo2009fonologicas" role="doc-biblioref">Carrillo Gallego and Alegría Iscoa 2009</a>)</span>. In the prevalence study, the cut-off was the mean minus 1.5 SD <span class="citation" data-cites="carrillo2011prevalencia">(<a href="referencias.en.html#ref-carrillo2011prevalencia" role="doc-biblioref">Carrillo Gallego et al. 2011</a>)</span>.</p>
+<p><strong>Second stage: individual assessment.</strong> The flagged children take the rest of the tests, which look for <strong>the proximal cause</strong> of the problem: which identification mechanism fails (phonological, orthographic or both) and which aspect of phonology is affected.</p>
+<p><strong>The diagnostic module.</strong> The battery compares each result with two reference groups:</p>
+<ul>
+<li><strong>By chronological age:</strong> children of the same age (in the practice norms, age 9).</li>
+<li><strong>By reading level:</strong> younger children who read at the same level (in the practice norms, age 7).</li>
+</ul>
+<p>A deficit that appears relative to children of the same age but not relative to those of the same reading level indicates a <strong>delay</strong>; one that also appears relative to those of the same reading level indicates <strong>different functioning</strong>. With this comparison, the module proposes a profile (phonological, surface or mixed). Later research has shown that subtypes depend heavily on the comparison group, and that far fewer appear with reading-level controls <span class="citation" data-cites="carrillo2008subtipos sprengercharolles2011subtipos">(<a href="referencias.en.html#ref-carrillo2008subtipos" role="doc-biblioref">Carrillo Gallego, Alegría, and Calvo Rodríguez 2008</a>; <a href="referencias.en.html#ref-sprengercharolles2011subtipos" role="doc-biblioref">Sprenger-Charolles 2011</a>)</span> (see <a href="./marco-teorico.en.html">Theoretical framework</a>).</p>
+</section>
+<section id="what-its-validation-showed" class="level2">
+<h2 class="anchored" data-anchor-id="what-its-validation-showed">What its validation showed</h2>
+<p>The validation study included 71 schoolchildren with specific reading delay and 80 typical readers from the same classrooms, in Grades 2 to 6 <span class="citation" data-cites="carrillo2009fonologicas">(<a href="referencias.en.html#ref-carrillo2009fonologicas" role="doc-biblioref">Carrillo Gallego and Alegría Iscoa 2009</a>)</span>:</p>
+<ul>
+<li><strong>Children with dyslexia performed worse on all tests</strong>, both the reading and spelling tests and all the phonological ones.</li>
+<li><strong>The delay in reading and spelling grows across grades.</strong> Children with dyslexia did not reach the reading efficiency of Grade 2 typical readers until Grade 5 or 6.</li>
+<li><strong>Slow and inaccurate at the same time.</strong> In words and pseudowords, the slowest were also those who made the most errors. That is why the battery proposed a single index: correct responses per second. The platform uses efficiency measures of the same kind.</li>
+<li><strong>Naming reveals an access problem.</strong> Repetition of the pictures helped children with dyslexia more and name length hurt them more, which points to difficulties in retrieving and producing phonological forms.</li>
+<li><strong>Verbal fluency depended on naming.</strong> When naming speed was controlled, the difference in fluency disappeared.</li>
+</ul>
+</section>
+<section id="use-of-the-paper-tests" class="level2">
+<h2 class="anchored" data-anchor-id="use-of-the-paper-tests">Use of the paper tests</h2>
+<p>The group has decided that the DIS-ESP paper tests will be <strong>free to use</strong>. Before publishing them here, the final version of each booklet and how to cite it must be confirmed with their author. <strong>TECLE</strong> is not included: it is a published test and is cited, but not reproduced.</p>
+<p>The battery was also administered in Colombia, with TECLE in 3 minutes instead of 5. Those results will be incorporated in a later version.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-carrillo2009fonologicas" class="csl-entry" role="listitem">
+Carrillo Gallego, María Soledad, and Jesús Alegría Iscoa. 2009. <span>“Exploración de Las Habilidades Fonológicas En Escolares Disléxicos: Teoría y Práctica.”</span> <em>Revista de Logopedia, Foniatría y Audiología</em> 29 (2): 115–30.
+</div>
+<div id="ref-carrillo2011prevalencia" class="csl-entry" role="listitem">
+Carrillo Gallego, María Soledad, Jesús Alegría Iscoa, Pilar Miranda López, and Noelia Sánchez Pérez. 2011. <span>“Evaluación de La Dislexia En La Escuela Primaria: Prevalencia En Español.”</span> <em>Escritos de Psicología</em> 4 (2): 35–44. <a href="https://doi.org/10.5231/psy.writ.2011.1407">https://doi.org/10.5231/psy.writ.2011.1407</a>.
+</div>
+<div id="ref-carrillo2008subtipos" class="csl-entry" role="listitem">
+Carrillo Gallego, María Soledad, Jesús Alegría, and Angel R. Calvo Rodríguez. 2008. <span>“Subtipos de Dislexia En Una Ortografía Transparente.”</span>
+</div>
+<div id="ref-gough1986decoding" class="csl-entry" role="listitem">
+Gough, Philip B., and William E. Tunmer. 1986. <span>“Decoding, Reading, and Reading Disability.”</span> <em>Remedial and Special Education</em> 7 (1): 6–10.
+</div>
+<div id="ref-sprengercharolles2011subtipos" class="csl-entry" role="listitem">
+Sprenger-Charolles, Liliane. 2011. <span>“Subtipos de Dislexia En Lenguas Que Difieren En La Transparencia Ortográfica: Inglés, Francés y Español.”</span> <em>Escritos de Psicología</em>. <a href="https://doi.org/10.24310/espsiescpsi.v4i2.13314">https://doi.org/10.24310/espsiescpsi.v4i2.13314</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<!-- Selector de idioma (27/11/2026): dos banderas discretas arriba a la derecha.
+     Lleva a la misma página en el otro idioma si existe; si no, a la portada de ese idioma. -->
+<div id="lx-idioma" aria-label="Idioma / Language">
+  <a href="#" data-lang="es" title="Versión en español" aria-label="Versión en español">
+    <svg viewbox="0 0 30 20" width="24" height="16" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"></rect><rect y="5" width="30" height="10" fill="#F1BF00"></rect></svg>
+  </a>
+  <a href="#" data-lang="en" title="English version" aria-label="English version">
+    <svg viewbox="0 0 60 30" width="24" height="16" aria-hidden="true" preserveaspectratio="none"><clippath id="lx-uk"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"></path></clippath><path d="M0,0 v30 h60 v-30 z" fill="#012169"></path><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"></path><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#lx-uk)" stroke="#C8102E" stroke-width="4"></path><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"></path><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"></path></svg>
+  </a>
+</div>
+<style>
+#lx-idioma{position:fixed;top:.6rem;right:.8rem;z-index:1050;display:flex;gap:.35rem;padding:.25rem .35rem;border-radius:6px;background:rgba(255,255,255,.85);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+#lx-idioma a{display:block;line-height:0;border-radius:2px;opacity:.45;transition:opacity .15s}
+#lx-idioma a:hover,#lx-idioma a:focus{opacity:1}
+#lx-idioma a.lx-actual{opacity:1;outline:2px solid #2689B7;outline-offset:1px;pointer-events:none}
+#lx-idioma svg{display:block;border-radius:2px}
+@media (max-width: 991.98px){#lx-idioma{top:auto;bottom:.8rem}}
+@media (prefers-color-scheme: dark){#lx-idioma{background:rgba(40,40,40,.85)}}
+</style>
+<script>
+(function(){
+  var box = document.getElementById('lx-idioma'); if (!box) return;
+  var lang = (document.documentElement.lang || 'es').slice(0, 2);
+  var meta = document.querySelector('meta[name="quarto:offset"]');
+  var raiz = new URL(meta ? meta.content : './', location.href);       // raíz del libro de esta página
+  var rel = decodeURIComponent(location.pathname.slice(raiz.pathname.length)) || 'index.html';
+  var es, en;
+  if (lang === 'en') {                                                // libro inglés: vive en <sitio>/en/
+    en = location.href;
+    es = new URL('../' + (rel.replace(/\.en\.html$/, '.html') || 'index.html'), raiz).href;
+    var portadaEs = new URL('../', raiz).href, portadaEn = raiz.href;
+  } else {
+    es = location.href;
+    en = new URL('en/' + (/^summary-en\.html$/.test(rel) ? rel : rel.replace(/\.html$/, '.en.html')), raiz).href;
+    var portadaEs = raiz.href, portadaEn = new URL('en/', raiz).href;
+  }
+  box.querySelectorAll('a').forEach(function(a){
+    var l = a.getAttribute('data-lang');
+    if (l === lang) { a.classList.add('lx-actual'); a.setAttribute('aria-current', 'true'); return; }
+    var destino = l === 'en' ? en : es, portada = l === 'en' ? portadaEn : portadaEs;
+    a.href = destino;
+    a.addEventListener('click', function(ev){
+      ev.preventDefault();
+      fetch(destino, {method: 'HEAD'}).then(function(r){ location.href = r.ok ? destino : portada; })
+                                      .catch(function(){ location.href = destino; });
+    });
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./plataforma.en.html" class="pagination-link" aria-label="The LEEDUCA platform">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">The LEEDUCA platform</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./estudio-normativo.en.html" class="pagination-link" aria-label="Normative study">
+        <span class="nav-page-text"><span class="chapter-title">Normative study</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/abarejo/leeduca-manual/edit/main/dis-esp.en.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/abarejo/leeduca-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/abarejo/leeduca-manual/blob/main/dis-esp.en.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
